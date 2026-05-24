@@ -104,6 +104,11 @@ window.SubscriptionsManager = (function () {
   ]);
 
   const normalizeText = (v) => String(v || '').trim();
+  const truncateDisplayText = (value, maxChars) => {
+    const chars = Array.from(normalizeText(value));
+    if (chars.length <= maxChars) return chars.join('');
+    return chars.slice(0, maxChars).join('');
+  };
   const escapeHtml = (str) => String(str || '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -548,6 +553,7 @@ window.SubscriptionsManager = (function () {
       const selected = !!profile.selected;
       const tag = normalizeText(profile.tag);
       const desc = normalizeText(profile.description);
+      const shortDesc = truncateDisplayText(desc, 10);
       return `<button
         class="dpr-profile-picker-chip${selected ? ' is-selected' : ''}"
         type="button"
@@ -558,7 +564,7 @@ window.SubscriptionsManager = (function () {
       >
         <span class="dpr-profile-picker-check" aria-hidden="true">${selected ? '✓' : ''}</span>
         <span class="dpr-profile-picker-tag">${escapeHtml(tag)}</span>
-        ${desc ? `<span class="dpr-profile-picker-desc">${escapeHtml(desc)}</span>` : ''}
+        ${shortDesc ? `<span class="dpr-profile-picker-desc">${escapeHtml(shortDesc)}</span>` : ''}
       </button>`;
     }).join('');
   };
