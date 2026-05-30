@@ -1,41 +1,38 @@
 {
-  "generated_at": "2026-05-30T08:01:26.614321+00:00",
-  "updated_date": "20260521-20260530",
+  "generated_at": "2026-05-30T20:15:36.124111+00:00",
+  "updated_date": "20260530",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260521-20260530",
+      "updated_date": "20260530",
       "carryover_days": 9,
       "items": [
         {
-          "id": "2605.25381v1",
+          "id": "2605.30154v1",
           "source": "arxiv",
-          "title": "Not only where, But when: Temporal Scheduling for RLVR",
-          "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become a core technique for post-training of Large Language Models (LLMs). While policy optimization is driven by all sampled tokens under a globally broadcast scalar reward, the heterogeneous policy behaviors exhibited along trajectories are largely overlooked without differentiation. Existing works address this by credit allocation, including token-level advantage reweighting, and selective token optimization, however, the allocation criterion are principally stagnant throughout training, limiting resilient policy evolution. In this work, we argue that \\textit{when} learning signals are scheduled can be as important as \\textit{where} they are allocated across tokens, and introduce the temporal dimension that scheduling the credit allocation criteria over the course of RLVR optimization. We find that prioritizing targeted tokens emphasized with specific policy behaviors, and gradually attenuating toward general optimization leads to more stable and efficient learning dynamics. Furthermore, we show that simple trajectory percentiles provide a natural perspective for distinguishing policy behaviors, and works effectively with temporal scheduling. Our analysis reveals that standard optimization substantially sacrifices policy entropy when simultaneously accommodating heterogeneous behaviors, whereas temporal scheduling yields healthier policy evolution dynamics. Experiments across mathematical and general reasoning benchmarks demonstrate consistent improvements, suggesting that temporal scheduling constitutes a promising optimization dimension.",
+          "title": "RL2ML: Finite-Rollout Surrogate Objectives from Reinforcement Learning to Maximum Likelihood",
+          "abstract": "Correctness-based Reinforcement Learning with Verifiable Rewards (RLVR) trains language models from binary feedback on sampled outputs, but the objective optimized in expectation and the stochastic update geometry induced by finite rollout groups are often conflated. This paper develops RL2ML, a family of finite-rollout surrogate objectives with a closed-form, exactly unbiased gradient estimator. The family continuously connects standard reinforcement learning, maximum-likelihood-like training, and beyond-maximum-likelihood objectives while preserving estimator-objective alignment under a fixed rollout budget. We introduce the group-level update scale to characterize how a rollout group is reweighted after its empirical success count is observed, revealing a subcritical-supercritical update-scale transition that is hidden by population-level objective notation alone. Building on this distinction, calibrated metric-gain analysis and exact variance decomposition show that the best choice of surrogate objective is determined neither by proximity to maximum likelihood nor by the population-level weight alone. Instead, it depends jointly on the evaluation metric, local sensitivity, and estimator variance. The remaining degree of freedom in the surrogate objective family can therefore be formulated as a one-dimensional optimization problem rather than treated as an unconstrained hyperparameter.",
           "authors": [
-            "Jinghao Zhang",
-            "Ruilin Li",
-            "Feng Zhao",
-            "Jiaqi Wang"
+            "Yifu Zheng"
           ],
           "primary_category": "cs.LG",
           "categories": [
             "cs.LG"
           ],
-          "published": "2026-05-25T03:10:51+00:00",
-          "link": "https://arxiv.org/pdf/2605.25381v1",
+          "published": "2026-05-28T16:14:45+00:00",
+          "link": "https://arxiv.org/pdf/2605.30154v1",
           "tags": [
             "keyword:agentic-rl",
             "query:agentic-rl"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "Introduces temporal scheduling in RLVR to enhance LLM training",
-          "llm_evidence_cn": "在RLVR中引入时序调度以改进LLM训练",
-          "llm_evidence": "在RLVR中引入时序调度以改进LLM训练",
-          "canonical_evidence": "在RLVR中引入时序调度以改进LLM训练",
-          "llm_tldr_en": "Proposes temporal scheduling for RLVR to allocate learning signals based on when they are most effective, improving LLM post-training.",
-          "llm_tldr_cn": "本研究指出，在基于可验证奖励的强化学习（RLVR）中，学习信号的‘何时’调度与‘何处’分配同样重要。现有方法专注于token级别的信用分配，但分配标准在训练中固定不变，限制了策略的弹性进化。为此，提出时序维度调度方法，动态调整学习信号的时间安排。实验表明，该方法能更有效地利用轨迹中的异质性行为，提升大语言模型的后训练效果。这一贡献为RLVR中的时序优化开辟了新方向，超越静态的信用分配。",
-          "llm_tldr": "本研究指出，在基于可验证奖励的强化学习（RLVR）中，学习信号的‘何时’调度与‘何处’分配同样重要。现有方法专注于token级别的信用分配，但分配标准在训练中固定不变，限制了策略的弹性进化。为此，提出时序维度调度方法，动态调整学习信号的时间安排。实验表明，该方法能更有效地利用轨迹中的异质性行为，提升大语言模型的后训练效果。这一贡献为RLVR中的时序优化开辟了新方向，超越静态的信用分配。",
+          "llm_evidence_en": "finite-rollout surrogate objectives connecting RL and maximum likelihood for LLM training",
+          "llm_evidence_cn": "连接强化学习和最大似然的有限展开代理目标，用于LLM训练",
+          "llm_evidence": "连接强化学习和最大似然的有限展开代理目标，用于LLM训练",
+          "canonical_evidence": "连接强化学习和最大似然的有限展开代理目标，用于LLM训练",
+          "llm_tldr_en": "Develops a family of surrogate objectives for RLVR that bridge standard RL to maximum-likelihood training, with an unbiased gradient estimator and optimal reweighting.",
+          "llm_tldr_cn": "基于验证奖励的强化学习常混淆期望中优化的目标与有限展开组导致的随机更新几何。本文发展了一族有限展开代理目标RL2ML，具有闭合形式、精确无偏的梯度估计器，连续连接标准RL、类最大似然训练以及超越最大似然的目标，同时保持估计器-目标对齐。引入组级更新尺度描述展开组在经验成功计数后的重新加权特性。该框架为固定预算下RLVR训练提供了原理性工具，提升了LLM训练的稳定性和效率。",
+          "llm_tldr": "基于验证奖励的强化学习常混淆期望中优化的目标与有限展开组导致的随机更新几何。本文发展了一族有限展开代理目标RL2ML，具有闭合形式、精确无偏的梯度估计器，连续连接标准RL、类最大似然训练以及超越最大似然的目标，同时保持估计器-目标对齐。引入组级更新尺度描述展开组在经验成功计数后的重新加权特性。该框架为固定预算下RLVR训练提供了原理性工具，提升了LLM训练的稳定性和效率。",
           "llm_tags": [
             "query:agentic-rl"
           ],
@@ -43,208 +40,7 @@
           "matched_query_text": "using reinforcement learning to enhance large language models",
           "matched_requirement_id": "req-2",
           "selection_source": "carryover_cache",
-          "paper_id": "2605.25381v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2605.28184v1",
-          "source": "arxiv",
-          "title": "Joint Training of Multi-Token Prediction in Reinforcement Learning via Optimal Coefficient Calibration",
-          "abstract": "Reinforcement Learning from Verifiable Rewards (RLVR) has emerged as the standard paradigm for improving reasoning capability of large language models, while Multi-Token Prediction (MTP) has been a widely adopted module in pretraining. Combining them is a natural approach, yet current RL practices detach MTP gradients because joint training degrades the performance. We revisit this failure from an optimization perspective. We show that the per-step effect of MTP on the RL objective can be decomposed into two terms: a first-order correlation and a second-order perturbation penalty. This decomposition unifies three MTP training regimes: Detach, Cross-Entropy loss, and Policy loss, and explains why each succeeds or fails. Further analysis of policy loss reveals that, although it aligns with intuition, performance still degrades: the correlation term decays while the quadratic penalty persists. Guided by the analysis, we propose Optimal Coefficient Calibration (OCC), an adaptive scheme that tracks the optimal coefficient online via a log-probability proxy at negligible cost. Across six competition-level mathematical reasoning benchmarks, OCC consistently matches or exceeds the detach baseline, delivering improved joint MTP-RL training performance.",
-          "authors": [
-            "Zili Wang",
-            "Jiajun Chai",
-            "Lin Chen",
-            "Xiaohan Wang",
-            "Shiming Xiang",
-            "Guojun Yin"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG"
-          ],
-          "published": "2026-05-27T09:07:06+00:00",
-          "link": "https://arxiv.org/pdf/2605.28184v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Revisits joint training of RL and multi-token prediction for LLMs, improving RL for LLM capability enhancement",
-          "llm_evidence_cn": "重新审视RL与多token预测的联合训练，以改进LLM能力增强",
-          "llm_evidence": "重新审视RL与多token预测的联合训练，以改进LLM能力增强",
-          "canonical_evidence": "重新审视RL与多token预测的联合训练，以改进LLM能力增强",
-          "llm_tldr_en": "Investigates failure of joint RL and MTP training for LLMs, proposes optimal coefficient calibration to unify regimes.",
-          "llm_tldr_cn": "大语言模型中，基于可验证奖励的强化学习（RLVR）已成为提升推理能力的主流范式，而多token预测（MTP）则是预训练常用模块。但二者联合训练常导致性能退化，现有实践通常分离MTP梯度。本文从优化视角分析，将MTP对RL目标的影响分解为一阶相关项和二阶扰动惩罚项，统一了解耦、交叉熵损失和策略损失三种训练机制，并解释了各自的成败原因。在此基础上提出最优系数校准方法，实现高效联合训练。实验表明，该方法能融合两者优势，进一步提升LLM的推理能力。",
-          "llm_tldr": "大语言模型中，基于可验证奖励的强化学习（RLVR）已成为提升推理能力的主流范式，而多token预测（MTP）则是预训练常用模块。但二者联合训练常导致性能退化，现有实践通常分离MTP梯度。本文从优化视角分析，将MTP对RL目标的影响分解为一阶相关项和二阶扰动惩罚项，统一了解耦、交叉熵损失和策略损失三种训练机制，并解释了各自的成败原因。在此基础上提出最优系数校准方法，实现高效联合训练。实验表明，该方法能融合两者优势，进一步提升LLM的推理能力。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2605.28184v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2605.25507v2",
-          "source": "arxiv",
-          "title": "Credit Assignment with Resets in Language Model Reasoning",
-          "abstract": "Contemporary reinforcement learning with verifiable reward methods post-train language models on multi-step reasoning by assigning a single outcome reward uniformly across all tokens in a trajectory. Such uniform assignment ignores which steps contributed to success or failure. Improving credit assignment can address this limitation by enabling targeted refinement of faulty reasoning steps, rather than updating entire trajectories uniformly. Resets are one such simple mechanism, enabling more precise credit assignment by returning to an intermediate state and resampling counterfactual continuations, so that outcome differences can be attributed to decisions made at that point. We propose two such methods: Random-Reset Policy Optimization (RRPO), where reset states are drawn randomly from reasoning steps, and Self-Reset Policy Optimization (SRPO), where the model self-localizes the erroneous step in an incorrect trajectory and resets there. We analyze these methods within the Conservative Policy Iteration (CPI) framework. Extending CPI with a credit-assignment oracle that targets improvable states yields provable improvements over random resets. Across models and reasoning benchmarks, SRPO consistently outperforms standard GRPO and RRPO by sampling multiple suffix continuations at a self-localized reset and learning from their rewards, using only the model itself with no external supervision.",
-          "authors": [
-            "Ankur Samanta",
-            "Akshayaa Magesh",
-            "Ayush Jain",
-            "Youliang Yu",
-            "Daniel Jiang",
-            "Kavosh Asadi",
-            "Kaveh Hassani",
-            "Paul Sajda",
-            "Jalaj Bhandari",
-            "Yonathan Efroni"
-          ],
-          "primary_category": "cs.AI",
-          "categories": [
-            "cs.AI"
-          ],
-          "published": "2026-05-25T07:11:50+00:00",
-          "link": "https://arxiv.org/pdf/2605.25507v2",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Proposes credit assignment with resets to improve RL for LLM reasoning",
-          "llm_evidence_cn": "提出基于重置的信用分配方法以改进LLM推理RL",
-          "llm_evidence": "提出基于重置的信用分配方法以改进LLM推理RL",
-          "canonical_evidence": "提出基于重置的信用分配方法以改进LLM推理RL",
-          "llm_tldr_en": "Addresses uniform reward assignment in RL for LLM reasoning by introducing reset mechanisms for finer credit assignment.",
-          "llm_tldr_cn": "当前使用可验证奖励对大语言模型进行多步推理后训练时，通常将单一结果奖励均匀分配给轨迹中的所有token，忽略了各个步骤的真实贡献。为此，本文提出重置机制：通过返回中间状态并重采样反事实后续，将结果差异归因于该状态的决策，从而实现更精确的信用分配。具体提出随机重置策略优化（RRPO）等方法。实验证明，重置能有效定位并修正错误的推理步骤，提升模型训练效率和最终推理准确率。",
-          "llm_tldr": "当前使用可验证奖励对大语言模型进行多步推理后训练时，通常将单一结果奖励均匀分配给轨迹中的所有token，忽略了各个步骤的真实贡献。为此，本文提出重置机制：通过返回中间状态并重采样反事实后续，将结果差异归因于该状态的决策，从而实现更精确的信用分配。具体提出随机重置策略优化（RRPO）等方法。实验证明，重置能有效定位并修正错误的推理步骤，提升模型训练效率和最终推理准确率。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2605.25507v2",
-          "carry_days": 1
-        },
-        {
-          "id": "2605.28150v1",
-          "source": "arxiv",
-          "title": "Off-Policy Learning to Reason Works Because It Is More Pessimistic Than You Think",
-          "abstract": "Large scale reinforcement learning has become a central tool for improving reasoning in large language models. At this scale, generation is often lagged or asynchronous, so updates are performed on data collected by older policies. This makes learning inherently off-policy. Most existing approaches nevertheless remain rooted in PPO-style trust-region objectives, treating training as approximately on-policy and using importance weights to correct distribution mismatch. These corrections can introduce high variance, destabilize optimization, and accelerate entropy collapse. Recent work suggests an alternative: rather than correcting the mismatch, one can embrace off-policy data and remove importance weights, often yielding stronger algorithms. In this paper, we provide an intuitive construction of off-policy objectives that include successful off-policy objectives and show that their effectiveness can be understood through implicit pessimism: they optimize toward target policies that are more conservative than their nominal objectives suggest. This perspective explains why some particular implementation choices improve stability: they implicitly control the effective target distribution. We then propose a principled modification that stabilize this induced distribution and improve off-policy learning.",
-          "authors": [
-            "Otmane Sakhi",
-            "Aleksei Arzhantsev",
-            "Imad Aouali",
-            "Flavian Vasile"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG"
-          ],
-          "published": "2026-05-27T08:33:35+00:00",
-          "link": "https://arxiv.org/pdf/2605.28150v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Shows off-policy reinforcement learning for LLM reasoning is more pessimistic and works well without importance weights.",
-          "llm_evidence_cn": "证明LLM推理的离线策略强化学习更为悲观，且无需重要性权重即可有效工作。",
-          "llm_evidence": "证明LLM推理的离线策略强化学习更为悲观，且无需重要性权重即可有效工作。",
-          "canonical_evidence": "证明LLM推理的离线策略强化学习更为悲观，且无需重要性权重即可有效工作。",
-          "llm_tldr_en": "The paper analyzes off-policy RL for LLM reasoning, showing that removing importance weights and embracing off-policy data yields stronger optimization due to its inherent pessimism, challenging the need for on-policy corrections.",
-          "llm_tldr_cn": "大规模LLM推理训练中生成滞后导致离线学习。本文发现，直接使用离线数据并去除重要性权重，因其内在悲观性反而能获得更强优化效果，无需进行在策略修正。实验表明，这种离线方法在推理任务上优于传统的PPO式目标，挑战了对在策略近似的依赖。",
-          "llm_tldr": "大规模LLM推理训练中生成滞后导致离线学习。本文发现，直接使用离线数据并去除重要性权重，因其内在悲观性反而能获得更强优化效果，无需进行在策略修正。实验表明，这种离线方法在推理任务上优于传统的PPO式目标，挑战了对在策略近似的依赖。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2605.28150v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2605.29009v1",
-          "source": "arxiv",
-          "title": "Label-Free Reinforcement Learning via Cross-Model Entropy",
-          "abstract": "Post-training large language models with reinforcement learning is bottlenecked by the reward signal. Existing approaches require either ground-truth verifiable rewards, restricting training to domains with automatic correctness checks (e.g., mathematics, code execution), or human preference labels, which are expensive to collect and prone to reward hacking. Recent label-free methods replace ground-truth verifiers with self-referential signals like majority voting or token entropy over a model's own outputs, but risk reinforcing a model's own errors. In this work we propose Cross-Model Entropy (CME), the mean log-likelihood of a generator's response under a separate verifier model, as a label-free reward signal for RL post-training. CME is continuous, training-free, and grounded in the principle that responses a verifier finds unsurprising are likely correct or high quality. Because the verifier is independent of the generator, the signal cannot be gamed through self-consistency. We integrate CME into GRPO with no other changes to the training loop, extending label-free RL to open-ended instruction following -- a regime where self-referential signals are inapplicable or poorly suited. On open-ended instruction following (UltraFeedback prompts, evaluated on AlpacaEval 2.0), CME rewards beat the untrained base in head-to-head LLM-as-Judge comparisons across four model families (Qwen, Llama, Gemma, OLMo) and three training regimes (pretrained, SFT, and instruction-tuned), with tie-adjusted win rates ranging from 52.5% to 71.4%. Code will be released upon publication.",
-          "authors": [
-            "Matt Gorbett",
-            "Hossein Shirazi"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "published": "2026-05-27T19:04:35+00:00",
-          "link": "https://arxiv.org/pdf/2605.29009v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Proposes cross-model entropy as a label-free reward for RL post-training of LLMs, eliminating the need for ground-truth verifiers.",
-          "llm_evidence_cn": "提出用跨模型熵作为无标签奖励信号，用于LLM的强化学习后训练。",
-          "llm_evidence": "提出用跨模型熵作为无标签奖励信号，用于LLM的强化学习后训练。",
-          "canonical_evidence": "提出用跨模型熵作为无标签奖励信号，用于LLM的强化学习后训练。",
-          "llm_tldr_en": "To overcome the bottleneck of reward signal in LLM post-training, the paper introduces Cross-Model Entropy, a continuous reward based on the likelihood under a separate verifier model, enabling RL without ground-truth labels or expensive human feedback.",
-          "llm_tldr_cn": "LLM强化学习后训练受限于奖励信号，通常需要可验证的答案或昂贵的人类偏好标注。本文提出跨模型熵，利用独立验证器模型对生成器响应的平均对数似然作为奖励，该信号连续、无需训练且无监督。实验表明，CME能有效替代真实验证奖励，在数学和代码等任务上取得与有监督方法相当的性能，拓宽了RL的应用领域。",
-          "llm_tldr": "LLM强化学习后训练受限于奖励信号，通常需要可验证的答案或昂贵的人类偏好标注。本文提出跨模型熵，利用独立验证器模型对生成器响应的平均对数似然作为奖励，该信号连续、无需训练且无监督。实验表明，CME能有效替代真实验证奖励，在数学和代码等任务上取得与有监督方法相当的性能，拓宽了RL的应用领域。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2605.29009v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2605.29293v1",
-          "source": "arxiv",
-          "title": "LLM-ALSO: LLM-Driven Adaptive Learning-Signal Optimization for Multi-Agent Reinforcement Learning",
-          "abstract": "Effective training-time guidance is central to multi-agent reinforcement learning (MARL), yet remains difficult in sparse-reward settings where weak supervision limits coordination and policy improvement, and existing methods often require substantial domain expertise or manual design effort. Large language models (LLMs) provide a promising alternative for flexible learning-signal design, yet existing LLM-based methods remain largely single-agent-oriented, one-shot, or weakly validated for the evolving training dynamics of cooperative MARL. To address these limitations, we propose LLM-ALSO, an iterative LLM-driven adaptive learning-signal optimization framework for MARL. Rather than directly deploying LLM-generated rewards, LLM-ALSO decomposes adaptation into iterative diagnosis, proposal, and validation: a Critic LLM diagnoses stage-specific learning and coordination failures from sparse-return metrics and compact behavior evidence, a Generator LLM proposes candidate reward-shaping configurations conditioned on the diagnosis, and branch-validation feedback refines candidates before they affect the main training trajectory. Through short-horizon validation and stage-aware adaptation, LLM-ALSO promotes only validated updates into training, reducing the risk of unreliable LLM-generated modifications. Experiments on sparse-reward cooperative MARL tasks show that LLM-ALSO improves sparse-evaluation performance and learning efficiency.",
-          "authors": [
-            "Xiaoguang Wu",
-            "Zhi Zheng",
-            "Hui Xiong"
-          ],
-          "primary_category": "cs.MA",
-          "categories": [
-            "cs.MA"
-          ],
-          "published": "2026-05-28T03:19:08+00:00",
-          "link": "https://arxiv.org/pdf/2605.29293v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "LLM-driven adaptive reward design for multi-agent RL training",
-          "llm_evidence_cn": "LLM驱动的自适应奖励设计用于多智能体RL训练",
-          "llm_evidence": "LLM驱动的自适应奖励设计用于多智能体RL训练",
-          "canonical_evidence": "LLM驱动的自适应奖励设计用于多智能体RL训练",
-          "llm_tldr_en": "LLM-ALSO iteratively refines learning signals for cooperative MARL using LLMs, addressing sparse rewards without manual design.",
-          "llm_tldr_cn": "针对多智能体强化学习中稀疏奖励和手动设计难题，提出LLM-ALSO框架，通过迭代利用LLM优化学习信号，而非直接部署LLM生成奖励。实验表明在合作MARL任务中有效提升协调性和策略改进，减少了对领域专家的依赖。",
-          "llm_tldr": "针对多智能体强化学习中稀疏奖励和手动设计难题，提出LLM-ALSO框架，通过迭代利用LLM优化学习信号，而非直接部署LLM生成奖励。实验表明在合作MARL任务中有效提升协调性和策略改进，减少了对领域专家的依赖。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
-          "matched_requirement_id": "req-1",
-          "selection_source": "carryover_cache",
-          "paper_id": "2605.29293v1",
+          "paper_id": "2605.30154v1",
           "carry_days": 1
         }
       ]
