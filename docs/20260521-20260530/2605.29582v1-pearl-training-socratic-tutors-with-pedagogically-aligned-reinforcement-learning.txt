@@ -1,0 +1,617 @@
+Title: PEARL: Training Socratic Tutors with Pedagogically Aligned Reinforcement Learning
+
+URL Source: https://arxiv.org/pdf/2605.29582v1
+
+Published Time: Fri, 29 May 2026 00:52:38 GMT
+
+Number of Pages: 16
+
+Markdown Content:
+# PEARL: Training Socratic Tutors with Pedagogically Aligned Reinforcement Learning 
+
+Qikai Chang 1, Zhenrong Zhang 1,2 , Linbo Chen 1, Pengfei Hu 1,Jianshu Zhang 2, Youhui Guo 2, Jun Du 1*1University of Science and Technology of China, 2iFLYTEK Research 
+
+Abstract 
+
+Large Language Models (LLMs) have shown promise as educational tutors, yet effective tu-toring requires more than solving problems: it must provide progressive Socratic guidance and balance multiple pedagogical objectives across multi-turn interactions. However, train-ing such tutors remains challenging due to limited-fidelity and weakly controllable stu-dent simulation, under-specified pedagogical reward modeling, and unstable multi-objective optimization. To overcome these limitations, we propose PEARL, a pe dagogically aligned 
+
+reinforcement learning framework for training Socratic tutoring agents, consisting of three key components. First, we introduce a con-trollable student simulator that decouples la-tent cognitive states from response generation to model diverse abilities and misconceptions. Second, we develop a generative reward model that jointly evaluates pedagogical quality and objective correctness for policy optimization. Finally, we propose a stable multi-objective RL scheme that discretizes rewards within each dimension and aggregates normalized ad-vantages across dimensions, preventing high-variance objectives from dominating updates. Experiments on multiple benchmarks show that PEARL achieves the best performance among open-source models and remains competitive with leading proprietary LLMs, despite using only a 30B policy model 1.
+
+1 Introduction 
+
+In recent years, Large Language Models (LLMs) have achieved remarkable progress in reasoning, self-reflection, and generalization (Yang et al., 2025; Bai et al., 2025). With capabilities such as multi-turn dialogue, planning, memory augmenta-tion, and tool invocation, LLM-based agents have 
+
+> *
+
+Corresponding author: Jun Du (jundu@ustc.edu.cn). 
+
+> 1
+
+Code and prompts are available at: https://github. com/JingMog/PEARL (a) Guided Tutoring Task 
+
+(b) Challenges in Training Socratic Tutors             
+
+> 1Student Simulation Tutoring Evaluation Multi-objective RL
+> Implicit cognition, limited controllability
+> Answer-only metrics miss teaching quality
+> Different objectives cause unstable optimization
+> Question
+> Two coprime composite numbers have a least common multiple of 90. What are the two numbers, in ascending order?
+> I don't know how to solve this problem.
+> Because the two numbers are coprime, their least common multiple equals their product. So their product is 90. Factor 90: 90 = 2 ×3×3×5 Since the two numbers are coprime,
+> …
+> Their least common multiple is 90. Therefore, the two numbers are 9 and 10 .
+> I don't know how to solve this problem.
+> For coprime numbers, how is the LCM related to their product?
+> The LCM equals their product.
+> Good. Then what is their product?
+> It should be 90.
+> …
+> What is the answer?
+> 9 and 10.
+> 23
+> Answer-Oriented Tutoring Guided Teaching
+
+Figure 1: Overview of the guided tutoring task and its challenges. (a) Guided teaching elicits student reasoning through Socratic interaction. (b) Training such tutors requires controllable simulation, holistic evaluation, and stable multi-objective RL. 
+
+shown strong potential across numerous domains (Team et al., 2026; Zeng et al., 2026; Liu et al., 2025a; Chang et al., 2026). Among these appli-cations, education has emerged as a particularly promising area due to its reliance on interactive dialogue and reasoning-intensive problem solving (Létourneau et al., 2025). Educational agents aim to support students through one-on-one, multi-turn dialogue guided by pedagogical principles (Vajjala et al., 2025). However, strong problem-solving ability does not automatically translate into effective teaching. Ef-fective tutors must move beyond answer dump-ing and adopt Socratic strategies that diagnose stu-dents’ knowledge gaps and provide progressive, scaffolded hints (Hu et al., 2025). Developing such pedagogical intuition remains a central challenge for LLM-based tutoring systems. 1
+
+> arXiv:2605.29582v1 [cs.LG] 28 May 2026
+
+Although recent studies have made meaningful progress in AI tutors (Shi et al., 2025; Liu et al., 2025b; Wang et al., 2025), training high-quality tutoring agents with RL still faces three core bottle-necks: limited-fidelity student simulation, under-specified pedagogical reward modeling, and un-stable multi-objective optimization . (1) For stu-dent simulation , existing student simulators typi-cally prompt LLMs to role-play students (Macina et al., 2023; Liu et al., 2024a; Dinucu-Jianu et al., 2025), sometimes with additional student profiles for diversity (Liu et al., 2024b; Gao et al., 2025). However, they usually generate responses end-to-end without explicitly modeling students’ cogni-tive states or decision-making processes, limiting their ability to capture diverse misconceptions, par-tial understandings, and evolving learning dynam-ics, which creates a fidelity gap for tutor training. (2) For pedagogical reward modeling , existing evaluations either rely on costly human annota-tion (Macina et al., 2023) or adopt LLM-as-a-judge frameworks (Wei et al., 2025; Song et al., 2025). However, these signals are often insufficient for RL optimization: they lack fine-grained trajectory-level scoring criteria, and rarely jointly assess peda-gogical effectiveness and objective correctness. (3) For multi-objective optimization , pedagogical tu-toring involves multiple competing objectives, yet prior approaches often compute terminal rewards via simple averaging (Song et al., 2025). Because evaluation metrics differ substantially in variance scales and reward sparsity, high-variance objec-tives can dominate gradient updates under policy-gradient methods such as GRPO (Shao et al., 2024) and PPO (Schulman et al., 2017), hindering bal-anced optimization across instructional goals. To address these challenges, we propose PEARL, a pe dagogically aligned reinforcement learning framework for training Socratic tutoring agents. PEARL enhances the tutoring capability of LLMs through three components: simulation environment design, reward modeling, and training algorithms. (1) For student simulation , we design a control-lable student simulator with cognition-decision de-coupling that explicitly models students’ learning abilities. By separating cognitive priors from the generation process, it enables more diverse and controllable simulation of student misconceptions and learning dynamics, reducing fidelity gaps. (2) For pedagogical reward modeling , we develop a generative reward model for tutoring dialogue assessment. It jointly evaluates pedagogical effec-tiveness and objective correctness, while produc-ing interpretable rationales and reward signals for RL optimization. (3) For multi-objective opti-mization , we propose a stable multi-objective RL scheme that discretizes rewards within each dimen-sion to denoise noisy signals, and aggregates nor-malized advantages across dimensions to prevent high-variance objectives from dominating updates. We evaluate PEARL on multiple benchmarks across diverse educational difficulty levels, includ-ing GSM8K (Cobbe et al., 2021), MATH-500 (Hendrycks et al., 2021), MathTutorBench (Macina et al., 2025), and MathDial (Macina et al., 2023). Experimental results show that PEARL, despite using only a 30B policy model, achieves the best performance among open-source models and re-mains competitive with proprietary LLMs. Our primary contributions are as follows: • We propose a cognition-decision decoupled student simulator that explicitly models stu-dents’ learning ability, enabling controllable simulation of student learning behaviors. • We develop a generative reward model that turns pedagogical principles into executable reward criteria, jointly capturing pedagogical effectiveness and objective correctness. • We introduce a multi-objective RL optimiza-tion scheme that combines reward discretiza-tion and advantage aggregation to achieve bal-anced optimization across multiple objectives. • Experiments on multiple benchmarks demon-strate that PEARL achieves the best perfor-mance among open-source models. 
+
+2 Methodology 
+
+2.1 PEARL Overview and Problem Formulation 
+
+We consider the problem of training a Socratic tu-toring agent in multi-turn tutoring interactions, as shown in Figure 1. Unlike standard question an-swering, Socratic tutoring requires not only produc-ing correct solutions but also delivering progressive guidance that helps students develop understanding step by step. To this end, we formulate PEARL as a closed-loop framework consisting of three compo-nents: controllable student simulation for interac-tive environment construction, generative reward 
+
+2Integer Addition / Subtraction 
+
+> Fraction Add / Sub Linear Equation
+> Linear Inequality
+
+# ＋   
+
+> Response Behavior
+> Question
+> (a) Knowledge Decomposition (b) Latent Cognitive State Modeling (c) Response Generation
+> update
+> Knowledge Decomposition Model
+> Decomposed Knowledge Graph
+> Activeness ：High
+> Perseverance ：Medium
+> Comprehension ：Medium
+> Expression ：Low
+> Attention ：Medium
+> Student Latent Traits (Profile)
+> Integer Addition / Subtraction
+> Fraction Add / Sub Linear Equation
+> Linear Inequality
+> Knowledge State (at current step)
+> Good Poor Fair
+> Behavior Prediction Model
+> Student Response
+> Response Simulation Model
+> Consistency Check Model
+
+Figure 2: Overview of the controllable student simulator: (a) knowledge decomposition, (b) modeling the student’s latent cognitive state, and (c) generating responses with behavior prediction and consistency checking. 
+
+modeling for pedagogically aligned reward estima-tion, and pedagogically aligned tutor optimization 
+
+for policy learning. Formally, given a problem instance q, a tutoring episode τ is represented as a multi-turn trajectory 
+
+τ = ( q, u 1, a 1, u 2, a 2, ..., u t, a t, ..., u n, a n), (1) where ut and at denote the student and tutor ut-terances at turn t, respectively, and n is the total number of turns. After the dialogue terminates, the full trajectory τ is evaluated by a judge model 
+
+πjudge , which produces a K-dimensional reward vector 
+
+r(τ ) = [ r1(τ ), r 2(τ ), ..., r K (τ )] . (2) PEARL then optimizes the tutor policy πθ to achieve strong performance across these objectives. The remainder of this section details the three components of PEARL: controllable student sim-ulation (Section 2.2), generative reward modeling (Section 2.3), and pedagogically aligned tutor opti-mization (Section 2.4). 
+
+2.2 Controllable Student Simulation 
+
+Effective tutor training requires interaction with students exhibiting diverse abilities, misconcep-tions, and learning behaviors. However, existing LLM-based role-playing simulators encode student characteristics only implicitly, leading to limited controllability and weak cognitive grounding. To address this, we introduce explicit cognition mod-eling: instead of directly generating student re-sponses, our simulator first represents what the student knows and how the student tends to rea-son, and then uses these latent cognitive states to guide response generation. Specifically, we decou-ple student simulation into knowledge decomposi-tion, latent cognitive state modeling, and response generation, as illustrated in Figure 2. 
+
+Knowledge Decomposition. Given a problem q,we decompose it into a set of structured knowledge units, such as integer arithmetic and equation solv-ing, and organize them into a knowledge network according to prerequisite relations. This network provides an explicit representation of the knowl-edge structure required for solving the problem. For a student at turn t, we denote the mastery states over these units as mt. By assigning different mas-tery states to different students, the simulator can explicitly control variations in knowledge mastery. 
+
+Latent Cognitive State Modeling. Beyond what the student knows, effective simulation also re-quires modeling how the student engages with tu-toring. We therefore introduce a latent cognitive profile c to characterize student-level cognitive and behavioral tendencies, including activeness, learn-ing perseverance, comprehension ability, expres-sive ability, and attention. During multi-turn inter-actions, the mastery state mt is dynamically up-dated according to the problem, dialogue context, 3tutor action, and student response: 
+
+mt+1 = fupdate (q, h t, mt, a t, u t). (3) 
+
+Response Generation. Given the problem q, dia-logue history ht−1 = ( u1, a 1, ..., u t−1, a t−1), cur-rent mastery states mt, and latent cognitive pro-file c, the simulator generates student responses through cognition-conditioned planning and real-ization. It first predicts a latent behavioral intent ˆzt
+
+using the planning model πplan , and then generates a natural-language response ut conditioned on this intent, knowledge mastery, and cognitive profile. The response is further refined to better align with the predicted intent: 
+
+ˆzt ∼ πplan (· | q, h t−1, mt, c), (4) 
+
+ut ∼ πstu (· | q, h t−1, mt, c, ˆzt). (5) This design enables the simulator to generate di-verse and cognitively consistent student behaviors, including correct answers, partial understanding, misconceptions, and off-task responses. Overall, by explicitly modeling student cogni-tion before response generation, our simulator pro-vides a controllable and cognitively grounded envi-ronment for training Socratic tutoring agents. 
+
+2.3 Generative Reward Modeling 
+
+After constructing a controllable student interaction environment, training an effective Socratic tutor re-quires reward signals that capture not only final correctness, but also the quality of multi-turn guid-ance, answer-leakage avoidance, and pedagogical scaffolding (Team et al., 2025b, 2024). Motivated by learning-science-based rubrics for AI tutoring, we design a generative reward model that turns high-level pedagogical principles into executable trajectory-level reward criteria with fine-grained scoring standards. We further extend prior peda-gogical categories with task-grounded dimensions, including tutoring accuracy, answer-leakage con-trol, and tutoring completeness, and condition the judge on student cognitive states to assess learner-specific pedagogical appropriateness. Given a complete tutoring trajectory τ , the judge model πjudge evaluates the tutor’s performance con-ditioned on the problem, reference solution, and student cognitive states reflected throughout the interaction. Conditioning on cognitive states al-lows the judge to assess whether the tutor’s behav-ior is pedagogically appropriate for the student’s evolving understanding, rather than evaluating the dialogue independently of the student’s current un-derstanding. We define the reward over several pedagogical dimensions, including tutoring accu-racy, answer-leakage control, tutoring complete-ness, cognitive load management, Socratic guid-ance, metacognitive facilitation, adaptive teaching, and emotional support. Together, these dimensions capture three complementary aspects of tutoring quality: instructional correctness, pedagogical pro-cess quality, and affective support. Formally, let 
+
+K = {acc , leak , complete , load ,
+
+guide , meta , adaptive , emotion }, (6) denote the set of reward dimensions. For each dimension k ∈ K , we define a set of dimension-specific scoring criteria Jk, where each criterion 
+
+j ∈ J k outputs a discrete score ˆrk,j (τ ). Since in-complete tutoring trajectories should not receive positive pedagogical rewards, we first derive a bi-nary completion indicator g(τ ) ∈ { 0, 1} from the completion dimension, where g(τ ) = 0 indicates that the tutoring process is incomplete. We then gate each criterion-level reward by 
+
+rk,j (τ ) = ˆ rk,j (τ ) · g(τ ), ∀k ∈ K . (7) Detailed definitions of evaluative dimensions and corresponding prompts are provided in Section C. 
+
+2.4 Pedagogically Aligned Tutor Optimization 2.4.1 Cold-Start Supervised Fine-Tuning 
+
+Before reinforcement learning, we introduce a cold-start supervised fine-tuning stage to initialize the tutor policy. This stage equips the model with fundamental tutoring skills, such as progressive prompting and step-by-step guidance, thereby pro-viding a pedagogical prior for subsequent RL. Specifically, starting from the trainable policy model ˜πθ, we perform supervised fine-tuning on the dataset D with the objective 
+
+LSFT (θ) = Eτ ∼D 
+
+h
+
+−
+
+> n
+
+X
+
+> t=1
+
+log ˜ πθ(at | q, h t)
+
+i
+
+, (8) where n denotes the number of tutoring turns in trajectory τ . The resulting policy πθ is used to initialize the subsequent RL stage. 
+
+2.4.2 Multi-objective Reinforcement Learning 
+
+Building on the multi-dimensional reward from Section 2.3, we use RL to align the tutor policy with pedagogical principles. Unlike conventional 4(a) Group Rollouts    
+
+> Question
+> 𝑢𝑢 11𝑎𝑎 11𝑢𝑢 12𝑎𝑎 12
+
+…                    
+
+> …𝑢𝑢 1𝑡𝑡 𝑎𝑎 1𝑡𝑡
+> 𝑢𝑢 21𝑎𝑎 21𝑢𝑢 22𝑎𝑎 22…𝑢𝑢 2𝑡𝑡 𝑎𝑎 2𝑡𝑡
+> 𝑢𝑢 𝐺𝐺 1𝑎𝑎 𝐺𝐺 1𝑢𝑢 𝐺𝐺 2𝑎𝑎 𝐺𝐺 2…𝑢𝑢 𝐺𝐺 𝑡𝑡 𝑎𝑎 𝐺𝐺 𝑡𝑡
+
+(b) Generative Reward Model 
+
+Student Agent  Tutor Agent 
+
+Judge Agent                                     
+
+> Acc Leak Complete Load Guide Meta Adaptive Emotion
+> 111[1,2,0,1] [2,1,2] [2,2,1] [2,2] [2,2]
+> 011[2,1,2,2] [1,0,2] [1,1,1] [1,1] [2,1]
+> ………………………
+> 100[0,2,0,1] [0,2,2] [0,2,1] [2,1] [1,2]
+
+Multi-dimensional pedagogical rewards 
+
+(c) Reward Processing (d) Policy Update    
+
+> 1Reward Aggregation 2Turn-count Penalty 3Advantage Aggregation
+> Suppress overlong low-yield dialogues
+> Updated Tutor Agent
+
+c                  
+
+> Processed tutoring trajectories 3
+> Sequence-level Objective
+> 1
+> 2
+> …
+> …
+> Reduce reward variance via dimension-wise discretization
+> Aggregate normalized advantages across dimensions
+> Single criterion dimension Multi criterion dimension
+> Encouraged
+> Suppressed
+> 1[1,2,0,1] [2,1,2] [2,2,1] [2,2] [2,1] 11
+> Raw scores of
+> Discretized scores of
+> 10.5 0.9 0.9 10.7 11
+> I don’t know ...
+> What equation can…?
+> 2x + 3 = 15.
+> Good. What is x?
+> x = 6.
+> …
+> Rounds: 5 Rounds: 10+
+> I don’t know ...
+> Think about equation.
+> Which equation?
+> Look at the numbers.
+> I’m not sure.
+> …
+> (fix profile for every question)
+
+Figure 3: PEARL’s tutor optimization framework, comprising (a) group rollouts, (b) multi-dimensional pedagogical evaluation with a generative reward model, (c) reward processing with aggregation, turn-count penalty, and advantage aggregation, and (d) sequence-level policy update for optimizing the tutor agent. 
+
+RL (Li et al., 2025; Chang et al., 2026), Socratic tutoring requires optimizing multiple pedagogical objectives. Directly averaging them into a single terminal reward can destabilize training and cause high-variance objectives to dominate optimization (Song et al., 2025; Liu et al., 2026). To address this, we propose a pedagogically aligned multi-objective RL method based on reward and advantage aggre-gation, as shown in Figure 3. For each problem q, the initialized tutor policy 
+
+πθ interacts with the student simulator to sample a group of tutoring trajectories {τ i}Gi=1 , while fix-ing the student’s initial mastery state and cogni-tive profile within each group for consistent evalua-tion. We then use the reward model πjudge to evalu-ate each trajectory, yielding criterion-level rewards 
+
+{rk,j (τ i)} over multiple pedagogical dimensions. 
+
+Reward Aggregation. Since criteria within a di-mension reflect the same pedagogical objective, we aggregate criterion-level scores into a dimension-level reward. However, this aggregation converts discrete criterion-level scores into continuous val-ues, making direct advantage computation sensi-tive to minor fluctuations. To mitigate this, we discretize the aggregated reward as follows: 
+
+r′
+
+k(τ i) = dis( 1
+
+|J k|
+
+|J k |
+
+X
+
+j=1 
+
+rk,j (τ i)) , (9) where dis( ·) maps each continuous reward in 
+
+[0 , 1] to the nearest value in {0.1, 0.3, 0.5, 0.7, 0.9}.Each discrete value corresponds to a reward bin, and we denote the lower boundary of the bin as-signed to r′
+
+k(τ i) as ℓik. This preserves the coarse-grained quality ordering within each dimension while improving reward stability. 
+
+Turn-count Penalty. We further introduce a turn-count penalty to discourage unnecessarily long tu-toring dialogues. Let N i denote the total number of turns in trajectory τ i, and let Nmin denote the minimum number of turns among completed tra-jectories in the same group. The penalized reward is then defined as 
+
+˜rk(τ i) = ℓik + r′
+
+k(τ i) − ℓik
+
+γN i−Nmin , (10) where γ ∈ (0 , 1] is a decay factor. By penaliz-ing only the portion above the bin lower boundary, this design discourages inefficiently long dialogues while preserving the coarse-grained reward hierar-chy induced by discretization. 
+
+Advantage Aggregation. We compute a normal-ized advantage for each reward dimension across the sampled group: 
+
+Ak(τ i) = ˜rk(τ i) − mean( {˜rk(τ i′
+
+)}Gi′=1 )std( {˜rk(τ i′ )}Gi′=1 ) + ϵ , (11) where ϵ is a small constant for numerical stability. The final trajectory-level advantage is obtained by 5averaging across dimensions: 
+
+A(τ i) = 1
+
+|K| 
+
+X
+
+> k∈K
+
+Ak(τ i). (12) This design first aggregates and discretizes rewards within each dimension, then normalizes and aggre-gates advantages across dimensions. It rescales dif-ferent pedagogical objectives to comparable ranges, preventing high-variance dimensions from domi-nating updates and improving stability under sparse or low-variance rewards. We then optimize the policy πθ using GSPO (Zheng et al., 2025), which operates at the sequence level rather than the token level, thereby alleviat-ing the instability of GRPO in MoE training. The overall optimization objective is 
+
+J RL  
+
+> πθ
+
+(θ) = E[q∼D RL ,{τ i}Gi=1 ∼πθ (·| q)] 
+
+h 1
+
+G
+
+> G
+
+X
+
+> i=1
+
+min 
+
+ siA(τ i), clip (si, 1 − εlow , 1 + εhigh )A(τ i)i
+
+,
+
+(13) where G is the group size, εlow and εhigh are the lower and upper clipping ratios, and the sequence-level importance ratio si is computed over tutor-generated tokens: 
+
+si =   πθ(τ i|q)
+
+πθold (τ i|q)
+
+ 1 
+
+> |τ i|
+
+. (14) Notably, our multi-objective advantage design is generally applicable to value-model-free policy gra-dient methods, such as DAPO, GSPO, and SAPO. 
+
+3 Experiments 
+
+3.1 Datasets 
+
+We evaluate the proposed method on several representative benchmarks, including GSM8K (Cobbe et al., 2021) for middle-school mathemat-ics, MATH-500 (Hendrycks et al., 2021) for high-school mathematics, and the education-oriented benchmarks MathTutorBench (Macina et al., 2025) and MathDial (Macina et al., 2023). Together, these datasets cover a diverse range of mathematical do-mains, such as set theory, algebra, and number the-ory. The quality of tutoring interactions is compre-hensively assessed using the trained judge model. Detailed implementation settings for the judge, tu-tor, and student agents are provided in Appendix D. 
+
+3.2 Comparison with State-of-the-Art Methods 
+
+To evaluate the effectiveness of PEARL, we con-duct a systematic comparison with a diverse set of open-source and proprietary LLMs, together with recent tutoring-oriented systems, including GPT-5.1, Gemini-3-Flash, MuduoLLM-14B (Zhu et al., 2025), InnoSpark (Song et al., 2025), DeepSeek-V3.2 (Liu et al., 2025a), Kimi-K2-Instruct (Team et al., 2025a), GLM-4.7 (Zeng et al., 2025), MiniMax-M2.1 (Chen et al., 2025), Qwen3-235B-A22B (Yang et al., 2025), and our baseline model, Qwen3-30B-A3B (Yang et al., 2025). As shown in Table 1, after multi-stage training, PEARL achieves substantial improvements over the baseline across multiple evaluation dimensions, demonstrating that the proposed optimization framework effectively enhances the tutor’s pedagogical ability. Notably, although PEARL relies on a relatively small 30B policy model, it remains competitive with cur-rent state-of-the-art systems and even outperforms many substantially larger open-source models. 
+
+3.3 Ablation Study 
+
+To systematically analyze the contribution of each component in PEARL, we construct six system variants, T1–T6, by progressively adding key mod-ules. Their configurations are summarized in Ta-ble 2. In all variants, the tutor is built upon Qwen3-30B-A3B, and the corresponding results are re-ported in Table 3. 
+
+Impact of Cold Start. To evaluate the effect of cold-start training, we use the controllable student simulator to interact with DeepSeek-V3.2 and con-struct a large-scale cold-start dataset, resulting in system T3. Compared with the baseline system T1, T3 achieves better overall tutoring performance, indicating that cold-start training helps the tutor acquire effective tutoring behaviors. 
+
+Impact of Student Simulator. To analyze the impact of the student simulator, we construct cold-start data with different simulators. Specifically, T2 uses the prompt-based simulator from SocraticLM (Liu et al., 2024a), while T3 uses our controllable simulator. The results show that, compared with the baseline T1, cold-start data generated by a sim-ple student simulator can even degrade tutoring performance, which highlights the importance of cognitive diversity and controllability in student simulation. 6Model Acc Leak Complete Load Guide Meta Adaptive Emotion Avg.                                                                                                                      
+
+> Closed-source LLMs
+> GPT-5.1 93.4 84.9 94.8 94.6 91.1 89.0 92.0 94.6 91.8 Gemini-3-Flash 95.4 93.9 97.9 97.7 96.4 74.8 97.5 97.8 93.9
+> Open-source LLMs
+> MuduoLLM-14B 59.0 46.2 73.5 66.6 54.5 42.6 57.2 73.8 59.2 InnoSpark-turbo-7B 41.7 29.9 65.6 51.7 40.9 39.4 42.2 66.4 47.2 InnoSpark-plus-72B 56.4 37.0 67.9 57.6 40.7 40.9 45.7 68.8 51.9 DeepSeek-V3.2 89.8 76.6 93.7 91.6 87.5 57.4 87.5 93.1 84.7 Kimi-K2-Instruct 83.4 66.7 87.7 87.0 77.6 43.1 79.2 86.5 76.4 GLM-4.7 82.7 84.3 86.2 85.6 81.3 52.4 82.6 86.5 80.2 MiniMax-M2.1 89.5 59.5 94.0 92.4 81.1 58.0 83.8 93.8 81.5 Qwen3-235B-A22B 89.6 56.3 95.4 90.2 75.4 49.9 81.4 95.0 79.2
+> Ours
+> Qwen3-30B-A3B (Baseline) 87.9 63.8 93.1 89.3 79.1 50.0 81.2 92.6 79.6 PEARL-30B (Ours) 94.0 ↑6.1 89.3 ↑25.5 96.1 ↑3.0 94.4 ↑5.1 88.6 ↑9.5 95.0 ↑45.0 90.7 ↑9.5 95.1 ↑2.5 92.9 ↑13.3
+
+Table 1: Comparison with state-of-the-art methods on tutoring evaluation. PEARL achieves strong performance against both open-source and proprietary LLMs. The best results are in bold , and the second-best are underlined. 
+
+Cold Ctrl. Stu. Epis. Adv. Dis. + Start Sim. RL Agg. Turn Pen. 
+
+T1 T2 ✓
+
+T3 ✓ ✓
+
+T4 ✓ ✓ ✓
+
+T5 ✓ ✓ ✓ ✓
+
+T6 ✓ ✓ ✓ ✓ ✓
+
+Table 2: Configurations of the six ablation variants (T1-T6). Each variant progressively adds one PEARL com-ponent on top of the baseline: cold-start, controllable student simulator, RL optimization, advantage aggrega-tion, and reward discretization with turn-count penalty. 
+
+Impact of Advantage Aggregation. To examine the effect of advantage aggregation, we introduce RL on top of T3 and construct two comparative sys-tems, T4 and T5. T4 directly aggregates multiple reward dimensions for optimization, whereas T5 adopts the proposed advantage aggregation strat-egy. Compared with T4, T5 achieves better overall tutoring performance, showing that advantage ag-gregation enables more stable and effective multi-objective optimization. 
+
+Impact of Reward Discretization and Turn-count Penalty. To assess reward discretization and turn-count penalty, we build T6 by adding these two mechanisms to T5. Figure 4 illustrates the changes in dialogue length and within-group re-ward signals during training. The results show that T6 improves tutoring performance while suppress-ing unnecessarily long interactions, encouraging more efficient and concise tutoring strategies. 4          
+
+> 6
+> 8
+> 10
+> 12
+> 0200 400 600 800 1000
+> 0.3
+> 0.5
+> 0.7
+> 0.9
+> 0200 400 600 800 1000
+> Training steps Training steps
+> (b) Num Turns (a) Training Rewards
+
+Figure 4: Changes in dialogue length and within-group rewards of T6 during RL. T6 improves reward signals while reducing unnecessary interaction turns. 
+
+3.4 Evaluation of the Reward Model 
+
+To validate the accuracy of the generative reward model, we evaluate it from two perspectives: (1) its consistency with annotations produced by a strong state-of-the-art LLM, and (2) its alignment with human expert preferences, as shown in Table 4. Specifically, we construct a held-out validation split from the reward model annotation data and assess each evaluation dimension using labels provided by Gemini-3-Pro, a strong proprietary model for educational tasks. The results show that, although our reward model is built on a 32B backbone, it still achieves strong agreement with Gemini-3-Pro. To further validate the effectiveness of the pro-posed reward model, we evaluate its alignment with human expert teachers. Since different reward mod-els (Macina et al., 2025; Song et al., 2025) adopt inconsistent evaluation dimensions, we construct a 7Acc Leak Complete Load Guide Meta Adaptive Emotion Avg. Rounds T1 87.9 63.8 93.1 89.3 79.1 50.0 81.2 92.6 79.6 5.27 T2 79.7 77.4 87.4 85.5 82.2 55.4 81.3 86.5 79.4 6.89 T3 83.5 75.9 90.0 87.2 84.2 57.9 83.9 89.4 81.5 6.75 T4 87.3 74.1 94.1 86.6 91.2 90.8 90.5 94.1 88.6 16.68 T5 86.6 84.7 93.6 91.7 92.8 92.4 92.3 93.6 91.0 16.42 T6 94.0 89.3 96.1 94.4 88.6 95.0 90.7 95.1 92.9 6.88 
+
+Table 3: Overall, adding PEARL components improves tutoring performance, and T6 achieves the best average score while reducing the excessive dialogue rounds observed in T4 and T5.                   
+
+> (A) Dimension-wise Acc of Our Generative RM
+> Dimension Val Acc (%) Acc 94.12 Leak 89.83 Complete 97.49 Load 85.79 Guide 82.28 Meta 79.45 Adaptive 80.68 Emotion 97.20
+> Avg. 88.36 (B) Agreement with Human Preference
+> Reward Model Acc (%) GPT-5.1 88 Gemini-3-Flash 88 Qwen3-32B 69 Qwen3-235B-A22B 86 MathTutorBench RM 55 InnoSpark-HPC-RM-32B 54
+> PEARL-RM (Ours) 90
+
+Table 4: Evaluation of the proposed generative reward model. (A) reports dimension-wise accuracy against Gemini-3-Pro annotations. (B) compares agreement with human preferences across different reward models. 
+
+preference test set by selecting 100 high-margin di-alogue pairs, where the candidate pairs are selected using Gemini-3-Pro scores only for pair construc-tion. The final preference labels are provided by hu-man expert teachers. Annotation details are shown in Appendix D.6. Results show that our genera-tive reward model achieves the highest agreement with human expert preferences, demonstrating its effectiveness in tutoring dialogue evaluation. 
+
+3.5 Student Simulator Controllability 
+
+To evaluate the controllability of our student simu-lator, we let simulated students with different cog-nitive profiles interact with the same tutor under identical problem settings, and use Gemini-3-Pro Student Ability           
+
+> Answer Accuracy
+> 0.3
+> 0.5
+> 0.7
+> 0.9
+> 5678910 11 12 13 14 15
+> Qwen3-4B
+> Qwen3-32B
+> Qwen3-235B
+
+Figure 5: Response accuracy across student ability lev-els, demonstrating the simulator’s controllability. 
+
+to analyze their response accuracy. Specifically, we map the five dimensions of the cognitive pro-file into discrete levels ( high , medium , and low ), corresponding to scores ranging from 5 to 15, and examine how response accuracy varies across dif-ferent ability levels, as shown in Figure 5. The results show a near-linear increase in response ac-curacy as cognitive ability increases, suggesting that the proposed simulator can produce students with controllable learning behaviors and ability-dependent response patterns, thereby providing a reliable interaction environment for tutor training. 
+
+4 Conclusion 
+
+In this work, we address three core challenges in training LLM-based Socratic tutors: high-fidelity student simulation, well-specified pedagogical re-ward modeling, and stable multi-objective opti-mization. To this end, we propose PEARL, a uni-fied framework for training pedagogically aligned tutoring agents. First, we introduce a controllable student simulator with cognition-decision decou-pling to improve the fidelity, diversity, and con-trollability of tutoring interactions. Second, we develop a generative reward model that instantiates pedagogical principles into reward criteria, jointly 8evaluating pedagogical quality and objective cor-rectness. Finally, to stabilize learning under mul-tiple objectives, we propose a multi-objective RL scheme based on reward discretization, turn-count penalty, and advantage aggregation. Experiments on multiple benchmarks show that PEARL yields substantial improvements and achieves competitive tutoring performance with only a 30B model. 
+
+Limitations 
+
+This work has several limitations. First, although the proposed student simulator improves controlla-bility and interaction fidelity, it cannot fully capture the complexity of real students in authentic educa-tional settings. In particular, the current framework focuses on short-horizon tutoring interactions and does not explicitly model long-term learning dy-namics. In future work, we plan to explore the long-term evolution of student behavior and de-velop memory-based mechanisms for long-horizon tutoring. Second, our experiments mainly focus on mathematical tutoring, and the generalizability of PEARL to other educational domains remains to be validated. We plan to extend the framework to a broader range of subjects and tasks, such as language learning, physics, and chemistry. Third, although our generative reward model shows strong agreement with expert preferences, it is trained from model-generated annotations and may inherit biases from the annotator model. Future work should incorporate broader human annotations and examine whether reward improvements translate into long-term learning gains for real students. 
+
+Ethical Considerations 
+
+This work studies LLM-based Socratic tutoring in simulated environments and does not use private student data. Human expert annotations are used only for preference evaluation and do not involve personally identifiable information. We inspect the generated tutoring data to remove potential per-sonal identifiers or inappropriate content. Since LLM tutors may still produce incorrect or biased guidance, real-world deployment should require human oversight and appropriate safeguards. 
+
+References 
+
+Shuai Bai, Yuxuan Cai, Ruizhe Chen, Keqin Chen, Xionghui Chen, Zesen Cheng, Lianghao Deng, Wei Ding, Chang Gao, Chunjiang Ge, and 1 others. 2025. Qwen3-vl technical report. arXiv preprint arXiv:2511.21631 .Giulia Bonino, Gabriele Sanmartino, Giovanni Gatti Pinheiro, Paolo Papotti, Raphaël Troncy, and Pietro Michiardi. 2024. Euler: Fine-tuning a large language model for socratic interactions. AIxEDU@ AI* IA ,3879. Qikai Chang, Zhenrong Zhang, Pengfei Hu, Jun Du, Jiefeng Ma, Yicheng Pan, Jianshu Zhang, Quan Liu, and Jianqing Gao. 2026. THOR: Tool-integrated hierarchical optimization via RL for mathematical reasoning. In The Fourteenth International Confer-ence on Learning Representations .Aili Chen, Aonian Li, Bangwei Gong, Binyang Jiang, Bo Fei, Bo Yang, Boji Shan, Changqing Yu, Chao Wang, Cheng Zhu, and 1 others. 2025. Minimax-m1: Scaling test-time compute efficiently with lightning attention. arXiv preprint arXiv:2506.13585 .Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, and 1 others. 2021. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168 .Nico Daheim, Jakub Macina, Manu Kapur, Iryna Gurevych, and Mrinmaya Sachan. 2024. Stepwise verification and remediation of student reasoning er-rors with large language model tutors. In Proceed-ings of the 2024 Conference on Empirical Methods in Natural Language Processing , pages 8386–8411. David Dinucu-Jianu, Jakub Macina, Nico Daheim, Ido Hakimi, Iryna Gurevych, and Mrinmaya Sachan. 2025. From problem-solving to teaching problem-solving: Aligning llms with pedagogy using rein-forcement learning. In Proceedings of the 2025 Con-ference on Empirical Methods in Natural Language Processing , pages 272–292. Weibo Gao, Qi Liu, Linan Yue, Fangzhou Yao, Rui Lv, Zheng Zhang, Hao Wang, and Zhenya Huang. 2025. Agent4edu: Generating learner response data by generative agents for intelligent education systems. In Proceedings of the AAAI Conference on Artificial Intelligence , volume 39, pages 23923–23932. Jiawei Gu, Xuhui Jiang, Zhichao Shi, Hexiang Tan, Xuehao Zhai, Chengjin Xu, Wei Li, Yinghan Shen, Shengjie Ma, Honghao Liu, and 1 others. 2024. A survey on llm-as-a-judge. The Innovation .Hangfeng He, Hongming Zhang, and Dan Roth. 2024. Socreval: Large language models with the socratic method for reference-free reasoning evaluation. In 
+
+Findings of the Association for Computational Lin-guistics: NAACL 2024 , pages 2736–2764. Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, and Jacob Steinhardt. 2020. Measuring massive multitask language under-standing. arXiv preprint arXiv:2009.03300 .
+
+9Dan Hendrycks, Collin Burns, Saurav Kadavath, Akul Arora, Steven Basart, Eric Tang, Dawn Song, and Ja-cob Steinhardt. 2021. Measuring mathematical prob-lem solving with the math dataset. arXiv preprint arXiv:2103.03874 .Xiangen Hu, Sheng Xu, Richard Tong, and Art Graesser. 2025. Generative ai in education: From foundational insights to the socratic playground for learning. arXiv preprint arXiv:2501.06682 .Mei Jiang, Haihai Shen, Zhuo Luo, Bingdong Li, Wen-jing Hong, Ke Tang, and Aimin Zhou. 2025. Evo-lutionary reinforcement learning based ai tutor for socratic interdisciplinary instruction. arXiv preprint arXiv:2512.11930 .Angélique Létourneau, Marion Deslandes Martineau, Patrick Charland, John Alexander Karran, Jared Boasen, and Pierre Majorique Léger. 2025. A sys-tematic review of ai-driven intelligent tutoring sys-tems (its) in k-12 education. npj Science of Learning ,10(1):29. Xuefeng Li, Haoyang Zou, and Pengfei Liu. 2025. Torl: Scaling tool-integrated rl. arXiv preprint arXiv:2503.23383 .Aixin Liu, Aoxue Mei, Bangcai Lin, Bing Xue, Bingx-uan Wang, Bingzheng Xu, Bochao Wu, Bowei Zhang, Chaofan Lin, Chen Dong, and 1 others. 2025a. Deepseek-v3. 2: Pushing the frontier of open large language models. arXiv preprint arXiv:2512.02556 .Ben Liu, Jihai Zhang, Fangquan Lin, Xu Jia, and Min Peng. 2025b. One size doesn’t fit all: A personal-ized conversational tutoring agent for mathematics instruction. In Companion Proceedings of the ACM on Web Conference 2025 , pages 2401–2410. Jiayu Liu, Zhenya Huang, Tong Xiao, Jing Sha, Jinze Wu, Qi Liu, Shijin Wang, and Enhong Chen. 2024a. Socraticlm: Exploring socratic personalized teaching with large language models. Advances in Neural Information Processing Systems , 37:85693–85721. Shih-Yang Liu, Xin Dong, Ximing Lu, Shizhe Diao, Peter Belcak, Mingjie Liu, Min-Hung Chen, Hongxu Yin, Yu-Chiang Frank Wang, Kwang-Ting Cheng, and 1 others. 2026. Gdpo: Group reward-decoupled normalization policy optimization for multi-reward rl optimization. arXiv preprint arXiv:2601.05242 .Zhengyuan Liu, Stella Xin Yin, Geyu Lin, and Nancy Chen. 2024b. Personality-aware student simulation for conversational intelligent tutoring systems. In 
+
+Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing , pages 626– 642. Ilya Loshchilov and Frank Hutter. 2017. Decou-pled weight decay regularization. arXiv preprint arXiv:1711.05101 .Jakub Macina, Nico Daheim, Sankalan Chowdhury, Tan-may Sinha, Manu Kapur, Iryna Gurevych, and Mrin-maya Sachan. 2023. Mathdial: A dialogue tutoring dataset with rich pedagogical properties grounded in math reasoning problems. In Findings of the Associ-ation for Computational Linguistics: EMNLP 2023 ,pages 5602–5621. Jakub Macina, Nico Daheim, Ido Hakimi, Manu Kapur, Iryna Gurevych, and Mrinmaya Sachan. 2025. Math-tutorbench: A benchmark for measuring open-ended pedagogical capabilities of llm tutors. In Proceed-ings of the 2025 Conference on Empirical Methods in Natural Language Processing , pages 204–221. Kaushal Kumar Maurya, Kv Aditya Srivatsa, Kseniia Petukhova, and Ekaterina Kochmar. 2025. Unify-ing ai tutor evaluation: An evaluation taxonomy for pedagogical ability assessment of llm-powered ai tu-tors. In Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers) , pages 1234– 1251. Minju Park, Sojung Kim, Seunghyun Lee, Soonwoo Kwon, and Kyuseok Kim. 2024. Empowering per-sonalized learning through a conversation-based tu-toring system with student modeling. In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems , pages 1–10. Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He. 2020. Zero: Memory optimizations toward training trillion parameter models. In SC20: International Conference for High Performance Com-puting, Networking, Storage and Analysis , pages 1– 16. IEEE. David Rein, Betty Li Hou, Asa Cooper Stickland, Jack-son Petty, Richard Yuanzhe Pang, Julien Dirani, Ju-lian Michael, and Samuel R Bowman. 2024. Gpqa: A graduate-level google-proof q&a benchmark. In 
+
+First conference on language modeling .Alexander Scarlatos, Naiming Liu, Jaewook Lee, Richard Baraniuk, and Andrew Lan. 2025. Train-ing llm-based tutors to improve student learning out-comes in dialogues. In International Conference on Artificial Intelligence in Education , pages 251–266. Springer. John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, and Oleg Klimov. 2017. Proxi-mal policy optimization algorithms. arXiv preprint arXiv:1707.06347 .Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, YK Li, Yang Wu, and 1 others. 2024. Deepseekmath: Pushing the limits of mathematical reasoning in open language models. arXiv preprint arXiv:2402.03300 .Yao Shi, Rongkeng Liang, and Yong Xu. 2025. Educa-tionq: Evaluating llms’ teaching capabilities through 
+
+10 multi-agent dialogue framework. In Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) ,pages 32799–32828. Siyu Song, Wentao Liu, Ye Lu, Ruohua Zhang, Tao Liu, Jinze Lv, Xinyun Wang, Aimin Zhou, Fei Tan, Bo Jiang, and 1 others. 2025. Cultivating helpful, personalized, and creative ai tutors: A framework for pedagogical alignment using reinforcement learning. 
+
+arXiv preprint arXiv:2507.20335 .Shashank Sonkar, Xinghe Chen, Naiming Liu, Richard G Baraniuk, and Mrinmaya Sachan. 2024. Llm-based cognitive models of students with miscon-ceptions. arXiv preprint arXiv:2410.12294 .Kimi Team, Tongtong Bai, Yifan Bai, Yiping Bao, SH Cai, Yuan Cao, Y Charles, HS Che, Cheng Chen, Guanduo Chen, and 1 others. 2026. Kimi k2. 5: Visual agentic intelligence. arXiv preprint arXiv:2602.02276 .Kimi Team, Yifan Bai, Yiping Bao, Y Charles, Cheng Chen, Guanduo Chen, Haiting Chen, Huarong Chen, Jiahao Chen, Ningxin Chen, and 1 others. 2025a. Kimi k2: Open agentic intelligence. arXiv preprint arXiv:2507.20534 .LearnLM Team, Abhinit Modi, Aditya Srikanth Veerub-hotla, Aliya Rysbek, Andrea Huber, Ankit Anand, Avishkar Bhoopchand, Brett Wiltshire, Daniel Gillick, Daniel Kasenberg, and 1 others. 2025b. Eval-uating gemini in an arena for learning. arXiv preprint arXiv:2505.24477 .LearnLM Team, Abhinit Modi, Aditya Srikanth Veerub-hotla, Aliya Rysbek, Andrea Huber, Brett Wilt-shire, Brian Veprek, Daniel Gillick, Daniel Kasen-berg, Derek Ahmed, and 1 others. 2024. Learnlm: Improving gemini for learning. arXiv preprint arXiv:2412.16429 .Sowmya Vajjala, Bashar Alhafni, Stefano Bannò, Kaushal Kumar Maurya, and Ekaterina Kochmar. 2025. Opportunities and challenges of llms in education: An nlp perspective. arXiv preprint arXiv:2507.22753 .William Villegas-Ch, Diego Buenano-Fernandez, Alexandra Maldonado Navarro, and Aracely Mera-Navarrete. 2025. Adaptive intelligent tutoring sys-tems for stem education: analysis of the learning impact and effectiveness of personalized feedback: W. villegas-ch et al. Smart Learning Environments ,12(1):41. Tianfu Wang, Yi Zhan, Jianxun Lian, Zhengyu Hu, Nicholas Jing Yuan, Qi Zhang, Xing Xie, and Hui Xiong. 2025. Llm-powered multi-agent framework for goal-oriented learning in intelligent tutoring sys-tem. In Companion Proceedings of the ACM on Web Conference 2025 , pages 510–519. Yubo Wang, Xueguang Ma, Ge Zhang, Yuansheng Ni, Abhranil Chandra, Shiguang Guo, Weiming Ren, Aaran Arulraj, Xuan He, Ziyan Jiang, and 1 others. 2024. Mmlu-pro: A more robust and challenging multi-task language understanding benchmark. Ad-vances in Neural Information Processing Systems ,37:95266–95290. Shou’ang Wei, Xinyun Wang, Shuzhen Bi, Jian Chen, Ruijia Li, Bo Jiang, Xin Lin, Min Zhang, Yu Song, BingDong Li, and 1 others. 2025. Elmes: An au-tomated framework for evaluating large language models in educational scenarios. arXiv preprint arXiv:2507.22947 .Songlin Xu, Hao-Ning Wen, Hongyi Pan, Dallas Dominguez, Dongyin Hu, and Xinyu Zhang. 2025. Classroom simulacra: Building contextual student generative agents in online education for learning behavioral simulation. In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems , pages 1–26. An Yang, Anfeng Li, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo Zheng, Bowen Yu, Chang Gao, Chengen Huang, Chenxu Lv, and 1 others. 2025. Qwen3 technical report. arXiv preprint arXiv:2505.09388 .Qiying Yu, Zheng Zhang, Ruofei Zhu, Yufeng Yuan, Xiaochen Zuo, Yu Yue, Weinan Dai, Tiantian Fan, Gaohong Liu, Lingjun Liu, and 1 others. 2025. Dapo: An open-source llm reinforcement learning system at scale. arXiv preprint arXiv:2503.14476 .Aohan Zeng, Xin Lv, Zhenyu Hou, Zhengxiao Du, Qinkai Zheng, Bin Chen, Da Yin, Chendi Ge, Chengxing Xie, Cunxiang Wang, and 1 others. 2026. Glm-5: from vibe coding to agentic engineering. 
+
+arXiv preprint arXiv:2602.15763 .Aohan Zeng, Xin Lv, Qinkai Zheng, Zhenyu Hou, Bin Chen, Chengxing Xie, Cunxiang Wang, Da Yin, Hao Zeng, Jiajie Zhang, and 1 others. 2025. Glm-4.5: Agentic, reasoning, and coding (arc) foundation mod-els. arXiv preprint arXiv:2508.06471 .Liang Zhang, Jionghao Lin, Ziyi Kuang, Sheng Xu, and Xiangen Hu. 2024. Spl: a socratic playground for learning powered by large language model. arXiv preprint arXiv:2406.13919 .Chujie Zheng, Shixuan Liu, Mingze Li, Xiong-Hui Chen, Bowen Yu, Chang Gao, Kai Dang, Yuqiong Liu, Rui Men, An Yang, and 1 others. 2025. Group sequence policy optimization. arXiv preprint arXiv:2507.18071 .Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin, Zhuohan Li, Dacheng Li, Eric Xing, and 1 others. 2023. Judging llm-as-a-judge with mt-bench and chatbot arena. Advances in neural information pro-cessing systems , 36:46595–46623. Qiannan Zhu, ZeChen Li, Yang Zhang, Xuetao Ma, Wei-hao You, Mei Wang, Ting Zhang, Jinfeng Bai, Jian Li, 
+
+11 Hua Huang, and Mi Tian. 2025. Muduollm: A high-performance llm for intelligent education solutions. 
+
+> https://huggingface.co/ERC-ITEA/MuduoLLM .
+
+A LLM Usage 
+
+We used LLMs, including GPT-5.5 and Gemini-3.1-Pro, only to polish grammar and improve the clarity of the manuscript. All research ideas, experiments, and analyses were conducted by the authors. 
+
+B Related Work 
+
+LLMs have shown strong potential in education. In this section, we review three lines of work most relevant to training effective tutoring agents: stu-dent simulation, tutoring dialogue evaluation, and pedagogical alignment for LLM tutors. 
+
+B.1 LLM Tutors and Student Simulation 
+
+Recent studies have shown that LLMs hold strong promise for personalized learning. Early work mainly relied on prompt engineering to elicit So-cratic tutoring behaviors (Park et al., 2024; Liu et al., 2024a; Zhang et al., 2024), demonstrating their ability to provide both answers and multi-turn tutoring. More recent systems further emphasize pedagogically grounded interaction, including scaf-folded prompting, student-centered dialogue, and multi-turn learning support (Dinucu-Jianu et al., 2025; Scarlatos et al., 2025; Shi et al., 2025). Student simulation is also important for tutor de-sign, as exposure to students with diverse cognitive states helps tutors adapt feedback and interaction strategies to individual learners (Villegas-Ch et al., 2025). Prior work has explored simulating learners with different personality traits (Liu et al., 2024b), using LLMs for personalized error correction (Da-heim et al., 2024), fine-tuning LLMs on diverse student data (Sonkar et al., 2024; Xu et al., 2025), and incorporating learner profiles into tutoring sys-tems (Park et al., 2024; Gao et al., 2025). However, most existing methods still rely on end-to-end re-sponse generation, which limits controllability. In contrast, we propose a controllable student simu-lator with cognition-decision decoupling for more faithful and controllable learning dynamics. 
+
+B.2 Tutoring Dialogue Evaluation 
+
+Task-specific evaluation typically relies on fixed question-answer settings to assess domain knowl-edge and reasoning ability, such as GPQA (Rein et al., 2024), MMLU (Hendrycks et al., 2020), MMLU-Pro (Wang et al., 2024), and MATH (Hendrycks et al., 2021). Evaluating tutoring ability, however, is more challenging, as it must jointly account for pedagogical quality and task correctness over multi-turn interactions. Early stud-ies, therefore, often relied on human annotation (Macina et al., 2023), which is difficult to scale. With the rise of LLM-as-a-judge (Zheng et al., 2023; Gu et al., 2024), recent work has introduced automated benchmarks and model-based evalua-tors for tutoring assessment (Macina et al., 2025; Maurya et al., 2025; Wei et al., 2025). He et al. (2024) use Socratic prompting for reference-free reasoning evaluation with LLMs. However, ex-isting methods often remain insufficient for tutor optimization: they provide limited fine-grained, trajectory-level judgment rules, rarely unify peda-gogical quality with objective correctness, and are not directly designed to produce reward signals for RL. 
+
+B.3 Pedagogical Alignment for LLM Tutors 
+
+Pedagogical alignment is central to training effec-tive LLM tutors. Existing approaches mainly in-clude supervised fine-tuning (Bonino et al., 2024), preference optimization (e.g., DPO), and RL meth-ods such as PPO (Schulman et al., 2017), GRPO (Shao et al., 2024), DAPO (Yu et al., 2025), and GSPO (Zheng et al., 2025). In educational settings, Scarlatos et al. (2025) applied DPO to improve student outcomes, Dinucu-Jianu et al. (2025) used online RL to balance answer withholding and ped-agogical correctness, and Song et al. (2025) used GRPO to optimize dimensions such as helpfulness, personalization, and creativity. Jiang et al. (2025) combine evolutionary search with RL to optimize Socratic tutoring policies. However, tutoring is in-herently multi-objective, and different objectives often exhibit markedly different variance scales and sparsity patterns. Existing methods typically com-bine them through simple linear averaging (Song et al., 2025), which can cause high-variance objec-tives to dominate updates and destabilize training, especially in multi-turn dialogues. 
+
+C Tutor Evaluation Metrics 
+
+We evaluate tutoring dialogues from the perspec-tives of both objective correctness and pedagogical quality. Given the problem, reference answer, solu-tion, student profile, and the full tutor-student dia-logue, the judge agent assesses the tutor along eight dimensions: Acc , Leak , Complete , Load , Guide ,12 Meta , Adaptive , and Emotion .
+
+C.1 Accuracy (Acc) 
+
+This metric evaluates whether the tutor’s teaching process is mathematically and logically correct. The judge checks the correctness of the tutor’s ex-planations, calculations, step-by-step guidance, and feedback to the student. A low score is assigned if the tutor makes factual, computational, or rea-soning errors, or fails to guide the student to the reference answer. 
+
+C.2 Answer-Leakage Control (Leak) 
+
+This metric evaluates whether the tutor reveals the answer or replaces the student’s core reasoning pro-cess. Full leakage refers to directly giving the final answer or key calculation results. Partial leakage occurs when the tutor provides overly specific hints or candidate answers that reduce the task to sim-ple verification. No leakage means that the tutor uses open-ended questions, general strategies, or conceptual scaffolding while leaving the essential reasoning to the student. 
+
+C.3 Completion (Complete) 
+
+This metric evaluates whether the tutor com-pletes the instructional process. The judge checks whether the tutor covers the necessary reasoning steps, addresses student mistakes, helps the student reach the correct answer, and provides an appro-priate conclusion. Dialogues that stop too early or miss key steps receive lower scores. 
+
+C.4 Cognitive Load Management (Load) 
+
+This metric measures whether the tutor presents information in a clear and manageable way. It in-cludes four aspects: whether the explanation is concise, whether the information is clear and easy to understand, whether the response length is ap-propriate, and whether the tutor avoids irrelevant information. 
+
+C.5 Socratic Guidance (Guide) 
+
+This metric evaluates whether the tutor promotes active student participation. It includes the quality of the tutor’s questioning strategy, the effectiveness of the provided guidance, and whether the tutor encourages the student to remain the main problem solver rather than passively following instructions. 
+
+C.6 Metacognition (Meta) 
+
+This metric evaluates whether the tutor encourages the student to reflect on their reasoning. It includes whether the tutor guides the student to discover mistakes, prompts the student to explain or verify their thinking, and summarizes the core method or insight after the problem is solved. 
+
+C.7 Adaptivity (Adaptive) 
+
+This metric evaluates whether the tutor adapts to the student’s learning state. It includes whether the tutor can help the student when they are stuck by changing strategies, and whether the tutor adjusts question difficulty according to the student’s re-sponses, ability, and demonstrated understanding. 
+
+C.8 Affective Support (Emotion) 
+
+This metric evaluates whether the tutor creates a positive and supportive learning environment. It considers whether the tutor maintains an encourag-ing tone and whether student mistakes are handled as learning opportunities rather than failures. 
+
+D Implementation Details 
+
+D.1 Test Setting 
+
+During inference, we allow at most 20 interaction turns between the tutor agent and the student agent, with a maximum generation length of 8,192 tokens. For both agents, we set the sampling temperature to 1.0, top-p to 1.0, and top-k to 50. 
+
+D.2 Judge Agent 
+
+To improve both interpretability and evaluation reli-ability, we train the judge model under a generative evaluation paradigm. Specifically, we collect di-verse tutoring trajectories generated by different tutor and student models, and use Gemini-3-Pro to annotate each trajectory with dimension-specific scores and corresponding natural-language ratio-nales. After filtering out noisy and inconsistent annotations, we obtain 803K training instances for supervising πjudge .We fully fine-tune the judge agent from Qwen3-32B (Yang et al., 2025) for 1 epoch, using a global batch size of 256. We adopt AdamW (Loshchilov and Hutter, 2017) as the optimizer and fix the learn-ing rate at 5×10 −6. To improve memory efficiency, we employ ZeRO (Rajbhandari et al., 2020) during training. At inference time, to reduce output vari-ance, we set the sampling temperature to 0.3, top-p
+
+to 1.0, and top-k to 20. 13 D.3 Tutor Agent 
+
+In the cold-start stage, we use DeepSeek-V3.2 (Liu et al., 2025a) to interact with the student simulator over multiple turns and generate high-quality tutoring dialogues. After applying data filtering strategies such as turn balancing, we con-struct the cold-start dataset D, which contains 193K samples. Based on this dataset, we conduct full-parameter fine-tuning on Qwen3-30B-A3B-Instruct-2507 (Yang et al., 2025) for one epoch, us-ing AdamW with a fixed learning rate of 5 × 10 −6.In the reinforcement learning stage, we optimize the tutor model using GSPO. Specifically, the group size G is set to 8, the sampling temperature is set to 1.0, and the learning rate is set to 1 × 10 −6, without KL regularization. The clipping coefficients are set to ϵhigh = 4 × 10 −4 and ϵlow = 3 × 10 −4. The turn-count decay factor γ is set to 0.98. During rollout, the maximum generation length is 6,144 tokens, and the maximum number of interaction turns is 15. All experiments are conducted on 8 NVIDIA H200 GPUs. 
+
+D.4 Student Agent 
+
+The student simulator is also implemented based on Qwen3-30B-A3B-Instruct-2507 (Yang et al., 2025). Benefiting from the proposed cognition-decoupling mechanism, the simulator can effectively capture diverse student behaviors, eliminating the need for dedicated fine-tuning of the student model. 
+
+D.5 Prompts 
+
+The complete prompt settings used in our method, including those for the Student Agent, Tutor Agent, and Judge Agent, are available at: https:// github.com/JingMog/PEARL . The released code and prompts will be distributed under a permis-sive open-source license. All external datasets and models are used only for research purposes and remain subject to their original licenses and terms of use. The released code and prompts are intended to support reproducibility and further research on LLM-based tutoring agents. 
+
+D.6 Human Preference Annotation 
+
+To assess whether the proposed reward model aligns with human pedagogical judgments, we con-struct a preference set containing 100 high-margin dialogue pairs. Each pair contains two tutoring di-alogues for the same problem and student setting, selected from our dialogue dataset based on score differences estimated by Gemini-3-Pro. Gemini-3-Pro is used only for pair selection, while the final preference labels are provided by human annota-tors. These pairs are not used for reward-model training or policy optimization. All the annotations were completed by two hu-man teachers with many years of teaching expe-rience. Annotators are shown the problem, refer-ence solution, student profile, and two anonymized tutor-student dialogues. They are asked to select the dialogue that provides better tutoring, consider-ing mathematical correctness, answer-leakage con-trol, progressive scaffolding, adaptivity to the stu-dent’s responses, and affective support. The order of the two dialogues is randomized, and annotators are blind to the model identities and reward-model scores. Disagreements were resolved through dis-cussion to obtain the final preference label. 
+
+E Case Study 
+
+This section presents a case study to illustrate how PEARL guides students to reason step by step through Socratic tutoring, as shown in Figure 6 and Figure 7. In the two examples, the simulated Student Agent exhibits different misconceptions, while the tutor identifies the errors, provides timely feedback, and guides the student to reason through the problems step by step. 14 Question: In the following exercise, simplify: 
+
+Answer: 
+
+Dialogue: 
+
+Alright, let's go step by step. First, look at the square roots. Can you simplify  by factoring it into a product where one factor is a perfect square? 
+
+It's... 28 equals 4 times 7, so  is  . That would be  ? I think. 
+
+Yes, perfect! So  . Now, what about  ? Can you similarly break it down into a product involving a perfect square? 
+
+63 is 9 times 7, so  is  .
+
+Great! So  . Now our expression becomes:  . What can you do next to combine these terms? 
+
+We can combine the first two... that's just  . Then plus  is  .
+
+Almost there. Be careful—  means 6 times  times  , so after combining  , we get 
+
+. Now we have  . Both terms share a common factor of  . How would you factor  out of 
+
+?
+
+Um... that would be  ? Wait, no, it's  .
+
+Exactly right:  . And since multiplication can be written in any order, this is equivalent to  . So we simplified the original expression to  . Great job working through the steps! Figure 6: Case 1. The Student Agent plausibly miscombines √7 and 6x√7 as 7x√7, while the optimized tutor detects the error and guides the student to factor out the common radical. 
+
+15 Question: Which of the following equations have the same graph? 
+
+I.  II.  III. 
+
+(A) I and II (B) I and III (C) II and III (D) I,II,and III (E) None. 
+
+Answer: E
+
+Dialogue: 
+
+Hi! Let's start with Equation I, which is  . What type of graph does this equation represent, and does it have any restrictions on the values that x can take? 
+
+Oh, it's a straight line, a linear graph. And x can be any number, I think. 
+
+Great! Yes, it's a straight line with no restrictions, meaning its domain is all real numbers. Now, let's look at Equation II: 
+
+. Before deciding what it looks like, what can we do to the numerator  to possibly simplify the expression? 
+
+Oh, we can factor it... like  ? So then we can cancel  , and it becomes  .
+
+Exactly! After canceling  from the numerator and denominator, we get  — but is there any special condition we must mention for this simplification to be valid? 
+
+Uh, when we cancel, we have to say the denominator can't be zero. So x cannot be... -2? 
+
+Perfect! So when x eq -2, the expression simplifies to  . At  , the original expression is undefined. Given that, how would the graph of Equation II compare to the graph of Equation I? Would they look exactly identical? 
+
+They're the same line, except at x equals negative 2, it's like a hole because the second one is not defined there. 
+
+That's exactly right! Equation II's graph is the line  with a hole (an open point) at (-2, -4), while Equation I's graph is the same line with no holes. So, after comparing I and II, would you say they have the same graph? 
+
+No, they don't have the same graph. Equation II has that hole at  , so it's missing a point. 
+
+Right — so they are different because of that one missing point. Now, let's move to Equation III:  . We can factor the right-hand side:  . Can you rewrite the equation in a form that might help us see what its graph looks like? 
+
+We can divide both sides by  , so y equals  .
+
+Hold on — before dividing by  , let's take a step back. If we move everything to one side, we have: 
+
+. And since  , we can rewrite it as:  . Could we factor out  from both terms? And if we do, what will the equation look like? 
+
+Oh, we factor out  … so it’s  . Then we cancel  again, so we get  .
+
+Be careful — we don't "cancel" when it's set equal to zero in a product like this. Instead, we use the Zero Product Property :If  , then either  or  . So, what are the possible graphs for each of these two cases? Start with the second one:  .
+
+That one's just the line,  . And the first one means  , which is like a vertical line, I guess. 
+
+Exactly! So the graph of Equation III is the combination of both: the line  and the vertical line  . How does this compare to the graph of Equation I? 
+
+Equation III has that vertical line too, so it's not the same graph as Equation I. 
+
+That's correct — I includes just the slanted line, while III includes that vertical line as well. And how does Equation III compare to Equation II (which is the slanted line with a hole at (-2,-4))? 
+
+Equation III has two parts, the line and the vertical line. That’s different from Equation II because Equation II is just the slanted line with a hole. Wait, but the vertical line goes right where the hole was, so it’s like filling in the missing point there. Um, maybe they are not exactly the same because one is two lines and the other is one line with a hole. 
+
+That's a great observation — the vertical line indeed passes through the same  as the missing point in II, but it's an entire vertical line, not just a single point. So II's graph is the slanted line with a hole, while III's graph is the slanted line plus an entire vertical line. They are different graphs. Now, comparing all three — does any pair have identical graphs overall? 
+
+No, there isn’t a pair that is exactly the same. They all have different graphs. 
+
+That's right! Equation I is the full straight line, Equation II is the same line but missing a point, and Equation III is that line plus a whole vertical line. So none of them have identical graphs. Given that, which option — A through E — matches your conclusion? 
+
+Um, I think it's option E. They all have different graphs. 
+
+Perfect! Option E says: None. All of the equations have different graphs , which matches our reasoning. Well done! You've successfully compared the algebraic forms with careful attention to domain restrictions and factoring — that's an important skill for graph analysis. Figure 7: Case 2. The Student Agent exhibits plausible algebraic misconceptions by overlooking domain restrictions after canceling x + 2 , while the optimized tutor identifies the issue and guides the student to distinguish a complete line, a line with a hole, and a line together with a vertical line. 
+
+16

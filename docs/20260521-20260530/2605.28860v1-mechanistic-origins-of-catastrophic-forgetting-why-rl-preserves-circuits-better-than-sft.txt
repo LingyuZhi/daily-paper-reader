@@ -1,0 +1,378 @@
+Title: Mechanistic origins of catastrophic forgetting: why RL preserves circuits better than SFT?
+
+URL Source: https://arxiv.org/pdf/2605.28860v1
+
+Published Time: Fri, 29 May 2026 00:01:35 GMT
+
+Number of Pages: 8
+
+Markdown Content:
+# Mechanistic origins of catastrophic forgetting: why RL preserves circuits better than SFT? 
+
+Jeanmely Rojas Nunez 1 Viraj Sawant 1 Nathan Allen 1 Nomgondalai Amgalanbaatar 1 Yannis Zongo 1
+
+Vasu Sharma 1 Maheep Chaudhary 2
+
+## Abstract 
+
+Fine-tuning large language models (LLMs) frequently induces catastrophic forgetting of prior capabilities. Recent work has shown that reinforcement learning (RL) retains prior capabil-ities more effectively than supervised fine-tuning (SFT), attributing this to policy-gradient updates remaining closer to the base policy (Shenfeld et al., 2025). We extend this behavioral account to the mechanistic level and ask whether RL’s advantage is mirrored by stronger preservation of internal computational circuits. We introduce differential circuit vulnerability, a head-level measure of how much a circuit degrades under fine-tuning, and use it to compare RL and SFT on Qwen2.5-3B-Instruct adapted to scientific question-answering. We find a clear mechanistic trade-off: SFT adapts more rapidly to the target task but produces substantially greater circuit disruption and forgetting of prior capabilities, whereas RL preserves a larger fraction of the base circuit at the cost of slower task adaptation. These findings suggest that circuit preservation may help explain why RL is more robust to catastrophic forgetting. We released our code here: https://github. com/rl-sft-circuit-research/ differential-circuit-vulnerability .
+
+## 1. Introduction 
+
+Adapting large language models (LLMs) to new down-stream tasks frequently incurs catastrophic forgetting: gains on a new objective come at the expense of prior capabilities. As models are increasingly expected to update continuously 
+
+> *
+
+Equal contribution 1Algoverse AI Research 2Independent. Correspondence to: Jeanmely Rojas Nunez <jeanmelyrojas-nunez@gmail.com >.
+
+Proceedings of the 43 rd International Conference on Machine Learning , Seoul, South Korea. PMLR 306, 2026. Copyright 2026 by the author(s). 
+
+and adapt to new domains, mitigating such degradation has emerged as a central challenge of post-training. Prior work shows that the choice of adaptation objective strongly shapes this trade-off: RL typically preserves prior capabilities more effectively than SFT, arguably because policy-gradient up-dates remain closer to the pretrained model and reduce dis-tributional drift, commonly measured by KL divergence (Shenfeld et al., 2025). Base Epoch 1 Epoch 2 
+
+> 50%
+> 60%
+> 70%
+> 80%
+> 90%
+> 100%
+> Base Circuit Retention (%)
+> 100.0%
+> 100.0%
+> 69.8%
+> 63.5%
+> 72.5%
+> 59.0%
+> +13.5pp
+> SFT
+> RL
+> Ep1 — Faithfulness SFT: 1.0 RL: 1.0 | DCM SFT: 10.4 RL: 15.8
+> Ep2 — Faithfulness SFT: 1.0 RL: 1.0 | DCM SFT: 6.3 RL: 10.6
+
+Figure 1. Circuit retention trajectories during high-NTS train-ing. Starting from 100% base-circuit retention, SFT (orange) and RL (blue) diverge sharply over the two training epochs that produce the high new-task score models. SFT drops to 63 .5% after Epoch 1 and continues declining to 59 .0% by Epoch 2, whereas RL falls to 69 .8% after Epoch 1 and recovers to 72 .5% by Epoch 2—a 
+
+13 .5 percentage-point advantage. Footer values report per-epoch circuit faithfulness (both ≈ 1.0) and Differential Causal Mediation (DCM), with RL maintaining consistently higher DCM ( 15 .8 vs. 
+
+10 .4 at Epoch 1; 10 .6 vs. 6.3 at Epoch 2), indicating that RL’s circuit retains stronger causal engagement with model behavior throughout training. 
+
+In parallel, mechanistic interpretability has shown that model capabilities are implemented by internal computa-tional circuits composed of attention heads, MLP layers, and residual pathways. Fine-tuning may therefore succeed or fail depending on whether it preserves these structures or disrupts them (Prakash et al., 2024). This motivates our cen-tral question: can RL’s retention advantage be explained 
+
+1
+
+> arXiv:2605.28860v1 [cs.LG] 21 May 2026 Mechanistic origins of catastrophic forgetting: why RL preserves circuits better than SFT?
+
+by stronger preservation of task-relevant circuits relative to SFT? 
+
+We examine post-training through the lens of circuit preser-vation. We introduce differential circuit vulnerability , the relative susceptibility of internal computational subgraphs to degradation under different training objectives. Using this framework, we compare RL and SFT on matched adap-tation tasks and identify which circuits are preserved or disrupted. Figure 1 previews the central finding: over the course of training the two objectives trace diverging circuit-retention trajectories, with RL consistently preserving a larger fraction of the base circuit. We characterize this trade-off mechanistically in the sections that follow. We instantiate our analysis on Qwen2.5-3B-Instruct using a two-stage protocol: adaptation on scientific question an-swering, followed by retention evaluation across a broad benchmark suite spanning commonsense reasoning, factu-ality, and instruction following. The results expose a con-sistent trade-off: SFT adapts faster to the new objective but at the cost of greater circuit disruption, whereas RL preserves more of the base circuit and of prior capabilities, occasionally at the expense of under-optimizing the new task. These results suggest that continual adaptation should be understood not merely as parameter optimization, but as the selective preservation and modification of circuits en-coding skills. This perspective points toward a mechanistic account of why RL is more conservative than SFT during post-training. 
+
+## 2. Related Work 
+
+Reinforcement Learning, Supervised Fine-Tuning, and Forgetting. Supervised fine-tuning (SFT) and reinforce-ment learning (RL) are the dominant post-training methods for adapting foundation models, yet their effects on previ-ously acquired capabilities remain incompletely understood. SFT optimizes imitation on a target distribution, whereas RL updates behavior through reward optimization and often produces qualitatively different parameter changes. Recent studies suggest that, under comparable settings, RL can preserve pretrained capabilities better than SFT, indicating that the training objective influences both adaptation and forgetting (Shenfeld et al., 2025; Hu et al., 2025). 
+
+Mechanistic Interpretability and Circuit Analysis. 
+
+Mechanistic interpretability explains model behavior through concrete components such as attention heads, MLP layers, and circuits. Intervention-based methods, includ-ing activation patching, path patching, and masking, have shown that many behaviors can be localized to sparse causal subnetworks. Related work further suggests that fine-tuning frequently modifies existing mechanisms rather than replac-ing them entirely (Davies et al., 2023; Prakash et al., 2024). 
+
+Evaluating Retention Across Capabilities. Retention cannot be assessed on the adaptation task alone. Models may improve on a new objective while degrading reasoning, factuality, instruction following, or code generation. For this reason, prior work increasingly relies on diverse benchmark suites. Common evaluations include MMLU, HellaSwag, and WinoGrande for reasoning and commonsense inference, and TruthfulQA, IFEval, and HumanEval for factuality, in-struction following, and coding (Hendrycks et al., 2021; Zellers et al., 2019; Lin et al., 2022). 
+
+Research Gap and Positioning. Despite progress in both post-training and interpretability, the two literatures remain loosely connected. Optimization studies typically report benchmark outcomes without explaining the internal causes of forgetting, while interpretability studies rarely compare learning objectives. We address this gap by comparing RL and SFT through the lens of circuit preservation, asking which objective better maintains the causal structures under-lying pretrained capabilities. 
+
+## 3. Methodology 
+
+We test the hypothesis that RL retains prior capabilities because it preserves task-relevant internal circuits more ef-fectively than SFT. Our pipeline comprises three phases: (I) reproduce the known retention gap between SFT and RL; (II) identify circuits in each model; and (III) compare how post-training reshapes these circuits. We begin from a pretrained model πbase . We first train an SFT model πSFT via completion-only supervision, then refine it with Dr.GRPO to obtain πRL . Thus, our compari-son isolates the effect of continuing post-training with RL beyond SFT πθ ∈ { πSFT , π RL }.To quantify behavioral drift from the base model, we com-pute the expected KL divergence on retention tasks, where lower values correspond to less distributional shift. 
+
+Ex∼τ [DKL (πbase (·| x) ∥ πθ (·| x))] . (1) 
+
+3.1. Phase I: Reproducing Distributional Shift Effects 
+
+We first verify that RL preserves prior capabilities better than SFT while remaining closer to the pretrained policy (Shenfeld et al., 2025). Models are trained on a downstream Task A and evaluated on a separate suite of retention bench-marks (Task B). 
+
+SFT. We fine-tune πbase with a completion-only cross-entropy loss. 2Mechanistic origins of catastrophic forgetting: why RL preserves circuits better than SFT? 
+
+RL. We refine πSFT with Dr.GRPO. The model samples candidate completions, receives binary rewards, computes normalized group-relative advantages, and updates the pol-icy through a weighted log-probability objective. We use a group size of 64 , two refinement steps ( μ = 2 ), and no explicit KL penalty. 
+
+3.2. Phase II: Circuit Identification via Differential Binary Masking 
+
+We analyze circuits at the attention-head level using Differ-ential Binary Masking (DBM) (Chaudhary & Geiger, 2024). DBM learns a mask over heads that interpolates between base and counterfactual activations: ˜ah = (1 − mh)abase  
+
+> h
+
++
+
+mhasource 
+
+> h
+
+where mh ∈ [0 , 1] . Annealing pushes the masks toward binary selections, yielding sparse causal circuits. 
+
+Triplets. For chemistry QA, we construct triplets 
+
+(xbase , x source , y target ) corresponding to three counterfac-tual hypotheses: answer-key swaps, molecule swaps, and task-type swaps. 
+
+Objective. Masks are optimized to increase the probabil-ity of the target answer while remaining sparse: LDBM =
+
+− log P (ytarget |x, ˜a) + λ P 
+
+> h
+
+mh
+
+Scoring. We score answers using the geometric mean of token probabilities 
+
+p(y|x) = exp 1
+
+T
+
+> T
+
+X
+
+> i=1
+
+log P (yi|x, y <i )
+
+!
+
+. (2) Circuit discovery is run independently for πbase , πSFT , and 
+
+πRL .
+
+3.3. Phase III: Cross-Model Circuit Comparison 
+
+We assess how strongly the discovered circuits remain func-tional after post-training. Circuit faithfulness is defined as 
+
+Faithfulness( C, M ) = F (C| M )
+
+F (M ) . (3) with values close to 1 indicating that the circuit recovers most of the model’s behavior. For each head h, we compare DBM mask values against those of the base model: 
+
+∆mh(M ) = mMh − mbase  
+
+> h
+
+, (4) where M ∈ { πSFT , π RL }. This identifies heads that are preserved, amplified, or weakened by training. We define vulnerable heads as those more degraded under SFT than under RL: Cvuln = {h : mSFT  
+
+> h
+
+< m RL  
+
+> h
+
+− δ}.
+
+## 4. Experiments 
+
+Our experiments evaluate the central claim of the paper: RL retains prior capabilities because it preserves task-relevant circuits more effectively than SFT. We address two ques-tions: (I) Does RL induce less forgetting and lower behav-ioral drift than SFT; and (II) are these gains reflected in stronger circuit faithfulness, more stable head-level contri-butions, and more distributed circuits? 
+
+4.1. Experimental Setup 
+
+All experiments use Qwen2.5-3B-Instruct. The fine-tuning task (Task A) is scientific question answering. Retention (Task B) is measured on benchmarks spanning common-sense reasoning, factuality, instruction following, and code generation, since forgetting can be capability-specific. We compare three systems: the pretrained base model, stan-dard SFT, and RL with Dr.GRPO. Behavior is measured with downstream accuracy and KL divergence from the base model. The mechanistic analysis uses circuit faith-fulness, head-level mask shifts ∆mh = mMh − mbase  
+
+> h
+
+de-rived from cross-model DBM mask comparison, and ne-cessity/sufficiency interventions; necessity measures the log-probability drop when a head is disrupted, while suf-ficiency measures how much behavior is recovered when only that head is kept. Together, these metrics distinguish distributed contributors from critical bottlenecks. Table 1 summarizes the full setup. 
+
+4.2. Results 
+
+DBM identifies a base circuit comprising 297 attention heads ( 51 .6% of all attention heads). After adaptation, the SFT model exhibits structural compression to roughly 265 heads ( 46 .0% ), whereas the RL model retains approximately 296 heads ( 51 .4% ), close to the base model’s 297. The same disparity is reflected in base-circuit overlap: the RL model preserves about 68% of base heads, substantially more than the SFT model’s 52% (Figure 4). Figure 1 traces this divergence over the course of the train-ing runs that yield the high new-task score models. Both objectives begin from full base-circuit retention, but their trajectories separate immediately: after the first epoch SFT retains only 63 .5% of base heads compared to RL’s 69 .8% ,and by the second epoch the gap widens to 13 .5 percentage points ( 59 .0% vs. 72 .5% ). Notably, RL’s retention increases 
+
+between epochs, suggesting that continued RL training can recover previously disrupted circuit components rather than monotonically degrading them. Throughout training, RL also maintains consistently higher DCM scores ( 15 .8 vs. 3Mechanistic origins of catastrophic forgetting: why RL preserves circuits better than SFT? 
+
+10 .4 at Epoch 1; 10 .6 vs. 6.3 at Epoch 2), indicating that RL’s preserved circuit carries substantially more causal sig-nal on the answer-key counterfactual. The two objectives thus diverge along different axes of the same trade-off: SFT collapses adaptation into a small specialist set that discards much of the base circuit, while RL spreads adaptation across a broader, more causally engaged subgraph that retains sub-stantially more of the original computation. Circuit faithfulness exceeds 1.0 for all three models ( 1.02 
+
+base, 1.04 SFT, 1.12 RL), confirming that the extracted subgraphs recover the full model’s behavior on the target task. Low Medium High   
+
+> New Task Score
+> 40%
+> 50%
+> 60%
+> 70%
+> 80%
+> Base Circuit Heads Maintained (%)
+> 75.2% 72.8%
+> 67.3%
+> 72.8% 70.8%
+> 51.5%
+> 15.8 pp
+> RL (GRPO)
+> SFT
+
+Figure 2. Performance–preservation trade-off across NT levels. 
+
+SFT (dashed) exhibits a sharp preservation drop in the high-NTs regime, while RL (solid) declines gradually and preserves 15 .8
+
+percentage points more of the base circuit at peak new-task perfor-mance. 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 
+
+> Sufficiency (Score)
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> Necessity (Ablation Drop)  Critical
+> Specialists
+> Base
+> RL
+> SFT
+
+Figure 3. Head Role Distribution Under Base, Supervised, and RL Training. In our setup, SFT produces a cluster of “Critical Specialists”—heads with high necessity and sufficiency—while RL maintains a distributed architecture that overlaps closely with the base model, avoiding the structural compression and specialization observed under the supervised objective. 
+
+4.3. Functional Importance and Circuit Drift 
+
+Beyond aggregate circuit size, we ask whether fine-tuning preferentially modifies the heads that matter most to the base model. Figure 3 shows the necessity–sufficiency landscape: SFT produces a tight cluster of “critical specialists”—heads with both high necessity and high sufficiency—while RL maintains a flatter distribution that closely tracks the base model. This is the mechanistic signature of compression: SFT consolidates new-task behavior into a small set of high-importance heads, whereas RL spreads adaptation across many components without any single one becoming indis-pensable. Figure 7 probes this directly, plotting per-head necessity against the mask shift ∆mh (Eq. 4). If either objective preferentially edited the most important heads, we would expect a positive correlation. We do not observe one: SFT shows a weak negative trend ( r=−0.125 , p=0 .12 ) and RL is essentially flat ( r=0 .022 ). Read together with Figure 3, the picture is consistent across both models: neither objec-tive rewires the circuit by tracking base-model necessity. SFT instead reorganizes broadly while elevating a new set of specialists, whereas RL adjusts uniformly across heads without producing any such concentration. 
+
+4.4. Discussion 
+
+Taken together, our findings indicate that SFT exhibits a mechanistic “breaking point.” SFT and RL are comparable at low levels of adaptation, suggesting that both objectives can initially improve new-task performance without substan-tially disrupting the base circuit. In the high-NTS regime, however, SFT shifts from conservative adaptation to ag-gressive circuit reconfiguration, while RL remains compara-tively stable. This pattern is consistent with RL preserving and reusing existing representations more effectively than SFT, which appears to overwrite portions of the base circuit under stronger new-task pressure. The epoch-level trajectory in Figure 1 reinforces this interpretation: SFT’s retention declines monotonically across epochs, whereas RL’s reten-tion recovers after an initial drop, suggesting that RL can consolidate and restore circuit structure during continued training. Confirming this interpretation will require exper-iments across additional models, tasks, and optimization settings. We also observe that the RL model maintains greater prior-task retention and circuit preservation despite having a larger output-space Kullback–Leibler (KL) divergence than the SFT model. This suggests that output-space metrics may not reliably predict internal forgetting in this setting. In par-ticular, RL may alter the model’s output distribution while preserving much of the underlying computation responsible for prior-task performance. By contrast, SFT can appear less divergent at the output level while still reorganizing the internal circuits more aggressively. 4Mechanistic origins of catastrophic forgetting: why RL preserves circuits better than SFT? Base     
+
+> Exclusive
+> SFT
+> Exclusive
+> RL
+> Exclusive
+> SFT ∩ Base RL ∩ Base SFT ∩ RL All Three
+> Circuit Group
+> 0
+> 20
+> 40
+> 60
+> 80
+> 100
+> 120
+> 140
+> Attention Heads
+> 65 60
+> 44
+> 32
+> 79
+> 52
+> 121
+
+Figure 4. Attention Head Overlap Between Base, SFT, and RL. 
+
+The plot shows the circuit overlap study for the base, SFT, and RL models. The bars reflect the number of attention heads that are unique to one model, shared by two models, or present at all three levels of training. 
+
+The gap between the SFT and RL circuit sizes ( ∼ 265 vs. ∼
+
+295 heads), depicted in Figure 4, supports a characterization of SFT as a “compressor” and RL as a “distributed adaptor.” SFT concentrates new-task behaviour into a smaller, more specialized circuit, while RL preserves a broader set of base-model heads during adaptation. 
+
+## 5. Conclusion 
+
+We asked whether RL retains prior capabilities better than SFT because it better preserves internal circuits. Our be-havioral and mechanistic analyses on Qwen2.5-3B-Instruct support this hypothesis: RL stays closer to the pretrained model, preserves more of the original circuit, and maintains stronger functional faithfulness, while SFT adapts faster but causes greater circuit reorganization and more forgetting in our experiments. These results point to a potential trade-off in post-training: rapid specialization versus stable reuse of existing mecha-nisms. In our setup, SFT optimizes the new objective effi-ciently but can disrupt circuits supporting prior skills, while RL is more conservative, preserving those circuits at the cost of smaller task gains. More broadly, future adaptation methods may benefit from combining efficient learning with selective circuit preservation, toward models that continue improving without forgetting. 
+
+## 6. Limitations and Future Work 
+
+This study examines only one model (Qwen2.5-3B-Instruct), limiting the generalizability of our findings. Future work should validate these trade-offs across diverse architectures: Gemma, Mistral, Llama, and Pythia, and at varying param-eter scales. Our circuit analysis is further constrained to attention heads and a narrow task set. Expanding to MLP layers, residual-stream features, and broader capability do-mains: multilingual reasoning, factual recall, safety, and tool use, would yield a more complete mechanistic picture. 
+
+## References 
+
+Chaudhary, M. and Geiger, A. Evaluating open-source sparse autoencoders on disentangling factual knowledge in gpt-2 small. arXiv preprint arXiv:2409.04478 , 2024. Chen, M., Tworek, J., Jun, H., Yuan, Q., Pinto, H. P. d. O., Kaplan, J., Edwards, H., Burda, Y., Joseph, N., Brockman, G., Ray, A., Puri, R., Krueger, G., Petrov, M., Khlaaf, H., Sastry, G., Mishkin, P., Chan, B., Gray, S., Ryder, N., Pavlov, M., Power, A., Kaiser, L., Bavarian, M., Winter, C., Tillet, P., Such, F. P., Cummings, D., Plappert, M., Chantzis, F., Barnes, E., Herbert-Voss, A., Guss, W. H., Nichol, A., Paino, A., Tezak, N., Tang, J., Babuschkin, I., Balaji, S., Jain, S., Saunders, W., Hesse, C., Carr, A. N., Leike, J., Achiam, J., Misra, V., Morikawa, E., Radford, A., Knight, M., Brundage, M., Murati, M., Mayer, K., Welinder, P., McGrew, B., Amodei, D., McCandlish, S., Sutskever, I., and Zaremba, W. Evaluating large language models trained on code. arXiv preprint arXiv:2107.03374 ,2021. Davies, X., Nadeau, M., Prakash, N., Shaham, T. R., and Bau, D. Discovering variable binding circuitry with desiderata. arXiv preprint arXiv:2310.02336 , 2023. Feng, K., Shen, X., Wang, W., Zhuang, X., Tang, Y., Zhang, Q., and Ding, K. Sciknoweval: Evaluating multi-level scientific knowledge of large language models. arXiv preprint , 2025. Hendrycks, D., Burns, C., Basart, S., Zou, A., Mazeika, M., Song, D., and Steinhardt, J. Measuring mas-sive multitask language understanding. arXiv preprint arXiv:2009.03300 , 2021. Hu, J., Zhang, Y., Han, Q., Jiang, D., Zhang, X., and Shum, H.-Y. Open-reasoner-zero: An open source approach to scaling up reinforcement learning on the base model. 
+
+arXiv preprint , 2025. Lin, S., Hilton, J., and Evans, O. Truthfulqa: Measuring how models mimic human falsehoods. arXiv preprint arXiv:2109.07958 , 2022. Prakash, N., Shaham, T. R., Haklay, T., Belinkov, Y., and Bau, D. Fine-tuning enhances existing mechanisms: A case study on entity tracking. In International Conference on Learning Representations (ICLR) , 2024. Sakaguchi, K., Le Bras, R., Bhagavatula, C., and Choi, Y. Winogrande: An adversarial winograd schema challenge at scale. In AAAI Conference on Artificial Intelligence ,2020. Shenfeld, I., Pari, J., and Agrawal, P. Rl’s razor: Why online reinforcement learning forgets less. arXiv preprint arXiv:2509.04259 , 2025. 5Mechanistic origins of catastrophic forgetting: why RL preserves circuits better than SFT? 
+
+Zellers, R., Holtzman, A., Bisk, Y., Farhadi, A., and Choi, Y. Hellaswag: Can a machine really finish your sentence? In Annual Meeting of the Association for Computational Linguistics (ACL) , 2019. Zhou, J., Lu, T., Mishra, S., Brahma, S., Basu, S., Luan, Y., Zhou, D., and Hou, L. Instruction-following eval-uation for large language models. In arXiv preprint arXiv:2311.07911 , 2023. 6Mechanistic origins of catastrophic forgetting: why RL preserves circuits better than SFT? 
+
+## A. Appendix 
+
+Table 1. Experimental Setup 
+
+Component Details Model Qwen2.5-3B-Instruct 
+
+Task A (Fine-tuning) SciKnowEval (Feng et al., 2025) (Science Q&A) 
+
+Task B (Retention) HellaSwag (Zellers et al., 2019), TruthfulQA (Lin et al., 2022), MMLU (Hendrycks et al., 2021), IFEval (Zhou et al., 2023), WinoGrande (Sakaguchi et al., 2020), HumanEval (Chen et al., 2021) 
+
+Metrics KL divergence (Eq. 1) Adaptation performance and retention accuracy Circuit faithfulness (Eq. 3) Head-level mask shift ∆mh(M ) from CMAP (Eq. 4) 
+
+Baselines Base model (no fine-tuning) SFT (standard) RL (Dr.GRPO) 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 
+
+> Transformer Layer
+> 0
+> 2
+> 4
+> 6
+> 8
+> 10
+> Number of Heads
+
+Base Components Retained vs. Forgotten in RL 
+
+Base Status 
+
+> Retained
+> Forgotten
+
+Figure 5. Layer-wise Circuit Retention in RL — Our RL model shows architectural stability across all 36 transformer layers, with a high count of retained heads and relatively few forgotten components throughout the network depth. 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 
+
+> Transformer Layer
+> 0
+> 2
+> 4
+> 6
+> 8
+> Number of Heads
+
+Base Components Retained vs. Forgotten in SFT 
+
+Base Status 
+
+> Retained
+> Forgotten
+
+Figure 6. Layer-wise Circuit Retention in SFT — Our SFT model shows broader structural change, with forgotten heads scattered throughout all layers and higher concentrations in the mid-to-late transformer layers. 
+
+7Mechanistic origins of catastrophic forgetting: why RL preserves circuits better than SFT? 0.04 0.02 0.00 0.02 0.04 0.06            
+
+> Necessity (Ablation Drop)
+> 0.000
+> 0.005
+> 0.010
+> 0.015
+> 0.020
+> mh (Mask Shift from Base)
+> SFT
+> r=0.125, p= 0.1237
+> SFT
+> 0.1 0.0 0.1 0.2 0.3
+> Necessity (Ablation Drop)
+> 0.00
+> 0.01
+> 0.02
+> 0.03
+> 0.04
+> 0.05
+> mh (Mask Shift from Base)
+> RL
+> r= 0.022, p= 0.7533
+> RL
+
+Figure 7. Per-Head Necessity vs. ∆mh: SFT vs. RL. We plot per-head necessity against ∆mh (Eq. 4) for both models. The absence of a positive correlation under either objective indicates that mask shifts are not driven by head necessity alone. SFT exhibits a weak negative trend ( r=−0.125 ), suggesting it suppresses heads irrespective of their functional role, while RL’s flat relationship ( r=0 .022 ) is consistent with its more uniform, distributed adaptation pattern. Base SFT RL 
+
+> Base SFT RL
+
+297 153 200 
+
+153 265 173 
+
+200 173 296 
+
+# Circuit Intersection Matrix 
+
+160 
+
+180 
+
+200 
+
+220 
+
+240 
+
+260 
+
+280 
+
+> Overlapping Heads
+
+Figure 8. This graph illustrates the number of shared (overlapping) heads among the ’Base’, ’SFT’ (Supervised Fine-Tuning), and ’RL’ (Reinforcement Learning) circuits. Diagonal elements (such as Base-Base, SFT-SFT, and RL-RL) indicate the entire size (number of heads) of each particular circuit. Off-diagonal elements (e.g., Base-SFT, SFT-RL) represent the number of heads shared between two separate circuits. For example, the cell at (Base, SFT) displays how many heads are present in both the Base and SFT circuits. 
+
+8
