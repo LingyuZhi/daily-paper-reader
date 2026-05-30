@@ -25,3 +25,54 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: agentic-rl
+      description: Agentic RL 与 LLM 解释 RL 策略相关论文
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: agentic reinforcement learning
+          keyword_cn: 智能体强化学习
+          query: agentic reinforcement learning methods for autonomous agents
+        - keyword: large language model reinforcement learning
+          keyword_cn: 大语言模型强化学习
+          query: using reinforcement learning to enhance large language models
+        - keyword: explainable reinforcement learning policy
+          keyword_cn: 可解释强化学习策略
+          query: large language model explaining reinforcement learning policy
+        - keyword: agent decision making
+          keyword_cn: 代理决策
+          query: reinforcement learning for agent decision making
+      intent_queries:
+        - query: recent research on agentic reinforcement learning
+          query_cn: 近期关于智能体强化学习的研究
+          enabled: true
+          source: manual
+          note: ''
+        - query: using large language models to explain reinforcement learning policies
+          query_cn: 使用大语言模型解释强化学习策略
+          enabled: true
+          source: manual
+          note: ''
+        - query: how reinforcement learning enhances large language model capabilities
+          query_cn: 强化学习如何增强大语言模型能力
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-05-30T07:51:40.064Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
