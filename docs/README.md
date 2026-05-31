@@ -6,80 +6,50 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-30
-- 运行时间：2026-05-30 20:28:14 UTC
+- 最新运行日期：2026-05-31
+- 运行时间：2026-05-31 20:31:40 UTC
 - 运行状态：成功
-- 本次总论文数：19
-- 精读区：8
-- 速读区：11
+- 本次总论文数：9
+- 精读区：6
+- 速读区：3
 
 ### 今日简报（AI）
-- 今日共生成 19 篇推荐（精读 8 篇，速读 11 篇）
-- 精读：《Infra-Bayesian Reinforcement Learning Agents Outperform Classical RL For Worst-Case Robustness》（9.0/10）, 《DemoEvolve: Overcoming Sparse Feedback in Agentic Harness Evolution with Demonstrations》（9.0/10）
-- 速读：《RL with Learnable Textual Feedback: A Bilevel Approach》（8.0/10）, 《Off-Policy Learning to Reason Works Because It Is More Pessimistic Than You Think》（8.0/10）, 《Joint Training of Multi-Token Prediction in Reinforcement Learning via Optimal Coefficient Calibration》（8.0/10）
+- 今日共生成 9 篇推荐（精读 6 篇，速读 3 篇）
+- 精读：《Soft-SVeRL: Self-Verified Reinforcement Learning with Soft Rewards》（10.0/10）, 《SEAL: Synergistic Co-Evolution of Agents and Learning Environments》（9.0/10）
+- 速读：《Loong: A Human-Like Long Document Translation Agent with Observe-and-Act Adaptive Context Selection》（8.0/10）, 《You Live More Than Once: Towards Hierarchical Skill Meta-Evolving》（7.0/10）, 《Learning to Orchestrate Agents under Uncertainty》（6.0/10）
 - 这些结果覆盖了当下较热的方向，建议先看精读区论文的关键问题与方法。
-- 详情：[/202605/30/README](/202605/30/README)
+- 详情：[/202605/31/README](/202605/31/README)
 
 ### 精读区论文标签
-1. [Infra-Bayesian Reinforcement Learning Agents Outperform Classical RL For Worst-Case Robustness](/202605/30/2605.23146v1-infra-bayesian-reinforcement-learning-agents-outperform-classical-rl-for-worst-case-robustness)  
+1. [Soft-SVeRL: Self-Verified Reinforcement Learning with Soft Rewards](/202605/31/2605.28561v1-soft-sverl-self-verified-reinforcement-learning-with-soft-rewards)  
+   标签：评分：10.0/10、query:agentic-rl
+   evidence：用大语言模型作为验证器生成软奖励，用于语言模型的强化学习训练
+2. [SEAL: Synergistic Co-Evolution of Agents and Learning Environments](/202605/31/2605.24426v1-seal-synergistic-co-evolution-of-agents-and-learning-environments)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：提出Infra-Bayesian强化学习智能体以实现鲁棒自主决策
-2. [DemoEvolve: Overcoming Sparse Feedback in Agentic Harness Evolution with Demonstrations](/202605/30/2605.24539v1-demoevolve-overcoming-sparse-feedback-in-agentic-harness-evolution-with-demonstrations)  
+   evidence：SEAL 提出闭环共演化框架用于 LLM 智能体强化学习，同时调整策略与环境
+3. [LLM-ALSO: LLM-Driven Adaptive Learning-Signal Optimization for Multi-Agent Reinforcement Learning](/202605/31/2605.29293v1-llm-also-llm-driven-adaptive-learning-signal-optimization-for-multi-agent-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：演示引导的线束演化用于智能体RL以克服稀疏反馈
-3. [Directional Alignment Mitigates Reward Hacking in Reinforcement Learning for Language Models](/202605/30/2605.25189v1-directional-alignment-mitigates-reward-hacking-in-reinforcement-learning-for-language-models)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：RL梯度的定向对齐缓解LLM中的奖励黑客
-4. [Not only where, But when: Temporal Scheduling for RLVR](/202605/30/2605.25381v1-not-only-where-but-when-temporal-scheduling-for-rlvr)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：RLVR中学习信号的时间调度改进LLM策略优化
-5. [Decoupled Delay Compensation: Enhancing Pre-trained MARL Policies via Learned Dynamics Filtering](/202605/30/2605.26286v1-decoupled-delay-compensation-enhancing-pre-trained-marl-policies-via-learned-dynamics-filtering)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：解耦延迟补偿增强自主智能体的预训练MARL策略
-6. [GeneralThinker: Domain-General Reasoning through Likelihood-Guided Answer-Conditioned Optimization](/202605/30/2605.27934v1-generalthinker-domain-general-reasoning-through-likelihood-guided-answer-conditioned-optimization)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：基于RL的密集答案条件优化框架，用于领域通用LLM推理
-7. [Commit to the Bit: Reactive Reinforcement Learning Done Right](/202605/30/2605.28276v1-commit-to-the-bit-reactive-reinforcement-learning-done-right)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：直接相关：提出一种用于自主智能体的反应式强化学习算法
-8. [Agent Explorative Policy Optimization for Multimodal Agentic Reasoning](/202605/30/2605.28774v1-agent-explorative-policy-optimization-for-multimodal-agentic-reasoning)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：面向工具增强推理的智能体RL策略优化
+   evidence：提出 LLM 驱动的自适应学习信号优化用于多智能体强化学习
+4. [Transferable Reinforcement Learning via Probabilistic Latent Embeddings and Dynamic Policy Adaptation for Sim-to-Real Deployment](/202605/31/2605.27659v1-transferable-reinforcement-learning-via-probabilistic-latent-embeddings-and-dynamic-policy-adaptation-for-sim-to-real-deployment)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：自主代理安全仿真到真实策略迁移的RL框架
+5. [Escape the Language Prior: Mitigating Late-Stage Modality Collapse in Audio Reasoning via Modality-Aware Policy Optimization](/202605/31/2605.27741v1-escape-the-language-prior-mitigating-late-stage-modality-collapse-in-audio-reasoning-via-modality-aware-policy-optimization)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：使用模态感知的 RL 策略优化，防止音频大语言模型推理中的模态坍塌
+6. [RL2ML: Finite-Rollout Surrogate Objectives from Reinforcement Learning to Maximum Likelihood](/202605/31/2605.30154v1-rl2ml-finite-rollout-surrogate-objectives-from-reinforcement-learning-to-maximum-likelihood)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：开发连接强化学习与最大似然的有限轮次替代目标以训练LLM
 
 ### 速读区论文标签
-1. [RL with Learnable Textual Feedback: A Bilevel Approach](/202605/30/2605.24547v1-rl-with-learnable-textual-feedback-a-bilevel-approach)  
+1. [Loong: A Human-Like Long Document Translation Agent with Observe-and-Act Adaptive Context Selection](/202605/31/2605.30274v1-loong-a-human-like-long-document-translation-agent-with-observe-and-act-adaptive-context-selection)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：具有可学习文本反馈的强化学习提升LLM推理性能
-2. [Off-Policy Learning to Reason Works Because It Is More Pessimistic Than You Think](/202605/30/2605.28150v1-off-policy-learning-to-reason-works-because-it-is-more-pessimistic-than-you-think)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：证明LLM推理的离线策略强化学习更为悲观，且无需重要性权重即可有效工作。
-3. [Joint Training of Multi-Token Prediction in Reinforcement Learning via Optimal Coefficient Calibration](/202605/30/2605.28184v1-joint-training-of-multi-token-prediction-in-reinforcement-learning-via-optimal-coefficient-calibration)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：重新审视RL与多token预测的联合训练，以改进LLM能力增强
-4. [Label-Free Reinforcement Learning via Cross-Model Entropy](/202605/30/2605.29009v1-label-free-reinforcement-learning-via-cross-model-entropy)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：提出用跨模型熵作为无标签奖励信号，用于LLM的强化学习后训练。
-5. [Partner-Aware Hierarchical Skill Discovery for Robust Human-AI Collaboration](/202605/30/2605.24352v1-partner-aware-hierarchical-skill-discovery-for-robust-human-ai-collaboration)  
+   evidence：Loong 智能体使用强化学习自适应选择最优上下文进行翻译
+2. [You Live More Than Once: Towards Hierarchical Skill Meta-Evolving](/202605/31/2605.28390v1-you-live-more-than-once-towards-hierarchical-skill-meta-evolving)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：伙伴感知的分层技能发现用于人机协作中的RL智能体
-6. [Evolutionary Enhanced Multi-Agent Reinforcement Learning for Cooperative Air Combat](/202605/30/2605.25091v1-evolutionary-enhanced-multi-agent-reinforcement-learning-for-cooperative-air-combat)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：用于自主战斗智能体的多智能体强化学习
-7. [Evo-Attacker: Memory-Augmented Reinforcement Learning for Long-Horizon Tool Attacks on LLM-MAS](/202605/30/2605.25389v1-evo-attacker-memory-augmented-reinforcement-learning-for-long-horizon-tool-attacks-on-llm-mas)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：基于RL的攻击者智能体动态策划工具攻击
-8. [Credit Assignment with Resets in Language Model Reasoning](/202605/30/2605.25507v2-credit-assignment-with-resets-in-language-model-reasoning)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：通过精确信用分配改进LLM的RL训练
-9. [Understanding Goal Generalisation in Sequential Reinforcement Learning](/202605/30/2605.23565v1-understanding-goal-generalisation-in-sequential-reinforcement-learning)  
+   evidence：提出面向智能体系统的分层技能元演化方法
+3. [Learning to Orchestrate Agents under Uncertainty](/202605/31/2605.27073v1-learning-to-orchestrate-agents-under-uncertainty)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：研究顺序RL智能体的目标泛化，预测分布外行为
-10. [Learning to Act under Noise: Enhancing Agent Robustness via Noisy Environments](/202605/30/2605.27209v1-learning-to-act-under-noise-enhancing-agent-robustness-via-noisy-environments)  
-   标签：评分：6.0/10、query:agentic-rl
-   evidence：针对LLM智能体的噪声环境agentic训练框架
-11. [Guiding LLM Post-training Data Engineering with Model Internals from Sparse Autoencoders](/202605/30/2605.27354v1-guiding-llm-post-training-data-engineering-with-model-internals-from-sparse-autoencoders)  
-   标签：评分：6.0/10、query:agentic-rl
-   evidence：使用稀疏自编码器的数据工程框架用于LLM强化学习
+   evidence：使用 bandit 优化进行智能体编排，与智能体决策强化学习相关
 
 
 <div class="dpr-home-promo-card">
