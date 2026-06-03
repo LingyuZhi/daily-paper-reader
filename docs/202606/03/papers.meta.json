@@ -1,0 +1,24 @@
+{
+  "label": "2026-06-03",
+  "date": "2026-06-03",
+  "generated_at": "2026-06-03T22:29:11",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202606/03/2606.02388v1-policy-and-world-modeling-co-training-for-language-agents",
+      "section": "deep",
+      "title_en": "Policy and World Modeling Co-Training for Language Agents",
+      "authors": "Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Yanbin Wei, Lingting Zhu, Shengju Qian, Xin Wang, Ying-Cong Chen, Qi Wang, Ke Tang",
+      "date": "2026-06-01",
+      "pdf": "https://arxiv.org/pdf/2606.02388v1",
+      "score": "8.0",
+      "evidence": "利用RL轨迹协同训练语言智能体的策略和世界模型",
+      "tldr": "RL提升语言智能体的行动能力但缺乏对行动后果的建模。本文提出PaW，在RL训练中增加辅助世界模型监督，利用策略梯度轨迹本身提供动作-结果对，无需额外模拟器。在多个基准上，PaW提升了语言智能体的环境理解能力和泛化性。",
+      "tags": "query:agentic-rl",
+      "abstract_en": "Reinforcement learning (RL) improves large language model (LLM) agents by teaching them which actions lead to high rewards, but provides little supervision on what those actions do to the environment. World modeling (WM) can fill this gap, yet existing approaches often require separate simulators, extra training stages, or additional inference-time computation. We observe that on-policy RL rollouts already contain the needed signal: each transition pairs an action with its resulting next observation. Based on this observation, we propose PaW, a Policy and World modeling co-training framework that adds auxiliary WM supervision to the same policy during RL, without changing the inference paradigm. To make auxiliary WM supervision informative and stable, PaW introduces three components: action-entropy-based WM data selection, noise-tolerant WM loss, and reward-adaptive loss balancing. Experiments on three agentic task benchmarks show consistent improvements over strong RL baselines across models and RL algorithms. These results suggest that standard RL rollouts are a practical source of WM supervision for language-agent training.",
+      "source": "arxiv",
+      "selection_source": "carryover_cache"
+    }
+  ],
+  "errors": []
+}

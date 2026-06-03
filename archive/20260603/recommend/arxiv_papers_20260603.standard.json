@@ -1,0 +1,64 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-03T22:27:29.517009+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.02388v1",
+      "source": "arxiv",
+      "title": "Policy and World Modeling Co-Training for Language Agents",
+      "abstract": "Reinforcement learning (RL) improves large language model (LLM) agents by teaching them which actions lead to high rewards, but provides little supervision on what those actions do to the environment. World modeling (WM) can fill this gap, yet existing approaches often require separate simulators, extra training stages, or additional inference-time computation. We observe that on-policy RL rollouts already contain the needed signal: each transition pairs an action with its resulting next observation. Based on this observation, we propose PaW, a Policy and World modeling co-training framework that adds auxiliary WM supervision to the same policy during RL, without changing the inference paradigm. To make auxiliary WM supervision informative and stable, PaW introduces three components: action-entropy-based WM data selection, noise-tolerant WM loss, and reward-adaptive loss balancing. Experiments on three agentic task benchmarks show consistent improvements over strong RL baselines across models and RL algorithms. These results suggest that standard RL rollouts are a practical source of WM supervision for language-agent training.",
+      "authors": [
+        "Ning Lu",
+        "Baijiong Lin",
+        "Shengcai Liu",
+        "Jiahao Wu",
+        "Haoze Lv",
+        "Yanbin Wei",
+        "Lingting Zhu",
+        "Shengju Qian",
+        "Xin Wang",
+        "Ying-Cong Chen",
+        "Qi Wang",
+        "Ke Tang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-01T15:35:40+00:00",
+      "link": "https://arxiv.org/pdf/2606.02388v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Co-training policy and world model for language agents using RL rollouts",
+      "llm_evidence_cn": "利用RL轨迹协同训练语言智能体的策略和世界模型",
+      "llm_evidence": "利用RL轨迹协同训练语言智能体的策略和世界模型",
+      "canonical_evidence": "利用RL轨迹协同训练语言智能体的策略和世界模型",
+      "llm_tldr_en": "Proposes PaW, a co-training framework adding world-modeling supervision to LLM agent RL without extra simulators, using on-policy rollouts as implicit signal.",
+      "llm_tldr_cn": "RL提升语言智能体的行动能力但缺乏对行动后果的建模。本文提出PaW，在RL训练中增加辅助世界模型监督，利用策略梯度轨迹本身提供动作-结果对，无需额外模拟器。在多个基准上，PaW提升了语言智能体的环境理解能力和泛化性。",
+      "llm_tldr": "RL提升语言智能体的行动能力但缺乏对行动后果的建模。本文提出PaW，在RL训练中增加辅助世界模型监督，利用策略梯度轨迹本身提供动作-结果对，无需额外模拟器。在多个基准上，PaW提升了语言智能体的环境理解能力和泛化性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "carryover_cache",
+      "paper_id": "2606.02388v1"
+    }
+  ],
+  "quick_skim": []
+}

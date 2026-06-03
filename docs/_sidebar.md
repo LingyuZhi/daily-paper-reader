@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-06-03 <!--dpr-date:20260603-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/03/2606.02388v1-policy-and-world-modeling-co-training-for-language-agents" data-sidebar-item="{&quot;title&quot;: &quot;Policy and World Modeling Co-Training for Language Agents&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.02388v1-policy-and-world-modeling-co-training-for-language-agents&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;agentic-rl&quot;}], &quot;evidence&quot;: &quot;利用RL轨迹协同训练语言智能体的策略和世界模型&quot;}">Policy and World Modeling Co-Training for Language Agents</a>
   * 2026-06-02 <!--dpr-date:20260602-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202606/02/2605.31062v1-adaptr1-reinforcement-learning-based-adaptive-interleaved-thinking-in-multi-hop-question-answering" data-sidebar-item="{&quot;title&quot;: &quot;AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking in Multi-hop Question Answering&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2605.31062v1-adaptr1-reinforcement-learning-based-adaptive-interleaved-thinking-in-multi-hop-question-answering&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;agentic-rl&quot;}], &quot;evidence&quot;: &quot;基于强化学习的自适应交错思考以提升LLM推理&quot;}">AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking in Multi-hop Question Answering</a>
