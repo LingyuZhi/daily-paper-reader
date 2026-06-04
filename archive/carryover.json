@@ -1,12 +1,259 @@
 {
-  "generated_at": "2026-06-03T22:27:29.517554+00:00",
-  "updated_date": "20260603",
+  "generated_at": "2026-06-04T21:37:23.151892+00:00",
+  "updated_date": "20260604",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260603",
+      "updated_date": "20260604",
       "carryover_days": 9,
-      "items": []
+      "items": [
+        {
+          "id": "2606.04396v1",
+          "source": "arxiv",
+          "title": "Read the Trace, Steer the Path: Trajectory-Aware Reinforcement Learning for Diffusion Language Models",
+          "abstract": "Diffusion large language models (dLLMs) generate responses by iteratively unmasking and revising many positions in parallel. This process leaves a rich denoising trace depicting which tokens become confident, which remain unstable, and when commitments form. Existing dLLM reinforcement learning methods use this signal only weakly. Flat rollouts are cheap, but assign a single outcome reward to the whole trajectory. Tree rollouts provide finer, verifiable training signals by branching partial trajectories and propagating leaf rewards upward, but are compute intensive. We ask whether the denoising trace itself can provide tree-like supervision without tree-level compute. We introduce CAPR (Cached-Amortized Path Refinement), a dLLM-RL algorithm that summarizes the denoising trace into a compact path state, uses cached trajectory states to generate cheap sibling continuations, and trains a block-level value head for local block-wise supervision. Under a block-wise unmasking schedule, CAPR records path-state and block-progress features, then redistributes the final outcome reward across blocks according to the tokens revealed in each block. This trains the value head to convert one sparse reward into block-level PPO weights. CAPR therefore recovers much of the granularity of tree search while avoiding full tree expansion, reducing rollout-generation cost to roughly 0.75x that of flat rollouts and 0.6x that of tree rollouts (under standard settings). Across 4x4 Sudoku, Countdown, GSM8K, and Math500, on dense and mixture-of-experts LLaDA backbones, CAPR sets a new state of the art for RL-tuned dLLMs at 256- and 512-token budgets. On Sudoku, it matches the strongest tree-structured baseline at less than one third of the per-step compute.",
+          "authors": [
+            "Anant Khandelwal",
+            "Manish Gupta"
+          ],
+          "primary_category": "cs.CL",
+          "categories": [
+            "cs.CL"
+          ],
+          "published": "2026-06-03T03:22:54+00:00",
+          "link": "https://arxiv.org/pdf/2606.04396v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "RL method to enhance diffusion LLMs via trajectory-aware learning",
+          "llm_evidence_cn": "利用轨迹感知的强化学习增强扩散大语言模型",
+          "llm_evidence": "利用轨迹感知的强化学习增强扩散大语言模型",
+          "canonical_evidence": "利用轨迹感知的强化学习增强扩散大语言模型",
+          "llm_tldr_en": "CAPR uses denoising traces to provide tree-like supervision for RL training of diffusion LLMs, improving efficiency.",
+          "llm_tldr_cn": "扩散大语言模型（dLLM）生成过程留下丰富去噪轨迹，但现有强化学习方法仅弱利用此信号。本文提出CAPR方法，通过缓存摊销路径细化，利用去噪轨迹自身提供类似树搜索的监督信号，避免完整树展开的高计算成本。实验表明CAPR在多项文本生成任务上提升了训练效率和生成质量。",
+          "llm_tldr": "扩散大语言模型（dLLM）生成过程留下丰富去噪轨迹，但现有强化学习方法仅弱利用此信号。本文提出CAPR方法，通过缓存摊销路径细化，利用去噪轨迹自身提供类似树搜索的监督信号，避免完整树展开的高计算成本。实验表明CAPR在多项文本生成任务上提升了训练效率和生成质量。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "using reinforcement learning to enhance large language models",
+          "matched_requirement_id": "req-2",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.04396v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2606.04815v1",
+          "source": "arxiv",
+          "title": "Learning While Acting: A Skill-Enhanced Test-Time Co-Evolution Framework for Online Lifelong Learning Agents",
+          "abstract": "Lifelong learning is essential for Large Language Model (LLM) agents operating in dynamic, interactive environments. However, existing lifelong learning agents for long-horizon tasks typically depend on discrete skill or past experiences retrieval with static parameters during inference, which prevents them from continuously internalizing test-time feedback like human learners. To bridge this gap, we propose Skill-enhanced Test-Time Co-Evolution (\\texttt{LifeSkill}), a two-stage reinforcement learning framework for Online Lifelong Learning Agents. Specifically, we design Verifier-Guided Skill Learning that addresses the lack of direct supervision for skill extraction by rewarding candidate skills according to the average verifier success of multiple skill-conditioned policy rollouts, encouraging the model to generate skills that are useful for solving tasks rather than merely plausible in text. Furthermore, we introduce Online Skill Internalization, which continuously improves the policy model during test-time interaction by transforming skill-conditioned trajectories into reward signals. This enables the agent to directly internalize reasoning capabilities into its parameters, avoiding the context bloat of experience retrieval. Experiments on LifelongAgentBench show that LifeSkill improves average performance by 7 absolute points by comparing with existing lifelong agent baselines.",
+          "authors": [
+            "Bo Mao",
+            "Jie Zhou",
+            "Yutao Yang",
+            "Xin Li",
+            "Xian Wei",
+            "Qin Chen",
+            "Xingjiao Wu",
+            "Liang He"
+          ],
+          "primary_category": "cs.LG",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "published": "2026-06-03T12:38:57+00:00",
+          "link": "https://arxiv.org/pdf/2606.04815v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "RL framework for LLM agents to learn from test-time feedback",
+          "llm_evidence_cn": "LLM代理在测试时通过强化学习持续学习的框架",
+          "llm_evidence": "LLM代理在测试时通过强化学习持续学习的框架",
+          "canonical_evidence": "LLM代理在测试时通过强化学习持续学习的框架",
+          "llm_tldr_en": "Proposes LifeSkill, a two-stage RL framework enabling LLM agents to continuously internalize test-time feedback via verifier-guided skill learning, enhancing lifelong learning in dynamic environments.",
+          "llm_tldr_cn": "现有LLM代理在长周期任务中依赖静态参数检索，无法像人类一样从测试时反馈中持续学习。本文提出LifeSkill，一个两阶段强化学习框架，通过验证器引导的技能学习奖励候选技能，使代理在测试时不断内化反馈。实验表明该方法显著提升了代理在动态环境中的终身学习能力和泛化性能，为构建自适应自主代理提供了新思路。",
+          "llm_tldr": "现有LLM代理在长周期任务中依赖静态参数检索，无法像人类一样从测试时反馈中持续学习。本文提出LifeSkill，一个两阶段强化学习框架，通过验证器引导的技能学习奖励候选技能，使代理在测试时不断内化反馈。实验表明该方法显著提升了代理在动态环境中的终身学习能力和泛化性能，为构建自适应自主代理提供了新思路。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+          "matched_requirement_id": "req-1",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.04815v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2606.04036v1",
+          "source": "arxiv",
+          "title": "Self-Distilled Policy Gradient",
+          "abstract": "On-policy self-distillation, where a language model conditions on privileged context to supervise its own generations, is a promising source of dense supervision for sparse-reward reinforcement learning. Actually, it can be instantiated as an auxiliary full-vocabulary student-to-teacher reverse Kullback-Leibler divergence loss. We therefore propose SDPG, a self-distilled policy-gradient framework that combines group-relative verifier advantages with normalized standard deviation, exact full-vocabulary on-policy self-distillation, as well as reference-policy KL regularization. Empirically, SDPG improves stability and performance over RLVR and self-distillation baselines. The code is available at https://github.com/lauyikfung/SDPG.",
+          "authors": [
+            "Yifeng Liu",
+            "Shiyuan Zhang",
+            "Yifan Zhang",
+            "Quanquan Gu"
+          ],
+          "primary_category": "cs.LG",
+          "categories": [
+            "cs.LG"
+          ],
+          "published": "2026-06-02T02:31:13+00:00",
+          "link": "https://arxiv.org/pdf/2606.04036v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Self-distilled policy gradient for RL fine-tuning of language models",
+          "llm_evidence_cn": "自蒸馏策略梯度用于语言模型的强化学习微调",
+          "llm_evidence": "自蒸馏策略梯度用于语言模型的强化学习微调",
+          "canonical_evidence": "自蒸馏策略梯度用于语言模型的强化学习微调",
+          "llm_tldr_en": "Proposes SDPG, a self-distilled policy-gradient RL framework that combines group-relative verifier advantages and on-policy self-distillation, improving stability and performance over RLVR.",
+          "llm_tldr_cn": "语言模型的稀疏奖励强化学习面临训练不稳定问题。本文提出自蒸馏策略梯度框架SDPG，结合分组相对验证器优势、精确全词汇在线自蒸馏和参考策略KL正则化，在多个基准上比RLVR和自蒸馏基线更稳定且性能更优。",
+          "llm_tldr": "语言模型的稀疏奖励强化学习面临训练不稳定问题。本文提出自蒸馏策略梯度框架SDPG，结合分组相对验证器优势、精确全词汇在线自蒸馏和参考策略KL正则化，在多个基准上比RLVR和自蒸馏基线更稳定且性能更优。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "using reinforcement learning to enhance large language models",
+          "matched_requirement_id": "req-2",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.04036v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2606.04051v1",
+          "source": "arxiv",
+          "title": "RUBAS: Rubric-Based Reinforcement Learning for Agent Safety",
+          "abstract": "The evolution of LLMs into tool-enabled agents creates a new class of safety challenges associated with real-world execution rather than simple text generation. Existing alignment methods often rely on coarse refusal signals or static supervision, making it difficult to balance safety with useful tool execution across diverse agentic risks. We introduce RUBAS, a rubric-based reinforcement learning framework for agent safety. RUBAS decomposes agent behavior into four dimensions: tool-use safety, argument safety, response safety, and helpfulness. These structured rubrics provide fine-grained and interpretable rewards over complete agent trajectories, enabling reinforcement learning to optimize safe tool use while preserving task completion. Extensive experiments across multiple agent safety benchmarks and models show that RUBAS improves safety over standard alignment baselines, reduces tool-grounded hallucinations, and maintains competitive utility. Our results suggest that multi-dimensional rubric rewards provide an effective training signal for aligning LLM agents in safety-critical tool-use settings.",
+          "authors": [
+            "Xian Qi Loye",
+            "Qinglin Su",
+            "Zhexin Zhang",
+            "Shiyao Cui",
+            "Qi Zhu",
+            "Fei Mi",
+            "Hongning Wang",
+            "Minlie Huang"
+          ],
+          "primary_category": "cs.LG",
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CR"
+          ],
+          "published": "2026-06-02T09:02:14+00:00",
+          "link": "https://arxiv.org/pdf/2606.04051v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Rubric-based RL for LLM agent safety",
+          "llm_evidence_cn": "基于评分标准的强化学习确保LLM智能体安全",
+          "llm_evidence": "基于评分标准的强化学习确保LLM智能体安全",
+          "canonical_evidence": "基于评分标准的强化学习确保LLM智能体安全",
+          "llm_tldr_en": "RUBAS uses rubric-based RL to balance safety and utility in LLM agents, providing fine-grained rewards across four dimensions and improving safe tool use without sacrificing task completion.",
+          "llm_tldr_cn": "针对大语言模型作为智能体时的安全挑战，现有对齐方法难以平衡安全与实用性。本文提出RUBAS，一种基于评分标准的强化学习框架，将智能体行为分解为工具使用安全、参数安全、响应安全和帮助性四个维度，提供细粒度可解释的奖励信号。实验表明RUBAS能在保持任务完成的同时显著提升智能体安全行为。",
+          "llm_tldr": "针对大语言模型作为智能体时的安全挑战，现有对齐方法难以平衡安全与实用性。本文提出RUBAS，一种基于评分标准的强化学习框架，将智能体行为分解为工具使用安全、参数安全、响应安全和帮助性四个维度，提供细粒度可解释的奖励信号。实验表明RUBAS能在保持任务完成的同时显著提升智能体安全行为。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+          "matched_requirement_id": "req-1",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.04051v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2606.04484v1",
+          "source": "arxiv",
+          "title": "AgentJet: A Flexible Swarm Training Framework for Agentic Reinforcement Learning",
+          "abstract": "We present AgentJet, a distributed swarm training framework for large language model (LLM) agent reinforcement learning. Unlike centralized frameworks that tightly couple agent rollouts with model optimization, AgentJet adopts a decoupled multi-node architecture in which swarm server nodes host trainable models and run optimization on GPU clusters, whereas swarm client nodes execute arbitrary agents on arbitrary devices. This design provides capabilities that are difficult to support in centralized frameworks: (1) heterogeneous multi-model reinforcement learning, enabling the training of heterogeneous multi-agent teams with multiple LLM as brains; (2) multi-task cocktail training with isolated agent runtimes; (3) fault-tolerant execution that prevents external environment failures from interrupting the training process; and (4) live code iteration, which allows agents to be edited during training by replacing swarm client nodes. To support efficient RL in multi-model, multi-turn, and multi-agent settings, AgentJet introduces a context tracking module with timeline merging, which consolidates redundant context and achieves a 1.5-10x training speedup. Finally, AgentJet introduces an automated research system that takes a research topic as input and autonomously conducts long-horizon, multi-day RL studies on large-scale clusters. By leveraging the swarm architecture, this system reproduces key exploratory workflows of RL researchers without human intervention during execution.",
+          "authors": [
+            "Qingxu Fu",
+            "Boyin Liu",
+            "Shuchang Tao",
+            "Zhaoyang Liu",
+            "Bolin Ding"
+          ],
+          "primary_category": "cs.AI",
+          "categories": [
+            "cs.AI",
+            "cs.LG",
+            "cs.MA"
+          ],
+          "published": "2026-06-03T06:02:52+00:00",
+          "link": "https://arxiv.org/pdf/2606.04484v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "distributed swarm training framework for LLM agent RL",
+          "llm_evidence_cn": "面向LLM智能体强化学习的分布式群体训练框架",
+          "llm_evidence": "面向LLM智能体强化学习的分布式群体训练框架",
+          "canonical_evidence": "面向LLM智能体强化学习的分布式群体训练框架",
+          "llm_tldr_en": "Presents AgentJet, a decoupled multi-node framework for LLM agent RL supporting heterogeneous multi-model training, multi-task cocktail training, and fault-tolerant execution.",
+          "llm_tldr_cn": "现有集中式智能体RL框架紧耦合，难以支持异构多智能体训练和多任务。本文提出AgentJet，采用解耦多节点架构，服务节点负责训练，客户端执行任意智能体。框架支持异构多模型RL、多任务鸡尾酒训练和容错执行，为大规模LLM智能体RL训练提供了灵活高效的基础设施。",
+          "llm_tldr": "现有集中式智能体RL框架紧耦合，难以支持异构多智能体训练和多任务。本文提出AgentJet，采用解耦多节点架构，服务节点负责训练，客户端执行任意智能体。框架支持异构多模型RL、多任务鸡尾酒训练和容错执行，为大规模LLM智能体RL训练提供了灵活高效的基础设施。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+          "matched_requirement_id": "req-1",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.04484v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2606.04750v1",
+          "source": "arxiv",
+          "title": "Fog of Love: Engineering Virtuous Agent Behavior with Affinity-based Reinforcement Learning in a Game Environment",
+          "abstract": "Instilling virtuous behavior in artificial intelligence has seen increasing interest. One of the techniques proposed is known as affinity-based reinforcement learning, which uses policy regularization on the objective function to incentivize virtuous actions without being fully dependent on the reward function design. Thus far, this technique has been demonstrated to be effective in grid worlds and toy-problem environments with minimal state and action spaces. To expand this research to more sophisticated environments, we introduce a two-player multi-agent environment based on the role-playing board game known as Fog of Love. In this environment, two agents compete to fulfill their individual virtues, while also cooperating to satisfy their relationship. Given the multi-agent nature, this is a complex problem where multi-agent deep deterministic policy gradient agents neither compete nor cooperate successfully. We present evidence that localized affinities enhance agent performance in achieving both competitive and cooperative objectives, resulting from superior overall scores in both domains. This not only results in virtuous choices but also clarifies an agent's teleology and makes its behavior human-level interpretable.",
+          "authors": [
+            "Ajay Vishwanath",
+            "Christian Omlin"
+          ],
+          "primary_category": "cs.AI",
+          "categories": [
+            "cs.AI",
+            "cs.CY",
+            "cs.LG"
+          ],
+          "published": "2026-06-03T11:31:37+00:00",
+          "link": "https://arxiv.org/pdf/2606.04750v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Affinity-based RL for multi-agent virtuous behavior",
+          "llm_evidence_cn": "基于亲和力的强化学习用于多智能体美德行为",
+          "llm_evidence": "基于亲和力的强化学习用于多智能体美德行为",
+          "canonical_evidence": "基于亲和力的强化学习用于多智能体美德行为",
+          "llm_tldr_en": "Proposes affinity-based RL to engineer virtuous behavior in a two-player game environment, extending beyond grid worlds.",
+          "llm_tldr_cn": "该论文针对在复杂环境中培养智能体美德行为的问题，提出基于亲和力的强化学习方法，通过在奖励函数中加入策略正则化来激励美德行为。在两人角色扮演游戏Fog of Love环境中验证了该方法，展示了其在多智能体场景下的有效性，为将价值引导扩展到更真实环境提供了新途径。",
+          "llm_tldr": "该论文针对在复杂环境中培养智能体美德行为的问题，提出基于亲和力的强化学习方法，通过在奖励函数中加入策略正则化来激励美德行为。在两人角色扮演游戏Fog of Love环境中验证了该方法，展示了其在多智能体场景下的有效性，为将价值引导扩展到更真实环境提供了新途径。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+          "matched_requirement_id": "req-1",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.04750v1",
+          "carry_days": 1
+        }
+      ]
     }
   }
 }
