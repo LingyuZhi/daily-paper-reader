@@ -1,94 +1,12 @@
 {
-  "generated_at": "2026-06-05T21:05:38.552936+00:00",
-  "updated_date": "20260605",
+  "generated_at": "2026-06-06T20:37:06.586515+00:00",
+  "updated_date": "20260606",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260605",
+      "updated_date": "20260606",
       "carryover_days": 9,
-      "items": [
-        {
-          "id": "2606.05152v1",
-          "source": "arxiv",
-          "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger",
-          "abstract": "Reasoning models have advanced rapidly, but the dominant reinforcement learning from verifiable rewards (RLVR) recipe remains surprisingly narrow: sample many responses and reward each with a single bit indicating whether the final answer is correct. Yet many settings provide rich feedback, including execution traces, tool outputs, expert corrections, and model self-evaluations. We study how to use such feedback through a distributional variant of the classic imitation learning algorithm DAgger, where the learner has local access to an expert distribution on states visited by the current policy. This yields a simple forward cross-entropy objective that admits a blackbox expert and whose sequence-level gradient {conduct rich credit assignment by propagating} future expert-student disagreement back to earlier decisions. We show that prior RL with self-distillation objectives based on reverse KL or Jensen-Shannon fail to guarantee monotonic policy improvement: even when the expert has higher reward, their updates may increase probability on worse actions. In contrast, we show that forward cross-entropy admits monotonic policy improvement and enjoys guarantees on regret. We further show that our objective optimizes a lower bound on teacher-weighted likelihood of success, leading to improved Pass@N. Empirically, our approach, DistIL, improves over RLVR and RL with self-distillation baselines across a variety of domains: scientific reasoning, coding, and solving hard mathematical problems.",
-          "authors": [
-            "Rishabh Agrawal",
-            "Jacob Fein-Ashley",
-            "Paria Rashidinejad"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG",
-            "cs.AI",
-            "cs.CL"
-          ],
-          "published": "2026-06-03T17:54:04+00:00",
-          "link": "https://arxiv.org/pdf/2606.05152v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "RL with rich feedback improves reasoning models, applicable to LLM enhancement",
-          "llm_evidence_cn": "利用丰富反馈进行强化学习提升推理模型，可应用于LLM增强",
-          "llm_evidence": "利用丰富反馈进行强化学习提升推理模型，可应用于LLM增强",
-          "canonical_evidence": "利用丰富反馈进行强化学习提升推理模型，可应用于LLM增强",
-          "llm_tldr_en": "Distributional DAgger uses rich feedback (traces, tool outputs) for credit assignment in RL training of reasoning models.",
-          "llm_tldr_cn": "该论文针对强化学习从可验证奖励（RLVR）信号单一的问题，提出分布化DAgger方法利用丰富反馈。通过模拟学习中的专家分布，实现序列级梯度信用分配。在推理模型训练中有效利用了执行轨迹和工具输出等反馈。该方法提升了训练效率和模型推理能力。",
-          "llm_tldr": "该论文针对强化学习从可验证奖励（RLVR）信号单一的问题，提出分布化DAgger方法利用丰富反馈。通过模拟学习中的专家分布，实现序列级梯度信用分配。在推理模型训练中有效利用了执行轨迹和工具输出等反馈。该方法提升了训练效率和模型推理能力。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.05152v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.05859v1",
-          "source": "arxiv",
-          "title": "TARPO: Token-Wise Latent-Explicit Reasoning via Action-Routing Policy Optimization",
-          "abstract": "Latent reasoning has emerged as a promising alternative to discrete Chain-of-Thought (CoT) in large language models (LLMs), enabling more expressive reasoning by operating over continuous representations. However, the inherently deterministic nature of continuous representations limits policy exploration in reinforcement learning (RL). To address this, we propose TARPO (Token-Wise Latent-Explicit Reasoning via Action-Routing Policy Optimization), a pure RL framework that adaptively switches between discrete token generation and continuous latent reasoning at each step. TARPO introduces a lightweight action head router that observes the current hidden state and samples a routing decision from a binary mode-selection space, preserving the stochasticity of discrete token sampling from the vocabulary. The LLM backbone and router are jointly optimized end-to-end with a shared group-relative advantage signal. Extensive experiments across Qwen2.5 (from 1.5B to 7B) and Llama-3.1-8B backbones demonstrate that TARPO consistently outperforms existing explicit and latent reasoning RL baselines across diverse benchmarks. Further analysis shows that TARPO learns adaptive token-wise switching behaviors while maintaining stable training dynamics. Our code is available at https://github.com/NKU-LITI/TARPO-master.",
-          "authors": [
-            "Liting Zhang",
-            "Shiwan Zhao",
-            "Xuyang Zhao",
-            "Zichen Xu",
-            "Jianye Wang",
-            "Qicheng Li"
-          ],
-          "primary_category": "cs.CL",
-          "categories": [
-            "cs.CL"
-          ],
-          "published": "2026-06-04T08:30:53+00:00",
-          "link": "https://arxiv.org/pdf/2606.05859v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Token-wise latent-explicit reasoning via action-routing policy optimization",
-          "llm_evidence_cn": "通过动作路由策略优化的令牌级潜在-显式推理",
-          "llm_evidence": "通过动作路由策略优化的令牌级潜在-显式推理",
-          "canonical_evidence": "通过动作路由策略优化的令牌级潜在-显式推理",
-          "llm_tldr_en": "TARPO is a pure RL framework that switches between latent and explicit reasoning at each token step, improving policy exploration.",
-          "llm_tldr_cn": "潜在推理在LLM中表现良好但确定性表示限制RL探索。提出TARPO，一个纯强化学习框架，在每个令牌步自适应切换离散令牌生成和连续潜在推理。通过轻量级动作头路由器从二元模式选择空间采样路由决策，保留随机性以促进探索。实验表明该方法在推理任务上提升了性能。",
-          "llm_tldr": "潜在推理在LLM中表现良好但确定性表示限制RL探索。提出TARPO，一个纯强化学习框架，在每个令牌步自适应切换离散令牌生成和连续潜在推理。通过轻量级动作头路由器从二元模式选择空间采样路由决策，保留随机性以促进探索。实验表明该方法在推理任务上提升了性能。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.05859v1",
-          "carry_days": 1
-        }
-      ]
+      "items": []
     }
   }
 }
