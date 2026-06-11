@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-10T22:25:18.861034+00:00",
-  "updated_date": "20260610",
+  "generated_at": "2026-06-11T21:18:53.805617+00:00",
+  "updated_date": "20260611",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260610",
+      "updated_date": "20260611",
       "carryover_days": 9,
       "items": [
         {
@@ -30,13 +30,13 @@
             "query:agentic-rl"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "RLVR with entropy calibration improves LLM reasoning",
-          "llm_evidence_cn": "利用可验证奖励的强化学习校准熵以提升大模型推理能力",
-          "llm_evidence": "利用可验证奖励的强化学习校准熵以提升大模型推理能力",
-          "canonical_evidence": "利用可验证奖励的强化学习校准熵以提升大模型推理能力",
-          "llm_tldr_en": "PAEC introduces position-aware entropy calibration to prevent policy entropy collapse during RLVR training, improving LLM reasoning on math tasks.",
-          "llm_tldr_cn": "针对RLVR训练中大语言模型策略熵过早坍缩的问题，本文提出位置感知熵校准（PAEC）方法，通过构建软掩码和锚定下界惩罚来防止关键位置的熵坍缩，在五个数学推理基准上验证了该方法能有效维持探索多样性，提升推理性能。",
-          "llm_tldr": "针对RLVR训练中大语言模型策略熵过早坍缩的问题，本文提出位置感知熵校准（PAEC）方法，通过构建软掩码和锚定下界惩罚来防止关键位置的熵坍缩，在五个数学推理基准上验证了该方法能有效维持探索多样性，提升推理性能。",
+          "llm_evidence_en": "RLVR for LLM reasoning with entropy calibration",
+          "llm_evidence_cn": "利用RLVR提升LLM推理，提出位置感知熵校准",
+          "llm_evidence": "利用RLVR提升LLM推理，提出位置感知熵校准",
+          "canonical_evidence": "利用RLVR提升LLM推理，提出位置感知熵校准",
+          "llm_tldr_en": "Proposes Position-Aware Entropy Calibration (PAEC) to prevent policy entropy collapse in RLVR for LLM reasoning, improving exploration efficiency and reasoning performance.",
+          "llm_tldr_cn": "针对RLVR训练LLM推理时策略熵崩溃的问题，本文提出位置感知熵校准(PAEC)，通过构建基于局部top-p熵和top-2候选竞争的软掩码，对关键位置施加锚定下界惩罚，从而防止熵崩溃并鼓励有效探索。在数学推理等任务上，PAEC显著提升了LLM的推理性能。",
+          "llm_tldr": "针对RLVR训练LLM推理时策略熵崩溃的问题，本文提出位置感知熵校准(PAEC)，通过构建基于局部top-p熵和top-2候选竞争的软掩码，对关键位置施加锚定下界惩罚，从而防止熵崩溃并鼓励有效探索。在数学推理等任务上，PAEC显著提升了LLM的推理性能。",
           "llm_tags": [
             "query:agentic-rl"
           ],
@@ -45,133 +45,6 @@
           "matched_requirement_id": "req-2",
           "selection_source": "carryover_cache",
           "paper_id": "2606.08543v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.08346v1",
-          "source": "arxiv",
-          "title": "CATPO: Critique-Augmented Tree Policy Optimization",
-          "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become a dominant paradigm for improving the reasoning capabilities of large language models (LLMs). Recent tree-based methods such as TreeRPO extend flat trajectory sampling with tree-structured rollouts to obtain dense, step-level reward signals without a separate process reward model. However, not all trees are equally informative: trees where all leaves succeed, all leaves fail, or the policy already predicts the reward distribution contribute little to gradient updates, wasting compute. We introduce CATPO (Critique-Augmented Tree Policy Optimization), which diagnoses and addresses this waste at the tree level. CATPO first scores each tree via a tree informativeness score, F(T), combining leaf-outcome diversity with policy-reward decorrelation at zero extra compute. For dead-wrong trees where all branches fail, CATPO applies critique-guided healing: it locates the shallowest failure point, generates a natural-language critique, and grafts refined continuations to recover training signal. Finally, an informativeness-weighted loss scales each tree's gradient contribution by its normalized score, concentrating parameter updates on the most informative trees while preserving overall gradient magnitude. Experiments on Qwen2.5-Math-1.5B trained with the MATH dataset show that CATPO achieves 37.5% macro accuracy across four benchmarks (AIME24, MATH-500, OlympiadBench, and MinervaMath), improving over TreeRPO by 1.9% and GRPO by 4.8%.",
-          "authors": [
-            "Ayush Singh",
-            "Umang Goyal",
-            "Ankur Dahiya"
-          ],
-          "primary_category": "cs.CL",
-          "categories": [
-            "cs.CL",
-            "cs.LG"
-          ],
-          "published": "2026-06-06T21:29:01+00:00",
-          "link": "https://arxiv.org/pdf/2606.08346v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "RLVR tree-based policy optimization for LLM reasoning",
-          "llm_evidence_cn": "基于树的RLVR策略优化提升LLM推理",
-          "llm_evidence": "基于树的RLVR策略优化提升LLM推理",
-          "canonical_evidence": "基于树的RLVR策略优化提升LLM推理",
-          "llm_tldr_en": "CATPO introduces tree informativeness scoring to prune uninformative rollout trees during RLVR training, improving LLM reasoning efficiency and performance.",
-          "llm_tldr_cn": "RLVR训练中树结构展开存在信息浪费问题，本文提出CATPO框架，通过计算每棵树的叶子多样性等信息性评分过滤无效树，仅对信息量高的树进行梯度更新，在数学推理任务上以更少计算达到更高准确率，提升了RLVR的训练效率。",
-          "llm_tldr": "RLVR训练中树结构展开存在信息浪费问题，本文提出CATPO框架，通过计算每棵树的叶子多样性等信息性评分过滤无效树，仅对信息量高的树进行梯度更新，在数学推理任务上以更少计算达到更高准确率，提升了RLVR的训练效率。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.08346v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.08088v1",
-          "source": "arxiv",
-          "title": "ConSteer-RL: Steering Reasoning Capabilities in Large Language Models via Confidence-Aware Reinforcement Learning",
-          "abstract": "Reinforcement Learning from Verifiable Rewards (RLVR) has recently become a key paradigm for improving the reasoning abilities of Large Language Models (LLMs), yet it remains limited by sparse binary rewards and its ignorance of model-internal uncertainty. In this paper, we propose ConSteer-RL, a simple yet effective framework that integrates token-level confidence signals derived from model log-probabilities into RLVR training. Specifically, building upon the Group Relative Policy Optimization (GRPO) framework, we construct a confidence-aware reward by aggregating per-token probabilities into a scalar confidence score and incorporating it into an awareness-based reward shaping mechanism that penalizes overconfident errors while reinforcing correct and confident reasoning. Experimental results demonstrate that ConSteer-RL consistently outperforms strong GRPO baselines, achieving average improvements of 2.3%-4.0% across different model scales.",
-          "authors": [
-            "Qing Miao",
-            "Yiming Zhao",
-            "Jing Yang",
-            "Chenxi Liu",
-            "Yuehai Chen",
-            "Yuewen Liu",
-            "Shaoyi Du",
-            "Badong Chen"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG",
-            "cs.CL"
-          ],
-          "published": "2026-06-06T10:23:24+00:00",
-          "link": "https://arxiv.org/pdf/2606.08088v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "confidence-aware RL for enhancing LLM reasoning",
-          "llm_evidence_cn": "置信度感知的强化学习提升大语言模型推理能力",
-          "llm_evidence": "置信度感知的强化学习提升大语言模型推理能力",
-          "canonical_evidence": "置信度感知的强化学习提升大语言模型推理能力",
-          "llm_tldr_en": "ConSteer-RL integrates token-level confidence into RLVR via awareness-based reward shaping, penalizing overconfidence, improving LLM reasoning on math tasks.",
-          "llm_tldr_cn": "RLVR中稀疏二值奖励忽略模型不确定性，本文提出ConSteer-RL框架，在GRPO基础上利用token级置信度构建置信度感知奖励，通过奖励塑造机制惩罚过度自信，在数学推理任务上提升了模型泛化能力和准确率，为利用模型内部信号改进RL训练提供了新方向。",
-          "llm_tldr": "RLVR中稀疏二值奖励忽略模型不确定性，本文提出ConSteer-RL框架，在GRPO基础上利用token级置信度构建置信度感知奖励，通过奖励塑造机制惩罚过度自信，在数学推理任务上提升了模型泛化能力和准确率，为利用模型内部信号改进RL训练提供了新方向。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.08088v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.08501v1",
-          "source": "arxiv",
-          "title": "Back on Track: Aligning Rewards and States for Reasoning in Diffusion Large Language Models",
-          "abstract": "Reinforcement learning (RL) holds immense promise for enhancing the reasoning capabilities of diffusion large language models (dLLMs). However, progress is fundamentally constrained by a dual misalignment between authentic generation trajectory and the gradient update process: (i) Process-reward misalignment. Sparse, terminal rewards are indiscriminately assigned to all intermediate steps of the generation process, failing to provide discriminative credit assignment. (ii) State-trajectory misalignment. Policy updates are often diverted toward artificial, out-of-trajectory states, squandering gradients on less informative samples. To address these limitations, we introduce Process Aligned Policy Optimization (PAPO), a novel framework that holistically aligns the RL update with the dLLM's generative trajectory via Step-Aware Process Rewards (SPR) that transform sparse terminal rewards into dense, step-wise credit, and Entropy-Guided Historical Re-enactment (EHR) that replays authentic trajectories at high-uncertainty steps. Extensive experiments on four benchmarks demonstrate that PAPO significantly outperforms baselines, achieving gains of up to 4.5% on GSM8K, 4.8% on MATH500, 42.2% on Countdown and 16.1% on Sudoku.",
-          "authors": [
-            "Yawen Shao",
-            "Jie Xiao",
-            "Kai Zhu",
-            "Yu Liu",
-            "Hongchen Luo",
-            "Xueyang Fu",
-            "Yang Cao",
-            "Wei Zhai",
-            "Zheng-Jun Zha"
-          ],
-          "primary_category": "cs.CL",
-          "categories": [
-            "cs.CL"
-          ],
-          "published": "2026-06-07T07:59:55+00:00",
-          "link": "https://arxiv.org/pdf/2606.08501v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "process aligned policy optimization for reasoning in diffusion LLMs",
-          "llm_evidence_cn": "面向扩散LLM推理的过程对齐策略优化",
-          "llm_evidence": "面向扩散LLM推理的过程对齐策略优化",
-          "canonical_evidence": "面向扩散LLM推理的过程对齐策略优化",
-          "llm_tldr_en": "Identifies process-reward and state-trajectory misalignments in RL for diffusion LLMs, proposes PAPO with localized process rewards and trajectory-consistent policy updates, improving reasoning performance.",
-          "llm_tldr_cn": "针对扩散大语言模型强化学习中的过程奖励错配和状态轨迹错配问题，提出过程对齐策略优化（PAPO），引入局部过程奖励和轨迹一致策略更新，在多个推理任务上显著提升了生成质量和推理准确性。",
-          "llm_tldr": "针对扩散大语言模型强化学习中的过程奖励错配和状态轨迹错配问题，提出过程对齐策略优化（PAPO），引入局部过程奖励和轨迹一致策略更新，在多个推理任务上显著提升了生成质量和推理准确性。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.08501v1",
           "carry_days": 1
         },
         {
@@ -199,13 +72,13 @@
             "query:agentic-rl"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "regret minimization framework for preference learning in LLMs via RL",
-          "llm_evidence_cn": "基于遗憾最小化的LLM偏好学习框架，使用强化学习",
-          "llm_evidence": "基于遗憾最小化的LLM偏好学习框架，使用强化学习",
-          "canonical_evidence": "基于遗憾最小化的LLM偏好学习框架，使用强化学习",
-          "llm_tldr_en": "Introduces Regret-based Preference Optimization (RePO), reframing RLHF as regret minimization rather than reward maximization for LLMs, better aligning with human counterfactual reasoning.",
-          "llm_tldr_cn": "基于可验证奖励的强化学习（RLVR）推动了推理任务进展，但许多语言任务缺乏可靠验证器，因此依赖人类反馈强化学习（RLHF）。本文提出基于遗憾的偏好优化（RePO），将RLHF重新解释为遗憾最小化而非奖励最大化，更贴合人类基于预期和反事实比较的偏好形成方式。在多个偏好对齐任务上，RePO优于现有方法。",
-          "llm_tldr": "基于可验证奖励的强化学习（RLVR）推动了推理任务进展，但许多语言任务缺乏可靠验证器，因此依赖人类反馈强化学习（RLHF）。本文提出基于遗憾的偏好优化（RePO），将RLHF重新解释为遗憾最小化而非奖励最大化，更贴合人类基于预期和反事实比较的偏好形成方式。在多个偏好对齐任务上，RePO优于现有方法。",
+          "llm_evidence_en": "introduces regret minimization for RLHF to better interpret human preferences",
+          "llm_evidence_cn": "引入遗憾最小化框架优化LLM偏好学习",
+          "llm_evidence": "引入遗憾最小化框架优化LLM偏好学习",
+          "canonical_evidence": "引入遗憾最小化框架优化LLM偏好学习",
+          "llm_tldr_en": "RePO reframes RLHF through regret minimization instead of reward maximization, using prospective and counterfactual comparisons to learn better language models.",
+          "llm_tldr_cn": "该论文指出RLVR在缺乏可靠验证器的任务中依赖RLHF，但现有方法对偏好信号解释不足；提出基于遗憾最小化的偏好优化（RePO）框架，通过前瞻性结果预期和反事实比较来重构RLHF；实验表明RePO在多种文本生成任务上优于传统RLHF算法，生成质量更高、更符合人类预期，为LLM偏好学习提供了新的理论视角。",
+          "llm_tldr": "该论文指出RLVR在缺乏可靠验证器的任务中依赖RLHF，但现有方法对偏好信号解释不足；提出基于遗憾最小化的偏好优化（RePO）框架，通过前瞻性结果预期和反事实比较来重构RLHF；实验表明RePO在多种文本生成任务上优于传统RLHF算法，生成质量更高、更符合人类预期，为LLM偏好学习提供了新的理论视角。",
           "llm_tags": [
             "query:agentic-rl"
           ],
@@ -217,35 +90,36 @@
           "carry_days": 1
         },
         {
-          "id": "2606.10709v1",
+          "id": "2606.10228v1",
           "source": "arxiv",
-          "title": "Effective Reinforcement Learning for Agentic Search by Recycling Zero-Variance Queries During Training",
-          "abstract": "The use of GRPO-style algorithms has become the standard strategy for training LLM search agents under outcome-only rewards. With these algorithms, a query contributes to parameter updates only when its rollout group mixes successes and failures; all-correct (too-easy) and all-incorrect (too-hard) groups are zero-variance and waste rollout cost. Existing approaches treat zero-variance as a static property and either discard or pre-filter such groups. We hypothesize and empirically validate that queries flip between zero-variance and signal-bearing states as the policy evolves during training. Building on this intuition, we propose query recycling, which returns zero-variance groups to a mutable pool for future resampling, so that the effective training distribution co-evolves with the policy. With the proposed technique, a 1.7B parameter model trained on synthetic data can reach 66.0 average Pass@1 accross seven multi-hop QA benchmarks, matching or surpassing systems with up to 7B parameters trained on benchmark-derived supervision. Analysis of recycling patterns shows that recycled queries supply roughly three quarters of the effective batch by the end of training, with contributions split between recovery from policy improvement and policy drift.",
+          "title": "SHAPO: Sharpness-Aware Policy Optimization for Safe Exploration",
+          "abstract": "Safe exploration is a prerequisite for deploying reinforcement learning (RL) agents in safety-critical domains. In this paper, we approach safe exploration through the lens of epistemic uncertainty, where the actor's sensitivity to parameter perturbations serves as a practical proxy for regions of high uncertainty. We propose Sharpness-Aware Policy Optimization (SHAPO), a sharpness-aware policy update rule that evaluates gradients at perturbed parameters, making policy updates pessimistic with respect to the actor's epistemic uncertainty. Analytically we show that this adjustment implicitly reweighs policy gradients, amplifying the influence of rare unsafe actions while tempering contributions from already safe ones, thereby biasing learning toward conservative behavior in under-explored regions. Across several continuous-control tasks, our method consistently improves both safety and task performance over existing baselines, significantly expanding their Pareto frontiers.",
           "authors": [
-            "João Coelho",
-            "João Magalhães",
-            "Bruno Martins",
-            "Chenyan Xiong"
+            "Kaustubh Mani",
+            "Yann Pequignot",
+            "Vincent Mai",
+            "Liam Paull"
           ],
-          "primary_category": "cs.IR",
+          "primary_category": "cs.LG",
           "categories": [
-            "cs.IR",
-            "cs.AI"
+            "cs.LG",
+            "cs.AI",
+            "cs.RO"
           ],
-          "published": "2026-06-09T11:12:58+00:00",
-          "link": "https://arxiv.org/pdf/2606.10709v1",
+          "published": "2026-06-08T22:40:45+00:00",
+          "link": "https://arxiv.org/pdf/2606.10228v1",
           "tags": [
             "keyword:agentic-rl",
             "query:agentic-rl"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "proposes query recycling for training LLM search agents",
-          "llm_evidence_cn": "提出查询回收方法，用于训练LLM搜索代理",
-          "llm_evidence": "提出查询回收方法，用于训练LLM搜索代理",
-          "canonical_evidence": "提出查询回收方法，用于训练LLM搜索代理",
-          "llm_tldr_en": "Proposes query recycling that reuses zero-variance query groups during GRPO training of LLM search agents, improving sample efficiency.",
-          "llm_tldr_cn": "针对GRPO风格算法训练LLM搜索代理时零方差查询浪费的问题，本文提出查询回收机制，将零方差组返回到可变池中以便将来重新采样。实验表明，当策略演化时，查询会在零方差和信号状态之间翻转，回收策略可显著提升训练效率，降低计算成本。该方法在不改变奖励函数的前提下提升了样本利用效率，对训练自主代理具有实用价值。",
-          "llm_tldr": "针对GRPO风格算法训练LLM搜索代理时零方差查询浪费的问题，本文提出查询回收机制，将零方差组返回到可变池中以便将来重新采样。实验表明，当策略演化时，查询会在零方差和信号状态之间翻转，回收策略可显著提升训练效率，降低计算成本。该方法在不改变奖励函数的前提下提升了样本利用效率，对训练自主代理具有实用价值。",
+          "llm_evidence_en": "Safe exploration policy for RL agents",
+          "llm_evidence_cn": "面向安全探索的强化学习策略优化",
+          "llm_evidence": "面向安全探索的强化学习策略优化",
+          "canonical_evidence": "面向安全探索的强化学习策略优化",
+          "llm_tldr_en": "Introduces SHAPO, a sharpness-aware policy update rule that improves safe exploration in RL via epistemic uncertainty.",
+          "llm_tldr_cn": "针对强化学习智能体在安全关键领域的安全探索问题，提出SHAPO算法。通过锐度感知策略更新，利用参数扰动下的梯度评估来隐含地重新加权策略梯度，放大罕见不安全动作的影响，从而引导学习走向保守。理论分析和实验表明该方法有效提升了安全性。",
+          "llm_tldr": "针对强化学习智能体在安全关键领域的安全探索问题，提出SHAPO算法。通过锐度感知策略更新，利用参数扰动下的梯度评估来隐含地重新加权策略梯度，放大罕见不安全动作的影响，从而引导学习走向保守。理论分析和实验表明该方法有效提升了安全性。",
           "llm_tags": [
             "query:agentic-rl"
           ],
@@ -253,42 +127,87 @@
           "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
           "matched_requirement_id": "req-1",
           "selection_source": "carryover_cache",
-          "paper_id": "2606.10709v1",
+          "paper_id": "2606.10228v1",
           "carry_days": 1
         },
         {
-          "id": "2606.08708v1",
+          "id": "2606.12372v1",
           "source": "arxiv",
-          "title": "PRPO: Perception-Reinforced Policy Optimization via Token-Level Dynamic Advantage Reshaping",
-          "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has become an effective paradigm for improving the reasoning capability of Large Vision-Language Models (LVLMs). However, existing RLVR methods primarily rely on trajectory-level outcome rewards, which assign identical learning signals across all generated tokens. This coarse-grained credit assignment is fundamentally mismatched to multimodal reasoning, where only a sparse subset of tokens is causally grounded in visual evidence. Consequently, these pivotal perceptual tokens receive weak supervision and are often overwhelmed by language priors or reasoning-template tokens. To address this limitation, we propose Perception-Reinforced Policy Optimization (PRPO), a token-level reinforcement learning framework that explicitly identifies and reinforces pivotal perceptual tokens within long-horizon multimodal reasoning trajectories. PRPO introduces Robust Visual Dependency (RVD), a principled metric that identifies tokens whose predictions are both visually grounded and perturbation-stable, filtering out brittle or noisy visual tokens. Based on RVD, we further propose Perceptual Advantage Reshaping (PAR), a token-level credit assignment technique that amplifies perceptually informative tokens while preserving stable gradients for non-perceptual tokens. Extensive experiments on seven multimodal reasoning benchmarks demonstrate that PRPO consistently outperforms strong LVLM baselines across both 3B and 7B model scales, achieving average gains of 23.3% and 21.1%, respectively. PRPO achieves state-of-the-art performance with improved training efficiency and stronger cross-task generalization. Our findings highlight the importance of fine-grained credit assignment for scalable multimodal reinforcement learning.",
+          "title": "UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning",
+          "abstract": "Human-in-the-loop reinforcement learning (HiL-RL) has emerged as an effective paradigm for real-world robotic manipulation, enabling online policy improvement with human guidance. However, current HiL-RL frameworks remain intervention-intensive, relying on frequent human corrections to redirect the policy out of unproductive exploration, which incurs high labor cost and limits real-world scalability. To address this, we propose UniIntervene, an agentic intervention model that detects unproductive exploration and autonomously recovers the policy toward high-value states, taking over the bulk of interventions from human operators. Specifically, UniIntervene first performs future-conditioned action-value estimation, predicting the latent consequence of the current action and evaluating its induced value, which provides a more stable progress signal. Building on this, a temporal value-risk critic aggregates recent value dynamics and triggers intervention when the estimated value exhibits sustained stagnation or degradation. When intervention is required, UniIntervene retrieves a high-value recovery target from a memory of past intervention episodes and produces executable corrective actions through a goal-conditioned recovery policy. In this way, UniIntervene turns intervention from passive human correction into a value-aware recovery process for efficient real-world RL. Extensive experiments on diverse real-world manipulation tasks demonstrate that UniIntervene improves the average success rate by 8.6% while reducing human interventions by 57% relative to state-of-the-art HiL-RL baselines.",
           "authors": [
-            "Qiming Li",
-            "Tianlun Li",
-            "Xiaolong Cheng",
-            "Hangyu Li",
-            "Ruiyan Gong",
-            "Kangning Niu",
-            "Kaitao Jiang",
-            "Mu Xu"
+            "Haoyuan Deng",
+            "Yitong Gao",
+            "Yudong Lin",
+            "Haichao Liu",
+            "Zhenyu Wu",
+            "Ziwei Wang"
           ],
-          "primary_category": "cs.CV",
+          "primary_category": "cs.RO",
           "categories": [
-            "cs.CV"
+            "cs.RO",
+            "cs.LG"
           ],
-          "published": "2026-06-07T16:06:29+00:00",
-          "link": "https://arxiv.org/pdf/2606.08708v1",
+          "published": "2026-06-10T17:38:24+00:00",
+          "link": "https://arxiv.org/pdf/2606.12372v1",
           "tags": [
             "keyword:agentic-rl",
             "query:agentic-rl"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "Improves LVLM reasoning via token-level RLVR",
-          "llm_evidence_cn": "通过令牌级RLVR提升大视觉语言模型推理能力",
-          "llm_evidence": "通过令牌级RLVR提升大视觉语言模型推理能力",
-          "canonical_evidence": "通过令牌级RLVR提升大视觉语言模型推理能力",
-          "llm_tldr_en": "PRPO introduces token-level dynamic advantage reshaping to improve credit assignment in RLVR for large vision-language models, enhancing reasoning.",
-          "llm_tldr_cn": "现有RLVR方法在视觉-语言模型中使用粗粒度的轨迹级奖励，导致关键感知令牌监督不足。本文提出PRPO方法，通过令牌级动态优势重塑实现细粒度信用分配。实验表明，该方法显著提升了多模态推理能力，为视觉-语言模型的强化学习提供了新的优化方向。",
-          "llm_tldr": "现有RLVR方法在视觉-语言模型中使用粗粒度的轨迹级奖励，导致关键感知令牌监督不足。本文提出PRPO方法，通过令牌级动态优势重塑实现细粒度信用分配。实验表明，该方法显著提升了多模态推理能力，为视觉-语言模型的强化学习提供了新的优化方向。",
+          "llm_evidence_en": "Agentic intervention model for real-world RL",
+          "llm_evidence_cn": "用于真实世界强化学习的智能体干预模型",
+          "llm_evidence": "用于真实世界强化学习的智能体干预模型",
+          "canonical_evidence": "用于真实世界强化学习的智能体干预模型",
+          "llm_tldr_en": "Proposes UniIntervene, an agentic intervention model that autonomously detects unproductive exploration and recovers policy, reducing human intervention in real-world RL.",
+          "llm_tldr_cn": "人类在环强化学习(HiL-RL)依赖频繁人工干预，成本高昂。本文提出UniIntervene，一种智能体干预模型，通过未来条件动作值估计预测低效探索后果，并自主将策略恢复至高价值状态，大幅减少人工干预需求，在真实机器人操作任务中验证了有效性。",
+          "llm_tldr": "人类在环强化学习(HiL-RL)依赖频繁人工干预，成本高昂。本文提出UniIntervene，一种智能体干预模型，通过未来条件动作值估计预测低效探索后果，并自主将策略恢复至高价值状态，大幅减少人工干预需求，在真实机器人操作任务中验证了有效性。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+          "matched_requirement_id": "req-1",
+          "selection_source": "carryover_cache",
+          "paper_id": "2606.12372v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2606.12373v1",
+          "source": "arxiv",
+          "title": "Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization",
+          "abstract": "Reinforcement Learning (RL) with verifiable environments has emerged as a powerful approach for enhancing the reasoning capabilities of Large Language Models (LLMs). While prior research demonstrates that scaling environment quantity improves RL performance, existing manual or individual construction methods suffer from linear scaling limits, thereby hindering scalable reasoning generalization. This paper introduces RACES (\\textbf{R}ecursive \\textbf{A}utomated \\textbf{C}omposition for \\textbf{E}nvironment \\textbf{S}caling), a framework that conceptualizes verifiable environments as composable building blocks that can be recursively assembled. The key insight is that when the codomain (output type) of one environment matches the domain (input type) of another, they can be automatically fused into a new verifiable environment, enabling recursive composition. RACES is implemented with 300 individual environments and defines a set of composition operators (\\textsc{SEQUENTIAL}, \\textsc{PARALLEL}, \\textsc{SORT}, and \\textsc{SELECT}) that induce diverse reasoning patterns. Extensive experiments show that RL training on these composite environments consistently enhances reasoning generalization. Specifically, RACES improves DeepSeek-R1-Distill-Qwen-14B by an average of 3.1 points (from 48.2 to 51.3) and boosts Qwen3-14B performance from 58.8 to 61.1 on six benchmarks, which are unseen during the construction of training environments. Moreover, RACES achieves performance comparable to training on 300 individual environments using only 50 base environments, demonstrating significant efficiency in environment utilization.",
+          "authors": [
+            "Hao Xiang",
+            "Qiaoyu Tang",
+            "Le Yu",
+            "Yaojie Lu",
+            "Xianpei Han",
+            "Ben He",
+            "Le Sun",
+            "Bowen Yu",
+            "Peng Wang",
+            "Hongyu Lin",
+            "Dayiheng Liu"
+          ],
+          "primary_category": "cs.CL",
+          "categories": [
+            "cs.CL"
+          ],
+          "published": "2026-06-10T17:39:41+00:00",
+          "link": "https://arxiv.org/pdf/2606.12373v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Recursive composition of verifiable environments for RL-based LLM reasoning generalization",
+          "llm_evidence_cn": "可验证环境的递归组合提升RL训练LLM推理的泛化能力",
+          "llm_evidence": "可验证环境的递归组合提升RL训练LLM推理的泛化能力",
+          "canonical_evidence": "可验证环境的递归组合提升RL训练LLM推理的泛化能力",
+          "llm_tldr_en": "Proposes RACES, a framework for recursive automated composition of verifiable environments, enabling scalable RL-based reasoning generalization for LLMs.",
+          "llm_tldr_cn": "现有基于RL的可验证环境构建依赖手动或单例方法，扩展性差，限制LLM推理泛化。本文提出RACES，将可验证环境视为可组合乐高积木，通过环境输出类型匹配递归组装，实现规模化环境构建。实验表明，组合环境显著提升了LLM在不同推理任务上的泛化能力。",
+          "llm_tldr": "现有基于RL的可验证环境构建依赖手动或单例方法，扩展性差，限制LLM推理泛化。本文提出RACES，将可验证环境视为可组合乐高积木，通过环境输出类型匹配递归组装，实现规模化环境构建。实验表明，组合环境显著提升了LLM在不同推理任务上的泛化能力。",
           "llm_tags": [
             "query:agentic-rl"
           ],
@@ -296,97 +215,47 @@
           "matched_query_text": "using reinforcement learning to enhance large language models",
           "matched_requirement_id": "req-2",
           "selection_source": "carryover_cache",
-          "paper_id": "2606.08708v1",
+          "paper_id": "2606.12373v1",
           "carry_days": 1
         },
         {
-          "id": "2606.08446v1",
+          "id": "2606.11652v1",
           "source": "arxiv",
-          "title": "Sparrow: Sparse Rollout for Stable and Efficient Long-context RL of Large Language Models",
-          "abstract": "Despite being powerful, reinforcement learning with verifiable rewards (RLVR) induces extremely long COT, making it computationally expensive. Since RLVR per-step cost is dominated by long-context rollout generation, sparse attention offers a promising way to accelerate dense rollout. However, sparse rollouts require a delicate stability-efficiency tradeoff: overly aggressive sparsity causes collapse, while overly lenient sparsity gives insufficient speedup. In this work, we study this tradeoff through sparse-to-dense actor-policy mismatch. We first observe that sparse rollout collapse is not driven by uniform degradation across tokens: most sparse tokens align perfectly with dense even under aggressive sparsity. Motivated by this, we hypothesize that sparse rollout training remains stable if the lower tail of per-token actor-policy mismatch stays above a critical threshold throughout the trajectory. We introduce a dynamic sparsity schedule that keeps this tail statistic constant during generation and validate our hypothesis. Across Qwen3 thinking-family models, keeping the tail mismatch statistic near a consistent threshold generally enables stable training. We then use a cost model to find the sparsity schedule for maximum speedup under this mismatch threshold, achieving 2.2x, 2.4x, and 2.0x rollout speedups when training Qwen3-1.7B, Qwen3-4B, and Qwen3-8B. Empirically, we show the thresholds generalize to a larger model (Qwen3-14B) and another RL domain (coding). Finally, our analysis naturally motivates DistillSparse: lightweight LoRA-based distillation on sparse rollout lets more aggressive sparsity reach the same sparse-to-dense mismatch threshold, yielding higher speedup.",
+          "title": "IAPO: Input Attribution-Aware Policy Optimization for Tool Use in Small Multimodal Agents",
+          "abstract": "This paper investigates reinforcement learning (RL) methods for improving tool-calling capabilities in multimodal small language model (SLM) agents. While existing works have explored various reward designs to improve agentic tool-calling ability, these approaches face inherent limitations for SLM training, especially under multimodal scenarios. First, many existing methods evaluate tool use correctness through exact matching against certain ground-truth or predefined formats. However, this assumption is often unsuitable for multimodal tasks, where multiple tool use paths may be valid and annotated tool trajectories are typically unavailable. Second, such sparse and brittle binary rewards provide little guidance on how to improve the underlying decision process, making them particularly difficult for multimodal SLM to learn from. To address these issues, we propose Input Attribution-Aware Policy Optimization (IAPO), an RL algorithm for improving tool use in multimodal SLM by aligning the model's attribution across input components with that of a stronger teacher. Experiments on Qwen2.5-VL-3B show that the proposed method improves visual question answering accuracy by an average of 3% across six test sets compared with existing visual tool use work, by helping the model attend to the most relevant input evidence.",
           "authors": [
-            "Yang Zhou",
-            "Ranajoy Sadhukhan",
-            "Zhaofeng Sun",
-            "Zhuoming Chen",
-            "Souvik Kundu",
-            "Saket Dingliwal",
-            "Sai Muralidhar Jayanthi",
-            "Aram Galstyan",
-            "Haizhong Zheng",
-            "Beidi Chen"
+            "Yifan Yang",
+            "Zhen Zhang",
+            "Jiayi Tian",
+            "Liyan Tan",
+            "Zheng Zhang"
           ],
           "primary_category": "cs.LG",
           "categories": [
-            "cs.LG",
-            "cs.AI"
+            "cs.LG"
           ],
-          "published": "2026-06-07T04:24:45+00:00",
-          "link": "https://arxiv.org/pdf/2606.08446v1",
+          "published": "2026-06-10T04:30:37+00:00",
+          "link": "https://arxiv.org/pdf/2606.11652v1",
           "tags": [
             "keyword:agentic-rl",
             "query:agentic-rl"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "Efficient RLVR for LLMs via sparse attention rollout",
-          "llm_evidence_cn": "通过稀疏注意力展开实现高效的LLM强化学习",
-          "llm_evidence": "通过稀疏注意力展开实现高效的LLM强化学习",
-          "canonical_evidence": "通过稀疏注意力展开实现高效的LLM强化学习",
-          "llm_tldr_en": "Sparrow uses sparse attention rollout to accelerate RLVR for LLMs while maintaining stability, analyzing sparse-to-dense actor-policy mismatch.",
-          "llm_tldr_cn": "RLVR在大语言模型中产生极长的思维链，计算成本高昂。本文分析稀疏展开的稳定性-效率权衡，提出Sparrow方法。通过稀疏注意力加速展开，同时利用策略匹配避免崩溃。实验证明该方法在保持性能的同时显著提升了训练效率。",
-          "llm_tldr": "RLVR在大语言模型中产生极长的思维链，计算成本高昂。本文分析稀疏展开的稳定性-效率权衡，提出Sparrow方法。通过稀疏注意力加速展开，同时利用策略匹配避免崩溃。实验证明该方法在保持性能的同时显著提升了训练效率。",
+          "llm_evidence_en": "RL for improving tool use in multimodal small language model agents",
+          "llm_evidence_cn": "强化学习提升小型多模态语言模型代理的工具调用能力",
+          "llm_evidence": "强化学习提升小型多模态语言模型代理的工具调用能力",
+          "canonical_evidence": "强化学习提升小型多模态语言模型代理的工具调用能力",
+          "llm_tldr_en": "IAPO proposes input attribution-aware policy optimization to improve tool-calling in multimodal SLM agents, addressing sparse rewards and multiple valid paths.",
+          "llm_tldr_cn": "针对小型多模态语言模型代理工具调用中稀疏奖励与多有效路径的问题，提出输入归因感知的策略优化（IAPO），通过细粒度信用分配提升学习效率。实验表明，IAPO在多个工具使用任务上显著优于现有RL方法，增强了小型代理的自主性。",
+          "llm_tldr": "针对小型多模态语言模型代理工具调用中稀疏奖励与多有效路径的问题，提出输入归因感知的策略优化（IAPO），通过细粒度信用分配提升学习效率。实验表明，IAPO在多个工具使用任务上显著优于现有RL方法，增强了小型代理的自主性。",
           "llm_tags": [
             "query:agentic-rl"
           ],
           "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
+          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+          "matched_requirement_id": "req-1",
           "selection_source": "carryover_cache",
-          "paper_id": "2606.08446v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.10507v1",
-          "source": "arxiv",
-          "title": "HIPIF: Hierarchical Planning and Information Folding for Long-Horizon LLM Agent Learning",
-          "abstract": "While Large Language Models (LLMs) have demonstrated strong capabilities as autonomous agents across a wide range of tasks, their performance often degrades in multi-turn long-horizon agentic tasks. Existing methods have made progress through fine-grained credit assignment to alleviate long-horizon sparse rewards and hierarchical reinforcement learning to decompose tasks and reduce long-term dependency. However, these methods still do not directly address long-context interference, in which continuously growing histories weaken the agent's ability to track the global task state and impair subsequent reasoning and decision-making. Inspired by the way humans handle complex tasks through subgoal decomposition and completed progress summarization, we propose Hierarchical Planning and Information Folding (HIPIF) for long-horizon LLM agent learning. HIPIF trains the agent end-to-end to organize long-horizon execution around explicit subgoals while folding completed subgoal histories to reduce long-context interference. Furthermore, to stabilize subgoal-based planning and execution, HIPIF combines hierarchical reflection and subgoal-oriented process rewards to guide subgoal generation, transition, and execution, without relying on costly auxiliary models or task-specific expert trajectories. Extensive experiments on three publicly available agentic benchmarks demonstrate the validity of our method.",
-          "authors": [
-            "Juncheng Diao",
-            "Zhicong Lu",
-            "Peiguang Li",
-            "Yongwei Zhou",
-            "Changyuan Tian",
-            "Qingbin Li",
-            "Rongxiang Weng",
-            "Jingang Wang",
-            "Xunliang Cai"
-          ],
-          "primary_category": "cs.AI",
-          "categories": [
-            "cs.AI"
-          ],
-          "published": "2026-06-09T07:35:14+00:00",
-          "link": "https://arxiv.org/pdf/2606.10507v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "hierarchical reinforcement learning for LLM agent decision making",
-          "llm_evidence_cn": "用于LLM智能体决策的层次化强化学习",
-          "llm_evidence": "用于LLM智能体决策的层次化强化学习",
-          "canonical_evidence": "用于LLM智能体决策的层次化强化学习",
-          "llm_tldr_en": "HIPIF addresses long-horizon LLM agent tasks by combining hierarchical planning with information folding to reduce long-context interference and improve decision quality.",
-          "llm_tldr_cn": "HIPIF针对LLM智能体在长时域任务中性能下降的问题，提出层次化规划与信息折叠方法。通过子目标分解和完成进度总结，减少长上下文的干扰，提升智能体在长期任务中的推理与决策能力。实验表明该方法在多个长时域任务中优于现有基线，为agentic RL中的决策制定提供了新思路。",
-          "llm_tldr": "HIPIF针对LLM智能体在长时域任务中性能下降的问题，提出层次化规划与信息折叠方法。通过子目标分解和完成进度总结，减少长上下文的干扰，提升智能体在长期任务中的推理与决策能力。实验表明该方法在多个长时域任务中优于现有基线，为agentic RL中的决策制定提供了新思路。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "reinforcement learning for agent decision making",
-          "matched_requirement_id": "req-4",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.10507v1",
+          "paper_id": "2606.11652v1",
           "carry_days": 1
         }
       ]
