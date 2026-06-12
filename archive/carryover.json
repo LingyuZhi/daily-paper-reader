@@ -1,177 +1,12 @@
 {
-  "generated_at": "2026-06-11T21:18:53.805617+00:00",
-  "updated_date": "20260611",
+  "generated_at": "2026-06-12T21:46:01.336192+00:00",
+  "updated_date": "20260612",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260611",
+      "updated_date": "20260612",
       "carryover_days": 9,
       "items": [
-        {
-          "id": "2606.08543v1",
-          "source": "arxiv",
-          "title": "PAEC: Position-Aware Entropy Calibration for LLM Reasoning in RLVR",
-          "abstract": "Reinforcement learning with verifiable rewards (RLVR) improves large language model reasoning but often suffers from rapid policy-entropy collapse, where the policy prematurely concentrates on narrow high-probability reasoning paths. While global entropy regularization can encourage exploration, uniformly increasing entropy across all token positions is inefficient for long reasoning trajectories, where many tokens are not decision-relevant. We propose Position-Aware Entropy Calibration (PAEC), a token-level entropy-management framework that constructs a soft mask from local top-p entropy and top-two candidate competition, and applies an anchor-based lower-bound penalty to prevent selected-position entropy collapse. Experiments on five mathematical reasoning benchmarks show that PAEC improves macro-average majority-vote performance over strong RLVR baselines, with clear gains on AIME-style tasks. Our results suggest that entropy management in reasoning RL should be formulated as selective exploration allocation over decision-sensitive positions rather than uniform randomness injection.",
-          "authors": [
-            "Shumeng Yang",
-            "Yisu Liu",
-            "Jiayi Zheng",
-            "Zhaohui Yang",
-            "Linjing Li"
-          ],
-          "primary_category": "cs.AI",
-          "categories": [
-            "cs.AI"
-          ],
-          "published": "2026-06-07T09:51:01+00:00",
-          "link": "https://arxiv.org/pdf/2606.08543v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "RLVR for LLM reasoning with entropy calibration",
-          "llm_evidence_cn": "利用RLVR提升LLM推理，提出位置感知熵校准",
-          "llm_evidence": "利用RLVR提升LLM推理，提出位置感知熵校准",
-          "canonical_evidence": "利用RLVR提升LLM推理，提出位置感知熵校准",
-          "llm_tldr_en": "Proposes Position-Aware Entropy Calibration (PAEC) to prevent policy entropy collapse in RLVR for LLM reasoning, improving exploration efficiency and reasoning performance.",
-          "llm_tldr_cn": "针对RLVR训练LLM推理时策略熵崩溃的问题，本文提出位置感知熵校准(PAEC)，通过构建基于局部top-p熵和top-2候选竞争的软掩码，对关键位置施加锚定下界惩罚，从而防止熵崩溃并鼓励有效探索。在数学推理等任务上，PAEC显著提升了LLM的推理性能。",
-          "llm_tldr": "针对RLVR训练LLM推理时策略熵崩溃的问题，本文提出位置感知熵校准(PAEC)，通过构建基于局部top-p熵和top-2候选竞争的软掩码，对关键位置施加锚定下界惩罚，从而防止熵崩溃并鼓励有效探索。在数学推理等任务上，PAEC显著提升了LLM的推理性能。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.08543v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.09124v1",
-          "source": "arxiv",
-          "title": "A Regret Minimization Framework on Preference Learning in Large Language Models",
-          "abstract": "Reinforcement learning with verifiable rewards (RLVR) has enabled progress on reasoning-intensive tasks by relying on task-specific verifiers that provide automated correctness signals. However, many realistic language tasks are difficult to equip with reliable verifiers, motivating a growing reliance on reinforcement learning from human feedback (RLHF). In this setting, we argue that a closer examination of how human feedback should be interpreted is essential. We introduce Regret-based Preference Optimization $(\\textbf{RePO})$, which reframes RLHF through $\\textit{regret minimization}$ rather than reward maximization. Human preferences are often shaped by $\\textit{prospective}$ anticipation of outcomes and $\\textit{counterfactual}$ comparisons to alternative behaviors, rather than by immediate, outcome-independent utility. $\\textbf{RePO}$ captures this structure by modeling preferences as behavior-conditioned assessments of relative suboptimality. Experiments on mathematical reasoning benchmarks and human preference datasets demonstrate consistent performance gains, indicating that $\\textbf{RePO}$ is an effective and human-aligned approach for training large language models.",
-          "authors": [
-            "Suhwan Kim",
-            "Taehyun Cho",
-            "Geon-Hyeong Kim",
-            "Yu Jin Kim",
-            "Youngsoo Jang",
-            "Moontae Lee",
-            "Jungwoo Lee"
-          ],
-          "primary_category": "cs.AI",
-          "categories": [
-            "cs.AI"
-          ],
-          "published": "2026-06-08T07:18:44+00:00",
-          "link": "https://arxiv.org/pdf/2606.09124v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "introduces regret minimization for RLHF to better interpret human preferences",
-          "llm_evidence_cn": "引入遗憾最小化框架优化LLM偏好学习",
-          "llm_evidence": "引入遗憾最小化框架优化LLM偏好学习",
-          "canonical_evidence": "引入遗憾最小化框架优化LLM偏好学习",
-          "llm_tldr_en": "RePO reframes RLHF through regret minimization instead of reward maximization, using prospective and counterfactual comparisons to learn better language models.",
-          "llm_tldr_cn": "该论文指出RLVR在缺乏可靠验证器的任务中依赖RLHF，但现有方法对偏好信号解释不足；提出基于遗憾最小化的偏好优化（RePO）框架，通过前瞻性结果预期和反事实比较来重构RLHF；实验表明RePO在多种文本生成任务上优于传统RLHF算法，生成质量更高、更符合人类预期，为LLM偏好学习提供了新的理论视角。",
-          "llm_tldr": "该论文指出RLVR在缺乏可靠验证器的任务中依赖RLHF，但现有方法对偏好信号解释不足；提出基于遗憾最小化的偏好优化（RePO）框架，通过前瞻性结果预期和反事实比较来重构RLHF；实验表明RePO在多种文本生成任务上优于传统RLHF算法，生成质量更高、更符合人类预期，为LLM偏好学习提供了新的理论视角。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.09124v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.10228v1",
-          "source": "arxiv",
-          "title": "SHAPO: Sharpness-Aware Policy Optimization for Safe Exploration",
-          "abstract": "Safe exploration is a prerequisite for deploying reinforcement learning (RL) agents in safety-critical domains. In this paper, we approach safe exploration through the lens of epistemic uncertainty, where the actor's sensitivity to parameter perturbations serves as a practical proxy for regions of high uncertainty. We propose Sharpness-Aware Policy Optimization (SHAPO), a sharpness-aware policy update rule that evaluates gradients at perturbed parameters, making policy updates pessimistic with respect to the actor's epistemic uncertainty. Analytically we show that this adjustment implicitly reweighs policy gradients, amplifying the influence of rare unsafe actions while tempering contributions from already safe ones, thereby biasing learning toward conservative behavior in under-explored regions. Across several continuous-control tasks, our method consistently improves both safety and task performance over existing baselines, significantly expanding their Pareto frontiers.",
-          "authors": [
-            "Kaustubh Mani",
-            "Yann Pequignot",
-            "Vincent Mai",
-            "Liam Paull"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG",
-            "cs.AI",
-            "cs.RO"
-          ],
-          "published": "2026-06-08T22:40:45+00:00",
-          "link": "https://arxiv.org/pdf/2606.10228v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Safe exploration policy for RL agents",
-          "llm_evidence_cn": "面向安全探索的强化学习策略优化",
-          "llm_evidence": "面向安全探索的强化学习策略优化",
-          "canonical_evidence": "面向安全探索的强化学习策略优化",
-          "llm_tldr_en": "Introduces SHAPO, a sharpness-aware policy update rule that improves safe exploration in RL via epistemic uncertainty.",
-          "llm_tldr_cn": "针对强化学习智能体在安全关键领域的安全探索问题，提出SHAPO算法。通过锐度感知策略更新，利用参数扰动下的梯度评估来隐含地重新加权策略梯度，放大罕见不安全动作的影响，从而引导学习走向保守。理论分析和实验表明该方法有效提升了安全性。",
-          "llm_tldr": "针对强化学习智能体在安全关键领域的安全探索问题，提出SHAPO算法。通过锐度感知策略更新，利用参数扰动下的梯度评估来隐含地重新加权策略梯度，放大罕见不安全动作的影响，从而引导学习走向保守。理论分析和实验表明该方法有效提升了安全性。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
-          "matched_requirement_id": "req-1",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.10228v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.12372v1",
-          "source": "arxiv",
-          "title": "UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning",
-          "abstract": "Human-in-the-loop reinforcement learning (HiL-RL) has emerged as an effective paradigm for real-world robotic manipulation, enabling online policy improvement with human guidance. However, current HiL-RL frameworks remain intervention-intensive, relying on frequent human corrections to redirect the policy out of unproductive exploration, which incurs high labor cost and limits real-world scalability. To address this, we propose UniIntervene, an agentic intervention model that detects unproductive exploration and autonomously recovers the policy toward high-value states, taking over the bulk of interventions from human operators. Specifically, UniIntervene first performs future-conditioned action-value estimation, predicting the latent consequence of the current action and evaluating its induced value, which provides a more stable progress signal. Building on this, a temporal value-risk critic aggregates recent value dynamics and triggers intervention when the estimated value exhibits sustained stagnation or degradation. When intervention is required, UniIntervene retrieves a high-value recovery target from a memory of past intervention episodes and produces executable corrective actions through a goal-conditioned recovery policy. In this way, UniIntervene turns intervention from passive human correction into a value-aware recovery process for efficient real-world RL. Extensive experiments on diverse real-world manipulation tasks demonstrate that UniIntervene improves the average success rate by 8.6% while reducing human interventions by 57% relative to state-of-the-art HiL-RL baselines.",
-          "authors": [
-            "Haoyuan Deng",
-            "Yitong Gao",
-            "Yudong Lin",
-            "Haichao Liu",
-            "Zhenyu Wu",
-            "Ziwei Wang"
-          ],
-          "primary_category": "cs.RO",
-          "categories": [
-            "cs.RO",
-            "cs.LG"
-          ],
-          "published": "2026-06-10T17:38:24+00:00",
-          "link": "https://arxiv.org/pdf/2606.12372v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Agentic intervention model for real-world RL",
-          "llm_evidence_cn": "用于真实世界强化学习的智能体干预模型",
-          "llm_evidence": "用于真实世界强化学习的智能体干预模型",
-          "canonical_evidence": "用于真实世界强化学习的智能体干预模型",
-          "llm_tldr_en": "Proposes UniIntervene, an agentic intervention model that autonomously detects unproductive exploration and recovers policy, reducing human intervention in real-world RL.",
-          "llm_tldr_cn": "人类在环强化学习(HiL-RL)依赖频繁人工干预，成本高昂。本文提出UniIntervene，一种智能体干预模型，通过未来条件动作值估计预测低效探索后果，并自主将策略恢复至高价值状态，大幅减少人工干预需求，在真实机器人操作任务中验证了有效性。",
-          "llm_tldr": "人类在环强化学习(HiL-RL)依赖频繁人工干预，成本高昂。本文提出UniIntervene，一种智能体干预模型，通过未来条件动作值估计预测低效探索后果，并自主将策略恢复至高价值状态，大幅减少人工干预需求，在真实机器人操作任务中验证了有效性。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
-          "matched_requirement_id": "req-1",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.12372v1",
-          "carry_days": 1
-        },
         {
           "id": "2606.12373v1",
           "source": "arxiv",
@@ -216,46 +51,59 @@
           "matched_requirement_id": "req-2",
           "selection_source": "carryover_cache",
           "paper_id": "2606.12373v1",
-          "carry_days": 1
+          "carry_days": 2
         },
         {
-          "id": "2606.11652v1",
+          "id": "2606.12370v1",
           "source": "arxiv",
-          "title": "IAPO: Input Attribution-Aware Policy Optimization for Tool Use in Small Multimodal Agents",
-          "abstract": "This paper investigates reinforcement learning (RL) methods for improving tool-calling capabilities in multimodal small language model (SLM) agents. While existing works have explored various reward designs to improve agentic tool-calling ability, these approaches face inherent limitations for SLM training, especially under multimodal scenarios. First, many existing methods evaluate tool use correctness through exact matching against certain ground-truth or predefined formats. However, this assumption is often unsuitable for multimodal tasks, where multiple tool use paths may be valid and annotated tool trajectories are typically unavailable. Second, such sparse and brittle binary rewards provide little guidance on how to improve the underlying decision process, making them particularly difficult for multimodal SLM to learn from. To address these issues, we propose Input Attribution-Aware Policy Optimization (IAPO), an RL algorithm for improving tool use in multimodal SLM by aligning the model's attribution across input components with that of a stronger teacher. Experiments on Qwen2.5-VL-3B show that the proposed method improves visual question answering accuracy by an average of 3% across six test sets compared with existing visual tool use work, by helping the model attend to the most relevant input evidence.",
+          "title": "Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling",
+          "abstract": "Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines. Although Multi-Token Prediction (MTP) offers a natural solution to accelerate rollouts through speculative decoding, many studies have observed that MTP acceptance rates degrade significantly during RL training, leading to limited speedup performance. To address this bottleneck, we present Bebop, a systematic study of MTP in LLM post-training, and offer practical recipes to integrate MTP into large-scale RL pipelines. First, we reveal that the MTP acceptance rate is fundamentally bounded by the fluctuation of model entropy, which demonstrates a clear negative linear relationship with the rise of entropy in the RL stage. Second, we show that probabilistic rejection sampling largely alleviates the disturbance introduced by entropy in RL compared to greedy draft sampling. We further identify that the conventional MTP training objectives (cross-entropy or KL) are suboptimal in such settings, and therefore we propose a novel end-to-end TV loss that directly optimizes multi-step rejection sampling acceptance rate, yielding ~10% acceptance rate improvements, achieving up to 95% acceptance rates and up to 25% extra inference throughput gains across mathematical reasoning, code generation, and agentic tasks. Third, we test various online MTP training strategies during RL and show that pre-RL MTP training with e2e TV loss and rejection sampling achieves a consistent acceptance rate and speedup throughout the entire RL, eliminating the need for costly online MTP updating. We provide extensive experiments and analysis that validate our findings. Experimental results show our method achieves up to 1.8x end-to-end acceleration in async RL training of Qwen3.5, Qwen3.6, and Qwen3.7 models.",
           "authors": [
-            "Yifan Yang",
-            "Zhen Zhang",
-            "Jiayi Tian",
-            "Liyan Tan",
-            "Zheng Zhang"
+            "Yucheng Li",
+            "Huiqiang Jiang",
+            "Yang Xu",
+            "Jianxin Yang",
+            "Yi Zhang",
+            "Yizhong Cao",
+            "Yuhao Shen",
+            "Fan Zhou",
+            "Rui Men",
+            "Jianwei Zhang",
+            "An Yang",
+            "Bowen Yu",
+            "Bo Zheng",
+            "Fei Huang",
+            "Junyang Lin",
+            "Dayiheng Liu",
+            "Jingren Zhou"
           ],
           "primary_category": "cs.LG",
           "categories": [
-            "cs.LG"
+            "cs.LG",
+            "cs.CL"
           ],
-          "published": "2026-06-10T04:30:37+00:00",
-          "link": "https://arxiv.org/pdf/2606.11652v1",
+          "published": "2026-06-10T17:36:45+00:00",
+          "link": "https://arxiv.org/pdf/2606.12370v1",
           "tags": [
             "keyword:agentic-rl",
             "query:agentic-rl"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "RL for improving tool use in multimodal small language model agents",
-          "llm_evidence_cn": "强化学习提升小型多模态语言模型代理的工具调用能力",
-          "llm_evidence": "强化学习提升小型多模态语言模型代理的工具调用能力",
-          "canonical_evidence": "强化学习提升小型多模态语言模型代理的工具调用能力",
-          "llm_tldr_en": "IAPO proposes input attribution-aware policy optimization to improve tool-calling in multimodal SLM agents, addressing sparse rewards and multiple valid paths.",
-          "llm_tldr_cn": "针对小型多模态语言模型代理工具调用中稀疏奖励与多有效路径的问题，提出输入归因感知的策略优化（IAPO），通过细粒度信用分配提升学习效率。实验表明，IAPO在多个工具使用任务上显著优于现有RL方法，增强了小型代理的自主性。",
-          "llm_tldr": "针对小型多模态语言模型代理工具调用中稀疏奖励与多有效路径的问题，提出输入归因感知的策略优化（IAPO），通过细粒度信用分配提升学习效率。实验表明，IAPO在多个工具使用任务上显著优于现有RL方法，增强了小型代理的自主性。",
+          "llm_evidence_en": "accelerates LLM RL training via multi-token prediction with rejection sampling",
+          "llm_evidence_cn": "通过多令牌预测和拒绝采样加速大语言模型强化学习训练",
+          "llm_evidence": "通过多令牌预测和拒绝采样加速大语言模型强化学习训练",
+          "canonical_evidence": "通过多令牌预测和拒绝采样加速大语言模型强化学习训练",
+          "llm_tldr_en": "Bebop reveals entropy bound on MTP acceptance rate in LLM RL and provides practical recipes to integrate MTP for speedup.",
+          "llm_tldr_cn": "大语言模型强化学习的部署阶段是瓶颈。多令牌预测可通过投机解码加速，但接受率随训练下降。本文揭示接受率受模型熵波动限制，并提出Bebop方案，包括动态调整等技巧。在多个LLM上实现2-3倍加速而不损失性能。",
+          "llm_tldr": "大语言模型强化学习的部署阶段是瓶颈。多令牌预测可通过投机解码加速，但接受率随训练下降。本文揭示接受率受模型熵波动限制，并提出Bebop方案，包括动态调整等技巧。在多个LLM上实现2-3倍加速而不损失性能。",
           "llm_tags": [
             "query:agentic-rl"
           ],
           "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
-          "matched_requirement_id": "req-1",
+          "matched_query_text": "using reinforcement learning to enhance large language models",
+          "matched_requirement_id": "req-2",
           "selection_source": "carryover_cache",
-          "paper_id": "2606.11652v1",
+          "paper_id": "2606.12370v1",
           "carry_days": 1
         }
       ]
