@@ -6,71 +6,71 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-12
-- 运行时间：2026-06-12 21:54:17 UTC
+- 最新运行日期：2026-06-13
+- 运行时间：2026-06-13 20:18:10 UTC
 - 运行状态：成功
 - 本次总论文数：17
 - 精读区：6
 - 速读区：11
 
 ### 今日简报（AI）
-今日覆盖17篇论文，精读6篇，其中《Variational Proximal Policy Optimization》和《PAEC: Position-Aware Entropy Calibration for LLM Reasoning in RLVR》均获9.0高分。最值得关注方向：变分PPO强化学习算法与LLM推理中的位置感知熵校准。建议优先精读这两篇9.0分论文，并速读速读列表中的8分论文以拓宽视野。
-- 详情：[/202606/12/README](/202606/12/README)
+今日处理17篇论文，精读2篇高分研究，速读3篇。最值得关注多语言情感一致性摘要的强化学习框架和推理竞技场中可验证奖励不足的解决方案。建议深入阅读精读论文，掌握RL在文本生成与复杂任务中的前沿进展。
+- 详情：[/202606/13/README](/202606/13/README)
 
 ### 精读区论文标签
-1. [Variational Proximal Policy Optimization](/202606/12/2606.08032v1-variational-proximal-policy-optimization)  
+1. [Multilingual Sentiment Aware Text Summarization A Reinforcement Learning Approach for Consistency Maintenance](/202606/13/2606.08940v1-multilingual-sentiment-aware-text-summarization-a-reinforcement-learning-approach-for-consistency-maintenance)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：变分PPO用于从人类反馈中强化学习，增强大语言模型训练
-2. [PAEC: Position-Aware Entropy Calibration for LLM Reasoning in RLVR](/202606/12/2606.08543v1-paec-position-aware-entropy-calibration-for-llm-reasoning-in-rlvr)  
+   evidence：使用RLHF提升LLM文本摘要质量与情感一致性
+2. [Reasoning Arena: Trace Tournaments When Verifiable Rewards Fall Short](/202606/13/2606.09380v1-reasoning-arena-trace-tournaments-when-verifiable-rewards-fall-short)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：通过RLVR中的位置感知熵校准提升LLM推理
-3. [Reformulate LLM Reinforcement Learning for Efficient Training under Black-box Discrepancy](/202606/12/2606.08779v1-reformulate-llm-reinforcement-learning-for-efficient-training-under-black-box-discrepancy)  
+   evidence：当奖励无信息时通过轨迹锦标赛自适应RLVR框架提升大语言模型推理
+3. [ReflectiChain: Epistemic Grounding in LLM-Driven World Models for Supply Chain Resilience](/202606/13/2606.10359v1-reflectichain-epistemic-grounding-in-llm-driven-world-models-for-supply-chain-resilience)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：在黑箱不一致性下提升大语言模型强化学习训练效率
-4. [Claw-R1: A Step-Level Data Middleware System for Agentic Reinforcement Learning](/202606/12/2606.09138v1-claw-r1-a-step-level-data-middleware-system-for-agentic-reinforcement-learning)  
+   evidence：通过双循环学习桥接LLM解释策略与RL优化，实现供应链领域的认知接地。
+4. [Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization](/202606/13/2606.12373v1-verifiable-environments-are-lego-bricks-recursive-composition-for-reasoning-generalization)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：面向代理式强化学习的数据中间件系统
-5. [IAPO: Input Attribution-Aware Policy Optimization for Tool Use in Small Multimodal Agents](/202606/12/2606.11652v1-iapo-input-attribution-aware-policy-optimization-for-tool-use-in-small-multimodal-agents)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：强化学习改进小型多模态代理的工具调用能力
-6. [UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning](/202606/12/2606.12372v1-uniintervene-agentic-intervention-for-efficient-real-world-reinforcement-learning)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：提出自主干预模型，减少人类在强化学习中的干预频率
+   evidence：基于可验证环境的强化学习提升LLM推理能力
+5. [Co-Evolving Skill Generation and Policy Optimization](/202606/13/2606.08755v1-co-evolving-skill-generation-and-policy-optimization)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：技能增强的强化学习用于语言智能体，技能生成与策略优化共同进化
+6. [Beyond Uniform Token-Level Trust Region in LLM Reinforcement Learning](/202606/13/2606.10968v1-beyond-uniform-token-level-trust-region-in-llm-reinforcement-learning)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：通过解决均匀令牌信任区域问题改进LLM推理的RLVR
 
 ### 速读区论文标签
-1. [On the Geometry of On-Policy Distillation](/202606/12/2606.07082v2-on-the-geometry-of-on-policy-distillation)  
+1. [Beyond Uniform Token-Level Trust Region in LLM Reinforcement Learning](/202606/13/2606.10968v2-beyond-uniform-token-level-trust-region-in-llm-reinforcement-learning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：刻画LLM推理中在线策略蒸馏与RLVR的训练动态对比
-2. [Path Planning Using Deep Deterministic Policy Gradient: A Reinforcement Learning Approach](/202606/12/2606.07855v1-path-planning-using-deep-deterministic-policy-gradient-a-reinforcement-learning-approach)  
+   evidence：通过位置感知信任区域改进LLM推理的RLVR
+2. [Multi-agent rendezvous in fluid flows via reinforcement learning](/202606/13/2606.11274v1-multi-agent-rendezvous-in-fluid-flows-via-reinforcement-learning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：深度确定性策略梯度用于自主车辆路径规划
-3. [Reformulate LLM Reinforcement Learning for Efficient Training under Black-box Discrepancy](/202606/12/2606.08779v2-reformulate-llm-reinforcement-learning-for-efficient-training-under-black-box-discrepancy)  
+   evidence：采用多智能体强化学习开发物理信息汇合策略，利用流体运动学实现智能体协调。
+3. [Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling](/202606/13/2606.12370v1-breaking-entropy-bounds-accelerating-rl-training-via-mtp-with-rejection-sampling)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：解决大语言模型强化学习中的训练-推理不一致问题
-4. [A Regret Minimization Framework on Preference Learning in Large Language Models](/202606/12/2606.09124v1-a-regret-minimization-framework-on-preference-learning-in-large-language-models)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：基于遗憾最小化的偏好学习框架用于大语言模型
-5. [Rethinking the Divergence Regularization in LLM RL](/202606/12/2606.09821v1-rethinking-the-divergence-regularization-in-llm-rl)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：改进大语言模型后训练中的信任域控制
-6. [Architecture-Aware Reinforcement Learning Makes Sliding-Window Attention Competitive in Math Reasoning](/202606/12/2606.11634v1-architecture-aware-reinforcement-learning-makes-sliding-window-attention-competitive-in-math-reasoning)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：强化学习调整滑动窗口注意力用于数学推理大语言模型
-7. [Learning of Robot Safety Policies via Adversarial Synthetic Scenarios](/202606/12/2606.05952v1-learning-of-robot-safety-policies-via-adversarial-synthetic-scenarios)  
+   evidence：使用多令牌预测与拒绝采样加速大语言模型的RL训练
+4. [SlimSearcher: Training Efficiency-Aware Web Agents via Adaptive Reward Gating](/202606/13/2606.07074v1-slimsearcher-training-efficiency-aware-web-agents-via-adaptive-reward-gating)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：对抗性博弈框架用于学习机器人安全策略
-8. [From Reward-Hack Activations to Agentic Risk States: Context-Calibrated Mechanistic Monitoring in LLM Agents](/202606/12/2606.06223v1-from-reward-hack-activations-to-agentic-risk-states-context-calibrated-mechanistic-monitoring-in-llm-agents)  
+   evidence：使用强化学习训练网络智能体以高效进行信息搜索
+5. [Structure-Conditioned Actor-Critic Branches for Quality-Diversity Reinforcement Learning](/202606/13/2606.08735v1-structure-conditioned-actor-critic-branches-for-quality-diversity-reinforcement-learning)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：监控LLM智能体中的奖励黑客行为以实现智能体安全
-9. [On the Geometry of On-Policy Distillation](/202606/12/2606.07082v1-on-the-geometry-of-on-policy-distillation)  
+   evidence：质量多样性强化学习构建多样化策略库用于智能体决策
+6. [PBSD: Privileged Bayesian Self-Distillation for Long-Horizon Credit Assignment](/202606/13/2606.09348v1-pbsd-privileged-bayesian-self-distillation-for-long-horizon-credit-assignment)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：分析on-policy distillation训练动力学并与RLVR比较，与增强LLM的RL相关
-10. [PRPO: Perception-Reinforced Policy Optimization via Token-Level Dynamic Advantage Reshaping](/202606/12/2606.08708v1-prpo-perception-reinforced-policy-optimization-via-token-level-dynamic-advantage-reshaping)  
+   evidence：使用贝叶斯自蒸馏对长视界智能体任务进行信用分配
+7. [Organize then Retrieve: Hierarchical Memory Navigation for Efficient Agents](/202606/13/2606.11680v1-organize-then-retrieve-hierarchical-memory-navigation-for-efficient-agents)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：通过细粒度强化学习增强视觉语言模型的推理能力
-11. [CapRL++: Unified Reinforcement Learning with Verifiable Rewards for Dense Image and Video Captioning](/202606/12/2606.09393v1-caprl-unified-reinforcement-learning-with-verifiable-rewards-for-dense-image-and-video-captioning)  
+   evidence：面向智能体决策的分层记忆机制
+8. [CCKS: Consensus-based Communication and Knowledge Sharing](/202606/13/2606.12281v1-ccks-consensus-based-communication-and-knowledge-sharing)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：基于共识的知识共享用于多智能体决策
+9. [Bridging the Agent-World Gap: Text World Models for LLM-based Agents](/202606/13/2606.09032v1-bridging-the-agent-world-gap-text-world-models-for-llm-based-agents)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：利用可验证奖励的强化学习增强大型视觉语言模型
+   evidence：综述文本世界模型以支持LLM智能体的规划与强化学习决策
+10. [An Agency-Transferring Model-Free Policy Enhancement Technique](/202606/13/2606.09825v1-an-agency-transferring-model-free-policy-enhancement-technique)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：一种将基线策略嵌入RL训练的自适应转移方法用于决策
+11. [MODIP: Efficient Model-Based Optimization for Diffusion Policies](/202606/13/2606.10825v1-modip-efficient-model-based-optimization-for-diffusion-policies)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：使用世界模型和模型预测控制对扩散策略进行强化学习微调用于机器人学习
 
 
 <div class="dpr-home-promo-card">

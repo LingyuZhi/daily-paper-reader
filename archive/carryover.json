@@ -1,112 +1,12 @@
 {
-  "generated_at": "2026-06-12T21:46:01.336192+00:00",
-  "updated_date": "20260612",
+  "generated_at": "2026-06-13T20:06:42.125514+00:00",
+  "updated_date": "20260613",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260612",
+      "updated_date": "20260613",
       "carryover_days": 9,
-      "items": [
-        {
-          "id": "2606.12373v1",
-          "source": "arxiv",
-          "title": "Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization",
-          "abstract": "Reinforcement Learning (RL) with verifiable environments has emerged as a powerful approach for enhancing the reasoning capabilities of Large Language Models (LLMs). While prior research demonstrates that scaling environment quantity improves RL performance, existing manual or individual construction methods suffer from linear scaling limits, thereby hindering scalable reasoning generalization. This paper introduces RACES (\\textbf{R}ecursive \\textbf{A}utomated \\textbf{C}omposition for \\textbf{E}nvironment \\textbf{S}caling), a framework that conceptualizes verifiable environments as composable building blocks that can be recursively assembled. The key insight is that when the codomain (output type) of one environment matches the domain (input type) of another, they can be automatically fused into a new verifiable environment, enabling recursive composition. RACES is implemented with 300 individual environments and defines a set of composition operators (\\textsc{SEQUENTIAL}, \\textsc{PARALLEL}, \\textsc{SORT}, and \\textsc{SELECT}) that induce diverse reasoning patterns. Extensive experiments show that RL training on these composite environments consistently enhances reasoning generalization. Specifically, RACES improves DeepSeek-R1-Distill-Qwen-14B by an average of 3.1 points (from 48.2 to 51.3) and boosts Qwen3-14B performance from 58.8 to 61.1 on six benchmarks, which are unseen during the construction of training environments. Moreover, RACES achieves performance comparable to training on 300 individual environments using only 50 base environments, demonstrating significant efficiency in environment utilization.",
-          "authors": [
-            "Hao Xiang",
-            "Qiaoyu Tang",
-            "Le Yu",
-            "Yaojie Lu",
-            "Xianpei Han",
-            "Ben He",
-            "Le Sun",
-            "Bowen Yu",
-            "Peng Wang",
-            "Hongyu Lin",
-            "Dayiheng Liu"
-          ],
-          "primary_category": "cs.CL",
-          "categories": [
-            "cs.CL"
-          ],
-          "published": "2026-06-10T17:39:41+00:00",
-          "link": "https://arxiv.org/pdf/2606.12373v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Recursive composition of verifiable environments for RL-based LLM reasoning generalization",
-          "llm_evidence_cn": "可验证环境的递归组合提升RL训练LLM推理的泛化能力",
-          "llm_evidence": "可验证环境的递归组合提升RL训练LLM推理的泛化能力",
-          "canonical_evidence": "可验证环境的递归组合提升RL训练LLM推理的泛化能力",
-          "llm_tldr_en": "Proposes RACES, a framework for recursive automated composition of verifiable environments, enabling scalable RL-based reasoning generalization for LLMs.",
-          "llm_tldr_cn": "现有基于RL的可验证环境构建依赖手动或单例方法，扩展性差，限制LLM推理泛化。本文提出RACES，将可验证环境视为可组合乐高积木，通过环境输出类型匹配递归组装，实现规模化环境构建。实验表明，组合环境显著提升了LLM在不同推理任务上的泛化能力。",
-          "llm_tldr": "现有基于RL的可验证环境构建依赖手动或单例方法，扩展性差，限制LLM推理泛化。本文提出RACES，将可验证环境视为可组合乐高积木，通过环境输出类型匹配递归组装，实现规模化环境构建。实验表明，组合环境显著提升了LLM在不同推理任务上的泛化能力。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.12373v1",
-          "carry_days": 2
-        },
-        {
-          "id": "2606.12370v1",
-          "source": "arxiv",
-          "title": "Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling",
-          "abstract": "Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines. Although Multi-Token Prediction (MTP) offers a natural solution to accelerate rollouts through speculative decoding, many studies have observed that MTP acceptance rates degrade significantly during RL training, leading to limited speedup performance. To address this bottleneck, we present Bebop, a systematic study of MTP in LLM post-training, and offer practical recipes to integrate MTP into large-scale RL pipelines. First, we reveal that the MTP acceptance rate is fundamentally bounded by the fluctuation of model entropy, which demonstrates a clear negative linear relationship with the rise of entropy in the RL stage. Second, we show that probabilistic rejection sampling largely alleviates the disturbance introduced by entropy in RL compared to greedy draft sampling. We further identify that the conventional MTP training objectives (cross-entropy or KL) are suboptimal in such settings, and therefore we propose a novel end-to-end TV loss that directly optimizes multi-step rejection sampling acceptance rate, yielding ~10% acceptance rate improvements, achieving up to 95% acceptance rates and up to 25% extra inference throughput gains across mathematical reasoning, code generation, and agentic tasks. Third, we test various online MTP training strategies during RL and show that pre-RL MTP training with e2e TV loss and rejection sampling achieves a consistent acceptance rate and speedup throughout the entire RL, eliminating the need for costly online MTP updating. We provide extensive experiments and analysis that validate our findings. Experimental results show our method achieves up to 1.8x end-to-end acceleration in async RL training of Qwen3.5, Qwen3.6, and Qwen3.7 models.",
-          "authors": [
-            "Yucheng Li",
-            "Huiqiang Jiang",
-            "Yang Xu",
-            "Jianxin Yang",
-            "Yi Zhang",
-            "Yizhong Cao",
-            "Yuhao Shen",
-            "Fan Zhou",
-            "Rui Men",
-            "Jianwei Zhang",
-            "An Yang",
-            "Bowen Yu",
-            "Bo Zheng",
-            "Fei Huang",
-            "Junyang Lin",
-            "Dayiheng Liu",
-            "Jingren Zhou"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG",
-            "cs.CL"
-          ],
-          "published": "2026-06-10T17:36:45+00:00",
-          "link": "https://arxiv.org/pdf/2606.12370v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "accelerates LLM RL training via multi-token prediction with rejection sampling",
-          "llm_evidence_cn": "通过多令牌预测和拒绝采样加速大语言模型强化学习训练",
-          "llm_evidence": "通过多令牌预测和拒绝采样加速大语言模型强化学习训练",
-          "canonical_evidence": "通过多令牌预测和拒绝采样加速大语言模型强化学习训练",
-          "llm_tldr_en": "Bebop reveals entropy bound on MTP acceptance rate in LLM RL and provides practical recipes to integrate MTP for speedup.",
-          "llm_tldr_cn": "大语言模型强化学习的部署阶段是瓶颈。多令牌预测可通过投机解码加速，但接受率随训练下降。本文揭示接受率受模型熵波动限制，并提出Bebop方案，包括动态调整等技巧。在多个LLM上实现2-3倍加速而不损失性能。",
-          "llm_tldr": "大语言模型强化学习的部署阶段是瓶颈。多令牌预测可通过投机解码加速，但接受率随训练下降。本文揭示接受率受模型熵波动限制，并提出Bebop方案，包括动态调整等技巧。在多个LLM上实现2-3倍加速而不损失性能。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.12370v1",
-          "carry_days": 1
-        }
-      ]
+      "items": []
     }
   }
 }
