@@ -1,0 +1,580 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-15T22:41:36.857052+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 10,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 8,
+    "quick_skim_target": 11,
+    "quick_selected": 8
+  },
+  "deep_dive": [
+    {
+      "id": "2606.08974v1",
+      "source": "arxiv",
+      "title": "Diverse Thinking Schemata Elicit Better Reasoning in Large Language Models",
+      "abstract": "Large reasoning models (LRMs) have attracted increasing attention for their ability to solve complex mathematical problems by generating extended reasoning chains. In this work, we focus on two critical yet underexplored aspects of the reasoning process: reasoning transitions capturing the distinct transitions between reasoning steps and answer candidates reflecting the variety of solution paths produced by the model. We collectively define these two aspects as thinking schemata. We observe a correlation between the diversity of thinking schemata and model performance, which motivates us to enhance diversity as a means to further improve reasoning potential. To this end, we propose Diverse Schemata Policy Optimization (DiScO), a framework that first endows the model with schemata awareness, then encourages diversity through reinforcement learning, and further promotes diverse reasoning at inference time. Experiments on multiple mathematical reasoning benchmarks demonstrate that DiScO consistently outperforms standard group relative policy optimization. Beyond accuracy, human-annotated analyses show that DiScO substantially improves the model's ability to recover from erroneous initial attempts. Overall, our work suggests the important role that diversity of the thinking schemata plays and points to scaling along the diversity dimension as a promising research direction.",
+      "authors": [
+        "Xinyue Liang",
+        "Yizhe Yang",
+        "Yu Bai",
+        "Bin Xu",
+        "Jiawei Li",
+        "Yang Gao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-08T03:17:31+00:00",
+      "link": "https://arxiv.org/pdf/2606.08974v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL used to enhance LLM reasoning through diverse thinking schemata",
+      "llm_evidence_cn": "利用强化学习增强大语言模型推理中的思维模式多样性",
+      "llm_evidence": "利用强化学习增强大语言模型推理中的思维模式多样性",
+      "canonical_evidence": "利用强化学习增强大语言模型推理中的思维模式多样性",
+      "llm_tldr_en": "Proposes Diverse Schemata Policy Optimization (DiScO) to improve LLM reasoning by enhancing diversity of thinking schemata, using RL to optimize reasoning transitions and answer candidates.",
+      "llm_tldr_cn": "大型推理模型（LRMs）虽能力强大，但推理过程中思维模式多样性不足限制了潜力。本文定义思维模式（包括推理转换和答案候选），发现其多样性与性能正相关，并提出Diverse Schemata Policy Optimization（DiScO）框架。DiScO通过强化学习优化思维模式多样性，从而提升推理性能。实验表明多样性增强能显著改善复杂数学问题求解。该工作展示了强化学习提升大语言模型能力的新途径。",
+      "llm_tldr": "大型推理模型（LRMs）虽能力强大，但推理过程中思维模式多样性不足限制了潜力。本文定义思维模式（包括推理转换和答案候选），发现其多样性与性能正相关，并提出Diverse Schemata Policy Optimization（DiScO）框架。DiScO通过强化学习优化思维模式多样性，从而提升推理性能。实验表明多样性增强能显著改善复杂数学问题求解。该工作展示了强化学习提升大语言模型能力的新途径。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.11770v1",
+      "source": "arxiv",
+      "title": "SVoT: State-aware Visualization-of-Thought for Spatial Reasoning via Reinforcement Learning",
+      "abstract": "Spatial reasoning remains a challenge for Multimodal Large Language Models (MLLMs), as it requires reliable multi-hop inference over both intermediate states and state transitions. Current studies often leave intermediate states unverified and treat state transitions as implicit processes, which limits reliability in multi-hop spatial reasoning. To address this, we propose State-aware Visualization-of-Thought (SVoT), a reinforcement learning framework that generates interleaved, verifiable intermediate states and visualizations. SVoT integrates transition reasoning chains into the generation processes, enabling the model to verify action preconditions and effects through interleaved textual and visual reasoning. We train SVoT via Group Relative Policy Optimization (GRPO), instantiating verification through reward design and evaluating the efficacy of different fine-grained rewards. As existing benchmarks reduce state transitions to single-variable updates, substantially simplifying the problems, we establish five domains by extending classical environments and introducing two novel domains, Pacman and Gather, that require multi-object interactions and numerical reasoning. These domains support systematic evaluation of multi-hop spatial reasoning with quantitative verification of generated intermediate states and transition reasoning. SVoT with transition-aware supervision achieves state-of-the-art performance across the introduced domains, yielding up to a 65% absolute accuracy gain on out-of-distribution test sets.",
+      "authors": [
+        "Chao Lei",
+        "Yanbei Jiang",
+        "Markus Hiller",
+        "Zhijian Zhou",
+        "Xunye Tian",
+        "Krista A. Ehinger",
+        "Nir Lipovetzky"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-10T07:54:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.11770v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL used to train MLLM for spatial reasoning with visualizable intermediate states",
+      "llm_evidence_cn": "使用强化学习训练多模态大语言模型进行空间推理，并生成状态可视化",
+      "llm_evidence": "使用强化学习训练多模态大语言模型进行空间推理，并生成状态可视化",
+      "canonical_evidence": "使用强化学习训练多模态大语言模型进行空间推理，并生成状态可视化",
+      "llm_tldr_en": "SVoT proposes a reinforcement learning framework that generates verifiable intermediate states and visualizations to improve spatial reasoning in MLLMs.",
+      "llm_tldr_cn": "本文针对多模态大语言模型在空间推理中中间状态不可验证的问题，提出状态感知可视化思维（SVoT）框架，利用强化学习训练模型生成交织的文本和视觉推理链，使模型能够验证动作的前提条件和效果。实验表明SVoT显著提升了多模态空间推理的准确性和可解释性，为RL增强多模态LLM提供了新方法。",
+      "llm_tldr": "本文针对多模态大语言模型在空间推理中中间状态不可验证的问题，提出状态感知可视化思维（SVoT）框架，利用强化学习训练模型生成交织的文本和视觉推理链，使模型能够验证动作的前提条件和效果。实验表明SVoT显著提升了多模态空间推理的准确性和可解释性，为RL增强多模态LLM提供了新方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.14130v1",
+      "source": "arxiv",
+      "title": "Contract-Based Compositional Shielding for Safe Multi-Agent Reinforcement Learning",
+      "abstract": "Safe coordination problems surface in multi-agent reinforcement learning when global safety cannot be enforced by any agent unilaterally: the admissibility of one agent's action may depend on the dynamics of other agents. Decentralised shields can enforce safety at runtime, but purely factorised permissions often exclude optimal team behaviour that is safe only through coordination. We study deterministic safety guarantees for agents trained and deployed under decentralised execution, recovering team-optimal safe behaviour without centralised runtime control. Agents have a shared global specification $φ$ in the safety fragment of Linear Temporal Logic ($\\mathsf{LTL}_{\\mathsf{safe}}$ ), and select among tuples of local $\\mathsf{LTL}_{\\mathsf{safe}}$ obligations whose conjunction implies the global specification $φ$. Each agent may rely on the other agents' local obligations as assumptions because the whole contract tuple is certified simultaneously and allows projection into local action masks. At learning time, a non-stationary multi-armed bandit chooses among a library of local $\\mathsf{LTL}_{\\mathsf{safe}}$ obligations to select the tuple that optimises team reward, all without forgoing end-to-end safety. We evaluate the approach across 6 environments and 15 algorithmic variants.",
+      "authors": [
+        "Omar Adalat",
+        "Edwin Hamel-De le Court",
+        "Francesco Belardinelli"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.MA"
+      ],
+      "published": "2026-06-12T05:30:53+00:00",
+      "link": "https://arxiv.org/pdf/2606.14130v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Contract-based compositional shielding for safe multi-agent reinforcement learning",
+      "llm_evidence_cn": "提出基于合约的组合屏蔽方法，用于安全多智能体强化学习",
+      "llm_evidence": "提出基于合约的组合屏蔽方法，用于安全多智能体强化学习",
+      "canonical_evidence": "提出基于合约的组合屏蔽方法，用于安全多智能体强化学习",
+      "llm_tldr_en": "This paper proposes contract-based compositional shielding to guarantee global safety in multi-agent RL while recovering team-optimal coordinated behavior.",
+      "llm_tldr_cn": "本文针对多智能体强化学习中全局安全无法被任何智能体单独保障的问题，提出基于线性时序逻辑合约的组合屏蔽框架，在分散式执行下保证安全的同时，通过智能体间的局部合约恢复团队最优的协调行为。实验证明该方法在安全性和任务性能之间取得良好平衡，为多智能体安全RL提供了理论保证。",
+      "llm_tldr": "本文针对多智能体强化学习中全局安全无法被任何智能体单独保障的问题，提出基于线性时序逻辑合约的组合屏蔽框架，在分散式执行下保证安全的同时，通过智能体间的局部合约恢复团队最优的协调行为。实验证明该方法在安全性和任务性能之间取得良好平衡，为多智能体安全RL提供了理论保证。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.14691v1",
+      "source": "arxiv",
+      "title": "CORA: Analyzing and bridging thinking-answer gap in Multimodal RLVR via Consistency-Oriented Reasoning Alignment",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has successfully elicited the reasoning capabilities of large language models, motivating its extension to multimodal scenarios. Existing methods primarily focus on improving the visual coverage of reasoning traces and mitigating visual hallucinations, but underestimate the semantic inconsistency between the reasoning process and the final answer. In this paper, we delve into thinking-answer inconsistency in RLVR for large vision-language models (LVLMs), showing thorough analyses of rollouts collected throughout Group Relative Policy Optimization (GRPO) training process and post-RLVR evaluation outputs that this issue persists during training and remains present during inference. Motivated by the analysis, we propose Consistency-Oriented Reasoning Alignment (CORA), which introduces thinking-answer semantic consistency into RLVR through a lightweight plug-and-play consistency reward model, and further incorporates Hybrid Reward Advantage Splitting (HRAS) to stably coordinate task and consistency optimization. Extensive experiments across representative multimodal reasoning benchmarks and mainstream LVLMs show that CORA improves task performance while effectively mitigating thinking-answer inconsistency, leading to more faithful reasoning traces.",
+      "authors": [
+        "Jiayue Cao",
+        "Zhicong Lu",
+        "Xuehan Sun",
+        "Wei Jia",
+        "Hongling Zheng",
+        "Changyuan Tian",
+        "Zichuan Lin",
+        "Wenqian Lv",
+        "Nayu Liu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-12T17:54:59+00:00",
+      "link": "https://arxiv.org/pdf/2606.14691v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RLVR used to enhance LLM reasoning",
+      "llm_evidence_cn": "使用可验证奖励强化学习增强大语言模型推理能力",
+      "llm_evidence": "使用可验证奖励强化学习增强大语言模型推理能力",
+      "canonical_evidence": "使用可验证奖励强化学习增强大语言模型推理能力",
+      "llm_tldr_en": "This paper analyzes the thinking-answer inconsistency in multimodal RLVR and proposes CORA to bridge the gap via consistency-oriented reasoning alignment, improving LVLM reasoning reliability.",
+      "llm_tldr_cn": "本文针对多模态大语言模型RLVR训练中推理过程与最终答案不一致的问题，通过一致性导向推理对齐（CORA）方法，利用GRPO训练数据分析和后训练评估，展示该问题持续存在并影响性能。CORA通过显式对齐推理链与答案，有效减少了不一致性，提升了模型在多模态推理任务上的可靠性。这项工作为RLVR在多模态场景中的应用提供了重要改进。",
+      "llm_tldr": "本文针对多模态大语言模型RLVR训练中推理过程与最终答案不一致的问题，通过一致性导向推理对齐（CORA）方法，利用GRPO训练数据分析和后训练评估，展示该问题持续存在并影响性能。CORA通过显式对齐推理链与答案，有效减少了不一致性，提升了模型在多模态推理任务上的可靠性。这项工作为RLVR在多模态场景中的应用提供了重要改进。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.12881v2",
+      "source": "arxiv",
+      "title": "Direct Preference Optimization for Chatbot Fine-Tuning: An Empirical Study",
+      "abstract": "We present an approach to fine-tuning large language models using Direct Preference Optimization (DPO), a reinforcement learning technique. Our experimental results demonstrate that DPO simplifies the training pipeline, improves computational efficiency, and achieves competitive performance. The evaluation using BLEU, ROUGE, and cosine similarity metrics indicates effective learning and convergence, though further investigation is needed to address observed training instability.",
+      "authors": [
+        "Dezhi Yu",
+        "Yvonne Qiu",
+        "ShuoJia Fu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-06-11T04:15:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.12881v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "applies RL technique (DPO) to fine-tune large language models",
+      "llm_evidence_cn": "应用强化学习技术（DPO）微调大型语言模型",
+      "llm_evidence": "应用强化学习技术（DPO）微调大型语言模型",
+      "canonical_evidence": "应用强化学习技术（DPO）微调大型语言模型",
+      "llm_tldr_en": "Empirical study showing DPO, an RL technique, simplifies LLM fine-tuning while achieving competitive performance.",
+      "llm_tldr_cn": "本文实证研究了使用直接偏好优化（DPO）微调聊天机器人的效果。DPO作为强化学习技术，简化了训练流程，提高了计算效率，并在BLEU、ROUGE等指标上取得了有竞争力的性能。尽管存在训练稳定性问题，但该研究验证了RL增强大型语言模型能力的有效性。",
+      "llm_tldr": "本文实证研究了使用直接偏好优化（DPO）微调聊天机器人的效果。DPO作为强化学习技术，简化了训练流程，提高了计算效率，并在BLEU、ROUGE等指标上取得了有竞争力的性能。尽管存在训练稳定性问题，但该研究验证了RL增强大型语言模型能力的有效性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.13097v1",
+      "source": "arxiv",
+      "title": "Functional Cache Grafting: Robust and Rapid Code-Policy Synthesis for Embodied Agents",
+      "abstract": "Code-writing large language models (CodeLLMs) generate executable code policies for embodied agents by translating natural language goals and environmental constraints into structured control programs. However, policy generation in open-domain embodied environments suffers from two fundamental limitations: (i) delayed decoding caused by repetitive prefill computation over long prompts, and (ii) limited robustness due to fully generative decoding, which often produces API mismatches, missing safety guards, and unstable control logic. To address these limitations, we present FCGraft, a Functional Cache Grafting framework. FCGraft maintains a library of function-level validated code skeletons and their associated prompt-level Transformer key-value (KV) caches, and synthesizes new policies by retrieving relevant functions and grafting their KV caches when a new task is provided. Given retrieved function caches, FCGraft performs cache grafting via stitching, which composes cached function segments into a composite policy, and patching, which locally adapts only the necessary code regions to satisfy task-specific parameters and constraints with minimal additional decoding. By eliminating redundant prefill computation, this approach reduces generation latency, while reusing validated control structures improves robustness over prompt-level caching methods RAGCache, achieving 18.31% higher task success rate and 2.3x faster policy synthesis.",
+      "authors": [
+        "Saehun Chun",
+        "Wonje Choi",
+        "Sera Choi",
+        "Sanghyun Ahn",
+        "Honguk Woo"
+      ],
+      "primary_category": "cs.PL",
+      "categories": [
+        "cs.PL",
+        "cs.AI"
+      ],
+      "published": "2026-06-11T09:25:27+00:00",
+      "link": "https://arxiv.org/pdf/2606.13097v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Code-LLM policy synthesis for embodied agents",
+      "llm_evidence_cn": "使用代码LLM为具身智能体合成策略",
+      "llm_evidence": "使用代码LLM为具身智能体合成策略",
+      "canonical_evidence": "使用代码LLM为具身智能体合成策略",
+      "llm_tldr_en": "FCGraft uses function-level code skeletons to accelerate and robustify code-policy generation for embodied agents, addressing latency and robustness limitations.",
+      "llm_tldr_cn": "针对开放世界具身智能体代码策略生成中延迟高和鲁棒性差的问题，本文提出FCGraft框架，通过维护函数级验证代码骨架库和提示级Transformer键值缓存，实现快速且鲁棒的策略合成。实验表明该方法显著提升生成速度和API调用正确性，为具身智能体的自动化控制提供了高效可靠方案。",
+      "llm_tldr": "针对开放世界具身智能体代码策略生成中延迟高和鲁棒性差的问题，本文提出FCGraft框架，通过维护函数级验证代码骨架库和提示级Transformer键值缓存，实现快速且鲁棒的策略合成。实验表明该方法显著提升生成速度和API调用正确性，为具身智能体的自动化控制提供了高效可靠方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.13598v1",
+      "source": "arxiv",
+      "title": "Reward Modeling for Multi-Agent Orchestration",
+      "abstract": "Multi-Agent Systems (MAS) built on Large Language Models (LLMs) require effective orchestration to coordinate specialized agents, yet training such orchestrators is hindered by limited supervision and high computational cost. We propose Orchestration Reward Modeling (OrchRM), a self-supervised framework for evaluating orchestration quality without human annotations. OrchRM leverages intermediate artifacts from multi-agent executions to construct win-lose pairs for Bradley-Terry reward model training. Unlike existing MAS test-time scaling and orchestrator training frameworks that rely on costly sub-agent rollouts, OrchRM operates directly at the orchestration level, enabling efficient and high-performing reward-guided orchestrator training and MAS test-time scaling. OrchRM improves training efficiency by up to 10x in token usage while improving MAS test-time scaling performance by up to 8% in accuracy. These gains consistently transfer across multiple domains, including mathematical reasoning, web-based question answering, and multi-hop reasoning, demonstrating orchestration-level reward modeling as a scalable direction for robust multi-agent orchestration. Code will be available at https://github.com/Wang-ML-Lab/OrchRM.",
+      "authors": [
+        "King Yeung Tsang",
+        "Zihao Zhao",
+        "Vishal Venkataramani",
+        "Haizhou Shi",
+        "Zixuan Ke",
+        "Semih Yavuz",
+        "Shafiq Joty",
+        "Hao Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "published": "2026-06-11T17:16:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.13598v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL reward modeling for multi-agent orchestration",
+      "llm_evidence_cn": "多智能体编排的强化学习奖励建模",
+      "llm_evidence": "多智能体编排的强化学习奖励建模",
+      "canonical_evidence": "多智能体编排的强化学习奖励建模",
+      "llm_tldr_en": "Proposes Orchestration Reward Modeling (OrchRM), a self-supervised framework for evaluating multi-agent orchestration quality without human annotations, using intermediate artifacts to train reward models.",
+      "llm_tldr_cn": "针对基于LLM的多智能体系统编排困难且缺乏监督的问题，提出自监督的编排奖励建模框架OrchRM，通过利用多智能体执行的中间产物构建胜负对来训练奖励模型，避免了人工标注和昂贵的子智能体 rollout，实现了高效且高性能的奖励引导编排器训练。",
+      "llm_tldr": "针对基于LLM的多智能体系统编排困难且缺乏监督的问题，提出自监督的编排奖励建模框架OrchRM，通过利用多智能体执行的中间产物构建胜负对来训练奖励模型，避免了人工标注和昂贵的子智能体 rollout，实现了高效且高性能的奖励引导编排器训练。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.14155v1",
+      "source": "arxiv",
+      "title": "Graph-based Target Back-Propagation for Context Adaptation in Multi-LLM Agentic Systems",
+      "abstract": "Context adaptation automates prompt engineering in LLM-based systems by iteratively revising tunable prompts from task feedback, without modifying model weights. Extending this paradigm to multi-LLM agentic systems is crucial: existing methods suffer from inaccurate credit assignment and lack convergence guarantees. We propose \\textbf{G}raph-based \\textbf{T}arget \\textbf{B}ack-\\textbf{P}ropagation (GTBP), a context adaptation framework for agentic workflows modeled as directed acyclic graphs. GTBP propagates local target outputs backward through the workflow graph and uses target--output discrepancies to guide a stage-wise prompt update mechanism. Theoretically, we show that GTBP's stage-wise prompt updates become stable over iterations, and that a sufficiently capable LLM optimizer can decrease the overall objective. Empirically, GTBP consistently outperforms strong baselines across three benchmarks while maintaining comparable computational cost.",
+      "authors": [
+        "Tan Zhu",
+        "Tong Yao",
+        "Kananart Kuwaranancharoen",
+        "Amit Singh",
+        "Yushang Lai",
+        "Deepa Mohan",
+        "Shankara Bhargava"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-06-12T06:27:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.14155v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Graph-based target back-propagation for context adaptation in multi-LLM agentic systems",
+      "llm_evidence_cn": "提出图基目标反向传播用于多LLM代理系统的上下文适应，可间接支持agentic RL",
+      "llm_evidence": "提出图基目标反向传播用于多LLM代理系统的上下文适应，可间接支持agentic RL",
+      "canonical_evidence": "提出图基目标反向传播用于多LLM代理系统的上下文适应，可间接支持agentic RL",
+      "llm_tldr_en": "GTBP proposes a graph-based target back-propagation framework for context adaptation in multi-LLM agentic systems, improving credit assignment and convergence.",
+      "llm_tldr_cn": "本文针对多LLM代理系统中提示工程难以准确信用分配和缺乏收敛保证的问题，提出图基目标反向传播（GTBP）框架，将代理工作流建模为有向无环图，并通过反向传播目标输出差异来逐阶段更新提示。理论分析和实验表明GTBP能够稳定收敛并有效提升代理性能。该方法为多代理系统的提示优化提供了新的视角。",
+      "llm_tldr": "本文针对多LLM代理系统中提示工程难以准确信用分配和缺乏收敛保证的问题，提出图基目标反向传播（GTBP）框架，将代理工作流建模为有向无环图，并通过反向传播目标输出差异来逐阶段更新提示。理论分析和实验表明GTBP能够稳定收敛并有效提升代理性能。该方法为多代理系统的提示优化提供了新的视角。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.08620v1",
+      "source": "arxiv",
+      "title": "SPA: A SQL-Plan-Aware Reinforcement Learning Framework for Query Rewriting with LLMs",
+      "abstract": "SQL query rewriting is a well-established technique for improving database performance without schema or index changes, yet finding effective rewrites for modern analytical workloads remains difficult: rule-based methods are limited to predefined transformations, while LLM-based approaches often produce rewrites that are semantically valid but compile to equivalent physical plans or degrade runtime performance. We present SPA, a SQL-Plan-Aware reinforcement learning framework that trains LLMs to rewrite queries using physical execution feedback. SPA formulates rewriting as a policy optimization problem and extends GRPO with rewards spanning semantic equivalence, textual rewrite distance, physical-plan divergence, and runtime speedup. To handle reward sparsity across query difficulty, SPA introduces Probability-Gated Adaptive Reward Shaping, a query-level curriculum that unlocks higher-level rewards only once a rollout group achieves sufficient mastery of lower-level objectives, and further improves sample efficiency through on-policy self-improvement by recycling slowdown rewrites from the current policy as targeted training signals. On both IID and OOD workloads, SPA outperforms rule-based and strong LLM baselines in end-to-end runtime, substantially reduces harmful slowdown rewrites, and yields strong tail-latency gains.",
+      "authors": [
+        "Xinyi Huang",
+        "Zhengjie Miao"
+      ],
+      "primary_category": "cs.DB",
+      "categories": [
+        "cs.DB"
+      ],
+      "published": "2026-06-07T13:12:46+00:00",
+      "link": "https://arxiv.org/pdf/2606.08620v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL framework for LLM-based SQL query rewriting",
+      "llm_evidence_cn": "基于LLM的SQL查询重写的强化学习框架",
+      "llm_evidence": "基于LLM的SQL查询重写的强化学习框架",
+      "canonical_evidence": "基于LLM的SQL查询重写的强化学习框架",
+      "llm_tldr_en": "Presents SPA, a SQL-plan-aware RL framework that trains LLMs to rewrite queries using physical execution feedback, with rewards for semantics, plan divergence, and speedup.",
+      "llm_tldr_cn": "针对LLM在SQL查询重写中常生成等价但低效计划的问题，提出SQL-Plan-Aware强化学习框架SPA，将重写形式化为策略优化问题，扩展GRPO加入语义等价、文本距离、物理计划差异和运行加速等奖励信号。实验表明该方法能产生加速比高的重写。",
+      "llm_tldr": "针对LLM在SQL查询重写中常生成等价但低效计划的问题，提出SQL-Plan-Aware强化学习框架SPA，将重写形式化为策略优化问题，扩展GRPO加入语义等价、文本距离、物理计划差异和运行加速等奖励信号。实验表明该方法能产生加速比高的重写。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.14179v1",
+      "source": "arxiv",
+      "title": "CacheRL:Multi-Turn Tool-Calling Agents via Cached Rollouts and Hybrid Reward",
+      "abstract": "We present CacheRL, a system for training small agent foundation models that achieves 92 percent process accuracy on multi-step tool-calling tasks, approaching GPT-5's 94 percent while requiring 100 times less compute. Our approach addresses three challenges in practical agent training: transferring tool-calling knowledge from large models at scale, enabling reinforcement learning without costly live tool execution, and learning robustly from noisy cached environments. CacheRL introduces three key innovations. First, a hybrid thinking trajectory pipeline augments agent trajectories with LLM-generated reasoning traces, producing training examples that teach models not only what tools to call but also why. Second, the CacheAgentLoop eliminates live execution costs through a three-tier fuzzy cache while preserving trajectory fidelity using token-level masking. Third, a cache-tier-aware reward dynamically adjusts answer-quality weights to avoid penalizing models for cache-induced limitations. Through iterative supervised fine-tuning (SFT) and Group Relative Policy Optimization (GRPO), CacheRL improves Qwen3-4B-Thinking's validation reward from 0.43 to 0.78. On public agentic tool-calling benchmarks, our model achieves competitive performance against frontier models such as GPT-5. Ablation studies show that removing knowledge transfer reduces performance by 41 percent, while cache-aware rewards contribute a 17 percent improvement. Interestingly, reinforcement learning improves training stability but yields limited gains beyond strong supervised fine-tuning, suggesting that data quality and reward design play a more important role than complex optimization methods in building practical small agent models.",
+      "authors": [
+        "Md Amirul Islam",
+        "Sumiran Thakur",
+        "Huancheng Chen",
+        "Su Min Park",
+        "Jiayun Wang",
+        "Gyuhak Kim"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-12T07:01:50+00:00",
+      "link": "https://arxiv.org/pdf/2606.14179v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "multi-turn tool-calling agent training with RL and cached rollouts",
+      "llm_evidence_cn": "使用缓存展开和混合奖励训练多轮工具调用智能体",
+      "llm_evidence": "使用缓存展开和混合奖励训练多轮工具调用智能体",
+      "canonical_evidence": "使用缓存展开和混合奖励训练多轮工具调用智能体",
+      "llm_tldr_en": "CacheRL trains small agent models for multi-step tool-calling with RL using cached rollouts and hybrid rewards, achieving GPT-5-level accuracy at 100x lower compute.",
+      "llm_tldr_cn": "实际智能体训练面临知识迁移、无需实时代价执行以及从噪声缓存中学习等挑战。本文提出CacheRL，通过混合思考轨迹流水线、缓存智能体循环和混合奖励三项创新，高效训练小型智能体基础模型。在多步工具调用任务上达到92%过程准确率，接近GPT-5的94%，而计算量降低100倍。",
+      "llm_tldr": "实际智能体训练面临知识迁移、无需实时代价执行以及从噪声缓存中学习等挑战。本文提出CacheRL，通过混合思考轨迹流水线、缓存智能体循环和混合奖励三项创新，高效训练小型智能体基础模型。在多步工具调用任务上达到92%过程准确率，接近GPT-5的94%，而计算量降低100倍。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.10129v1",
+      "source": "arxiv",
+      "title": "Discovering Interpretable Multi-Parameter Control Policies for Evolutionary Algorithms Using Deep Reinforcement Learning",
+      "abstract": "While deep Reinforcement Learning (deep-RL) has been increasingly applied to parameter control in evolutionary algorithms, rigorous theoretical analysis of parameter control remains largely restricted to single-parameter settings, owing to the difficulty of deriving effective, interpretable multi-parameter policies amenable to formal study. We demonstrate how deep-RL can be leveraged to overcome this barrier, using the (1+($λ$,$λ$))-genetic algorithm optimizing OneMax, one of the few problems where a super-constant speedup of dynamic control has been formally proven, as a representative case study. We first show that standard approaches struggle to converge in this multi-parameter setting, and introduce algorithm-agnostic enhancements targeting action-space decomposition, reward shifting, and long-horizon discounting. With these in place, we compare common deep-RL methods and find that Double Deep Q-Networks uniquely avoid the policy collapse observed in Proximal Policy Optimization, yielding trajectories suitable for downstream analysis. Crucially, we move beyond the ``black-box'' nature of neural networks by distilling the learned behaviors into a transparent, symbolic control policy. This resulting policy does not only offer interpretability for future theoretical analysis but also yields exceptional performance, consistently outperforming existing baselines across a wide range of problem sizes.",
+      "authors": [
+        "Tai Nguyen",
+        "Phong Le",
+        "Carola Doerr",
+        "Nguyen Dang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.NE"
+      ],
+      "published": "2026-06-08T20:06:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.10129v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL for parameter control in evolutionary algorithms",
+      "llm_evidence_cn": "强化学习用于进化算法参数控制",
+      "llm_evidence": "强化学习用于进化算法参数控制",
+      "canonical_evidence": "强化学习用于进化算法参数控制",
+      "llm_tldr_en": "Uses deep RL to discover interpretable multi-parameter control policies for evolutionary algorithms, demonstrating a methodological bridge for RL in agent decision making.",
+      "llm_tldr_cn": "现有参数控制方法局限于单参数设置，缺乏有效的多参数可解释策略。本文利用深度强化学习（deep-RL）在多参数控制中克服这一障碍，以(1+(λ,λ))-遗传算法优化OneMax为例。标准方法在此多参数设置下难以收敛，而所提方法能发现可解释策略。该工作为强化学习在智能体决策中的参数控制提供了方法论桥梁。",
+      "llm_tldr": "现有参数控制方法局限于单参数设置，缺乏有效的多参数可解释策略。本文利用深度强化学习（deep-RL）在多参数控制中克服这一障碍，以(1+(λ,λ))-遗传算法优化OneMax为例。标准方法在此多参数设置下难以收敛，而所提方法能发现可解释策略。该工作为强化学习在智能体决策中的参数控制提供了方法论桥梁。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.14302v1",
+      "source": "arxiv",
+      "title": "Retrospective Progress-Aware Self-Refinement for LLM Agent Training",
+      "abstract": "LLM-based agents trained with reinforcement learning optimize step-wise action prediction but lack metacognitive awareness of task progress, inducing a gap that hinders long-horizon scaling. A pilot study reveals that online progress prompting hurts performance while retrospective demonstrations help, yet this capability cannot emerge from outcome-reward training alone. We present RePro, Retrospective Progress-Aware Training, a framework that trains agents to self-generate progress signals via a forward-then-reflect rollout paradigm: the agent executes actions online, then retrospectively reassesses its step-wise progress given the completed trajectory and known outcome. RePro initializes with a Retrospection Warmup that teaches reflection format from minimal external demonstrations, then further trains through RePro-PO with a composite reward that produces self-generated signals without continuous external supervision. Experiments on WebShop, ALFWorld, and Sokoban show that RePro enhances the Qwen family's performance, with up to $12\\%$ absolute success rate gains.",
+      "authors": [
+        "Xinbei Ma",
+        "Congmin Zheng",
+        "Jiyang Qiu",
+        "Jiale Hong",
+        "Yao Yao",
+        "Xiangmou Qu",
+        "Jiaxin Yin",
+        "Xingyu Lou",
+        "Jun Wang",
+        "Weiwen Liu",
+        "Weinan Zhang",
+        "Zhuosheng Zhang",
+        "Hai Zhao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-12T09:38:47+00:00",
+      "link": "https://arxiv.org/pdf/2606.14302v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "LLM agent training with retrospective progress awareness and RL",
+      "llm_evidence_cn": "基于回溯进度感知的LLM智能体强化学习训练",
+      "llm_evidence": "基于回溯进度感知的LLM智能体强化学习训练",
+      "canonical_evidence": "基于回溯进度感知的LLM智能体强化学习训练",
+      "llm_tldr_en": "RePro trains LLM agents with RL to self-generate progress signals via forward-then-reflect rollout, improving long-horizon task performance.",
+      "llm_tldr_cn": "基于LLM的智能体在RL训练中缺乏任务进度的元认知意识，限制了长程任务扩展。本文提出RePro框架，采用前向执行后回溯反思的范式，训练智能体自生成进度信号。通过回溯热身和进度驱动优化，智能体在长程任务中表现显著提升。",
+      "llm_tldr": "基于LLM的智能体在RL训练中缺乏任务进度的元认知意识，限制了长程任务扩展。本文提出RePro框架，采用前向执行后回溯反思的范式，训练智能体自生成进度信号。通过回溯热身和进度驱动优化，智能体在长程任务中表现显著提升。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.13832v1",
+      "source": "arxiv",
+      "title": "Safety-Contract Graph Multi-Agent Reinforcement Learning for Autonomous Network Security Response",
+      "abstract": "Autonomous network-security response systems promise to reduce Security Operations Centre (SOC) reaction latency, but reward-only multi-agent reinforcement learning (MARL) can improve security reward while remaining non-deployable. We present a safety-contract graph MARL framework and instantiate it as ACD$^3$-GAT (Adaptive Constrained Counterfactual Decisioning with a Graph Attention Network encoder), an architecture that separates simulator observations from reusable operational budgets, constrained optimization, graph state encoding, and counterfactual action screening. We evaluate the method in CAGE Challenge 4, where agents operate under budgets for Mean Time to Recover (MTTR), false-positive response, and firewall change-management disruption. Across the benchmark, every unconstrained method violates the SOC downtime budget in 100% of evaluated episodes, with mean downtime proxy costs of 311-430 against a budget of 50. This complements prior CAGE Challenge 4 findings by showing that reward-only learning lacks operational discipline. Constrained MAPPO-GAT (C-MAPPO-GAT) isolates Lagrangian operational-cost control and budget-aware screening, while ACD$^3$-GAT adds budget context, CVaR tail-risk estimation, opponent-belief state, and Graph Counterfactual Risk Propagation (G-CRP). The replicated comparison includes three 200-episode seeds for IPPO, MAPPO-GAT, C-MAPPO-GAT, and ACD$^3$-GAT. C-MAPPO-GAT reduces downtime violation from 100% to 0.3% and mean downtime cost from 355.4 to 15.5 relative to MAPPO-GAT. ACD$^3$-GAT reduces mean downtime cost to 48.2 with a 13.8% violation rate, placing it on the safety-contract frontier rather than at the most conservative compliance point. Topology-seed and coupled adaptive Red-process stress tests preserve this contrast and show lower worst adaptive degradation for safety-constrained policies than reward-only MAPPO-GAT.",
+      "authors": [
+        "Jose Luis Lima de Jesus Silva"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.CR",
+        "cs.LG"
+      ],
+      "published": "2026-06-11T19:02:48+00:00",
+      "link": "https://arxiv.org/pdf/2606.13832v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes multi-agent RL framework for autonomous network security response",
+      "llm_evidence_cn": "提出了面向自主网络安全响应的多智能体强化学习框架",
+      "llm_evidence": "提出了面向自主网络安全响应的多智能体强化学习框架",
+      "canonical_evidence": "提出了面向自主网络安全响应的多智能体强化学习框架",
+      "llm_tldr_en": "Safety-Contract Graph MARL enables provably safe autonomous network response with budget constraints and graph state encoding.",
+      "llm_tldr_cn": "针对多智能体强化学习在网络安全响应中难以部署的问题，本文提出安全合约图MARL框架。该框架通过分离观测与预算、约束优化、图注意力编码和反事实动作筛选，使智能体在预算约束下安全响应。在CAGE Challenge 4上，该方法有效降低了响应延迟并满足了安全约束。",
+      "llm_tldr": "针对多智能体强化学习在网络安全响应中难以部署的问题，本文提出安全合约图MARL框架。该框架通过分离观测与预算、约束优化、图注意力编码和反事实动作筛选，使智能体在预算约束下安全响应。在CAGE Challenge 4上，该方法有效降低了响应延迟并满足了安全约束。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.14693v1",
+      "source": "arxiv",
+      "title": "Learning Coordinated Preference for Multi-Objective Multi-Agent Reinforcement Learning",
+      "abstract": "Cooperative multi-objective multi-agent reinforcement learning (MOMARL) models team decision making under multiple, potentially conflicting objectives. In this setting, conflicts arise not only across objectives but also across agents with different observations, roles, and contributions. We propose Preference Coordinated Multi-agent Policy Optimization (PCMA), which learns coordinated agent-specific preferences to enable complementary trade-offs among agents. Theoretically, we formulate cooperative MOMARL as a team-optimal game and show that, under suitable conditions, preference diversity can induce team improvement through a first-order improvement decomposition. Experiments on multiple cooperative MOMA environments and a practical traffic-control scenario show that PCMA improves both performance and trade-off coordination.",
+      "authors": [
+        "Pengxin Wang",
+        "Lihao Guo",
+        "Yi Xie",
+        "Bo Liu",
+        "Siyang Cao",
+        "Jingdi Chen"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "published": "2026-06-12T17:55:28+00:00",
+      "link": "https://arxiv.org/pdf/2606.14693v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "coordinated preference for multi-objective multi-agent RL",
+      "llm_evidence_cn": "多目标多智能体RL中的协调偏好学习",
+      "llm_evidence": "多目标多智能体RL中的协调偏好学习",
+      "canonical_evidence": "多目标多智能体RL中的协调偏好学习",
+      "llm_tldr_en": "Proposes PCMA, learning coordinated agent-specific preferences for multi-objective multi-agent RL to achieve complementary trade-offs.",
+      "llm_tldr_cn": "该论文针对多目标多智能体强化学习中目标冲突和智能体角色差异问题，提出Preference Coordinated Multi-agent Policy Optimization (PCMA)，学习协调的智能体特定偏好，使各智能体能够在不同目标上互补。理论证明了偏好多样性在团队改进中的作用，实验验证了在多个合作场景下的优势。",
+      "llm_tldr": "该论文针对多目标多智能体强化学习中目标冲突和智能体角色差异问题，提出Preference Coordinated Multi-agent Policy Optimization (PCMA)，学习协调的智能体特定偏好，使各智能体能够在不同目标上互补。理论证明了偏好多样性在团队改进中的作用，实验验证了在多个合作场景下的优势。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}
