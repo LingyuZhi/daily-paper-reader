@@ -6,62 +6,65 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-15
-- 运行时间：2026-06-15 22:51:20 UTC
+- 最新运行日期：2026-06-16
+- 运行时间：2026-06-16 21:50:01 UTC
 - 运行状态：成功
-- 本次总论文数：14
+- 本次总论文数：15
 - 精读区：6
-- 速读区：8
+- 速读区：9
 
 ### 今日简报（AI）
-14篇论文精读6篇，重点关注推理增强与空间推理；推荐《Diverse Thinking Schemata》和《SVoT》两篇9.0分论文，分别从多样化思维模式和强化学习视角提升大模型推理能力；建议普通读者进一步了解多智能体协调与工具调用代理的混合奖励方法。
-- 详情：[/202606/15/README](/202606/15/README)
+今日推荐研究聚焦多阶段事实验证与可验证强化学习中的轨迹推理，两篇高分论文分别提出智能体强化学习框架和判别式估计策略。精读必看《From Verdict to Process》和《STRIDE》，它们从不同角度突破了验证任务中的策略优化瓶颈。普通读者可重点关注《A Gradient Perspective》对RLVR稳定性与赢家优势策略优化的理论分析，有助于理解近期强化学习趋势。
+- 详情：[/202606/16/README](/202606/16/README)
 
 ### 精读区论文标签
-1. [Diverse Thinking Schemata Elicit Better Reasoning in Large Language Models](/202606/15/2606.08974v1-diverse-thinking-schemata-elicit-better-reasoning-in-large-language-models)  
+1. [From Verdict to Process: Agentic Reinforcement Learning for Multi-Stage Fact Verification](/202606/16/2606.13262v1-from-verdict-to-process-agentic-reinforcement-learning-for-multi-stage-fact-verification)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：利用强化学习增强大语言模型推理中的思维模式多样性
-2. [SVoT: State-aware Visualization-of-Thought for Spatial Reasoning via Reinforcement Learning](/202606/15/2606.11770v1-svot-state-aware-visualization-of-thought-for-spatial-reasoning-via-reinforcement-learning)  
+   evidence：提出用于事实验证的智能体强化学习框架
+2. [STRIDE: Strategic Trajectory Reasoning via Discriminative Estimation for Verifiable Reinforcement Learning](/202606/16/2606.15866v1-stride-strategic-trajectory-reasoning-via-discriminative-estimation-for-verifiable-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：使用强化学习训练多模态大语言模型进行空间推理，并生成状态可视化
-3. [Contract-Based Compositional Shielding for Safe Multi-Agent Reinforcement Learning](/202606/15/2606.14130v1-contract-based-compositional-shielding-for-safe-multi-agent-reinforcement-learning)  
+   evidence：通过判别估计进行策略轨迹推理，用于大语言模型的可验证强化学习
+3. [PathRouter: Aligning Rewards with Retrieval Quality in Agentic Graph Retrieval-Augmented Generation](/202606/16/2606.16409v1-pathrouter-aligning-rewards-with-retrieval-quality-in-agentic-graph-retrieval-augmented-generation)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：提出基于合约的组合屏蔽方法，用于安全多智能体强化学习
-4. [CORA: Analyzing and bridging thinking-answer gap in Multimodal RLVR via Consistency-Oriented Reasoning Alignment](/202606/15/2606.14691v1-cora-analyzing-and-bridging-thinking-answer-gap-in-multimodal-rlvr-via-consistency-oriented-reasoning-alignment)  
+   evidence：使用强化学习增强大语言模型在图表征检索生成中的代理行为
+4. [OpenClaw-Skill: Collective Skill Tree Search for Agentic Large Language Models](/202606/16/2606.16774v1-openclaw-skill-collective-skill-tree-search-for-agentic-large-language-models)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：使用可验证奖励强化学习增强大语言模型推理能力
-5. [Direct Preference Optimization for Chatbot Fine-Tuning: An Empirical Study](/202606/15/2606.12881v2-direct-preference-optimization-for-chatbot-fine-tuning-an-empirical-study)  
+   evidence：通过树搜索构建LLM智能体的技能
+5. [Context-Aware RL for Agentic and Multimodal LLMs](/202606/16/2606.17053v1-context-aware-rl-for-agentic-and-multimodal-llms)  
+   标签：评分：9.0/10、query:agentic-rl
+   evidence：面向智能体与多模态LLM的上下文感知强化学习
+6. [From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI](/202606/16/2606.14502v1-from-chatbot-to-digital-colleague-the-paradigm-shift-toward-persistent-autonomous-ai)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：应用强化学习技术（DPO）微调大型语言模型
-6. [Functional Cache Grafting: Robust and Rapid Code-Policy Synthesis for Embodied Agents](/202606/15/2606.13097v1-functional-cache-grafting-robust-and-rapid-code-policy-synthesis-for-embodied-agents)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：使用代码LLM为具身智能体合成策略
+   evidence：讨论使用强化学习将LLM转变为自主AI系统
 
 ### 速读区论文标签
-1. [Reward Modeling for Multi-Agent Orchestration](/202606/15/2606.13598v1-reward-modeling-for-multi-agent-orchestration)  
+1. [AdaMame: A Training Recipe for Adaptive Multilingual Reasoning](/202606/16/2606.15080v1-adamame-a-training-recipe-for-adaptive-multilingual-reasoning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：多智能体编排的强化学习奖励建模
-2. [CacheRL:Multi-Turn Tool-Calling Agents via Cached Rollouts and Hybrid Reward](/202606/15/2606.14179v1-cacherlmulti-turn-tool-calling-agents-via-cached-rollouts-and-hybrid-reward)  
+   evidence：使用强化学习阶段增强大语言模型的多语言推理能力
+2. [A Gradient Perspective on RLVR Stability and Winner Advantage Policy Optimization](/202606/16/2606.16154v1-a-gradient-perspective-on-rlvr-stability-and-winner-advantage-policy-optimization)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：使用缓存展开和混合奖励训练多轮工具调用智能体
-3. [Retrospective Progress-Aware Self-Refinement for LLM Agent Training](/202606/15/2606.14302v1-retrospective-progress-aware-self-refinement-for-llm-agent-training)  
+   evidence：强化学习增强LLM推理，RLVR稳定性
+3. [When in Doubt, Plan It Out: Committed Small Language Model Deliberation for Reactive Reinforcement Learning](/202606/16/2606.16995v1-when-in-doubt-plan-it-out-committed-small-language-model-deliberation-for-reactive-reinforcement-learning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：基于回溯进度感知的LLM智能体强化学习训练
-4. [Learning Coordinated Preference for Multi-Objective Multi-Agent Reinforcement Learning](/202606/15/2606.14693v1-learning-coordinated-preference-for-multi-objective-multi-agent-reinforcement-learning)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：多目标多智能体RL中的协调偏好学习
-5. [Graph-based Target Back-Propagation for Context Adaptation in Multi-LLM Agentic Systems](/202606/15/2606.14155v1-graph-based-target-back-propagation-for-context-adaptation-in-multi-llm-agentic-systems)  
+   evidence：结合强化学习策略与小语言模型规划器的混合体用于智能体决策
+4. [LatentGym: A Testbed For Cross-Task Experiential Learning With Controllable Latent Structure](/202606/16/2606.15306v1-latentgym-a-testbed-for-cross-task-experiential-learning-with-controllable-latent-structure)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：提出图基目标反向传播用于多LLM代理系统的上下文适应，可间接支持agentic RL
-6. [SPA: A SQL-Plan-Aware Reinforcement Learning Framework for Query Rewriting with LLMs](/202606/15/2606.08620v1-spa-a-sql-plan-aware-reinforcement-learning-framework-for-query-rewriting-with-llms)  
+   evidence：用于智能体系统跨任务经验学习的测试平台
+5. [Understanding Diversity Collapse in RLVR via the Lens of Overtraining](/202606/16/2606.15455v1-understanding-diversity-collapse-in-rlvr-via-the-lens-of-overtraining)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：LLM可验证奖励强化学习中的多样性崩溃分析
+6. [OmniOPSD: Rationale-Privileged On-Policy Self-Distillation for Affective Computing](/202606/16/2606.15920v1-omniopsd-rationale-privileged-on-policy-self-distillation-for-affective-computing)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：基于强化学习的多模态大语言模型训练，通过原理特权自蒸馏缓解奖励稀疏
+7. [RL-Index: Reinforcement Learning for Retrieval Index Reasoning](/202606/16/2606.16316v1-rl-index-reinforcement-learning-for-retrieval-index-reasoning)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：将智能体索引建模为强化学习问题
+8. [Adapting Reinforcement Learning with Chain-of-Thought Supervision for Explainable Detection of Hateful and Propagandistic Memes](/202606/16/2606.15307v1-adapting-reinforcement-learning-with-chain-of-thought-supervision-for-explainable-detection-of-hateful-and-propagandistic-memes)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：基于LLM的SQL查询重写的强化学习框架
-7. [Discovering Interpretable Multi-Parameter Control Policies for Evolutionary Algorithms Using Deep Reinforcement Learning](/202606/15/2606.10129v1-discovering-interpretable-multi-parameter-control-policies-for-evolutionary-algorithms-using-deep-reinforcement-learning)  
+   evidence：结合链式思考监督的强化学习用于可解释的模因检测
+9. [Evolutionary Bilevel Reward Shaping for Generalization in Reinforcement Learning](/202606/16/2606.16236v1-evolutionary-bilevel-reward-shaping-for-generalization-in-reinforcement-learning)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：强化学习用于进化算法参数控制
-8. [Safety-Contract Graph Multi-Agent Reinforcement Learning for Autonomous Network Security Response](/202606/15/2606.13832v1-safety-contract-graph-multi-agent-reinforcement-learning-for-autonomous-network-security-response)  
-   标签：评分：6.0/10、query:agentic-rl
-   evidence：提出了面向自主网络安全响应的多智能体强化学习框架
+   evidence：双层面奖励塑形提升RL泛化
 
 
 <div class="dpr-home-promo-card">
