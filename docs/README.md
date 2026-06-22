@@ -6,73 +6,71 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-21
-- 运行时间：2026-06-21 21:04:21 UTC
+- 最新运行日期：2026-06-22
+- 运行时间：2026-06-22 22:40:49 UTC
 - 运行状态：成功
 - 本次总论文数：17
 - 精读区：6
 - 速读区：11
 
 ### 今日简报（AI）
-今日推荐17篇论文，精读两篇强化学习方向均获9.0高分，速读三篇各具亮点。  
-最值得关注Self-CTRL与Learning from Own Solutions两篇，均探索强化学习中的自我训练与信用分配新机制。  
-建议优先精读这两篇高分论文，理解自我条件信用分配如何提升可验证奖励下的学习效率。
-- 详情：[/202606/21/README](/202606/21/README)
+今天17篇论文聚焦LLM强化学习与奖励建模，精读两篇9.0高分分别探索探索性RL中训练和惊奇度引导的令牌级优势加权。最值得看ExpRL的探索性RL用于LLM中训练，以及STARE的惊奇度引导策略熵稳定方法。建议将不确定性建模（如Manifold Bandits、不确定性感知奖励建模）融入RLHF流程以提升训练稳定性。
+- 详情：[/202606/22/README](/202606/22/README)
 
 ### 精读区论文标签
-1. [Self-CTRL: Self-Consistency Training with Reinforcement Learning](/202606/21/2606.18327v1-self-ctrl-self-consistency-training-with-reinforcement-learning)  
+1. [ExpRL: Exploratory RL for LLM Mid-Training](/202606/22/2606.17024v1-exprl-exploratory-rl-for-llm-mid-training)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：使用强化学习训练语言模型自我解释与行为一致
-2. [Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards](/202606/21/2606.18810v1-learning-from-own-solutions-self-conditioned-credit-assignment-for-reinforcement-learning-with-verifiable-rewards)  
+   evidence：探索性强化学习用于LLM中间训练以提升推理能力
+2. [STARE: Surprisal-Guided Token-Level Advantage Reweighting for Policy Entropy Stability](/202606/22/2606.19236v1-stare-surprisal-guided-token-level-advantage-reweighting-for-policy-entropy-stability)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：改进RLVR中LLM推理的信用分配
-3. [Beyond Reward Engineering: A Data Recipe for Long-Context Reinforcement Learning](/202606/21/2606.18831v1-beyond-reward-engineering-a-data-recipe-for-long-context-reinforcement-learning)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：面向长上下文RL的数据配方，提升LLM作为自主智能体的能力
-4. [Playful Agentic Robot Learning](/202606/21/2606.19419v1-playful-agentic-robot-learning)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：用于实体机器人技能习得的代理强化学习
-5. [Connect the Dots: Training LLMs for Long-Lifecycle Agents with Cross-Domain Generalization Via Reinforcement Learning](/202606/21/2606.20002v1-connect-the-dots-training-llms-for-long-lifecycle-agents-with-cross-domain-generalization-via-reinforcement-learning)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：使用RL训练LLM以具备长生命周期智能体的跨域泛化能力
-6. [Hierarchical Control in Multi-Agent Games: LLM-based Planning and RL Execution](/202606/21/2606.20014v1-hierarchical-control-in-multi-agent-games-llm-based-planning-and-rl-execution)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：基于LLM规划与RL执行的多智能体层次化控制
+   evidence：令牌级优势重加权以稳定LLM强化学习中的策略熵
+3. [Knowledge Reutilization in Meta-Reinforcement Learning](/202606/22/2606.18132v1-knowledge-reutilization-in-meta-reinforcement-learning)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：元强化学习框架实现跨智能体知识复用
+4. [GraphPO: Graph-based Policy Optimization for Reasoning Models](/202606/22/2606.18954v1-graphpo-graph-based-policy-optimization-for-reasoning-models)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：基于图的策略优化用于增强推理模型的可验证奖励强化学习
+5. [EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts](/202606/22/2606.18967v1-efficientrollout-system-aware-self-speculative-decoding-for-rl-rollouts)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：使用推测解码加速LLM后训练的强化学习推出
+6. [Enhancing Decision-Making with Large Language Models through Multi-Agent Fictitious Play](/202606/22/2606.19308v1-enhancing-decision-making-with-large-language-models-through-multi-agent-fictitious-play)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：用多智能体强化学习增强大语言模型决策
 
 ### 速读区论文标签
-1. [Reversal Q-Learning](/202606/21/2606.17551v1-reversal-q-learning)  
+1. [Manifold Bandits: Bayesian Curriculum Learning over the Latent Geometry of Large Language Models](/202606/22/2606.19750v1-manifold-bandits-bayesian-curriculum-learning-over-the-latent-geometry-of-large-language-models)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：新颖的离线强化学习算法，用于智能体决策
-2. [Environment-Grounded Automated Prompt Optimization for LLM Game Agents](/202606/21/2606.17838v1-environment-grounded-automated-prompt-optimization-for-llm-game-agents)  
+   evidence：利用RL在LLM潜几何上做贝叶斯课程学习
+2. [Beyond Entropy: Learning from Token-Level Distributional Deviations for LLM Reasoning](/202606/22/2606.19771v1-beyond-entropy-learning-from-token-level-distributional-deviations-for-llm-reasoning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：面向LLM游戏代理的强化学习引导提示优化
-3. [From Reasoning Traces to Reusable Modules: Understanding Compositional Generalization in Language Model Reasoning](/202606/21/2606.18089v1-from-reasoning-traces-to-reusable-modules-understanding-compositional-generalization-in-language-model-reasoning)  
+   evidence：基于token级分布学习的RLVR方法提升LLM推理
+3. [Uncertainty-Aware Reward Modeling for Stable RLHF](/202606/22/2606.19818v1-uncertainty-aware-reward-modeling-for-stable-rlhf)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：分析RL在LLM推理中的角色
-4. [LLMZero: Discovering Adaptive Training Strategies for RL Post-Training via LLM Agents](/202606/21/2606.18388v1-llmzero-discovering-adaptive-training-strategies-for-rl-post-training-via-llm-agents)  
+   evidence：不确定性感知奖励建模实现稳定RLHF
+4. [VIMPO: Value-Implicit Policy Optimization for LLMs](/202606/22/2606.20008v1-vimpo-value-implicit-policy-optimization-for-llms)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：使用LLM代理发现强化学习后训练策略
-5. [Ling and Ring 2.6 Technical Report: Efficient and Instant Agentic Intelligence at Trillion-Parameter Scale](/202606/21/2606.15079v1-ling-and-ring-26-technical-report-efficient-and-instant-agentic-intelligence-at-trillion-parameter-scale)  
+   evidence：用于LLM的无评论家策略优化方法
+5. [Continual Self-Improvement with Lightweight Experiential Latent Memories](/202606/22/2606.17803v1-continual-self-improvement-with-lightweight-experiential-latent-memories)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：报告代理智能模型
-6. [Reward Hacking in Language Model Agents: Revisiting AI Safety Gridworlds](/202606/21/2606.15385v1-reward-hacking-in-language-model-agents-revisiting-ai-safety-gridworlds)  
+   evidence：受无监督RL启发的LLM从推理轨迹在线学习自我改进
+6. [Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation](/202606/22/2606.19327v1-rethinking-reward-supervision-rubric-conditioned-self-distillation)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：语言模型智能体的RL安全评估
-7. [Direction-Conditioned Policies via Compositional Subgoal Scoring for Online Goal-Conditioned Reinforcement Learning](/202606/21/2606.16515v1-direction-conditioned-policies-via-compositional-subgoal-scoring-for-online-goal-conditioned-reinforcement-learning)  
+   evidence：基于强化学习的评语条件自蒸馏用于增强LLM推理
+7. [Learning User Simulators with Turing Rewards](/202606/22/2606.19336v1-learning-user-simulators-with-turing-rewards)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：在线目标条件强化学习方法，用于智能体决策
-8. [Steering Generative Reinforcement Learning into Stable Robotic Controller](/202606/21/2606.16572v1-steering-generative-reinforcement-learning-into-stable-robotic-controller)  
+   evidence：利用基于图灵测试的奖励来训练用户模拟器LLM
+8. [A Multi-Agent system for Multi-Objective constrained optimization](/202606/22/2606.20236v1-a-multi-agent-system-for-multi-objective-constrained-optimization)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：面向机器人控制的强化学习生成策略稳定性方法
-9. [Video-Based Optimal Transport for Feedback-Efficient Offline Preference-Based Reinforcement Learning](/202606/21/2606.16856v1-video-based-optimal-transport-for-feedback-efficient-offline-preference-based-reinforcement-learning)  
+   evidence：多智能体强化学习用于多目标约束优化
+9. [A Model-Driven Approach for Developing Families of Reinforcement Learning Environments](/202606/22/2606.20324v1-a-model-driven-approach-for-developing-families-of-reinforcement-learning-environments)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：模型驱动方法开发RL环境家族，支持智能体决策
+10. [Latent Thought Flow: Efficient Latent Reasoning in Large Language Models](/202606/22/2606.16222v1-latent-thought-flow-efficient-latent-reasoning-in-large-language-models)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：利用视频基础模型的高效反馈偏好强化学习
-10. [Do as the Romans Do: Learning Universal Behaviors from Heterogeneous Agents](/202606/21/2606.18537v1-do-as-the-romans-do-learning-universal-behaviors-from-heterogeneous-agents)  
+   evidence：使用强化学习（GFlowNet）训练采样器匹配奖励后验以增强LLM推理
+11. [Temporal Self-Imitation Learning](/202606/22/2606.19752v1-temporal-self-imitation-learning)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：从异构智能体学习通用行为的社会化强化学习方法
-11. [Pareto Q-Learning with Reward Machines](/202606/21/2606.19134v1-pareto-q-learning-with-reward-machines)  
-   标签：评分：6.0/10、query:agentic-rl
-   evidence：多目标强化学习与奖励机用于智能体决策
+   evidence：利用时间效率的强化学习框架用于智能体决策
 
 
 <div class="dpr-home-promo-card">
