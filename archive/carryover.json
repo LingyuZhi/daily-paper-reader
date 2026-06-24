@@ -1,58 +1,12 @@
 {
-  "generated_at": "2026-06-23T22:03:46.159438+00:00",
-  "updated_date": "20260623",
+  "generated_at": "2026-06-24T21:49:48.384367+00:00",
+  "updated_date": "20260624",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260623",
+      "updated_date": "20260624",
       "carryover_days": 9,
-      "items": [
-        {
-          "id": "2606.23038v1",
-          "source": "arxiv",
-          "title": "EvoRubrics: Dynamic Rubrics as Rewards via Adversarial Co-Evolution for LLM Reinforcement Learning",
-          "abstract": "Rubric-based rewards offer interpretable and fine-grained optimization signals for reinforcement learning in open-ended tasks where verifiable answers are unavailable. However, pre-constructed rubrics remain static throughout training, creating a fundamental mismatch with the evolving policy: fixed criteria gradually lose discriminative power as the model improves, leading to reward saturation and potential hacking. Recent dynamic rubric methods partially address this but rely on external frontier models or ground-truth answers, and update rubrics only at coarse granularity. We propose EvoRubrics, a co-evolutionary RL framework where a Policy LLM and a Rubric Generator jointly improve through adversarial interaction within each training step. As the policy improves under the rubric generator's guidance, the rubric generator adapts its criteria to remain discriminative and informative, enabling evaluation to track the policy in real time and naturally inducing an automatic curriculum. Experiments show that EvoRubrics consistently outperforms static and dynamic rubric baselines across benchmarks. The learned Rubric Generator further generalizes as a transferable reward model. Notably, even a fully self-supervised variant without any external supervision achieves meaningful gains, suggesting that co-evolution between generation and evaluation alone can provide sufficiently rich learning signals. Our code is publicly available at https://anonymous.4open.science/r/EvoRubrics-2155/.",
-          "authors": [
-            "Hongxin Ding",
-            "Baixiang Huang",
-            "Yue Fang",
-            "Weibin Liao",
-            "Zheng Li",
-            "Jinyang Zhang",
-            "Zhijing Wu",
-            "Junfeng Zhao",
-            "Yasha Wang"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "published": "2026-06-22T08:46:23+00:00",
-          "link": "https://arxiv.org/pdf/2606.23038v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "dynamic rubrics as rewards for LLM RL",
-          "llm_evidence_cn": "动态评分卡作为LLM强化学习的奖励",
-          "llm_evidence": "动态评分卡作为LLM强化学习的奖励",
-          "canonical_evidence": "动态评分卡作为LLM强化学习的奖励",
-          "llm_tldr_en": "EvoRubrics co-evolves a Policy LLM and a Rubric Generator through adversarial interaction, providing adaptive rewards that avoid saturation in open-ended tasks.",
-          "llm_tldr_cn": "基于评分卡的RL奖励在开放任务中面临静态标准与策略不匹配的问题。本文提出EvoRubrics，让策略LLM和评分生成器通过对抗共进化动态调整评分标准。实验显示该方法能持续提供有效信号，避免奖励饱和与欺骗，显著提升LLM在开放式任务中的表现，为LLM RL奖励设计开辟了新途径。",
-          "llm_tldr": "基于评分卡的RL奖励在开放任务中面临静态标准与策略不匹配的问题。本文提出EvoRubrics，让策略LLM和评分生成器通过对抗共进化动态调整评分标准。实验显示该方法能持续提供有效信号，避免奖励饱和与欺骗，显著提升LLM在开放式任务中的表现，为LLM RL奖励设计开辟了新途径。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.23038v1",
-          "carry_days": 1
-        }
-      ]
+      "items": []
     }
   }
 }

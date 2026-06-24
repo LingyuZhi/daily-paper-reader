@@ -6,71 +6,71 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-23
-- 运行时间：2026-06-23 22:16:01 UTC
+- 最新运行日期：2026-06-24
+- 运行时间：2026-06-24 22:01:19 UTC
 - 运行状态：成功
 - 本次总论文数：17
 - 精读区：6
 - 速读区：11
 
 ### 今日简报（AI）
-今日推荐6篇精读和11篇速读，重点聚焦强化学习在长周期智能体与搜索聚合的突破；最值得精读《Group-Graph Policy Optimization》和《SPIRAL: Learning to Search and Aggregate》，均获9.0高分；建议优先阅读这两篇论文探索其方法论对实际任务的提升。
-- 详情：[/202606/23/README](/202606/23/README)
+今日推荐17篇论文，精读2篇高分研究聚焦LLM代理的自适应评分机制与推理强化学习关键因素。值得关注ARCO与EvoRubrics提出的共演化动态评分框架，以及异构策略网络在多机器人团队协作中的突破。建议优先精读这两篇9分论文，速读三篇8分论文可拓展对多智能体对齐与强化学习更新的理解。
+- 详情：[/202606/24/README](/202606/24/README)
 
 ### 精读区论文标签
-1. [Group-Graph Policy Optimization for Long-Horizon Agentic Reinforcement Learning](/202606/23/2606.22995v1-group-graph-policy-optimization-for-long-horizon-agentic-reinforcement-learning)  
+1. [ARCO: Adaptive Rubric with Co-Evolution for Multi-Step LLM-Based Agents](/202606/24/2606.21262v1-arco-adaptive-rubric-with-co-evolution-for-multi-step-llm-based-agents)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：面向长时域智能体强化学习的组图策略优化
-2. [SPIRAL: Learning to Search and Aggregate](/202606/23/2606.23595v1-spiral-learning-to-search-and-aggregate)  
+   evidence：用于多步LLM智能体的强化学习与可解释奖励
+2. [What are Key Factors for Updates in RL for LLM Reasoning?](/202606/24/2606.22570v1-what-are-key-factors-for-updates-in-rl-for-llm-reasoning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：RL训练语言模型使用序列、并行和聚合推理
-3. [Formal Verification of Learned Multi-Agent Communication Policies via Decision Tree Distillation](/202606/23/2606.19632v1-formal-verification-of-learned-multi-agent-communication-policies-via-decision-tree-distillation)  
+   evidence：LLM推理中强化学习更新的理论分析
+3. [Beyond Trajectory Imitation: Strategy-Guided Policy Optimization for LLM Reasoning](/202606/24/2606.24064v1-beyond-trajectory-imitation-strategy-guided-policy-optimization-for-llm-reasoning)  
+   标签：评分：9.0/10、query:agentic-rl
+   evidence：利用强化学习优化策略，通过策略蒸馏提升大型语言模型的推理能力
+4. [Accelerating Disaggregated RL for Visual Generative LLMs with Diffusion-Based Parallelism and Trainer-Assisted Generation](/202606/24/2606.24369v1-accelerating-disaggregated-rl-for-visual-generative-llms-with-diffusion-based-parallelism-and-trainer-assisted-generation)  
+   标签：评分：9.0/10、query:agentic-rl
+   evidence：利用强化学习增强视觉生成大语言模型的解耦训练
+5. [Reinforcement Learning for Computer-Use Agents with Autonomous Evaluation](/202606/24/2606.24515v1-reinforcement-learning-for-computer-use-agents-with-autonomous-evaluation)  
+   标签：评分：9.0/10、query:agentic-rl
+   evidence：使用视觉语言模型提供奖励信号训练计算机使用智能体
+6. [Temporal Self-Imitation Learning](/202606/24/2606.19752v2-temporal-self-imitation-learning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：通过决策树蒸馏形式化验证多智能体通信策略
-4. [ARCO: Adaptive Rubric with Co-Evolution for Multi-Step LLM-Based Agents](/202606/23/2606.21262v1-arco-adaptive-rubric-with-co-evolution-for-multi-step-llm-based-agents)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：自适应评分标准用于多步LLM智能体的强化学习信用分配
-5. [Learning at the Right Pace: Adaptive Data Scheduling Improves LLM Reinforcement Learning](/202606/23/2606.22305v1-learning-at-the-right-pace-adaptive-data-scheduling-improves-llm-reinforcement-learning)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：自适应数据调度用于LLM强化学习后训练
-6. [Causal Reward World Models: Zero-shot Reward Design for Automated Skill Generation](/202606/23/2606.23280v1-causal-reward-world-models-zero-shot-reward-design-for-automated-skill-generation)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：使用LLM进行因果奖励设计以用于强化学习
+   evidence：用于自主智能体的自我模仿强化学习方法
 
 ### 速读区论文标签
-1. [Reinforcement learning to improve large language model-based automated code compliance systems](/202606/23/2606.22402v1-reinforcement-learning-to-improve-large-language-model-based-automated-code-compliance-systems)  
+1. [Heterogeneous Policy Networks for Composite Robot Team Communication and Coordination](/202606/24/2606.20962v1-heterogeneous-policy-networks-for-composite-robot-team-communication-and-coordination)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：强化学习改进基于LLM的自动代码合规系统
-2. [Stationary Robust Mean-Field Games under Model Mismatches](/202606/23/2606.22579v1-stationary-robust-mean-field-games-under-model-mismatches)  
+   evidence：异构机器人团队的多智能体强化学习通信与协调方法
+2. [EvoRubrics: Dynamic Rubrics as Rewards via Adversarial Co-Evolution for LLM Reinforcement Learning](/202606/24/2606.23038v1-evorubrics-dynamic-rubrics-as-rewards-via-adversarial-co-evolution-for-llm-reinforcement-learning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：基于平均场博弈的鲁棒多智能体RL处理方法
-3. [Beyond Penalizing Mistakes: Stabilizing Efficiency Training in Large Reasoning Models via Adaptive Correct-Only Rewards](/202606/23/2606.22716v1-beyond-penalizing-mistakes-stabilizing-efficiency-training-in-large-reasoning-models-via-adaptive-correct-only-rewards)  
+   evidence：使用动态评分标准强化LLM训练
+3. [ASALT: Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning](/202606/24/2606.24601v1-asalt-adaptive-state-alignment-for-lateral-transfer-in-multi-agent-reinforcement-learning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：使用强化学习（GRPO）与自适应奖励提升大型推理模型效率
-4. [Provable Benefits of RLVR over SFT for Reasoning Models: Learning to Backtrack Efficiently](/202606/23/2606.22938v1-provable-benefits-of-rlvr-over-sft-for-reasoning-models-learning-to-backtrack-efficiently)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：RL微调提升大语言模型推理能力
-5. [UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning](/202606/23/2606.19328v2-ubp2-uncertainty-balanced-preference-planning-for-efficient-preference-based-reinforcement-learning)  
+   evidence：多智能体强化学习状态对齐迁移方法
+4. [Horizon Adaptive Offline Policy Learning via Value Stitching](/202606/24/2606.21136v1-horizon-adaptive-offline-policy-learning-via-value-stitching)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：基于偏好的强化学习用于智能体决策
-6. [BARD-MARL: Byzantine-Agent Detection for Learned Communication in Multi-Agent Reinforcement Learning](/202606/23/2606.20701v1-bard-marl-byzantine-agent-detection-for-learned-communication-in-multi-agent-reinforcement-learning)  
+   evidence：通过值拼接的离线策略学习用于RL代理决策
+5. [Inverting the Bellman Equation: From $Q$-Values to World Models](/202606/24/2606.21173v1-inverting-the-bellman-equation-from-q-values-to-world-models)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：关注多智能体强化学习决策，通过拜占庭检测提升协调性
-7. [Sim2O: Efficient Offline-to-Online MARL via Joint Action Composition](/202606/23/2606.21085v1-sim2o-efficient-offline-to-online-marl-via-joint-action-composition)  
+   evidence：从Q值逆推世界模型，支持智能体决策
+6. [Imagine to Ensure Safety in Hierarchical Reinforcement Learning](/202606/24/2606.22509v1-imagine-to-ensure-safety-in-hierarchical-reinforcement-learning)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：离线到在线多智能体强化学习框架用于协调决策
-8. [Select-to-Act: Hierarchical Reinforcement Learning via Adaptive Language Guidance](/202606/23/2606.22350v1-select-to-act-hierarchical-reinforcement-learning-via-adaptive-language-guidance)  
+   evidence：分层强化学习实现智能体安全决策
+7. [Learning Process Rewards via Success Visitation Matching for Efficient RL](/202606/24/2606.23640v1-learning-process-rewards-via-success-visitation-matching-for-efficient-rl)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：分层强化学习结合语言指导用于智能体决策
-9. [Learning Fair Pareto-Optimal Policies in Multi-Objective Reinforcement Learning](/202606/23/2606.18111v1-learning-fair-pareto-optimal-policies-in-multi-objective-reinforcement-learning)  
+   evidence：用于强化学习智能体决策的稀疏奖励转换
+8. [Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning](/202606/24/2606.24133v1-holistic-data-scheduler-for-llm-pre-training-via-multi-objective-reinforcement-learning)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：强化学习用于LLM预训练数据混合优化
+9. [Adversarial observations in probabilistic State-Space Models for robust Reinforcement Learning](/202606/24/2606.20880v1-adversarial-observations-in-probabilistic-state-space-models-for-robust-reinforcement-learning)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：多目标强化学习用于公平决策
-10. [UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning](/202606/23/2606.19328v1-ubp2-uncertainty-balanced-preference-planning-for-efficient-preference-based-reinforcement-learning)  
+   evidence：对抗性观测下自主智能体的鲁棒强化学习
+10. [Objective-Behavior Alignment: Diagnostics for MORL Policy Selection](/202606/24/2606.21321v1-objective-behavior-alignment-diagnostics-for-morl-policy-selection)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：基于模型的不确定性平衡偏好RL方法
-11. [Beyond the Current Observation: Evaluating Multimodal Large Language Models in Controllable Non-Markov Games](/202606/23/2606.19338v1-beyond-the-current-observation-evaluating-multimodal-large-language-models-in-controllable-non-markov-games)  
+   evidence：多目标强化学习政策选择诊断，对齐目标与行为
+11. [AutoRAS: Learning Robust Agentic Systems with Primitive Representations](/202606/24/2606.21445v1-autoras-learning-robust-agentic-systems-with-primitive-representations)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：多模态大语言模型在非马尔可夫博弈中的策略评估
+   evidence：使用类似RL的优化自动设计鲁棒智能体系统
 
 
 <div class="dpr-home-promo-card">
