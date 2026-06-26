@@ -1,95 +1,12 @@
 {
-  "generated_at": "2026-06-25T20:39:20.402782+00:00",
-  "updated_date": "20260625",
+  "generated_at": "2026-06-26T21:49:27.623679+00:00",
+  "updated_date": "20260626",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260625",
+      "updated_date": "20260626",
       "carryover_days": 9,
-      "items": [
-        {
-          "id": "2606.26080v1",
-          "source": "arxiv",
-          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-          "abstract": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training altogether. Concretely, we derive an implicit advantage under a general stochastic Markov decision process, which we term progress advantage -- log-probability ratio between the RL-trained policy and its reference policy exactly recovers the optimal advantage function. This formulation makes the resulting signal annotation-free, domain-agnostic, and available as a byproduct of the standard RL post-training pipeline. We validate the effectiveness of the progress advantage across three different applications: test-time scaling, uncertainty quantification, and failure attribution on five benchmarks and four model families. Across all settings, it consistently outperforms confidence-based baselines and, despite requiring no task-specific training, surpasses dedicated trained reward models. We complement these results with deeper analyses on characteristics of progress advantage, offering practical guidance for adoption in real-world agentic systems.",
-          "authors": [
-            "Changdae Oh",
-            "Wendi Li",
-            "Seongheon Park",
-            "Samuel Yeh",
-            "Tanwi Mallick",
-            "Sharon Li"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "published": "2026-06-24T17:54:08+00:00",
-          "link": "https://arxiv.org/pdf/2606.26080v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "RL post-training provides step-level advantage for LLM agents in agentic settings",
-          "llm_evidence_cn": "RL后训练为LLM智能体提供步骤级进度优势信号",
-          "llm_evidence": "RL后训练为LLM智能体提供步骤级进度优势信号",
-          "canonical_evidence": "RL后训练为LLM智能体提供步骤级进度优势信号",
-          "llm_tldr_en": "Shows that RL post-training implicitly provides progress advantage for LLM agents, eliminating need for separate reward model in agentic tasks via log-probability ratio.",
-          "llm_tldr_cn": "针对LLM智能体在长时交互环境中难以获得细粒度奖励的问题，论文证明强化学习后训练本身已隐含步骤级进度优势信号，通过RL策略与参考策略的log概率比即可恢复最优优势函数，无需额外训练奖励模型。该方法简化了智能体训练流程。",
-          "llm_tldr": "针对LLM智能体在长时交互环境中难以获得细粒度奖励的问题，论文证明强化学习后训练本身已隐含步骤级进度优势信号，通过RL策略与参考策略的log概率比即可恢复最优优势函数，无需额外训练奖励模型。该方法简化了智能体训练流程。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
-          "matched_requirement_id": "req-1",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.26080v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2606.25527v1",
-          "source": "arxiv",
-          "title": "Beyond One-Size-Fits-All: Diagnosis-Driven Online Reinforcement Learning with Offline Priors",
-          "abstract": "Online reinforcement learning (RL) agents increasingly depend on knowledge acquired offline to achieve practical efficiency. Originally studied in offline-to-online RL, this paradigm now spans foundation model post-training and embodied intelligence, with prior types expanding from offline datasets and pre-trained policies to increasingly diverse knowledge sources such as multimodal foundation models and generative world models. Offline priors have become central to how deep RL is developed and deployed. However, this reliance introduces a challenge that the prevailing benchmark-driven paradigm cannot resolve: because prior validity varies across deployments and shifts during training, no single approach to managing it is universally optimal, and benchmark rankings offer limited guidance for real-world deployments. Rather than pursuing universal solutions, we argue that the field should shift to diagnosis-driven tension management, in which deployment-specific evidence guides how the learner relates to its priors throughout training, enabling both flexible and adaptive deployment. We support this position with a framework characterizing how priors reshape online optimization through three functional roles, controlled experiments demonstrating help-or-hurt reversals, cross-domain evidence from foundation model post-training to embodied intelligence, and engagement with five substantive counterarguments.",
-          "authors": [
-            "Guozheng Ma",
-            "Lu Li",
-            "Zilin Wang",
-            "Pierre-Luc Bacon",
-            "Dacheng Tao"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG"
-          ],
-          "published": "2026-06-24T08:05:28+00:00",
-          "link": "https://arxiv.org/pdf/2606.25527v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "query:agentic-rl"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "diagnosis-driven online RL with offline priors for agentic RL",
-          "llm_evidence_cn": "基于诊断的在线强化学习结合离线先验用于智能体强化学习",
-          "llm_evidence": "基于诊断的在线强化学习结合离线先验用于智能体强化学习",
-          "canonical_evidence": "基于诊断的在线强化学习结合离线先验用于智能体强化学习",
-          "llm_tldr_en": "This paper proposes a diagnosis-driven approach for online RL with offline priors that adapts prior usage based on deployment validity, broadly applicable to agentic RL systems.",
-          "llm_tldr_cn": "在线强化学习依赖离线先验知识，但先验有效性随部署和环境变化而变化。该论文提出诊断驱动的方法，动态调整先验的使用策略，而非固定采用单一机制。实验验证了该方法在多种离线到在线场景中的有效性。该工作为智能体强化学习中的先验管理提供了通用框架。",
-          "llm_tldr": "在线强化学习依赖离线先验知识，但先验有效性随部署和环境变化而变化。该论文提出诊断驱动的方法，动态调整先验的使用策略，而非固定采用单一机制。实验验证了该方法在多种离线到在线场景中的有效性。该工作为智能体强化学习中的先验管理提供了通用框架。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
-          "matched_requirement_id": "req-1",
-          "selection_source": "carryover_cache",
-          "paper_id": "2606.25527v1",
-          "carry_days": 1
-        }
-      ]
+      "items": []
     }
   }
 }
