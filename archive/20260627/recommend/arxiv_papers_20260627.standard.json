@@ -1,0 +1,217 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-27T21:11:01.696915+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.27136v1",
+      "source": "arxiv",
+      "title": "Joint Learning of Experiential Rules and Policies for Large Language Model Agents",
+      "abstract": "For LLM agents in multi-step interactive environments, a key challenge is to make effective use of accumulated interaction experience. Existing work has typically separated two uses of such experience: keeping it outside the model as natural-language rules for later prompting, or using trajectories and feedback to update the model parameters. The former is easy to interpret but can fall out of sync with the evolving policy; the latter improves the policy more broadly but provides only limited correction for local mistakes in sparse-reward settings. We present Joint Learning of Experiential Rules and Policies for LLM Agents (JERP), which updates a long-term experiential-rule pool and the policy from the same interaction trajectories. At decision time, JERP retrieves task-relevant rules and conditions the agent on them together with the interaction history. After each episode, it uses the collected trajectories both to optimize the policy and to revise the rule pool by comparing current rollouts with reference successful trajectories. This coupling keeps the rule pool aligned with the evolving policy while allowing stable and effective behaviors to be gradually absorbed into the model itself. Experiments on AlfWorld and WebShop show that JERP yields consistent gains in decision performance for complex interactive tasks.",
+      "authors": [
+        "Shicheng Ye",
+        "Chao Yu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-25T15:11:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.27136v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "agentic RL methods for LLM agents",
+      "llm_evidence_cn": "针对大语言模型智能体的强化学习方法",
+      "llm_evidence": "针对大语言模型智能体的强化学习方法",
+      "canonical_evidence": "针对大语言模型智能体的强化学习方法",
+      "llm_tldr_en": "JERP jointly learns experiential rules and policies for LLM agents, combining interpretable rules with policy updates for better decision-making.",
+      "llm_tldr_cn": "JERP针对LLM智能体在多步交互中如何有效利用经验的问题，提出联合学习经验规则和策略的方法。它从相同轨迹中更新长期规则池和策略，既保持规则的可解释性，又通过策略更新弥补局部错误，在稀疏奖励环境中提升了智能体的决策质量。",
+      "llm_tldr": "JERP针对LLM智能体在多步交互中如何有效利用经验的问题，提出联合学习经验规则和策略的方法。它从相同轨迹中更新长期规则池和策略，既保持规则的可解释性，又通过策略更新弥补局部错误，在稀疏奖励环境中提升了智能体的决策质量。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.22317v1",
+      "source": "arxiv",
+      "title": "Curriculum Reinforcement Learning Can Incentivize Reasoning Capacity in LLMs Beyond the Base Model",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) is widely viewed as a promising path toward continuously improving large language models. Recent works, however, suggest that mainstream RLVR often reallocates sampling probabilities among trajectories already present in the base model: it can improve sampling efficiency, reflected by higher pass@1 scores, but yields limited gains, and can even decrease pass@k scores when k is large, and therefore may fail to expand the base model's reasoning capacity boundary. In this paper, we present a boundary-aware Curriculum RL approach to move beyond the base model's reasoning capacity boundary. Our approach first uses pass@k sampling to locate the current reasoning capacity boundary, then applies targeted teacher guidance to examples near or beyond that boundary, and finally uses RL to consolidate the newly introduced reasoning patterns. Across Qwen, Llama, and DeepSeek base models, boundary-aware Curriculum RL improves both pass@1 scores and pass@256 scores, with pass@1 reflecting one-attempt performance and pass@256 serving as an empirical proxy for the reasoning capacity boundary. In our experiments, average pass@256 improves by 9.8 percentage points over the base models and by 10.3 percentage points over Vanilla RLVR. These results suggest that boundary-aware Curriculum RL can provide a scalable route for LLMs to continuously improve beyond the base model's empirical reasoning capacity boundary.",
+      "authors": [
+        "Pengxiang Cai",
+        "Tianchen Fang",
+        "Xiaohan Li",
+        "Qingyuan Zeng",
+        "Guocong Li",
+        "Jintai Chen"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-21T03:15:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.22317v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "curriculum RL to expand reasoning capacity of LLMs beyond base model",
+      "llm_evidence_cn": "课程学习强化学习扩展大语言模型推理能力超越基础模型",
+      "llm_evidence": "课程学习强化学习扩展大语言模型推理能力超越基础模型",
+      "canonical_evidence": "课程学习强化学习扩展大语言模型推理能力超越基础模型",
+      "llm_tldr_en": "Proposes a boundary-aware Curriculum RL approach that uses pass@k sampling to locate current capacity boundary, then trains beyond it, achieving gains in both pass@1 and pass@k.",
+      "llm_tldr_cn": "当前主流RLVR方法多仅重分配轨迹采样概率，未能扩展模型推理能力边界。本文提出边界感知的课程强化学习，首先通过pass@k采样定位当前推理能力边界，然后设计课程训练逐步突破。实验证明，该方法不仅提升pass@1，还在大k下保持pass@k不降，真正扩展了基础模型的推理容量。",
+      "llm_tldr": "当前主流RLVR方法多仅重分配轨迹采样概率，未能扩展模型推理能力边界。本文提出边界感知的课程强化学习，首先通过pass@k采样定位当前推理能力边界，然后设计课程训练逐步突破。实验证明，该方法不仅提升pass@1，还在大k下保持pass@k不降，真正扩展了基础模型的推理容量。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.24143v1",
+      "source": "arxiv",
+      "title": "AsyncOPD: How Stale Can On-Policy Distillation Be?",
+      "abstract": "On-policy distillation (OPD) trains a student on its own rollouts guided by teacher feedback and is becoming increasingly important for large language model (LLM) post-training. Like reinforcement learning (RL), however, OPD faces an on-policy systems bottleneck, as rollouts can dominate training time for reasoning workloads. Asynchronous training pipelines can alleviate this bottleneck by decoupling rollout generation from learner updates, but doing so introduces stale-policy data. While prior work has studied stale data in asynchronous RL, its effects in OPD remain underexplored. We present the first systematic study of staleness in asynchronous OPD, focusing on a practical setting where teacher feedback is implemented through local KL losses and full-vocabulary teacher logits are too expensive to store or transfer, necessitating finite teacher-score caches. We first show that KL direction changes the stale-data problem: teacher-weighted forward KL is more robust to stale rollouts, whereas student-weighted reverse KL is vulnerable. Second, for this vulnerable reverse-KL case, we study whether methods designed to stabilize asynchronous RL can mitigate OPD staleness. In our experiments, they do not improve over a simpler OPD-specific surrogate: recomputing the reverse-KL signal under the current student at learner time. Third, we analyze how finite teacher-score caches create a bias-variance tradeoff for sparse and sampled reverse-KL OPD estimators. This motivates multi-sample Monte Carlo (MC), which preserves MC correctability while reducing one-sample variance. Finally, we present and open-source AsyncOPD, a fully asynchronous OPD training pipeline built from these estimator choices. Experiments show that AsyncOPD improves training throughput by $1.6\\times$ to $3.8\\times$ over strict synchronous training while reaching comparable accuracy.",
+      "authors": [
+        "Wonjun Kang",
+        "Kevin Galim",
+        "Seunghyuk Oh",
+        "Minjun Kang",
+        "Sanghyun Park",
+        "Donghoon Kim",
+        "Minjae Lee",
+        "Minseo Kim",
+        "Rishabh Tiwari",
+        "Yuchen Zeng",
+        "Hyung Il Koo",
+        "Kangwook Lee"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-23T04:50:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.24143v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Studies staleness in asynchronous on-policy distillation for LLM post-training, a method inspired by RL.",
+      "llm_evidence_cn": "研究异步在线策略蒸馏中的陈旧性问题，该方法是受强化学习启发的LLM后训练技术。",
+      "llm_evidence": "研究异步在线策略蒸馏中的陈旧性问题，该方法是受强化学习启发的LLM后训练技术。",
+      "canonical_evidence": "研究异步在线策略蒸馏中的陈旧性问题，该方法是受强化学习启发的LLM后训练技术。",
+      "llm_tldr_en": "AsyncOPD is the first systematic study of staleness in asynchronous on-policy distillation for LLMs, showing that modest staleness can be tolerated with proper tuning.",
+      "llm_tldr_cn": "AsyncOPD首次系统研究了异步在线策略蒸馏（OPD）中的陈旧性问题。OPD是一种用于大语言模型后训练的类强化学习方法，面临在线策略系统的瓶颈。通过解耦轨迹生成和学习更新，引入陈旧数据，但实验表明在适当调整下，中等程度的陈旧性是可容忍的，这为更高效的LLM训练提供了指导。",
+      "llm_tldr": "AsyncOPD首次系统研究了异步在线策略蒸馏（OPD）中的陈旧性问题。OPD是一种用于大语言模型后训练的类强化学习方法，面临在线策略系统的瓶颈。通过解耦轨迹生成和学习更新，引入陈旧数据，但实验表明在适当调整下，中等程度的陈旧性是可容忍的，这为更高效的LLM训练提供了指导。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.25337v1",
+      "source": "arxiv",
+      "title": "AI Coaching for Accelerating Human Skill Development with Reinforcement Learning",
+      "abstract": "AI copilots can substantially boost human performance through shared control, but excessive assistance can induce over-reliance and skill atrophy. This paper studies how an embodied AI agent can act as a coach that accelerates human motor-skill development. We argue that effective coaching requires strategic scaffolding and stepping back that are aligned with the learner's capability, allowing productive failures that drive learning. We formalize the interactive AI coaching process as a non-cooperative dynamic game in which the learner optimizes task performance while the coach targets the learner's independent competence. Building on this formalism, we develop a reinforcement learning framework combining adaptive shared control with probabilistic models of the coach's causal influence on skill evolution, enabling tractable training of coaching policies. A comprehensive user study (N=33) on first-person-view drone racing shows significant gains in human learning outcomes over state-of-the-art AI coaching baselines.",
+      "authors": [
+        "Wei Wang",
+        "Enlin Gu",
+        "Antonio Loquercio",
+        "Haimin Hu",
+        "Rahul Mangharam"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-24T03:05:22+00:00",
+      "link": "https://arxiv.org/pdf/2606.25337v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "reinforcement learning for AI coaching agent",
+      "llm_evidence_cn": "强化学习用于AI教练智能体",
+      "llm_evidence": "强化学习用于AI教练智能体",
+      "canonical_evidence": "强化学习用于AI教练智能体",
+      "llm_tldr_en": "AI coaching for human skill development using RL framework",
+      "llm_tldr_cn": "本文研究了如何将强化学习用于AI教练智能体以加速人类技能发展。通过将交互形式化为非合作动态博弈，提出一种结合自适应共享控制与概率策略的RL框架。在机器人操控任务中验证了方法的有效性，表明它能显著提升学习者的独立操作能力。",
+      "llm_tldr": "本文研究了如何将强化学习用于AI教练智能体以加速人类技能发展。通过将交互形式化为非合作动态博弈，提出一种结合自适应共享控制与概率策略的RL框架。在机器人操控任务中验证了方法的有效性，表明它能显著提升学习者的独立操作能力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.25398v1",
+      "source": "arxiv",
+      "title": "MAPL: Multi-Objective Preference Learning for Robot Locomotion",
+      "abstract": "Reward design remains a major bottleneck in reinforcement learning for robot locomotion, where successful policies often depend on carefully tuned, task-specific reward functions. Preference-based reinforcement learning offers an alternative, but existing LLM-based methods typically ask for a single overall judgment between behaviors, making it difficult to capture the multiple competing objectives that underlie high-quality locomotion. We present Multi-Objective AI-Informed Preference Learning (MAPL), a framework that learns locomotion rewards from high-level natural language objectives rather than manually engineered reward equations. MAPL prompts a large language model to compare trajectories independently along semantically meaningful criteria, using generic language descriptions that are terrain-invariant and require little domain expertise. These objective-wise preferences are used to train a multi-head preference scoring model, whose outputs are aggregated to form a scalar reward for policy optimization. Across four quadruped locomotion environments, MAPL trains policies using only LLM-generated preferences and achieves performance comparable to or better than expert-designed rewards, while eliminating task-specific reward engineering.",
+      "authors": [
+        "Xiyue Chen",
+        "Muhan Lin",
+        "Shuyang Shi",
+        "Joseph Campbell"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-24T04:52:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.25398v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Uses LLM to compare trajectories for multi-objective preference learning in RL",
+      "llm_evidence_cn": "使用大语言模型比较轨迹以进行多目标偏好学习",
+      "llm_evidence": "使用大语言模型比较轨迹以进行多目标偏好学习",
+      "canonical_evidence": "使用大语言模型比较轨迹以进行多目标偏好学习",
+      "llm_tldr_en": "MAPL uses a large language model to compare trajectories along semantic criteria to learn rewards for robot locomotion, addressing multi-objective preference learning.",
+      "llm_tldr_cn": "MAPL针对机器人 locomotion 中奖励设计困难的问题，提出利用大语言模型（LLM）根据语义标准独立比较轨迹，从而从自然语言目标中学习多目标偏好，无需手动设计奖励函数。实验表明该方法能有效捕获多种竞争性目标，提升运动策略质量。",
+      "llm_tldr": "MAPL针对机器人 locomotion 中奖励设计困难的问题，提出利用大语言模型（LLM）根据语义标准独立比较轨迹，从而从自然语言目标中学习多目标偏好，无需手动设计奖励函数。实验表明该方法能有效捕获多种竞争性目标，提升运动策略质量。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using large language models to explain reinforcement learning policies",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
