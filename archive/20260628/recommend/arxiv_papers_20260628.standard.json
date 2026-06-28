@@ -1,0 +1,350 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-28T20:16:03.325384+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2606.21943v1",
+      "source": "arxiv",
+      "title": "Modularized Reinforcement Learning on LLMs: From MDP Creation to Exploration and Learning",
+      "abstract": "Reinforcement learning (RL) has become central to LLM post-training, yet the methods that dominate current pipelines, PPO and GRPO, represent only a narrow slice of what RL offers. Understanding why these methods prevail, and what alternatives exist, requires a principled examination of the design decisions that underlie any RL algorithm.   This survey organizes that examination around three stages of algorithm construction. We begin with MDP creation: how the reward function, state space, action space, termination condition, and discount factor are, or could be, defined for LLM training. We then turn to exploration, covering temperature sampling, entropy regularization, intrinsic motivation, tree search, and curriculum learning. Finally, we address learning along four classical RL dimensions: model-free versus model-based, value-based versus policy-based versus actor-critic, on-policy versus off-policy, and credit assignment, including both Monte Carlo methods, which rely on full return estimates, and bootstrapping methods, which update estimates using other learned predictions.   Mapping the LLM literature onto this taxonomy reveals a strikingly non-uniform distribution of research effort. Critic-free policy gradients and Monte Carlo credit assignment are densely populated, while value-based methods, off-policy actor-critic training, and bootstrapping-based credit assignment remain largely unexplored despite well-established counterparts in classical RL. These gaps represent concrete opportunities for transferring proven RL techniques to LLM training.   By making these gaps explicit alongside the methods that have proven effective, this survey offers researchers in both RL and LLMs a shared framework for understanding current practice and identifying promising directions for future work.",
+      "authors": [
+        "Zhao Yang",
+        "Yuxuan Jiang",
+        "Ting-Chih Chen",
+        "Lincen Yang",
+        "Annie Wong",
+        "Chao Gao",
+        "Jacob E. Kooi",
+        "Zhong Li",
+        "Jiayang Shi",
+        "Kevin Qiu",
+        "Qi Huang",
+        "Xinrui Zu",
+        "Shiping Yang",
+        "Hengyuan Zhang",
+        "Ngai Wong",
+        "Filip Ilievski",
+        "Shujian Yu",
+        "Aske Plaat",
+        "Zhaochun Ren",
+        "Mark Hoogendoorn",
+        "Vincent François-Lavet"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-20T08:20:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.21943v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Survey organizing RL methods for LLMs along MDP creation, exploration, and learning",
+      "llm_evidence_cn": "综述从MDP创建、探索到学习的LLM强化学习方法",
+      "llm_evidence": "综述从MDP创建、探索到学习的LLM强化学习方法",
+      "canonical_evidence": "综述从MDP创建、探索到学习的LLM强化学习方法",
+      "llm_tldr_en": "A comprehensive survey on RL for LLMs, organizing the design space around MDP creation, exploration, and learning, covering PPO, GRPO, and alternative approaches.",
+      "llm_tldr_cn": "强化学习已成为LLM后训练的核心，但当前主流方法PPO和GRPO仅涵盖RL的狭窄子集。本文是首篇系统综述，从MDP创建（奖励、状态、动作空间设计）、探索（温度采样、熵正则、内在动机、树搜索、课程学习）和学习三个模块出发，全面梳理了LLM RL的设计空间。该综述为理解现有方法及探索替代方案提供了结构化视角，是agentic RL与LLM结合领域的关键参考。",
+      "llm_tldr": "强化学习已成为LLM后训练的核心，但当前主流方法PPO和GRPO仅涵盖RL的狭窄子集。本文是首篇系统综述，从MDP创建（奖励、状态、动作空间设计）、探索（温度采样、熵正则、内在动机、树搜索、课程学习）和学习三个模块出发，全面梳理了LLM RL的设计空间。该综述为理解现有方法及探索替代方案提供了结构化视角，是agentic RL与LLM结合领域的关键参考。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.24991v1",
+      "source": "arxiv",
+      "title": "Solving Markov Decision Processes with Future Information via MPC",
+      "abstract": "Model Predictive Control (MPC) is widely used in industrial and robotic systems for enforcing constraints and embedding domain knowledge through finite-horizon optimization-based planning. However, despite these strengths, an MPC scheme typically does not yield optimal policies for sequential decision-making problems formulated as Markov Decision Processes (MDPs). Recent combinations of MPC with Reinforcement Learning (RL) alleviate this issue by treating MPC as a parameterized model of the optimal policy of an MDP and adjusting its parameters using data. While these approaches typically consider classical MDPs, many real-world problems include future information--such as forecasts, prices, or reference trajectories--at decision time, which must be included in the MDP state for optimal decision-making. Current MPC-RL approaches do not directly account for this augmented-state structure, raising the question of how to incorporate future information into MPC to obtain an optimal policy. This work establishes the structural requirements under which a parameterized MPC can exactly represent the optimal value functions and policy of an MDP with future information. We further demonstrate that such a parameterized MPC can serve as a structured function approximator, with its parameters learned using RL. The approach is illustrated on a point-mass racing task with future reference information.",
+      "authors": [
+        "Shambhuraj Sawant",
+        "Akhil S Anand",
+        "Dirk Reinhardt",
+        "Sebastien Gros"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.LG",
+        "math.OC"
+      ],
+      "published": "2026-06-23T14:51:59+00:00",
+      "link": "https://arxiv.org/pdf/2606.24991v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Combines MPC with RL for MDPs, handling future information, agent decision making",
+      "llm_evidence_cn": "结合MPC与RL求解带未来信息的MDP，用于智能体决策",
+      "llm_evidence": "结合MPC与RL求解带未来信息的MDP，用于智能体决策",
+      "canonical_evidence": "结合MPC与RL求解带未来信息的MDP，用于智能体决策",
+      "llm_tldr_en": "Proposes MPC-based policy optimization for MDPs with future information, integrating RL to learn optimal policies, relevant to agentic decision making under constraints.",
+      "llm_tldr_cn": "模型预测控制（MPC）常规上不提供MDP最优策略，本文将其参数化为MDP最优策略模型，并利用RL数据调整参数。进一步扩展到包含未来信息（如预测、价格）的MDP，使智能体能够在有限时域规划中利用额外信息进行决策。方法结合了MPC的约束能力和RL的自适应学习。",
+      "llm_tldr": "模型预测控制（MPC）常规上不提供MDP最优策略，本文将其参数化为MDP最优策略模型，并利用RL数据调整参数。进一步扩展到包含未来信息（如预测、价格）的MDP，使智能体能够在有限时域规划中利用额外信息进行决策。方法结合了MPC的约束能力和RL的自适应学习。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.21925v1",
+      "source": "arxiv",
+      "title": "PhiBE-Q-Learning: Bridging Off-Policy Reinforcement Learning and Continuous-Time Control",
+      "abstract": "In this paper, we develop an off-policy method for continuous-time reinforcement learning (CTRL), where the system dynamics are governed by an unknown stochastic differential equation (SDE) and only discrete-time trajectory data are available. A central challenge is that the classical state-action value function $Q(s,a)$, which enables off-policy learning in discrete-time RL, does not exist in CTRL (Baird, 1994; Jia and Zhou, 2023; Tallec et al., 2019). On the other hand, continuous-time control provides local notions such as the instantaneous advantage function $q(s,a)$, but these typically rely on state value function $V(s)$. To address this, we introduce a new definition of the state-action value function in CTRL and derive its governing equation.   Building on the PhiBE approximation (Zhu, 2024; Zhu et al., 2025), we propose iterative algorithms to approximate the optimal $Q$-function in both model-based and model-free settings using only discrete-time off-policy data. Under linear function approximation, we establish convergence guarantees and derive explicit convergence rates for the proposed method.",
+      "authors": [
+        "Yuhua Zhu",
+        "Yutong Ren"
+      ],
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC"
+      ],
+      "published": "2026-06-20T07:47:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.21925v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Off-policy RL method for continuous-time control, bridging discrete-time RL and continuous-time systems",
+      "llm_evidence_cn": "面向连续时间控制的无模型离策略RL方法，弥合离散RL与连续系统差距",
+      "llm_evidence": "面向连续时间控制的无模型离策略RL方法，弥合离散RL与连续系统差距",
+      "canonical_evidence": "面向连续时间控制的无模型离策略RL方法，弥合离散RL与连续系统差距",
+      "llm_tldr_en": "PhiBE-Q-Learning introduces a novel state-action value function for continuous-time RL, enabling off-policy learning from discrete trajectories, advancing agentic RL for continuous control.",
+      "llm_tldr_cn": "连续时间强化学习中传统Q函数不存在，限制了离策略学习。本文定义了连续时间下的状态-动作值函数，并推导出其动力学方程，从而允许从离散轨迹数据中进行离策略学习。该方法为连续控制任务中的智能体决策提供了理论基础和实用算法。",
+      "llm_tldr": "连续时间强化学习中传统Q函数不存在，限制了离策略学习。本文定义了连续时间下的状态-动作值函数，并推导出其动力学方程，从而允许从离散轨迹数据中进行离策略学习。该方法为连续控制任务中的智能体决策提供了理论基础和实用算法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.25978v1",
+      "source": "arxiv",
+      "title": "Multi-Agent Goal Recognition with Team- and Goal-Conditioned Reinforcement Learning and Factorized Branch-and-Bound",
+      "abstract": "Multi-agent goal recognition asks an observer to jointly infer which agents act together and what each team is trying to achieve, so the hypothesis space grows combinatorially with the number of team partitions and goals per team. Real applications such as drone surveillance and collaborative robotics expose only the agents' trajectory, which forces the observer to rank team-goal hypotheses from behavior alone. Multi-Agent Goal Recognition with Branch-and-Bound (MAGR-BB) addresses this setting with a shared team- and goal-conditioned policy used as the scoring model inside a factorized branch-and-bound search. On a controlled multi-agent Blocksworld benchmark, MAGR-BB returns the same top-ranked hypothesis as exhaustive search throughout the trajectory while cutting hypothesis materialization by orders of magnitude and reducing cumulative recognition runtime substantially.",
+      "authors": [
+        "Thiago Thomas",
+        "Gabriel de Oliveira Ramos",
+        "Felipe Meneguzzi"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-24T15:50:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.25978v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multi-agent goal recognition using team- and goal-conditioned RL",
+      "llm_evidence_cn": "使用团队和目标条件强化学习进行多智能体目标识别",
+      "llm_evidence": "使用团队和目标条件强化学习进行多智能体目标识别",
+      "canonical_evidence": "使用团队和目标条件强化学习进行多智能体目标识别",
+      "llm_tldr_en": "MAGR-BB uses a shared team- and goal-conditioned RL policy as scoring model inside factorized branch-and-bound for multi-agent goal recognition.",
+      "llm_tldr_cn": "针对多智能体目标识别中假设空间组合爆炸问题，本文提出MAGR-BB，结合团队与目标条件强化学习策略和分解分支定界搜索。该方法从轨迹推断团队组成和目标，在Blocksworld基准上返回与基线一致的最高排名假设，展示了RL在代理决策推断中的应用。",
+      "llm_tldr": "针对多智能体目标识别中假设空间组合爆炸问题，本文提出MAGR-BB，结合团队与目标条件强化学习策略和分解分支定界搜索。该方法从轨迹推断团队组成和目标，在Blocksworld基准上返回与基线一致的最高排名假设，展示了RL在代理决策推断中的应用。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.24622v1",
+      "source": "arxiv",
+      "title": "Themis: An explainable AI-enabled framework for Reinforcement Learning with Human Feedback",
+      "abstract": "Training safe Reinforcement Learning (RL) systems is inherently challenging, with no guarantee of avoiding unwanted behaviors. The most effective defenses against this are (i) transparency through explainability and (ii) alignment via human feedback. While both show promising results, no publicly available framework currently combines them. To address this, we introduce Themis, an XAI-enabled testing and evaluation framework for Reinforcement Learning from Human Feedback. Themis supports over 200 widely used environments and is easily configurable for experiments in RL, transparency, and alignment. Our results show that Themis can train reward models that match or outperform the environment's true reward signal using human preferences. We also provide a cloud-based platform for collecting human feedback and managing experiments. It is user-friendly, auto-scalable, and supports large participant groups across multiple experiments without extra development overhead. Tests show Themis can support one thousand users in back-to-back experiments on a modest commercial machine.",
+      "authors": [
+        "Andreas Chouliaras",
+        "Luke Connolly",
+        "Dimitris Chatzpoulos"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-23T14:20:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.24622v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "explainable AI framework for RLHF, can explain RL policies",
+      "llm_evidence_cn": "可解释AI框架用于强化学习人类反馈，可解释RL策略",
+      "llm_evidence": "可解释AI框架用于强化学习人类反馈，可解释RL策略",
+      "canonical_evidence": "可解释AI框架用于强化学习人类反馈，可解释RL策略",
+      "llm_tldr_en": "Themis combines explainability with RLHF, enabling testing and evaluation of RL systems with transparency and human alignment.",
+      "llm_tldr_cn": "该论文提出Themis，首个将可解释AI（XAI）与强化学习人类反馈（RLHF）结合的测试评估框架。Themis支持超过200个环境，可通过人类偏好训练奖励模型。其透明性模块可以解释RL策略行为，帮助理解奖励模型和策略的内部运作。实验表明Themis训练出的奖励模型匹配甚至超越环境真实奖励信号。这为安全RL提供了透明化与人机对齐的双重保障。",
+      "llm_tldr": "该论文提出Themis，首个将可解释AI（XAI）与强化学习人类反馈（RLHF）结合的测试评估框架。Themis支持超过200个环境，可通过人类偏好训练奖励模型。其透明性模块可以解释RL策略行为，帮助理解奖励模型和策略的内部运作。实验表明Themis训练出的奖励模型匹配甚至超越环境真实奖励信号。这为安全RL提供了透明化与人机对齐的双重保障。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "large language model explaining reinforcement learning policy",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.26997v1",
+      "source": "arxiv",
+      "title": "RolloutPipe: Overlapping Pipelined Rollout and Training in Disaggregated On-Policy LLM Reinforcement Learning",
+      "abstract": "Large language model (LLM) post-training for reasoning increasingly relies on reinforcement learning with verifiable rewards (RLVR), where models learn from ground-truth feedback on mathematical, logical, and scientific tasks. To enable flexible resource allocation and support heterogeneous training setups, modern RLVR systems adopt disaggregated architectures that decouple rollout generation and policy training across independent GPU pools. However, existing synchronous on-policy GRPO (Group Relative Policy Optimization) RLVR systems finish an entire rollout before starting training, leaving the trainer GPU pool idle while rollout is still ongoing. Asynchronous RL pipelines overlap the two stages, but at the cost of training on stale data. To address these challenges, we propose RolloutPipe, a post-training framework for disaggregated RLVR systems, which turns the fixed-weight rollout into a complete-group pipeline where trainable groups move to the trainer while later groups are still being generated. RolloutPipe achieves this through two techniques including complete-group pipelining (CGP) and frontier-group dispatch (FGD). CGP dispatches each trainable complete group to the trainer FIFO as soon as group materialization finishes, and FGD is an admission policy on the Rollout node that first admits requests for the frontier groups needed to form the next training batch, so that trainer-ready groups arrive earlier and more steadily. The design starts training before the rollout completes while maintaining on-policy correctness. Evaluated on Qwen3-1.7B across four reasoning and science benchmarks and twelve rollout settings, RolloutPipe shortens the rollout-to-train-end time by 30.7%-42.3%, and lowers the trainer waiting ratio by 37%-76% compared to Slime, a state-of-the-art rollout and training system.",
+      "authors": [
+        "Rongjian Chen",
+        "Jianmin Hu",
+        "Kejiang Ye",
+        "Minxian Xu"
+      ],
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "published": "2026-06-25T13:14:14+00:00",
+      "link": "https://arxiv.org/pdf/2606.26997v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "System optimization for on-policy LLM RL training",
+      "llm_evidence_cn": "针对LLM强化学习训练的系统流水线优化",
+      "llm_evidence": "针对LLM强化学习训练的系统流水线优化",
+      "canonical_evidence": "针对LLM强化学习训练的系统流水线优化",
+      "llm_tldr_en": "Proposes RolloutPipe to overlap rollout and training in disaggregated LLM RL systems, reducing idle time and improving resource efficiency.",
+      "llm_tldr_cn": "大语言模型后训练中，强化学习通常采用解耦架构，但同步策略导致训练GPU空闲。本文提出RolloutPipe，通过流水线方式重叠推演和训练阶段，减少空闲等待。在不牺牲策略更新质量的前提下，显著提升资源利用率和训练吞吐量。该方法适用于GRPO等在线RLVR系统。",
+      "llm_tldr": "大语言模型后训练中，强化学习通常采用解耦架构，但同步策略导致训练GPU空闲。本文提出RolloutPipe，通过流水线方式重叠推演和训练阶段，减少空闲等待。在不牺牲策略更新质量的前提下，显著提升资源利用率和训练吞吐量。该方法适用于GRPO等在线RLVR系统。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "how reinforcement learning enhances large language model capabilities",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.25335v1",
+      "source": "arxiv",
+      "title": "Stagnant Neuron: Towards Understanding the Plasticity Loss in Multi-Agent Reinforcement Learning Value Factorization Methods",
+      "abstract": "Multi-Agent Reinforcement Learning (MARL) value factorization methods can suffer from a loss of plasticity, gradually failing to adapt when transferring to new task instances. We trace this issue to stagnant neurons, units whose gradient updates become negligibly small relative to their weights, thereby hindering learning. While existing plasticity injection methods exist, they prove ineffective for such neurons. To address this, we propose Knowledge-retentive Neuron-level PlastIcity Focusing InjEction (KNIFE), a novel method that directly targets stagnant neurons. KNIFE replaces each stagnant neuron with a composite unit comprising three specialized components: a frozen knowledge neuron to preserve acquired knowledge, a re-initialized active neuron to restore learning capacity, and a compensation neuron to ensure the combined output matches the original, thus maintaining previous learned cooperation knowledge. Extensive experiments on SMACv2, predator-prey, and matrix games demonstrate that KNIFE significantly outperforms state-of-the-art plasticity injection methods.",
+      "authors": [
+        "Zhengzhu Liu",
+        "Zeming Gao",
+        "Haoyuan Qin",
+        "Jiawei Hu",
+        "Junhao Wu",
+        "Miao Zhu",
+        "Haipeng Zhang",
+        "Chennan Ma",
+        "Siqi Shen",
+        "Cheng Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-24T03:00:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.25335v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Multi-agent RL value factorization, plasticity loss, stagnant neurons, KNIFE method",
+      "llm_evidence_cn": "多智能体RL值分解中的可塑性损失，停滞神经元，KNIFE方法",
+      "llm_evidence": "多智能体RL值分解中的可塑性损失，停滞神经元，KNIFE方法",
+      "canonical_evidence": "多智能体RL值分解中的可塑性损失，停滞神经元，KNIFE方法",
+      "llm_tldr_en": "Identifies stagnant neurons causing plasticity loss in MARL value factorization, proposes KNIFE to replace them, improving adaptability, relevant to agentic RL.",
+      "llm_tldr_cn": "多智能体强化学习值分解方法在新任务实例迁移时出现可塑性下降，本文追溯原因是停滞神经元（梯度更新极小）。提出KNIFE方法将每个停滞神经元替换为包含冻结知识、可塑性和聚焦注入的三个组件。实验证明KNIFE有效恢复了可塑性，在星际争霸等任务上提升了迁移性能。",
+      "llm_tldr": "多智能体强化学习值分解方法在新任务实例迁移时出现可塑性下降，本文追溯原因是停滞神经元（梯度更新极小）。提出KNIFE方法将每个停滞神经元替换为包含冻结知识、可塑性和聚焦注入的三个组件。实验证明KNIFE有效恢复了可塑性，在星际争霸等任务上提升了迁移性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.26575v1",
+      "source": "arxiv",
+      "title": "IDEA: Insensitive to Dynamics Mismatch via Effect Alignment for Sim-to-Real Transfer in Multi-Agent Control",
+      "abstract": "Complex multi-agent control tasks remain challenging for traditional rule-based and model-based approaches, motivating the adoption of learning-based methods. However, learning-based methods often struggle with sim-to-real transfer because they rely on accurate dynamics modeling or system identification and learn policies in low-level control spaces that are highly sensitive to dynamics mismatch, making them costly and fragile in complex environments. To address this issue, we propose a sim-to-real method for multi-agent control, which is insensitive to dynamics mismatch via effect alignment. Our method combines random environmental structure with discrete semantic actions through closed-loop control, elevating policy learning to a semantic abstraction level. Additionally, we develop an action synchronization mechanism that mitigates inter-agent action timing mismatches, thereby enhancing the temporal consistency of the system. Experiments on four multi-agent navigation tasks demonstrate that our method substantially improves training efficiency over mainstream transfer methods and achieves higher success rates in real-world scenarios, thereby improving the robustness and deployment stability of multi-agent systems under dynamics mismatch.",
+      "authors": [
+        "Chenlong Liu",
+        "Zhuohui Zhang",
+        "Xinyan Chen",
+        "Zhipeng Wang",
+        "Bin Cheng",
+        "Bin He"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-06-25T03:49:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.26575v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "multi-agent reinforcement learning for sim-to-real transfer and decision making",
+      "llm_evidence_cn": "多智能体强化学习用于Sim-to-Real迁移与决策",
+      "llm_evidence": "多智能体强化学习用于Sim-to-Real迁移与决策",
+      "canonical_evidence": "多智能体强化学习用于Sim-to-Real迁移与决策",
+      "llm_tldr_en": "Proposes IDEA, a sim-to-real method for multi-agent control insensitive to dynamics mismatch via effect alignment. Combines random environmental structure with discrete semantic actions through closed-loop control.",
+      "llm_tldr_cn": "多智能体控制中基于学习的sim-to-real迁移常因动力学失配而脆弱。本文提出IDEA方法，通过效果对齐将环境随机结构与离散语义动作结合，提升对动力学变化的鲁棒性。在多个多智能体控制场景中，IDEA显著优于现有方法，为实际部署提供了经济高效的解决方案。",
+      "llm_tldr": "多智能体控制中基于学习的sim-to-real迁移常因动力学失配而脆弱。本文提出IDEA方法，通过效果对齐将环境随机结构与离散语义动作结合，提升对动力学变化的鲁棒性。在多个多智能体控制场景中，IDEA显著优于现有方法，为实际部署提供了经济高效的解决方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
