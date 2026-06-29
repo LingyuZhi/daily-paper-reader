@@ -6,44 +6,50 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-28
-- 运行时间：2026-06-28 20:21:46 UTC
+- 最新运行日期：2026-06-29
+- 运行时间：2026-06-29 20:43:39 UTC
 - 运行状态：成功
-- 本次总论文数：8
-- 精读区：1
-- 速读区：7
+- 本次总论文数：10
+- 精读区：4
+- 速读区：6
 
 ### 今日简报（AI）
-今日共推荐8篇论文，精读1篇、速读7篇，重点聚焦强化学习与LLM的结合。最值得关注的是模块化强化学习框架（《Modularized Reinforcement Learning on LLMs》）和结合MPC的MDP求解方法（《Solving Markov Decision Processes with Future Information via MPC》）。建议优先精读模块化LLM强化学习论文，其8分评价揭示了从MDP构建到探索学习的完整路径，对理解前沿方法极有帮助。
-- 详情：[/202606/28/README](/202606/28/README)
+今天推荐10篇AI论文，精读聚焦世界模型规划与多轮自主代理两大方向。最值得看《Internalizing the Future》提出的统一智能体训练范式，以及《ATOD》的退火感知在线策略蒸馏方法。建议优先精读这两篇，速读中的Agentic AI基础与实时RL规划预算也可作为拓展阅读。
+- 详情：[/202606/29/README](/202606/29/README)
 
 ### 精读区论文标签
-1. [Modularized Reinforcement Learning on LLMs: From MDP Creation to Exploration and Learning](/202606/28/2606.21943v1-modularized-reinforcement-learning-on-llms-from-mdp-creation-to-exploration-and-learning)  
+1. [Internalizing the Future: A Unified Agentic Training Paradigm for World Model Planning](/202606/29/2606.27483v1-internalizing-the-future-a-unified-agentic-training-paradigm-for-world-model-planning)  
+   标签：评分：9.0/10、query:agentic-rl
+   evidence：面向LLM智能体的统一智能体训练范式，融合世界模型规划
+2. [ATOD: Annealed Turn-aware On-policy Distillation for Multi-turn Autonomous Agents](/202606/29/2606.27814v1-atod-annealed-turn-aware-on-policy-distillation-for-multi-turn-autonomous-agents)  
+   标签：评分：9.0/10、query:agentic-rl
+   evidence：结合在线蒸馏和强化学习训练多轮自主语言智能体
+3. [Tandem Reinforcement Learning with Verifiable Rewards](/202606/29/2606.28166v1-tandem-reinforcement-learning-with-verifiable-rewards)  
+   标签：评分：9.0/10、query:agentic-rl
+   evidence：使用可验证奖励的强化学习与串联训练增强大语言模型推理兼容性
+4. [CFPO: Counterfactual Policy Optimization for Multimodal Reasoning](/202606/29/2606.23206v1-cfpo-counterfactual-policy-optimization-for-multimodal-reasoning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：综述从MDP创建、探索到学习的LLM强化学习方法
+   evidence：使用反事实策略优化增强大型视觉语言模型的多模态推理
 
 ### 速读区论文标签
-1. [Solving Markov Decision Processes with Future Information via MPC](/202606/28/2606.24991v1-solving-markov-decision-processes-with-future-information-via-mpc)  
+1. [The Hitchhiker's Guide to Agentic AI: From Foundations to Systems](/202606/29/2606.24937v1-the-hitchhikers-guide-to-agentic-ai-from-foundations-to-systems)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：结合MPC与RL求解带未来信息的MDP，用于智能体决策
-2. [Multi-Agent Goal Recognition with Team- and Goal-Conditioned Reinforcement Learning and Factorized Branch-and-Bound](/202606/28/2606.25978v1-multi-agent-goal-recognition-with-team--and-goal-conditioned-reinforcement-learning-and-factorized-branch-and-bound)  
+   evidence：涵盖自主智能体RL基础与系统的综合指南
+2. [Finding the Time to Think: Learning Planning Budgets in Real-Time RL](/202606/29/2606.26463v1-finding-the-time-to-think-learning-planning-budgets-in-real-time-rl)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：使用团队和目标条件强化学习进行多智能体目标识别
-3. [RolloutPipe: Overlapping Pipelined Rollout and Training in Disaggregated On-Policy LLM Reinforcement Learning](/202606/28/2606.26997v1-rolloutpipe-overlapping-pipelined-rollout-and-training-in-disaggregated-on-policy-llm-reinforcement-learning)  
+   evidence：实时智能体决策的变延迟规划预算学习
+3. [Designing Reward Signals for Portable Query Generation: A Case Study in Industrial Semantic Job Search](/202606/29/2606.27291v1-designing-reward-signals-for-portable-query-generation-a-case-study-in-industrial-semantic-job-search)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：针对LLM强化学习训练的系统流水线优化
-4. [PhiBE-Q-Learning: Bridging Off-Policy Reinforcement Learning and Continuous-Time Control](/202606/28/2606.21925v1-phibe-q-learning-bridging-off-policy-reinforcement-learning-and-continuous-time-control)  
+   evidence：使用强化学习从AI反馈中训练语言模型用于查询生成
+4. [GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems](/202606/29/2606.28187v1-gbc-gradient-based-connections-for-optimizing-multi-agent-systems)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：基于梯度的多智能体LLM系统优化与信用分配
+5. [Support-Constrained RL Enables Real-World Policy Improvement without Real-World Experience](/202606/29/2606.27475v1-support-constrained-rl-enables-real-world-policy-improvement-without-real-world-experience)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：面向连续时间控制的无模型离策略RL方法，弥合离散RL与连续系统差距
-5. [Themis: An explainable AI-enabled framework for Reinforcement Learning with Human Feedback](/202606/28/2606.24622v1-themis-an-explainable-ai-enabled-framework-for-reinforcement-learning-with-human-feedback)  
+   evidence：强化学习用于机器人策略改进，实现仿真到现实的迁移
+6. [Training Observable Control Policies to Expose Agent State Through Actions](/202606/29/2606.27609v1-training-observable-control-policies-to-expose-agent-state-through-actions)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：可解释AI框架用于强化学习人类反馈，可解释RL策略
-6. [Stagnant Neuron: Towards Understanding the Plasticity Loss in Multi-Agent Reinforcement Learning Value Factorization Methods](/202606/28/2606.25335v1-stagnant-neuron-towards-understanding-the-plasticity-loss-in-multi-agent-reinforcement-learning-value-factorization-methods)  
-   标签：评分：6.0/10、query:agentic-rl
-   evidence：多智能体RL值分解中的可塑性损失，停滞神经元，KNIFE方法
-7. [IDEA: Insensitive to Dynamics Mismatch via Effect Alignment for Sim-to-Real Transfer in Multi-Agent Control](/202606/28/2606.26575v1-idea-insensitive-to-dynamics-mismatch-via-effect-alignment-for-sim-to-real-transfer-in-multi-agent-control)  
-   标签：评分：6.0/10、query:agentic-rl
-   evidence：多智能体强化学习用于Sim-to-Real迁移与决策
+   evidence：用于通过动作暴露智能体状态的强化学习
 
 
 <div class="dpr-home-promo-card">
