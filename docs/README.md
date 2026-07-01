@@ -6,72 +6,59 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-30
-- 运行时间：2026-06-30 20:44:47 UTC
+- 最新运行日期：2026-07-01
+- 运行时间：2026-07-01 21:26:16 UTC
 - 运行状态：成功
-- 本次总论文数：16
+- 本次总论文数：13
 - 精读区：6
-- 速读区：10
+- 速读区：7
 
 ### 今日简报（AI）
-今日推荐16篇论文，精读6篇，其中2篇满分9.0分聚焦反事实信用分配与无捷径推理。
-
-重点关注强化学习中的反事实信用分配（CRAFT）与无捷径推理方法（Hint-Anchored Pairwise Aggregation），两者均为9.0/10高分论文。
-
-建议优先精读这两篇9.0分论文，再结合速读中的稳定无评论家RL与LLM策略幻觉分析，深化对智能体推理与训练稳定性的理解。
-- 详情：[/202606/30/README](/202606/30/README)
+今日推荐13篇论文，精读6篇，其中两篇获9.0高分，聚焦多智能体与智能体强化学习。值得关注《Sampling-Based Coordination-Informed Multi-Objective Multi-Robot RL》和《TRIAGE: Role-Typed Credit Assignment》——前者探索多目标协调采样，后者提出角色化信用分配。普通读者可重点了解这些方法如何提升机器人团队协作与AI系统决策效率。
+- 详情：[/202607/01/README](/202607/01/README)
 
 ### 精读区论文标签
-1. [CRAFT: Counterfactual Credit Assignment from Free Sibling Rollouts for Self-Distilled Agentic Reinforcement Learning](/202606/30/2606.29476v1-craft-counterfactual-credit-assignment-from-free-sibling-rollouts-for-self-distilled-agentic-reinforcement-learning)  
+1. [Sampling-Based Coordination-Informed Multi-Objective Multi-Robot Reinforcement Learning](/202607/01/2606.30893v1-sampling-based-coordination-informed-multi-objective-multi-robot-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：CRAFT为自蒸馏的agentic RL引入反事实信用分配
-2. [To Reason or to Fabricate: Reasoning Without Shortcuts via Hint-Anchored Pairwise Aggregation](/202606/30/2606.29481v1-to-reason-or-to-fabricate-reasoning-without-shortcuts-via-hint-anchored-pairwise-aggregation)  
+   evidence：多机器人强化学习用于协调与决策
+2. [TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning](/202607/01/2606.32017v1-triage-role-typed-credit-assignment-for-agentic-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：解决LLM推理中捷径学习的RL框架
-3. [UCOB: Learning to Utilize and Evolve Agentic Skills via Credit-Aware On-Policy Bidirectional Self-Distillation](/202606/30/2606.29502v1-ucob-learning-to-utilize-and-evolve-agentic-skills-via-credit-aware-on-policy-bidirectional-self-distillation)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：基于信用感知的在策略自蒸馏用于智能体技能演化
-4. [MOPD: Multi-Teacher On-Policy Distillation for Capability Integration in LLM Post-Training](/202606/30/2606.30406v1-mopd-multi-teacher-on-policy-distillation-for-capability-integration-in-llm-post-training)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：MOPD提出多教师在线蒸馏方法，利用RL在LLM后训练中整合多个能力
-5. [Experience Augmented Policy Optimization for LLM Reasoning](/202606/30/2606.30420v1-experience-augmented-policy-optimization-for-llm-reasoning)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：使用可验证奖励的强化学习结合经验复用增强大语言模型推理能力
-6. [Finding the Time to Think: Learning Planning Budgets in Real-Time RL](/202606/30/2606.26463v2-finding-the-time-to-think-learning-planning-budgets-in-real-time-rl)  
+   evidence：角色类型信用分配用于智能体强化学习
+3. [ARKD: Adaptive Reinforcement Learning-Guided Bidirectional KL Divergence Distillation for Text Generation](/202607/01/2606.29869v1-arkd-adaptive-reinforcement-learning-guided-bidirectional-kl-divergence-distillation-for-text-generation)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：实时强化学习中学习规划预算，智能体决定思考时间
+   evidence：应用强化学习指导LLM知识蒸馏，提升文本生成质量
+4. [Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent](/202607/01/2606.30616v1-scaling-the-horizon-not-the-parameters-reaching-trillion-parameter-performance-with-a-35b-agent)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：通过扩展智能体时间跨度提升性能
+5. [ReGRPO: Reflection-Augmented Policy Optimization for Tool-Using Agents](/202607/01/2606.31392v1-regrpo-reflection-augmented-policy-optimization-for-tool-using-agents)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：面向工具使用智能体的反思增强策略优化
+6. [Learning to Select, Not Relearn: Hard-Routed Mixtures of Reasoning LoRAs](/202607/01/2606.31413v1-learning-to-select-not-relearn-hard-routed-mixtures-of-reasoning-loras)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：使用可验证反馈强化学习训练LLM的推理LoRA专家，再通过硬路由组合，属于RL增强LLM的方法
 
 ### 速读区论文标签
-1. [BV-Blend: Uncertainty-Weighted Historical Baselines for Stable Critic-Free RL with Verifiable Rewards](/202606/30/2606.28707v1-bv-blend-uncertainty-weighted-historical-baselines-for-stable-critic-free-rl-with-verifiable-rewards)  
+1. [ECHO: Prune to act, trace to learn with selective turn memory in agentic RL](/202607/01/2606.31650v1-echo-prune-to-act-trace-to-learn-with-selective-turn-memory-in-agentic-rl)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：通过不确定加权基线稳定LLM对齐的GRPO
-2. [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](/202606/30/2606.29526v1-the-mirage-of-optimizing-training-policies-monotonic-inference-policies-as-the-real-objective-for-llm-reinforcement-learning)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：分析大语言模型强化学习中的训练-推理不匹配并提出单调推理策略
-3. [KbSD: Knowledge Boundary aware Self-Distillation for Behavioral Calibration in Agentic Search](/202606/30/2606.29863v1-kbsd-knowledge-boundary-aware-self-distillation-for-behavioral-calibration-in-agentic-search)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：KbSD利用RL和自蒸馏校准LLM在agentic搜索中的知识边界
-4. [Building Multi-Task Agentic LLMs via Two-Phase Distillation](/202606/30/2606.30044v1-building-multi-task-agentic-llms-via-two-phase-distillation)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：通过蒸馏多个RL专家构建多任务智能LLM
-5. [DRIFT: Difficulty Routing Self-DIstillation with Rhythm-Gated Exploration and Success BuFfer Training](/202606/30/2606.30345v1-drift-difficulty-routing-self-distillation-with-rhythm-gated-exploration-and-success-buffer-training)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：大语言模型在线自进化策略优化
-6. [HiComm: Hierarchical Communication for Multi-agent Reinforcement Learning](/202606/30/2606.29126v1-hicomm-hierarchical-communication-for-multi-agent-reinforcement-learning)  
+   evidence：带选择性回合记忆的智能体强化学习用于长程智能体
+2. [Regularized Reward-Punishment Reinforcement Learning](/202607/01/2606.28152v1-regularized-reward-punishment-reinforcement-learning)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：分层通信促进多智能体RL决策
-7. [PS-PPO: Prefix-Sampling PPO for Critic-Free RLHF](/202606/30/2606.29758v1-ps-ppo-prefix-sampling-ppo-for-critic-free-rlhf)  
+   evidence：提出KL耦合策略正则化用于奖励-惩罚强化学习，改进智能体决策
+3. [GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems](/202607/01/2606.28187v1-gbc-gradient-based-connections-for-optimizing-multi-agent-systems)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：基于前缀采样的无评论家RLHF
-8. [Be Faithful When Response: Returning Fluent and Grounded Answers for Vision-Language Models Reinforcement Learning](/202606/30/2606.29984v1-be-faithful-when-response-returning-fluent-and-grounded-answers-for-vision-language-models-reinforcement-learning)  
+   evidence：基于梯度的多智能体系统信用分配
+4. [Modification-Considering Value Learning for Reward Hacking Mitigation in RL](/202607/01/2606.28955v1-modification-considering-value-learning-for-reward-hacking-mitigation-in-rl)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：视觉语言模型的强化学习忠实预热启动
-9. [ACPO: Agent-Chained Policy Optimization for Multi-Agent Reinforcement Learning](/202606/30/2606.30072v1-acpo-agent-chained-policy-optimization-for-multi-agent-reinforcement-learning)  
+   evidence：提出MCVL方法减轻基于值的强化学习中的奖励黑客问题，对智能体决策鲁棒性有贡献
+5. [Hierarchical Experimentalist Agents](/202607/01/2606.29315v1-hierarchical-experimentalist-agents)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：面向多智能体强化学习的智能体链式策略优化
-10. [Dual-Flow Reinforcement Learning with State-Aware Exploration](/202606/30/2606.29820v1-dual-flow-reinforcement-learning-with-state-aware-exploration)  
-   标签：评分：6.0/10、query:agentic-rl
-   evidence：提出新的RL actor-critic框架用于连续控制，与智能体决策相关
+   evidence：通过主动实验学习的LLM智能体用于决策
+6. [HyPOLE: Hyperproperty-Guided Multi-Agent Reinforcement Learning under Partial Observation](/202607/01/2606.30966v1-hypole-hyperproperty-guided-multi-agent-reinforcement-learning-under-partial-observation)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：多智能体强化学习与形式化规范
+7. [Adapting Generalist Robot Policies with Semantic Reinforcement Learning](/202607/01/2606.31958v1-adapting-generalist-robot-policies-with-semantic-reinforcement-learning)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：通过语义强化学习利用语言提示适配通用机器人策略
 
 
 <div class="dpr-home-promo-card">
