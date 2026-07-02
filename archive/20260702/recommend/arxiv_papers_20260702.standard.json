@@ -1,0 +1,341 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-02T20:50:27.867931+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.01120v1",
+      "source": "arxiv",
+      "title": "Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents",
+      "abstract": "LLM agents are rapidly being deployed in production, including coding assistants, customer-support chatbots, and scientific research assistants, yet they remain fundamentally static in enterprise deployment. The LLM weights, system prompts, tool repertoires, and in-context harnesses are frozen at deployment time, and any improvement requires a manual loop of human-curated data collection, offline fine-tuning, modification of the agentic paradigm, and re-deployment. Recent work on self-evolving agents, such as OpenClaw for individual users, indicates that the next leap in agent capability will come from agents that continually learn from their own experience. In this paper, we argue that this vision for self-evolving agent deployment is being held back for enterprise-level large-scale agentic service not by reinforcement learning (RL) algorithms but by agentic online RL systems. Specifically, current agentic RL systems and the surrounding observability software stack are inadequate along three essential aspects: (i) there is no standardized agent trajectory data protocol capable of carrying RL learning signals at step granularity across heterogeneous agent paradigms; (ii) there is no enterprise-grade comprehensive data proxy that converts real workloads into governed learning substrates; and (iii) there is no unified agent evolution control plane that automatically decides, based on trajectory statistics, when to update policy weights or evolve the in-context harness. The next generation of agentic RL systems must be co-designed around these three pillars, and we sketch concrete architectures, case studies, and counter-arguments. We instantiate one branch through AReaL2.0, reorganizing existing RL infrastructure into an agent-oriented online RL loop for policy weight updates from deployed workloads.",
+      "authors": [
+        "Ran Yan",
+        "Wei Fu",
+        "Jiale Li",
+        "Shusheng Xu",
+        "Zhiyu Mei",
+        "Jiaxuan Gao",
+        "Jiarui Zhang",
+        "Xujie Shen",
+        "Hao Dai",
+        "Chuyi He",
+        "Zhen Pu",
+        "Jun Mei",
+        "Zhiyao Lin",
+        "Haitao Wang",
+        "Zhiqiang Ding",
+        "Jiawei Zhang",
+        "Huaijie Wang",
+        "Ruida Xu",
+        "Youhe Jiang",
+        "Yi Wu",
+        "Tongkai Yang",
+        "Binhang Yuan"
+      ],
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC"
+      ],
+      "published": "2026-07-01T16:08:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.01120v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Argues for next-generation agentic RL systems enabling self-evolving agents",
+      "llm_evidence_cn": "论证下一代代理强化学习系统使智能体能自我进化",
+      "llm_evidence": "论证下一代代理强化学习系统使智能体能自我进化",
+      "canonical_evidence": "论证下一代代理强化学习系统使智能体能自我进化",
+      "llm_tldr_en": "Argues that next-generation agentic RL systems enable self-evolving LLM agents that continuously learn from experience, overcoming static deployment.",
+      "llm_tldr_cn": "当前LLM代理在生产部署中保持静态，任何改进都需手动循环。本文论证下一代代理强化学习系统将使智能体能够从自身经验中持续学习，实现自我进化。通过分析OpenClaw等案例，指出强化学习是突破静态部署瓶颈的关键，为未来自主智能体提供了重要方向。",
+      "llm_tldr": "当前LLM代理在生产部署中保持静态，任何改进都需手动循环。本文论证下一代代理强化学习系统将使智能体能够从自身经验中持续学习，实现自我进化。通过分析OpenClaw等案例，指出强化学习是突破静态部署瓶颈的关键，为未来自主智能体提供了重要方向。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.01232v1",
+      "source": "arxiv",
+      "title": "Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training",
+      "abstract": "Reinforcement learning (RL) has become a central component of post-training large language models (LLMs), yet little is understood about how RL adaptation is distributed across transformer layers. Existing approaches typically update all model parameters uniformly, implicitly assuming that every layer contributes similarly to the gains obtained during RL post-training. In this work, we challenge this assumption through a systematic layer-wise study of RL training. Surprisingly, we find that training a single transformer layer can recover most of the gains achieved by full-parameter RL training, and in some cases even surpass it. To quantify this phenomenon, we introduce the quantity layer contribution, which measures the fraction of full RL improvement recovered by training a layer in isolation. Across seven models spanning two model families (Qwen3, Qwen2.5), three RL algorithms (GRPO, GiGPO, Dr. GRPO), and multiple task domains including mathematical reasoning, code generation, and agentic decision-making, we observe a remarkably stable pattern: RL gains are highly concentrated in a small subset of, and in many cases even a single, transformer layers. More strikingly, the same structural pattern consistently emerges: high-contribution layers concentrate in the middle of the transformer stack, while layers near the input and output ends contribute substantially less. The resulting layer rankings remain strongly correlated across datasets, tasks, model families, and RL algorithms.",
+      "authors": [
+        "Zijian Zhang",
+        "Rizhen Hu",
+        "Athanasios Glentis",
+        "Dawei Li",
+        "Chung-Yiu Yau",
+        "Hongzhou Lin",
+        "Mingyi Hong"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-07-01T17:59:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.01232v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL post-training for LLMs, layer-wise study",
+      "llm_evidence_cn": "LLM的RL后训练中的层间贡献研究",
+      "llm_evidence": "LLM的RL后训练中的层间贡献研究",
+      "canonical_evidence": "LLM的RL后训练中的层间贡献研究",
+      "llm_tldr_en": "Systematic study shows training a single transformer layer via RL can match or surpass full-parameter RL post-training for LLMs, introducing layer contribution metric.",
+      "llm_tldr_cn": "本文系统研究了强化学习后训练在大语言模型中的层间分布。令人惊讶地发现，仅训练单个Transformer层就能恢复甚至超过全参数RL训练所带来的增益。作者引入“层贡献”量化指标，为理解RL在LLM中的适应机制提供了新视角，并暗示了更高效的微调策略。",
+      "llm_tldr": "本文系统研究了强化学习后训练在大语言模型中的层间分布。令人惊讶地发现，仅训练单个Transformer层就能恢复甚至超过全参数RL训练所带来的增益。作者引入“层贡献”量化指标，为理解RL在LLM中的适应机制提供了新视角，并暗示了更高效的微调策略。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.29892v1",
+      "source": "arxiv",
+      "title": "Trust Your Instincts: Confidence-Driven Test-Time RL for Vision-Language-Action Models",
+      "abstract": "Reinforcement learning (RL) has become indispensable for pushing Vision-Language-Action Models (VLAs) beyond static imitation learning. However, existing RL methods typically require external environmental feedback, relying on predefined success signals to guide policy updates. In this work, we show that VLA models possess useful internal evaluative capabilities: in discrete-action VLAs, trajectories with higher generation confidence are significantly more likely to succeed. Based on this observation, we introduce T^2VLA (Test-time VLA), an architecture-agnostic test-time RL framework that enables VLA models to achieve self-bootstrapping policy improvement. Instead of relying on external rewards, T^2VLA leverages trajectory-level similarity to high-confidence expert demonstrations as an intrinsic reward signal. In addition, we propose a Confidence-Driven Dual Expert Bootstrapping mechanism, which dynamically balances a Local Pseudo-Expert for exploration and a Global Expert Pool for training stability. Extensive experiments on the LIBERO and RoboTwin benchmarks show that T^2VLA consistently outperforms supervised baselines and approaches oracle RL performance with ground-truth rewards, achieving effective improvement without external reward feedback. Furthermore, T^2VLA adapts to distinct VLA paradigms, including both OpenVLA-OFT and the pi series.",
+      "authors": [
+        "Siyao Chen",
+        "Jiakang Yuan",
+        "Jiaxin Wang",
+        "Tao Chen"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-06-29T07:31:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.29892v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Test-time RL for vision-language-action models",
+      "llm_evidence_cn": "面向视觉-语言-行动模型的测试时强化学习",
+      "llm_evidence": "面向视觉-语言-行动模型的测试时强化学习",
+      "canonical_evidence": "面向视觉-语言-行动模型的测试时强化学习",
+      "llm_tldr_en": "T2VLA uses test-time RL with confidence-driven rewards to improve vision-language-action models without external feedback.",
+      "llm_tldr_cn": "针对现有强化学习方法依赖外部环境反馈的局限，提出了T^2VLA框架，利用视觉-语言-行动模型（VLA）内部生成置信度作为奖励信号，在测试时进行自引导策略改进，实验表明该方法在多个机器人任务上有效提升了成功率。",
+      "llm_tldr": "针对现有强化学习方法依赖外部环境反馈的局限，提出了T^2VLA框架，利用视觉-语言-行动模型（VLA）内部生成置信度作为奖励信号，在测试时进行自引导策略改进，实验表明该方法在多个机器人任务上有效提升了成功率。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.31846v1",
+      "source": "arxiv",
+      "title": "Z-1: Efficient Reinforcement Learning for Vision-Language-Action Models",
+      "abstract": "Vision-Language-Action (VLA) models offer a promising framework for robotic manipulation by connecting language instructions, visual observations, and continuous control. However, most existing policies remain limited by behavior cloning or supervised fine-tuning (SFT) from fixed demonstrations, which provides limited opportunity to improve from the policy's own failures. In this paper, we present Z-1, a reinforcement learning (RL) post-training framework for flow-based VLA models. Built on top of $π_{0.5}$, Z-1 uses only publicly released RoboCasa demonstrations for SFT and then applies a task-wise Group Relative Policy Optimization (GRPO) strategy across $24$ standard RoboCasa tasks. To improve the efficiency and stability of online optimization, Z-1 combines shared-prefix rollout construction, tree-structured trajectory branching, completion-aware reward calibration, and selective joint training of VLM and Action Expert. Across all $24$ RoboCasa tasks, Z-1 achieves an average success rate of $80.6\\%$, improving over its SFT initialization by $13.2\\%$ points and outperforms the published sota models. These results show that systematic GRPO post-training can substantially improve flow-based VLA policies without additional private demonstrations.",
+      "authors": [
+        "Lang Cao",
+        "Renhong Chen",
+        "Luyi Li",
+        "Peng Wang",
+        "Mofan Peng",
+        "Yitong Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-06-30T15:46:57+00:00",
+      "link": "https://arxiv.org/pdf/2606.31846v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL post-training for VLA models using GRPO",
+      "llm_evidence_cn": "使用GRPO强化学习对VLA模型进行后训练",
+      "llm_evidence": "使用GRPO强化学习对VLA模型进行后训练",
+      "canonical_evidence": "使用GRPO强化学习对VLA模型进行后训练",
+      "llm_tldr_en": "Proposes Z-1, an RL post-training framework for flow-based VLA models using task-wise GRPO, improving robotic manipulation on 24 RoboCasa tasks.",
+      "llm_tldr_cn": "现有VLA模型多依赖行为克隆，缺乏从失败中学习的能力。本文提出Z-1框架，基于π0.5模型，使用任务级群相对策略优化（GRPO）进行强化学习后训练。在24个RoboCasa标准任务上，Z-1显著提升了操作成功率。该方法展示了强化学习在机器人基础模型上的有效性，为自主智能体学习提供了新范式。",
+      "llm_tldr": "现有VLA模型多依赖行为克隆，缺乏从失败中学习的能力。本文提出Z-1框架，基于π0.5模型，使用任务级群相对策略优化（GRPO）进行强化学习后训练。在24个RoboCasa标准任务上，Z-1显著提升了操作成功率。该方法展示了强化学习在机器人基础模型上的有效性，为自主智能体学习提供了新范式。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.00483v1",
+      "source": "arxiv",
+      "title": "VLM-AR3L: Vision-Language Models for Absolute and Relative Rewards in Reinforcement Learning",
+      "abstract": "Designing effective reward functions remains a major challenge in reinforcement learning (RL), particularly in open-ended environments where task goals are abstract and difficult to quantify. In this work, we present VLM-AR3L, a framework that leverages Vision-Language Models (VLMs) to provide both absolute and relative rewards for RL. VLM-AR3L interprets an agent's visual observations in the context of a natural language task goal, and learns both absolute and relative rewards from VLM-generated preference labels. The absolute reward model predicts scalar evaluations for individual states, while the relative reward model compares consecutive observations to infer progress or regression toward the task goal. Their integration combines the stability of state-based evaluation with the robustness of comparative supervision. We evaluate VLM-AR3L across benchmarks spanning classic control, manipulation, and open-world embodied tasks, with a particular focus on Minecraft given its visual complexity and long-horizon decision-making requirements. Experimental results show that VLM-AR3L consistently outperforms prior VLM-based reward learning methods.",
+      "authors": [
+        "Kuan-Chen Chen",
+        "Winston Chen",
+        "Wei-Fang Sun",
+        "Min-Chun Hu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-01T06:11:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.00483v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Vision-language models providing rewards for RL, akin to using LLMs to interpret policy",
+      "llm_evidence_cn": "视觉语言模型为RL提供奖励，类似用LLM解释策略",
+      "llm_evidence": "视觉语言模型为RL提供奖励，类似用LLM解释策略",
+      "canonical_evidence": "视觉语言模型为RL提供奖励，类似用LLM解释策略",
+      "llm_tldr_en": "VLM-AR3L uses VLMs to learn absolute and relative reward models from preference labels, integrating them for fine-grained RL reward specification in open-ended environments.",
+      "llm_tldr_cn": "开放环境中强化学习的奖励函数设计困难。本文提出VLM-AR3L框架，利用视觉语言模型从自然语言目标中学习绝对奖励和相对奖励模型，绝对奖励评估单状态，相对奖励比较连续观察。两者融合为RL提供细粒度反馈，实验证明该方法可有效指导策略学习，开辟了多模态语言模型辅助RL的新途径。",
+      "llm_tldr": "开放环境中强化学习的奖励函数设计困难。本文提出VLM-AR3L框架，利用视觉语言模型从自然语言目标中学习绝对奖励和相对奖励模型，绝对奖励评估单状态，相对奖励比较连续观察。两者融合为RL提供细粒度反馈，实验证明该方法可有效指导策略学习，开辟了多模态语言模型辅助RL的新途径。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using large language models to explain reinforcement learning policies",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.29541v1",
+      "source": "arxiv",
+      "title": "Learned Coordination Conventions in Cooperative MARL: Measuring the Translation Gap Between Theory-Informed Roles and Learned Routing",
+      "abstract": "Role-semantic assignments provide priors over how heterogeneous agents may coordinate, but cooperative MARL systems instead settle on conventions through decentralized, non-stationary learning, with no guarantee that the resulting structure matches those priors. We study this translation gap between theory-informed role expectations and learned coordination structure through a diagnostic combining a role-routing matrix, formation sensitivity ($Δ_{\\max}$), and gradient/occlusion attribution across three-role MiniGrid and SMACv2 (Terran) environments.   We show that label-conditioned attention produces substantially more concentrated and role-specific routing than flat MLP baselines, remains stable under 3v3--9v9 scaling, transfers zero-shot across team sizes, and is invariant to ally-slot padding. A 5-seed re-evaluation shows partial alignment between learned conventions and designer-specified priors while revealing where small-n noise can manufacture apparent strategic divergence. We present these results as an empirical framework for measuring coordination structure in cooperative MARL rather than as a new equilibrium concept or causal explanation.",
+      "authors": [
+        "Yoosung Hong"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-28T18:08:08+00:00",
+      "link": "https://arxiv.org/pdf/2606.29541v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "cooperative MARL role coordination study",
+      "llm_evidence_cn": "合作多智能体强化学习角色协调研究",
+      "llm_evidence": "合作多智能体强化学习角色协调研究",
+      "canonical_evidence": "合作多智能体强化学习角色协调研究",
+      "llm_tldr_en": "Studies the translation gap between theory-informed role priors and learned coordination in cooperative MARL, using diagnostic tools.",
+      "llm_tldr_cn": "该论文研究合作多智能体强化学习中理论角色期望与学习协调结构之间的差异。通过角色路由矩阵、形成敏感度等诊断工具，在MiniGrid和SMACv2环境中分析了标签条件注意力的影响。结果表明，标签条件注意力能产生更集中、更角色特异的路由。这项工作有助于理解MARL中先验知识如何影响学习协调，对设计自主智能体系统有参考价值。",
+      "llm_tldr": "该论文研究合作多智能体强化学习中理论角色期望与学习协调结构之间的差异。通过角色路由矩阵、形成敏感度等诊断工具，在MiniGrid和SMACv2环境中分析了标签条件注意力的影响。结果表明，标签条件注意力能产生更集中、更角色特异的路由。这项工作有助于理解MARL中先验知识如何影响学习协调，对设计自主智能体系统有参考价值。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.30639v1",
+      "source": "arxiv",
+      "title": "Self-Evolving World Models for LLM Agent Planning",
+      "abstract": "World models offer a principled way to equip long-horizon LLM agents with foresight: predictions of action consequences before execution. However, unreliable foresight can be ignored, misused, or even degrade downstream decision-making. In this paper, we introduce WorldEvolver, a self-evolving world model framework that revises its deployment-time context while keeping the downstream agent and all model parameters frozen. WorldEvolver integrates three modules: (i) Episodic Memory, which exploits real action transitions through retrieval-based simulation; (ii) Semantic Memory, which extracts persistent heuristic rules from prediction-observation mismatches; and (iii) Selective Foresight, which filters low-confidence predictions before integrating them into agent reasoning context. We evaluate WorldEvolver on ALFWorld and ScienceWorld, measuring world model prediction accuracy on Word2World and downstream agent success rate on AgentBoard. Extensive experiments show that WorldEvolver achieves the highest prediction accuracy across three backbones and leads other world model baselines on downstream agent success rate, demonstrating that test-time memory revision enhances both predictive fidelity and planning performance.",
+      "authors": [
+        "Xuan Zhang",
+        "Wenxuan Zhang",
+        "See-Kiong Ng",
+        "Yang Deng"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-29T17:58:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.30639v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "world model for LLM agent planning with self-evolution using episodic and semantic memory",
+      "llm_evidence_cn": "用于LLM代理规划的自演化世界模型，包含情景和语义记忆",
+      "llm_evidence": "用于LLM代理规划的自演化世界模型，包含情景和语义记忆",
+      "canonical_evidence": "用于LLM代理规划的自演化世界模型，包含情景和语义记忆",
+      "llm_tldr_en": "WorldEvolver proposes a self-evolving world model framework for LLM agents that uses episodic and semantic memory to revise deployment-time context, improving long-horizon planning without updating parameters.",
+      "llm_tldr_cn": "现有世界模型的前瞻预测可能不可靠，导致下游决策受损。本文提出WorldEvolver，一种自演化世界模型框架，在保持下游代理和所有模型参数冻结的前提下，通过情景记忆、语义记忆和选择性前瞻三个模块在部署时动态演化上下文，以提升预测可靠性和决策质量。实验表明该方法能有效增强LLM代理在长时域规划任务中的表现。",
+      "llm_tldr": "现有世界模型的前瞻预测可能不可靠，导致下游决策受损。本文提出WorldEvolver，一种自演化世界模型框架，在保持下游代理和所有模型参数冻结的前提下，通过情景记忆、语义记忆和选择性前瞻三个模块在部署时动态演化上下文，以提升预测可靠性和决策质量。实验表明该方法能有效增强LLM代理在长时域规划任务中的表现。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.31371v1",
+      "source": "arxiv",
+      "title": "Calibrating the Evaluator: Does Probability Calibration Mitigate Preference Coupling in LLM Agent Feedback Loops?",
+      "abstract": "When large language model (LLM) agents adapt their behavior through evaluator feedback, systematic evaluator biases propagate into the agent's learned strategy distribution - a phenomenon termed evaluator preference coupling. Prior work has documented this coupling and established a diagnostic framework (EPC) to measure it, but has not investigated whether calibration techniques can mitigate the effect. We present the first study of evaluator calibration as mitigation: applying probability calibration to the evaluator's pairwise judgments to reduce spurious preference propagation. In a controlled within-subjects experiment (N=5) comparing standard binary TTRL (win/loss) with confidence-calibrated TTRL (probability-weighted updates) using DeepSeek-V4-Pro as executor and GLM5.2 as evaluator, we find that calibration reduces the coupling coefficient gamma by 20-49% and Jensen-Shannon divergence by 45-67%. A symmetric-LR control confirms the effect is not due to reduced update asymmetry. We release the calibrated TTRL protocol and recommend it as a lightweight mitigation for LLM-as-judge deployment pipelines.",
+      "authors": [
+        "Zewen Liu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-30T09:03:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.31371v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "studies calibration in LLM agent feedback loops, relevant to using RL to enhance LLMs",
+      "llm_evidence_cn": "研究LLM智能体反馈循环中的校准，与使用强化学习增强大语言模型相关",
+      "llm_evidence": "研究LLM智能体反馈循环中的校准，与使用强化学习增强大语言模型相关",
+      "canonical_evidence": "研究LLM智能体反馈循环中的校准，与使用强化学习增强大语言模型相关",
+      "llm_tldr_en": "Investigates probability calibration to mitigate evaluator preference coupling in LLM agent feedback loops, showing calibration reduces spurious preference propagation.",
+      "llm_tldr_cn": "大语言模型智能体通过评估器反馈调整行为时，评估器的系统性偏差会传播到策略分布中，即偏好耦合现象。本文首次研究概率校准作为缓解手段，在5名受试者的对照实验中，将标准二值TTRL与置信校准TTRL对比。结果显示校准降低了虚假偏好传播，但效果有限。该工作为RLHF中的评估偏差问题提供了新视角。",
+      "llm_tldr": "大语言模型智能体通过评估器反馈调整行为时，评估器的系统性偏差会传播到策略分布中，即偏好耦合现象。本文首次研究概率校准作为缓解手段，在5名受试者的对照实验中，将标准二值TTRL与置信校准TTRL对比。结果显示校准降低了虚假偏好传播，但效果有限。该工作为RLHF中的评估偏差问题提供了新视角。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -6,59 +6,46 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-01
-- 运行时间：2026-07-01 21:26:16 UTC
+- 最新运行日期：2026-07-02
+- 运行时间：2026-07-02 20:55:40 UTC
 - 运行状态：成功
-- 本次总论文数：13
-- 精读区：6
-- 速读区：7
+- 本次总论文数：8
+- 精读区：4
+- 速读区：4
 
 ### 今日简报（AI）
-今日推荐13篇论文，精读6篇，其中两篇获9.0高分，聚焦多智能体与智能体强化学习。值得关注《Sampling-Based Coordination-Informed Multi-Objective Multi-Robot RL》和《TRIAGE: Role-Typed Credit Assignment》——前者探索多目标协调采样，后者提出角色化信用分配。普通读者可重点了解这些方法如何提升机器人团队协作与AI系统决策效率。
-- 详情：[/202607/01/README](/202607/01/README)
+今日精读聚焦智能体强化学习自我进化系统与单层Transformer媲美全参数训练两大突破。  
+最值得关注的是智能体通过自我进化实现持续提升，以及单层Transformer在RL训练中达到完整模型效果。  
+建议优先阅读这两篇9分论文，思考如何将自我进化机制与参数高效训练方法应用到实际任务中。
+- 详情：[/202607/02/README](/202607/02/README)
 
 ### 精读区论文标签
-1. [Sampling-Based Coordination-Informed Multi-Objective Multi-Robot Reinforcement Learning](/202607/01/2606.30893v1-sampling-based-coordination-informed-multi-objective-multi-robot-reinforcement-learning)  
+1. [Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents](/202607/02/2607.01120v1-next-generation-agentic-reinforcement-learning-systems-enable-self-evolving-agents)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：多机器人强化学习用于协调与决策
-2. [TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning](/202607/01/2606.32017v1-triage-role-typed-credit-assignment-for-agentic-reinforcement-learning)  
+   evidence：论证下一代代理强化学习系统使智能体能自我进化
+2. [Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training](/202607/02/2607.01232v1-is-one-layer-enough-training-a-single-transformer-layer-can-match-full-parameter-rl-training)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：角色类型信用分配用于智能体强化学习
-3. [ARKD: Adaptive Reinforcement Learning-Guided Bidirectional KL Divergence Distillation for Text Generation](/202607/01/2606.29869v1-arkd-adaptive-reinforcement-learning-guided-bidirectional-kl-divergence-distillation-for-text-generation)  
+   evidence：LLM的RL后训练中的层间贡献研究
+3. [Trust Your Instincts: Confidence-Driven Test-Time RL for Vision-Language-Action Models](/202607/02/2606.29892v1-trust-your-instincts-confidence-driven-test-time-rl-for-vision-language-action-models)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：应用强化学习指导LLM知识蒸馏，提升文本生成质量
-4. [Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent](/202607/01/2606.30616v1-scaling-the-horizon-not-the-parameters-reaching-trillion-parameter-performance-with-a-35b-agent)  
+   evidence：面向视觉-语言-行动模型的测试时强化学习
+4. [Z-1: Efficient Reinforcement Learning for Vision-Language-Action Models](/202607/02/2606.31846v1-z-1-efficient-reinforcement-learning-for-vision-language-action-models)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：通过扩展智能体时间跨度提升性能
-5. [ReGRPO: Reflection-Augmented Policy Optimization for Tool-Using Agents](/202607/01/2606.31392v1-regrpo-reflection-augmented-policy-optimization-for-tool-using-agents)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：面向工具使用智能体的反思增强策略优化
-6. [Learning to Select, Not Relearn: Hard-Routed Mixtures of Reasoning LoRAs](/202607/01/2606.31413v1-learning-to-select-not-relearn-hard-routed-mixtures-of-reasoning-loras)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：使用可验证反馈强化学习训练LLM的推理LoRA专家，再通过硬路由组合，属于RL增强LLM的方法
+   evidence：使用GRPO强化学习对VLA模型进行后训练
 
 ### 速读区论文标签
-1. [ECHO: Prune to act, trace to learn with selective turn memory in agentic RL](/202607/01/2606.31650v1-echo-prune-to-act-trace-to-learn-with-selective-turn-memory-in-agentic-rl)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：带选择性回合记忆的智能体强化学习用于长程智能体
-2. [Regularized Reward-Punishment Reinforcement Learning](/202607/01/2606.28152v1-regularized-reward-punishment-reinforcement-learning)  
+1. [VLM-AR3L: Vision-Language Models for Absolute and Relative Rewards in Reinforcement Learning](/202607/02/2607.00483v1-vlm-ar3l-vision-language-models-for-absolute-and-relative-rewards-in-reinforcement-learning)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：提出KL耦合策略正则化用于奖励-惩罚强化学习，改进智能体决策
-3. [GBC: Gradient-Based Connections for Optimizing Multi-Agent Systems](/202607/01/2606.28187v1-gbc-gradient-based-connections-for-optimizing-multi-agent-systems)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：基于梯度的多智能体系统信用分配
-4. [Modification-Considering Value Learning for Reward Hacking Mitigation in RL](/202607/01/2606.28955v1-modification-considering-value-learning-for-reward-hacking-mitigation-in-rl)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：提出MCVL方法减轻基于值的强化学习中的奖励黑客问题，对智能体决策鲁棒性有贡献
-5. [Hierarchical Experimentalist Agents](/202607/01/2606.29315v1-hierarchical-experimentalist-agents)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：通过主动实验学习的LLM智能体用于决策
-6. [HyPOLE: Hyperproperty-Guided Multi-Agent Reinforcement Learning under Partial Observation](/202607/01/2606.30966v1-hypole-hyperproperty-guided-multi-agent-reinforcement-learning-under-partial-observation)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：多智能体强化学习与形式化规范
-7. [Adapting Generalist Robot Policies with Semantic Reinforcement Learning](/202607/01/2606.31958v1-adapting-generalist-robot-policies-with-semantic-reinforcement-learning)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：通过语义强化学习利用语言提示适配通用机器人策略
+   evidence：视觉语言模型为RL提供奖励，类似用LLM解释策略
+2. [Learned Coordination Conventions in Cooperative MARL: Measuring the Translation Gap Between Theory-Informed Roles and Learned Routing](/202607/02/2606.29541v1-learned-coordination-conventions-in-cooperative-marl-measuring-the-translation-gap-between-theory-informed-roles-and-learned-routing)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：合作多智能体强化学习角色协调研究
+3. [Self-Evolving World Models for LLM Agent Planning](/202607/02/2606.30639v1-self-evolving-world-models-for-llm-agent-planning)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：用于LLM代理规划的自演化世界模型，包含情景和语义记忆
+4. [Calibrating the Evaluator: Does Probability Calibration Mitigate Preference Coupling in LLM Agent Feedback Loops?](/202607/02/2606.31371v1-calibrating-the-evaluator-does-probability-calibration-mitigate-preference-coupling-in-llm-agent-feedback-loops)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：研究LLM智能体反馈循环中的校准，与使用强化学习增强大语言模型相关
 
 
 <div class="dpr-home-promo-card">
