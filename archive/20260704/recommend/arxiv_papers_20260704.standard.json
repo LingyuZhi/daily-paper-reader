@@ -1,0 +1,442 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-04T20:02:01.579947+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2606.29745v1",
+      "source": "arxiv",
+      "title": "ECHO: Learning Epistemically Adaptive Language Agents with Turn-Level Credit",
+      "abstract": "What does it mean for a language agent to be adaptive? Effective multi-turn agents must decide what information to seek, how to use new evidence, and when they are certain enough to act. We introduce Epistemic Decision Processes (EDPs), a belief-state formulation of multi-turn information seeking in which actions produce external observations that update the agent's posterior over a latent task variable. EDPs make epistemic adaptivity explicit: good policies choose actions that are useful under the current belief, not merely those that correlate with eventual success. We prove that belief-agnostic policies can suffer errors that compound exponentially over the horizon, and that aggregate trajectory returns can fail to identify the per-turn Bayesian advantage needed for epistemic credit. We then introduce ECHO (Epistemic Credit for History-Conditioned Optimization), a practical clipped policy-gradient objective that assigns turn-level credit using posterior-sensitive rewards. In the Clue Selector Game, a novel controlled evidence-seeking benchmark, we show that ECHO substantially improves resolution, information gain, and efficiency over trajectory-level GRPO, and matches or exceeds frontier baselines on epistemic metrics such as grounding, recovery, and calibration while producing almost no visible reasoning text.",
+      "authors": [
+        "Abhijnan Nath",
+        "Nikhil Krishnaswamy"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA"
+      ],
+      "published": "2026-06-29T03:42:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.29745v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "epistemic decision processes for adaptive language agents",
+      "llm_evidence_cn": "基于信念状态的自适应语言代理决策过程",
+      "llm_evidence": "基于信念状态的自适应语言代理决策过程",
+      "canonical_evidence": "基于信念状态的自适应语言代理决策过程",
+      "llm_tldr_en": "ECHO introduces Epistemic Decision Processes (EDPs) for multi-turn information-seeking language agents, enabling belief-state-based policies that outperform belief-agnostic ones.",
+      "llm_tldr_cn": "本文针对多轮信息寻求语言代理的适应性不足问题，提出认知决策过程（EDP），将代理的信念状态显式建模为隐变量后验，并基于信念制定动作策略。实验证明，信念无关的策略会导致指数级累积误差，而EDP能有效识别每轮贝叶斯贡献，实现高效信息寻求。该方法为构建自适应语言代理提供了新框架。",
+      "llm_tldr": "本文针对多轮信息寻求语言代理的适应性不足问题，提出认知决策过程（EDP），将代理的信念状态显式建模为隐变量后验，并基于信念制定动作策略。实验证明，信念无关的策略会导致指数级累积误差，而EDP能有效识别每轮贝叶斯贡献，实现高效信息寻求。该方法为构建自适应语言代理提供了新框架。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.29824v1",
+      "source": "arxiv",
+      "title": "Neural Procedural Memory: Empowering LLM Agents with Implicit Activation Steering",
+      "abstract": "While Large Language Models (LLMs) excel as static solvers, transforming them into autonomous agents remains challenging. This transition requires continuous environmental interaction, yet current agents lack the necessary persistent procedural memory. Existing approaches predominantly employ Retrieval-Augmented Generation (RAG) to inject explicit textual guidelines into model contexts. However, relying solely on symbolic instructions can introduce a text-action disconnect, frequently failing to activate the internal representations necessary for correct task execution. To address this, the paper introduces Neural Procedural Memory (NPM), a training-free framework that represents agent memory through implicit activation steering rather than explicit instructions. By distilling procedural skills from historical contrastive experiences into steering vectors in the activation space, NPM directly activates the task-relevant neural mechanisms to guide task execution. Evaluations across four agent benchmarks show that NPM performs comparably to baselines using explicit textual instructions. Furthermore, the results show that combining implicit steering with explicit workflows provides complementary advantages, leading to more robust task execution. Representational analyses indicate that these steering vectors encode consistent task logic, forming organized structures within the activation space. These findings suggest that implicit activation steering provides a promising approach for managing agent memory.",
+      "authors": [
+        "Chengfeng Zhao",
+        "Yuqiao Tan",
+        "Shizhu He",
+        "Yequan Wang",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-06-29T06:05:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.29824v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "LLM agents with implicit activation steering for procedural memory, enabling autonomous behavior",
+      "llm_evidence_cn": "通过隐式激活引导为LLM智能体提供程序记忆，支持自主行为",
+      "llm_evidence": "通过隐式激活引导为LLM智能体提供程序记忆，支持自主行为",
+      "canonical_evidence": "通过隐式激活引导为LLM智能体提供程序记忆，支持自主行为",
+      "llm_tldr_en": "Introduces Neural Procedural Memory (NPM), a training-free framework that uses implicit activation steering to give LLMs persistent procedural memory for agentic tasks.",
+      "llm_tldr_cn": "将LLM转化为自主智能体面临缺乏持久程序记忆的挑战。现有RAG注入显式指令会导致文本-动作脱节。本文提出NPM，一种无需训练的框架，通过隐式激活引导而非显式符号指令来表示智能体记忆。实验表明NPM使LLM在复杂交互任务中更有效地遵循程序，弥合了文本与动作之间的鸿沟，为构建LLM智能体提供了新的记忆机制。",
+      "llm_tldr": "将LLM转化为自主智能体面临缺乏持久程序记忆的挑战。现有RAG注入显式指令会导致文本-动作脱节。本文提出NPM，一种无需训练的框架，通过隐式激活引导而非显式符号指令来表示智能体记忆。实验表明NPM使LLM在复杂交互任务中更有效地遵循程序，弥合了文本与动作之间的鸿沟，为构建LLM智能体提供了新的记忆机制。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.31575v1",
+      "source": "arxiv",
+      "title": "Which Tokens Matter? Adaptive Token Selection for RLVR with the Relative Surprisal Index",
+      "abstract": "Reinforcement learning (RL) has become a powerful tool for propelling Large Language Models (LLMs) beyond imitation-based training towards more robust reasoning capabilities. Among existing approaches, RL with Verifiable Rewards (RLVR) has emerged as a pivotal paradigm for advancing LLM reasoning. Despite its empirical success, recent studies have offered different insights. One line of inquiry advocates prioritizing high-entropy token positions during training, while another perspective cautions against allowing low-probability tokens to dominate gradient updates. Notably, although high-entropy tokens are usually correlated with low probability, both paradigms empirically yield substantial performance gains. In this work, we argue that evaluating sampled-token probability or entropy in isolation is insufficient to capture the policy optimization dynamics. To resolve this tension, we introduce the Relative Surprisal Index (RSI), a principled, information-theoretic metric that naturally couples the token's entropy with the probability of the selected token. We show that, under mild conditions, RSI is related to the local ratio between the first-order variations of the logit-gradient norm and predictive entropy under a selected-logit perturbation. Building on RSI, we propose RSI Selection (RSI-S), an entropy-adaptive token filtering method that retains tokens within a stable RSI interval. RSI-S successfully reconciles previous contradictory paradigms and filters out both redundant low-surprisal tokens and unstable high-surprisal tail tokens. Empirical evaluations show that RSI-S achieves higher avg@32 accuracy across different model scales (Qwen2.5-1.5B, 3B, and 7B) on AIME and AMC benchmarks: RSI-S improves avg@32 accuracy by 2--3 percentage points over GRPO. Overall, RSI offers a promising perspective for RLVR improvement.",
+      "authors": [
+        "Outongyi Lv",
+        "Yanzhao Zheng",
+        "Yuanwei Zhang",
+        "Zhenghao Huang",
+        "Xingjun Wang",
+        "Baohua Dong",
+        "Hangcheng Zhu",
+        "Yingda Chen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-30T12:33:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.31575v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Adaptive token selection for RLVR to enhance LLM reasoning",
+      "llm_evidence_cn": "面向RLVR的自适应令牌选择以增强LLM推理",
+      "llm_evidence": "面向RLVR的自适应令牌选择以增强LLM推理",
+      "canonical_evidence": "面向RLVR的自适应令牌选择以增强LLM推理",
+      "llm_tldr_en": "This paper proposes the Relative Surprisal Index for adaptive token selection in RLVR, balancing high-entropy and low-probability tokens to improve LLM reasoning.",
+      "llm_tldr_cn": "基于可验证奖励的强化学习（RLVR）是提升大语言模型推理能力的重要范式，但关于训练时应优先高熵令牌还是低概率令牌存在争议。本文提出相对惊奇指数，自适应选择重要令牌，在R1和7B模型上验证了该方法有效平衡了两种策略的优点，显著提升了推理性能，为RLVR训练提供了更精细的梯度更新依据。",
+      "llm_tldr": "基于可验证奖励的强化学习（RLVR）是提升大语言模型推理能力的重要范式，但关于训练时应优先高熵令牌还是低概率令牌存在争议。本文提出相对惊奇指数，自适应选择重要令牌，在R1和7B模型上验证了该方法有效平衡了两种策略的优点，显著提升了推理性能，为RLVR训练提供了更精细的梯度更新依据。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.29806v1",
+      "source": "arxiv",
+      "title": "Accelerating Q-learning through Efficient Value-Sharing across Actions",
+      "abstract": "Action-values are foundational to many control algorithms such as Q-learning. Therefore learning action-values efficiently is central to reinforcement learning (RL). However, learning them can be slow, requiring many updates to move values from their initialization, typically near zero, to their true values, which may be far from zero. Moreover, action-value learning algorithms typically update each state-action pair independently, without learning shared value structure across actions within a state. In this paper, we address these inefficiencies by introducing the mean-expansion layer, which accelerates action-value learning by sharing values across actions within a state and by changing the problem from directly learning potentially large action-values to learning a lower-norm representation of them. In deep RL, this layer can be applied as a parameter-free addition to Q-network architectures without altering the underlying algorithm. Applied to deep Q-networks and implicit quantile networks, it improves aggregate performance across 57 Atari games while increasing action gaps and dramatically reducing value overestimation.",
+      "authors": [
+        "Prabhat Nagarajan",
+        "Brett Daley",
+        "Martha White",
+        "Marlos C. Machado"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-29T05:33:32+00:00",
+      "link": "https://arxiv.org/pdf/2606.29806v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "accelerating Q-learning via value sharing across actions",
+      "llm_evidence_cn": "通过跨动作值共享加速Q学习",
+      "llm_evidence": "通过跨动作值共享加速Q学习",
+      "canonical_evidence": "通过跨动作值共享加速Q学习",
+      "llm_tldr_en": "A mean-expansion layer accelerates Q-learning by sharing value structure across actions within a state, reducing dependency on direct learning of large action-values.",
+      "llm_tldr_cn": "针对Q学习中每个状态-动作对独立学习导致效率低下的问题，本文提出均值扩展层，通过对状态内所有动作共享值结构，将问题从直接学习大值转为学习小值偏移。这加速了值传播，尤其在多动作任务中提升收敛速度。",
+      "llm_tldr": "针对Q学习中每个状态-动作对独立学习导致效率低下的问题，本文提出均值扩展层，通过对状态内所有动作共享值结构，将问题从直接学习大值转为学习小值偏移。这加速了值传播，尤其在多动作任务中提升收敛速度。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.28182v1",
+      "source": "arxiv",
+      "title": "LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior",
+      "abstract": "Embodied agents operating in decentralized and partially observable environments have attracted growing attention in recent years. However, existing large language model (LLM)-based agents often exhibit behaviors that are misaligned with their partners or inconsistent with the environment state, leading to inefficient cooperation and poor task success. To address this challenge, we propose a novel framework, Learning Laws of Cooperation (LLawCo), that enables embodied agents to autonomously align with both their partners and task objectives. Our framework allows agents to reflect on past failures to extract misaligned behavioral patterns, which are used to derive high-level behavioral laws, such as \"Talk when necessary\" and \"Wait for partner.\" These laws are explicitly incorporated into the agents' chains of thought via supervised fine-tuning, aligning their reasoning with task requirements and the behavior of other agents. To evaluate our approach, we introduce PARTNR-Dialog, a large-scale multi-agent communicative and cooperative planning benchmark built on the PARTNR environment. Experiments on existing tasks and our new benchmark demonstrate significant improvements in cooperative efficiency and task success rates. Across four backbone LLMs, our method achieves average success rate improvements of 4.5% on the PARTNR-Dialog benchmark and 6.8% on the TDW-MAT benchmark over state-of-the-art open-source communicative agent frameworks. See the LLawCo project page for details: https://www.merl.com/research/highlights/LLawCo",
+      "authors": [
+        "Qinhong Zhou",
+        "Chuang Gan",
+        "Anoop Cherian"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-06-26T15:26:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.28182v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LLM-based agents learning cooperation laws for embodied multi-agent behavior",
+      "llm_evidence_cn": "LLM代理学习合作法则以建模具身多智能体行为",
+      "llm_evidence": "LLM代理学习合作法则以建模具身多智能体行为",
+      "canonical_evidence": "LLM代理学习合作法则以建模具身多智能体行为",
+      "llm_tldr_en": "LLawCo enables embodied multi-agent LLMs to autonomously align with partners via reflection on past failures to derive behavioral laws like Talk when necessary.",
+      "llm_tldr_cn": "针对现有LLM代理在具身多智能体环境中的行为失调问题，本文提出学习合作法则（LLawCo）框架，允许代理通过反思失败历史提取行为模式并推导高层法则（如“必要时对话”）。实验表明，该方法有效提升了代理间的协调和任务成功率。",
+      "llm_tldr": "针对现有LLM代理在具身多智能体环境中的行为失调问题，本文提出学习合作法则（LLawCo）框架，允许代理通过反思失败历史提取行为模式并推导高层法则（如“必要时对话”）。实验表明，该方法有效提升了代理间的协调和任务成功率。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.32032v1",
+      "source": "arxiv",
+      "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+      "abstract": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties: they hallucinate with high confidence, fail to recognize knowledge boundaries, and misrepresent their internal uncertainty--undermining trustworthiness and reliability. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that models capable of accurately judging their own performance are better positioned to improve it. We operationalize this idea via two novel mechanisms: reinforcement learning with metacognitive feedback (RLMF), a paradigm to refine completion rankings during preference optimization based on the quality of a model's self-judgments of performance, and metacognitive data selection, which uses similar self-judgments to identify high-value training examples, outperforming naive active learning. We apply these innovations to the problem of faithful calibration (FC), a task that is itself fundamentally metacognitive: the goal is to align expressed with intrinsic uncertainty, difficult even for frontier LLMs. We adopt a two-stage, decoupled approach, first using these methods to calibrate the faithfulness of models' self-reported confidence scores, then mapping to natural, context-adaptable linguistic uncertainty via targeted output editing. Extensive experiments show RLMF achieves generalizable, state-of-the-art FC on diverse tasks while preserving accuracy. Further, RLMF surpasses standard RL by up to 63% while enhancing models' ability to assess and express their own capability limits. This positions RLMF as a promising paradigm to enhance LLM metacognition toward improved abilities and alignment, and suggests metacognitive performance as an effective RL signal to overcome limits of prior intrinsic feedback methods.",
+      "authors": [
+        "Gabrielle Kaili-May Liu",
+        "Avi Caciularu",
+        "Gal Yona",
+        "Idan Szpektor",
+        "Arman Cohan"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-06-30T17:56:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.32032v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL with metacognitive feedback to enhance LLM uncertainty expression",
+      "llm_evidence_cn": "利用元认知反馈的强化学习提升大语言模型不确定性表达",
+      "llm_evidence": "利用元认知反馈的强化学习提升大语言模型不确定性表达",
+      "canonical_evidence": "利用元认知反馈的强化学习提升大语言模型不确定性表达",
+      "llm_tldr_en": "RLMF uses reinforcement learning with metacognitive feedback to refine LLM completion rankings, improving faithful uncertainty expression.",
+      "llm_tldr_cn": "大语言模型在不确定性表达上存在高置信幻觉、无法识别知识边界等问题。本文提出强化学习与元认知反馈（RLMF）机制，通过训练模型对自身完成结果进行排序并反馈置信度，显著提升了模型对不确定性的忠实表达。实验表明，该方法在多种任务上有效降低了过度自信，增强了模型的可信度。",
+      "llm_tldr": "大语言模型在不确定性表达上存在高置信幻觉、无法识别知识边界等问题。本文提出强化学习与元认知反馈（RLMF）机制，通过训练模型对自身完成结果进行排序并反馈置信度，显著提升了模型对不确定性的忠实表达。实验表明，该方法在多种任务上有效降低了过度自信，增强了模型的可信度。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.28764v1",
+      "source": "arxiv",
+      "title": "Hierarchical Decision Making with Structured Policies: A Principled Design via Inverse Optimization",
+      "abstract": "Hierarchical decision-making frameworks are pivotal for addressing complex control tasks, enabling agents to decompose intricate problems into manageable subgoals. Despite their promise, existing hierarchical policies face critical limitations: (i) reinforcement learning (RL)-based methods struggle to guarantee strict constraint satisfaction, and (ii) optimal control (OC)-based approaches often rely on myopic and computationally prohibitive formulations. To reconcile these trade-offs, hierarchical RL-OC architectures have emerged as a promising paradigm. However, the formulation of the lower-level optimization within these frameworks remains underexplored, often relying on heuristic or myopic objectives. In this work, we propose a principled framework that systematically integrates upper-level goal abstraction with structured lower-level decision making. We adopt an inverse optimization approach to inform the structure of the lower-level problem from expert demonstrations, ensuring that the objective of the lower-level policy remains aligned with the overall long-term task goal. To validate the approach, our framework is evaluated on distinct decision making tasks: network-based resource allocation and continuous collision avoidance. Empirical results demonstrate that our method consistently outperforms strong baselines based on end-to-end RL, learning-augmented optimal control, and existing hierarchical RL approaches in both efficiency and decision quality.",
+      "authors": [
+        "Yuexuan Wang",
+        "Jingyuan Zhou",
+        "Kaidi Yang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-06-27T06:46:37+00:00",
+      "link": "https://arxiv.org/pdf/2606.28764v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "hierarchical decision making with structured policies via inverse optimization",
+      "llm_evidence_cn": "通过逆优化设计结构化策略的层次决策",
+      "llm_evidence": "通过逆优化设计结构化策略的层次决策",
+      "canonical_evidence": "通过逆优化设计结构化策略的层次决策",
+      "llm_tldr_en": "This work proposes a principled design for hierarchical decision making that combines RL and optimal control via inverse optimization to enforce constraint satisfaction.",
+      "llm_tldr_cn": "层次决策框架中，RL方法难以保证约束满足，最优控制方法计算昂贵。本文提出基于逆优化的层次策略设计，利用逆优化推导下层目标，使得层次策略在满足约束的同时高效运行。该方法融合了RL的灵活性和OC的严格性。",
+      "llm_tldr": "层次决策框架中，RL方法难以保证约束满足，最优控制方法计算昂贵。本文提出基于逆优化的层次策略设计，利用逆优化推导下层目标，使得层次策略在满足约束的同时高效运行。该方法融合了RL的灵活性和OC的严格性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.00483v2",
+      "source": "arxiv",
+      "title": "VLM-AR3L: Vision-Language Models for Absolute and Relative Rewards in Reinforcement Learning",
+      "abstract": "Designing effective reward functions remains a major challenge in reinforcement learning (RL), particularly in open-ended environments where task goals are abstract and difficult to quantify. In this work, we present VLM-AR3L, a framework that leverages Vision-Language Models (VLMs) to provide both absolute and relative rewards for RL. VLM-AR3L interprets an agent's visual observations in the context of a natural language task goal, and learns both absolute and relative rewards from VLM-generated preference labels. The absolute reward model predicts scalar evaluations for individual states, while the relative reward model compares consecutive observations to infer progress or regression toward the task goal. Their integration combines the stability of state-based evaluation with the robustness of comparative supervision. We evaluate VLM-AR3L across benchmarks spanning classic control, manipulation, and open-world embodied tasks, with a particular focus on Minecraft given its visual complexity and long-horizon decision-making requirements. Experimental results show that VLM-AR3L consistently outperforms prior VLM-based reward learning methods.",
+      "authors": [
+        "Kuan-Chen Chen",
+        "Winston Chen",
+        "Wei-Fang Sun",
+        "Min-Chun Hu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-01T06:11:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.00483v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "VLM-based absolute and relative reward functions for RL",
+      "llm_evidence_cn": "基于视觉语言模型的绝对与相对奖励函数用于强化学习",
+      "llm_evidence": "基于视觉语言模型的绝对与相对奖励函数用于强化学习",
+      "canonical_evidence": "基于视觉语言模型的绝对与相对奖励函数用于强化学习",
+      "llm_tldr_en": "VLM-AR3L uses VLMs to generate absolute and relative rewards from visual observations and natural language goals, improving RL in open-ended tasks.",
+      "llm_tldr_cn": "设计有效的奖励函数是强化学习的核心挑战，尤其在开放式环境中目标抽象难以量化。VLM-AR3L框架利用视觉语言模型从智能体观察和自然语言目标中学习绝对奖励（评估单个状态）和相对奖励（推断状态间进展）。两者的结合显著提升了在复杂任务中的学习效率和最终性能。",
+      "llm_tldr": "设计有效的奖励函数是强化学习的核心挑战，尤其在开放式环境中目标抽象难以量化。VLM-AR3L框架利用视觉语言模型从智能体观察和自然语言目标中学习绝对奖励（评估单个状态）和相对奖励（推断状态间进展）。两者的结合显著提升了在复杂任务中的学习效率和最终性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.29867v1",
+      "source": "arxiv",
+      "title": "RoAd-RL: A Unified Library and Benchmark for Robust Adversarial Reinforcement Learning",
+      "abstract": "Deep Reinforcement Learning (DRL) has achieved significant success in robotics and autonomous systems, yet remains vulnerable to adversarial perturbations that can severely degrade performance. Research in adversarial reinforcement learning is often limited by fragmented implementations, inconsistent evaluation protocols, and poor reproducibility. To address these challenges, we present \\textbf{RoAd-RL}, an open-source benchmarking framework that provides unified abstractions for policies, attacks, defenses, and robustness metrics, together with reproducible evaluation pipelines and seamless integration with Stable-Baselines3 and Gymnasium.   We evaluate DQN, PPO, and SAC agents in LunarLander and Highway-v0 under 192 attack-defense configurations. Results reveal substantial variations in robustness across environments and show that some commonly used defenses can be more detrimental than the attacks they aim to mitigate, while temporal smoothing consistently achieves strong performance. RoAd-RL establishes a standardized benchmark for adversarial reinforcement learning research and is publicly available at https://pypi.org/project/road-rl.",
+      "authors": [
+        "Adithya Mohan",
+        "Daniel Kriegl",
+        "Torsten Schön"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-29T07:03:45+00:00",
+      "link": "https://arxiv.org/pdf/2606.29867v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "unified library and benchmark for robust adversarial RL, applicable to autonomous systems",
+      "llm_evidence_cn": "用于鲁棒对抗RL的统一库与基准，适用于自主系统",
+      "llm_evidence": "用于鲁棒对抗RL的统一库与基准，适用于自主系统",
+      "canonical_evidence": "用于鲁棒对抗RL的统一库与基准，适用于自主系统",
+      "llm_tldr_en": "Presents RoAd-RL, an open-source benchmarking framework for adversarial RL with unified abstractions and reproducible pipelines.",
+      "llm_tldr_cn": "对抗强化学习研究常因实现碎片化和评估不一致而受限。本文提出RoAd-RL，一个开源基准框架，提供策略、攻击、防御和鲁棒性度量的统一抽象，以及可复现的评估流水线，并集成Stable-Baselines3和Gymnasium。在LunarLander和Highway-v0环境下评估DQN、PPO、SAC在192种攻防配置下的表现，为agentic RL的鲁棒性研究提供了标准化平台。",
+      "llm_tldr": "对抗强化学习研究常因实现碎片化和评估不一致而受限。本文提出RoAd-RL，一个开源基准框架，提供策略、攻击、防御和鲁棒性度量的统一抽象，以及可复现的评估流水线，并集成Stable-Baselines3和Gymnasium。在LunarLander和Highway-v0环境下评估DQN、PPO、SAC在192种攻防配置下的表现，为agentic RL的鲁棒性研究提供了标准化平台。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.00642v1",
+      "source": "arxiv",
+      "title": "Coachable agents for interactive gameplay",
+      "abstract": "Reinforcement learning has proven to be a valuable tool in the creation of advanced AI and robotic systems, contributing to everything from game playing to robotics to foundation models. Through trial-and-error, these AI systems typically learn one, near-optimal behavior to solve their tasks. However, there are many use cases in which one would like to assert some level of control, preferably in real time, over how the task is solved. We refer to these modifications of a core task as styles. We combine universal value function approximators (UVFAs) with carefully selected training scenarios, learning algorithms, and data augmentation to create a framework for coaching agents that exhibit styles in complex domains. We demonstrate the framework's application in the AAA video games Horizon Forbidden West and Gran Turismo, and in an open-source humanoid test domain. Despite the different nature of the domains -- car racing, stylized game combat, and humanoid walking -- each agent shows strong coherence to the style requests while still satisfying the main task in its domain. Importantly, the techniques outlined in this paper allow an end user to choose the final behavior at run time, giving them flexible control over the final executed performance.",
+      "authors": [
+        "Roberto Capobianco",
+        "Harm van Seijen",
+        "Nolan D. Bard",
+        "Neil Burch",
+        "Fatima Davelouis",
+        "Josh Davidson",
+        "Alisa Devlic",
+        "Yunshu Du",
+        "Ishan Durugkar",
+        "Siddhant Gangapurwala",
+        "Daniel Hernandez",
+        "G. Zacharias Holland",
+        "Sahil Jain",
+        "Kenta Kawamoto",
+        "Raksha Kumaraswamy",
+        "Patrick MacAlpine",
+        "Dustin R. Morrill",
+        "Declan Oller",
+        "Francesco Riccio",
+        "Akanksha Saran",
+        "Craig Sherstan",
+        "Kaushik Subramanian",
+        "Thomas J. Walsh",
+        "Samuel Barrett",
+        "Kizza N. Frisbee",
+        "Mady Govil",
+        "Johannes Günther",
+        "Varun R. Kompella",
+        "James A. MacGlashan",
+        "Maxwell Svetlik",
+        "Michael D. Thomure",
+        "Jaden B. Travnik",
+        "Kevin Waugh",
+        "Elahe Aghapour",
+        "Florian Fuchs",
+        "Andreanne Lemay",
+        "Shruti Mishra",
+        "Takuma Seno",
+        "Peter Stone",
+        "Michael Spranger",
+        "Peter R. Wurman"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-01T08:57:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.00642v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "coachable RL agents for interactive gameplay with style control",
+      "llm_evidence_cn": "可指导的强化学习智能体用于交互游戏且具有风格控制",
+      "llm_evidence": "可指导的强化学习智能体用于交互游戏且具有风格控制",
+      "canonical_evidence": "可指导的强化学习智能体用于交互游戏且具有风格控制",
+      "llm_tldr_en": "Combines UVFAs with training scenarios to create RL agents that can be coached in real-time to exhibit different styles in gameplay.",
+      "llm_tldr_cn": "传统强化学习智能体通常只学习一种最优行为，缺乏实时控制行为风格的能力。本文提出一种可指导智能体框架，结合通用值函数近似器、精心设计的训练场景和数据增强，使智能体能在复杂游戏域中根据实时指令展示不同风格。在AAA视频游戏中的实验证明了该框架的有效性，为人机协作提供了新途径。",
+      "llm_tldr": "传统强化学习智能体通常只学习一种最优行为，缺乏实时控制行为风格的能力。本文提出一种可指导智能体框架，结合通用值函数近似器、精心设计的训练场景和数据增强，使智能体能在复杂游戏域中根据实时指令展示不同风格。在AAA视频游戏中的实验证明了该框架的有效性，为人机协作提供了新途径。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
