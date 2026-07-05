@@ -1,0 +1,334 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-05T20:19:23.893421+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2606.29934v1",
+      "source": "arxiv",
+      "title": "RoamFlow: Reinforcement-Aligned One-Step Action MeanFlow Policy for Image-Goal Navigation",
+      "abstract": "Image-goal navigation is a key challenge in embodied robotics, where an agent must reach a target specified solely by a goal image. While existing reinforcement learning approaches map perceptual observations directly to actions, they struggle to model long-horizon dependencies, often leading to suboptimal trajectories. To address this limitation, we propose RoamFlow, a generative navigation framework that leverages MeanFlow to predict the average velocity field for trajectory synthesis, enabling efficient few-step generation and reducing inference latency. We further adopt a two-stage training strategy that combines expert imitation for stable initialization with reinforcement learning for task-specific policy refinement. Extensive experiments in both Habitat simulation and real-world robotic platforms demonstrate that RoamFlow achieves efficient inference while maintaining strong navigation performance under real-time constraints.",
+      "authors": [
+        "Zixuan Zhang",
+        "Yuqi Chen",
+        "Junjie Gao",
+        "Siyuan Song",
+        "Yongzhou Pan",
+        "Beichen Wang",
+        "Mir Feroskhan"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-29T08:10:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.29934v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "reinforcement learning for task-specific policy refinement in image-goal navigation",
+      "llm_evidence_cn": "使用强化学习对导航策略进行任务特定优化",
+      "llm_evidence": "使用强化学习对导航策略进行任务特定优化",
+      "canonical_evidence": "使用强化学习对导航策略进行任务特定优化",
+      "llm_tldr_en": "RoamFlow uses meanflow for trajectory synthesis and two-stage training with RL refinement to improve image-goal navigation.",
+      "llm_tldr_cn": "图像目标导航中，现有RL方法难以捕捉长程依赖，导致轨迹次优。本文提出RoamFlow，使用平均流预测速度场，实现高效轨迹合成，并采用两阶段训练：先模仿学习初始化，再强化学习精调。实验在多个导航任务上表明，RoamFlow能生成更优轨迹并降低推理延迟。该工作将生成式模型与RL结合，为长期依赖下的导航策略提供了新思路。",
+      "llm_tldr": "图像目标导航中，现有RL方法难以捕捉长程依赖，导致轨迹次优。本文提出RoamFlow，使用平均流预测速度场，实现高效轨迹合成，并采用两阶段训练：先模仿学习初始化，再强化学习精调。实验在多个导航任务上表明，RoamFlow能生成更优轨迹并降低推理延迟。该工作将生成式模型与RL结合，为长期依赖下的导航策略提供了新思路。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.31270v1",
+      "source": "arxiv",
+      "title": "Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents",
+      "abstract": "Computer-use agents, which leverage multimodal large language models (MLLMs) to operate computers and complete tasks, have attracted significant attention for their utility and versatility. A major challenge in developing these agents is collecting large-scale, high-quality trajectories. The standard approach generates synthetic data through a self-improving loop: an agent is placed in a verifiable environment and iteratively fine-tuned on its successful trajectories. Despite its effectiveness, this paradigm exploits only successful trajectories and discards the failed ones, even though failures carry rich information about a model's weaknesses. In this work, we explore a complementary failure-driven self-improvement loop, a data-centric paradigm that turns failed trajectories into agent improvements. Specifically, we employ an LLM to diagnose failure modes, propose inference-time solutions, and generate code patches -- lightly verified by humans -- that upgrade the agent. We validate this approach with the state-of-the-art OpenCUA-72B model on the OSWorld benchmark, improving the success rate from 42.3% to 48.9%, a gain of 6.6 percentage points, without any additional training cost and with only modest inference overhead. Our results demonstrate that failure-driven self-improvement is a viable complement to success-based pipelines, enabling more efficient agent improvement.",
+      "authors": [
+        "Xueqiao Sun",
+        "Xiaohan Wang",
+        "Ludwig Schmidt",
+        "Serena Yeung-Levy",
+        "Yuhui Zhang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.CY",
+        "cs.LG"
+      ],
+      "published": "2026-06-30T07:44:37+00:00",
+      "link": "https://arxiv.org/pdf/2606.31270v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "failure-driven self-improvement for computer-use agents using reinforcement learning",
+      "llm_evidence_cn": "利用失败驱动的自我改进强化学习提升计算机使用智能体",
+      "llm_evidence": "利用失败驱动的自我改进强化学习提升计算机使用智能体",
+      "canonical_evidence": "利用失败驱动的自我改进强化学习提升计算机使用智能体",
+      "llm_tldr_en": "Proposes a failure-driven self-improvement loop that exploits failed trajectories to improve computer-use agents, complementing success-based methods.",
+      "llm_tldr_cn": "现有计算机智能体自我改进仅利用成功轨迹，忽略了失败信息。本文提出失败驱动的自我改进范式，通过分析失败数据挖掘模型弱点，从而提升多模态LLM智能体的任务完成能力。",
+      "llm_tldr": "现有计算机智能体自我改进仅利用成功轨迹，忽略了失败信息。本文提出失败驱动的自我改进范式，通过分析失败数据挖掘模型弱点，从而提升多模态LLM智能体的任务完成能力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.31043v2",
+      "source": "arxiv",
+      "title": "Warp RL: Reshaping Base Policy Distributions for Dynamics Adaptation",
+      "abstract": "Residual reinforcement learning adapts a pretrained robot policy by learning an additive correction to its actions. While effective when adaptation amounts to shifting the base policy's action distribution, additive corrections cannot change the distribution's shape, scale, or state-dependent geometry -- limitations we formalize as wrong variance, miscalibrated confidence, and non-uniform correction. We show that these matter under dynamics shift: when the base distribution is geometrically mismatched to the shifted system, residual correction can underperform even the unadapted policy. We propose Warp RL, a policy adaptation method that replaces additive residuals with an invertible, state-conditioned transformation of the base policy's action distribution. Instantiated with monotonic rational-quadratic spline flows (arXiv:1906.04032), Warp RL preserves identity initialization, strictly generalizes additive residual correction, and exposes a structured adaptation space suitable for both policy-gradient and gradient-free optimization. Across a variety of ManiSkill3 manipulation tasks with controlled dynamics shifts, Warp RL matches residual correction when translation is sufficient and substantially outperforms it when adaptation requires distributional reshaping. We further demonstrate that warping can replace additive correction in an off-policy sim-to-real pipeline, achieving comparable success rate with 30% faster task completion on a real-robot peg-insertion task.",
+      "authors": [
+        "Ethan Hirschowitz",
+        "Fabio Ramos"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-06-30T02:25:51+00:00",
+      "link": "https://arxiv.org/pdf/2606.31043v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Residual RL policy adaptation for autonomous agents",
+      "llm_evidence_cn": "用于自主智能体的残差RL策略适应",
+      "llm_evidence": "用于自主智能体的残差RL策略适应",
+      "canonical_evidence": "用于自主智能体的残差RL策略适应",
+      "llm_tldr_en": "Proposes Warp RL, a method that replaces additive residuals in residual reinforcement learning with an invertible state-conditioned transformation for better dynamics adaptation.",
+      "llm_tldr_cn": "残差强化学习通过学习附加修正来适应预训练策略，但无法改变基础策略分布的形状和尺度。本文提出Warp RL，用可逆状态条件变换替代附加修正，允许重塑策略分布以应对动力学变化。实验显示，在动力学偏移下，Warp RL优于传统残差方法。",
+      "llm_tldr": "残差强化学习通过学习附加修正来适应预训练策略，但无法改变基础策略分布的形状和尺度。本文提出Warp RL，用可逆状态条件变换替代附加修正，允许重塑策略分布以应对动力学变化。实验显示，在动力学偏移下，Warp RL优于传统残差方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.00233v1",
+      "source": "arxiv",
+      "title": "From Signals to Structure: How Memory Architecture Drives Language Emergence in LLM Agents",
+      "abstract": "How do two agents invent a shared language from scratch? In a Lewis signaling game, a sender and receiver must coordinate on a code using only their interaction history. We study five memory architectures across varying channel configurations with LLM agents and find that memory architecture matters more than channel capacity. Agents with a persistent private notebook benefit from surplus channel capacity and avoid the high-capacity collapse seen in stateless agents, achieving the most reliable coordination ($0.867 \\pm 0.023$ at capacity = 25). Stateless agents peak at moderate capacity and then degrade as the vocabulary grows beyond what a rolling context window can track The notebook externalizes learned conventions, freeing agents from having to re-derive codes each round. An information bottleneck-inspired argument predicts an optimal capacity equal to the number of objects. Instead, the bottleneck (capacity = 8) proves to be a fragility point, and surplus capacity is generally better. We show that channel capacity alone cannot predict coordination; memory architecture determines whether agents turn interaction history into stable conventions, and both dimensions are needed to understand how signals become language.",
+      "authors": [
+        "Yashar Talebirad",
+        "Eden Redman",
+        "Ali Parsaee",
+        "Osmar R. Zaiane"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IT",
+        "cs.MA"
+      ],
+      "published": "2026-06-30T22:20:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.00233v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "studies language emergence in LLM agents with memory architectures",
+      "llm_evidence_cn": "研究具有记忆架构的大语言模型智能体中的语言涌现",
+      "llm_evidence": "研究具有记忆架构的大语言模型智能体中的语言涌现",
+      "canonical_evidence": "研究具有记忆架构的大语言模型智能体中的语言涌现",
+      "llm_tldr_en": "LLM agents with persistent private notebook memory achieve more reliable language emergence in Lewis signaling games compared to stateless agents.",
+      "llm_tldr_cn": "本文研究两个大语言模型智能体如何从头创造共享语言。在Lewis信号游戏中比较五种记忆架构，发现记忆架构比通道容量更重要。拥有持久私人笔记本的智能体利用过剩信道容量，避免了无状态智能体的高容量崩溃，达到最高协调可靠性（0.867）。该工作揭示了记忆在智能体语言涌现中的关键作用。",
+      "llm_tldr": "本文研究两个大语言模型智能体如何从头创造共享语言。在Lewis信号游戏中比较五种记忆架构，发现记忆架构比通道容量更重要。拥有持久私人笔记本的智能体利用过剩信道容量，避免了无状态智能体的高容量崩溃，达到最高协调可靠性（0.867）。该工作揭示了记忆在智能体语言涌现中的关键作用。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.31320v1",
+      "source": "arxiv",
+      "title": "Safe Online Learning via Smooth Safety-Structured Policy Composition",
+      "abstract": "Safe online reinforcement learning requires policies to respect safety constraints while maintaining smooth optimization dynamics. Existing approaches typically rely on either strict safety enforcement via action interventions, which introduce discontinuities in system interaction and learning, or soft safety constraint formulations, which preserve smooth learning but provide limited safety assurance. We propose AutoSafe, a safety-aware policy architecture that integrates structured safety monitoring and intervention directly into the action generation process. This design enables smooth, risk-dependent transitions between performance-driven and safety-preserving behaviors, resulting in continuous online interaction and learning dynamics. Empirical results across a suite of continuous-control benchmarks demonstrate strong safety enforcement without sacrificing learning smoothness. We further validate AutoSafe on a physical cart-pole system, highlighting its practical effectiveness for safe online learning in the real world.",
+      "authors": [
+        "Hongpeng Cao",
+        "Liqun Zhao",
+        "Yuliang Gu",
+        "Naira Hovakimyan",
+        "Lui Sha",
+        "Marco Caccamo"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-06-30T08:26:50+00:00",
+      "link": "https://arxiv.org/pdf/2606.31320v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Safe online RL with smooth safety-structured policy composition for autonomous agents",
+      "llm_evidence_cn": "面向自主智能体的安全在线学习与平滑安全结构化策略组合",
+      "llm_evidence": "面向自主智能体的安全在线学习与平滑安全结构化策略组合",
+      "canonical_evidence": "面向自主智能体的安全在线学习与平滑安全结构化策略组合",
+      "llm_tldr_en": "AutoSafe integrates safety monitoring directly into action generation for smooth, risk-dependent transitions between performance and safety behaviors.",
+      "llm_tldr_cn": "安全在线强化学习需要在约束满足与优化平滑性之间权衡。现有严格安全监督引入不连续性，而软约束则保障不足。本文提出AutoSafe，将结构化安全监控直接集成到动作生成中，实现性能驱动与安全保护行为之间的平滑风险依赖转换。经验结果表明该方法在保持学习连续性的同时提供了可靠的安全保障。",
+      "llm_tldr": "安全在线强化学习需要在约束满足与优化平滑性之间权衡。现有严格安全监督引入不连续性，而软约束则保障不足。本文提出AutoSafe，将结构化安全监控直接集成到动作生成中，实现性能驱动与安全保护行为之间的平滑风险依赖转换。经验结果表明该方法在保持学习连续性的同时提供了可靠的安全保障。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.02092v1",
+      "source": "arxiv",
+      "title": "Guided Action Flow: Q-Guided Inference for Flow-Matching Vision-Language-Action Policies",
+      "abstract": "Flow-matching vision-language-action policies generate robot action chunks through an iterative transport process, creating an opportunity for test-time guidance without retraining the base policy. We study this opportunity in Guided Action Flow, an inference-time framework that keeps a pretrained SmolVLA policy frozen and uses a learned action-chunk critic to guide its reverse-time flow sampler. The critic is trained from real success and failure rollouts, can condition on task-description features from the frozen SmolVLA language pathway, and is used only through action gradients during sampling. We evaluate the approach on LIBERO manipulation tasks. A single-task critic improves success from 68.0% to 82.0% on one seed window and from 82.0% to 86.0% on another. A multi-family task-description critic improves validation success from 46.0% to 56.0%, while the locked held-out test gain is positive but modest, from 65.0% to 67.5%. These results support the feasibility of Q-guided inference for frozen flow-matching VLA policies, while showing that critic generalization and uncertainty-aware guidance remain the central bottlenecks.",
+      "authors": [
+        "Liuhaichen Yang",
+        "Zhuang Jiang",
+        "Chenchao Sheng",
+        "Zezhi Tang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-02T12:30:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.02092v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Uses learned critic to guide flow-matching VLA policy inference, enhancing agentic control",
+      "llm_evidence_cn": "利用学习到的评论家引导流匹配VLA策略推理，增强智能体控制",
+      "llm_evidence": "利用学习到的评论家引导流匹配VLA策略推理，增强智能体控制",
+      "canonical_evidence": "利用学习到的评论家引导流匹配VLA策略推理，增强智能体控制",
+      "llm_tldr_en": "Guided Action Flow uses a learned action-chunk critic to guide reverse-time flow sampling for VLA policies, improving success rates without retraining.",
+      "llm_tldr_cn": "该论文提出Guided Action Flow框架，在保持预训练VLA策略冻结的情况下，学习动作块评论家指导逆向流采样，无需重新训练即可提升策略性能。在LIBERO操作任务上，单任务评论家将成功率从68.0%提升至82.0%，为智能体策略的测试时引导提供了有效方案。",
+      "llm_tldr": "该论文提出Guided Action Flow框架，在保持预训练VLA策略冻结的情况下，学习动作块评论家指导逆向流采样，无需重新训练即可提升策略性能。在LIBERO操作任务上，单任务评论家将成功率从68.0%提升至82.0%，为智能体策略的测试时引导提供了有效方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.02460v1",
+      "source": "arxiv",
+      "title": "Neuron-Aware Data Selection for Annotation-Free LLM Self-Distillation",
+      "abstract": "Post-training large language models (LLMs) without real-world interaction feedback or human-labeled supervision remains challenging, particularly in specialized domains where expert annotations are costly to obtain. Recent annotation-free self-evolution methods address this by using the model's own outputs as supervision signals, constructing a teacher via additional context and aggregating predictions across multiple rollouts through majority voting to produce pseudo-labels. However, these approaches are not without drawbacks: SFT- and GRPO-based variants suffer out-of-domain performance degradation, while reward-based on-policy RL inflates calibration error. In this paper, we propose Neuron On-Policy Self-Distillation (Neuron-OPSD), a data-centric framework for annotation-free self-distillation that leverages internal neuron activations to guide both training-data selection and teacher context construction. The model is then trained via on-policy distillation from the teacher distribution, requiring no ground-truth labels at any stage. Across specialized-domain benchmarks, Neuron-OPSD improves in-domain task performance while preserving cross-domain generalization and mitigating calibration collapse over prior annotation-free baselines. This framework is particularly relevant to settings where online interaction or external supervision is costly or infeasible, and is conceptually distinct from offline RL approaches that rely on logged, reward-labeled trajectories.",
+      "authors": [
+        "Zhuowei Chen",
+        "Xiang Lorraine Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-02T17:27:24+00:00",
+      "link": "https://arxiv.org/pdf/2607.02460v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses on-policy RL for LLM self-distillation with data selection",
+      "llm_evidence_cn": "利用在线策略强化学习进行LLM自蒸馏，并引入数据选择",
+      "llm_evidence": "利用在线策略强化学习进行LLM自蒸馏，并引入数据选择",
+      "canonical_evidence": "利用在线策略强化学习进行LLM自蒸馏，并引入数据选择",
+      "llm_tldr_en": "Neuron-OPSD combines on-policy RL with neuron-aware data selection for annotation-free LLM self-distillation, avoiding out-of-domain degradation and calibration errors.",
+      "llm_tldr_cn": "针对无标注LLM自蒸馏中SFT和GRPO变体出现域外性能下降、基于奖励的在线RL导致校准误差增大等问题，本文提出Neuron-OPSD框架。该方法采用神经元感知数据选择策略，结合在线策略强化学习进行自蒸馏，在不依赖人工标注或真实交互反馈的情况下提升模型性能。实验表明该方法在多个领域优于现有无监督自进化方法。",
+      "llm_tldr": "针对无标注LLM自蒸馏中SFT和GRPO变体出现域外性能下降、基于奖励的在线RL导致校准误差增大等问题，本文提出Neuron-OPSD框架。该方法采用神经元感知数据选择策略，结合在线策略强化学习进行自蒸馏，在不依赖人工标注或真实交互反馈的情况下提升模型性能。实验表明该方法在多个领域优于现有无监督自进化方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.02490v1",
+      "source": "arxiv",
+      "title": "Visually Grounded Self-Reflection for Vision-Language Models via Reinforcement Learning",
+      "abstract": "Large vision-language models can reason over multimodal inputs by generating textual chains of thought (CoT). A key capability exhibited in CoT reasoning is self-reflection: revisiting earlier decisions and correcting previous errors. However, existing LVLMs often fail to properly attend to visual inputs during reflection, limiting their ability to translate feedback into grounded corrections, especially for out-of-distribution images. To address this issue, we propose a novel reinforcement learning training framework VRRL, with two components explicitly designed to elicit visually grounded self-reflection. First, we randomly mask trajectory prefixes during training to emphasize recovery from incorrect intermediate predictions rather than making early mistakes. Second, we introduce buffered roll-ins from an experience replay buffer to expose the model to diverse failure states that it must learn to correct. We evaluate our approach on visual grounding tasks involving tables and charts, as well as spatial navigation benchmarks. While off-the-shelf and conventionally fine-tuned models degrade substantially under distribution shift, our method substantially improves average out-of-distribution accuracy over standard RL and reflection-oriented fine-tuning baselines by using self-reflection effectively.",
+      "authors": [
+        "Liyan Tang",
+        "Fangcong Yin",
+        "Greg Durrett"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "published": "2026-07-02T17:53:15+00:00",
+      "link": "https://arxiv.org/pdf/2607.02490v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL training framework for VLM self-reflection",
+      "llm_evidence_cn": "用于VLM自反思的RL训练框架",
+      "llm_evidence": "用于VLM自反思的RL训练框架",
+      "canonical_evidence": "用于VLM自反思的RL训练框架",
+      "llm_tldr_en": "Proposes VRRL, a reinforcement learning framework to enhance vision-language models' self-reflection ability by training with masked trajectory prefixes and feedback from visual grounding.",
+      "llm_tldr_cn": "现有视觉语言模型在自反思时难以关注视觉信息，尤其是在分布外图像上。本文提出VRRL框架，通过随机掩码轨迹前缀和使用强化学习训练，强制模型从错误中恢复并关注视觉输入，从而提升视觉接地自反思能力。实验表明，VRRL显著改善了模型在需要视觉反馈修正的场景中的性能。",
+      "llm_tldr": "现有视觉语言模型在自反思时难以关注视觉信息，尤其是在分布外图像上。本文提出VRRL框架，通过随机掩码轨迹前缀和使用强化学习训练，强制模型从错误中恢复并关注视觉输入，从而提升视觉接地自反思能力。实验表明，VRRL显著改善了模型在需要视觉反馈修正的场景中的性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

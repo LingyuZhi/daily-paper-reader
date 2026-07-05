@@ -6,50 +6,44 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-04
-- 运行时间：2026-07-04 20:10:14 UTC
+- 最新运行日期：2026-07-05
+- 运行时间：2026-07-05 20:24:27 UTC
 - 运行状态：成功
-- 本次总论文数：10
-- 精读区：3
+- 本次总论文数：8
+- 精读区：1
 - 速读区：7
 
 ### 今日简报（AI）
-今日日报精读两篇顶级论文（ECHO、神经程序性记忆），速读三篇强化学习与视觉语言模型研究。最值得关注：ECHO通过回合级信用分配实现认知自适应，以及神经程序性记忆用隐式激活引导LLM代理行为。下一步建议普通读者优先阅读ECHO，其信用分配机制对提升语言代理的可解释性和鲁棒性有直接启发。
-- 详情：[/202607/04/README](/202607/04/README)
+今日精读1篇、速读7篇，聚焦图像目标导航与智能体行为优化。精读《RoamFlow》提出强化对齐一步法，在图像目标导航中表现突出；速读关注推理时自我改进与语言涌现机制。建议重点阅读RoamFlow论文，并关注基于流匹配的引导动作策略在机器人应用中的潜力。
+- 详情：[/202607/05/README](/202607/05/README)
 
 ### 精读区论文标签
-1. [ECHO: Learning Epistemically Adaptive Language Agents with Turn-Level Credit](/202607/04/2606.29745v1-echo-learning-epistemically-adaptive-language-agents-with-turn-level-credit)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：基于信念状态的自适应语言代理决策过程
-2. [Neural Procedural Memory: Empowering LLM Agents with Implicit Activation Steering](/202607/04/2606.29824v1-neural-procedural-memory-empowering-llm-agents-with-implicit-activation-steering)  
+1. [RoamFlow: Reinforcement-Aligned One-Step Action MeanFlow Policy for Image-Goal Navigation](/202607/05/2606.29934v1-roamflow-reinforcement-aligned-one-step-action-meanflow-policy-for-image-goal-navigation)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：通过隐式激活引导为LLM智能体提供程序记忆，支持自主行为
-3. [Which Tokens Matter? Adaptive Token Selection for RLVR with the Relative Surprisal Index](/202607/04/2606.31575v1-which-tokens-matter-adaptive-token-selection-for-rlvr-with-the-relative-surprisal-index)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：面向RLVR的自适应令牌选择以增强LLM推理
+   evidence：使用强化学习对导航策略进行任务特定优化
 
 ### 速读区论文标签
-1. [Accelerating Q-learning through Efficient Value-Sharing across Actions](/202607/04/2606.29806v1-accelerating-q-learning-through-efficient-value-sharing-across-actions)  
+1. [Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents](/202607/05/2606.31270v1-learning-from-failure-inference-time-self-improvement-for-computer-use-agents)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：通过跨动作值共享加速Q学习
-2. [Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs](/202607/04/2606.32032v1-reinforcement-learning-with-metacognitive-feedback-elicits-faithful-uncertainty-expression-in-llms)  
+   evidence：利用失败驱动的自我改进强化学习提升计算机使用智能体
+2. [From Signals to Structure: How Memory Architecture Drives Language Emergence in LLM Agents](/202607/05/2607.00233v1-from-signals-to-structure-how-memory-architecture-drives-language-emergence-in-llm-agents)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：利用元认知反馈的强化学习提升大语言模型不确定性表达
-3. [VLM-AR3L: Vision-Language Models for Absolute and Relative Rewards in Reinforcement Learning](/202607/04/2607.00483v2-vlm-ar3l-vision-language-models-for-absolute-and-relative-rewards-in-reinforcement-learning)  
+   evidence：研究具有记忆架构的大语言模型智能体中的语言涌现
+3. [Guided Action Flow: Q-Guided Inference for Flow-Matching Vision-Language-Action Policies](/202607/05/2607.02092v1-guided-action-flow-q-guided-inference-for-flow-matching-vision-language-action-policies)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：基于视觉语言模型的绝对与相对奖励函数用于强化学习
-4. [Coachable agents for interactive gameplay](/202607/04/2607.00642v1-coachable-agents-for-interactive-gameplay)  
+   evidence：利用学习到的评论家引导流匹配VLA策略推理，增强智能体控制
+4. [Neuron-Aware Data Selection for Annotation-Free LLM Self-Distillation](/202607/05/2607.02460v1-neuron-aware-data-selection-for-annotation-free-llm-self-distillation)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：可指导的强化学习智能体用于交互游戏且具有风格控制
-5. [LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior](/202607/04/2606.28182v1-llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior)  
+   evidence：利用在线策略强化学习进行LLM自蒸馏，并引入数据选择
+5. [Visually Grounded Self-Reflection for Vision-Language Models via Reinforcement Learning](/202607/05/2607.02490v1-visually-grounded-self-reflection-for-vision-language-models-via-reinforcement-learning)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：用于VLM自反思的RL训练框架
+6. [Warp RL: Reshaping Base Policy Distributions for Dynamics Adaptation](/202607/05/2606.31043v2-warp-rl-reshaping-base-policy-distributions-for-dynamics-adaptation)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：LLM代理学习合作法则以建模具身多智能体行为
-6. [Hierarchical Decision Making with Structured Policies: A Principled Design via Inverse Optimization](/202607/04/2606.28764v1-hierarchical-decision-making-with-structured-policies-a-principled-design-via-inverse-optimization)  
+   evidence：用于自主智能体的残差RL策略适应
+7. [Safe Online Learning via Smooth Safety-Structured Policy Composition](/202607/05/2606.31320v1-safe-online-learning-via-smooth-safety-structured-policy-composition)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：通过逆优化设计结构化策略的层次决策
-7. [RoAd-RL: A Unified Library and Benchmark for Robust Adversarial Reinforcement Learning](/202607/04/2606.29867v1-road-rl-a-unified-library-and-benchmark-for-robust-adversarial-reinforcement-learning)  
-   标签：评分：6.0/10、query:agentic-rl
-   evidence：用于鲁棒对抗RL的统一库与基准，适用于自主系统
+   evidence：面向自主智能体的安全在线学习与平滑安全结构化策略组合
 
 
 <div class="dpr-home-promo-card">
