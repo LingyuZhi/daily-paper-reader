@@ -1,0 +1,186 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-06T20:30:41.260266+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2607.02390v1",
+      "source": "arxiv",
+      "title": "DecompRL: Solving Harder Problems by Learning Modular Code Generation",
+      "abstract": "How can Large Language Models (LLMs) solve problems they currently cannot? Repeated sampling scales test-time compute but GPU cost grows linearly with attempts, while reinforcement learning (RL) with verifiable rewards improves single-attempt accuracy at the expense of sample diversity. Both strategies ultimately fail when the base policy has near-zero probability of producing a correct solution: no amount of sampling or gradient signal can overcome a search space that is simply too large. We take a different approach: rather than sampling harder, we make the task easier by decomposing problems into smaller, independently solvable sub-functions whose implementations can be recombined. Since off-the-shelf models are not trained for this modular generation, we introduce DecompRL, an RL algorithm that explicitly learns to decompose and implement hierarchical code structures. Recombining $k$ implementations of $n$ modules yields up to $k^{n}$ candidate solutions, shifting the bottleneck from GPU inference to cheap CPU evaluation and cutting GPU token cost by $\\sim$50$\\times$. On LiveCodeBench and CodeContests (Qwen~2.5~7B, Code World Model~32B), DecompRL outperforms standard and diversity-optimized RL baselines beyond $10^5$ tokens per problem, solving problems that standard generation cannot reach.",
+      "authors": [
+        "Juliette Decugis",
+        "Fabian Gloeckle",
+        "Francis Bach",
+        "Taco Cohen",
+        "Gabriel Synnaeve"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-02T16:25:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.02390v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL with verifiable rewards for modular code generation with LLMs",
+      "llm_evidence_cn": "结合可验证奖励的强化学习用于大语言模型模块化代码生成",
+      "llm_evidence": "结合可验证奖励的强化学习用于大语言模型模块化代码生成",
+      "canonical_evidence": "结合可验证奖励的强化学习用于大语言模型模块化代码生成",
+      "llm_tldr_en": "DecompRL uses RL to train LLMs to decompose problems into modular sub-functions, improving solvability of hard problems.",
+      "llm_tldr_cn": "大语言模型在解决困难问题时，采样和强化学习都可能因搜索空间过大而失效。本文提出DecompRL，利用强化学习训练LLM将问题分解为模块化子函数，子函数可独立生成并组合。通过可验证的奖励信号（如代码正确性）指导分解策略，使原本无法解决的问题变得可解。该方法在编程竞赛题上取得显著提升，展示了RL增强LLM推理能力的潜力。",
+      "llm_tldr": "大语言模型在解决困难问题时，采样和强化学习都可能因搜索空间过大而失效。本文提出DecompRL，利用强化学习训练LLM将问题分解为模块化子函数，子函数可独立生成并组合。通过可验证的奖励信号（如代码正确性）指导分解策略，使原本无法解决的问题变得可解。该方法在编程竞赛题上取得显著提升，展示了RL增强LLM推理能力的潜力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.02255v1",
+      "source": "arxiv",
+      "title": "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents",
+      "abstract": "Memory for a long-horizon LLM agent is a contract about what each future decision is allowed to see. The simplest contract appends past observations, tool calls, and reflections to every prompt, which makes prior context easy to access but also turns it into a jumbled mixture in which the effect of any single memory component is hard to isolate. We introduce and instrument an alternative bounded contract: every decision is made from a fresh user message assembled by typed retrieval, with no raw cross-decision transcript appended. The prompt thus stays bounded across runs of any length, and any single layer can be ablated in isolation. We instantiate the contract in Slay the Spire 2, a closed-rule stochastic deck-building game whose runs require hundreds of tactical and strategic decisions. A public online benchmark of frontier LLMs on the same game reports zero wins at the lowest difficulty across five configurations, and the developer-reported human win rate at the same difficulty is 16%; the task is hard but not saturated. Within our harness, a fixed-A0 ablation shows the largest observed difference when triggered strategic skills are enabled: the no-store baseline wins 3/10 games and adding the skill layer 6/10. At this sample size the comparison is directional rather than statistically decisive (Fisher exact p\\approx0.37); a cross-backbone probe and public accumulating-context baselines are reported as operational comparisons rather than controlled tests of the contract variable itself. We release a reproducible testbed: 298 completed trajectories with condition tags, frozen memory/skill snapshots, prompt records, and analysis scripts -- an agent design and a validated, reusable methodology for studying how explicit memory layers shape long-horizon LLM-agent decisions.",
+      "authors": [
+        "Xiangchen Cheng",
+        "Yunwei Jiang",
+        "Jianwen Sun",
+        "Zizhen Li",
+        "Chuanhao Li",
+        "Xiangcheng Cao",
+        "Yihao Liu",
+        "Fanrui Zhang",
+        "Li Jin",
+        "Kaipeng Zhang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-02T14:44:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.02255v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "LLM agent bounded-memory testbed for long-horizon decision making",
+      "llm_evidence_cn": "长程LLM智能体的有界记忆测试平台",
+      "llm_evidence": "长程LLM智能体的有界记忆测试平台",
+      "canonical_evidence": "长程LLM智能体的有界记忆测试平台",
+      "llm_tldr_en": "Proposes AgenticSTS, a bounded-memory testbed for evaluating long-horizon LLM agents with typed retrieval, demonstrated in Slay the Spire 2.",
+      "llm_tldr_cn": "长程LLM智能体的记忆管理面临上下文杂乱难以隔离的问题。本文提出有界记忆合约AgenticSTS，通过类型化检索为每步决策组装新鲜上下文，保持提示长度有界且支持单层消融。在Slay the Spire 2游戏中验证，能有效支持长期决策评估。该测试平台为agentic RL研究提供了可控实验环境。",
+      "llm_tldr": "长程LLM智能体的记忆管理面临上下文杂乱难以隔离的问题。本文提出有界记忆合约AgenticSTS，通过类型化检索为每步决策组装新鲜上下文，保持提示长度有界且支持单层消融。在Slay the Spire 2游戏中验证，能有效支持长期决策评估。该测试平台为agentic RL研究提供了可控实验环境。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.29712v1",
+      "source": "arxiv",
+      "title": "Why Struggle with Continuous Latents? Interpretable Discrete Latent Reasoning via Rendered Compression",
+      "abstract": "Large language models achieve high reasoning performance via explicit chain-of-thought and reinforcement learning, but require long output sequences and extended inference time. Latent reasoning reduces this cost by shifting computation into a latent space; however, continuous latent methods are hard to train, suffering from unstable and uninterpretable reasoning trajectories. We argue these issues stem from a misalignment between continuous-space reasoning and discrete symbolic supervision, as continuous states lack explicit anchors for step-by-step alignment. To resolve this, we propose \\textbf{Discrete Latent Reasoning~(DLR)}, the first method that converts continuous latent states into explicit discrete tokens. Inspired by render-based compression, we render textual chains of thought into images, extract visual features, and construct a discrete latent vocabulary via clustering-based fine-tuning. Expanding the vocabulary and output head enables standard autoregressive modeling over both natural language and latent tokens, supporting pretraining alignment, SFT, and RL. Experiments on five reasoning benchmarks and two model series~(Qwen3-VL and LLaMA-3) confirm that \\textbf{DLR} outperforms prior latent reasoning baselines with up to \\textbf{20$\\times$ compression}. Furthermore, the learned latent trajectories retain an interpretable semantic structure. Overall, discrete latent tokens provide a controllable and interpretable basis for efficient latent reasoning.",
+      "authors": [
+        "Shuochen Chang",
+        "Qingyang Liu",
+        "Shaobo Wang",
+        "Bingjie Gao",
+        "Qianli Ma",
+        "Haonan Zhao",
+        "Yibo Miao",
+        "Yulin Sun",
+        "Zelin Peng",
+        "Jiangtong Li",
+        "Li Niu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-29T02:34:52+00:00",
+      "link": "https://arxiv.org/pdf/2606.29712v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Discrete latent reasoning for LLMs with RL but not agentic focus",
+      "llm_evidence_cn": "离散潜在推理与RL结合但非智能体核心",
+      "llm_evidence": "离散潜在推理与RL结合但非智能体核心",
+      "canonical_evidence": "离散潜在推理与RL结合但非智能体核心",
+      "llm_tldr_en": "Proposes Discrete Latent Reasoning (DLR) to convert continuous latent states into discrete tokens for interpretable and stable latent reasoning in LLMs.",
+      "llm_tldr_cn": "该论文针对连续潜在推理难以训练且不可解释的问题，提出离散潜在推理（DLR）方法，将连续潜在状态转化为显式离散令牌。DLR利用强化学习优化离散潜在轨迹，在无需长输出序列的情况下提升推理效率，同时保持可解释性。实验表明DLR在多个推理任务上达到与链式思维相当的性能。",
+      "llm_tldr": "该论文针对连续潜在推理难以训练且不可解释的问题，提出离散潜在推理（DLR）方法，将连续潜在状态转化为显式离散令牌。DLR利用强化学习优化离散潜在轨迹，在无需长输出序列的情况下提升推理效率，同时保持可解释性。实验表明DLR在多个推理任务上达到与链式思维相当的性能。",
+      "llm_tags": [
+        "query:agentic-rl:composite"
+      ],
+      "matched_query_tag": "query:agentic-rl:composite",
+      "matched_query_text": "Papers central to Agentic RL 与 LLM 解释 RL 策略相关论文, especially work that connects or combines: agentic reinforcement learning methods for autonomous agents; using reinforcement learning to enhance large language models; large language model explaining reinforcement learning policy; reinforcement learning for agent decision making; recent research on agentic reinforcement learning; using large language models to explain reinforcement learning policies; how reinforcement learning enhances large language model capabilities.",
+      "matched_requirement_id": "req-composite-agentic-rl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.01415v1",
+      "source": "arxiv",
+      "title": "The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning",
+      "abstract": "Coding-agent reinforcement learning treats execution infrastructure as a background implementation detail, despite relying on large numbers of interactive software rollouts. This is a missed opportunity: measuring infrastructure overhead can reveal practical efficiency gains for RL post-training, where small per-rollout savings compound at scale. We present a comparative study of four execution substrates: single containers, hosted sandboxes, Kubernetes-orchestrated containers, and cloud virtual machines. We find up to $110\\times$ variation in cold-start latency and a $1.8\\times$ spread in projected worker-hours for one million 150-step trajectories. Our results suggest that future coding-agent RL systems should optimize execution substrates as part of the training system itself, not merely as deployment plumbing.",
+      "authors": [
+        "Daniel Thi Graviet",
+        "Lovre Pesut",
+        "Ivan Dagelic",
+        "Vedran Jukic",
+        "Ivan Burazin"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.DC"
+      ],
+      "published": "2026-07-01T19:20:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.01415v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "analyzes infrastructure overhead in coding-agent reinforcement learning",
+      "llm_evidence_cn": "分析编码智能体强化学习中的基础设施开销",
+      "llm_evidence": "分析编码智能体强化学习中的基础设施开销",
+      "canonical_evidence": "分析编码智能体强化学习中的基础设施开销",
+      "llm_tldr_en": "This paper measures infrastructure costs for coding-agent RL, revealing up to 110x cold-start latency variation and 1.8x worker-hour spread, advocating for optimization of execution substrates.",
+      "llm_tldr_cn": "编码智能体强化学习依赖大量交互式软件部署，但基础设施开销常被忽视。本文比较了四种执行环境：单容器、托管沙箱、Kubernetes容器和云虚拟机，发现冷启动延迟差异高达110倍，百万次150步轨迹的预计工时差异达1.8倍。结果表明，优化执行基础设施可显著提升RL训练效率。",
+      "llm_tldr": "编码智能体强化学习依赖大量交互式软件部署，但基础设施开销常被忽视。本文比较了四种执行环境：单容器、托管沙箱、Kubernetes容器和云虚拟机，发现冷启动延迟差异高达110倍，百万次150步轨迹的预计工时差异达1.8倍。结果表明，优化执行基础设施可显著提升RL训练效率。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

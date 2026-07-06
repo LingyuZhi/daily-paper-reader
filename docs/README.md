@@ -6,44 +6,32 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-05
-- 运行时间：2026-07-05 20:24:27 UTC
+- 最新运行日期：2026-07-06
+- 运行时间：2026-07-06 20:34:22 UTC
 - 运行状态：成功
-- 本次总论文数：8
+- 本次总论文数：4
 - 精读区：1
-- 速读区：7
+- 速读区：3
 
 ### 今日简报（AI）
-今日精读1篇、速读7篇，聚焦图像目标导航与智能体行为优化。精读《RoamFlow》提出强化对齐一步法，在图像目标导航中表现突出；速读关注推理时自我改进与语言涌现机制。建议重点阅读RoamFlow论文，并关注基于流匹配的引导动作策略在机器人应用中的潜力。
-- 详情：[/202607/05/README](/202607/05/README)
+今日共4篇论文，精读《DecompRL: Solving Harder Problems by Learning Modular Code Generation》获8.0分，速读探索长程智能体、离散潜在推理及编码强化学习。最值得关注的是模块化代码生成提升问题求解能力，以及编码智能体强化学习中的基础设施投入瓶颈。建议优先精读《DecompRL》，再速读其余三篇了解前沿对比。
+- 详情：[/202607/06/README](/202607/06/README)
 
 ### 精读区论文标签
-1. [RoamFlow: Reinforcement-Aligned One-Step Action MeanFlow Policy for Image-Goal Navigation](/202607/05/2606.29934v1-roamflow-reinforcement-aligned-one-step-action-meanflow-policy-for-image-goal-navigation)  
+1. [DecompRL: Solving Harder Problems by Learning Modular Code Generation](/202607/06/2607.02390v1-decomprl-solving-harder-problems-by-learning-modular-code-generation)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：使用强化学习对导航策略进行任务特定优化
+   evidence：结合可验证奖励的强化学习用于大语言模型模块化代码生成
 
 ### 速读区论文标签
-1. [Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents](/202607/05/2606.31270v1-learning-from-failure-inference-time-self-improvement-for-computer-use-agents)  
+1. [AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents](/202607/06/2607.02255v1-agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：利用失败驱动的自我改进强化学习提升计算机使用智能体
-2. [From Signals to Structure: How Memory Architecture Drives Language Emergence in LLM Agents](/202607/05/2607.00233v1-from-signals-to-structure-how-memory-architecture-drives-language-emergence-in-llm-agents)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：研究具有记忆架构的大语言模型智能体中的语言涌现
-3. [Guided Action Flow: Q-Guided Inference for Flow-Matching Vision-Language-Action Policies](/202607/05/2607.02092v1-guided-action-flow-q-guided-inference-for-flow-matching-vision-language-action-policies)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：利用学习到的评论家引导流匹配VLA策略推理，增强智能体控制
-4. [Neuron-Aware Data Selection for Annotation-Free LLM Self-Distillation](/202607/05/2607.02460v1-neuron-aware-data-selection-for-annotation-free-llm-self-distillation)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：利用在线策略强化学习进行LLM自蒸馏，并引入数据选择
-5. [Visually Grounded Self-Reflection for Vision-Language Models via Reinforcement Learning](/202607/05/2607.02490v1-visually-grounded-self-reflection-for-vision-language-models-via-reinforcement-learning)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：用于VLM自反思的RL训练框架
-6. [Warp RL: Reshaping Base Policy Distributions for Dynamics Adaptation](/202607/05/2606.31043v2-warp-rl-reshaping-base-policy-distributions-for-dynamics-adaptation)  
+   evidence：长程LLM智能体的有界记忆测试平台
+2. [Why Struggle with Continuous Latents? Interpretable Discrete Latent Reasoning via Rendered Compression](/202607/06/2606.29712v1-why-struggle-with-continuous-latents-interpretable-discrete-latent-reasoning-via-rendered-compression)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：用于自主智能体的残差RL策略适应
-7. [Safe Online Learning via Smooth Safety-Structured Policy Composition](/202607/05/2606.31320v1-safe-online-learning-via-smooth-safety-structured-policy-composition)  
+   evidence：离散潜在推理与RL结合但非智能体核心
+3. [The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning](/202607/06/2607.01415v1-the-rollout-infrastructure-tax-in-coding-agent-reinforcement-learning)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：面向自主智能体的安全在线学习与平滑安全结构化策略组合
+   evidence：分析编码智能体强化学习中的基础设施开销
 
 
 <div class="dpr-home-promo-card">
