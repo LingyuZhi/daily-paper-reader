@@ -1,0 +1,798 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-08T21:32:35.183514+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 17,
+    "deep_cap": 6,
+    "deep_selected": 8,
+    "quick_candidates": 14,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2607.03126v2",
+      "source": "arxiv",
+      "title": "ACPO: Adaptive Credit Policy Optimization via Fine-Grained Surrogate Entropy",
+      "abstract": "Reinforcement Learning (RL) has substantially improved the reasoning ability of large language models (LLMs), but sparse outcome rewards still make token-level credit assignment difficult. Existing scalable RL methods typically assign trajectory-level rewards uniformly across tokens, while recent entropy-aware approaches either rely on coarse detached heuristics or directly optimize true entropy, which can introduce non-local gradient components misaligned with sampled-token policy updates. We propose Adaptive Credit Policy Optimization (ACPO), a token-level credit assignment framework based on a mode-local surrogate entropy. ACPO asymmetrically modulates policy updates by emphasizing uncertain decisions in successful rollouts and overconfident tokens in failed rollouts. We show that the surrogate admits deterministic entropy bounds and, under modal alignment and proximal updates, preserves the policy-gradient direction to leading order. Experiments on mathematical reasoning and coding benchmarks, including AIME 2025 and HumanEvalPro, show that ACPO consistently improves over strong RL baselines such as DAPO, GTPO, and SAPO.",
+      "authors": [
+        "Zijun Xie",
+        "Yuyang You",
+        "Yongzhi Li",
+        "Enlei Gong",
+        "Zeyu Chen",
+        "Quan Chen",
+        "Yanhua Cheng",
+        "Peng Jiang",
+        "Yadong Mu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-03T09:14:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.03126v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL enhances LLM reasoning, token-level credit assignment",
+      "llm_evidence_cn": "强化学习增强大语言模型推理，令牌级信用分配",
+      "llm_evidence": "强化学习增强大语言模型推理，令牌级信用分配",
+      "canonical_evidence": "强化学习增强大语言模型推理，令牌级信用分配",
+      "llm_tldr_en": "ACPO uses token-level credit assignment with mode-local surrogate entropy to improve LLM reasoning, outperforming trajectory-level methods.",
+      "llm_tldr_cn": "该论文针对强化学习提升大语言模型推理时稀疏奖励导致令牌级信用分配困难的问题，提出了自适应信用策略优化（ACPO）。ACPO基于模态局部代理熵，非对称地调整策略更新，在成功轨迹中强调不确定决策，在失败轨迹中抑制过度自信策略。在数学推理任务上，ACPO显著优于轨迹级方法，提升了LLM的推理能力。",
+      "llm_tldr": "该论文针对强化学习提升大语言模型推理时稀疏奖励导致令牌级信用分配困难的问题，提出了自适应信用策略优化（ACPO）。ACPO基于模态局部代理熵，非对称地调整策略更新，在成功轨迹中强调不确定决策，在失败轨迹中抑制过度自信策略。在数学推理任务上，ACPO显著优于轨迹级方法，提升了LLM的推理能力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.03441v1",
+      "source": "arxiv",
+      "title": "No Time Like the Present: Agentic Test-Time Training for LLM Agents",
+      "abstract": "LLM agents often degrade over long episodes: as trajectories grow, they revisit explored states, repeat failed actions, and lose strategies that previously worked. Test-time training (TTT) offers a way to adapt model weights to the evolving task state, but existing LLM TTT methods largely adapt once to a fixed input. We study continuous TTT in multi-turn agent episodes, where each update changes the policy that generates later training text. This creates a self-training loop that helps when new trajectory information appears, but can amplify drift when the agent gets stuck and repeatedly trains on similar text. We find that update-text repetition distinguishes these regimes and introduce Agentic Test-Time Training (aTTT), a token-level reweighting method that downweights the loss on tokens appearing in repeated $n$-grams from prior updates while leaving novel tokens fully weighted. To run such updates inside live episodes, we build a concurrent serving system using vLLM's runtime LoRA API, limiting overhead to 1.9$\\times$ the no-TTT cost. aTTT improves success by up to 5.0 points on ALFWorld and 4.9 points on SWE-bench Lite. The gains concentrate where models already have task competence but drift over long trajectories, suggesting that aTTT mainly preserves existing competence rather than teaching new abilities.",
+      "authors": [
+        "Yanbo Wang",
+        "Jinhua Hao",
+        "Yuze Shi",
+        "Kun Yuan",
+        "Ming Sun"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-03T15:54:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.03441v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "introduces Agentic Test-Time Training (aTTT) for LLM agents to adapt weights continuously during multi-turn episodes",
+      "llm_evidence_cn": "提出面向LLM智能体的自主测试时训练（aTTT），在多轮对话过程中持续调整权重",
+      "llm_evidence": "提出面向LLM智能体的自主测试时训练（aTTT），在多轮对话过程中持续调整权重",
+      "canonical_evidence": "提出面向LLM智能体的自主测试时训练（aTTT），在多轮对话过程中持续调整权重",
+      "llm_tldr_en": "LLM agents degrade over long episodes; this paper introduces Agentic Test-Time Training (aTTT), a token-level reweighting method that adapts model weights continuously during multi-turn interactions, mitigating drift and improving long-term performance.",
+      "llm_tldr_cn": "LLM智能体在长程任务中常出现退化，如重复探索失败状态和丢失有效策略。现有测试时训练方法大多只适应一次固定输入，无法应对持续变化。本文提出自主测试时训练（aTTT），通过令牌级重加权方法在智能体多轮交互中连续调整模型权重，利用自我训练循环从新轨迹中学习，同时避免因重复相似文本导致的漂移。实验证明aTTT显著提升了LLM智能体在长程任务中的表现。",
+      "llm_tldr": "LLM智能体在长程任务中常出现退化，如重复探索失败状态和丢失有效策略。现有测试时训练方法大多只适应一次固定输入，无法应对持续变化。本文提出自主测试时训练（aTTT），通过令牌级重加权方法在智能体多轮交互中连续调整模型权重，利用自我训练循环从新轨迹中学习，同时避免因重复相似文本导致的漂移。实验证明aTTT显著提升了LLM智能体在长程任务中的表现。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.04470v1",
+      "source": "arxiv",
+      "title": "Regime-Conditional Stabilisation of LLM-Augmented Cooperative Multi-Agent Reinforcement Learning",
+      "abstract": "Large Language Models (LLMs) offer a natural interface for translating human objectives into reward signals for cooperative multi-agent reinforcement learning (MARL), yet the training-time dynamics of this integration remain poorly understood. We show that dynamically updating LLM-generated reward weights during off-policy MARL violates the stationarity assumption of Potential-Based Reward Shaping (PBRS) and contaminates the experience replay buffer, whose stored transitions carry reward labels computed under stale shaping weights. We characterise the result as a regime-dependent failure whose severity depends on how competent the unshaped baseline already is. To control it we propose two stabilisation strategies: a Phase-Based Freeze Schedule that enforces strict stationarity within training phases, and Exponential Moving Average (EMA) smoothing that bounds per-episode weight drift. We evaluate across three cooperative environments and five random seeds with QMIX, complemented by an exploratory VDN extension, yielding a three-regime taxonomy. In the augmentative regime (Simple Spread), where the baseline is functional (74.4 %), EMA significantly improves success to 86.7 % ($+12.3$ pp, $p<0.01$) while naive dynamic updates collapse it to 15.2 %. In the essential regime (Level-Based Foraging), where the baseline is broken (0.1 %), any shaping unlocks the task (95.9 % under EMA). In the supplementary regime (SMAC 3m), where the baseline is near-saturated (98.8 %), stabilised shaping preserves performance (99.9 %) while unstabilised shaping adds variance without gain. These findings establish reward-signal stationarity as a necessary design constraint and indicate that regime placement is a practical predictor of whether dynamic LLM shaping helps or harms.",
+      "authors": [
+        "Faid Keddouri",
+        "Sohaib Houhou",
+        "Aissa Boulmerka",
+        "Nadir Farhi"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.OC"
+      ],
+      "published": "2026-07-05T19:29:21+00:00",
+      "link": "https://arxiv.org/pdf/2607.04470v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "LLM-augmented MARL for autonomous agents",
+      "llm_evidence_cn": "基于LLM的多智能体强化学习",
+      "llm_evidence": "基于LLM的多智能体强化学习",
+      "canonical_evidence": "基于LLM的多智能体强化学习",
+      "llm_tldr_en": "Proposes stabilization strategies for LLM-augmented cooperative MARL, addressing non-stationarity from dynamic reward weights.",
+      "llm_tldr_cn": "该论文针对大型语言模型增强的协作多智能体强化学习中的训练动态不稳定性问题，揭示了动态更新LLM生成奖励权重会破坏势能基奖励塑形的平稳性假设并污染经验回放缓冲区。为此提出了两种稳定策略：基于阶段的方法和基于置信度的方法，有效控制了不同机制下的失败程度。",
+      "llm_tldr": "该论文针对大型语言模型增强的协作多智能体强化学习中的训练动态不稳定性问题，揭示了动态更新LLM生成奖励权重会破坏势能基奖励塑形的平稳性假设并污染经验回放缓冲区。为此提出了两种稳定策略：基于阶段的方法和基于置信度的方法，有效控制了不同机制下的失败程度。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.04854v1",
+      "source": "arxiv",
+      "title": "CARL: Constraint-Aware Reinforcement Learning for Planning with LLMs",
+      "abstract": "Despite their strong reasoning capabilities and extensive world knowledge, Large Language Models (LLMs) frequently generate plans that violate task constraints, undermining their reliability in real-world applications. This deficiency arises from a lack of systematic mechanisms to incorporate constraint information during the generation process. While existing approaches attempt to mitigate this by relying on external tools or task decomposition, they fail to enhance the model's intrinsic constraint awareness. To address this, we propose Constraint-Aware Reinforcement Learning (CARL), a novel RL framework designed to strengthen LLMs' intrinsic focus on constraints. CARL introduces a constraint-aware reward by comparing the model's output distributions under constrained and unconstrained inputs, encouraging constraint focus and penalizing neglect. Compatible with various RL frameworks and requiring no external solvers or top models, CARL enables scalable, end-to-end constraint-aware planning. Extensive experiments on BlocksWorld, TravelPlanner, and T-Eval demonstrate that CARL significantly outperforms standard Reinforcement Fine-Tuning (RFT) baselines and state-of-the-art reasoning models, exhibiting a markedly increased focus on constraints.",
+      "authors": [
+        "Qiuyi Qi",
+        "Jinjian Zhang",
+        "Mutian Bao",
+        "Tian Liang",
+        "Guocong Li",
+        "Dongnan Liu",
+        "Wei Zhou",
+        "Jie Liu",
+        "Ming Kong",
+        "Linjian Mo",
+        "Feng Zhang",
+        "Qiang Zhu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-06T09:29:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.04854v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes a constraint-aware RL framework to enhance LLMs intrinsic constraint awareness during planning",
+      "llm_evidence_cn": "提出约束感知的强化学习框架，增强LLM在规划中的内在约束感知能力",
+      "llm_evidence": "提出约束感知的强化学习框架，增强LLM在规划中的内在约束感知能力",
+      "canonical_evidence": "提出约束感知的强化学习框架，增强LLM在规划中的内在约束感知能力",
+      "llm_tldr_en": "CARL introduces constraint-aware RL to strengthen LLMs intrinsic focus on constraints by comparing output distributions, improving plan reliability without external tools.",
+      "llm_tldr_cn": "LLM在规划任务中常生成违反约束的方案，现有方法依赖外部工具或任务分解，无法增强模型内在的约束意识。本文提出CARL，一个约束感知强化学习框架，通过比较模型在有/无约束提示下的输出分布来设计约束感知奖励，从而直接强化LLM对约束的关注。实验表明，CARL在不使用外部工具的情况下大幅提升了LLM规划中约束的满足率，同时保持了生成质量。",
+      "llm_tldr": "LLM在规划任务中常生成违反约束的方案，现有方法依赖外部工具或任务分解，无法增强模型内在的约束意识。本文提出CARL，一个约束感知强化学习框架，通过比较模型在有/无约束提示下的输出分布来设计约束感知奖励，从而直接强化LLM对约束的关注。实验表明，CARL在不使用外部工具的情况下大幅提升了LLM规划中约束的满足率，同时保持了生成质量。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.05378v1",
+      "source": "arxiv",
+      "title": "CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents",
+      "abstract": "Long-horizon agentic LLMs are increasingly limited by finite context windows, as extended interaction trajectories can exceed the maximum context length before a task is completed. Context compaction offers a natural solution by summarizing previous interaction states and continuing the rollout under a compressed context, but incorporating compaction into reinforcement learning remains underexplored. We propose CompactionRL, a reinforcement learning strategy to train long-horizon agentic LLMs with context compaction. Our approach jointly optimizes task execution and summary generation with token-level loss normalization and cross-trajectory generalized advantage estimation. This design enables the LLM agents to learn from compacted long-horizon trajectories. We train CompactionRL on top of open models and observe consistent performance gains on agentic coding tasks. CompactionRL enables the open GLM-4.5-Air model (106B-A30B) to achieve Pass@1 scores of 66.8% on SWE-bench Verified and 24.5% on Terminal-Bench 2.0, with absolute gains of 7.0 and 3.1 points, respectively. Built upon GLM-4.7-Flash (30B-A3B), CompactionRL improves Pass@1 by 5.5 and 6.8 points, reaching 56.0% on SWE-bench Verified and 20.2% on Terminal-Bench 2.0, respectively. CompactionRL is thus deployed in the RL pipeline for training the open GLM-5.2 model (750B-A40B).",
+      "authors": [
+        "Yujiang Li",
+        "Zhenyu Hou",
+        "Yi Jing",
+        "Jie Tang",
+        "Yuxiao Dong"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-06T17:55:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.05378v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes CompactionRL, a reinforcement learning strategy for long-horizon agentic LLMs with context compaction",
+      "llm_evidence_cn": "提出CompactionRL，一种面向长程自主LLM智能体的上下文压缩强化学习策略",
+      "llm_evidence": "提出CompactionRL，一种面向长程自主LLM智能体的上下文压缩强化学习策略",
+      "canonical_evidence": "提出CompactionRL，一种面向长程自主LLM智能体的上下文压缩强化学习策略",
+      "llm_tldr_en": "CompactionRL jointly optimizes task execution and summary generation for long-horizon agentic LLMs, using token-level normalization and cross-trajectory GAE to enable learning from compacted context.",
+      "llm_tldr_cn": "长程自主LLM智能体常因上下文窗口有限而中断，上下文压缩可通过摘要维持交互，但在强化学习中尚未被充分利用。本文提出CompactionRL，一个强化学习策略，联合优化任务执行和摘要生成，使用令牌级损失归一化和跨轨迹广义优势估计，使得LLM智能体能够从压缩后的上下文中有效学习。实验证明，CompactionRL使智能体在处理长程任务时保持了高成功率，显著优于未使用压缩的方法。",
+      "llm_tldr": "长程自主LLM智能体常因上下文窗口有限而中断，上下文压缩可通过摘要维持交互，但在强化学习中尚未被充分利用。本文提出CompactionRL，一个强化学习策略，联合优化任务执行和摘要生成，使用令牌级损失归一化和跨轨迹广义优势估计，使得LLM智能体能够从压缩后的上下文中有效学习。实验证明，CompactionRL使智能体在处理长程任务时保持了高成功率，显著优于未使用压缩的方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.05394v1",
+      "source": "arxiv",
+      "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL weak teacher is not enough, because the teacher's final policy mixes useful RL gains with the limitations of the smaller model. We propose Direct On-Policy Distillation (Direct-OPD), which transfers the teacher's RL-induced policy shift instead. Direct-OPD compares the post-RL teacher with its own pre-RL reference and treats their log-ratio as a dense implicit reward for the student. In plain terms, the checkpoint pair tells us which actions RL made the weak model more or less likely to take, and Direct-OPD applies that signal on the stronger student's own on-policy states. This directly reuses the weak model's RL supervision signal without training an explicit reward model or running sparse-reward RL on the target model. Empirically, Direct-OPD consistently leverages weaker teachers to improve stronger target models; notably, it boosts Qwen3-1.7B from 48.3% to 62.4% on AIME 2024 in just 4 hours on 8 A100 GPUs. It outperforms step-matched direct RL and enables the sequential composition of multiple policy shifts. Our results show that RL outcomes can be reused across model scales as implicit reward signals, not merely as final models to imitate.",
+      "authors": [
+        "Shiyuan Feng",
+        "Huan-ang Gao",
+        "Haohan Chi",
+        "Hanlin Wu",
+        "Zhilong Zhang",
+        "Zheng Jiang",
+        "Bingxiang He",
+        "Wei-Ying Ma",
+        "Ya-Qin Zhang",
+        "Hao Zhou"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-06T17:59:58+00:00",
+      "link": "https://arxiv.org/pdf/2607.05394v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL enhances LLM reasoning via weak-to-strong distillation",
+      "llm_evidence_cn": "利用强化学习通过弱到强蒸馏提升大语言模型推理能力",
+      "llm_evidence": "利用强化学习通过弱到强蒸馏提升大语言模型推理能力",
+      "canonical_evidence": "利用强化学习通过弱到强蒸馏提升大语言模型推理能力",
+      "llm_tldr_en": "Proposes Direct On-Policy Distillation (Direct-OPD) to transfer RL-induced policy shift from a weak teacher to a strong student, enabling cost-effective LLM improvement.",
+      "llm_tldr_cn": "针对强化学习后训练大语言模型成本高昂的问题，本文提出直接在线策略蒸馏（Direct-OPD），将弱教师模型经强化学习获得的策略转移给强学生模型。 Direct-OPD通过比较策略变化而非直接复制最终策略，有效传递有用增益并避免弱模型局限。实验表明该方法在多种推理任务上以更低成本达到甚至超越全参强化学习效果。",
+      "llm_tldr": "针对强化学习后训练大语言模型成本高昂的问题，本文提出直接在线策略蒸馏（Direct-OPD），将弱教师模型经强化学习获得的策略转移给强学生模型。 Direct-OPD通过比较策略变化而非直接复制最终策略，有效传递有用增益并避免弱模型局限。实验表明该方法在多种推理任务上以更低成本达到甚至超越全参强化学习效果。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.05458v1",
+      "source": "arxiv",
+      "title": "Learning to Control LLM Agent Harnesses with Offline Reinforcement Learning",
+      "abstract": "Large language model (LLM) agents are usually improved by changing prompts, models, or hand-written workflows, while the execution harness around the model is treated as fixed infrastructure. We argue that this harness is itself a learnable control layer. We formalize harness operation as a finite-horizon Harness MDP, where a lightweight controller selects structural execution actions while the LLM executor remains frozen. The controller is trained from offline rollouts using advantage-weighted regression with only terminal task-rubric rewards. We also separate final task quality from a post-hoc Harness Maturity Score, which measures whether the harness follows reliable execution patterns rather than only whether the final answer is correct. This separation gives a finite-buffer view of harness learning: final-quality gains require high-return support in the offline buffer, while process behavior can shift whenever it aligns with advantage-weighted actions. Across six controlled domains and two public-benchmark adapters, the learned controller consistently improves verification behavior and selectively improves final task quality, with the largest gains on adapted tau-bench retail, adapted AgentBench DB-Bench, and coding with a calibrated structural verifier. Ablations against behavior cloning and Forced CHECK show that the gains are not explained by imitation or by simply adding checks. These results identify harness control as a learnable layer for frozen LLM agents, while showing that offline support limits when better process control becomes better final answers.",
+      "authors": [
+        "Haiwen Yi",
+        "Xinyuan Song"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-05T22:11:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.05458v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Offline RL for LLM agent harness control",
+      "llm_evidence_cn": "离线强化学习控制LLM智能体层",
+      "llm_evidence": "离线强化学习控制LLM智能体层",
+      "canonical_evidence": "离线强化学习控制LLM智能体层",
+      "llm_tldr_en": "Formalizes harness operation as MDP and uses offline RL to learn a controller for LLM agent execution.",
+      "llm_tldr_cn": "该论文将LLM智能体的执行层（harness）视为可学习的控制层，形式化为有限时域MDP，并提出使用离线强化学习（优势加权回归）训练轻量控制器，同时引入后验的Harness成熟度分数来评估执行可靠性。实验证明该方法能有效提升任务完成质量。",
+      "llm_tldr": "该论文将LLM智能体的执行层（harness）视为可学习的控制层，形式化为有限时域MDP，并提出使用离线强化学习（优势加权回归）训练轻量控制器，同时引入后验的Harness成熟度分数来评估执行可靠性。实验证明该方法能有效提升任务完成质量。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.06223v1",
+      "source": "arxiv",
+      "title": "Information Gain-based Rollout Policy Optimization: An Adaptive Tree-Structured Rollout Approach for Multi-Turn LLM Agents",
+      "abstract": "Reinforcement learning has become a promising paradigm for improving large language model (LLM) agents on long-horizon search tasks, where the agent must make a sequence of intermediate decisions before receiving a final outcome. However, existing methods still face a key limitation: the rollout budget is often allocated without explicitly assessing the utility of intermediate states. As a result, substantial computation may be spent on low-value states, even though different branches can vary drastically in their informativeness. In this paper, we propose Information Gain-based Rollout Policy Optimization (IGRPO), a policy optimization framework that treats intermediate-state informativeness as the organizing principle of rollout collection. Specifically, IGRPO performs budget-aware tree-structured rollouts by allocating expansion budget according to node-level informativeness, so that more informative branches are expanded more frequently while unpromising branches are progressively suppressed. We further demonstrate that the information gain-based rollout induces an explicit limiting teacher distribution over trajectories, which naturally yields a clear policy optimization target, thereby unifying adaptive tree-structured exploration with principled policy learning under a single framework. Experiments on seven challenging search-augmented QA benchmarks demonstrate that IGRPO consistently outperforms strong baselines under the same rollout budget constraints, validating the effectiveness of leveraging the induced teacher distribution to guide policy optimization for long-horizon search agents.",
+      "authors": [
+        "Yijun Zhang",
+        "Fan Xu",
+        "Jiaxin Ding",
+        "Yule Xie",
+        "Shiqing Gao",
+        "Xin Ding",
+        "Haoxiang Zhang",
+        "Luoyi Fu",
+        "Xinbing Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-07T12:47:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.06223v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "reinforcement learning to improve LLM agents on long-horizon tasks",
+      "llm_evidence_cn": "使用强化学习改进LLM代理在长期任务中的表现",
+      "llm_evidence": "使用强化学习改进LLM代理在长期任务中的表现",
+      "canonical_evidence": "使用强化学习改进LLM代理在长期任务中的表现",
+      "llm_tldr_en": "IGRPO uses information gain to adaptively allocate rollout budget for efficient multi-turn LLM agent training via RL.",
+      "llm_tldr_cn": "现有强化学习方法在长期任务中缺乏对中间状态信息量的评估，导致计算浪费。本文提出基于信息增益的展开策略优化（IGRPO），通过衡量中间状态信息量来自适应分配展开预算。在多轮LLM代理任务上，IGRPO显著提升了搜索效率和最终性能，为强化学习增强LLM代理提供了有效方法。",
+      "llm_tldr": "现有强化学习方法在长期任务中缺乏对中间状态信息量的评估，导致计算浪费。本文提出基于信息增益的展开策略优化（IGRPO），通过衡量中间状态信息量来自适应分配展开预算。在多轮LLM代理任务上，IGRPO显著提升了搜索效率和最终性能，为强化学习增强LLM代理提供了有效方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.03126v1",
+      "source": "arxiv",
+      "title": "ACPO: Adaptive Credit Policy Optimization via Fine-Grained Surrogate Entropy",
+      "abstract": "Reinforcement Learning (RL) has substantially improved the reasoning ability of large language models (LLMs), but sparse outcome rewards still make token-level credit assignment difficult. Existing scalable RL methods typically assign trajectory-level rewards uniformly across tokens, while recent entropy-aware approaches either rely on coarse detached heuristics or directly optimize true entropy, which can introduce non-local gradient components misaligned with sampled-token policy updates. We propose Adaptive Credit Policy Optimization (ACPO), a token-level credit assignment framework based on a mode-local surrogate entropy. ACPO asymmetrically modulates policy updates by emphasizing uncertain decisions in successful rollouts and overconfident tokens in failed rollouts. We show that the surrogate admits deterministic entropy bounds and, under modal alignment and proximal updates, preserves the policy-gradient direction to leading order. Experiments on mathematical reasoning and coding benchmarks, including AIME 2025 and HumanEvalPro, show that ACPO consistently improves over strong RL baselines such as DAPO, GTPO, and SAPO.",
+      "authors": [
+        "Zijun Xie",
+        "Yuyang You",
+        "Yongzhi Li",
+        "Enlei Gong",
+        "Zeyu Chen",
+        "Quan Chen",
+        "Yanhua Cheng",
+        "Peng Jiang",
+        "Yadong Mu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-03T09:14:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.03126v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL for improving LLM reasoning with token-level credit assignment",
+      "llm_evidence_cn": "使用强化学习通过令牌级信用分配提升大语言模型推理",
+      "llm_evidence": "使用强化学习通过令牌级信用分配提升大语言模型推理",
+      "canonical_evidence": "使用强化学习通过令牌级信用分配提升大语言模型推理",
+      "llm_tldr_en": "Proposes ACPO, a token-level credit assignment method using mode-local surrogate entropy to asymmetrically modulate policy updates for LLM reasoning.",
+      "llm_tldr_cn": "针对大语言模型强化学习中外奖励稀疏导致令牌级信用分配困难的问题，本文提出自适应信用策略优化（ACPO）。ACPO基于模态局部替代熵，不对称地调整策略更新：在成功轨迹中强调不确定决策，在失败轨迹中抑制过度自信令牌。实验表明该方法在数学推理等任务上显著优于现有方法。",
+      "llm_tldr": "针对大语言模型强化学习中外奖励稀疏导致令牌级信用分配困难的问题，本文提出自适应信用策略优化（ACPO）。ACPO基于模态局部替代熵，不对称地调整策略更新：在成功轨迹中强调不确定决策，在失败轨迹中抑制过度自信令牌。实验表明该方法在数学推理等任务上显著优于现有方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.03065v1",
+      "source": "arxiv",
+      "title": "Spectral Rewiring for Exploration, Purification, and Model Merging",
+      "abstract": "Reinforcement learning has become a standard post-training recipe for large language models, but dense full-parameter updates create two deployment-relevant bottlenecks: suppressed reasoning performance, often reflected by premature saturation of test-time scaling, and interference when consolidating multiple capabilities through multi-domain training or model merging. We show that the reasoning-effective component of these updates is largely concentrated in the base model's spectral space, motivating Subspace-Aligned Rewiring (SAR), a post-hoc editing method that retains this spectral core while removing orthogonal components. SAR therefore preserves reasoning gains and filters residual update directions that suppress performance or amplify cross-domain interference. Across several model families and scales, SAR extracts compact reasoning cores using as little as approximately 0.58% of total parameters: it preserves over 99% of post-training performance and improves high-k exploration in mathematical reasoning, and generalizes to agentic coding by improving six of seven open benchmarks on an in-house model. SAR also purifies mixed-domain training updates by releasing suppressed coding capability while maintaining math reasoning and instruction following. It further enables model merging across experts, yielding cross-domain generalization that surpasses previous merging baselines and even the best single-domain experts. Overall, SAR shows that extracting reasoning-effective updates from parameter geometry can serve as a training-free mechanism to improve reasoning and multi-domain performance.",
+      "authors": [
+        "Zhilong Zhang",
+        "Hongli Yu",
+        "Huan-ang Gao",
+        "Hanlin Wu",
+        "Yuxuan Song",
+        "Wei-Ying Ma",
+        "Ya-Qin Zhang",
+        "Hao Zhou"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-03T07:57:31+00:00",
+      "link": "https://arxiv.org/pdf/2607.03065v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL post-training for LLMs with spectral editing",
+      "llm_evidence_cn": "基于谱编辑的LLM后训练强化学习",
+      "llm_evidence": "基于谱编辑的LLM后训练强化学习",
+      "canonical_evidence": "基于谱编辑的LLM后训练强化学习",
+      "llm_tldr_en": "Proposes Subspace-Aligned Rewiring to preserve reasoning gains from RL post-training while removing harmful components in LLMs.",
+      "llm_tldr_cn": "该论文针对LLM强化学习后训练中全参数更新导致的推理性能抑制和多域干扰问题，提出子空间对齐重连方法。通过分析发现有效更新集中在基模型的谱空间，因此保留谱核心而去除正交分量。实验证明该方法能保持推理增益并减少干扰，支持模型合并。",
+      "llm_tldr": "该论文针对LLM强化学习后训练中全参数更新导致的推理性能抑制和多域干扰问题，提出子空间对齐重连方法。通过分析发现有效更新集中在基模型的谱空间，因此保留谱核心而去除正交分量。实验证明该方法能保持推理增益并减少干扰，支持模型合并。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.02975v1",
+      "source": "arxiv",
+      "title": "Evaluating Generative Agents with Actions Grounded in Socially Distributed Task Environments using Incognita",
+      "abstract": "Effective agency in social environments depends on when an agent seeks knowledge, when it acts, and whether its actions are justified by acquired information. Existing grounded benchmarks provide executable actions, persistent state, and verifiable outcomes, while social simulation environments provide rich interaction among language agents. We study an evaluation setting that combines these requirements. We define socially distributed task environments as interactive environments where task-relevant knowledge is partitioned across role-isolated participants and consequential actions are accessible only through them. Communication serves as exploration over role-partitioned knowledge, while grounded action serves as exploitation over environment state. We introduce Incognita, a Concordia-based framework that separates social interaction from grounded execution. The evaluated agent routes messages to a user or specialist entities; specialists mediate admissible operations; a deterministic sub-environment executes accepted operations over a canonical state; and an offline evaluator scores outcomes with inherited rewards. Incognita-Retail transforms tau-bench retail into a multi-entity environment while preserving final-state reward semantics. We evaluate three generative agent models on 18 tasks stratified by social breadth, with 540 trials. Progress appears in reward and behavior: success rises from 0 percent to 8.9 percent and 17.2 percent, while premature finalization falls from 100 percent to 87 percent and 58 percent. Stronger models elicit more hidden knowledge, contact more entities, and attempt more grounded writes, yet reliability remains low. These findings show that socially distributed task environments expose behavior before reliable success, including knowledge elicitation, source selection, grounded action attempts, and premature completion belief.",
+      "authors": [
+        "Dan C. Hsu",
+        "Luke Lu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-03T05:34:21+00:00",
+      "link": "https://arxiv.org/pdf/2607.02975v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "evaluating generative agents, decision making in social environments",
+      "llm_evidence_cn": "评估生成式代理，社交环境中的决策",
+      "llm_evidence": "评估生成式代理，社交环境中的决策",
+      "canonical_evidence": "评估生成式代理，社交环境中的决策",
+      "llm_tldr_en": "Incognita evaluates generative agents in socially distributed task environments with role-partitioned knowledge and consequential actions.",
+      "llm_tldr_cn": "该论文探讨了在社交分布任务环境中评估生成式代理的问题，其中任务知识按角色隔离分布，行动仅通过角色参与者执行。定义了社交分布任务环境，并提出了Incognita评估框架，通过通信探索和接地行动验证代理决策的合理性。实验揭示了代理在何时寻求知识、何时行动方面的行为特征。",
+      "llm_tldr": "该论文探讨了在社交分布任务环境中评估生成式代理的问题，其中任务知识按角色隔离分布，行动仅通过角色参与者执行。定义了社交分布任务环境，并提出了Incognita评估框架，通过通信探索和接地行动验证代理决策的合理性。实验揭示了代理在何时寻求知识、何时行动方面的行为特征。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.03248v1",
+      "source": "arxiv",
+      "title": "Unbiased Alignment for Large Language Models with Noisy Preferences",
+      "abstract": "The alignment of large language models with human preferences is commonly achieved through Reinforcement Learning from Human Feedback or Direct Preference Optimization. However, these methods are vulnerable to the significant noise prevalent in real-world preference datasets. To address this critical issue, we present a theoretical framework for unbiased alignment, introducing the Unbiased Reward Model (URM) loss and the Unbiased Direct Preference Optimization (UDPO) loss. By mathematically correcting the distortion induced by preference noise, our novel objectives enable unbiased model training directly from noisy datasets, without requiring clean ground-truth supervision. We provide rigorous theoretical analyses demonstrating that our methods are noise-tolerant, parameter downward compatible, and classification-calibrated. Comprehensive experiments across diverse datasets demonstrate that our approaches outperform state-of-the-art baselines. Code available at: https://github.com/cswjl/unbiased-alignment.",
+      "authors": [
+        "Jialiang Wang",
+        "Xianming Liu",
+        "Xiong Zhou",
+        "Hui Liu",
+        "Haoliang Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-03T12:04:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.03248v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RLHF for LLM alignment with noise correction",
+      "llm_evidence_cn": "使用强化学习从人类反馈中微调大语言模型，解决偏好噪声问题",
+      "llm_evidence": "使用强化学习从人类反馈中微调大语言模型，解决偏好噪声问题",
+      "canonical_evidence": "使用强化学习从人类反馈中微调大语言模型，解决偏好噪声问题",
+      "llm_tldr_en": "Introduces Unbiased Reward Model and UDPO loss to correct preference noise in RLHF, enabling unbiased alignment without clean supervision.",
+      "llm_tldr_cn": "针对偏好数据集中常见噪声导致RLHF/DPO训练偏差的问题，本文提出无偏对齐框架，包括无偏奖励模型(URM)损失和无偏直接偏好优化(UDPO)损失。通过数学修正偏好噪声带来的扭曲，新目标函数可直接从噪声数据集训练无偏模型，无需干净真实标注。理论分析证明方法的去噪有效性，为大语言模型安全对齐提供了鲁棒解决方案。",
+      "llm_tldr": "针对偏好数据集中常见噪声导致RLHF/DPO训练偏差的问题，本文提出无偏对齐框架，包括无偏奖励模型(URM)损失和无偏直接偏好优化(UDPO)损失。通过数学修正偏好噪声带来的扭曲，新目标函数可直接从噪声数据集训练无偏模型，无需干净真实标注。理论分析证明方法的去噪有效性，为大语言模型安全对齐提供了鲁棒解决方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.04332v1",
+      "source": "arxiv",
+      "title": "On the effectiveness of reward functions in reinforcement learning for confidence calibration of large language models",
+      "abstract": "In this paper, we consider the setting where large language models (LLMs) are trained using reinforcement learning (RL) to simultaneously improve reasoning accuracy and verbalize its confidence. Our reward scheme uses two functions for rewarding confidence verbalized by the LLM: one when the LLM is correct and a different one when the LLM is incorrect. With a poorly designed reward scheme, the LLM may be incentivized to answer incorrectly so that it can be confident that its answer is indeed incorrect, a phenomenon that we call confidence reward hacking. We propose the concept of non-hackable confidence reward schemes and define a spectrum of such reward schemes for RL confidence calibration training in LLMs. We demonstrate that selective confidence reward hacking can occur in practical datasets with reward schemes that are not designed to be non-hackable. We also demonstrate that the reward scheme with the best calibration to accuracy tradeoff depends on the dataset and the application, and propose using the reward scheme as a hyperparameter to optimize the tradeoffs in accordance to what is important for the application. The code of our experiments is available in https://anonymous.4open.science/r/rl-confidence-calibration-9ED4/README.md.",
+      "authors": [
+        "Chee Heng Tan",
+        "Zhuoyi Lin",
+        "Mehul Motani",
+        "Wee Sun Lee"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-05T14:29:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.04332v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL for confidence calibration in LLMs",
+      "llm_evidence_cn": "强化学习用于大语言模型置信度校准",
+      "llm_evidence": "强化学习用于大语言模型置信度校准",
+      "canonical_evidence": "强化学习用于大语言模型置信度校准",
+      "llm_tldr_en": "Studies reward functions for RL-based confidence calibration in LLMs, identifying confidence reward hacking and proposing non-hackable reward schemes.",
+      "llm_tldr_cn": "针对强化学习训练大语言模型同时提升推理准确性与置信度表达的问题，本文分析了奖励函数的设计，发现不当奖励会导致“置信度奖励黑客”现象——模型故意答错以便自信。提出不可黑客的置信度奖励方案，定义了该类奖励的谱系，确保模型诚实表达不确定性。",
+      "llm_tldr": "针对强化学习训练大语言模型同时提升推理准确性与置信度表达的问题，本文分析了奖励函数的设计，发现不当奖励会导致“置信度奖励黑客”现象——模型故意答错以便自信。提出不可黑客的置信度奖励方案，定义了该类奖励的谱系，确保模型诚实表达不确定性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.04364v1",
+      "source": "arxiv",
+      "title": "RL Forgets! Towards Continual Policy Optimization",
+      "abstract": "Continual post-training is becoming a central paradigm for adapting vision-language models to evolving tasks. Recent work has increasingly favored reinforcement learning over supervised fine-tuning, driven by the belief that reinforcement learning is inherently less prone to forgetting. However, the belief remains insufficiently validated, as existing evidence is largely drawn from outdated or homogeneous benchmarks. To revisit this assumption, we introduce MRCL, a Multimodal Reasoning Continual Learning benchmark built from diverse and recently released multimodal datasets. Experiments on MRCL show that reinforcement learning can still suffer from severe catastrophic forgetting during continual post-training. To address this challenge, we propose Continual Policy Optimization (CPO), a replay-free framework grounded in the prior-task behavioral KL objective. CPO uses a theoretically justified parameter-movement regularization to limit policy drift on previous tasks. Extensive experiments across multiple model scales demonstrate that CPO consistently reduces forgetting while preserving, and in some cases improving, pretrained model capabilities. On Qwen3-VL-8B, CPO reduces forgetting by 13.7\\% and improves pretrained capability by 7.0\\%. The implementation code is available at https://github.com/MaolinLuo/CPO.",
+      "authors": [
+        "Mao-Lin Luo",
+        "Zhe-Xu Wang",
+        "Zi-Hao Zhou",
+        "Bo Ye",
+        "Jian Zhao",
+        "Min-Ling Zhang",
+        "Tong Wei"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-05T15:46:11+00:00",
+      "link": "https://arxiv.org/pdf/2607.04364v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL for continual post-training of vision-language models",
+      "llm_evidence_cn": "强化学习用于视觉语言模型的持续后训练",
+      "llm_evidence": "强化学习用于视觉语言模型的持续后训练",
+      "canonical_evidence": "强化学习用于视觉语言模型的持续后训练",
+      "llm_tldr_en": "Introduces MRCL benchmark and Continual Policy Optimization (CPO) to address catastrophic forgetting in RL-based continual post-training of VLMs.",
+      "llm_tldr_cn": "针对强化学习被认为不易遗忘但缺乏验证的问题，本文构建多模态推理持续学习基准MRCL，发现强化学习在持续后训练中同样存在严重遗忘。为此提出持续策略优化（CPO），通过经验回放与正则化减轻遗忘，在多样化多模态任务上维持性能。",
+      "llm_tldr": "针对强化学习被认为不易遗忘但缺乏验证的问题，本文构建多模态推理持续学习基准MRCL，发现强化学习在持续后训练中同样存在严重遗忘。为此提出持续策略优化（CPO），通过经验回放与正则化减轻遗忘，在多样化多模态任务上维持性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.04728v1",
+      "source": "arxiv",
+      "title": "Turning Off-Policy Tokens On-Policy: A Plug-in Approach for Improving LLM Alignment",
+      "abstract": "Reinforcement learning (RL) post-training for large language models (LLMs) follows a efficient paradigm of \"rollout then update\", which inevitably results in off-policy training data. To resolve this, Importance sampling (IS) is proposed, while the token-level ratios compound over long sequences, causing severe variance exploded. A natural idea is \"transferring\" these off-policy token into on-policy token, so that the importance scores for correction are unnecessary. Following this idea, we propose Selective Importance Sampling (SIS), which is inspired by rejection sampling. Concretely, SIS implements by viewing off-policy model as proposal distribution, and implement a token-level rejection test: accepted tokens are viewed as on-policy, so that receive unit importance score, while rejected tokens retain the standard IS correction. Our proposed SIS is theoretically proved reducing the gap between token-level and sequence-level off-policy gradient estimators. The SIS acts as a plug-in that only modifies the importance ratio in the policy loss, adding negligible wall-clock overhead, and can be combine with a vast vary of RL post-training algorithms. Experiments on dense and MoE LLMs across math and agent benchmarks show that SIS consistently improves all objectives, while providing substantially stronger robustness under off-policy data.",
+      "authors": [
+        "Yu Li",
+        "Xiuyu Li",
+        "Mingyang Yi",
+        "Jiaxing Wang",
+        "zhangliangxu",
+        "Zhaolong Xing",
+        "Zhen Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-06T06:59:44+00:00",
+      "link": "https://arxiv.org/pdf/2607.04728v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL post-training for LLM alignment",
+      "llm_evidence_cn": "RL后训练对齐LLM",
+      "llm_evidence": "RL后训练对齐LLM",
+      "canonical_evidence": "RL后训练对齐LLM",
+      "llm_tldr_en": "Proposes Selective Importance Sampling to convert off-policy tokens to on-policy for stable LLM alignment.",
+      "llm_tldr_cn": "该论文针对LLM强化学习后训练中的离策略数据问题，提出选择性重要性采样方法，通过拒绝采样将离策略token转换为在策略token，避免了传统重要性采样中序列级比值方差爆炸的问题。实验表明该方法在保持对齐效果的同时显著提高了训练稳定性。",
+      "llm_tldr": "该论文针对LLM强化学习后训练中的离策略数据问题，提出选择性重要性采样方法，通过拒绝采样将离策略token转换为在策略token，避免了传统重要性采样中序列级比值方差爆炸的问题。实验表明该方法在保持对齐效果的同时显著提高了训练稳定性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.05202v1",
+      "source": "arxiv",
+      "title": "EvoAgentBench: Benchmarking Agent Self-Evolution via Ability Transfer",
+      "abstract": "Agent self-evolution in long-horizon LLM systems is largely procedural: useful experience is not merely stored information, but reusable procedures for searching, debugging, and verification. Yet current evaluations do not isolate this form of transfer. Agent benchmarks test single-episode task solving; memory benchmarks target information retention rather than procedural reuse. We introduce EvoAgentBench, a benchmark for agent self-evolution via Ability-guided transfer across four agentic domains: web research, algorithmic reasoning, software engineering, and knowledge work. EvoAgentBench extracts trace-grounded Abilities from agent executions, canonicalizes them into operational units, and builds domain-specific Ability Graphs linking tasks that share procedural overlap. By design, every test task is backed by verified training-side Ability support. Across a 528/267 train/test split, two scaffolds, and three backbones, curated Ability content transfers reliably across model families, but no current automatic method sustains positive gain in all settings. EvoAgentBench shifts self-evolution evaluation from aggregate accuracy comparison to fine-grained diagnosis of experience encoding, routing, and uptake. The benchmark is publicly available at https://huggingface.co/datasets/EverMind-AI/EvoAgentBench.",
+      "authors": [
+        "Xingze Gao",
+        "Chuanrui Hu",
+        "Hongda Chen",
+        "Pengfei Yao",
+        "Zhao Wang",
+        "Yi Bai",
+        "Zhengwei Wu",
+        "Yunyun Han",
+        "Xiaofeng Cong",
+        "Jie Gui",
+        "Yafeng Deng",
+        "Teng Li"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-06T15:17:09+00:00",
+      "link": "https://arxiv.org/pdf/2607.05202v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "benchmark for agent self-evolution, ability transfer",
+      "llm_evidence_cn": "代理自我进化基准，能力迁移",
+      "llm_evidence": "代理自我进化基准，能力迁移",
+      "canonical_evidence": "代理自我进化基准，能力迁移",
+      "llm_tldr_en": "EvoAgentBench benchmarks agent self-evolution via ability transfer across four domains, extracting trace-grounded abilities and building ability graphs.",
+      "llm_tldr_cn": "该论文针对现有基准未单独评估代理自我进化中程序重用能力的问题，提出了EvoAgentBench基准。该基准通过从代理执行中提取轨迹基础的能力，将其规范化并构建领域特定的能力图，在四个智能体领域（网络研究、算法推理、软件工程、知识工作）上评估能力迁移。实验显示代理在能力引导下实现了有效的自我进化。",
+      "llm_tldr": "该论文针对现有基准未单独评估代理自我进化中程序重用能力的问题，提出了EvoAgentBench基准。该基准通过从代理执行中提取轨迹基础的能力，将其规范化并构建领域特定的能力图，在四个智能体领域（网络研究、算法推理、软件工程、知识工作）上评估能力迁移。实验显示代理在能力引导下实现了有效的自我进化。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.05541v1",
+      "source": "arxiv",
+      "title": "Self-Review Reinforcement Learning (SRRL) with Cross-Episode Memory and Policy Distillation",
+      "abstract": "Reinforcement Learning is commonly used to train large language models using environmental feedback. In applied settings, the environment usually provides sparse or delayed feedback. This makes it difficult for the model to pinpoint which actions in its reasoning led to success or failure. So, learning effectively from these signals is hard because the model must determine how each failure should inform meaningful behavioral corrections in subsequent iterations. We introduce a training framework, Self-Review Reinforcement Learning, that embeds an explicit self-review step into each RL episode. When a first-pass response fails, the model generates a self-review to identify what went wrong, which conditions an improved second attempt. Unlike inference-time reflection approaches, such as Reflexion, the framework optimizes self-review with policy gradients and internalizes improvements into the base policy via selective distillation, ensuring they persist across future episodes. A cross-episode memory keeps successful self-reviews for reuse when encountering similar tasks in future episodes during training. We evaluate SRRL against a standard RLVR baseline using the GRPO optimizer across two language models, Qwen 3-4B and OLMo-3- 7B, on GSM8K benchmark. SRRL consistently outperforms the RLVR in final reward performance and achieves greater learning efficiency by successfully transforming feedback into behavioral improvement.",
+      "authors": [
+        "Muhammad Zain Amin",
+        "Kibele Sebnem Yildirim"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-06T18:24:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.05541v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL training framework with self-review for LLMs",
+      "llm_evidence_cn": "面向大语言模型的带自我审视的强化学习训练框架",
+      "llm_evidence": "面向大语言模型的带自我审视的强化学习训练框架",
+      "canonical_evidence": "面向大语言模型的带自我审视的强化学习训练框架",
+      "llm_tldr_en": "Introduces Self-Review RL (SRRL) that adds a self-review step after failure, conditioning improved attempts for LLM training with sparse feedback.",
+      "llm_tldr_cn": "针对强化学习训练大语言模型时环境反馈稀疏延迟的问题，本文提出自我审视强化学习框架。在每个RL episode中嵌入显式自我审视步骤：首次回答失败后，模型生成自我检讨以定位错误，据此生成改进后的二次回答。该方法有效利用失败信号指导行为修正，提升了稀疏反馈下的学习效率。",
+      "llm_tldr": "针对强化学习训练大语言模型时环境反馈稀疏延迟的问题，本文提出自我审视强化学习框架。在每个RL episode中嵌入显式自我审视步骤：首次回答失败后，模型生成自我检讨以定位错误，据此生成改进后的二次回答。该方法有效利用失败信号指导行为修正，提升了稀疏反馈下的学习效率。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.05773v1",
+      "source": "arxiv",
+      "title": "Beyond Static Evaluation: Building Simulation Environments for Scalable Agentic Reinforcement Learning",
+      "abstract": "As Large Language Models (LLMs) evolve into autonomous agents, traditional static evaluation fails to capture multi-step decision-making. We introduce AgenticAI-Supervisor, an API and UI-driven RL Gym environment that decouples environment creation from scalable execution. By moving to verifiable execution outcomes, the platform generates high-fidelity traces and applies multi-dimensional reward shaping. Critically, our framework mitigates reward hacking through rigorous internal state validation and testing. This work provides a first look at our platform's core capabilities through a Customer Support Agent case study demonstrating a consistent closed-loop feedback for model optimization. Future work will focus on advanced features such as Computer Use, Tool Use, automated \"stumping\", and edge-case generation.",
+      "authors": [
+        "Akshay Arora",
+        "Ishan Nigam",
+        "Ashutosh Aggarwal",
+        "Shefali Bansal",
+        "Krishna Singh",
+        "Sweta Kumari",
+        "Nikhil Mittal",
+        "Shariq Farhan",
+        "Siddarth Malreddy"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-07T02:56:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.05773v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "simulation environment for agentic RL, LLM agents",
+      "llm_evidence_cn": "用于智能体强化学习的模拟环境，大语言模型代理",
+      "llm_evidence": "用于智能体强化学习的模拟环境，大语言模型代理",
+      "canonical_evidence": "用于智能体强化学习的模拟环境，大语言模型代理",
+      "llm_tldr_en": "AgenticAI-Supervisor provides an API and UI-driven RL Gym environment for scalable agentic RL, with reward shaping and anti-hacking validation.",
+      "llm_tldr_cn": "本文针对静态评估无法捕捉多步决策的问题，提出了AgenticAI-Supervisor平台，这是一个基于API和UI驱动的强化学习Gym环境，支持可扩展的智能体强化学习。通过可验证执行结果生成高保真轨迹，应用多维奖励塑造，并通过内部状态验证缓解奖励黑客攻击。在客户支持代理案例中展示了闭环反馈优化能力。",
+      "llm_tldr": "本文针对静态评估无法捕捉多步决策的问题，提出了AgenticAI-Supervisor平台，这是一个基于API和UI驱动的强化学习Gym环境，支持可扩展的智能体强化学习。通过可验证执行结果生成高保真轨迹，应用多维奖励塑造，并通过内部状态验证缓解奖励黑客攻击。在客户支持代理案例中展示了闭环反馈优化能力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.05804v1",
+      "source": "arxiv",
+      "title": "TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training",
+      "abstract": "On-policy distillation (OPD) trains a student policy by matching a stronger teacher on the student's own trajectories, offering a promising framework for language agent training. However, its application to long-horizon agentic tasks remains insufficiently explored. We identify two key inefficiencies in vanilla agent OPD: (1) full-horizon rollouts often waste wall-clock resources on tail turns that provide weak and noisy KL supervision, and (2) trajectory-level KL objectives concentrate most of the loss on shallow tokens, leaving deeper decision turns under-trained once initial behaviors are aligned. To address these challenges, we propose TurnOPD, a turn-level budgeting strategy for efficient on-policy distillation of long-horizon agents. TurnOPD consists of two budget controllers: adaptive rollout-depth budgeting, which uses probe-based turn statistics to determine rollout length, and progressive turn-normalized loss budgeting, which gradually shifts KL weighting from token-level to turn-balanced supervision. Experiments on ALFWorld, WebShop, and Multi-Hop Search with task-specialized teacher models show that TurnOPD achieves superior validation accuracy under equal wall-clock training budgets and advances the accuracy--time frontier beyond vanilla OPD.",
+      "authors": [
+        "Yuhang Zhou",
+        "Kai Zheng",
+        "Haoling Li",
+        "Dengyun Peng",
+        "Can Xu",
+        "Jingjing Chen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-07T03:56:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.05804v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "On-policy distillation for long-horizon agent training",
+      "llm_evidence_cn": "在策略蒸馏用于长视界智能体训练",
+      "llm_evidence": "在策略蒸馏用于长视界智能体训练",
+      "canonical_evidence": "在策略蒸馏用于长视界智能体训练",
+      "llm_tldr_en": "Proposes TurnOPD, a turn-level budgeting strategy for efficient on-policy distillation in long-horizon language agent training.",
+      "llm_tldr_cn": "该论文针对长视界语言智能体训练中在策略蒸馏的低效问题，提出TurnOPD方法。通过识别全视野rollout中尾部turn提供的弱KL监督和轨迹级KL目标浅层token训练过深的问题，设计turn级预算策略，优化资源分配。实验证明在长视界任务中显著提升了训练效率和最终性能。",
+      "llm_tldr": "该论文针对长视界语言智能体训练中在策略蒸馏的低效问题，提出TurnOPD方法。通过识别全视野rollout中尾部turn提供的弱KL监督和轨迹级KL目标浅层token训练过深的问题，设计turn级预算策略，优化资源分配。实验证明在长视界任务中显著提升了训练效率和最终性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}

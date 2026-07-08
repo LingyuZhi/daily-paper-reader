@@ -6,80 +6,79 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-07
-- 运行时间：2026-07-07 21:50:30 UTC
+- 最新运行日期：2026-07-08
+- 运行时间：2026-07-08 21:44:04 UTC
 - 运行状态：成功
-- 本次总论文数：20
-- 精读区：9
+- 本次总论文数：19
+- 精读区：8
 - 速读区：11
 
 ### 今日简报（AI）
-今日精读20篇论文，重点聚焦智能体强化学习中的信用分配与自反馈重试两个高分突破。最值得关注的是角色类型化信用分配机制（TRIAGE）和关键感知自反馈重试方法，分别解决多智能体协作和单智能体自我改进难题。建议优先阅读这两篇9分论文，再结合速读中的对话策略选择与环境建模，构建更完整的智能体学习框架。
-- 详情：[/202607/07/README](/202607/07/README)
+今日推荐19篇论文，精读聚焦ACPO自适应策略优化与LLM智能体测试时训练两个高分方向。  
+最值得看精读两篇：ACPO通过细粒度替代熵优化信用分配，Agentic Test-Time Training为LLM智能体引入测试时训练机制。  
+建议优先阅读这两篇精读论文，并结合速读中的无偏对齐与on-policy转化方法，系统提升LLM对齐效果。
+- 详情：[/202607/08/README](/202607/08/README)
 
 ### 精读区论文标签
-1. [TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning](/202607/07/2606.32017v2-triage-role-typed-credit-assignment-for-agentic-reinforcement-learning)  
+1. [ACPO: Adaptive Credit Policy Optimization via Fine-Grained Surrogate Entropy](/202607/08/2607.03126v2-acpo-adaptive-credit-policy-optimization-via-fine-grained-surrogate-entropy)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：角色类型信用分配用于智能体RL
-2. [Agent Reinforcement Learning via Pivotal-Aware Self-Feedback Retry](/202607/07/2607.03702v1-agent-reinforcement-learning-via-pivotal-aware-self-feedback-retry)  
+   evidence：强化学习增强大语言模型推理，令牌级信用分配
+2. [No Time Like the Present: Agentic Test-Time Training for LLM Agents](/202607/08/2607.03441v1-no-time-like-the-present-agentic-test-time-training-for-llm-agents)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：自反馈重试用于智能体RL
-3. [Harness-Aware Self-Evolving: Co-Evolving Model Weights, Harness, and Task Solutions](/202607/07/2607.03935v1-harness-aware-self-evolving-co-evolving-model-weights-harness-and-task-solutions)  
+   evidence：提出面向LLM智能体的自主测试时训练（aTTT），在多轮对话过程中持续调整权重
+3. [Regime-Conditional Stabilisation of LLM-Augmented Cooperative Multi-Agent Reinforcement Learning](/202607/08/2607.04470v1-regime-conditional-stabilisation-of-llm-augmented-cooperative-multi-agent-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：智能体强化学习框架协同进化模型权重、工具和解决方案
-4. [Spinning Straw into Gold: Relabeling LLM Agent Trajectories in Hindsight for Successful Demonstrations](/202607/07/2607.04235v1-spinning-straw-into-gold-relabeling-llm-agent-trajectories-in-hindsight-for-successful-demonstrations)  
+   evidence：基于LLM的多智能体强化学习
+4. [CARL: Constraint-Aware Reinforcement Learning for Planning with LLMs](/202607/08/2607.04854v1-carl-constraint-aware-reinforcement-learning-for-planning-with-llms)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：事后重标记用于LLM智能体RL
-5. [Progress- and Reliability-Oriented Group Policy Optimization for Agentic Reinforcement Learning](/202607/07/2607.04242v1-progress--and-reliability-oriented-group-policy-optimization-for-agentic-reinforcement-learning)  
+   evidence：提出约束感知的强化学习框架，增强LLM在规划中的内在约束感知能力
+5. [CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents](/202607/08/2607.05378v1-compactionrl-reinforcement-learning-with-context-compaction-for-long-horizon-agents)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：分组策略优化用于智能体RL
-6. [LLM-as-a-Tutor: Policy-Aware Prompt Adaptation for Non-Verifiable RL](/202607/07/2607.04412v1-llm-as-a-tutor-policy-aware-prompt-adaptation-for-non-verifiable-rl)  
+   evidence：提出CompactionRL，一种面向长程自主LLM智能体的上下文压缩强化学习策略
+6. [Weak-to-Strong Generalization via Direct On-Policy Distillation](/202607/08/2607.05394v1-weak-to-strong-generalization-via-direct-on-policy-distillation)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：LLM作为教师为不可验证RL策略自适应提示
-7. [RSPO: Reward-Swap Policy Optimization for Multi-Turn LLM Agents](/202607/07/2607.04713v1-rspo-reward-swap-policy-optimization-for-multi-turn-llm-agents)  
+   evidence：利用强化学习通过弱到强蒸馏提升大语言模型推理能力
+7. [Learning to Control LLM Agent Harnesses with Offline Reinforcement Learning](/202607/08/2607.05458v1-learning-to-control-llm-agent-harnesses-with-offline-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：用奖励交换策略优化训练多轮大语言模型智能体
-8. [Multi-Turn On-Policy Distillation with Prefix Replay](/202607/07/2607.04763v1-multi-turn-on-policy-distillation-with-prefix-replay)  
+   evidence：离线强化学习控制LLM智能体层
+8. [Information Gain-based Rollout Policy Optimization: An Adaptive Tree-Structured Rollout Approach for Multi-Turn LLM Agents](/202607/08/2607.06223v1-information-gain-based-rollout-policy-optimization-an-adaptive-tree-structured-rollout-approach-for-multi-turn-llm-agents)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：通过在线策略蒸馏用强化学习增强大语言模型智能体
-9. [STAPO: Selective Trajectory-Aware Policy Optimization for LLM Agent Training](/202607/07/2607.04963v1-stapo-selective-trajectory-aware-policy-optimization-for-llm-agent-training)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：面向LLM智能体的轨迹感知RL训练
+   evidence：使用强化学习改进LLM代理在长期任务中的表现
 
 ### 速读区论文标签
-1. [DiPS: Dialogue Policy Selection for High-Stakes Persuasion Agents](/202607/07/2607.01557v2-dips-dialogue-policy-selection-for-high-stakes-persuasion-agents)  
+1. [ACPO: Adaptive Credit Policy Optimization via Fine-Grained Surrogate Entropy](/202607/08/2607.03126v1-acpo-adaptive-credit-policy-optimization-via-fine-grained-surrogate-entropy)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：Q-learning用于说服智能体对话策略
-2. [Object-Centric Environment Modeling for Agentic Tasks](/202607/07/2607.02846v1-object-centric-environment-modeling-for-agentic-tasks)  
+   evidence：使用强化学习通过令牌级信用分配提升大语言模型推理
+2. [Unbiased Alignment for Large Language Models with Noisy Preferences](/202607/08/2607.03248v1-unbiased-alignment-for-large-language-models-with-noisy-preferences)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：面向大语言模型智能体任务的对象中心环境建模
-3. [Reward Granularity in RLVR: Comparing Process and Outcome Reward Structures for Mathematical Reasoning in Small Language Models](/202607/07/2607.02869v1-reward-granularity-in-rlvr-comparing-process-and-outcome-reward-structures-for-mathematical-reasoning-in-small-language-models)  
+   evidence：使用强化学习从人类反馈中微调大语言模型，解决偏好噪声问题
+3. [Turning Off-Policy Tokens On-Policy: A Plug-in Approach for Improving LLM Alignment](/202607/08/2607.04728v1-turning-off-policy-tokens-on-policy-a-plug-in-approach-for-improving-llm-alignment)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：使用GRPO的RLVR提升小语言模型数学推理
-4. [Oyster-II: Reinforcement Learning for Constructive Safety Alignment in Large Language Models](/202607/07/2607.02914v1-oyster-ii-reinforcement-learning-for-constructive-safety-alignment-in-large-language-models)  
+   evidence：RL后训练对齐LLM
+4. [Self-Review Reinforcement Learning (SRRL) with Cross-Episode Memory and Policy Distillation](/202607/08/2607.05541v1-self-review-reinforcement-learning-srrl-with-cross-episode-memory-and-policy-distillation)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：使用RL进行LLM建设性安全对齐
-5. [ASK in the Dark: Uncertainty-Gated LLM Assistance under Partial Observability](/202607/07/2607.02686v1-ask-in-the-dark-uncertainty-gated-llm-assistance-under-partial-observability)  
+   evidence：面向大语言模型的带自我审视的强化学习训练框架
+5. [Beyond Static Evaluation: Building Simulation Environments for Scalable Agentic Reinforcement Learning](/202607/08/2607.05773v1-beyond-static-evaluation-building-simulation-environments-for-scalable-agentic-reinforcement-learning)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：用于智能体强化学习的模拟环境，大语言模型代理
+6. [TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training](/202607/08/2607.05804v1-turnopd-making-on-policy-distillation-turn-aware-for-efficient-long-horizon-agent-training)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：在策略蒸馏用于长视界智能体训练
+7. [Spectral Rewiring for Exploration, Purification, and Model Merging](/202607/08/2607.03065v1-spectral-rewiring-for-exploration-purification-and-model-merging)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：部分可观测下RL智能体利用LLM辅助决策
-6. [CRRL: A Causality-Based Reinforcement Learning Framework for Autonomous System Recovery](/202607/07/2607.03177v1-crrl-a-causality-based-reinforcement-learning-framework-for-autonomous-system-recovery)  
+   evidence：基于谱编辑的LLM后训练强化学习
+8. [On the effectiveness of reward functions in reinforcement learning for confidence calibration of large language models](/202607/08/2607.04332v1-on-the-effectiveness-of-reward-functions-in-reinforcement-learning-for-confidence-calibration-of-large-language-models)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：用于自主系统恢复的因果强化学习框架
-7. [Demonstrating Generalization Failures via Mixtures of Conditional Policies](/202607/07/2607.03478v1-demonstrating-generalization-failures-via-mixtures-of-conditional-policies)  
+   evidence：强化学习用于大语言模型置信度校准
+9. [EvoAgentBench: Benchmarking Agent Self-Evolution via Ability Transfer](/202607/08/2607.05202v1-evoagentbench-benchmarking-agent-self-evolution-via-ability-transfer)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：通过有监督微调构建在RL训练后泛化失败的语言模型
-8. [Learning Task-Sufficient World Models by Synergizing Agentic Exploration and Structured Modeling](/202607/07/2607.04409v1-learning-task-sufficient-world-models-by-synergizing-agentic-exploration-and-structured-modeling)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：智能体探索与结构化世界建模用于决策
-9. [Explainable Reinforcement Learning for Adaptive Traffic Signal Control](/202607/07/2607.03703v1-explainable-reinforcement-learning-for-adaptive-traffic-signal-control)  
+   evidence：代理自我进化基准，能力迁移
+10. [Evaluating Generative Agents with Actions Grounded in Socially Distributed Task Environments using Incognita](/202607/08/2607.02975v1-evaluating-generative-agents-with-actions-grounded-in-socially-distributed-task-environments-using-incognita)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：将强化学习用于自适应交通信号控制，实现智能体决策
-10. [Look Before You Leap: Distilling Tree Search into Action Evaluation for Frozen VLA Models](/202607/07/2607.03751v1-look-before-you-leap-distilling-tree-search-into-action-evaluation-for-frozen-vla-models)  
+   evidence：评估生成式代理，社交环境中的决策
+11. [RL Forgets! Towards Continual Policy Optimization](/202607/08/2607.04364v1-rl-forgets-towards-continual-policy-optimization)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：对VLA智能体决策的RL后训练
-11. [Regime-Conditional Stabilisation of LLM-Augmented Cooperative Multi-Agent Reinforcement Learning](/202607/07/2607.04470v1-regime-conditional-stabilisation-of-llm-augmented-cooperative-multi-agent-reinforcement-learning)  
-   标签：评分：6.0/10、query:agentic-rl
-   evidence：基于大语言模型奖励塑形的多智能体强化学习，与智能体强化学习和LLM的结合主题相关
+   evidence：强化学习用于视觉语言模型的持续后训练
 
 
 <div class="dpr-home-promo-card">
