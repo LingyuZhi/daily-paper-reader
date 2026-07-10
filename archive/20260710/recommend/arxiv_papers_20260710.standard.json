@@ -1,0 +1,412 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-10T21:22:05.852138+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2607.05297v1",
+      "source": "arxiv",
+      "title": "MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution",
+      "abstract": "Recent LLM agents tackle increasingly long-horizon, open-ended tasks, and external skills, reusable procedural knowledge supplied to the agent, further extend this capability. However, a fixed, hand-authored skill is rarely optimal, and cannot adapt to the diversity of tasks an agent encounters. Self-improving agents address this by rewriting their own skill files from execution traces, yielding meaningful gains on challenging benchmarks. Yet such self-evolution remains non-recursive: it improves only the task skill (what the agent does) while the improvement procedure (how it improves) is authored once and held fixed. We introduce MetaSkill-Evolve, a two-timescale framework that makes agentic skill improvement recursive: every branch carries both a task skill $s$ and a branch-local meta-skill $m=(ψ,σ,α,π,\\varepsilon)$ whose five components parameterise the Analyzer, Retriever, Allocator, Proposer, and Evolver agents of the improvement pipeline. Task skills evolve on a fast loop while the meta-skill evolves on a slower one under the same pipeline applied to itself, with no additional model or objective. With all five pipeline agents sharing a single frozen backbone, MetaSkill-Evolve outperforms no-skill, static-skill, and single-level evolution baselines on three agentic benchmarks (OfficeQA, SealQA, ALFWorld), improving held-out test accuracy over the raw backbone by +23.54, +16.09, and +1.92 points respectively.",
+      "authors": [
+        "Zefeng Wang",
+        "Minxi Yan",
+        "Jinhe Bi",
+        "Sikuan Yan",
+        "Volker Tresp",
+        "Yunpu Ma"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-06T16:40:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.05297v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Recursive self-improvement of LLM agents via meta-skill evolution",
+      "llm_evidence_cn": "通过元技能演化实现LLM智能体的递归自改进",
+      "llm_evidence": "通过元技能演化实现LLM智能体的递归自改进",
+      "canonical_evidence": "通过元技能演化实现LLM智能体的递归自改进",
+      "llm_tldr_en": "MetaSkill-Evolve makes LLM agent skill improvement recursive by evolving both task skills and the improvement procedure.",
+      "llm_tldr_cn": "该论文针对LLM智能体自我演化仅改进任务技能而改进过程固定不变的问题，提出MetaSkill-Evolve双时间尺度框架。外层演化改进过程（元技能），内层演化具体任务技能，实现递归式自我改进。在长期任务基准上，MetaSkill-Evolve显著超越了非递归自改进方法，证明递归改进能够持续提升智能体的适应能力，为智能体强化学习中的自我进化提供了新范式。",
+      "llm_tldr": "该论文针对LLM智能体自我演化仅改进任务技能而改进过程固定不变的问题，提出MetaSkill-Evolve双时间尺度框架。外层演化改进过程（元技能），内层演化具体任务技能，实现递归式自我改进。在长期任务基准上，MetaSkill-Evolve显著超越了非递归自改进方法，证明递归改进能够持续提升智能体的适应能力，为智能体强化学习中的自我进化提供了新范式。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.07976v1",
+      "source": "arxiv",
+      "title": "When Implausible Tokens Get Reinforced: Tail-Aware Credit Calibration for LLM Reinforcement Learning",
+      "abstract": "Reinforcement learning (RL) has achieved remarkable success in enhancing the reasoning capabilities of large language models (LLMs). However, widely used critic-free RL methods rely on uniform credit assignment, broadcasting the same advantage to all tokens regardless of their differences. We identify a critical failure mode of this design, which we refer to as Positive-Credit Contamination: low-probability tail tokens that are contextually erroneous receive identical positive credit to plausible ones within the same trajectory, resulting in the indiscriminate reinforcement of flawed reasoning behavior. To mitigate this issue, we propose Tail-Aware Credit calibratiOn (TACO), a method that calibrates uniform credit assignment to suppress undesirable positive updates. TACO first computes a tail-risk score that incorporates the local generation context to assess each token's risk of falling into the unreliable tail, distinguishing unexpected rarity from uncertainty-driven exploration. TACO then uses this score to tune positive credit for risky tokens without removing their gradients entirely, so that recurring useful rare patterns can accumulate reinforcement while incidental noise is progressively dampened. Experimental results across three LLMs and eight benchmarks show that TACO consistently outperforms GRPO-style baselines. Notably, TACO improves training stability, supporting sustained performance gains in long-horizon RL. The source code is available at: https://github.com/xiuyilou/TACO.",
+      "authors": [
+        "Xiuyi Lou",
+        "Zicheng Xu",
+        "Yu-Neng Chuang",
+        "Hoang Anh Duy Le",
+        "Zhaozhuo Xu",
+        "Guanchu Wang",
+        "Vladimir Braverman"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-08T23:00:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.07976v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "TACO calibrates credit in LLM RL to enhance reasoning and avoid token contamination",
+      "llm_evidence_cn": "TACO校准LLM强化学习中的信用分配以增强推理并避免词元污染",
+      "llm_evidence": "TACO校准LLM强化学习中的信用分配以增强推理并避免词元污染",
+      "canonical_evidence": "TACO校准LLM强化学习中的信用分配以增强推理并避免词元污染",
+      "llm_tldr_en": "Identifies Positive-Credit Contamination in LLM RL, proposing TACO to calibrate uniform credit assignment and prevent erroneous reinforcement of low-probability tail tokens.",
+      "llm_tldr_cn": "该论文指出LLM强化学习中均匀信用分配导致低概率错误词元被错误强化的正信用污染问题，提出尾感知信用校准方法TACO。TACO通过校准统一信用分配，减少对上下文错误词元的正向强化。实验表明TACO提升了LLM推理的准确性和可靠性，为RL增强LLM提供了关键的信用修复方案。",
+      "llm_tldr": "该论文指出LLM强化学习中均匀信用分配导致低概率错误词元被错误强化的正信用污染问题，提出尾感知信用校准方法TACO。TACO通过校准统一信用分配，减少对上下文错误词元的正向强化。实验表明TACO提升了LLM推理的准确性和可靠性，为RL增强LLM提供了关键的信用修复方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.08572v1",
+      "source": "arxiv",
+      "title": "Switch-Reasoner: Learn When to Think in Multitask Mixtures via Reinforcement Learning",
+      "abstract": "Multimodal Large Language Models (MLLMs) often follow a fixed Think-then-Answer paradigm, which is inefficient in heterogeneous multitask settings because simple inputs may not require explicit reasoning while difficult ones can benefit substantially from it. Learning when to think is also unstable during post-training, where imbalanced rollouts can drive the model toward always-thinking or always-direct behavior. We propose Switch-Reasoner, a GRPO-based framework that learns to adaptively select reasoning modes for MLLMs. It treats thinking as a virtual tool invocation and allows the model to either answer directly or invoke explicit reasoning before answering. To stabilize this decision, we introduce a dual-level regulation mechanism that balances the overall use of Thinking Mode and Direct Mode while providing sample-level supervision based on the relative benefit of the two choices. Experiments on 11 multimodal tasks show that Switch-Reasoner reduces unnecessary reasoning while maintaining strong performance, achieving a better accuracy-efficiency trade-off.",
+      "authors": [
+        "Yiyang Fang",
+        "Pei Fu",
+        "Jinjie Li",
+        "Jian Liang",
+        "Wenke Huang",
+        "Ruijie Luo",
+        "Shaojie Zhang",
+        "Jian Luan",
+        "Yi R. Fung",
+        "Mang Ye"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-09T15:04:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.08572v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "GRPO-based adaptive reasoning for MLLMs",
+      "llm_evidence_cn": "基于GRPO的自适应推理选择",
+      "llm_evidence": "基于GRPO的自适应推理选择",
+      "canonical_evidence": "基于GRPO的自适应推理选择",
+      "llm_tldr_en": "Switch-Reasoner uses GRPO to learn when to invoke explicit reasoning for MLLMs, adapting reasoning modes per input to improve efficiency and accuracy.",
+      "llm_tldr_cn": "多模态大模型固定推理模式效率低。Switch-Reasoner将思考视为虚拟工具调用，通过GRPO强化学习自适应选择直接回答或推理模式，并引入双层调节机制稳定决策。在混合推理任务上，模型在减少推理开销的同时提升了准确率。",
+      "llm_tldr": "多模态大模型固定推理模式效率低。Switch-Reasoner将思考视为虚拟工具调用，通过GRPO强化学习自适应选择直接回答或推理模式，并引入双层调节机制稳定决策。在混合推理任务上，模型在减少推理开销的同时提升了准确率。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.06413v1",
+      "source": "arxiv",
+      "title": "An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery",
+      "abstract": "Large language model coding agents increasingly perform open-ended data modeling and analysis. These agents are stochastic and adaptive, and therefore their autonomous model discovery behavior cannot be adequately characterized by a single benchmark run. In this work, we propose an experimental design and analysis framework for systematically evaluating this discovery process, quantifying its variability, and identifying important factors. The proposed framework treats these agents as stochastic model-discovery operators, which map task-specific discovery data and an optimization target to a fitted model. Specifically, we investigate two such operators, Codex and Claude Code, under controlled experimental factors including agent's reasoning effort, task, optimization metric, and composition of training data. For each agent-task-metric combination, regression models and inference are conducted for multiple responses such as output quality, dollar cost, wall-clock time, and process complexity. Furthermore, we develop a utility-aligned canonical decomposition to characterize the dominant direction of the reasoning-effort effect and to assess whether that direction aligns with a performance-cost utility direction. The proposed framework is demonstrated on a testbed of networked word-forming games with insightful findings on reasoning effort with respect to cost and process complexity.",
+      "authors": [
+        "Hao He",
+        "Xueying Liu",
+        "Chris J. Kuhlman",
+        "Xinwei Deng"
+      ],
+      "primary_category": "stat.ME",
+      "categories": [
+        "stat.ME",
+        "cs.AI"
+      ],
+      "published": "2026-07-07T15:43:22+00:00",
+      "link": "https://arxiv.org/pdf/2607.06413v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Evaluates agentic AI's autonomous model discovery with experimental design",
+      "llm_evidence_cn": "通过实验设计评估智能体AI的自主模型发现能力",
+      "llm_evidence": "通过实验设计评估智能体AI的自主模型发现能力",
+      "canonical_evidence": "通过实验设计评估智能体AI的自主模型发现能力",
+      "llm_tldr_en": "Proposes an experimental design framework to systematically evaluate LLM coding agents' stochastic model discovery behavior.",
+      "llm_tldr_cn": "LLM代码智能体的自主模型发现行为具有随机性和适应性，难以单次评估。本文提出实验设计框架，量化变异性和关键因素，对Codex和Claude Code进行系统评估。",
+      "llm_tldr": "LLM代码智能体的自主模型发现行为具有随机性和适应性，难以单次评估。本文提出实验设计框架，量化变异性和关键因素，对Codex和Claude Code进行系统评估。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.01880v2",
+      "source": "arxiv",
+      "title": "Learning the Supports for Categorical Critic in Reinforcement Learning",
+      "abstract": "Value functions are an essential component in actor-critic based deep reinforcement learning (RL). Conventionally, these functions are trained as a regression task by minimising the mean squared error (MSE) relative to bootstrapped target values. Meanwhile, in distributional RL, a distribution of returns is modelled based on the distributional Bellman operator. This work investigates the Gaussian Histogram Loss (HL-Gauss), a recent approach that reframes value estimation as classification by encoding each scalar Bellman target as a Gaussian-smoothed categorical target. Despite its potential, applying histogram-based losses to RL presents inherent challenges, most notably the requirement to pre-define a fixed support interval, which is often complicated by the non-stationary and stochastic nature of target values typically found in RL tasks. In this work, we propose an approach that dynamically learns the lower and upper bounds of the support instead of assigning them beforehand. We derive an objective that jointly learns these bounds whilst learning the categorical representation of the scalar values, and we show that this objective forms an upper bound on the mean-squared Bellman error. Our theoretical analysis further shows that this bound is tighter than that of non-learned supports of HL-Gauss. Empirically, the proposed objective enables stable adaptation of the support interval and matches HL-Gauss-based actor-critic algorithms on most continuous-control tasks whilst improving on a subset, without requiring a pre-specified support interval.",
+      "authors": [
+        "Jen-Yen Chang",
+        "Takayuki Osa",
+        "Tatsuya Harada"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-02T08:34:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.01880v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL value function estimation improvement",
+      "llm_evidence_cn": "RL价值函数估计改进",
+      "llm_evidence": "RL价值函数估计改进",
+      "canonical_evidence": "RL价值函数估计改进",
+      "llm_tldr_en": "Investigates Gaussian Histogram Loss (HL-Gauss) for categorical critic in RL, proposing a method to learn the support interval dynamically, improving distributional RL performance.",
+      "llm_tldr_cn": "针对分类批评器中直方图损失需要预定义固定支持区间的问题，本文提出动态学习支持区间的方法，使HL-Gauss能自适应不同任务的价值分布。在Atari游戏中实验表明，学习支持区间显著提升了分布RL的性能和稳定性，为强化学习中价值函数估计提供了实用改进。",
+      "llm_tldr": "针对分类批评器中直方图损失需要预定义固定支持区间的问题，本文提出动态学习支持区间的方法，使HL-Gauss能自适应不同任务的价值分布。在Atari游戏中实验表明，学习支持区间显著提升了分布RL的性能和稳定性，为强化学习中价值函数估计提供了实用改进。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.07108v1",
+      "source": "arxiv",
+      "title": "Seeing and Reflecting: Multimodal Memory-Enhanced Agent Collaboration for Recommendation",
+      "abstract": "Large language model (LLM)-based agentic recommender systems show promise in modeling user preferences through natural-language reasoning, yet they remain limited by text-centric inputs and coarse-grained memory updates, making agents prone to missing visual evidence, semantic noise, and preference drift. To address these limitations, we propose MMEACR, a Multimodal Memory-Enhanced Agent Collaboration framework for recommendation. MMEACR introduces a dual-track memory architecture that separates interpretable agent reasoning from fine-grained multimodal matching. In the reasoning track, collaborative User and Item Memory Agents maintain persistent multimodal memories and update them through an attribute-guided reinforcement-and-reflection mechanism. In the matching track, a decoupled multi-modal embedding memory is built from raw interaction narratives and item images to preserve detailed cross-modal signals beyond structured memory updates. The two tracks are integrated through weighted Reciprocal Rank Fusion to produce robust and interpretable rankings. Experiments on three real-world domains show that MMEACR achieves strong overall performance against competitive LLM-based and agent-based baselines, with notable gains in visually grounded recommendation scenarios.",
+      "authors": [
+        "Hao Cong",
+        "Huizu Lin",
+        "Zihan Wang",
+        "Chengkai Huang",
+        "Quan Z. Sheng",
+        "Lina Yao"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR"
+      ],
+      "published": "2026-07-08T07:50:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.07108v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL-based memory update for agentic recommendation",
+      "llm_evidence_cn": "基于RL的记忆更新用于智能体推荐",
+      "llm_evidence": "基于RL的记忆更新用于智能体推荐",
+      "canonical_evidence": "基于RL的记忆更新用于智能体推荐",
+      "llm_tldr_en": "MMEACR uses RL-guided reflection to update multimodal memories for LLM-based agentic recommender systems, improving preference modeling and adaptability.",
+      "llm_tldr_cn": "现有LLM推荐智能体受限于文本输入和粗粒度记忆。MMEACR引入双轨记忆架构，通过属性引导的强化与反思机制持续更新物品和用户的多模态记忆。实验表明该方法在捕捉偏好漂移和视觉证据方面显著优于纯文本方法。",
+      "llm_tldr": "现有LLM推荐智能体受限于文本输入和粗粒度记忆。MMEACR引入双轨记忆架构，通过属性引导的强化与反思机制持续更新物品和用户的多模态记忆。实验表明该方法在捕捉偏好漂移和视觉证据方面显著优于纯文本方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.03324v2",
+      "source": "arxiv",
+      "title": "Hierarchical Multi-Agent Reinforcement Learning for Carbon-Aware AI Data Centers in Power Distribution Systems",
+      "abstract": "Eco-friendly energy management for artificial intelligence data centers (AIDCs) is crucial because of the significant increase in energy consumption-induced carbon emissions from AIDCs resulting from the rapid expansion of AI applications. This paper proposes a hierarchical carbon-aware multi-agent reinforcement learning (CA-MARL) framework for robust and efficient operations of AIDCs under uncertainties while ensuring low-carbon operation of power distribution systems. The framework comprises a workload manager (WM) agent and multiple local AIDC agents trained using a multi-agent transformer method, corresponding to a global AIDC aggregator and a local AIDC operator, respectively. Leveraging AIDC operation data along with nodal carbon intensity (NCI) calculated from the carbon emission flow-integrated distribution system operator problem, the WM agent spatially allocates AI training and inference jobs among all AIDCs. Based on the jobs allocated from the WM agent and NCI information, each AIDC agent schedules economical and eco-friendly operations of the AIDC by performing the following tasks: i) temporal shifting of training jobs, ii) spatial allocation of training graphics processing unit (GPU) blocks and inference GPUs within the AIDC, and iii) control of the supply air temperature of the cooling system. The effectiveness of the proposed framework was assessed using an IEEE 33-node power distribution system.",
+      "authors": [
+        "Hyunsoo Lee",
+        "Panggah Prabawa",
+        "Dae-Hyun Choi",
+        "Joongheon Kim"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.AI"
+      ],
+      "published": "2026-07-03T13:41:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.03324v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "multi-agent RL framework for autonomous data center energy management",
+      "llm_evidence_cn": "多智能体强化学习用于自主数据中心能源管理",
+      "llm_evidence": "多智能体强化学习用于自主数据中心能源管理",
+      "canonical_evidence": "多智能体强化学习用于自主数据中心能源管理",
+      "llm_tldr_en": "Proposes a hierarchical multi-agent RL framework with a workload manager and local AIDC agents using multi-agent transformers for carbon-aware operation under uncertainties.",
+      "llm_tldr_cn": "该论文针对AI数据中心能耗增加带来的碳排放问题，提出了分层碳感知多智能体强化学习框架。框架包含工作负载管理器和本地AIDC智能体，采用多智能体Transformer方法训练。实验表明该方法能在不确定性下实现稳健高效的低碳运营，为数据中心能源管理提供了自主决策的强化学习方案。",
+      "llm_tldr": "该论文针对AI数据中心能耗增加带来的碳排放问题，提出了分层碳感知多智能体强化学习框架。框架包含工作负载管理器和本地AIDC智能体，采用多智能体Transformer方法训练。实验表明该方法能在不确定性下实现稳健高效的低碳运营，为数据中心能源管理提供了自主决策的强化学习方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.08193v1",
+      "source": "arxiv",
+      "title": "Open-ended Multi-agent Autocurricula via Visual Inspection of Policies with Multi-modal LLMs",
+      "abstract": "Open-ended curricula in Reinforcement Learning (RL) aim to train generally-capable agents by identifying tasks that facilitate learning increasingly complex skills. A major challenge when designing such curricula is assessing task difficulty relative to the agent's current learning progress. While previous work has explored using scalar task scores or textual summaries of the agent's behavior, here we study a different approach: directly inspecting policy behavior via recorded episode videos. We introduce a simple yet effective instantiation of this approach which leverages a Video Language Model (VLM) to both process these videos and provide curriculum recommendations, which we call Visual Inspection of Policies (VIP). Since videos can naturally contain any number of controllable agents, we empirically study VIP on the StarCraft Multi-Agent Challenge (SMAC). We show that even with a lightweight and openly accessible VLM (VideoLLaMa2-7B), VIP can use policy videos to generate more effective curricula than both its text-only ablation and methods that rely on scalar task scores.",
+      "authors": [
+        "Lorenzo Pantè",
+        "Andrea Fanti",
+        "Roberto Capobianco"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-09T07:48:36+00:00",
+      "link": "https://arxiv.org/pdf/2607.08193v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses a Video Language Model to visually inspect RL policies for curriculum generation",
+      "llm_evidence_cn": "使用视频语言模型视觉检查强化学习策略以生成课程",
+      "llm_evidence": "使用视频语言模型视觉检查强化学习策略以生成课程",
+      "canonical_evidence": "使用视频语言模型视觉检查强化学习策略以生成课程",
+      "llm_tldr_en": "Introduces VIP, using a Video Language Model to directly inspect RL policy behavior via recorded episode videos and provide curriculum recommendations for open-ended multi-agent training.",
+      "llm_tldr_cn": "该论文针对开放课程中任务难度评估困难的问题，提出了基于视频语言模型的策略视觉检查方法VIP。VIP通过记录智能体交互视频，利用多模态LLM分析策略行为并推荐课程。实验表明该方法能有效生成渐进式课程，培养智能体更复杂的技能。虽然不直接解释RL策略，但利用LLM检查策略行为，为LLM在RL中的应用提供了新视角。",
+      "llm_tldr": "该论文针对开放课程中任务难度评估困难的问题，提出了基于视频语言模型的策略视觉检查方法VIP。VIP通过记录智能体交互视频，利用多模态LLM分析策略行为并推荐课程。实验表明该方法能有效生成渐进式课程，培养智能体更复杂的技能。虽然不直接解释RL策略，但利用LLM检查策略行为，为LLM在RL中的应用提供了新视角。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "large language model explaining reinforcement learning policy",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.07859v1",
+      "source": "arxiv",
+      "title": "Feedback Manipulation Regularization: Enabling Offline Agent Alignment for Imitation Learning",
+      "abstract": "Reinforcement learning (RL) research has increasingly shifted focus towards alignment, ensuring agents learn behaviors adhering to human values. While human demonstrations and feedback have proven crucial for alignment, existing approaches predominantly combine these signals using multi-stage pipelines designed for the contextual bandit framing of language generation. Yet little work explores how these complementary inputs can serve as a richer, interconnected signal for single-stage offline training in fully sequential decision-making environments. We propose Feedback Manipulation Regularization (FMR), an algorithm-agnostic method that harnesses evaluative feedback as a corrective signal to improve the alignment of imitation learning policies. We adapt Safety Gymnasium environments to be a principled testbed for alignment evaluation, demonstrating improved aptitude and up to a 98\\% reduction in misalignment across a range of imitation learning algorithms. FMR remains robust in limited data regimes, even when learning from scarce aligned and uninformative noisy demonstrations.",
+      "authors": [
+        "Benjamin Poole",
+        "Minwoo Lee"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "published": "2026-07-08T18:47:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.07859v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "offline agent alignment with evaluative feedback for RL",
+      "llm_evidence_cn": "利用评价反馈进行离线智能体对齐",
+      "llm_evidence": "利用评价反馈进行离线智能体对齐",
+      "canonical_evidence": "利用评价反馈进行离线智能体对齐",
+      "llm_tldr_en": "Feedback Manipulation Regularization (FMR) uses evaluative feedback to correct imitation learning in offline agent training, improving alignment with human values.",
+      "llm_tldr_cn": "针对模仿学习中智能体对齐不足问题，本文提出反馈操纵正则化（FMR），在离线训练中利用评价性反馈作为修正信号来改进模仿策略。实验表明FMR能有效提高智能体与人类价值观的对齐程度，且算法无关，适用于多种环境，为智能体对齐提供了实用方法。",
+      "llm_tldr": "针对模仿学习中智能体对齐不足问题，本文提出反馈操纵正则化（FMR），在离线训练中利用评价性反馈作为修正信号来改进模仿策略。实验表明FMR能有效提高智能体与人类价值观的对齐程度，且算法无关，适用于多种环境，为智能体对齐提供了实用方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.08647v1",
+      "source": "arxiv",
+      "title": "Multi-Modal, Multi-Environment Machine Teaching for Robust Reward Learning",
+      "abstract": "As autonomous agents are increasingly deployed across diverse operational contexts, aligning their behavior with human intent demands reward functions that remain robust to such changes rather than overfitting to any single environment. Inverse reinforcement learning (IRL) provides a principled way to infer such objectives from human feedback. However, existing analyses of optimal teaching approaches for IRL focus on single-environment, demonstration-only settings, leaving underexplored how heterogeneous feedback modalities and environment dynamics jointly constrain reward functions that generalize across multiple environments. Because demonstrations in one MDP entangle reward information with that environments specific structure, the resulting rewards frequently fail to generalize when the agent is deployed in a new setting. We first analyze how different feedback modalities constrain rewards, showing that, in the unlimited-data regime, comparisons impose strictly stronger global constraints than other modalities. Beyond this theoretical analysis, we introduce a hierarchical machine teaching algorithm for reward learning that operates across multiple MDPs. The algorithm first greedily selects informative environments that expose complementary reward constraints, then strategically queries low-cost feedback within those environments. Empirically, our method achieves substantially lower regret and stronger generalization to held-out environments than uniform teaching baselines under identical feedback budgets, demonstrating the importance of multi-environment, multi-modal teaching for learning dynamics-robust reward functions.",
+      "authors": [
+        "Ali Larian",
+        "Qian Lin",
+        "Chang Zong Wu",
+        "Daniel S. Brown"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-09T16:18:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.08647v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multi-environment reward learning via IRL",
+      "llm_evidence_cn": "多环境逆向强化学习的奖励学习",
+      "llm_evidence": "多环境逆向强化学习的奖励学习",
+      "canonical_evidence": "多环境逆向强化学习的奖励学习",
+      "llm_tldr_en": "Multi-Modal Multi-Environment Teaching combines diverse feedback modalities and environments to learn robust reward functions via IRL for autonomous agents.",
+      "llm_tldr_cn": "现有逆强化学习教学仅考虑单环境演示，导致奖励过拟合。本文提出多模态多环境教学框架，利用异构反馈（演示、修正等）联合约束奖励函数。理论分析表明该方法能恢复跨环境泛化的真实奖励，并在仿真中验证了鲁棒性。",
+      "llm_tldr": "现有逆强化学习教学仅考虑单环境演示，导致奖励过拟合。本文提出多模态多环境教学框架，利用异构反馈（演示、修正等）联合约束奖励函数。理论分析表明该方法能恢复跨环境泛化的真实奖励，并在仿真中验证了鲁棒性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

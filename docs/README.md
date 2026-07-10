@@ -6,54 +6,52 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-09
-- 运行时间：2026-07-09 21:51:55 UTC
+- 最新运行日期：2026-07-10
+- 运行时间：2026-07-10 21:30:30 UTC
 - 运行状态：成功
 - 本次总论文数：10
-- 精读区：6
-- 速读区：4
+- 精读区：3
+- 速读区：7
 
 ### 今日简报（AI）
-今日精读两篇9.0分论文，分别聚焦LLM顺序信息收集的贝叶斯实验设计与非对称优化突破探索-稳定性困境。
-
-值得优先关注：顺序信息收集的贝叶斯设计，以及强化学习奖励函数设计对过程模型质量的影响。
-
-建议从精读中的高分论文切入，再扩展至速读中的数据策展与奖励惩罚机制。
-- 详情：[/202607/09/README](/202607/09/README)
+今日精选10篇论文，聚焦LLM智能体自我进化与强化学习优化，其中两篇高评分论文提出元技能递归进化与尾部感知信用校准。  
+推荐关注《MetaSkill-Evolve》的递归自改进框架和《When Implausible Tokens Get Reinforced》的尾部校准方法，两者分别在智能体元学习和RL训练稳定性上取得突破。  
+普通读者可从上述两篇精读入手，理解智能体如何自主进化及如何解决长尾不合理token的强化问题。
+- 详情：[/202607/10/README](/202607/10/README)
 
 ### 精读区论文标签
-1. [Amortising Bayesian Experimental Design for Sequential Information Gathering in LLMs](/202607/09/2607.03426v1-amortising-bayesian-experimental-design-for-sequential-information-gathering-in-llms)  
+1. [MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution](/202607/10/2607.05297v1-metaskill-evolve-recursive-self-improvement-of-llm-agents-via-two-timescale-meta-skill-evolution)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：使用强化学习（分组相对策略优化）微调大语言模型以进行序列信息收集
-2. [UP: Unbounded Positive Asymmetric Optimization for Breaking the Exploration-Stability Dilemma](/202607/09/2607.06987v1-up-unbounded-positive-asymmetric-optimization-for-breaking-the-exploration-stability-dilemma)  
+   evidence：通过元技能演化实现LLM智能体的递归自改进
+2. [When Implausible Tokens Get Reinforced: Tail-Aware Credit Calibration for LLM Reinforcement Learning](/202607/10/2607.07976v1-when-implausible-tokens-get-reinforced-tail-aware-credit-calibration-for-llm-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：用于增强大语言模型推理能力的强化学习优化方法
-3. [Entropy Pacing Policy Optimization for Multi-Task Agentic Reinforcement Learning](/202607/09/2607.07178v1-entropy-pacing-policy-optimization-for-multi-task-agentic-reinforcement-learning)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：面向自主智能体的多任务强化学习方法
-4. [Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning](/202607/09/2607.07508v1-single-rollout-asynchronous-optimization-for-agentic-reinforcement-learning)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：用于大模型后训练的智能体强化学习异步优化
-5. [Weak-to-Strong Generalization via Direct On-Policy Distillation](/202607/09/2607.05394v2-weak-to-strong-generalization-via-direct-on-policy-distillation)  
+   evidence：TACO校准LLM强化学习中的信用分配以增强推理并避免词元污染
+3. [Switch-Reasoner: Learn When to Think in Multitask Mixtures via Reinforcement Learning](/202607/10/2607.08572v1-switch-reasoner-learn-when-to-think-in-multitask-mixtures-via-reinforcement-learning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：通过弱到强蒸馏强化学习策略增强大语言模型推理
-6. [Intercepting an Agile Target with Net-Carrying Drones using Competitive Multi-Agent Reinforcement Learning](/202607/09/2607.05939v1-intercepting-an-agile-target-with-net-carrying-drones-using-competitive-multi-agent-reinforcement-learning)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：竞争多智能体强化学习，无人机拦截
+   evidence：基于GRPO的自适应推理选择
 
 ### 速读区论文标签
-1. [CurateEvo: Data-Curation Evolving for Agentic Post-Training](/202607/09/2607.06140v1-curateevo-data-curation-evolving-for-agentic-post-training)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：面向智能体后训练的数据策展进化，使用RL数据
-2. [RLVP: Penalize the Path, Reward the Outcome](/202607/09/2607.07435v1-rlvp-penalize-the-path-reward-the-outcome)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：智能体决策中的路径约束与样本效率
-3. [Improving LLM-Generated Process Model Quality Through Reinforcement Learning: The Role of Reward Function Design](/202607/09/2607.06175v1-improving-llm-generated-process-model-quality-through-reinforcement-learning-the-role-of-reward-function-design)  
+1. [An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery](/202607/10/2607.06413v1-an-experimental-design-approach-to-evaluating-agentic-ais-autonomous-model-discovery)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：RL提升LLM生成过程模型质量，研究奖励函数设计
-4. [ORCAID: Oblique Rule-Based Continuous-Action Interpretation for Deep RL Policies](/202607/09/2607.07235v1-orcaid-oblique-rule-based-continuous-action-interpretation-for-deep-rl-policies)  
+   evidence：通过实验设计评估智能体AI的自主模型发现能力
+2. [Seeing and Reflecting: Multimodal Memory-Enhanced Agent Collaboration for Recommendation](/202607/10/2607.07108v1-seeing-and-reflecting-multimodal-memory-enhanced-agent-collaboration-for-recommendation)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：基于RL的记忆更新用于智能体推荐
+3. [Open-ended Multi-agent Autocurricula via Visual Inspection of Policies with Multi-modal LLMs](/202607/10/2607.08193v1-open-ended-multi-agent-autocurricula-via-visual-inspection-of-policies-with-multi-modal-llms)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：使用视频语言模型视觉检查强化学习策略以生成课程
+4. [Multi-Modal, Multi-Environment Machine Teaching for Robust Reward Learning](/202607/10/2607.08647v1-multi-modal-multi-environment-machine-teaching-for-robust-reward-learning)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：多环境逆向强化学习的奖励学习
+5. [Learning the Supports for Categorical Critic in Reinforcement Learning](/202607/10/2607.01880v2-learning-the-supports-for-categorical-critic-in-reinforcement-learning)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：可解释强化学习策略提取符合智能体强化学习可解释性需求
+   evidence：RL价值函数估计改进
+6. [Hierarchical Multi-Agent Reinforcement Learning for Carbon-Aware AI Data Centers in Power Distribution Systems](/202607/10/2607.03324v2-hierarchical-multi-agent-reinforcement-learning-for-carbon-aware-ai-data-centers-in-power-distribution-systems)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：多智能体强化学习用于自主数据中心能源管理
+7. [Feedback Manipulation Regularization: Enabling Offline Agent Alignment for Imitation Learning](/202607/10/2607.07859v1-feedback-manipulation-regularization-enabling-offline-agent-alignment-for-imitation-learning)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：利用评价反馈进行离线智能体对齐
 
 
 <div class="dpr-home-promo-card">
