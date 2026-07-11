@@ -1,0 +1,322 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-11T20:35:34.097935+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2607.08012v1",
+      "source": "arxiv",
+      "title": "Provably Optimal Learning Algorithms for Assistance Games",
+      "abstract": "This paper studies an online variant of the assistance games framework, where an informed agent and an uninformed agent repeatedly interact over $T$ timesteps to optimize a common reward function. While the informed agent (the human) observes a latent state of the world, the uninformed agent (the assistant) observes only the human's actions. We provide the first provably efficient learning algorithms for repeated assistance games. We introduce the notion of assistance regret: the gap between the cumulative utility of interactions and that of the optimal joint policies in hindsight, which map latent states to action pairs. We present decentralized algorithms for both the human and the assistant that achieve a $(1-1/e)$-approximate assistance regret rate of $\\widetilde{O}(T^{3/4})$, with runtime polynomial in the size of the action and state spaces. These algorithms are general; in particular, they accommodate any no-regret algorithm for the assistant. We prove that achieving a regret approximation factor better than $(1-1/e)$ is computationally intractable. Furthermore, we demonstrate how these generic no-regret algorithms can be tailored to a pseudo-decentralized setting -- using a shared random string -- to achieve a rate of $\\widetilde{O}(T^{1/2})$, optimal up to logarithmic factors.",
+      "authors": [
+        "Nivasini Ananthakrishnan",
+        "Mark Bedaywi",
+        "Michael I. Jordan",
+        "Stuart Russell",
+        "Nika Haghtalab"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.GT"
+      ],
+      "published": "2026-07-09T00:38:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.08012v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL algorithms for agent decision making in assistance games",
+      "llm_evidence_cn": "在辅助游戏框架中为代理决策提供RL算法",
+      "llm_evidence": "在辅助游戏框架中为代理决策提供RL算法",
+      "canonical_evidence": "在辅助游戏框架中为代理决策提供RL算法",
+      "llm_tldr_en": "First provably efficient learning algorithms for repeated assistance games, achieving near-optimal assistance regret.",
+      "llm_tldr_cn": "本文研究了重复辅助博弈的在线学习问题，首次提出了具有理论保证的高效学习算法。通过定义辅助遗憾并设计去中心化算法，实现了接近最优的累计效用。该工作为人类与AI协作中的自主决策提供了理论基础。",
+      "llm_tldr": "本文研究了重复辅助博弈的在线学习问题，首次提出了具有理论保证的高效学习算法。通过定义辅助遗憾并设计去中心化算法，实现了接近最优的累计效用。该工作为人类与AI协作中的自主决策提供了理论基础。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.04034v1",
+      "source": "arxiv",
+      "title": "The \"I Don't Know\" Filter: Enhancing Agentic Reliability in Function Calling",
+      "abstract": "The language models that underpin agents have seen a rapid rise in performance on function calling benchmarks. However, the metrics used in the training and evaluation of these models often encourage models to make positive claims even when the answer is uncertain, leading to hallucinations. Such hallucinations can be disastrous when language models are trusted to use function calls to make decisions in high stakes applications. To that end, we propose an agent evaluation metric that takes into account the negative outcomes associated with incorrect function calls. Further, to catch hallucinations before they can cause harm, we propose a lightweight trainable filter that can quantify a language model's uncertainty and remove potentially harmful function calls. By training that filter to detect and suppress uncertain function calls without modifying the underlying model, we demonstrate a practical path toward agents that know when to say \"I don't know,\" a property we argue is essential to production reliability.",
+      "authors": [
+        "Stefan Broecker",
+        "Mason del Rosario",
+        "Boris Selitser",
+        "Thomas Strohmer"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2026-07-04T21:27:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.04034v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "enhancing agentic reliability in function calling for LLM agents",
+      "llm_evidence_cn": "增强LLM代理函数调用的自主可靠性",
+      "llm_evidence": "增强LLM代理函数调用的自主可靠性",
+      "canonical_evidence": "增强LLM代理函数调用的自主可靠性",
+      "llm_tldr_en": "Proposes a lightweight trainable filter to quantify LLM uncertainty and prevent harmful hallucinations in agentic function calling.",
+      "llm_tldr_cn": "本文针对LLM代理在函数调用中容易产生幻觉的问题，提出了一种轻量级可训练过滤器，能够量化模型的不确定性并移除潜在有害输出。实验表明该方法显著提高了高可靠性场景下的代理行为安全性。",
+      "llm_tldr": "本文针对LLM代理在函数调用中容易产生幻觉的问题，提出了一种轻量级可训练过滤器，能够量化模型的不确定性并移除潜在有害输出。实验表明该方法显著提高了高可靠性场景下的代理行为安全性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.04428v1",
+      "source": "arxiv",
+      "title": "dOPSD: On-Policy Self-Distillation for Diffusion Language Models",
+      "abstract": "Diffusion large language models (dLLMs) generate text by iteratively denoising a masked sequence, offering a parallel alternative to autoregressive models, but eliciting strong reasoning through post-training remains difficult: supervised fine-tuning is off-policy and suffers from exposure bias, while reinforcement learning gives only sparse, sequence-level rewards and is hard to apply without tractable sequence likelihoods. On-policy self-distillation (OPSD) offers a promising alternative, using one model as both student and teacher to provide dense, token-level, on-policy supervision, but its effectiveness hinges on giving the teacher privileged information (PI) - typically an instance-specific ground-truth reference unavailable at inference - so the student ends up distilling a weak PI-free consensus policy that yields little improvement on dLLM reasoning. We introduce dOPSD, which instead derives the teacher's privilege directly from the student's own denoising trajectory, evaluating masked positions using later, more-decoded steps of that same trajectory rather than an external label, so the teacher's advantage emerges from the model's own decoding process; on Dream and LLaDA, dOPSD improves both in-domain math reasoning and out-of-domain code generation, outperforming supervised and on-policy baselines.",
+      "authors": [
+        "Phuong Tuan Dat",
+        "Qi Li",
+        "Xinchao Wang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-07-05T17:47:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.04428v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "On-policy self-distillation as alternative to RL for diffusion LLMs",
+      "llm_evidence_cn": "作为RL替代方案的在策略自蒸馏用于扩散LLM",
+      "llm_evidence": "作为RL替代方案的在策略自蒸馏用于扩散LLM",
+      "canonical_evidence": "作为RL替代方案的在策略自蒸馏用于扩散LLM",
+      "llm_tldr_en": "Proposes dOPSD with privileged information to provide dense on-policy supervision for diffusion language models, outperforming sparse RL rewards.",
+      "llm_tldr_cn": "本文针对扩散语言模型后训练困难，提出dOPSD（在策略自蒸馏），通过在教师模型中引入特权信息提供密集的令牌级监督，避免了稀疏奖励问题，在推理任务上超越了RL方法。",
+      "llm_tldr": "本文针对扩散语言模型后训练困难，提出dOPSD（在策略自蒸馏），通过在教师模型中引入特权信息提供密集的令牌级监督，避免了稀疏奖励问题，在推理任务上超越了RL方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.04179v1",
+      "source": "arxiv",
+      "title": "CritiqueDriveVLM: From Verifier-Guided Reinforcement Learning to Latent Thought Distillation for Autonomous Driving",
+      "abstract": "End-to-end Vision-Language Models (VLMs) show immense potential in autonomous driving. However, standard Supervised Fine-Tuning (SFT) often suffers from reasoning hallucinations and conservative biases. While traditional tool-augmented frameworks and Chain-of-Thought (CoT) approaches mitigate these issues, they incur exorbitant token consumption and unacceptable latency, rendering real-time deployment impractical. To resolve this reliability-efficiency trade-off, we propose CritiqueDriveVLM, a novel unified three-stage framework internalizing reasoning directly into the VLM. First, we introduce Critique-Driven Multi-Turn Reinforcement Learning (RL) guided by a multi-dimensional verifier. By providing granular scalar feedback and a multi-turn penalty, we force the policy to internalize logical deduction, cultivating a robust System-2 Teacher that achieves high accuracy without fragile external tools. Subsequently, we propose Latent Thought Distillation to overcome the latency bottleneck. By aligning the Student's latent representations with the Teacher's fully converged reasoning states, we compress deep logical capabilities into a fast, CoT-free System-1 Student. Extensive experiments on the widely-used DriveLMM-01 benchmark demonstrate remarkable improvements. Compared to the base model, our tool-free Teacher significantly boosts Multiple Choice Quality (MCQ) from 55.54% to a state-of-the-art 76.54%. Crucially, our distilled Student preserves competitive reasoning depth while drastically minimizing generation length to an average of merely 28 tokens. This slashes inference latency by 88% (from 3482 ms to 416 ms), paving a highly robust pathway for low-latency autonomous driving.Our source code is available at https://github.com/MICLAB-BUPT/CritiqueDriveVLM.",
+      "authors": [
+        "Zhaohong Liu",
+        "Hao Ye",
+        "Xianlin Zhang",
+        "Mengshi Qi"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-07-05T08:51:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.04179v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL-based framework to enhance VLM for autonomous driving",
+      "llm_evidence_cn": "使用RL增强视觉语言模型用于自动驾驶",
+      "llm_evidence": "使用RL增强视觉语言模型用于自动驾驶",
+      "canonical_evidence": "使用RL增强视觉语言模型用于自动驾驶",
+      "llm_tldr_en": "Proposes CritiqueDriveVLM using verifier-guided RL and latent thought distillation for efficient, reliable VLM driving.",
+      "llm_tldr_cn": "标准视觉语言模型微调存在推理幻觉和保守偏差。本文提出批评驱动多轮强化学习与潜在思维蒸馏的三阶段框架，内化推理过程。实验在自动驾驶任务中实现了可靠性与效率的平衡。",
+      "llm_tldr": "标准视觉语言模型微调存在推理幻觉和保守偏差。本文提出批评驱动多轮强化学习与潜在思维蒸馏的三阶段框架，内化推理过程。实验在自动驾驶任务中实现了可靠性与效率的平衡。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.05174v1",
+      "source": "arxiv",
+      "title": "AgentGym2: Benchmarking Large Language Model Agents in De-Idealized Real-World Environments",
+      "abstract": "Language agents, i.e., LLM agents, progress rapidly and are increasingly deployed in production environments. This trend underscores the urgent need for rigorous and realistic evaluations. However, most existing benchmarks evaluate agents in simplified, idealized settings. They typically rely on pre-packaged tool interfaces, overlook critical steps, and assume inputs are clean and fully specified. Consequently, they understate the difficulty of real deployments, where uncertainty and noise are ubiquitous and agents must proactively explore the environment to uncover new tools. To bridge this gap, we present AgentGym2, a new evaluation framework with task instances grounded in real-world end-to-end working demands. Beyond reasoning and planning, it measures agents' ability to execute end-to-end procedures, discover tools via exploration, compose tools for unseen tasks, and remain robust to noisy and underspecified information. Experiments on 15 proprietary and open-source models show that even SOTA systems like Gemini and GPT-5 struggle on AgentGym2, revealing a substantial gap between the capability of current agents and the demands of real-world applications.",
+      "authors": [
+        "Zhiheng Xi",
+        "Dingwen Yang",
+        "Jiaqi Liu",
+        "Jixuan Huang",
+        "Honglin Guo",
+        "Baodai Huang",
+        "Tinggang Chen",
+        "Qi Zhang",
+        "Zhonghang Lu",
+        "Chenyu Liu",
+        "Jiajun Sun",
+        "Jiazheng Zhang",
+        "Dingwei Zhu",
+        "Xin Guo",
+        "Junzhe Wang",
+        "Zhihao Zhang",
+        "Yuming Yang",
+        "Junjie Ye",
+        "Minghe Gao",
+        "Dongrui Liu",
+        "Jiaming Ji",
+        "Guohao Li",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-06T14:56:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.05174v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "benchmark for LLM agent decision making in realistic environments",
+      "llm_evidence_cn": "在真实环境中基准测试LLM智能体决策",
+      "llm_evidence": "在真实环境中基准测试LLM智能体决策",
+      "canonical_evidence": "在真实环境中基准测试LLM智能体决策",
+      "llm_tldr_en": "AgentGym2 provides realistic benchmark tasks requiring proactive exploration and handling of noise, evaluating LLM agent decision-making.",
+      "llm_tldr_cn": "大多数现有基准在简化理想环境中评估LLM智能体，忽略现实世界的噪声与主动探索需求。AgentGym2设计了端到端真实工作需求的任务实例，要求智能体在不确定性中主动发现工具并完成任务，从而更准确评估决策能力。",
+      "llm_tldr": "大多数现有基准在简化理想环境中评估LLM智能体，忽略现实世界的噪声与主动探索需求。AgentGym2设计了端到端真实工作需求的任务实例，要求智能体在不确定性中主动发现工具并完成任务，从而更准确评估决策能力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.07820v1",
+      "source": "arxiv",
+      "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment",
+      "abstract": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak supervision for long-horizon interactions. We present DeepSearch-Evolve, a self-distillation framework for web agents built on DeepSearch-World, a deterministic and verifiable environment with reproducible search and page-reading tools. DeepSearch-World contains 420K multi-hop QA tasks constructed from entity-level random walks and supports key agentic cognitive behaviors useful for self-evolving, including progress verification, grounded reflection, and failure recovery. DeepSearch-Evolve iteratively performs trajectory generation, filtering, data mixing, and fine-tuning to train stronger agents. Without distillation from more capable models, DeepSearch-World-9B achieves competitive performance compared with open-source agents, reaching 31.2% on BrowseComp, 61.5% on GAIA, and 93.4% on HotpotQA, showing that verifiable environments enable scalable self-evolution for long-horizon web agents. We will release the environment, 420K training pool, validation set, model, and code to facilitate future research on self-improving deep search agents.",
+      "authors": [
+        "Xinyu Geng",
+        "Xuanhua He",
+        "Sixiang Chen",
+        "Yanjing Xiao",
+        "Fan Zhang",
+        "Shijue Huang",
+        "Haitao Mi",
+        "Zhenwen Liang",
+        "Tianqing Fang",
+        "Yi R. Fung"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-08T18:03:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.07820v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "self-distillation framework for web agents, uses RL concepts",
+      "llm_evidence_cn": "面向网络智能体的自蒸馏框架，涉及强化学习概念",
+      "llm_evidence": "面向网络智能体的自蒸馏框架，涉及强化学习概念",
+      "canonical_evidence": "面向网络智能体的自蒸馏框架，涉及强化学习概念",
+      "llm_tldr_en": "DeepSearch-Evolve uses self-distillation and a verifiable environment to train web agents, addressing sparse-reward RL limitations via iterative trajectory generation.",
+      "llm_tldr_cn": "训练工具使用智能体时，监督微调依赖固定教师轨迹，稀疏奖励强化学习对长视野交互监督弱。本文构建DeepSearch-World可验证环境，并提出DeepSearch-Evolve自蒸馏框架，通过迭代生成并筛选高质量轨迹来提升智能体能力。实验表明该方法在420K多跳QA任务上优于传统方法。",
+      "llm_tldr": "训练工具使用智能体时，监督微调依赖固定教师轨迹，稀疏奖励强化学习对长视野交互监督弱。本文构建DeepSearch-World可验证环境，并提出DeepSearch-Evolve自蒸馏框架，通过迭代生成并筛选高质量轨迹来提升智能体能力。实验表明该方法在420K多跳QA任务上优于传统方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.08137v1",
+      "source": "arxiv",
+      "title": "Securing Autonomous Vehicle Systems via Twin-Aware Federated Reinforcement Learning",
+      "abstract": "Federated reinforcement learning (FRL) is crucial for enabling collaborative learning across multiple agents without sharing raw data, thereby enhancing privacy and scalability in the decision-making process within dynamic vehicular environments. However, poisoning attacks pose a significant threat to the security and reliability of FRL-based systems, particularly in safety-critical autonomous driving, where this vulnerability remains largely unexplored. These attacks can compromise the global control model by subtly injecting malicious system parameters, leading to potential hazards. To counter these challenges, we present \\alg (\\underline{Sec}ure \\underline{A}ggregation with \\underline{p}oisoning-\\underline{p}revention and historical reinforcement) as a defensive framework aimed at enhancing the robustness of FRL systems designed for safety-critical driving scenarios. \\alg strategically integrates digital twins for rehearsal-based learning and leverages historical aggregated model parameters along with a selected central gradient to ensure that only benign data is aggregated, effectively mitigating the influence of malicious agents. Theoretical guarantees are provided for the convergence performance of \\alg in the presence of poisoning attacks. We also validate the effectiveness of \\alg using developed digital twins that model realistic highway environments to evaluate the control of autonomous vehicles under adversarial conditions.",
+      "authors": [
+        "Zifan Zhang",
+        "Minghong Fang",
+        "Dianwei Chen",
+        "Zhuqing Liu",
+        "Prashant Khanduri",
+        "Xianfeng Yang",
+        "Anupam Das",
+        "Yuchen Liu"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.DC",
+        "cs.LG",
+        "cs.NI"
+      ],
+      "published": "2026-07-09T06:18:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.08137v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Federated RL for autonomous vehicle security",
+      "llm_evidence_cn": "联邦强化学习用于自动驾驶安全",
+      "llm_evidence": "联邦强化学习用于自动驾驶安全",
+      "canonical_evidence": "联邦强化学习用于自动驾驶安全",
+      "llm_tldr_en": "Twin-aware federated RL framework to defend against poisoning attacks in autonomous driving.",
+      "llm_tldr_cn": "该论文针对自动驾驶系统中联邦强化学习（FRL）面临的中毒攻击威胁，提出孪生感知的联邦强化学习安全聚合框架。通过结合历史可靠性和异常检测机制，防御恶意参数注入，保障全局控制模型的安全性。仿真实验表明该方法在多种攻击下仍能维持驾驶决策的可靠性和鲁棒性。",
+      "llm_tldr": "该论文针对自动驾驶系统中联邦强化学习（FRL）面临的中毒攻击威胁，提出孪生感知的联邦强化学习安全聚合框架。通过结合历史可靠性和异常检测机制，防御恶意参数注入，保障全局控制模型的安全性。仿真实验表明该方法在多种攻击下仍能维持驾驶决策的可靠性和鲁棒性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
