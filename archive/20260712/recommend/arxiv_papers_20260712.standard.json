@@ -1,0 +1,159 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-12T20:18:39.766995+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.04153v1",
+      "source": "arxiv",
+      "title": "Mask-based Predictive Representations for Reinforcement Learning",
+      "abstract": "Vision-based deep reinforcement learning involves dealing with high-dimensional inputs of image information. It is crucial to abstract effective states from high-dimensional image inputs and limited samples for sample-efficient reinforcement learning. To address this challenge, inspired by fields such as natural language processing and computer vision, we propose a self-supervised task based on mask prediction as an auxiliary task for reinforcement learning. This non-reconstruction method uses the sequence information collected by the agent from the environment and the context information in the sequence to predict the masked information, thereby strengthening the agent's understanding of the task and learning effective representations. Combined with transformers, we find that the model reconstructs the masked input sequence in the latent space. By feeding the compressed representations learned by this method into reinforcement learning models, we observe an improvement in the sample efficiency of reinforcement learning. Moreover, the model outperforms state-of-the-art sample-efficient reinforcement learning methods on multiple continuous and discrete control benchmarks.",
+      "authors": [
+        "Kai Zhao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-05T07:42:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.04153v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Uses mask prediction as auxiliary task for vision-based RL agents",
+      "llm_evidence_cn": "利用掩码预测作为视觉强化学习智能体的辅助任务",
+      "llm_evidence": "利用掩码预测作为视觉强化学习智能体的辅助任务",
+      "canonical_evidence": "利用掩码预测作为视觉强化学习智能体的辅助任务",
+      "llm_tldr_en": "Mask-based predictive representations improve sample efficiency in vision-based RL by using mask prediction as an auxiliary task with transformers.",
+      "llm_tldr_cn": "视觉深度强化学习中，从高维图像输入提取有效状态是关键。本文提出基于掩码预测的自监督辅助任务，不重构而是预测序列中的掩码信息，结合transformer增强智能体对任务的理解并学习有效表征。实验证明该方法提高了样本效率和任务表现。",
+      "llm_tldr": "视觉深度强化学习中，从高维图像输入提取有效状态是关键。本文提出基于掩码预测的自监督辅助任务，不重构而是预测序列中的掩码信息，结合transformer增强智能体对任务的理解并学习有效表征。实验证明该方法提高了样本效率和任务表现。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.04426v1",
+      "source": "arxiv",
+      "title": "ACE-Brain-0.5: A Unified Embodied Foundational Model for Physical Agentic AI",
+      "abstract": "Embodied AI is moving from isolated perception or action modules toward physical agents that understand, plan under goals, act through robot bodies, monitor progress, and improve from experience. Existing systems address this loop only in parts: end-to-end policies generate actions but often lack spatial reasoning, planning, and execution assessment, while robot-agent systems orchestrate tools or specialists but do not learn a shared representation. This fragmentation limits general Physical Agentic AI. We present ACE-Brain-0.5, a unified embodied foundation model that organizes robot intelligence into five coupled functions: spatial perception, decision making, embodied interaction, self-monitoring, and self-improvement. Built on ACE-Brain-0, which established spatial intelligence as a shared scaffold across robot platforms, ACE-Brain-0.5 extends an understanding-centric model into a closed-loop foundation model. A single 8B backbone instantiates the first four functions: grounding objects and affordances, reasoning over 3D and egocentric spatial relations, decomposing instructions into subgoals, generating navigation and manipulation actions, and estimating progress for verification and recovery. To unify these capabilities without cross-task interference, we introduce SSR+, which extends Scaffold-Specialize-Reconcile with a Reactivate stage after task-vector merging. The fifth function, self-improvement, is realized by a companion framework that updates external execution state, including task schemas, spatial memory, and failure-recovery cases, from rollouts. Across fifteen benchmarks, ACE-Brain-0.5 improves over ACE-Brain-0 on 14 of 18 spatial perception and grounding benchmarks, achieves competitive navigation and manipulation performance, and provides strong progress estimation in ID and OOD settings. Together, these results mark an early step toward general Physical Agentic AI.",
+      "authors": [
+        "ACE-Brain Team",
+        ":",
+        "Ziyang Gong",
+        "Haoming Gu",
+        "Zehang Luo",
+        "Tianyi Zhang",
+        "Tao Tao",
+        "Yixiao Chi",
+        "Zhe Liu",
+        "Lingsi Zhu",
+        "Jingyuan Liu",
+        "Anke Tang",
+        "Songze Li",
+        "Yilun Kong",
+        "Ningjing Liu",
+        "Tianyu Zhu",
+        "Yunpeng Qing",
+        "Shuang Luo",
+        "Xiang Liu",
+        "Shi Fu",
+        "Dawei Nie",
+        "Sixiang Liu",
+        "Zhexi Wen",
+        "Feng Pan",
+        "Xiaofeng Wang",
+        "Zhi Hou",
+        "Chunxiao Liu",
+        "Xue Yang",
+        "Junchi Yan",
+        "Hengshuang Zhao",
+        "Dacheng Tao",
+        "Xiaogang Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-05T17:43:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.04426v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Unified embodied foundation model for physical agentic AI with decision making",
+      "llm_evidence_cn": "面向物理具身智能的统一基础模型，包含决策能力",
+      "llm_evidence": "面向物理具身智能的统一基础模型，包含决策能力",
+      "canonical_evidence": "面向物理具身智能的统一基础模型，包含决策能力",
+      "llm_tldr_en": "ACE-Brain-0.5 unifies spatial perception, decision making, embodied interaction, self-monitoring, and self-improvement for physical agents.",
+      "llm_tldr_cn": "物理具身智能需要整合感知、决策、交互、监控和改进。本文提出ACE-Brain-0.5，一个统一基础模型，将机器人智能组织为五个耦合功能：空间感知、决策、具身交互、自我监控和自我改进。实验表明该模型在多种机器人任务上实现了更连贯和高效的行为。",
+      "llm_tldr": "物理具身智能需要整合感知、决策、交互、监控和改进。本文提出ACE-Brain-0.5，一个统一基础模型，将机器人智能组织为五个耦合功能：空间感知、决策、具身交互、自我监控和自我改进。实验表明该模型在多种机器人任务上实现了更连贯和高效的行为。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.08724v1",
+      "source": "arxiv",
+      "title": "Latent Memory Palace: Reasoning for Control as Autoregressive Variational Inference",
+      "abstract": "Human decision-making is highly flexible -- some actions are taken immediately; others require longer deliberation. Language models have exhibited a similar capacity for adaptive \"reasoning.\" However, transferring this capability to continuous control policies has been challenging, as directly reasoning in language space may lack the granularity for spatial understanding and precise motions. In this work, we show that reasoning for control policies can emerge by organizing information in an autoregressive latent space reminiscent of a memory palace, where retrieval is iterative and adaptive. Our method, Latent Memory Palace (LMP), formulates reasoning as variational inference with an autoregressive latent distribution. We derive a latent-space reinforcement learning technique to tractably optimize its variational lower bound. The resulting policy, LMP-$π$, achieves strong empirical performance in simulation and real-world domains while exhibiting interpretable, adaptive allocation of test-time compute. We further show that the same framework yields a variable-length action tokenizer, LMP-$\\texttt{tok}$, which significantly improves the performance of downstream autoregressive policies. Together, these results present a new perspective on latent reasoning for control through the lens of variational inference.",
+      "authors": [
+        "Chuning Zhu",
+        "Eva Xu",
+        "Jose Barreiros",
+        "Krishnan Srinivasan",
+        "Paarth Shah",
+        "Abhishek Gupta"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-07-09T17:30:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.08724v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "reasoning for control policies via latent space",
+      "llm_evidence_cn": "通过潜在空间进行控制策略推理",
+      "llm_evidence": "通过潜在空间进行控制策略推理",
+      "canonical_evidence": "通过潜在空间进行控制策略推理",
+      "llm_tldr_en": "Shows that reasoning for control policies can emerge by organizing information in an autoregressive latent space (memory palace) formulated as variational inference.",
+      "llm_tldr_cn": "该论文针对连续控制策略中推理能力不足的问题，提出潜在记忆宫殿方法，将推理形式化为自回归潜在分布上的变分推断。该方法通过在潜在空间中迭代和自适应地组织信息，使得控制策略能够进行类似语言的推理。实验表明，该方法能有效提升控制策略在空间理解和精确运动方面的表现，为将推理能力迁移到连续控制领域提供了新途径。",
+      "llm_tldr": "该论文针对连续控制策略中推理能力不足的问题，提出潜在记忆宫殿方法，将推理形式化为自回归潜在分布上的变分推断。该方法通过在潜在空间中迭代和自适应地组织信息，使得控制策略能够进行类似语言的推理。实验表明，该方法能有效提升控制策略在空间理解和精确运动方面的表现，为将推理能力迁移到连续控制领域提供了新途径。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
