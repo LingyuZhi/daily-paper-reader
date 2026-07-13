@@ -1,0 +1,335 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-13T20:51:48.407201+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.09375v1",
+      "source": "arxiv",
+      "title": "Mach-Mind-4-Flash Technical Report",
+      "abstract": "We present Mach-Mind-4-Flash, a 35B-parameter Mixture-of-Experts (MoE) agentic model with 3B activated parameters. Through post-training optimization alone without scaling pre-training compute, the model achieves performance on par with or surpassing that of 100B-parameter-class models. By introducing scalable agentic interaction environments for large-scale reinforcement learning, the model attains significant performance gains on real-world application tasks. Our pipeline comprises three stages: (1) a unified RL/OPD training infrastructure with dynamic multi-teacher scheduling and operator-level acceleration, delivering 17\\% end-to-end training speedup; (2) multiple domain-specific RL experts trained in parallel across Reasoning, General, and Agent tracks, then fused into a single generalist via Multi-Teacher On-Policy Distillation (MOPD) -- a routed reverse-KL objective that eliminates the see-saw degradation of mixed-reward RL; (3) Hybrid Median-length Policy Optimization (HMPO), a single-stage token-efficiency method that compresses reasoning chains by 19--46\\% with $\\le$0.7 percentage-point accuracy loss. Mach-Mind-4-Flash scores 92.70 on AIME'26, 82.82 on IFBench, 80.74 on Behavioral-SafetyBench, 75.80 on BFCL-v4, 72.31 on BrowseComp-zh, and 84.20 on ClawBench -- leading or matching models with 10--30$\\times$ its activated size at a fraction of the inference cost.",
+      "authors": [
+        "Foundation Model Team"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-07-10T12:57:08+00:00",
+      "link": "https://arxiv.org/pdf/2607.09375v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "uses large-scale RL to train a powerful MoE agentic model",
+      "llm_evidence_cn": "使用大规模RL训练强大的MoE智能体模型",
+      "llm_evidence": "使用大规模RL训练强大的MoE智能体模型",
+      "canonical_evidence": "使用大规模RL训练强大的MoE智能体模型",
+      "llm_tldr_en": "Mach-Mind-4-Flash achieves performance on par with 100B-parameter models by using large-scale RL and scalable agentic interaction environments on a 35B MoE architecture.",
+      "llm_tldr_cn": "Mach-Mind-4-Flash是一个35B参数（3B激活）的MoE智能体模型，通过大规模强化学习和可扩展的智能体交互环境进行后训练优化，无需扩展预训练计算即可达到100B参数模型的性能。其训练管线包含统一RL/OPD基础设施、多领域RL专家并行训练和融合，显著提升了真实世界应用任务的表现。",
+      "llm_tldr": "Mach-Mind-4-Flash是一个35B参数（3B激活）的MoE智能体模型，通过大规模强化学习和可扩展的智能体交互环境进行后训练优化，无需扩展预训练计算即可达到100B参数模型的性能。其训练管线包含统一RL/OPD基础设施、多领域RL专家并行训练和融合，显著提升了真实世界应用任务的表现。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.08837v1",
+      "source": "arxiv",
+      "title": "Prompt-Driven Exploration",
+      "abstract": "Exploration is essential to RL since a policy cannot improve by repeatedly sampling the behaviors it already prefers. Standard methods inject stochasticity in the action space, but such jitter only yields rollouts close to the original. Escaping a weak policy often requires global perturbations that action noise cannot produce. Large language models (LLMs) and vision-language-action (VLA) models offer a pathway: they condition the policy on a natural language prompt, and since the rollout follows from it, modifying the prompt induces global changes. The challenge is finding prompts that induce useful global changes. With a weak policy that rarely succeeds, reward is too sparse to select on. Our idea is to refine prompts from the rollouts themselves: a vision-language model (VLM) reasons over the rollout video, diagnoses how the policy responded, and rewrites the prompt to elicit better behavior next time. This procedure realizes posterior sampling, a classical RL exploration framework, at the level of prompts: the VLM maintains an implicit distribution over useful prompts and updates it from observed rollouts. We call this strategy Prompt-Driven Exploration (PDE). Across manipulation and reasoning tasks, PDE enables RL to learn successful policies even from zero-reward starts, and improves sample efficiency more broadly. Our website is available at https://xinyunsunshine.github.io/prompt-rl.",
+      "authors": [
+        "Sunshine Jiang",
+        "John Marangola",
+        "David Zhang",
+        "Raghuram Kowdeed",
+        "Ruiyang Luo",
+        "Nitish Dashora",
+        "Richard Li",
+        "Pulkit Agrawal",
+        "Zhang-Wei Hong"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-09T18:00:24+00:00",
+      "link": "https://arxiv.org/pdf/2607.08837v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "uses LLMs for prompt-driven exploration in RL",
+      "llm_evidence_cn": "利用大语言模型进行提示驱动的强化学习探索",
+      "llm_evidence": "利用大语言模型进行提示驱动的强化学习探索",
+      "canonical_evidence": "利用大语言模型进行提示驱动的强化学习探索",
+      "llm_tldr_en": "Proposes Prompt-Driven Exploration that uses LLMs to condition policy on prompts, enabling global exploration by modifying prompts, and refines prompts from rollouts using a VLM.",
+      "llm_tldr_cn": "强化学习中的探索至关重要，但标准方法仅产生局部扰动。本文利用大语言模型（LLM）将策略条件化于自然语言提示，通过修改提示实现全局探索变化，并利用视觉语言模型（VLM）从轨迹中提炼提示，从而在奖励稀疏时引导有效探索。",
+      "llm_tldr": "强化学习中的探索至关重要，但标准方法仅产生局部扰动。本文利用大语言模型（LLM）将策略条件化于自然语言提示，通过修改提示实现全局探索变化，并利用视觉语言模型（VLM）从轨迹中提炼提示，从而在奖励稀疏时引导有效探索。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.09042v1",
+      "source": "arxiv",
+      "title": "Learning More from Less: Reinforcement Learning from Hindsight",
+      "abstract": "Reinforcement learning (RL) is increasingly used to post-train vision-language-action (VLA) models, but every update consumes robot rollouts that are slow and costly to collect, making sample efficiency a central concern. Manipulation tasks typically provide only sparse rewards, so a weak policy fails almost every rollout early in training and has little to learn from, even when those failures execute coherent behavior. Such a failure, however, is a success at a different task. We present Learning from Hindsight (LfH), which brings hindsight relabeling to RL post-training of VLAs by scoring failed rollouts against the tasks they actually achieved. A single vision-language model relabels both the instruction and the reward, proposing a hindsight instruction for a group of failed rollouts and scoring how well each satisfies it, and the policy trains on the relabeled and original rollouts jointly. Because VLAs generalize across language, relabeling in language lets the policy learn more from the same trajectories. On out-of-distribution LIBERO-PRO tasks, where standard RL improves only slowly, LfH achieves $5\\times$ improvement in sample efficiency, and outperforms a dense progress-reward baseline. The gains hold across VLA backbones and on a physical Franka robot.",
+      "authors": [
+        "Iris Xu",
+        "Sunshine Jiang",
+        "John Marangola",
+        "Nitish Dashora",
+        "Richard Li",
+        "Thomas Liu",
+        "Zexue He",
+        "Yuheng Zhi",
+        "Alex Pentland",
+        "Pulkit Agrawal",
+        "Zhang-Wei Hong"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-10T02:17:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.09042v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "hindsight relabeling for RL post-training of VLA models",
+      "llm_evidence_cn": "事后重标记用于视觉-语言-动作模型的强化学习后训练",
+      "llm_evidence": "事后重标记用于视觉-语言-动作模型的强化学习后训练",
+      "canonical_evidence": "事后重标记用于视觉-语言-动作模型的强化学习后训练",
+      "llm_tldr_en": "Presents Learning from Hindsight (LfH) that brings hindsight relabeling to RL post-training of VLAs by scoring failed rollouts against achieved tasks, improving sample efficiency.",
+      "llm_tldr_cn": "在使用强化学习后训练视觉-语言-动作（VLA）模型时，机器人操作中的稀疏奖励导致样本效率低下。本文提出事后学习（LfH），将事后重标记引入RL后训练，通过评估失败轨迹实际完成的任务并生成事后指令和奖励，显著提升了样本效率。",
+      "llm_tldr": "在使用强化学习后训练视觉-语言-动作（VLA）模型时，机器人操作中的稀疏奖励导致样本效率低下。本文提出事后学习（LfH），将事后重标记引入RL后训练，通过评估失败轨迹实际完成的任务并生成事后指令和奖励，显著提升了样本效率。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.09492v1",
+      "source": "arxiv",
+      "title": "Multimodal Reward Hacking in Reinforcement Learning",
+      "abstract": "Reinforcement learning (RL) is increasingly used to align multimodal large language models (MLLMs), but higher rewards do not always imply better task performance. This risk is amplified when visual evidence is evaluated by text-only or weakly grounded rewards. We study reward hacking in MLLM RL across safety VQA, chart VQA, and stress-test settings, varying reward design, data ambiguity, model scale (2B-32B), and RL algorithm (GRPO, RLOO, DAPO). We introduce Newly Rewarded Failure Rate (NRFR), which measures failures among samples whose proxy reward improves over the SFT baseline. Outcome-only rewards cause severe hacking, reaching 48.1% Reward Hacking Rate (RHR), while NRFR exceeding RHR shows that RL creates new failures rather than merely inheriting them. Scaling reduces but does not eliminate hacking: even the 32B model retains a 54.9% worse rate under outcome-only rewards, whereas answer-aware rewards improve the oracle trend at every scale. Robustness is also algorithm- and scale-dependent: GRPO is consistently most resistant, RLOO remains vulnerable, and DAPO improves substantially from 2B to 8B. Visual-evidence rewards help only with reliable verification: keyword-based checks increase hacking, while VLM-as-judge semantic verification reduces it. Overall, multimodal reward hacking is a systematic result of optimizing imperfect rewards, and robust alignment requires rewards and verifiers that remain reliable under optimization pressure.",
+      "authors": [
+        "Jiayu Yao",
+        "Yiwei Wang",
+        "Anmeng Zhang",
+        "Zhe Sun",
+        "Songsong Wang",
+        "Lingrui Mei",
+        "Yuyao Ge",
+        "Shenghua Liu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-10T15:06:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.09492v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "analyzes reward hacking in RL alignment of multimodal LLMs",
+      "llm_evidence_cn": "分析多模态大模型RL对齐中的奖励黑客问题",
+      "llm_evidence": "分析多模态大模型RL对齐中的奖励黑客问题",
+      "canonical_evidence": "分析多模态大模型RL对齐中的奖励黑客问题",
+      "llm_tldr_en": "Systematically studies reward hacking in MLLM RL, introduces NRFR metric, and finds outcome-only rewards cause high hacking rates, highlighting risks in using RL to enhance LLMs.",
+      "llm_tldr_cn": "该论文系统研究了多模态大模型强化学习中奖励黑客问题，发现仅基于结果奖励会导致高达48.1%的奖励黑客率。提出了新度量NRFR，揭示RL在改进代理奖励时可能产生新失败而非继承旧失败，对RL增强大模型的安全性提出警示。",
+      "llm_tldr": "该论文系统研究了多模态大模型强化学习中奖励黑客问题，发现仅基于结果奖励会导致高达48.1%的奖励黑客率。提出了新度量NRFR，揭示RL在改进代理奖励时可能产生新失败而非继承旧失败，对RL增强大模型的安全性提出警示。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.07893v1",
+      "source": "arxiv",
+      "title": "Reachability-Preserving Bellman Operator for the Discounted Reach-Cost Value Function: Uniting Hamilton-Jacobi Reachability and Reinforcement Learning",
+      "abstract": "Hamilton-Jacobi (HJ) reachability provides rigorous safety and reachability guarantees for continuous-time dynamical systems, but its numerical solution suffers from the curse of dimensionality. Deep reinforcement learning (DRL), by contrast, offers scalable sample-based methods. However, RL is typically built around additive cumulative rewards; whereas, reachability objectives are inherently non-additive. This mismatch makes a direct bridge between HJ reachability and RL nontrivial. Recent discounted formulations have either introduced contraction by altering the original reachability semantics, or preserved exact semantics on the HJ side without a corresponding Bellman fixed-point characterization. In this paper, we close this gap by building on a semantics-preserving discounted reach-based value function and deriving a non-additive Bellman operator whose unique fixed point exactly matches the value function in the HJ formulation. We prove that discounting makes this operator contractive, yielding existence, uniqueness, and convergence of value iteration. Furthermore, we establish the equivalence between the HJ and Bellman characterizations, and show that RL can be interpreted as a sample-based approximation scheme for the same fixed-point equation. This yields a principled and semantically exact connection between HJ reachability and RL, enabling learning-based methods to approximate reachability value functions while preserving their safety-critical meaning. As a result, the proposed framework opens the door to scalable, data-driven computation of reachable sets and safety certificates in high-dimensional systems. Numerical experiments demonstrate close agreement with HJ solutions, confirm preservation of reachability semantics via alignment of zero level sets, and support the interpretation of reinforcement learning as a sample-based solver of the proposed Bellman operator.",
+      "authors": [
+        "Isabelle El-Hajj",
+        "Prashant Solanki",
+        "Jasper van Beers",
+        "Coen de Visser",
+        "Erik-Jan van Kampen"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY"
+      ],
+      "published": "2026-07-08T20:04:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.07893v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uniting HJ reachability and RL for decision making",
+      "llm_evidence_cn": "将哈密顿-雅可比可达性与强化学习结合用于决策",
+      "llm_evidence": "将哈密顿-雅可比可达性与强化学习结合用于决策",
+      "canonical_evidence": "将哈密顿-雅可比可达性与强化学习结合用于决策",
+      "llm_tldr_en": "Proposes a reachability-preserving Bellman operator for discounted reach-cost value function, bridging HJ reachability and RL for safety-critical decision making.",
+      "llm_tldr_cn": "哈密顿-雅可比可达性可提供安全保证但受维数诅咒，深度强化学习可扩展但目标函数不匹配。本文提出了保持可达性语义的折扣Bellman算子，统一了两种方法。该算子保证了收敛性，并在安全关键决策任务中展示优势。",
+      "llm_tldr": "哈密顿-雅可比可达性可提供安全保证但受维数诅咒，深度强化学习可扩展但目标函数不匹配。本文提出了保持可达性语义的折扣Bellman算子，统一了两种方法。该算子保证了收敛性，并在安全关键决策任务中展示优势。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.05775v1",
+      "source": "arxiv",
+      "title": "Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents",
+      "abstract": "Large language model (LLM) agents are increasingly evaluated on their ability to use tools, plan multi-step tasks, coordinate with other agents, and operate over extended horizons. Reported benchmark gains often obscure recurring failure modes documented across otherwise unrelated evaluation efforts. This paper synthesizes 27 benchmark, taxonomy, and audit papers (2023-2026), spanning 19 distinct benchmarks, into a cross-cutting taxonomy of agent limitations. To our knowledge, this is the first synthesis that integrates evidence across tool use, planning, long-horizon reasoning, multi-agent coordination, safety, and measurement validity into a single, unified taxonomy of LLM agent limitations. We identify six failure clusters: (1) tool invocation and parameter-level errors, (2) planning and constraint-satisfaction failures, (3) long-horizon degradation from context accumulation, (4) multi-agent coordination failures, (5) safety and security failures under adversarial or underspecified conditions, and (6) measurement validity problems. The taxonomy was derived iteratively by grouping independently reported error categories into themes corresponding to distinct stages of the agent reasoning-to-action pipeline. Across the literature, we find that failures compound nonlinearly with task length, that strong performance on individual sub-tasks does not reliably translate into end-to-end success, and that additional scaffolding does not consistently improve reliability. At the same time, substantial progress has been demonstrated in single-turn tool use, short-horizon web navigation, and narrowly scoped coding tasks.",
+      "authors": [
+        "Wael Albayaydh",
+        "Rui Zhao",
+        "Ivan Flechais"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-07T03:05:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.05775v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "synthesizes failure modes of LLM agents, relevant to agentic RL research",
+      "llm_evidence_cn": "综合LLM智能体故障模式，与智能体强化学习研究相关",
+      "llm_evidence": "综合LLM智能体故障模式，与智能体强化学习研究相关",
+      "canonical_evidence": "综合LLM智能体故障模式，与智能体强化学习研究相关",
+      "llm_tldr_en": "This paper synthesizes 27 papers into a unified taxonomy of LLM agent limitations across tool use, planning, reasoning, coordination, safety, and measurement validity.",
+      "llm_tldr_cn": "该论文综合了27篇基准和审计论文，构建了涵盖工具使用、规划、长时推理、多智能体协调、安全和测量有效性六个维度的LLM智能体限制统一分类法。为评估和改进智能体强化学习方法提供了系统框架，有助于识别当前方法的不足。",
+      "llm_tldr": "该论文综合了27篇基准和审计论文，构建了涵盖工具使用、规划、长时推理、多智能体协调、安全和测量有效性六个维度的LLM智能体限制统一分类法。为评估和改进智能体强化学习方法提供了系统框架，有助于识别当前方法的不足。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.08894v1",
+      "source": "arxiv",
+      "title": "GATS: Graph-Augmented Tree Search with Layered World Models for Efficient Agent Planning",
+      "abstract": "Large Language Model (LLM) agents have shown promise in multi-step planning tasks, but existing approaches like LATS (Language Agent Tree Search) and ReAct rely heavily on LLM inference during planning, leading to high computational costs and stochastic behavior. We present \\textbf{GATS} (Graph-Augmented Tree Search), a planning framework that combines systematic UCB1-based tree search with a layered world model to eliminate LLM calls during inference while achieving superior planning performance. Our three-layer world model integrates: (L1) exact symbolic action matching, (L2) statistics learned from execution logs, and (L3) LLM-based prediction for unknown actions. On synthetic planning tasks with branching paths and dead-ends, GATS achieves \\textbf{100\\% success rate} compared to 92 % for LATS and 64\\% for ReAct. On a comprehensive stress test spanning 12 challenging scenarios -- including coding workflows, web navigation, and long-horizon tasks -- GATS maintains \\textbf{100\\% success} while LATS drops to 88.9 % and ReAct to 23.9%. GATS requires \\textbf{zero LLM calls per task} during planning (vs. 37 per task for LATS) and produces deterministic plans with zero variance across runs. Our results demonstrate that systematic search with learned world models can substantially outperform LLM-guided exploration for agent planning.",
+      "authors": [
+        "Maureese Williams",
+        "Dymitr Nowicki"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-09T19:34:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.08894v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes GATS for efficient agent planning with LLMs",
+      "llm_evidence_cn": "提出GATS用于大模型agent的高效规划",
+      "llm_evidence": "提出GATS用于大模型agent的高效规划",
+      "canonical_evidence": "提出GATS用于大模型agent的高效规划",
+      "llm_tldr_en": "Presents GATS, a planning framework combining UCB1 tree search with a layered world model, eliminating LLM calls during inference to achieve efficient and deterministic agent planning.",
+      "llm_tldr_cn": "该论文针对LLM agent规划中计算成本高和随机性问题，提出了GATS框架，结合UCB1树搜索和分层世界模型，在推理时无需LLM调用。实验表明在具有分支路径和死胡同的合成规划任务上，GATS实现了优越的规划性能，为agent决策提供了高效替代方案。",
+      "llm_tldr": "该论文针对LLM agent规划中计算成本高和随机性问题，提出了GATS框架，结合UCB1树搜索和分层世界模型，在推理时无需LLM调用。实验表明在具有分支路径和死胡同的合成规划任务上，GATS实现了优越的规划性能，为agent决策提供了高效替代方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.09207v1",
+      "source": "arxiv",
+      "title": "Bidirectional Resource Scheduling for Disaggregated and Asynchronous RL Post-Training",
+      "abstract": "It is well established that the reasoning capabilities of large language models (LLMs) can be improved by applying reinforcement learning (RL) in a post-training stage. In a standard RL iteration, the current model (the policy) generates experience through rollouts, and the resulting data is then used to update the policy during training. High-performance RL frameworks such as StreamRL and AReaL employ a disaggregated architecture and asynchronous rollouts to better exploit both rollout and training resources, thereby increasing overall system throughput.   Nonetheless, across varying RL setups (e.g., hardware configurations, model scales, staleness levels, and hyperparameters) and under changing workloads, it remains common for both rollout and training resources to experience idle periods.   In this paper, we present BiDiRL, a hybrid time-space multiplexing architecture for asynchronous, disaggregated RL designed to reduce resource idleness. First, we develop a hot-switch runtime that enables rapid switching between rollout and training resources with negligible overhead. Second, we propose a static, scheduling-aware planner based on time-performance modeling that chooses a hot-switch-friendly resource partition, so that rollout and training durations are roughly balanced at a coarse level. Third, at execution time, we introduce a bidirectional scheduler that further exploits runtime bubbles through fine-grained resource switching, allowing the bottleneck stage to temporarily borrow idle resources from the other pool. Across a wide range of workloads, datasets, and models on two 32-GPU testbeds, BiDiRL increases RL training throughput by up to 1.94x compared with RL systems including veRL, AReaL, and ROLL, without affecting convergence behavior.",
+      "authors": [
+        "Tan Zhiqiang",
+        "Wang Maoxin",
+        "Wang Sijie",
+        "Yin Yiming",
+        "Wang Qiang",
+        "Chu Xiaowen",
+        "Shi Shaohuai"
+      ],
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC"
+      ],
+      "published": "2026-07-10T08:51:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.09207v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "optimizes resource scheduling for RL post-training of LLMs",
+      "llm_evidence_cn": "优化大语言模型强化学习后训练中的资源调度",
+      "llm_evidence": "优化大语言模型强化学习后训练中的资源调度",
+      "canonical_evidence": "优化大语言模型强化学习后训练中的资源调度",
+      "llm_tldr_en": "Proposes a bidirectional resource scheduling framework for disaggregated asynchronous RL post-training of LLMs, improving throughput and resource utilization.",
+      "llm_tldr_cn": "针对大语言模型强化学习后训练中资源利用率不高的问题，提出双向资源调度框架，在解耦异步架构下动态调整计算资源分配。实验表明该方法显著提高了训练吞吐量，减少了资源空闲，为大规模LLM RL微调提供了高效基础设施支持。",
+      "llm_tldr": "针对大语言模型强化学习后训练中资源利用率不高的问题，提出双向资源调度框架，在解耦异步架构下动态调整计算资源分配。实验表明该方法显著提高了训练吞吐量，减少了资源空闲，为大规模LLM RL微调提供了高效基础设施支持。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
