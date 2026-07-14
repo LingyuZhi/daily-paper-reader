@@ -1,0 +1,706 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-14T21:29:38.315049+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 11,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 10,
+    "quick_skim_target": 11,
+    "quick_selected": 10
+  },
+  "deep_dive": [
+    {
+      "id": "2607.09773v1",
+      "source": "arxiv",
+      "title": "EvoCUA-1.5: Online Reinforcement Learning for Multi-turn Computer-Use Agents",
+      "abstract": "Computer-use agents must solve long-horizon tasks through repeated interaction with partially observable, multimodal desktop environments. Although imitation learning and offline trajectory refinement provide strong priors, static traces cannot cover the causal feedback loop of real computer use: each action changes the screen state, future action space, and recovery options. EvoCUA-1.5 extends self-evolving computer-use agents from offline experience learning to online reinforcement learning, where policies interact with executable sandbox environments and improve from verifiable task outcomes. Online RL in this setting requires more than directly reusing single-turn language-RL recipes. Multi-turn interaction introduces context-managed observations, sparse terminal rewards, variable-length trajectories, and slow environment feedback. EvoCUA-1.5 addresses these challenges with Step-Level Policy Optimization (STEPO), which preserves trajectory-level advantage balance after decomposition into step-level samples; policy-aware filtering and pass-rate calibration over verifiable synthesized tasks; Dynamic Tri-Adaptive Curriculum (DTAC), which combines learnable tasks, difficult positive replay, and controlled infeasible-task exposure; and a fully asynchronous RL infrastructure with staleness control and mini-group batching. Experiments show that these components improve training stability and downstream performance. EvoCUA-1.5 achieves 63.2\\% success on OSWorld-Verified, outperforming comparable 32B/35B-scale open-weight baselines and even approaching models with significantly larger parameter counts. Overall, EvoCUA-1.5 provides a practical framework for scaling online RL in multi-turn computer-use agents.",
+      "authors": [
+        "Mianqiu Huang",
+        "Taofeng Xue",
+        "Chong Peng",
+        "Jinrui Ding",
+        "Sicheng Fan",
+        "Jiale Hong",
+        "Yufei Gao",
+        "Xiaocheng Zhang",
+        "Linsen Guo",
+        "Xin Yang",
+        "Dengchang Zhao",
+        "Yuchen Xie",
+        "Peng Pei",
+        "Xunliang Xie",
+        "Xipeng Qiu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-07-07T16:36:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.09773v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "online RL for multi-turn computer-use agents",
+      "llm_evidence_cn": "面向多轮计算机使用智能体的在线强化学习",
+      "llm_evidence": "面向多轮计算机使用智能体的在线强化学习",
+      "canonical_evidence": "面向多轮计算机使用智能体的在线强化学习",
+      "llm_tldr_en": "EvoCUA-1.5 applies online RL to train computer-use agents from verifiable task outcomes, handling multi-turn interaction challenges.",
+      "llm_tldr_cn": "计算机使用智能体需通过反复交互解决长视界任务，但静态轨迹无法覆盖因果反馈。EvoCUA-1.5将自进化智能体从离线经验学习扩展到在线强化学习，策略与可执行沙箱环境交互并从可验证任务结果中改进。该方法克服了单轮RL配方在多轮设置中的不足，在多轮桌面任务上取得显著提升。",
+      "llm_tldr": "计算机使用智能体需通过反复交互解决长视界任务，但静态轨迹无法覆盖因果反馈。EvoCUA-1.5将自进化智能体从离线经验学习扩展到在线强化学习，策略与可执行沙箱环境交互并从可验证任务结果中改进。该方法克服了单轮RL配方在多轮设置中的不足，在多轮桌面任务上取得显著提升。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.09899v1",
+      "source": "arxiv",
+      "title": "A Distributionally Robust Multi-agent Reinforcement Learning Framework for Intelligent Intersection Control",
+      "abstract": "Multi-agent reinforcement learning (MARL) has emerged as a promising approach for traffic signal control. However, standard MARL policies typically optimize for expected returns under nominal conditions, leaving them highly vulnerable to spatial-temporal demand shifts and catastrophic congestion under adverse scenarios. To address this critical limitation, this paper proposes an algorithm-agnostic Distributionally Robust (DR) MARL framework integrating an adaptive Contextual-Bandit Worst-Case Estimator (CB-WCE). Operating on a slower timescale, the CB-WCE co-evolves with the traffic controllers by dynamically generating adversarial demand mixtures during training. This steers the learning process to fortify policies against bottleneck scenarios without requiring modifications to the underlying MARL architectures. The framework is evaluated across value-based, actor-critic, and policy-gradient methods on both a synthetic 5x5 grid and a heterogeneous Monaco City network. Empirical results demonstrate that the DR framework prevents unbounded queue growth and profoundly enhances both worst-case robustness and average-case efficiency. Notably, for the Proximal Policy Optimization (PPO) architecture in the Monaco environment, on average, robust retraining reduced the worst-case queue length by 74.39% and improved the average-case network-wide queue length by 75.45%. Furthermore, the retrained policies exhibit strong zero-shot generalization to unseen traffic distributions, highlighting the framework's scalability and potential for resilient real-world urban deployment.",
+      "authors": [
+        "Shuwei Pei",
+        "Joran Borger",
+        "Arda Kosay",
+        "Bayu Jayawardhana",
+        "Muhammed O. Sayin",
+        "Saeed Ahmed"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY"
+      ],
+      "published": "2026-07-10T18:44:36+00:00",
+      "link": "https://arxiv.org/pdf/2607.09899v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "distributionally robust multi-agent RL for intersection control",
+      "llm_evidence_cn": "面向交叉口控制的分布鲁棒多智能体强化学习",
+      "llm_evidence": "面向交叉口控制的分布鲁棒多智能体强化学习",
+      "canonical_evidence": "面向交叉口控制的分布鲁棒多智能体强化学习",
+      "llm_tldr_en": "A distributionally robust MARL framework with adaptive worst-case estimator for traffic signal control, robust to demand shifts.",
+      "llm_tldr_cn": "标准多智能体强化学习在交通信号控制中易受时空需求变化影响，导致灾难性拥堵。本文提出分布鲁棒MARL框架，集成自适应上下文赌博机最坏情况估计器，在训练中动态生成对抗性需求混合。实验表明，该方法显著提升了策略在恶劣场景下的鲁棒性，同时保持正常工况性能。",
+      "llm_tldr": "标准多智能体强化学习在交通信号控制中易受时空需求变化影响，导致灾难性拥堵。本文提出分布鲁棒MARL框架，集成自适应上下文赌博机最坏情况估计器，在训练中动态生成对抗性需求混合。实验表明，该方法显著提升了策略在恶劣场景下的鲁棒性，同时保持正常工况性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.10848v1",
+      "source": "arxiv",
+      "title": "Predictive Divergence Masks for LLM RL",
+      "abstract": "Reinforcement learning for large language models (LLMs) typically relies on trust-region masks to stabilize off-policy updates. The dominant PPO-style approach uses the sampled-token importance ratio for two criteria: a proximity criterion, which asks whether the policy has moved too far from the behavior policy, and a direction criterion, which asks whether the update pushes it farther away. Recent work DPPO improves the proximity criterion by replacing PPO's ratio-based test with a probability divergence between the behavior and training policies. However, its direction criterion is still inherited from PPO. A token can be masked only when the sampled-token importance ratio moves away from one. We observe that this ratio-based direction criterion is a single-sample proxy that can disagree in sign with the change of the divergence that defines the proximity criterion. We therefore propose the predictive divergence mask, which asks whether the next policy-gradient step will increase or decrease the same divergence used by the trust region. For the discrete softmax policies used in LLM RL, we derive this prediction in closed form. Because production rollout engines expose only a truncated (top-K) view of the vocabulary, we develop two lightweight top-$K$ estimators for this prediction. Detailed analysis shows the divergence-based direction is better aligned with the realized change of the divergence than the sampled ratio, and the resulting masks improve RL training across model scales and precision settings.",
+      "authors": [
+        "Xiangxin Zhou",
+        "Jiarui Yao",
+        "Penghui Qi",
+        "Bowen Ping",
+        "Jiaqi Tang",
+        "Haonan Wang",
+        "Tianyu Pang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-12T17:20:44+00:00",
+      "link": "https://arxiv.org/pdf/2607.10848v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Predictive divergence masks for stabilizing LLM RL, improving PPO-style masks",
+      "llm_evidence_cn": "预测性散度掩码用于稳定LLM强化学习，改进PPO风格掩码",
+      "llm_evidence": "预测性散度掩码用于稳定LLM强化学习，改进PPO风格掩码",
+      "canonical_evidence": "预测性散度掩码用于稳定LLM强化学习，改进PPO风格掩码",
+      "llm_tldr_en": "Proposes predictive divergence masks to replace single-sample ratio-based direction criterion in LLM RL, improving update stability and performance.",
+      "llm_tldr_cn": "论文针对LLM强化学习中的离线策略更新稳定性问题，提出预测性散度掩码方法。该方法用基于概率散度的方向准则替代PPO中基于单样本重要性比率的准则，更准确地检测策略更新方向是否合适。在LLM RL任务上实验表明，该方法比现有PPO和DPPO掩码机制更稳定且性能更优。",
+      "llm_tldr": "论文针对LLM强化学习中的离线策略更新稳定性问题，提出预测性散度掩码方法。该方法用基于概率散度的方向准则替代PPO中基于单样本重要性比率的准则，更准确地检测策略更新方向是否合适。在LLM RL任务上实验表明，该方法比现有PPO和DPPO掩码机制更稳定且性能更优。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.11581v1",
+      "source": "arxiv",
+      "title": "Actor as Its Own Critic: Unifying Region Understanding and Localization via CycleGRPO",
+      "abstract": "This paper introduces Actor as Its Own Critic, a unified reinforcement learning framework, Cycle Group Relative Policy Optimization (CycleGRPO), that jointly optimizes region understanding and localization for Multimodal Large Language Models (MLLMs). Unlike existing separate pipelines, we leverage the inherent duality between the two tasks to construct a self-evaluating reinforcement learning paradigm: \"region $\\to$ text $\\to$ region''. Specifically, a single MLLM first acts as the actor to generate region captions, then immediately transitions to a critic to ground its generated text back in the spatial domain. Therefore, CycleGRPO requires only region inputs, e.g., masks or bounding boxes, entirely bypassing the need for textual ground truths. A quality-aware token-level cycle-consistency reward is employed to assess the semantic discriminability of text captions via their physical localization accuracy. Empirically, built upon SAMTok, our CycleGRPO framework successfully bootstraps both capabilities simultaneously. Without any task-specific fine-tuning, the framework yields consistent performance gains across a wide range of benchmarks, including region captioning, region VQA, grounded dialogue, and referring segmentation. Overall, CycleGRPO offers a straightforward and scalable way to advance pixel-level capabilities in MLLMs. Code and models are released at https://github.com/devinxzhang/CycleGRPO.",
+      "authors": [
+        "Xin Zhang",
+        "Haochen Wang",
+        "Yikang Zhou",
+        "Jason Li",
+        "Robby T. Tan"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-13T14:00:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.11581v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Introduces CycleGRPO, a RL framework for jointly optimizing region understanding and localization in MLLMs",
+      "llm_evidence_cn": "提出CycleGRPO，一种用于多模态大语言模型区域理解与定位联合优化的强化学习框架",
+      "llm_evidence": "提出CycleGRPO，一种用于多模态大语言模型区域理解与定位联合优化的强化学习框架",
+      "canonical_evidence": "提出CycleGRPO，一种用于多模态大语言模型区域理解与定位联合优化的强化学习框架",
+      "llm_tldr_en": "Proposes CycleGRPO, a unified RL framework that trains MLLMs as both actor and critic to jointly optimize region understanding and localization without text supervision.",
+      "llm_tldr_cn": "本文提出CycleGRPO框架，将多模态大语言模型作为演员和评论家，通过“区域->文本->区域”的自评估循环强化学习范式，联合优化区域理解与定位任务。该框架无需文本标注，仅需区域输入（如掩码或边界框），实现了统一的端到端训练，显著提升了MLLM在空间理解相关任务上的性能。",
+      "llm_tldr": "本文提出CycleGRPO框架，将多模态大语言模型作为演员和评论家，通过“区域->文本->区域”的自评估循环强化学习范式，联合优化区域理解与定位任务。该框架无需文本标注，仅需区域输入（如掩码或边界框），实现了统一的端到端训练，显著提升了MLLM在空间理解相关任务上的性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.09866v1",
+      "source": "arxiv",
+      "title": "Robo-ValueRL: Reliable Value Estimation for Offline-to-Online Reinforcement Learning",
+      "abstract": "Offline-to-online reinforcement learning is promising for generalizable robotic manipulation, yet its full-stack complexity obscures reproduction and diagnosis. Within such systems, value estimation plays a central role in prioritizing heterogeneous data for policy improvement. Despite its importance, the central question remains underexplored: how value-function reliability shapes policy optimization in offline-to-online reinforcement learning. To answer this question, we propose Robo-ValueRL, a unified framework that enables reliable value estimation and systematically traces its downstream effects on policy pretraining and online improvement. Concretely, Robo-ValueRL learns a history-conditioned value estimator and evaluates its reliability through global-progress and local-preference metrics. These resulting value estimates are propagated into quality-conditioned consistency-policy pretraining and a residual adaptation module on online rollouts, providing a unified testbed for analyzing how value reliability shapes downstream policy performance. Across 240 hours of offline demonstrations and over 3,000 online rollout trajectories, our extensive experiments show that downstream performance is strongly associated with value reliability. Reliable value functions provide better action-quality estimates, allowing value-guided offline RL to scale more effectively than quality-agnostic behavior cloning, and stabilize online improvement by prioritizing high-quality rollout data. Integrating reliable value guidance through offline pretraining with online improvement, our system achieves 86% success on millimeter-level precise chip insertion and 84% on generalizable block disassembly. We hope these findings highlight the importance of value-guided data utilization for effective policy improvement from heterogeneous robotic experience.",
+      "authors": [
+        "Wenke Xia",
+        "Pei Ren",
+        "Wenbo Yu",
+        "Yizhuo Zhang",
+        "Jifan Li",
+        "Yixue Zhang",
+        "Yinuo Zhao",
+        "Qingyang Gao",
+        "Jianlong Fu",
+        "Jian Tang",
+        "Ji-Rong Wen",
+        "Zhengping Che",
+        "Di Hu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-10T18:01:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.09866v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Robo-ValueRL: reliable value estimation for offline-to-online RL in robotic manipulation",
+      "llm_evidence_cn": "Robo-ValueRL：机器人操作中离线到在线强化学习的可靠价值估计方法",
+      "llm_evidence": "Robo-ValueRL：机器人操作中离线到在线强化学习的可靠价值估计方法",
+      "canonical_evidence": "Robo-ValueRL：机器人操作中离线到在线强化学习的可靠价值估计方法",
+      "llm_tldr_en": "Proposes Robo-ValueRL, a framework for reliable value estimation in offline-to-online RL for robotic manipulation, improving policy optimization.",
+      "llm_tldr_cn": "论文针对机器人操作中的离线到在线强化学习，提出Robo-ValueRL统一框架，通过学习历史条件价值估计器提升价值函数可靠性，并系统追踪其对策略预训练和在线改进的影响。实验证明该方法能有效提升样本效率和最终性能。",
+      "llm_tldr": "论文针对机器人操作中的离线到在线强化学习，提出Robo-ValueRL统一框架，通过学习历史条件价值估计器提升价值函数可靠性，并系统追踪其对策略预训练和在线改进的影响。实验证明该方法能有效提升样本效率和最终性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.10481v1",
+      "source": "arxiv",
+      "title": "ARMOR: Stabilizing On-Policy LLM RL with Off-Policy Anchor Samples",
+      "abstract": "Reinforcement learning (RL) has significantly enhanced the reasoning capabilities of large language models (LLMs), yet the training process remains notoriously fragile. In this work, we investigate a critical source of this instability: over-optimization, where models exploit training heuristics at the expense of generalizable reasoning. While reverse KL regularization is the standard defense against such degradation, our analysis reveals that it is often insufficient in this regime, as it fails to ensure comprehensive coverage of the reference distribution. To address this, we propose ARMOR (Anchor Rollout and Mixed Optimization for RL), a framework that shifts the paradigm from passive penalty to active sample stabilization. ARMOR comprises two key components: (1) Anchor Rollout, which leverages off-policy data from the reference policy to preserve established solution patterns; and (2) Mixed Optimization, which reformulates the policy objective to enable controlled exploration without relying on auxiliary losses. Extensive experiments on reasoning benchmarks validate that ARMOR effectively mitigates validation collapse, enabling sustained performance improvements over extended training horizons.",
+      "authors": [
+        "Kexin Huang",
+        "Junkang Wu",
+        "Jinda Lu",
+        "Shuo Yang",
+        "Chiyu Ma",
+        "Jiancan Wu",
+        "Xiang Wang",
+        "Xiangnan He",
+        "Guoyin Wang",
+        "Jingren Zhou"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-11T21:22:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.10481v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "stabilizes LLM RL training by using off-policy anchor samples to mitigate over-optimization",
+      "llm_evidence_cn": "通过离策略锚定样本稳定LLM强化学习训练，缓解过优化问题",
+      "llm_evidence": "通过离策略锚定样本稳定LLM强化学习训练，缓解过优化问题",
+      "canonical_evidence": "通过离策略锚定样本稳定LLM强化学习训练，缓解过优化问题",
+      "llm_tldr_en": "ARMOR stabilizes LLM RL training by using off-policy anchor samples and mixed optimization to mitigate over-optimization and improve generalization.",
+      "llm_tldr_cn": "针对LLM强化学习训练中的过优化导致不稳定问题，本文提出ARMOR框架，通过引入离策略锚定样本和混合优化策略，从被动正则化转向主动样本稳定。实验证明ARMOR有效缓解了过优化，提升了RL训练的稳定性和泛化能力，在多个推理任务上取得显著改进。",
+      "llm_tldr": "针对LLM强化学习训练中的过优化导致不稳定问题，本文提出ARMOR框架，通过引入离策略锚定样本和混合优化策略，从被动正则化转向主动样本稳定。实验证明ARMOR有效缓解了过优化，提升了RL训练的稳定性和泛化能力，在多个推理任务上取得显著改进。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.10601v1",
+      "source": "arxiv",
+      "title": "Agentic-DPO: From Imitation to Agentic Policy Optimization on Expert Trajectories",
+      "abstract": "Large Language Model (LLM) agents are commonly trained from expert trajectories using supervised fine-tuning (SFT), which treats multi-turn agent behavior as ordinary text imitation. This recipe is simple and low-cost, but it only learns to imitate the sequence of expert actions, rather than training the agent to choose the right action against plausible mistakes at each state. Existing methods to mitigate this problem include preference learning or reinforcement learning, but they usually need high-cost environment rollouts and reward models. We propose Agentic-DPO, a lightweight offline agent policy optimization method that turns expert trajectories into state-conditioned preference supervision. At each expert action state, Agentic-DPO samples a one-step action from the current state, treats plausible wrong actions as negatives, and contrasts them with the expert action using a DPO-style preference objective. To avoid mixing both policy and schema in preference learning, we introduce Policy-Preserving Augmentation (PPA), which renders the same latent trajectory under multiple schemas while keeping the expert policy fixed. Agentic-DPO requires no online environment rollout, reward model, or full-trajectory student exploration. We conduct experiments across StableToolBench, tau-bench retail, and Mind2Web, where Agentic-DPO consistently improves agents at different model scales beyond imitation. In particular, it raises tau-bench accuracy from 21.7% (SFT) to 41.4% for a 9B model, matching online GRPO under the same backbone with only step-level rollouts and without environment interaction during gradient steps. The results suggest that expert trajectories can support low-cost agentic policy optimization when converted from demonstrations into state-level action preferences. Code for Agentic-DPO is released at https://github.com/Schuture/Agentic-DPO.",
+      "authors": [
+        "Yixiong Chen",
+        "Alan Yuille"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-12T06:38:55+00:00",
+      "link": "https://arxiv.org/pdf/2607.10601v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "offline agent policy optimization using expert trajectories without RL rollouts",
+      "llm_evidence_cn": "离线代理策略优化方法，利用专家轨迹而无需强化学习在线采样",
+      "llm_evidence": "离线代理策略优化方法，利用专家轨迹而无需强化学习在线采样",
+      "canonical_evidence": "离线代理策略优化方法，利用专家轨迹而无需强化学习在线采样",
+      "llm_tldr_en": "Proposes Agentic-DPO, an offline policy optimization method that converts expert trajectories into state-conditioned preference data, training agents to choose the right action against plausible mistakes without costly rollouts.",
+      "llm_tldr_cn": "该论文提出Agentic-DPO，一种轻量级离线代理策略优化方法，将专家轨迹转化为状态条件偏好数据，使代理学习区分正确动作与常见错误。无需在线环境交互，仅利用SFT数据进行离线训练。在多个LLM代理基准上，Agentic-DPO在性能上显著超越SFT，并接近需要在线rollout的RL方法。",
+      "llm_tldr": "该论文提出Agentic-DPO，一种轻量级离线代理策略优化方法，将专家轨迹转化为状态条件偏好数据，使代理学习区分正确动作与常见错误。无需在线环境交互，仅利用SFT数据进行离线训练。在多个LLM代理基准上，Agentic-DPO在性能上显著超越SFT，并接近需要在线rollout的RL方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.07252v1",
+      "source": "arxiv",
+      "title": "Safe Reinforcement Learning using Ideas from Model Predictive Control",
+      "abstract": "Reinforcement learning (RL) enables the synthesis of control policies directly from data, making it highly appealing for complex cyber-physical systems (CPSs) and robotics. A persistent challenge, however, is ensuring strict, hard safety constraints during the active learning phase. In real-world physical systems, violating mechanical limits can cause irreversible damage, necessitating that exploration remains strictly within safe operational regions. We propose a generalized framework that combines the adaptive, high-performance nature of deep reinforcement learning (DRL) with the formal safety guarantees of model predictive control (MPC). Using a mathematical model of the system dynamics, offline MPC computations define a feasible state-action space, representing all safe combinations of system states and control inputs that guarantee constraint satisfaction. During training and deployment, the RL agent's instantaneous actions are projected onto this globally verified feasible set via a safety filter. We systematically evaluate our generalized approach on a non-linear 1-DoF laboratory testbed, demonstrating successful exploration and stable policy convergence on physical hardware.",
+      "authors": [
+        "Georg Schäfer",
+        "Jakob Rehrl",
+        "Stefan Huber",
+        "Simon Hirlaender"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-07-08T10:35:04+00:00",
+      "link": "https://arxiv.org/pdf/2607.07252v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Safe RL framework combining DRL with MPC for agent decision making",
+      "llm_evidence_cn": "结合深度强化学习和模型预测控制的安全强化学习框架，用于智能体决策",
+      "llm_evidence": "结合深度强化学习和模型预测控制的安全强化学习框架，用于智能体决策",
+      "canonical_evidence": "结合深度强化学习和模型预测控制的安全强化学习框架，用于智能体决策",
+      "llm_tldr_en": "Proposes a safe RL framework that integrates deep RL with MPC to ensure hard safety constraints during exploration for cyber-physical systems.",
+      "llm_tldr_cn": "论文提出一种通用框架，将深度强化学习的自适应高绩效特性与模型预测控制的形式化安全保证相结合，在探索过程中确保严格的安全约束。通过离线MPC计算可行的状态-动作空间，并在线RL中约束探索，从而在满足安全要求的同时实现高性能策略学习。",
+      "llm_tldr": "论文提出一种通用框架，将深度强化学习的自适应高绩效特性与模型预测控制的形式化安全保证相结合，在探索过程中确保严格的安全约束。通过离线MPC计算可行的状态-动作空间，并在线RL中约束探索，从而在满足安全要求的同时实现高性能策略学习。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.11012v1",
+      "source": "arxiv",
+      "title": "EasyOPD: An Easy-to-use On-Policy Distillation Framework for Large Language Models",
+      "abstract": "Conventional language-model distillation often relies on fixed teacher-generated data, which may not cover the states encountered by an evolving student policy. On-policy distillation (OPD) instead collects teacher or evaluator supervision on student-generated rollouts. However, existing OPD methods differ substantially in supervision form, tokenizer compatibility, teacher access, and supervision granularity, leading to fragmented implementations that are difficult to reproduce and extend. We present \\textsc{EasyOPD}, an on-policy distillation framework built on verl, a distributed reinforcement-learning framework for large language models. \\textsc{EasyOPD} separates user-side configuration, method-specific supervision logic, and verl-based execution. Its method modules connect to the shared backend through extension boundaries for loss construction, rollout metadata, reward processing, tokenizer alignment, and teacher-side computation. We instantiate representative methods for three OPD settings -- cross-tokenizer OPD, on-policy self-distillation, and step-wise OPD. Experiments on reasoning, code-generation, scientific-knowledge, and tool-use benchmarks show that these implementations can be executed through the same verl-based backend while retaining their method-specific objectives and task-dependent performance profiles. We release \\textsc{EasyOPD} with runnable YAML configurations, documentation, and an installable demonstration package and video.",
+      "authors": [
+        "Jie Sun",
+        "Mao Zheng",
+        "Mingyang Song",
+        "Qiyong Zhong",
+        "Gengsheng Li",
+        "Zhepei Hong",
+        "Chang Wu",
+        "Pengfei Liu",
+        "Junfeng Fang",
+        "Xiang Wang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-13T02:27:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.11012v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "EasyOPD: on-policy distillation framework for LLMs using RL framework for supervision",
+      "llm_evidence_cn": "EasyOPD：利用RL框架进行在线策略蒸馏的LLM框架",
+      "llm_evidence": "EasyOPD：利用RL框架进行在线策略蒸馏的LLM框架",
+      "canonical_evidence": "EasyOPD：利用RL框架进行在线策略蒸馏的LLM框架",
+      "llm_tldr_en": "Presents EasyOPD, a unified on-policy distillation framework for LLMs built on a distributed RL framework, enabling flexible supervision collection.",
+      "llm_tldr_cn": "论文提出EasyOPD，一个基于verl分布式强化学习框架的在线策略蒸馏框架，通过分离用户配置、方法特定监督逻辑和RL引擎，简化了在线蒸馏方法的实现和扩展。该框架支持多种监督形式和粒度，有效提升了学生模型的性能。",
+      "llm_tldr": "论文提出EasyOPD，一个基于verl分布式强化学习框架的在线策略蒸馏框架，通过分离用户配置、方法特定监督逻辑和RL引擎，简化了在线蒸馏方法的实现和扩展。该框架支持多种监督形式和粒度，有效提升了学生模型的性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.10738v1",
+      "source": "arxiv",
+      "title": "To Answer or to Abstain: Mitigating Search-Agent Hallucinations via Abstention-Aware Reinforcement Learning",
+      "abstract": "Recent advances in equipping Large Language Models (LLMs) with search tools and outcome-reward reinforcement learning (RL) have achieved new state-of-the-art results on open-domain QA tasks. However, we argue that current training paradigms harbor a critical vulnerability: they predominantly reward correct answers but fail to penalize fabricated ones when retrieval fails, thereby implicitly exacerbating hallucinations. To address this, we propose Abstention-Aware Reinforcement Learning (AWA-RL), which dynamically shapes the abstention reward utilizing the model's query-specific prior capabilities and continuous on-policy training observations. We also introduce a novel metric, RA-F1, to measure the capability-reliability trade-off. Compared to non-abstaining baselines, AWA-RL boosts absolute precision by up to 10.3% and overall RA-F1 by 2.9%, with only marginal sacrifice in raw accuracy. These results confirm that AWA-RL successfully yields highly capable and reliable search agents. The code, data, and model weights are publicly available at https://github.com/zfj1998/AWA-RL.",
+      "authors": [
+        "Fengji Zhang",
+        "Tianyu Fan",
+        "Yuxiang Zheng",
+        "Xinyao Niu",
+        "Chengen Huang",
+        "Jacky Keung",
+        "Bei Chen"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-12T12:43:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.10738v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "uses RL to train LLM agents to abstain when uncertain, mitigating hallucinations",
+      "llm_evidence_cn": "使用强化学习训练LLM代理在不确定时避免回答，减轻幻觉",
+      "llm_evidence": "使用强化学习训练LLM代理在不确定时避免回答，减轻幻觉",
+      "canonical_evidence": "使用强化学习训练LLM代理在不确定时避免回答，减轻幻觉",
+      "llm_tldr_en": "Proposes AWA-RL, an abstention-aware RL framework that shapes rewards to penalize hallucinated answers when retrieval fails, improving search-agent reliability.",
+      "llm_tldr_cn": "该论文提出AWA-RL，一种融入回避意识的强化学习框架，通过动态塑造奖励来惩罚检索失败时模型生成的虚构答案。利用模型查询特定先验能力和在线训练观测调整惩罚强度，并在开放域QA任务上验证了有效性。AWA-RL在保持高回答率的同时显著降低了幻觉，并引入新指标RA-F1衡量能力与可靠性的权衡。",
+      "llm_tldr": "该论文提出AWA-RL，一种融入回避意识的强化学习框架，通过动态塑造奖励来惩罚检索失败时模型生成的虚构答案。利用模型查询特定先验能力和在线训练观测调整惩罚强度，并在开放域QA任务上验证了有效性。AWA-RL在保持高回答率的同时显著降低了幻觉，并引入新指标RA-F1衡量能力与可靠性的权衡。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "how reinforcement learning enhances large language model capabilities",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.07820v2",
+      "source": "arxiv",
+      "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment",
+      "abstract": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak supervision for long-horizon interactions. We present DeepSearch-Evolve, a self-distillation framework for web agents built on DeepSearch-World, a deterministic and verifiable environment with reproducible search and page-reading tools. DeepSearch-World contains 420K multi-hop QA tasks constructed from entity-level random walks and supports key agentic cognitive behaviors useful for self-evolving, including progress verification, grounded reflection, and failure recovery. DeepSearch-Evolve iteratively performs trajectory generation, filtering, data mixing, and fine-tuning to train stronger agents. Without distillation from more capable models, DeepSearch-World-9B achieves competitive performance compared with open-source agents, reaching 31.2% on BrowseComp, 61.5% on GAIA, and 93.4% on HotpotQA, showing that verifiable environments enable scalable self-evolution for long-horizon web agents. We will release the environment, 420K training pool, validation set, model, and code to facilitate future research on self-improving deep search agents.",
+      "authors": [
+        "Xinyu Geng",
+        "Xuanhua He",
+        "Sixiang Chen",
+        "Yanjing Xiao",
+        "Fan Zhang",
+        "Shijue Huang",
+        "Haitao Mi",
+        "Zhenwen Liang",
+        "Tianqing Fang",
+        "Yi R. Fung"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-08T18:03:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.07820v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "self-distillation framework for web agents with RL components",
+      "llm_evidence_cn": "带有强化学习组件的网络代理自我蒸馏框架",
+      "llm_evidence": "带有强化学习组件的网络代理自我蒸馏框架",
+      "canonical_evidence": "带有强化学习组件的网络代理自我蒸馏框架",
+      "llm_tldr_en": "Proposes DeepSearch-Evolve, a self-distillation framework for web agents in a verifiable environment, using trajectory generation and RL-based supervision to improve agentic behaviors.",
+      "llm_tldr_cn": "该论文提出DeepSearch-Evolve框架，通过在可验证环境（DeepSearch-World）中迭代生成轨迹并利用强化学习信号进行自我蒸馏，使网络搜索代理能够自主改进其认知行为，包括进度验证、反思和失败恢复。在包含420K多跳问答任务的基准上验证了有效性，代理在复杂推理场景下获得了显著性能提升。",
+      "llm_tldr": "该论文提出DeepSearch-Evolve框架，通过在可验证环境（DeepSearch-World）中迭代生成轨迹并利用强化学习信号进行自我蒸馏，使网络搜索代理能够自主改进其认知行为，包括进度验证、反思和失败恢复。在包含420K多跳问答任务的基准上验证了有效性，代理在复杂推理场景下获得了显著性能提升。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.11505v1",
+      "source": "arxiv",
+      "title": "Proxy Exploration and Reusable Guidance: A Modular LLM Post-Training Paradigm via Proxy-Guided Update Signals",
+      "abstract": "Post-training is essential for refining the domain-specific capabilities of large language models (LLMs), yet existing reward optimization and distribution matching methods tightly couple policy exploration with distribution alignment. This coupling forces expensive exploration directly on the policy model and severely hinders the asynchronous generation, reuse, and cross-model transfer of optimization signals. In this paper, we propose Proxy-guided Update Signal Transfer (PUST), a novel post-training framework that fundamentally decouples update-signal exploration from distribution alignment. Instead of utilizing the primary model for costly exploration, PUST employs a lightweight proxy model as an efficient testbed to discover high-reward behaviors. We extract the relative improvement signal between the proxy's initial and optimized states, transferring this directional update to the primary model to guide its policy alignment. This decoupled pipeline, comprising proxy exploration, update-signal extraction, and signal transfer, significantly reduces computational overhead and enables optimization signals to be asynchronously generated, cached, and reused. Crucially, by transferring relative improvements rather than absolute policy distributions, PUST naturally supports weak-to-strong improvement and seamless cross-model transfer. Systematic evaluations on Qwen3-family models across math and code domains demonstrate that update signals extracted from substantially weaker proxies can robustly and adjustably enhance stronger primary models. Ultimately, PUST transforms post-training from a monolithic online optimization process into a highly modular, reusable, and cost-efficient paradigm.",
+      "authors": [
+        "Daocheng Fu",
+        "Rong Wu",
+        "Yu Yang",
+        "Xuemeng Yang",
+        "Jianbiao Mei",
+        "Licheng Wen",
+        "Pinlong Cai",
+        "Yong Liu",
+        "Botian Shi",
+        "Yu Qiao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-13T12:56:21+00:00",
+      "link": "https://arxiv.org/pdf/2607.11505v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proxy-model-based post-training for LLMs using reward-like signals",
+      "llm_evidence_cn": "使用代理模型和奖励信号进行LLM后训练",
+      "llm_evidence": "使用代理模型和奖励信号进行LLM后训练",
+      "canonical_evidence": "使用代理模型和奖励信号进行LLM后训练",
+      "llm_tldr_en": "PUST decouples update-signal exploration from distribution alignment using a lightweight proxy model, enabling efficient and reusable optimization for LLM post-training without costly policy exploration.",
+      "llm_tldr_cn": "现有LLM后训练方法将策略探索与分布对齐紧密耦合，导致探索成本高昂且信号难以复用。本文提出PUST框架，通过轻量级代理模型解耦更新信号探索与分布对齐。实验表明，该方法能高效生成可跨模型迁移的优化信号，显著降低后训练计算开销。",
+      "llm_tldr": "现有LLM后训练方法将策略探索与分布对齐紧密耦合，导致探索成本高昂且信号难以复用。本文提出PUST框架，通过轻量级代理模型解耦更新信号探索与分布对齐。实验表明，该方法能高效生成可跨模型迁移的优化信号，显著降低后训练计算开销。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.10750v1",
+      "source": "arxiv",
+      "title": "Filtering Harmful Actions Isn't Enough: Phantom Transfer in Agentic SDF",
+      "abstract": "Synthetic data is widely used to train large language models because it is inexpensive to generate and easy to control. As models are increasingly deployed as agents, synthetic trajectories are likely to become an important source of training data for agentic behavior. We investigate the effects of training on synthetic agentic trajectories containing adversarial interactions, including actions such as terminating another agents process, lowering its scheduling priority, or accessing resources without authorization. We finetune Llama 3.3 70B Instruct on these trajectories, generated to approximate reinforcement learning rollouts, and evaluate the resulting models on Anthropics Agentic Misalignment suite and Apollos in context scheming scenarios. Finetuning on these trajectories consistently increases misaligned behavior. Leaking rises by roughly a factor of five over the baseline, 4.6% to 24.9%. This increase survives the removal of every adversarial action from the trajectories. Finetuning on structurally comparable trajectories generated benign from the start produce a substantially smaller effect, 15.5%. These results indicate that the misaligned disposition is introduced during the generation process and encoded diffusely throughout the trajectory, rather than being localized to the harmful actions themselves. The effect also depends on the generating model. Benign trajectories produced by Gemini 2.5 Flash induce slightly higher leaking rates than trajectories generated from identical tasks by Claude 3.7 Sonnet. In contrast, broad safety benchmarks degrade similarly across all finetuned models and therefore fail to distinguish these effects. Our results suggest that action level filtering is insufficient to ensure the safety of synthetic agentic training data and that dispositions introduced by the generating model can survive semantic inspection.",
+      "authors": [
+        "Chinmayi Dixit"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-12T13:00:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.10750v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "training LLMs on synthetic RL-like trajectories for agentic behavior",
+      "llm_evidence_cn": "使用类RL合成轨迹训练LLM智能体行为",
+      "llm_evidence": "使用类RL合成轨迹训练LLM智能体行为",
+      "canonical_evidence": "使用类RL合成轨迹训练LLM智能体行为",
+      "llm_tldr_en": "Training LLMs on synthetic agentic trajectories approximating RL rollouts can lead to phantom transfer of harmful behaviors even if filtered.",
+      "llm_tldr_cn": "合成数据常用于训练LLM，但使用近似强化学习轨迹的合成智能体轨迹训练模型时，即便过滤了明显有害动作，模型仍可能习得隐形有害行为。本文在Llama 3.3 70B上微调此类轨迹，并在多个安全基准上评估，发现过滤不足以完全消除转移风险。",
+      "llm_tldr": "合成数据常用于训练LLM，但使用近似强化学习轨迹的合成智能体轨迹训练模型时，即便过滤了明显有害动作，模型仍可能习得隐形有害行为。本文在Llama 3.3 70B上微调此类轨迹，并在多个安全基准上评估，发现过滤不足以完全消除转移风险。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.10463v1",
+      "source": "arxiv",
+      "title": "GRASP: GRanularity-Aware Search Policy for Agentic RAG",
+      "abstract": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers. However, it remains challenging for models to decide when to retrieve, whether to use lexical matching or semantic similarity, and how to control context granularity to prevent irrelevant tokens from interfering with agent reasoning. In this paper, we introduce GRASP, a reinforcement learning (RL) framework for training agents to adaptively coordinate complementary retrieval tools during multi-step reasoning. GRASP provides the agent with semantic search, keyword search, and paragraph-reading actions, enabling it to retrieve sentence-level evidence and expand further context only when needed. We train the policy with a reward that jointly accounts for answer accuracy, grounded reading, complementary search, and turn efficiency. Experiments on multi-hop reasoning benchmarks show that GRASP improves both retrieval recall and downstream question answering performance compared with single-step retrieval, prompting-based agentic RAG, and RL-based retrieval baselines. Qualitative and ablation analyses show that the learned policy develops interpretable skimming and scanning behavior: it uses semantic search for broad exploration, paragraph reading for local verification, and keyword search for entity-specific evidence. These results suggest that learning to coordinate retrieval signals and context granularity is critical for agent's correct reasoning.",
+      "authors": [
+        "Varun Gandhi",
+        "Jaewook Lee",
+        "Shantanu Todmal",
+        "Franck Dernoncourt",
+        "Ryan Rossi",
+        "Zichao Wang",
+        "Andrew Lan"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.IR"
+      ],
+      "published": "2026-07-11T19:58:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.10463v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL framework for training agents to adaptively coordinate retrieval tools in agentic RAG",
+      "llm_evidence_cn": "用于训练代理在代理RAG中自适应协调检索工具的强化学习框架",
+      "llm_evidence": "用于训练代理在代理RAG中自适应协调检索工具的强化学习框架",
+      "canonical_evidence": "用于训练代理在代理RAG中自适应协调检索工具的强化学习框架",
+      "llm_tldr_en": "Proposes GRASP, an RL framework that trains agents to adaptively use semantic search, keyword search, and paragraph reading for multi-step reasoning, with granularity control.",
+      "llm_tldr_cn": "该论文提出GRASP，一种强化学习框架，训练代理在多步推理中自适应协调语义搜索、关键词搜索和段落阅读等检索工具，并根据需要控制上下文粒度以降低噪音干扰。在知识密集型问答任务上，GRASP在准确性和推理效率上均优于现有代理RAG方法。",
+      "llm_tldr": "该论文提出GRASP，一种强化学习框架，训练代理在多步推理中自适应协调语义搜索、关键词搜索和段落阅读等检索工具，并根据需要控制上下文粒度以降低噪音干扰。在知识密集型问答任务上，GRASP在准确性和推理效率上均优于现有代理RAG方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.10891v1",
+      "source": "arxiv",
+      "title": "SETA: Scaling Environments for Terminal Agents",
+      "abstract": "Large language models (LLMs) are rapidly shifting toward agents that solve tasks through diverse interfaces, including web and graphical user interfaces (GUIs). Among these, the terminal command line provides a text-based, general-purpose interface, covering tasks from system operations to data science and machine learning. However, scaling terminal-agent training remains challenging, as it requires diverse and coherent task instructions, executable environments, and reliable verification, while lacking naturally grounded supervision data. In this work, we propose SETA, a scalable framework for generating verifiable terminal environments for reinforcement learning (RL). The framework consists of two pipelines sharing a unified verification mechanism: SETA-Synth converts diverse sources into standardized RL environments, and SETA-Evol further expands from existing environments with adaptive control of difficulty and diversity. Together, we construct and release SETA-Env, the largest open-source verifiable terminal RL dataset to date, containing over 4,500 environments. We evaluate our dataset by training Qwen3-8B with GRPO on SETA-Env, achieving 12% pass rate on Terminal-Bench 2.0, the best reported result for an RL-trained model at the 8B scale. We further observe gains on DeepSeek-V4-Flash under the same terminal agent harness, with pass@1 on Terminal-Bench 2.0 improving from 40% to 43% and pass@5 improving from 54% to 58%. These results demonstrate that SETA- Env provides high-quality training environments for terminal agents and serves as a valuable resource for advancing research on terminal-based agent learning.",
+      "authors": [
+        "Qijia Shen",
+        "Zhiqi Huang",
+        "Vamsidhar Kamanuru",
+        "Aznaur Aliev",
+        "Jay Rainton",
+        "Ahmed Awelkair",
+        "Zhichen Zeng",
+        "Jiajun Li",
+        "Shi Dong",
+        "Yueming Yuan",
+        "Boyuan Ma",
+        "Qizheng Zhang",
+        "Jiwei Fu",
+        "Yuzhen Mao",
+        "Wendong Fan",
+        "Ping Nie",
+        "Philip Torr",
+        "Bernard Ghanem",
+        "Changran Hu",
+        "Jonathan Lingjie Li",
+        "Urmish Thakker",
+        "Guohao Li"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-12T19:40:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.10891v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Proposes SETA for generating verifiable terminal environments for RL training of LLM agents",
+      "llm_evidence_cn": "提出SETA框架用于生成可验证的终端环境以强化学习训练LLM智能体",
+      "llm_evidence": "提出SETA框架用于生成可验证的终端环境以强化学习训练LLM智能体",
+      "canonical_evidence": "提出SETA框架用于生成可验证的终端环境以强化学习训练LLM智能体",
+      "llm_tldr_en": "Introduces SETA, a scalable framework to generate verifiable terminal environments for reinforcement learning training of LLM-based terminal agents.",
+      "llm_tldr_cn": "本文提出SETA框架，旨在解决基于LLM的终端智能体在强化学习训练中缺乏多样化、可执行环境的问题。SETA包含两条共享统一验证机制的管道：SETA-Synth将多样化指令转化为环境，SETA-RL提供RL接口，为终端智能体的大规模RL训练提供基础设施，推动LLM向通用终端代理发展。",
+      "llm_tldr": "本文提出SETA框架，旨在解决基于LLM的终端智能体在强化学习训练中缺乏多样化、可执行环境的问题。SETA包含两条共享统一验证机制的管道：SETA-Synth将多样化指令转化为环境，SETA-RL提供RL接口，为终端智能体的大规模RL训练提供基础设施，推动LLM向通用终端代理发展。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.11185v1",
+      "source": "arxiv",
+      "title": "SCALECUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL",
+      "abstract": "Computer use agents (CUAs) are emerging as a powerful interface for automating complex digital workflows through visual perception and GUI execution. Online reinforcement learning with verifiable rewards (RLVR) has emerged as a key direction for scaling their capabilities. However, this paradigm is bottlenecked by verifiable data scarcity and online RL inefficiency. To break these barriers, we introduce ScaleCUA, a unified framework that scales online RL for CUAs via verifiable task synthesis and efficient training. At the data level, we design VeriGen, an end-to-end framework for generating verifiable RL tasks through iterative docker interactions and a multi-agent feedback loop. Scaled to 100+ concurrent agent workers via a shared docker interaction probe, this pipeline produces 24K+ verifiable tasks and nearly 3K high-quality RL tasks. To maximize sample efficiency, we propose Frontier Sampling, which tracks per-task capability and allocates rollouts to the current learning frontier. On the training side, we further design Visual Context Segmentation, a sliding window over recent visual context that balances rollout and training-engine pressure, yielding a 2.83x training speedup over step-wise decomposition. Together, ScaleCUA achieves 68.7% on OSWorld and 54.0% on ScienceBoard, establishing new state-of-the-art performance among open-source computer use agents. Code, models, and datasets are available at https://github.com/THUDM/SCALE-CUA.",
+      "authors": [
+        "Bowen Lv",
+        "Xiao Liu",
+        "Yanyu Ren",
+        "Hanyu Lai",
+        "Bohao Jing",
+        "Hanchen Zhang",
+        "Yanxiao Zhao",
+        "Shuntian Yao",
+        "Jie Tang",
+        "Yuxiao Dong"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-13T07:32:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.11185v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "ScaleCUA: scaling computer use agents with online RL and verifiable task synthesis",
+      "llm_evidence_cn": "ScaleCUA：通过在线强化学习和可验证任务合成扩展计算机使用代理",
+      "llm_evidence": "ScaleCUA：通过在线强化学习和可验证任务合成扩展计算机使用代理",
+      "canonical_evidence": "ScaleCUA：通过在线强化学习和可验证任务合成扩展计算机使用代理",
+      "llm_tldr_en": "Presents ScaleCUA, a framework for scaling online RL for computer use agents via verifiable task synthesis and efficient training with 100+ concurrent agent workers.",
+      "llm_tldr_cn": "论文针对计算机使用代理（CUA）的在线强化学习扩展问题，提出ScaleCUA框架。通过设计VeriGen端到端任务生成引擎，利用迭代Docker交互和多智能体反馈循环生成可验证RL任务，并支持100+并发智能体workers进行高效训练。实验证明该方法能有效提升CUA在数字工作流中的性能。",
+      "llm_tldr": "论文针对计算机使用代理（CUA）的在线强化学习扩展问题，提出ScaleCUA框架。通过设计VeriGen端到端任务生成引擎，利用迭代Docker交互和多智能体反馈循环生成可验证RL任务，并支持100+并发智能体workers进行高效训练。实验证明该方法能有效提升CUA在数字工作流中的性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}
