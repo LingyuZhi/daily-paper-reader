@@ -1,0 +1,329 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-15T21:24:02.747608+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2607.12640v1",
+      "source": "arxiv",
+      "title": "A Learning-Rate-Gated Failure of GRPO in a Small Language and Vision-Language Model Web Agent: A Controlled Null and Its Mechanism",
+      "abstract": "Reinforcement learning with verifiable rewards, and Group Relative Policy Optimization (GRPO) in particular, is now run routinely on a supervised checkpoint in the hope of producing a stronger agent. We ask whether it adds skill to a small language and vision-language model web agent at the 4B to 8B scale, or whether it mostly reshapes behavior the supervised model already has. Across a control grid of 18 runs that varies learning rate, KL weight, seed, initialization, and clipping, no configuration credibly improves the success rate of a strong supervised baseline on tasks the agent has largely mastered. On the text track, moderate to high learning rates make it credibly worse. The null holds under paired testing, 25 evaluation seeds, 6 training seeds, changes to the recipe, both text and Set-of-Marks screenshot observations, and scaling the backbone to 8B; the credible harm is a text-track finding and is only nominal under Set-of-Marks. To show that the null reflects the setting and not a broken pipeline, we run the identical harness, reward, and recipe on tasks whose reward is reachable by sampling, and there the success rate rises by 22 points with a paired interval that excludes zero. GRPO therefore helps only when there is headroom to climb, meaning the sampled policy already succeeds more often than the greedy one. We then explain the failure. A middle learning rate degrades the agent and a high one collapses it, and the two regimes form a double dissociation: grafting localizes the degrade regime to the attention and MLP blocks, while the collapse regime cannot be traced to any single group, and the embedding change that dominates the weight movement is causally inert. At 4B, effective rank in the late layers tracks capability in both directions; at 8B the two come apart. This coupling is specific to the smaller model, so we report it as scale-dependent.",
+      "authors": [
+        "Chengguang Gan",
+        "Zhixi Cai",
+        "Yunhao Liang",
+        "Hanjun Wei",
+        "Shiwen Ni",
+        "Qinghao Zhang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-14T11:17:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.12640v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "empirically studies GRPO (RL) failure in small web agent, directly relevant to RL for agent decision making",
+      "llm_evidence_cn": "实证研究GRPO（RL）在小规模web代理中的失败，直接与基于RL的代理决策相关",
+      "llm_evidence": "实证研究GRPO（RL）在小规模web代理中的失败，直接与基于RL的代理决策相关",
+      "canonical_evidence": "实证研究GRPO（RL）在小规模web代理中的失败，直接与基于RL的代理决策相关",
+      "llm_tldr_en": "Controlled experiments show that GRPO fails to improve a strong supervised baseline for small web agents, with moderate-to-high learning rates making performance worse.",
+      "llm_tldr_cn": "本文通过控制实验（18组配置）研究GRPO在4B-8B规模web代理上的效果，发现所有配置均未能可靠提升已较强监督基线的成功率，且中等或高学习率显著降低性能。揭示了小规模模型中RL后训练可能无效甚至有害的机制，对agentic RL实践具有重要参考价值。",
+      "llm_tldr": "本文通过控制实验（18组配置）研究GRPO在4B-8B规模web代理上的效果，发现所有配置均未能可靠提升已较强监督基线的成功率，且中等或高学习率显著降低性能。揭示了小规模模型中RL后训练可能无效甚至有害的机制，对agentic RL实践具有重要参考价值。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12687v1",
+      "source": "arxiv",
+      "title": "From Critic to Confidence: PPO for Language-Based Quantitative Prediction with Confidence Estimation",
+      "abstract": "LLMs can perform language-based quantitative prediction from unstructured inputs, but remain susceptible to hallucinations and overconfident errors, making it critical to know not only what a model predicts, but when its predictions can be trusted. We introduce CARE-PPO, a reinforcement learning framework that establishes a connection between loss prediction for uncertainty estimation and actor-critic PPO fine-tuning, enabling joint learning of accurate numerical estimates and reliable confidence signals in language-based quantitative prediction. CARE-PPO uses a Confidence-Aligned Reward for Estimation, defined as a function of prediction error, to provide dense error-aware feedback to the actor while inducing the critic to learn a value function aligned with prediction quality. During inference, we repurpose the critic as a confidence estimator. Across two real-world tasks in healthcare and finance and two Qwen-3 model scales (4B and 8B), CARE-PPO achieves strong quantitative prediction performance, while producing significantly better-aligned confidence estimates through the critic than logit-based and verbalized baselines. These gains persist under realistic out-of-distribution settings across domains, spanning linguistic and domain shifts. Finally, CARE-PPO reduces task-specific overfitting on general instruction-following prompts, consistent with the broader generalization advantages of RL fine-tuning over supervised approaches.",
+      "authors": [
+        "Mehak Dhaliwal",
+        "Rasta Tadayon",
+        "Andong Hua",
+        "Haewon Jeong",
+        "Yao Qin"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-07-14T12:15:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.12687v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "uses PPO fine-tuning to enhance LLM for prediction with confidence",
+      "llm_evidence_cn": "使用PPO微调增强大语言模型进行置信度预测",
+      "llm_evidence": "使用PPO微调增强大语言模型进行置信度预测",
+      "canonical_evidence": "使用PPO微调增强大语言模型进行置信度预测",
+      "llm_tldr_en": "CARE-PPO combines loss prediction for uncertainty estimation with actor-critic PPO fine-tuning to jointly learn accurate numerical estimates and reliable confidence signals in LLMs.",
+      "llm_tldr_cn": "针对大语言模型在定量预测中易产生幻觉和过度自信的问题，论文提出CARE-PPO框架，将损失预测与actor-critic PPO微调相结合，实现数值估计与置信度信号的联合学习。通过置信度对齐奖励函数提供密集误差反馈，模型既能输出预测值也能指示可信度。实验表明该方法显著降低了预测误差并提升了置信度校准，展示了强化学习增强大语言模型能力的有效性。",
+      "llm_tldr": "针对大语言模型在定量预测中易产生幻觉和过度自信的问题，论文提出CARE-PPO框架，将损失预测与actor-critic PPO微调相结合，实现数值估计与置信度信号的联合学习。通过置信度对齐奖励函数提供密集误差反馈，模型既能输出预测值也能指示可信度。实验表明该方法显著降低了预测误差并提升了置信度校准，展示了强化学习增强大语言模型能力的有效性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.07050v1",
+      "source": "arxiv",
+      "title": "Behavior Leverage Imbalance in Multi-Teacher On-Policy Distillation",
+      "abstract": "Agentic language models must learn when to call tools, when to consume tool responses, and when to answer directly. This makes multi-teacher on-policy distillation a natural training strategy: one teacher can specialize in tool calls, another in direct responses, and the student can learn from both on   its own generated distribution. We show that this strategy can induce a behavior shift that is invisible from aggregate losses alone. In a two-teacher tool-use setting, vanilla generalized knowledge distillation improves tool-call recall but also moves the model toward over-calling, where it calls tools   on examples that should be answered directly. Aggregate explanations are insufficient: tool-call samples do not receive more token exposure, and full-sequence per-token divergence is not larger for the tool-call teacher. We instead analyze behavior leverage imbalance: local token-level signals at mode-   entry and structural positions, such as <tool_call> and function names, can have disproportionate control over the global generation mode. We propose Soft Clamp, a per-token divergence calibration method that dynamically compresses extreme token-level Jensen-Shannon divergence while preserving nonzero   gradients. On APIGen-MT, Soft Clamp reduces over-calling from 13.7% to 9.0% relative to vanilla GKD while matching its decision accuracy. In a BFCL multi-turn diagnostic, it also lowers tool-call loops and repeated calls among GKD variants. These results suggest that multi-teacher OPD should monitor   where teacher signals act, not only how large they are in aggregate.",
+      "authors": [
+        "Jiabin Shen",
+        "Guang Chen",
+        "Chengjun Mao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-07-08T06:26:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.07050v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Multi-teacher on-policy distillation for agentic language models, addressing behavior imbalance",
+      "llm_evidence_cn": "多教师同策略蒸馏用于智能体语言模型，揭示行为杠杆不平衡",
+      "llm_evidence": "多教师同策略蒸馏用于智能体语言模型，揭示行为杠杆不平衡",
+      "canonical_evidence": "多教师同策略蒸馏用于智能体语言模型，揭示行为杠杆不平衡",
+      "llm_tldr_en": "Shows that multi-teacher on-policy distillation for agentic language models can lead to invisible behavior imbalances, e.g., over-calling tools, not captured by aggregate losses.",
+      "llm_tldr_cn": "针对智能体语言模型多教师同策略蒸馏中工具调用行为失衡的问题，本文分析发现传统蒸馏损失无法反映工具过度调用的偏差，并提出应对建议。实验表明单纯提高工具召回会导致过度调用，需要细粒度行为监督。",
+      "llm_tldr": "针对智能体语言模型多教师同策略蒸馏中工具调用行为失衡的问题，本文分析发现传统蒸馏损失无法反映工具过度调用的偏差，并提出应对建议。实验表明单纯提高工具召回会导致过度调用，需要细粒度行为监督。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.11432v1",
+      "source": "arxiv",
+      "title": "Generalizing Preference-based Reinforcement Learning: a Rationality Model for Incomparability",
+      "abstract": "In this work, we study the reinforcement learning (RL) problem from pairwise trajectory comparisons provided by a human expert. We generalize preference-based RL by formalizing a novel setting in which the expert can also label trajectory pairs as incomparable, i.e., when neither trajectory dominates the other. We introduce the learning problem and the desiderata that its solution should satisfy. Then, we propose a novel Bradley-Terry-inspired rationality model that effectively captures incomparabilities and infers a multi-dimensional reward function, and we study its properties. We provide a sample complexity analysis for learning the model parameters when a dataset is available. Finally, we evaluate our model's ability to reconstruct a reward function that aligns with the expert's comparisons in simulated environments and to recover the Pareto frontier of policies, along with a robustness analysis across varying levels of expert rationality.",
+      "authors": [
+        "Simone Drago",
+        "Marco Mussi",
+        "Leonardo Bianconi",
+        "Alberto Maria Metelli"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-13T11:37:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.11432v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Generalizing preference-based RL with incomparability model",
+      "llm_evidence_cn": "泛化偏好基强化学习的不可比较理性模型",
+      "llm_evidence": "泛化偏好基强化学习的不可比较理性模型",
+      "canonical_evidence": "泛化偏好基强化学习的不可比较理性模型",
+      "llm_tldr_en": "Generalizes preference-based RL by allowing experts to label trajectory pairs as incomparable, proposing a Bradley-Terry-inspired model that infers multi-dimensional reward.",
+      "llm_tldr_cn": "针对偏好基强化学习中专家只能给出完全偏好比较的限制，提出允许标注不可比较对的泛化框架，基于Bradley-Terry扩展模型学习多维奖励函数，理论分析了样本复杂度，实验表明模型能够有效恢复不可比较偏好下的真实奖励结构。",
+      "llm_tldr": "针对偏好基强化学习中专家只能给出完全偏好比较的限制，提出允许标注不可比较对的泛化框架，基于Bradley-Terry扩展模型学习多维奖励函数，理论分析了样本复杂度，实验表明模型能够有效恢复不可比较偏好下的真实奖励结构。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.12931v1",
+      "source": "arxiv",
+      "title": "ExToken: Structured Exploration for Efficient Vision-Language-Action Reinforcement Fine-tuning",
+      "abstract": "Reinforcement Learning (RL) has demonstrated significant potential for improving Vision-Language-Action (VLA) models on complex manipulation tasks. However, its practical scalability remains severely limited by the substantial cost of environmental interactions. In this work, we first investigate the exploration stagnation bottleneck in current VLA-RL frameworks and reveal that trajectory diversity is fundamentally more important to sample efficiency than the sheer quantity of collected rollouts. Motivated by these insights, we introduce RL Exploration Token (ExToken), a simple yet general framework that condition VLA policies on discrete behavioral priors derived from offline demonstrations for structured exploration. By conditioning the policy on different tokens during rollout collection, ExToken encourages the agent to explore diverse behavioral modes, substantially improving state-action coverage and exploration efficiency. To bridge exploration during training with deterministic inference at deployment, ExToken further incorporates a state-conditioned token selector that adaptively predicts effective behavioral modes for unseen scenarios. Extensive experiments across simulated and real-world robotic manipulation tasks demonstrate that ExToken consistently accelerates convergence, improves task performance, and exhibits strong robustness under highly constrained interaction budgets.",
+      "authors": [
+        "Yilun Kong",
+        "Yunpeng Qing",
+        "Guozheng Ma",
+        "Haoyu Wang",
+        "Li Shen",
+        "Zhi Hou",
+        "Dacheng Tao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-14T16:04:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.12931v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "structured exploration for VLA models via RL fine-tuning",
+      "llm_evidence_cn": "基于强化学习微调的结构化探索用于视觉-语言-动作模型",
+      "llm_evidence": "基于强化学习微调的结构化探索用于视觉-语言-动作模型",
+      "canonical_evidence": "基于强化学习微调的结构化探索用于视觉-语言-动作模型",
+      "llm_tldr_en": "ExToken introduces discrete behavioral priors as exploration tokens for efficient RL fine-tuning of VLA models, improving sample efficiency by diversifying trajectories.",
+      "llm_tldr_cn": "视觉-语言-动作(VLA)模型的强化学习微调面临探索同质化瓶颈。本文提出ExToken，从离线演示中提取离散行为先验作为探索token，引导VLA策略进行结构化探索，在复杂操作任务中以更少交互达到更高成功率，显著提升样本效率。",
+      "llm_tldr": "视觉-语言-动作(VLA)模型的强化学习微调面临探索同质化瓶颈。本文提出ExToken，从离线演示中提取离散行为先验作为探索token，引导VLA策略进行结构化探索，在复杂操作任务中以更少交互达到更高成功率，显著提升样本效率。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.11720v1",
+      "source": "arxiv",
+      "title": "Active Offline-to-Online Reinforcement Learning",
+      "abstract": "Background: Offline reinforcement learning (RL) enables effective policies to be trained from large, previously collected datasets and subsequently improved through limited online interaction. This offline-to-online RL (O2O-RL) paradigm is particularly promising in nonstationary domains where interaction is costly or potentially hazardous. Standard O2O-RL pipelines train multiple candidate policies offline, evaluate them using off-policy or online evaluation, and then deploy and fine-tune the policy with the highest estimated value. However, as in offline pretraining, fine-tuning performance is highly sensitive to the choice of algorithm and hyperparameters, making it risky to commit to a single policy. Objectives: We study active policy selection for fine-tuning under a limited interaction budget in O2O-RL settings. To our knowledge, this is the first work to address this problem. Methods: We formulate the problem by identifying a fundamental trade-off between allocating online interactions to policy evaluation, which helps identify high-performing policies, and allocating them to fine-tuning, which improves policy performance. We then propose an approach that balances this trade-off by actively selecting policies for fine-tuning based on upper-confidence bounds on their future performance. These bounds are derived from locally linear performance forecasts fitted to observations obtained through online evaluation. Results: Across a diverse range of experiments, the proposed approach consistently outperforms existing O2O-RL baselines. Conclusions: Actively selecting and fine-tuning policies uses limited online interaction budgets more effectively than either committing to a single policy or dividing the budget equally among all policies. Our framework also advances offline RL toward practical deployment in real-world systems where online interaction is costly or risky.",
+      "authors": [
+        "Alper Kamil Bozkurt",
+        "Shangtong Zhang",
+        "Yuichi Motai"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-13T15:46:11+00:00",
+      "link": "https://arxiv.org/pdf/2607.11720v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "active policy selection for offline-to-online RL",
+      "llm_evidence_cn": "离线到在线强化学习中的主动策略选择",
+      "llm_evidence": "离线到在线强化学习中的主动策略选择",
+      "canonical_evidence": "离线到在线强化学习中的主动策略选择",
+      "llm_tldr_en": "Studies active policy selection for fine-tuning under limited online interaction in offline-to-online RL.",
+      "llm_tldr_cn": "针对离线到在线强化学习微调阶段策略选择风险大的问题，研究在有限交互下主动选择策略的方法，提高微调鲁棒性。",
+      "llm_tldr": "针对离线到在线强化学习微调阶段策略选择风险大的问题，研究在有限交互下主动选择策略的方法，提高微调鲁棒性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.12784v1",
+      "source": "arxiv",
+      "title": "Directional Constraints for Efficient Exploration in Safe Reinforcement Learning",
+      "abstract": "Reinforcement Learning has revolutionized the landscape of robotic research, allowing robust learning of complex robotic skills in simulation. However, real-world deployment in open-ended environments requires strong safety guarantees to prevent dangerous or harmful behaviors. Safe Reinforcement Learning methods address this requirement by enforcing safety constraints. Nevertheless, learning under constraints often reduces learning speed and could lead to suboptimal task performance, as the agent must solve a more complex constrained optimization problem compared to unconstrained settings. To tackle this issue, in this work, we propose an extension of the ATACOM framework, a state-of-the-art reliable safety layer that can be integrated with existing Reinforcement Learning algorithms to enforce constraints derived from prior knowledge of the system or learned directly from data. Our proposed method, named ATACOM Directional Constraints (ATACOM-DC), significantly improves the safety-performance trade-off by introducing directional constraints that distinguish between actions approaching and moving away from constraint boundaries, activating constraint enforcement only when necessary. We evaluate our method across a range of challenging robotic control tasks in simulation, analyzing both constraint-violation costs and achieved task performance. Code and additional material at https://atacom-dc.robot-learning.net.",
+      "authors": [
+        "Paolo Magliano",
+        "Puze Liu",
+        "Jan Peters",
+        "Davide Tateo",
+        "Raffaello Camoriano"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "published": "2026-07-14T13:59:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.12784v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "safe RL method with directional constraints for efficient exploration, applicable to agent decision making",
+      "llm_evidence_cn": "具有方向约束的安全强化学习方法，适用于智能体决策",
+      "llm_evidence": "具有方向约束的安全强化学习方法，适用于智能体决策",
+      "canonical_evidence": "具有方向约束的安全强化学习方法，适用于智能体决策",
+      "llm_tldr_en": "This paper extends ATACOM with directional constraints to improve exploration efficiency in safe RL, maintaining safety while accelerating learning for robotic agents.",
+      "llm_tldr_cn": "该论文在安全强化学习框架ATACOM基础上引入方向约束，在保证安全的前提下提高探索效率。传统安全约束会降低学习速度，方向约束通过限制动作方向而非幅度来减少无效探索。实验证明该方法在多种机器人任务中加速了学习过程且不违反安全约束，为智能体在开放环境中的安全决策提供了有效方法。",
+      "llm_tldr": "该论文在安全强化学习框架ATACOM基础上引入方向约束，在保证安全的前提下提高探索效率。传统安全约束会降低学习速度，方向约束通过限制动作方向而非幅度来减少无效探索。实验证明该方法在多种机器人任务中加速了学习过程且不违反安全约束，为智能体在开放环境中的安全决策提供了有效方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.12924v1",
+      "source": "arxiv",
+      "title": "Knowledge- and Gradient-Guided Reinforcement Learning for Parametrized Action Markov Decision Processes",
+      "abstract": "In this paper, we study Reinforcement Learning in Parametrized Action Markov Decision Processes (PAMDP), where each decision consists of a symbolic action and numerical parameters. In such settings Reinforcement Learning algorithms typically determine parameters with one-shot estimators, which makes their training sample inefficient. Though in most PAMDP environments explicit but incomplete knowledge (e.g., rules, safety constraints, or expert heuristics) is available, it is rarely directly used to increase the sample-efficiency of training Reinforcement Learning agents. We step into this gap and propose our novel Neuro-Symbolic Knowledge- and Gradient-Guided Reinforcement Learning (KGRL) algorithm. KGRL uses domain knowledge in a Datalog knowledge base to derive the set of applicable actions and feasible parameters for a given state. This allows it to prune non-applicable actions from the decision-space and constrain the parameter spaces of the remaining actions. We then use a gradient-based parameter refinement loop to estimate the optimal parameters during training and deployment of the agent. By recording activated rules along the trajectory, KGRL additionally provides local procedural explanations on the pruning of actions and constraining of parameters. Overall, KGRL guides the agent's exploration and deployment toward feasible and constraint-aware decisions, while increasing sample efficiency during training. KGRL outperforms state-of-the-art RL baselines for PAMDPs in both, sample efficiency and episodic return.",
+      "authors": [
+        "Jonas Ehrhardt",
+        "René Heesch",
+        "Oliver Niggemann"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-14T15:57:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.12924v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL algorithm for parameterized action spaces with domain knowledge",
+      "llm_evidence_cn": "结合领域知识的参数化动作RL算法",
+      "llm_evidence": "结合领域知识的参数化动作RL算法",
+      "canonical_evidence": "结合领域知识的参数化动作RL算法",
+      "llm_tldr_en": "KGRL integrates domain knowledge and gradients to guide RL in PAMDPs, improving sample efficiency by using explicit but incomplete knowledge for parameter estimation.",
+      "llm_tldr_cn": "参数化动作MDP中，RL算法常使用一阶段估计器导致样本低效，而现有领域知识未被充分利用。本文提出神经符号知识梯度引导强化学习(KGRL)，结合领域知识与梯度信息进行参数估计，在多种PAMDP环境中显著提升样本效率与收敛性能。",
+      "llm_tldr": "参数化动作MDP中，RL算法常使用一阶段估计器导致样本低效，而现有领域知识未被充分利用。本文提出神经符号知识梯度引导强化学习(KGRL)，结合领域知识与梯度信息进行参数估计，在多种PAMDP环境中显著提升样本效率与收敛性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
