@@ -1,0 +1,541 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-16T19:58:56.243765+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 8,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2607.13172v1",
+      "source": "arxiv",
+      "title": "Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models",
+      "abstract": "We address the problem of safely training an agent policy and deploying a good and safe policy, in settings where the environment dynamics are unknown and no suitable reward function is available. In the context of safety-critical environments, we consider traditional reinforcement learning impractical and resort to the resource of human input. We introduce DROPJ, a human-centred method for both safe training and deployment. We first learn a world model (a learned simulator) from a dataset of prior real-world trajectories. A human then plays the game in this learned simulator to extract several informative simulated trajectories. From these, we sample pairs of simulated trajectory segments and elicit from a human their preference over these segments, as well as a reason (justification) for their choice. We then train a reward model from these justified preferences and use it, together with the world model, to directly deploy the agent using model predictive control. Running real-user experiments, we find that generating informative simulated trajectories from a user significantly reduces the computational cost during training compared to other strategies, and can also improve the performance during deployment. In the context of training within a learned simulator, we show that the use of preferences rather than other types of feedback substantially improves the performance during deployment. We further demonstrate that safety justifications accompanying preferences can significantly enhance safety or prioritise user-prescribed aspects of safety associated with them during deployment.",
+      "authors": [
+        "Ilias Kazantzidis",
+        "Timothy J. Norman",
+        "Yali Du",
+        "Christopher T. Freeman"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-14T18:22:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.13172v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "addresses safe agent training using human preferences and world models for autonomous agents",
+      "llm_evidence_cn": "利用人类偏好与世界模型解决自主智能体的安全训练问题",
+      "llm_evidence": "利用人类偏好与世界模型解决自主智能体的安全训练问题",
+      "canonical_evidence": "利用人类偏好与世界模型解决自主智能体的安全训练问题",
+      "llm_tldr_en": "Introduces DROPJ, a human-centered method for training safe agent policies using world models and human preferences, suitable for safety-critical environments.",
+      "llm_tldr_cn": "针对安全关键环境中无合适奖励函数且环境动态未知的问题，提出DROPJ方法。该方法先由历史轨迹学习世界模型，再让人类在模拟器中提供偏好与理由，从而训练出安全且优秀的智能体策略。实验证明该方法能在保证安全的同时取得高性能。",
+      "llm_tldr": "针对安全关键环境中无合适奖励函数且环境动态未知的问题，提出DROPJ方法。该方法先由历史轨迹学习世界模型，再让人类在模拟器中提供偏好与理由，从而训练出安全且优秀的智能体策略。实验证明该方法能在保证安全的同时取得高性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13315v1",
+      "source": "arxiv",
+      "title": "Meta-Learning Preferences for Multilingual LLM Alignment",
+      "abstract": "Unequal availability of human preference data across languages poses a significant challenge for aligning large language models in multilingual settings. To address the lack of sufficient data in low-resource language alignment, we propose a meta-learning framework for Reinforcement Learning from Human Feedback and Direct Preference Optimization. By leveraging preference data from other languages, our framework learns a transferable initialization that enables effective adaptation to a target language with minimal data. We provide theoretical guarantees for both the meta-reward modeling and meta-policy optimization settings, and empirically demonstrate the effectiveness of our approach on multilingual benchmarks. In an extremely low-resource setting with only 100 target-language preference samples, our approach achieves up to $28\\%$ win-rate improvements over baseline methods, and consistently outperforms baselines across multiple target languages and model scales. Our approaches retain these advantages across different combinations of meta-training languages and varying linguistic distances from the target languages.",
+      "authors": [
+        "Jiaying Lin",
+        "Seongho Son",
+        "Nam Phuong Tran",
+        "Long Tran-thanh",
+        "Ilija Bogunovic",
+        "Debmalya Mandal"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-14T22:38:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.13315v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "meta-learning for RLHF and DPO to enhance LLM alignment across languages",
+      "llm_evidence_cn": "使用元学习进行RLHF和DPO以增强多语言LLM对齐",
+      "llm_evidence": "使用元学习进行RLHF和DPO以增强多语言LLM对齐",
+      "canonical_evidence": "使用元学习进行RLHF和DPO以增强多语言LLM对齐",
+      "llm_tldr_en": "Proposes a meta-learning framework for RLHF and DPO that learns transferable preferences across languages, enabling effective LLM alignment with minimal target language data.",
+      "llm_tldr_cn": "针对多语言LLM对齐中低资源语言偏好数据不足的问题，提出元学习框架，从高资源语言中学习可迁移的偏好初始权重，在少量目标语言样本上快速适配。理论证明收敛性，实验表明仅用100条目标语言数据即可达到强基线性能。该方法显著降低了RLHF的数据需求，扩展了RL增强LLM的适用性。",
+      "llm_tldr": "针对多语言LLM对齐中低资源语言偏好数据不足的问题，提出元学习框架，从高资源语言中学习可迁移的偏好初始权重，在少量目标语言样本上快速适配。理论证明收敛性，实验表明仅用100条目标语言数据即可达到强基线性能。该方法显著降低了RLHF的数据需求，扩展了RL增强LLM的适用性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13394v1",
+      "source": "arxiv",
+      "title": "GFlowRL: Scaling Distribution-Matching RL to Large Language Models",
+      "abstract": "Generative Flow Networks (GFlowNets) offer a promising alternative to reward-maximizing reinforcement learning (RL) for large reasoning models, encouraging diverse reasoning paths by matching reward distributions rather than collapsing to dominant modes. Recent work shows promise on math and code, but scaling GFlowNet-style RL to modern post-training pipelines remains difficult: as model size, rollout horizon, reward noise, and distributed-systems complexity grow together, a learned prompt-conditional partition function becomes a source of gradient instability and engineering overhead rather than a useful normalizer. Through systematic analysis, we find that the learned partition function, previously treated as essential, can be replaced by an in-batch Monte Carlo estimate computed from the rollout group already required for training. We propose GFlowRL, a streamlined GFlowNet-style RL algorithm that removes the auxiliary partition network entirely while preserving the reward-distribution-matching objective, completed by two stabilizers: importance-sampling correction for rollout/trainer drift and asymmetric flow-gap clipping for outlier residuals. GFlowRL exceeds all counterparts on math, code, and adversarial red-teaming benchmarks, reaching a Codeforces rating of 2048 at the 14B scale (within 25 Elo of o3-mini) and attaining the highest average ASR@1 on AdvBench and HarmBench, outperforming the previous SOTA multi-turn attacker in a regime where FlowRL, a prior GFlowNet-style method, diverges. The same recipe transfers to all evaluated MoE configurations up to 235B parameters, where FlowRL again fails to converge. To our knowledge, GFlowRL is the first GFlowNet-style RL algorithm to scale stably across both dense and sparse architectures. Code will be at: https://github.com/microsoft/gflowrl",
+      "authors": [
+        "Xiaodong Liu",
+        "Michael Xu",
+        "Jack W. Stokes",
+        "Paul Smolensky",
+        "Doug Burger",
+        "Jianfeng Gao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-07-15T02:43:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.13394v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "scaling distribution-matching RL (GFlowNet) to large language models",
+      "llm_evidence_cn": "将分布匹配强化学习（GFlowNet）扩展到大型语言模型",
+      "llm_evidence": "将分布匹配强化学习（GFlowNet）扩展到大型语言模型",
+      "canonical_evidence": "将分布匹配强化学习（GFlowNet）扩展到大型语言模型",
+      "llm_tldr_en": "Scales GFlowNet-style distribution-matching RL to LLM post-training, replacing the learned partition function with in-batch Monte Carlo estimation to improve stability and reduce overhead.",
+      "llm_tldr_cn": "针对GFlowNet风格RL扩展到LLM时分区函数学习不稳定的问题，提出用批内蒙特卡洛估计替代可学习的分区函数，简化训练并提升稳定性。在数学和代码推理任务上，该方法比标准RL奖励最大化方法生成更多样化的推理路径，同时保持性能。为将分布匹配RL用于LLM后训练提供了可扩展方案。",
+      "llm_tldr": "针对GFlowNet风格RL扩展到LLM时分区函数学习不稳定的问题，提出用批内蒙特卡洛估计替代可学习的分区函数，简化训练并提升稳定性。在数学和代码推理任务上，该方法比标准RL奖励最大化方法生成更多样化的推理路径，同时保持性能。为将分布匹配RL用于LLM后训练提供了可扩展方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13818v1",
+      "source": "arxiv",
+      "title": "Learning Robust Execution in Robotic Manipulation with Agentic Reinforcement Learning",
+      "abstract": "Robotic manipulation poses fundamental challenges due to uncertainty, long-horizon execution, and compounding errors, which can easily destabilize execution and lead to task failure. Although recent vision-language-action (VLA) models exhibit strong generalization, they typically lack explicit mechanisms to assess execution stability and to recover when execution deviates from its nominal behavior. In this paper, we propose: (1) two complementary metrics to assess execution quality at runtime, and (2) an agentic reinforcement learning framework that learns to restore effective execution through high-level decision-making rather than directly learning low-level actions. In this framework, an agentic policy reasons over recent execution history and selects among a small set of execution modes to regulate the execution process. Under execution degradation, it triggers appropriate recovery mechanisms to restore the robot to previously visited nominal states, enabling the task to continue. We evaluate the proposed method on the LIBERO benchmark, achieving up to a 13.7% improvement in success rate under standard settings and up to a 39.2% improvement under disturbance settings, demonstrating substantially enhanced execution robustness.",
+      "authors": [
+        "Xiaopeng Zhang",
+        "Yueyang Weng",
+        "Qi Liu",
+        "Yongjin Mu",
+        "Yanjie Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-15T13:25:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.13818v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Explicit agentic RL framework for robotic manipulation",
+      "llm_evidence_cn": "显式的自主强化学习框架用于机器人操作",
+      "llm_evidence": "显式的自主强化学习框架用于机器人操作",
+      "canonical_evidence": "显式的自主强化学习框架用于机器人操作",
+      "llm_tldr_en": "Proposes agentic RL framework with runtime metrics to restore robust execution in robotic manipulation, avoiding low-level action learning.",
+      "llm_tldr_cn": "机器人操作面临不确定性、长周期和累积误差，导致执行不稳定。本文提出自主强化学习框架，通过高层面决策恢复执行，并引入两个互补指标评估执行质量。实验表明该方法显著提升鲁棒性，优于传统低层动作学习方法。",
+      "llm_tldr": "机器人操作面临不确定性、长周期和累积误差，导致执行不稳定。本文提出自主强化学习框架，通过高层面决策恢复执行，并引入两个互补指标评估执行质量。实验表明该方法显著提升鲁棒性，优于传统低层动作学习方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13988v1",
+      "source": "arxiv",
+      "title": "TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents",
+      "abstract": "Multi-turn agents solve complex tasks through extended sequences of tool interactions before producing a final answer, making credit assignment a fundamental challenge during post-training. Outcome rewards provide reliable supervision for short-horizon reasoning, but become sparse and high-variance as trajectories grow to tens or hundreds of tool calls. They can also be misleading: a failed rollout may contain many useful actions that move the agent closer to the goal, yet outcome-only training assigns them the same negative advantage as the eventual mistake. We propose TRACE (Turn-level Reward Assignment via Credit Estimation), a dense credit-assignment method for agentic reinforcement learning. TRACE represents rollouts as state transitions at tool-call boundaries, obtains gold-answer log-probabilities from a frozen reference model, transforms them into log-ratio state values, and derives per-action rewards as Temporal-Difference changes in those values. This requires no additional critic or process-label training, and its one-step log-ratio TD component telescopes across redundant tool calls. On long-horizon complex search, TRACE substantially improves base-model tool-use ability using pure RL, without a cold-start supervised fine-tuning stage, an agentic mid-training stage, or training on live-web data. On the closed-web BrowseComp-Plus benchmark, it raises Qwen3-4B from $7.2$ to $35.6$ and Qwen3-30B-A3B from $8.4$ to $42.6$. The learned search behavior also transfers to open-web benchmarks, and the learning curves show earlier improvement and faster convergence during RL training.",
+      "authors": [
+        "Leitian Tao",
+        "Baolin Peng",
+        "Wenlin Yao",
+        "Tao Ge",
+        "Hao Cheng",
+        "Mike Hang Wang",
+        "Jianfeng Gao",
+        "Sharon Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-15T16:16:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.13988v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes TRACE, a dense credit-assignment method for agentic reinforcement learning",
+      "llm_evidence_cn": "提出TRACE，一种用于智能体强化学习的密集信用分配方法",
+      "llm_evidence": "提出TRACE，一种用于智能体强化学习的密集信用分配方法",
+      "canonical_evidence": "提出TRACE，一种用于智能体强化学习的密集信用分配方法",
+      "llm_tldr_en": "Introduces TRACE for turn-level reward assignment via credit estimation to address credit assignment in long-horizon agentic RL.",
+      "llm_tldr_cn": "长程智能体面临信用分配难题，传统结果奖励信号稀疏且误导。本文提出TRACE（基于信用估计的回合级奖励分配），通过状态转移表示和密集信用分配，有效识别有用动作并提升训练效果。实验表明该方法能显著改善智能体在长程任务中的学习效率。",
+      "llm_tldr": "长程智能体面临信用分配难题，传统结果奖励信号稀疏且误导。本文提出TRACE（基于信用估计的回合级奖励分配），通过状态转移表示和密集信用分配，有效识别有用动作并提升训练效果。实验表明该方法能显著改善智能体在长程任务中的学习效率。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12924v2",
+      "source": "arxiv",
+      "title": "Knowledge- and Gradient-Guided Reinforcement Learning for Parametrized Action Markov Decision Processes",
+      "abstract": "In this paper, we study Reinforcement Learning in Parametrized Action Markov Decision Processes (PAMDP), where each decision consists of a symbolic action and numerical parameters. In such settings Reinforcement Learning algorithms typically determine parameters with one-shot estimators, which makes their training sample inefficient. Though in most PAMDP environments explicit but incomplete knowledge (e.g., rules, safety constraints, or expert heuristics) is available, it is rarely directly used to increase the sample-efficiency of training Reinforcement Learning agents. We step into this gap and propose our novel Neuro-Symbolic Knowledge- and Gradient-Guided Reinforcement Learning (KGRL) algorithm. KGRL uses domain knowledge in a Datalog knowledge base to derive the set of applicable actions and feasible parameters for a given state. This allows it to prune non-applicable actions from the decision-space and constrain the parameter spaces of the remaining actions. We then use a gradient-based parameter refinement loop to estimate the optimal parameters during training and deployment of the agent. By recording activated rules along the trajectory, KGRL additionally provides local procedural explanations on the pruning of actions and constraining of parameters. Overall, KGRL guides the agent's exploration and deployment toward feasible and constraint-aware decisions, while increasing sample efficiency during training. KGRL outperforms state-of-the-art RL baselines for PAMDPs in both, sample efficiency and episodic return.",
+      "authors": [
+        "Jonas Ehrhardt",
+        "René Heesch",
+        "Oliver Niggemann"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-14T15:57:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.12924v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "reinforcement learning for parametrized action MDPs, directly addressing agent decision making",
+      "llm_evidence_cn": "对参数化动作马尔可夫决策过程进行强化学习，直接处理智能体决策",
+      "llm_evidence": "对参数化动作马尔可夫决策过程进行强化学习，直接处理智能体决策",
+      "canonical_evidence": "对参数化动作马尔可夫决策过程进行强化学习，直接处理智能体决策",
+      "llm_tldr_en": "Proposes KGRL, a neuro-symbolic RL algorithm that leverages domain knowledge and gradient guidance to improve sample efficiency in parametrized action MDPs, enabling more effective agent decision making.",
+      "llm_tldr_cn": "本文针对参数化动作MDP中强化学习样本效率低的问题，提出知识梯度引导的强化学习算法KGRL，利用领域知识和梯度信息引导策略学习。实验表明KGRL在多个PAMDP环境中显著提升样本效率，为智能体决策提供了更高效的方法。",
+      "llm_tldr": "本文针对参数化动作MDP中强化学习样本效率低的问题，提出知识梯度引导的强化学习算法KGRL，利用领域知识和梯度信息引导策略学习。实验表明KGRL在多个PAMDP环境中显著提升样本效率，为智能体决策提供了更高效的方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.13461v1",
+      "source": "arxiv",
+      "title": "Joint On-and-Off Policy Learning for Vision-and-Language Navigation",
+      "abstract": "Vision-and-Language Navigation (VLN) necessitates an embodied agent to navigate in the physical world by adhering to natural language instructions. Recent advancements in Vision-Language Models (VLM) have propelled the development of VLM-based VLN methods with two predominant paradigms: (1) imitation learning (IL) on expert demonstrations, followed by the Dataset Aggregation (DAgger) algorithm to bolster error recovery capabilities; (2) reinforcement learning (RL) driven by verifiable rewards to enhance reasoning and exploration. A notable gap is the absence of integration between these two distinct paradigms. This paper introduces JOP-VLN, a novel VLN framework that synergistically combines off-policy imitation learning and on-policy exploration within a three-stage training pipeline. Initially, IL is employed on expert demonstrations to acquire basic navigation skills. Subsequently, the DAgger algorithm is utilized to generate heuristic exploration trajectories, which are then used for imitation learning to improve error recovery capabilities. Finally, a joint on-and-off policy learning framework is implemented, featuring high-entropy trajectory sampling to enhance RL training efficiency and an error-correction-prioritized trajectory sorting strategy for effective error correction. Extensive experiments demonstrate the efficacy of JOP-VLN, achieving success rates of 69.9% and 68.0% on the VLN-CE R2R and RxR benchmarks, respectively, setting a new state-of-the-art on R2R. Project page: https://qingrongh.github.io/JOP-VLN.",
+      "authors": [
+        "Qingrong He",
+        "Lin Zhao",
+        "Kevin Zheng",
+        "Liang Lin"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-15T05:46:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.13461v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "combines off-policy IL and on-policy RL for VLN agent decision making",
+      "llm_evidence_cn": "结合离策略模仿学习和在策略强化学习以增强视觉语言导航代理的决策",
+      "llm_evidence": "结合离策略模仿学习和在策略强化学习以增强视觉语言导航代理的决策",
+      "canonical_evidence": "结合离策略模仿学习和在策略强化学习以增强视觉语言导航代理的决策",
+      "llm_tldr_en": "JOP-VLN synergistically combines off-policy imitation learning with on-policy reinforcement learning for vision-and-language navigation, improving agent exploration and error recovery.",
+      "llm_tldr_cn": "视觉语言导航中现有方法分别使用模仿学习或强化学习，缺乏两者的有效整合。本文提出JOP-VLN框架，联合离策略模仿学习和在策略探索，使代理既能从示范中学习又能通过奖励优化推理。在多个基准上验证了该方法在导航成功率和稳健性上的优势。该工作为自主代理提供了更强的决策学习范式。",
+      "llm_tldr": "视觉语言导航中现有方法分别使用模仿学习或强化学习，缺乏两者的有效整合。本文提出JOP-VLN框架，联合离策略模仿学习和在策略探索，使代理既能从示范中学习又能通过奖励优化推理。在多个基准上验证了该方法在导航成功率和稳健性上的优势。该工作为自主代理提供了更强的决策学习范式。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.11250v1",
+      "source": "arxiv",
+      "title": "Multi-Agent LLMs Fail to Explore Each Other",
+      "abstract": "Exploration is essential for reliable autonomy in multi-agent systems, yet it remains unclear whether large language model (LLM) agents can explore effectively when interacting with one another. We show that modern LLM agents fail to do so, often exhibiting myopic and polarized interaction patterns that lead to suboptimal coordination and increased regret. We formalize this challenge as the Multi-Agent Exploration problem, modeling it as a partially observable stochastic game (POSG) problem in which agents must probe peers to infer their capabilities and identify effective interaction strategies. To address this, we introduce Multi- Agent Contextual Exploration (MACE), a lightweight framework that explicitly promotes exploration through structured peer selection. Across both contextual and parametric diversity settings, MACE substantially improves exploration behavior and downstream task performance. We further show theoretically that the value of exploration increases with agent diversity. Overall, our results highlight a fundamental limitation of current LLM agents and underscore the importance of explicitly guided exploration for reliable multi-agent autonomy. Code will be released in https://github.com/deeplearning-wisc/mace",
+      "authors": [
+        "Hyeong Kyu Choi",
+        "Jiatong Li",
+        "Wendi Li",
+        "Xin Eric Wang",
+        "Sharon Li"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "published": "2026-07-13T08:34:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.11250v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Studies exploration in multi-agent LLMs, relevant to agentic RL",
+      "llm_evidence_cn": "研究多智能体大语言模型中的探索，与自主强化学习相关",
+      "llm_evidence": "研究多智能体大语言模型中的探索，与自主强化学习相关",
+      "canonical_evidence": "研究多智能体大语言模型中的探索，与自主强化学习相关",
+      "llm_tldr_en": "Shows LLM agents fail to explore in multi-agent settings and proposes MACE framework to promote structured peer selection.",
+      "llm_tldr_cn": "多智能体系统中，探索对可靠自主至关重要，但LLM代理之间通常缺乏有效探索。本文形式化为部分观测随机博弈，并提出MACE框架通过结构化同伴选择促进探索。实验表明MACE在协调任务上显著降低遗憾，提升整体性能。",
+      "llm_tldr": "多智能体系统中，探索对可靠自主至关重要，但LLM代理之间通常缺乏有效探索。本文形式化为部分观测随机博弈，并提出MACE框架通过结构化同伴选择促进探索。实验表明MACE在协调任务上显著降低遗憾，提升整体性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.12861v1",
+      "source": "arxiv",
+      "title": "Unveiling Complex Collective Behaviors from Simple Rewards",
+      "abstract": "Multi-agent Reinforcement Learning (MARL) holds great potential for robot swarms, but the black-box nature of neural policies complicates strategic analysis, limiting multi-robot applications. Furthermore, complex swarm behaviors can surprisingly emerge from simple rewards without explicit aggregation incentives. Unveiling the mechanisms behind this emergence is critical, but the disconnection between simple rewards and collective behaviors exacerbates interpretability challenges. This paper aims to reveal the hidden mechanisms in this process. We propose a two-stage EEC (\\LinkIII) explanatory framework. This includes a novel analytical tool called the Agent Response Map (ARM), which reveals agents' decision-making patterns across space and identifies regions of aggregation and avoidance. ARM reveals that the robots implicitly learn the geometric fields of the environment and utilize these structures as desired targets for coordinated movement. We validate this finding across two distinct tasks: a cooperative multi-robot shape assembly and a competitive predator-prey pursuit-evasion. 1) In the cooperative task, ARM identifies the unoccupied target interior as the desired destination for robot navigation. As the center becomes occupied, this target region automatically shifts toward the boundary, demonstrating the robots' capacity to autonomously explore unoccupied areas. 2) In the competitive task, ARM surprisingly identifies the boundary of the predators' Voronoi diagram as the convergence destination for prey agents. Together, these two tasks demonstrate the capability of ARM to discover the hidden geometric structures underlying MARL policies in robot swarms.",
+      "authors": [
+        "Yize Mi",
+        "Jianan Li",
+        "Liang Li",
+        "Shiyu Zhao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "published": "2026-07-14T15:11:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.12861v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "explains complex collective behaviors emerging from simple rewards in multi-agent RL",
+      "llm_evidence_cn": "揭示多智能体强化学习中简单奖励涌现的复杂集体行为机制",
+      "llm_evidence": "揭示多智能体强化学习中简单奖励涌现的复杂集体行为机制",
+      "canonical_evidence": "揭示多智能体强化学习中简单奖励涌现的复杂集体行为机制",
+      "llm_tldr_en": "Proposes EEC explanatory framework with Agent Response Map (ARM) to unveil hidden mechanisms behind emergent swarm behaviors from simple rewards in MARL.",
+      "llm_tldr_cn": "针对多智能体强化学习中神经策略黑箱与简单奖励涌现复杂行为之间的可解释性鸿沟，提出两阶段EEC框架。核心工具Agent Response Map（ARM）揭示智能体空间决策模式，识别关键区域。实验成功解释了简单奖励如何驱动涌现行为，促进多机器人应用。",
+      "llm_tldr": "针对多智能体强化学习中神经策略黑箱与简单奖励涌现复杂行为之间的可解释性鸿沟，提出两阶段EEC框架。核心工具Agent Response Map（ARM）揭示智能体空间决策模式，识别关键区域。实验成功解释了简单奖励如何驱动涌现行为，促进多机器人应用。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.13653v1",
+      "source": "arxiv",
+      "title": "Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World Mobile Manipulation",
+      "abstract": "Real-world deployment of embodied agents requires active exploration, visual grounding, and interactive intent disambiguation. However, existing frameworks often rely on privileged simulator states or assume complete instructions, bypassing realistic deployment challenges. To bridge this gap, we present REAL, an agentic framework for open-world mobile manipulation. REAL establishes sim-to-real-consistent environment APIs without oracle perception and integrates a simulated user to enable human-in-the-loop interaction. Within this environment, we design diverse task compositions to drive data collection, supervised fine-tuning, and online reinforcement learning, systematically optimizing agent performance. To comprehensively evaluate this approach, we introduce REAL-Bench, a benchmark spanning 241 tasks across active exploration, visual distraction, articulated manipulation, and interactive disambiguation.   Experimental results demonstrate that our trained agent outperforms leading commercial closed-source VLMs on interactive tasks with a 56.9% success rate. Further empirical analysis reveals that our hierarchical training pipeline successfully aligns the model's tool-use capabilities while maintaining robust open-vocabulary reasoning under extended exploration horizons. Finally, we deploy and evaluate our framework on a physical dual-arm mobile robot, where it achieves a 78.3% end-to-end success rate over 60 real-world episodes. These physical trials demonstrate robust zero-shot transferability to unseen household scenarios, validating that our sim-to-real-consistent design successfully bridges the reality gap for long-horizon mobile manipulation. Code is available at https://github.com/InternRobotics/REAL.",
+      "authors": [
+        "Boyu Mi",
+        "Mengchen Ma",
+        "Yifei Yao",
+        "Xing Gao",
+        "Junting Chen",
+        "Yangzi Li",
+        "Zihou Zhu",
+        "Guohao Li",
+        "Zhenfei Yin",
+        "Tai Wang",
+        "Yao Mu",
+        "Jiangmiao Pang",
+        "Hanqing Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-15T09:55:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.13653v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "online RL for embodied agent decision making in open-world mobile manipulation",
+      "llm_evidence_cn": "使用在线强化学习优化开放世界移动操作中具身代理的决策",
+      "llm_evidence": "使用在线强化学习优化开放世界移动操作中具身代理的决策",
+      "canonical_evidence": "使用在线强化学习优化开放世界移动操作中具身代理的决策",
+      "llm_tldr_en": "REAL framework uses online reinforcement learning to optimize vision-driven embodied agents for open-world mobile manipulation with human-in-the-loop.",
+      "llm_tldr_cn": "现有具身代理框架常依赖特权模拟状态或完整指令，难以应对真实部署挑战。本文提出REAL框架，构建仿真到现实一致的API并集成模拟用户，通过在线强化学习逐步优化代理性能。在开放世界移动操作任务上，REAL显著提升了探索、视觉定位和意图消歧能力。该工作为自主代理在复杂环境中的强化学习应用提供了有效方案。",
+      "llm_tldr": "现有具身代理框架常依赖特权模拟状态或完整指令，难以应对真实部署挑战。本文提出REAL框架，构建仿真到现实一致的API并集成模拟用户，通过在线强化学习逐步优化代理性能。在开放世界移动操作任务上，REAL显著提升了探索、视觉定位和意图消歧能力。该工作为自主代理在复杂环境中的强化学习应用提供了有效方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.13389v1",
+      "source": "arxiv",
+      "title": "Where Should RL Post-Training Compute Go? Model Size, Search, Learning, and Feedback",
+      "abstract": "Reinforcement Learning (RL) post-training is increasingly used to adapt foundation models for reasoning, planning, and feedback-driven robot-learning pipelines, but constrained post-training resources are often summarized by a single total FLOP budget. We study the fixed-budget decision problem behind this practice: under the same post-training budget, should one use a larger policy, train a smaller policy longer, generate more rollout search, or spend compute on stronger reward feedback? We introduce a FLOP-accounting framework for GRPO post-training that decomposes compute into rollout/search, policy-update/learning, and reward- or feedback-model evaluation. Across LoRA-adapted Qwen2.5 policies, we find conditional allocation frontiers: the best observed allocation changes with model size, compute budget, reward system, and evaluation target. Same-FLOP model-size comparisons show that model choice and training allocation are coupled because larger policies consume more per-token compute and therefore buy fewer updates or rollouts under the same budget. Reward systems also change the accounting: rule-based rewards spend nearly all non-update compute on policy rollouts, while PRM-style feedback allocates a visible part of the budget to reward-model inference. We present RACE as a diagnostic pilot-grid protocol, not a guarantee of held-out improvement, for identifying allocation regimes before expensive validation runs; our results suggest that RL post-training papers should report total FLOPs together with how compute is divided among model size, search, learning, and feedback.",
+      "authors": [
+        "Patrick Wilhelm",
+        "Odej Kao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-07-15T02:34:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.13389v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "studies RL post-training compute allocation for fine-tuning LLMs",
+      "llm_evidence_cn": "研究强化学习后训练计算分配以微调大语言模型",
+      "llm_evidence": "研究强化学习后训练计算分配以微调大语言模型",
+      "canonical_evidence": "研究强化学习后训练计算分配以微调大语言模型",
+      "llm_tldr_en": "Empirically studies optimal allocation of RL post-training compute among model size, search, learning, and feedback for adapting foundation models.",
+      "llm_tldr_cn": "强化学习后训练中计算资源分配通常被简化为单一FLOP预算。本文提出FLOP核算框架，在LoRA微调Qwen2.5模型上系统比较模型大小、搜索深度、学习步数和反馈强度的权衡。实验揭示了不同条件下的分配前沿，为如何高效利用RL增强大语言模型提供了指导。该工作直接服务于RL提升LLM能力的应用需求。",
+      "llm_tldr": "强化学习后训练中计算资源分配通常被简化为单一FLOP预算。本文提出FLOP核算框架，在LoRA微调Qwen2.5模型上系统比较模型大小、搜索深度、学习步数和反馈强度的权衡。实验揭示了不同条件下的分配前沿，为如何高效利用RL增强大语言模型提供了指导。该工作直接服务于RL提升LLM能力的应用需求。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.13591v1",
+      "source": "arxiv",
+      "title": "Memory as a Controlled Process: Learned Adaptive Memory Management for LLM Agents",
+      "abstract": "Large Language Model (LLM) agents increasingly rely on external memory systems to accumulate experience across tasks. Yet nearly all existing approaches, from graph-structured memories to reflective insight stores, access memory through fixed, hand-designed heuristics. We argue that this static view of memory is a core bottleneck for agentic learning because optimal memory behavior is fundamentally context-dependent. The early stages of the tasks, benefit from minimal retrieval because memory is sparse; recurring goal types benefit from plan reuse rather than generic nearest-neighbor lookup; stuck agents benefit from re-retrieval with alternative queries; and across long task streams, the memory store itself must be consolidated and pruned to remain useful. We present Memory as a Controlled Process (MemCon), a framework that models memory operations as a Markov Decision Process and learns an online policy that adaptively decides when, what, and how much to retrieve, when to inject a distilled plan, and when to consolidate or forget. MemCon is backend-agnostic: it wraps any existing memory implementation, learns from task-by-task binary feedback with no pretraining and no additional LLM calls, and uses a lightweight tabular contextual bandit with UCB exploration that converges within tens of tasks. Across 6 benchmarks, 3 agent frameworks, and 3 LLM backbones, MemCon consistently outperforms multiple memory baselines by up to 15.2 points in task success while reducing token consumption by 5--20%.",
+      "authors": [
+        "Eric Hanchen Jiang",
+        "Zhi Zhang",
+        "Yuchen Wu",
+        "Levina Li",
+        "Dong Liu",
+        "Xiao Liang",
+        "Rui Sun",
+        "Yubei Li",
+        "Edward Sun",
+        "Haozheng Luo",
+        "Zhaolu Kang",
+        "Aylin Caliskan",
+        "Kai-Wei Chang",
+        "Ying Nian Wu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-07-15T08:32:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.13591v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "learned adaptive memory management for LLM agents to improve agentic learning",
+      "llm_evidence_cn": "为LLM智能体学习自适应记忆管理以改进智能体学习",
+      "llm_evidence": "为LLM智能体学习自适应记忆管理以改进智能体学习",
+      "canonical_evidence": "为LLM智能体学习自适应记忆管理以改进智能体学习",
+      "llm_tldr_en": "Proposes learned adaptive memory management for LLM agents, replacing fixed heuristics with context-dependent retrieval strategies to improve agentic learning across long task streams.",
+      "llm_tldr_cn": "针对LLM智能体静态记忆管理成为智能体学习瓶颈的问题，提出基于学习的自适应记忆管理方法，根据任务上下文动态调整检索策略。实验表明该方法在多种长任务流中显著提升任务完成率和效率，为智能体强化学习提供了更灵活的记忆机制。",
+      "llm_tldr": "针对LLM智能体静态记忆管理成为智能体学习瓶颈的问题，提出基于学习的自适应记忆管理方法，根据任务上下文动态调整检索策略。实验表明该方法在多种长任务流中显著提升任务完成率和效率，为智能体强化学习提供了更灵活的记忆机制。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.13884v1",
+      "source": "arxiv",
+      "title": "Experience Memory Graph: One-Shot Error Correction for Agents",
+      "abstract": "Large Language Model (LLM) agents have shown remarkable capabilities in autonomous decision-making by generating sequential trajectories of states, actions, and observations. However, in complex, long-horizon tasks, these agents frequently suffer from compounding errors and struggle to recover from failures. Existing self-correction mechanisms rely on prompt-based reflection, which is inherently brittle, incurs heavy time and API costs due to iterative trial-and-error loops, and produces task-specific memory that may be hard to generalize to new scenarios. To address this, we propose Experience Memory Graph (EMG), a framework that reformulates agent failure recovery as a graph matching problem. At training time, we convert both failed exploration trajectories and successful expert trajectories into directed action decision graphs. By matching these graphs, we extract common subgraphs (successful workflows) and graph edit paths that explicitly indicate how to correct failures (e.g., which actions to add, delete, or relabel under a given observation), and store them in a memory graph with intra-task nodes and cross-task edges. At test time, EMG retrieves relevant insights and guides the agent in a single, loop-free execution. Experiments on ALFWorld and ScienceWorld show that EMG consistently outperforms state-of-the-art reflection baselines in success rate and average reward, while requiring no test-time trial-and-error.",
+      "authors": [
+        "Wenjun Wang",
+        "Yuchen Fang",
+        "Fengrui Liu",
+        "Zibo Liang",
+        "Kai Zheng"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-15T14:33:15+00:00",
+      "link": "https://arxiv.org/pdf/2607.13884v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "addresses agent failure recovery with graph memory, relevant to agentic RL",
+      "llm_evidence_cn": "涉及智能体错误恢复的图记忆方法，与智能体强化学习相关",
+      "llm_evidence": "涉及智能体错误恢复的图记忆方法，与智能体强化学习相关",
+      "canonical_evidence": "涉及智能体错误恢复的图记忆方法，与智能体强化学习相关",
+      "llm_tldr_en": "Proposes Experience Memory Graph for one-shot error correction in LLM agents, reformulating failure recovery as graph matching.",
+      "llm_tldr_cn": "针对LLM智能体在长期任务中累积错误难以恢复的问题，提出经验记忆图（EMG）框架，将失败恢复转化为图匹配问题，利用探索轨迹构建图记忆，实现一次性修正，降低时间和API成本，提升泛化能力。",
+      "llm_tldr": "针对LLM智能体在长期任务中累积错误难以恢复的问题，提出经验记忆图（EMG）框架，将失败恢复转化为图匹配问题，利用探索轨迹构建图记忆，实现一次性修正，降低时间和API成本，提升泛化能力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
