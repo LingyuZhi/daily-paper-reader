@@ -6,59 +6,65 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-16
-- 运行时间：2026-07-16 20:09:50 UTC
+- 最新运行日期：2026-07-17
+- 运行时间：2026-07-17 21:33:53 UTC
 - 运行状态：成功
-- 本次总论文数：13
+- 本次总论文数：15
 - 精读区：6
-- 速读区：7
+- 速读区：9
 
 ### 今日简报（AI）
-今日精读6篇、速读7篇，聚焦安全智能体行为与多语言对齐两大高分方向。最值得关注的是《Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models》和《Meta-Learning Preferences for Multilingual LLM Alignment》，均获9.0/10高分。建议优先阅读这两篇，了解如何通过人类偏好与世界观模型保障智能体安全，以及元学习偏好实现多语言对齐。
-- 详情：[/202607/16/README](/202607/16/README)
+今日精读6篇，速读9篇，重点聚焦多模态智能体协同进化与语言智能体强化学习新方法。最值得关注的两项高分研究：SPyCE实现技能与策略共演，Branching Policy Optimization提出沙盒原生语言智能体强化学习范式。建议优先精读这两篇9分论文，理解其核心设计与实验结果。
+- 详情：[/202607/17/README](/202607/17/README)
 
 ### 精读区论文标签
-1. [Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models](/202607/16/2607.13172v1-learning-safe-agent-behaviour-from-human-preferences-and-justifications-via-world-models)  
+1. [SPyCE: Skill-Policy Co-evolution for Multimodal Agents](/202607/17/2607.13854v1-spyce-skill-policy-co-evolution-for-multimodal-agents)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：利用人类偏好与世界模型解决自主智能体的安全训练问题
-2. [Meta-Learning Preferences for Multilingual LLM Alignment](/202607/16/2607.13315v1-meta-learning-preferences-for-multilingual-llm-alignment)  
+   evidence：基于技能-策略共同进化的多模态智能体强化学习方法
+2. [Branching Policy Optimization: Sandbox-Native Language Agent Reinforcement Learning](/202607/17/2607.14171v1-branching-policy-optimization-sandbox-native-language-agent-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：使用元学习进行RLHF和DPO以增强多语言LLM对齐
-3. [GFlowRL: Scaling Distribution-Matching RL to Large Language Models](/202607/16/2607.13394v1-gflowrl-scaling-distribution-matching-rl-to-large-language-models)  
+   evidence：利用沙箱确定性为LLM智能体RL设计新采样拓扑
+3. [Non-vacuous Generalization Bounds for Reinforcement Learning with Verifiable Rewards](/202607/17/2607.14506v1-non-vacuous-generalization-bounds-for-reinforcement-learning-with-verifiable-rewards)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：将分布匹配强化学习（GFlowNet）扩展到大型语言模型
-4. [Learning Robust Execution in Robotic Manipulation with Agentic Reinforcement Learning](/202607/16/2607.13818v1-learning-robust-execution-in-robotic-manipulation-with-agentic-reinforcement-learning)  
+   evidence：可验证奖励强化学习在LLM推理上的泛化界
+4. [SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning](/202607/17/2607.14777v1-seed-self-evolving-on-policy-distillation-for-agentic-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：显式的自主强化学习框架用于机器人操作
-5. [TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents](/202607/16/2607.13988v1-trace-turn-level-reward-assignment-via-credit-estimation-for-long-horizon-agents)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：提出TRACE，一种用于智能体强化学习的密集信用分配方法
-6. [Knowledge- and Gradient-Guided Reinforcement Learning for Parametrized Action Markov Decision Processes](/202607/16/2607.12924v2-knowledge--and-gradient-guided-reinforcement-learning-for-parametrized-action-markov-decision-processes)  
+   evidence：提出用于代理强化学习的自演化在线策略蒸馏
+5. [Autonomous Transition State Search with Soft Actor-Critic Reinforcement Learning](/202607/17/2607.10854v1-autonomous-transition-state-search-with-soft-actor-critic-reinforcement-learning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：对参数化动作马尔可夫决策过程进行强化学习，直接处理智能体决策
+   evidence：用于化学中自主过渡态搜索的RL智能体
+6. [Self-Improvements in Modern Agentic Systems: A Survey](/202607/17/2607.13104v1-self-improvements-in-modern-agentic-systems-a-survey)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：关于自改进自主智能体的综述，涵盖agentic RL研究趋势
 
 ### 速读区论文标签
-1. [Joint On-and-Off Policy Learning for Vision-and-Language Navigation](/202607/16/2607.13461v1-joint-on-and-off-policy-learning-for-vision-and-language-navigation)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：结合离策略模仿学习和在策略强化学习以增强视觉语言导航代理的决策
-2. [Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World Mobile Manipulation](/202607/16/2607.13653v1-exploratory-communicative-and-deployable-vision-driven-embodied-agents-for-open-world-mobile-manipulation)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：使用在线强化学习优化开放世界移动操作中具身代理的决策
-3. [Multi-Agent LLMs Fail to Explore Each Other](/202607/16/2607.11250v1-multi-agent-llms-fail-to-explore-each-other)  
+1. [Actor-Critic Learning for Extended Mean Field Control with Deterministic Policies](/202607/17/2607.11005v1-actor-critic-learning-for-extended-mean-field-control-with-deterministic-policies)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：研究多智能体大语言模型中的探索，与自主强化学习相关
-4. [Where Should RL Post-Training Compute Go? Model Size, Search, Learning, and Feedback](/202607/16/2607.13389v1-where-should-rl-post-training-compute-go-model-size-search-learning-and-feedback)  
+   evidence：用于平均场控制的演员-评论家RL方法，适用于智能体决策
+2. [Mask-Aware Policy Gradients for Diffusion Language Models](/202607/17/2607.15200v1-mask-aware-policy-gradients-for-diffusion-language-models)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：研究强化学习后训练计算分配以微调大语言模型
-5. [Unveiling Complex Collective Behaviors from Simple Rewards](/202607/16/2607.12861v1-unveiling-complex-collective-behaviors-from-simple-rewards)  
+   evidence：用于掩码扩散语言模型推理的强化学习
+3. [Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading](/202607/17/2607.08964v1-long-horizon-terminal-bench-testing-the-limits-of-agents-on-long-horizon-terminal-tasks-with-dense-reward-based-grading)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：揭示多智能体强化学习中简单奖励涌现的复杂集体行为机制
-6. [Memory as a Controlled Process: Learned Adaptive Memory Management for LLM Agents](/202607/16/2607.13591v1-memory-as-a-controlled-process-learned-adaptive-memory-management-for-llm-agents)  
+   evidence：长周期任务基准与密集奖励用于Agent评估
+4. [Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading](/202607/17/2607.08964v2-long-horizon-terminal-bench-testing-the-limits-of-agents-on-long-horizon-terminal-tasks-with-dense-reward-based-grading)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：为LLM智能体学习自适应记忆管理以改进智能体学习
-7. [Experience Memory Graph: One-Shot Error Correction for Agents](/202607/16/2607.13884v1-experience-memory-graph-one-shot-error-correction-for-agents)  
+   evidence：引入长时程代理任务的密集奖励基准，与强化学习决策相关
+5. [Environment Parameter Gradient Theorem for Policy-Environment Co-Design in Reinforcement Learning](/202607/17/2607.12590v1-environment-parameter-gradient-theorem-for-policy-environment-co-design-in-reinforcement-learning)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：涉及智能体错误恢复的图记忆方法，与智能体强化学习相关
+   evidence：RL策略-环境共同设计定理
+6. [Deconstructing Actor-Critic: A Large-scale Empirical Study of Design Components for Practitioners](/202607/17/2607.13274v1-deconstructing-actor-critic-a-large-scale-empirical-study-of-design-components-for-practitioners)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：对Actor-Critic设计组件的大规模实证研究
+7. [Closed-Loop Knowledge Dynamics: An Operational Framework for Saturation and Escape](/202607/17/2607.14185v1-closed-loop-knowledge-dynamics-an-operational-framework-for-saturation-and-escape)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：LLM和RL系统中反馈循环的框架
+8. [A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning](/202607/17/2607.14373v1-a-noise-robust-elicit-to-optimize-framework-for-distortion-riskmetrics-via-inverse-reinforcement-learning)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：逆强化学习和强化学习用于风险感知代理决策
+9. [Leveraging Instruction Tuning and Merging for Reasoning Model Adaptation](/202607/17/2607.14895v1-leveraging-instruction-tuning-and-merging-for-reasoning-model-adaptation)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：RL驱动推理模型性能；对RL训练后的模型进行指令微调
 
 
 <div class="dpr-home-promo-card">
