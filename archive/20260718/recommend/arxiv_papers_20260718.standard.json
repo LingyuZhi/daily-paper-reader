@@ -1,0 +1,345 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-18T20:03:00.916795+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.11506v2",
+      "source": "arxiv",
+      "title": "SCOPE-RL: Optimizing Reasoning Paths Before and After Success",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) optimizes LLMs using sparse verifiable final-answer rewards. This sparse anchor reliably verifies whether a trajectory succeeds but provides no direct feedback on the reasoning path that produced it. Before success, prerequisite progress on hard problems receives no reward signal; after success, outcome rewards cannot distinguish well-organized correct trajectories from redundant or locally flawed ones. We introduce SCOPE-RL (Scaffolded Chain Optimization with Process Efficiency), a two-stage framework that densifies this anchor while retaining the GRPO update: Adaptive Scaffolded RL adds prefix-decomposed verifiable rewards on answer-hidden sub-question chains before success, and Quality-Aware Process RL applies correctness-gated process-shape rewards to refine correct trajectories after success. An expert-validated Step-Quality Evaluation Protocol evaluates useful-step density, error localization, and token efficiency beyond final-answer accuracy. On Qwen3-8B-Instruct trained on DAPO-Math and Big-Math, SCOPE-RL improves average accuracy by up to 11.2 pp and reduces reasoning tokens by up to 27.1% over outcome-only GRPO; the gains hold under GSPO and on Qwen3-0.6B-Instruct, indicating that reward-signal densification is complementary to policy-update-level RLVR advances. Code and data are available at https://github.com/tokencraft-lab/SCOPE-RL.",
+      "authors": [
+        "Xiaojian Liu",
+        "Han Xu",
+        "Jianqiang Xia",
+        "Zhixuan Li",
+        "Ke Xu",
+        "Yiwei Dai",
+        "Xinran Chen",
+        "Changwo Wu",
+        "Yuchen Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-07-13T12:56:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.11506v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RLVR framework for LLM reasoning path optimization",
+      "llm_evidence_cn": "基于可验证奖励的强化学习优化大语言模型推理路径",
+      "llm_evidence": "基于可验证奖励的强化学习优化大语言模型推理路径",
+      "canonical_evidence": "基于可验证奖励的强化学习优化大语言模型推理路径",
+      "llm_tldr_en": "SCOPE-RL is a two-stage RLVR framework that densifies sparse final-answer rewards by adding prefix-decomposed rewards before success and quality-aware process rewards after success, enhancing LLM reasoning without altering GRPO.",
+      "llm_tldr_cn": "标准可验证奖励强化学习仅提供最终答案奖励，无法指导推理过程。本文提出SCOPE-RL两阶段框架：在成功前通过前缀分解添加可验证奖励，成功后通过质量感知过程奖励区分正确推理质量。实验表明该方法显著提升大语言模型在数学推理等任务上的性能，且不改变GRPO更新规则，提供了一种高效优化推理路径的新思路。",
+      "llm_tldr": "标准可验证奖励强化学习仅提供最终答案奖励，无法指导推理过程。本文提出SCOPE-RL两阶段框架：在成功前通过前缀分解添加可验证奖励，成功后通过质量感知过程奖励区分正确推理质量。实验表明该方法显著提升大语言模型在数学推理等任务上的性能，且不改变GRPO更新规则，提供了一种高效优化推理路径的新思路。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14277v1",
+      "source": "arxiv",
+      "title": "Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making",
+      "abstract": "Large language models are increasingly deployed as agents, but reliable agentic behavior requires more than next-token prediction. At inference time, it is preferred that an agent can decide whether to proceed with its current reasoning, defer to a stronger model, request additional information, invoke external tools, or abstain under the given setup. Existing approaches address these decisions through prompt-level routing, external orchestration, or task-specific fine-tuning, which primarily rely on input-side signals, and are often costly and difficult to maintain as model backbones evolve. We ask whether such control decisions can be inferred directly from a model's latent generation process. We introduce Multi-Head Latent Control, a lightweight layer that reads hidden-state trajectories from a frozen LLM or VLM to produce deployment-time control signals. A Capability Head predicts whether the current model can solve the instance or should defer to a stronger collaborator, while a Resolution Head predicts appropriate resolution decision Clarification, Tool Use, Abstention, or Direct Answering. Both heads are trained only on latent traces from the same frozen LLM backbone, enabling post hoc adaptation without modifying the model. Across language and vision-language settings, Multi-Head Latent Control consistently improves the quality-cost tradeoff of multi-model systems, enabling early handoff from partial generations and more accurate intervention decisions. In routed execution (small + large model), it reduces large-model usage by up to 90.7 percent on AndroidWorld and 27-53 percent on average across benchmarks, while retaining most of large-model performance. Additionally, the learned control signals improve tool-use decision quality, yielding up to +158 percent relative score gain and 65.5 percent fewer missed-required tool calls.",
+      "authors": [
+        "Amirhosein Ghasemabadi",
+        "Ruichen Chen",
+        "Bahador Rashidi",
+        "Di Niu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-15T18:36:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.14277v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "latent-level control for LLM agent decision making",
+      "llm_evidence_cn": "基于潜在表示的大语言模型智能体决策控制",
+      "llm_evidence": "基于潜在表示的大语言模型智能体决策控制",
+      "canonical_evidence": "基于潜在表示的大语言模型智能体决策控制",
+      "llm_tldr_en": "This paper introduces Multi-Head Latent Control, a lightweight method that infers control decisions (continue, defer, invoke tools, etc.) directly from LLM latent states, enabling more reliable agentic behavior without external orchestration.",
+      "llm_tldr_cn": "大语言模型作为智能体时需在推理时做出继续、延迟、调用工具等决策，现有方法依赖提示路由或外部编排，成本高且难维护。本文提出多头潜在控制，从模型潜在生成过程直接推断控制决策，无需外部信号。实验表明该轻量方法有效提升了智能体行为的可靠性和灵活性，为构建自主智能体提供了统一的潜层接口。",
+      "llm_tldr": "大语言模型作为智能体时需在推理时做出继续、延迟、调用工具等决策，现有方法依赖提示路由或外部编排，成本高且难维护。本文提出多头潜在控制，从模型潜在生成过程直接推断控制决策，无需外部信号。实验表明该轻量方法有效提升了智能体行为的可靠性和灵活性，为构建自主智能体提供了统一的潜层接口。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.11506v1",
+      "source": "arxiv",
+      "title": "SCOPE-RL: Optimizing Reasoning Paths Before and After Success",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) optimizes LLMs using sparse verifiable final-answer rewards. This sparse anchor reliably verifies whether a trajectory succeeds but provides no direct feedback on the reasoning path that produced it. Before success, prerequisite progress on hard problems receives no reward signal; after success, outcome rewards cannot distinguish well-organized correct trajectories from redundant or locally flawed ones. We introduce SCOPE-RL (Scaffolded Chain Optimization with Process Efficiency), a two-stage framework that densifies this anchor while retaining the GRPO update: Adaptive Scaffolded RL adds prefix-decomposed verifiable rewards on answer-hidden sub-question chains before success, and Quality-Aware Process RL applies correctness-gated process-shape rewards to refine correct trajectories after success. An expert-validated Step-Quality Evaluation Protocol evaluates useful-step density, error localization, and token efficiency beyond final-answer accuracy. On Qwen3-8B-Instruct trained on DAPO-Math and Big-Math, SCOPE-RL improves average accuracy by up to 11.2 pp and reduces reasoning tokens by up to 27.1% over outcome-only GRPO; the gains hold under GSPO and on Qwen3-0.6B-Instruct, indicating that reward-signal densification is complementary to policy-update-level RLVR advances. Code and data are available at https://github.com/tokencraft-lab/SCOPE-RL.",
+      "authors": [
+        "Xiaojian Liu",
+        "Han Xu",
+        "Jianqiang Xia",
+        "Zhixuan Li",
+        "Ke Xu",
+        "Yiwei Dai",
+        "Xinran Chen",
+        "Changwo Wu",
+        "Yuchen Li"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-07-13T12:56:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.11506v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RLVR framework to optimize LLM reasoning paths before and after success",
+      "llm_evidence_cn": "可验证奖励强化学习框架优化LLM推理路径",
+      "llm_evidence": "可验证奖励强化学习框架优化LLM推理路径",
+      "canonical_evidence": "可验证奖励强化学习框架优化LLM推理路径",
+      "llm_tldr_en": "Proposes SCOPE-RL, a two-stage RLVR framework that densifies sparse final-answer rewards by adding prefix-decomposed rewards before success and quality-aware RL after success, improving LLM reasoning.",
+      "llm_tldr_cn": "本文针对可验证奖励强化学习（RLVR）中稀疏最终答案奖励无法提供推理路径反馈的问题，提出SCOPE-RL。该框架两阶段：自适应脚手架RL在成功前添加前缀分解的可验证奖励；质量感知过程RL在成功后区分高质量与冗余推理。两个阶段均保留GRPO更新，在数学推理任务上显著提升效率和质量。",
+      "llm_tldr": "本文针对可验证奖励强化学习（RLVR）中稀疏最终答案奖励无法提供推理路径反馈的问题，提出SCOPE-RL。该框架两阶段：自适应脚手架RL在成功前添加前缀分解的可验证奖励；质量感知过程RL在成功后区分高质量与冗余推理。两个阶段均保留GRPO更新，在数学推理任务上显著提升效率和质量。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14145v1",
+      "source": "arxiv",
+      "title": "ToolAnchor: Anchoring Counterfactual Context to Boost Agentic Tool-use Capability",
+      "abstract": "Tool-augmented large language model agents excel at long-horizon tasks, yet they are typically post-trained on fixed toolsets. When tasks demand new tools, these agents struggle to incorporate them effectively, and retraining from scratch is often impractical. We identify the core obstacle in such toolset expansion problem as behavioral inertia: the tendency of agents to fall back on familiar tools and established reasoning patterns despite having access to new ones. We demonstrate that injecting counterfactual anchor contexts at critical decision points can break this inertia, recovering failed trajectories by eliciting suppressed agent capabilities. To scale this insight, we propose ToolAnchor, a framework that uses teacher models to hypothesize these counterfactual contexts, verifies them via student rollouts, and internalizes the successful interventions through agentic post-training. Extensive evaluations across general AI assistant (GAIA), textual search (BrowseComp), and visual search (VDR-Bench) tasks demonstrate that ToolAnchor consistently exhibits competitive performance under expanded toolsets. Our work bridges the gap between static post-training and dynamic adaptation, charting a new path for scalable agentic reinforcement learning.",
+      "authors": [
+        "Weiting Liu",
+        "Jieyi Bi",
+        "Wanqi Zhou",
+        "Jianfeng Feng",
+        "Yining Ma",
+        "Ai Han",
+        "Wenlian Lu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-07-14T06:03:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.14145v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "agentic RL method: ToolAnchor improves agent tool-use via counterfactual anchoring",
+      "llm_evidence_cn": "智能体强化学习方法：ToolAnchor通过反事实锚定提升工具使用能力",
+      "llm_evidence": "智能体强化学习方法：ToolAnchor通过反事实锚定提升工具使用能力",
+      "canonical_evidence": "智能体强化学习方法：ToolAnchor通过反事实锚定提升工具使用能力",
+      "llm_tldr_en": "Identifies behavioral inertia in tool-augmented LLM agents and proposes ToolAnchor, using counterfactual anchor contexts to break inertia and recover failed trajectories, enabling efficient toolset expansion without retraining.",
+      "llm_tldr_cn": "本文发现工具增强型LLM智能体在工具集扩展时存在行为惯性（倾向使用熟悉工具）。通过注入反事实锚定上下文打破惯性，恢复失败轨迹。提出ToolAnchor框架，利用教师模型生成假设情景，引导智能体使用新工具。实验表明该方法无需重新训练即可有效扩展工具使用能力，提升了长程任务性能。",
+      "llm_tldr": "本文发现工具增强型LLM智能体在工具集扩展时存在行为惯性（倾向使用熟悉工具）。通过注入反事实锚定上下文打破惯性，恢复失败轨迹。提出ToolAnchor框架，利用教师模型生成假设情景，引导智能体使用新工具。实验表明该方法无需重新训练即可有效扩展工具使用能力，提升了长程任务性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.09422v1",
+      "source": "arxiv",
+      "title": "Action-Factored Multi-Agent Reinforcement Learning for Scalable Quantum Device Tuning",
+      "abstract": "Cooperative multi-agent reinforcement learning is well suited to problems with large parameter spaces and exploitable local structure, such as the tuning of electrostatically-defined quantum-dot arrays. However, if parameter cross-talk is strong, a non-stationary environment from the perspective of any individual agent can destabilize learning - the same effect that plagues manual tuning of such systems. We propose using a factored representation of the action space, learned online, to decouple agents and minimize their interference. Our framework, QADAPT, uses this factorization to efficiently learn shared policies based on local measurements and rewards. With this modular strategy, we achieve zero-shot generalization to unseen quantum device sizes and maintain an approximately constant number of convergence steps to reach target regimes. This work provides a scalable route toward the rapid calibration of large-scale quantum processors.",
+      "authors": [
+        "Edwin De Nicolo",
+        "Rahul Marchand",
+        "Cornelius Carlsson",
+        "Pranav Vaidhyanathan",
+        "Natalia Ares"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-07-10T13:50:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.09422v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses multi-agent RL for quantum device tuning, demonstrating RL for agent decision making in a cooperative setting",
+      "llm_evidence_cn": "使用多智能体强化学习进行量子设备调谐，展示RL在协作智能体决策中的应用",
+      "llm_evidence": "使用多智能体强化学习进行量子设备调谐，展示RL在协作智能体决策中的应用",
+      "canonical_evidence": "使用多智能体强化学习进行量子设备调谐，展示RL在协作智能体决策中的应用",
+      "llm_tldr_en": "Proposes QADAPT, a multi-agent RL framework with online factored action representations to reduce interference in quantum-dot array tuning, achieving zero-shot generalization.",
+      "llm_tldr_cn": "针对量子点阵列调谐中参数串扰导致的非平稳环境问题，提出QADAPT框架，通过在线学习动作空间因子分解来解耦智能体。该方法使多智能体能够高效学习共享策略，并在未见过的量子设备上实现零样本泛化。",
+      "llm_tldr": "针对量子点阵列调谐中参数串扰导致的非平稳环境问题，提出QADAPT框架，通过在线学习动作空间因子分解来解耦智能体。该方法使多智能体能够高效学习共享策略，并在未见过的量子设备上实现零样本泛化。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.14614v1",
+      "source": "arxiv",
+      "title": "Beyond Entropy: Correctness-Aware Advantage Shaping via Contrastive Policy Optimization",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) commonly uses entropy for advantage shaping. However, entropy cannot distinguish useful uncertainty from detrimental confusion, limiting its effectiveness as a correctness signal. We propose Contrastive Policy Optimization (CPO), which uses token-level contrastive disagreement between reference-guided and vanilla generation distributions for correctness-aware advantage shaping. Both theoretical and empirical results show that this disagreement reliably indicates token-level correctness. We further show that On-policy Distillation is a special case of CPO, where the posterior distribution is instantiated by an external teacher model. CPO also resolves the zero-advantage problem. Experiments on in-domain and out-of-domain benchmarks demonstrate that CPO substantially outperforms entropy-based RLVR methods while maintaining strong generalization. Further analysis shows that correct and incorrect responses naturally support exploration and exploitation respectively, and balancing both leads to the best performance.",
+      "authors": [
+        "Weiwen Xu",
+        "Jia Liu",
+        "Hou Pong Chan",
+        "Long Li",
+        "Deng Cai",
+        "Min Chen",
+        "Hao Zhang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-16T06:25:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.14614v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "contrastive policy optimization for RLVR improves LLM fine-tuning",
+      "llm_evidence_cn": "对比策略优化用于可验证奖励强化学习，改进大语言模型微调",
+      "llm_evidence": "对比策略优化用于可验证奖励强化学习，改进大语言模型微调",
+      "canonical_evidence": "对比策略优化用于可验证奖励强化学习，改进大语言模型微调",
+      "llm_tldr_en": "Introduces Contrastive Policy Optimization (CPO) for RLVR, using token-level contrastive disagreement for correctness-aware advantage shaping, improving on entropy-based methods.",
+      "llm_tldr_cn": "本文针对可验证奖励强化学习（RLVR）中熵作为优势信号无法区分有用与有害不确定性的问题，提出对比策略优化（CPO）。通过参考引导与普通生成分布的token级对比差异来指示正确性，从而进行正确性感知的优势塑造。理论和实验表明该方法可靠地指示token级正确性，并解决了零优势问题，为LLM微调提供了更优的优化信号。",
+      "llm_tldr": "本文针对可验证奖励强化学习（RLVR）中熵作为优势信号无法区分有用与有害不确定性的问题，提出对比策略优化（CPO）。通过参考引导与普通生成分布的token级对比差异来指示正确性，从而进行正确性感知的优势塑造。理论和实验表明该方法可靠地指示token级正确性，并解决了零优势问题，为LLM微调提供了更优的优化信号。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.13655v1",
+      "source": "arxiv",
+      "title": "Explaining Reinforcement Learning Agents via Inductive Logic Programming",
+      "abstract": "Explainable Reinforcement Learning (XRL) seeks to make Reinforcement Learning (RL) policies more transparent and interpretable, a key requirement in safety-critical and human-centric scenarios. However, it is mostly based on user studies, thus targeting the needs of a specific audience and lacking shared evaluation metrics. On the other hand, logic-based approaches within eXplainable Artificial Intelligence (XAI) provide compact, human-readable abstractions of decision-making. However, the systematic quantification of the explainability degree of logical representations remains an open problem. This work aims to advance the state of the art in XRL by introducing objective and planning-oriented metrics for policy explainability in RL settings. At the same time, it contributes to the field of logic for XAI by providing a principled way to quantify the explainability of logical rules, moving beyond common-sense assessments and simple propositional fragments. We employ Inductive Logic Programming (ILP) to extract symbolic representations of RL policies and define a novel set of explainability metrics, including activation rate, feature coverage, syntactic distance and semantic distance. These metrics quantify alignment between symbolic rules and agent behavior, the role of features in decision-making, and the evolution of policies during training and across agents in single and multi-agent RL. Experiments across different RL domains show that the proposed metrics highlight action-specific learning dynamics beyond global return, provide fine-grained insights into domain features beyond classical approaches for global feature importance estimation, and uncover coordination, specialization, and adaptation patterns in MARL. Moreover, they provide crucial insights for the transfer and generalization of action-specific policies.",
+      "authors": [
+        "Celeste Veronese",
+        "Edoardo Zorzi",
+        "Daniele Meli",
+        "Alessandro Farinelli"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-15T10:02:55+00:00",
+      "link": "https://arxiv.org/pdf/2607.13655v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "explains RL policies via inductive logic programming, offers interpretable abstractions",
+      "llm_evidence_cn": "通过归纳逻辑编程解释强化学习策略，提供可解释的抽象表示",
+      "llm_evidence": "通过归纳逻辑编程解释强化学习策略，提供可解释的抽象表示",
+      "canonical_evidence": "通过归纳逻辑编程解释强化学习策略，提供可解释的抽象表示",
+      "llm_tldr_en": "Introduces logic-based metrics for explainable RL policy, providing human-readable abstractions of decision-making in RL settings.",
+      "llm_tldr_cn": "针对强化学习可解释性缺乏客观评估指标的问题，本文提出基于归纳逻辑编程的方法，将策略决策转化为紧凑、可读的逻辑表示，并引入规划导向的可解释性度量。该方法不仅生成了策略的抽象解释，还提供了量化评估框架，推动了可解释强化学习的发展。",
+      "llm_tldr": "针对强化学习可解释性缺乏客观评估指标的问题，本文提出基于归纳逻辑编程的方法，将策略决策转化为紧凑、可读的逻辑表示，并引入规划导向的可解释性度量。该方法不仅生成了策略的抽象解释，还提供了量化评估框架，推动了可解释强化学习的发展。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "large language model explaining reinforcement learning policy",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.14393v1",
+      "source": "arxiv",
+      "title": "An offline approach to fNIRS-guided reinforcement learning for robot behavior",
+      "abstract": "Human-in-the-loop Reinforcement Learning has become a popular approach to training, finetuning, and aligning robot behavior with user preferences. Our paper explores the feasibility of using brain signals via functional near-infrared spectroscopy (fNIRS) to modulate robot learning in simulation. We compare agents trained on passive (observational) versus active (demonstrative) interaction tasks, and test multiple methods for enhancing the RL algorithm with the neural signal, focusing on parameter augmentation rather than replacement. We further examine how model granularity and noise affect agent learning. Our results show that this framework is effective: the neural signal improves learning when augmenting trajectory priorities and state-action q-values. Additionally, the framework learns successfully from offline data, offering a practical alternative for settings where real-time BCI setups are impractical or only limited data is available.",
+      "authors": [
+        "Julia Santaniello",
+        "Madelaine Brower",
+        "Benson Jiang",
+        "Donatello Sassaroli",
+        "Robert Jacob",
+        "Jivko Sinapov"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-15T22:12:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.14393v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL with brain signals for robot behavior learning",
+      "llm_evidence_cn": "利用脑信号进行机器人行为强化学习",
+      "llm_evidence": "利用脑信号进行机器人行为强化学习",
+      "canonical_evidence": "利用脑信号进行机器人行为强化学习",
+      "llm_tldr_en": "Explores using fNIRS brain signals to augment RL for robot behavior, showing that neural signals improve learning when augmenting trajectory priorities and state-action pairs.",
+      "llm_tldr_cn": "人机协作强化学习通常需要用户偏好，本文探索使用功能性近红外光谱（fNIRS）脑信号来调节机器人学习。在仿真中比较了被动观察与主动演示两种交互任务，并测试了多种将神经信号增强到RL算法中的方法（聚焦于参数增强而非替换）。结果表明，在增强轨迹优先级和状态-动作对时，神经信号能显著提升学习效果，且模型粒度和噪声的影响被分析。",
+      "llm_tldr": "人机协作强化学习通常需要用户偏好，本文探索使用功能性近红外光谱（fNIRS）脑信号来调节机器人学习。在仿真中比较了被动观察与主动演示两种交互任务，并测试了多种将神经信号增强到RL算法中的方法（聚焦于参数增强而非替换）。结果表明，在增强轨迹优先级和状态-动作对时，神经信号能显著提升学习效果，且模型粒度和噪声的影响被分析。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
