@@ -6,44 +6,34 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-18
-- 运行时间：2026-07-18 20:09:20 UTC
+- 最新运行日期：2026-07-19
+- 运行时间：2026-07-19 19:51:51 UTC
 - 运行状态：成功
-- 本次总论文数：8
-- 精读区：4
-- 速读区：4
+- 本次总论文数：4
+- 精读区：2
+- 速读区：2
 
 ### 今日简报（AI）
-今日推荐论文聚焦强化学习与LLM决策优化，精读篇《SCOPE-RL》和《Multi-Head Latent Control》均获9分高分。最值得关注的是利用逻辑编程解释强化学习agent行为，以及可扩展的量子设备多智能体调参方法。建议优先精读高分论文，再浏览速读列表中的量子与神经科学交叉方向。
-- 详情：[/202607/18/README](/202607/18/README)
+今日精选两篇8分论文，涉及李代数胚上的智能体技能优化与固定GPU预算下的长上下文强化学习突破。  
+重点关注LongStraw如何突破200万token长上下文RL的算力瓶颈，以及Agentic Skill Optimization利用李代数结构提升技能泛化能力。  
+普通读者可优先关注LongStraw的工程方案，对理解长上下文RL的实用扩展很有启发。
+- 详情：[/202607/19/README](/202607/19/README)
 
 ### 精读区论文标签
-1. [SCOPE-RL: Optimizing Reasoning Paths Before and After Success](/202607/18/2607.11506v2-scope-rl-optimizing-reasoning-paths-before-and-after-success)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：基于可验证奖励的强化学习优化大语言模型推理路径
-2. [Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making](/202607/18/2607.14277v1-multi-head-latent-control-a-unified-interface-for-llm-agent-decision-making)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：基于潜在表示的大语言模型智能体决策控制
-3. [SCOPE-RL: Optimizing Reasoning Paths Before and After Success](/202607/18/2607.11506v1-scope-rl-optimizing-reasoning-paths-before-and-after-success)  
+1. [Agentic Skill Optimization over Lie Algebroids](/202607/19/2607.11493v1-agentic-skill-optimization-over-lie-algebroids)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：可验证奖励强化学习框架优化LLM推理路径
-4. [ToolAnchor: Anchoring Counterfactual Context to Boost Agentic Tool-use Capability](/202607/18/2607.14145v1-toolanchor-anchoring-counterfactual-context-to-boost-agentic-tool-use-capability)  
+   evidence：面向智能体系统的技能优化框架，类似强化学习
+2. [LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget](/202607/19/2607.14952v1-longstraw-long-context-rl-beyond-2m-tokens-under-a-fixed-gpu-budget)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：智能体强化学习方法：ToolAnchor通过反事实锚定提升工具使用能力
+   evidence：面向AI智能体的长上下文RL后训练的架构感知执行栈
 
 ### 速读区论文标签
-1. [Action-Factored Multi-Agent Reinforcement Learning for Scalable Quantum Device Tuning](/202607/18/2607.09422v1-action-factored-multi-agent-reinforcement-learning-for-scalable-quantum-device-tuning)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：使用多智能体强化学习进行量子设备调谐，展示RL在协作智能体决策中的应用
-2. [Explaining Reinforcement Learning Agents via Inductive Logic Programming](/202607/18/2607.13655v1-explaining-reinforcement-learning-agents-via-inductive-logic-programming)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：通过归纳逻辑编程解释强化学习策略，提供可解释的抽象表示
-3. [An offline approach to fNIRS-guided reinforcement learning for robot behavior](/202607/18/2607.14393v1-an-offline-approach-to-fnirs-guided-reinforcement-learning-for-robot-behavior)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：利用脑信号进行机器人行为强化学习
-4. [Beyond Entropy: Correctness-Aware Advantage Shaping via Contrastive Policy Optimization](/202607/18/2607.14614v1-beyond-entropy-correctness-aware-advantage-shaping-via-contrastive-policy-optimization)  
+1. [When Does Reward Teach State? A Hidden-Automaton Instrument and the Group-Language Boundary](/202607/19/2607.11953v2-when-does-reward-teach-state-a-hidden-automaton-instrument-and-the-group-language-boundary)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：对比策略优化用于可验证奖励强化学习，改进大语言模型微调
+   evidence：白盒工具探测强化学习智能体状态表征
+2. [SIVA-RL: Sensitivity-Invariance Visual Alignment for Multimodal Reinforcement Learning](/202607/19/2607.13931v1-siva-rl-sensitivity-invariance-visual-alignment-for-multimodal-reinforcement-learning)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：可验证奖励强化学习用于多模态推理中的视觉对齐
 
 
 <div class="dpr-home-promo-card">

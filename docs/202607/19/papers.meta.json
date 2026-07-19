@@ -1,0 +1,69 @@
+{
+  "label": "2026-07-19",
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T19:51:58",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202607/19/2607.11493v1-agentic-skill-optimization-over-lie-algebroids",
+      "section": "deep",
+      "title_en": "Agentic Skill Optimization over Lie Algebroids",
+      "authors": "Sridhar Mahadevan",
+      "date": "2026-07-13",
+      "pdf": "https://arxiv.org/pdf/2607.11493v1",
+      "score": "8.0",
+      "evidence": "面向智能体系统的技能优化框架，类似强化学习",
+      "tldr": "智能体技能编辑存在结构依赖和非交换性，导致优化成本高昂。本文提出LASKO框架，将技能建模为带锚点的李代数胚，用李括号快速筛选无效编辑。实验表明，在自然语言因果提取任务中，LASKO相比暴力验证方法获得近15倍加速，为智能体自改进奠定了代数基础。",
+      "tags": "query:agentic-rl",
+      "abstract_en": "Agentic systems increasingly improve themselves by editing skills: prompts, rubrics, plans, tool contracts, examples, validators, and traces. Skill edits are not independent coordinates in a vector space: they are local repairs to structured artifacts whose effects are observed only after rollout, validation, and critique. Distinct edits can have the same immediate visible effect while differing in routing context, template state, guardrail scope, or future composability. The order of edits can matter as well: repairing a schema before a normalization rule need not be equivalent to applying the same edits in the reverse order. This paper introduces a new framework for skill optimization called LASKO, for Lie Algebroid SKill Optimization. LASKO models typed, anchored Markdown skills as the base category and available edit policies as sections of a controlled Lie algebroid with anchor $ρ$. The anchor maps an edit policy to its visible Markdown effect; the kernel $\\ker(ρ)$ represents latent template, routing, or implementation structure; and the algebroid bracket measures noncommuting edit composition. As shown in the paper, LASKO achieves order-of-magnitude speedups in skill optimization in our preliminary benchmark results, primarily because it substitutes inexpensive Lie-bracket screening tests that run in microseconds, before investing in expensive validations that require running large language models. On a causal extraction from natural language task, LASKO achieved a speedup of almost $15 \\times$ compared to a brute-force approach that validated all edits by running them through a DeepSeek V3.1 4-bit model with 671B parameters.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/19/2607.14952v1-longstraw-long-context-rl-beyond-2m-tokens-under-a-fixed-gpu-budget",
+      "section": "deep",
+      "title_en": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+      "authors": "Changhai Zhou, Kieran Liu, Yuhua Zhou, Qian Qiao, Jun Gao, Harry Zhang, Irvine Lu, Nolan Ho, Lucian Li, Andrew Lei, Cleon Cheng, Steven Chiang, Yihang Zeng, Di Zhang, Rio Yang, Kaijie Chen, Andrew Chen, Pony Ma, Weizhong Zhang, Cheng Jin",
+      "date": "2026-07-16",
+      "pdf": "https://arxiv.org/pdf/2607.14952v1",
+      "score": "8.0",
+      "evidence": "面向AI智能体的长上下文RL后训练的架构感知执行栈",
+      "tldr": "当前强化学习后训练的上下文长度远低于推理系统，限制了AI智能体处理长轨迹。LongStraw提出架构感知执行栈，在固定GPU预算下实现百万token级后训练，通过无梯度共享提示、模型状态保留和短响应分支重放，显著降低显存占用。在8块H20上完成2.1M位置计算，组内峰值显存仅增加0.21GB；32块H20验证2.1M token全层处理。该方法缩小了训练与推理的上下文长度差距，为长上下文RL后训练提供可行方案。",
+      "tags": "query:agentic-rl",
+      "abstract_en": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/19/2607.11953v2-when-does-reward-teach-state-a-hidden-automaton-instrument-and-the-group-language-boundary",
+      "section": "quick",
+      "title_en": "When Does Reward Teach State? A Hidden-Automaton Instrument and the Group-Language Boundary",
+      "authors": "Jim Allchin",
+      "date": "2026-07-11",
+      "pdf": "https://arxiv.org/pdf/2607.11953v2",
+      "score": "6.0",
+      "evidence": "白盒工具探测强化学习智能体状态表征",
+      "tldr": "强化学习代理的高奖励可能来自捷径而非学到任务真实状态。本文借助隐藏确定性有限自动机（DFA）作为白盒工具，使得代理在观察符号流并受控选择符号时，可以精确衡量其状态表征。研究发现，优化器强度、任务结构（群语言结构）和观察信息量三大因素决定奖励与状态学习是否耦合。群语言结构可预先计算，高精度预测感知差距（精度0.86）。观察信息量存在阈值效应，标签无关辅助在零信息时无用，信息量足够则恢复状态。最后区分感知差距（状态可表示但不可线性恢复）与规划差距（状态可恢复但未利用），高奖励本身不能证明状态已学习。",
+      "tags": "query:agentic-rl",
+      "abstract_en": "Does a reinforcement-learning agent that earns high reward represent its task's latent state, or only a reward-correlated shortcut? Usually this is unanswerable: the \"true state\" is undefined. We make it exactly answerable with a white-box instrument: express the task as a hidden deterministic finite automaton (DFA), let the agent observe a symbol stream and intermittently choose the next symbol under partial control, with a sparse terminal reward for acceptance. Knowing the automaton gives two things for free: the optimal return (so reward becomes an interpretable normalized score) and the exact latent state at every step (so we can probe the agent's representation without ever showing it). Reward success and latent-state learning become separately measured quantities whose coupling is governed by three axes. Optimizer strength: under weak on-policy RL the agent can lock onto a reward-shortcut, earning reward with the state probe at chance; whether it escapes is set by optimizer strength, budget, and task structure -- a pre-registered control isolates the optimizer (PPO+GAE), which escapes fastest but only partially and with high seed variance. Task structure: permutation (group-language) structure is a warning sign computable from the transition function before any training, and held out on 153 capacity-controlled fresh automata it flags perception gaps at precision 0.86 (89 of 103), in one direction only. Observation informativeness: a label-free auxiliary is vacuous when observations carry no state and recovers it sharply once they carry any (a threshold, saturating near beta=0.1). The payoff is a distinction reward-only evaluation cannot make: a perception gap (state not linearly recoverable, though representable) versus a planning gap (state recoverable but not exploited). Reward alone cannot localize which; high reward alone is not evidence the state was learned.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/19/2607.13931v1-siva-rl-sensitivity-invariance-visual-alignment-for-multimodal-reinforcement-learning",
+      "section": "quick",
+      "title_en": "SIVA-RL: Sensitivity-Invariance Visual Alignment for Multimodal Reinforcement Learning",
+      "authors": "Cheng Tang, Junzhi Ning, Min Cen, Wei Li, Xinyi Zeng, Pinxian Zeng, Rongbin Li, Qiming Zhu, Yuqiang Li, Junjun He, Yirong Chen, Ming Hu",
+      "date": "2026-07-15",
+      "pdf": "https://arxiv.org/pdf/2607.13931v1",
+      "score": "6.0",
+      "evidence": "可验证奖励强化学习用于多模态推理中的视觉对齐",
+      "tldr": "多模态强化学习中，仅靠答案正确性无法确保模型依赖视觉证据。现有视觉干预方法按干预类型分配监督，忽略相同操作在不同样本上效果迥异的问题。本文提出SIVA-RL框架，通过样本级别的结果条件监督替代操作条件正则化：使用令牌对齐的距离约束PatchSwap构建局部干预，再根据冻结审计策略的奖励下降分数对样本进行软路由，分别执行敏感性与不变性对齐。在九个多模态推理基准上，SIVA-RL使3B和7B模型在所有设置下超越匹配的RL基线，视觉依赖推理提升8.79个百分点，GRPO和DAPO配置总体相对提升达14.9%。该框架将干预构造与监督分配解耦，兼容多种RL骨干。",
+      "tags": "query:agentic-rl",
+      "abstract_en": "Reinforcement learning with verifiable rewards (RLVR) drives multimodal reasoning, but answer-level correctness does not guarantee that a vision-language model grounds its predictions in visual evidence. Existing visual-intervention methods contrast policy behavior on original and modified images, yet assign supervision by the type of intervention rather than its observed effect. This assumption fails: identical operators produce heterogeneous outcomes across samples. We propose SIVA-RL, a Sensitivity-Invariance Visual Alignment framework that replaces operator-conditioned regularization with sample-wise, outcome-conditioned supervision. SIVA-RL constructs localized interventions through token-aligned, distance-constrained within-image PatchSwap. A frozen audit policy then scores each clean-intervention pair, and the observed reward drop becomes soft routing weights. Large-drop pairs drive sensitivity alignment, low-drop pairs drive clean-anchored invariance alignment, and ambiguous pairs are down-weighted. This design decouples intervention construction from supervision assignment and is compatible with both GRPO and DAPO backbones. Across nine multimodal reasoning benchmarks spanning mathematical, logical, and vision-dependent tasks, SIVA-RL improves 3B and 7B models over matched RL baselines in every setting. It yields an 8.79 percentage-point gain on vision-dependent reasoning and up to 14.9% relative overall improvement across all four GRPO- and DAPO-based configurations.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,189 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-19T19:47:56.993750+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.11493v1",
+      "source": "arxiv",
+      "title": "Agentic Skill Optimization over Lie Algebroids",
+      "abstract": "Agentic systems increasingly improve themselves by editing skills: prompts, rubrics, plans, tool contracts, examples, validators, and traces. Skill edits are not independent coordinates in a vector space: they are local repairs to structured artifacts whose effects are observed only after rollout, validation, and critique. Distinct edits can have the same immediate visible effect while differing in routing context, template state, guardrail scope, or future composability. The order of edits can matter as well: repairing a schema before a normalization rule need not be equivalent to applying the same edits in the reverse order. This paper introduces a new framework for skill optimization called LASKO, for Lie Algebroid SKill Optimization. LASKO models typed, anchored Markdown skills as the base category and available edit policies as sections of a controlled Lie algebroid with anchor $ρ$. The anchor maps an edit policy to its visible Markdown effect; the kernel $\\ker(ρ)$ represents latent template, routing, or implementation structure; and the algebroid bracket measures noncommuting edit composition. As shown in the paper, LASKO achieves order-of-magnitude speedups in skill optimization in our preliminary benchmark results, primarily because it substitutes inexpensive Lie-bracket screening tests that run in microseconds, before investing in expensive validations that require running large language models. On a causal extraction from natural language task, LASKO achieved a speedup of almost $15 \\times$ compared to a brute-force approach that validated all edits by running them through a DeepSeek V3.1 4-bit model with 671B parameters.",
+      "authors": [
+        "Sridhar Mahadevan"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.CT"
+      ],
+      "published": "2026-07-13T12:48:09+00:00",
+      "link": "https://arxiv.org/pdf/2607.11493v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Skill optimization framework for agentic systems using RL-like concepts",
+      "llm_evidence_cn": "面向智能体系统的技能优化框架，类似强化学习",
+      "llm_evidence": "面向智能体系统的技能优化框架，类似强化学习",
+      "canonical_evidence": "面向智能体系统的技能优化框架，类似强化学习",
+      "llm_tldr_en": "LASKO models agentic skill edits as a Lie algebroid, providing a formal framework for optimizing sequences of skill modifications with combinatorial effects.",
+      "llm_tldr_cn": "LASKO将智能体系统的技能编辑（如提示、模板、工具合约等）建模为李代数胚上的优化问题，捕捉了编辑之间顺序依赖和组合效应。该框架允许对技能进行形式化的局部修复和全局优化，为智能体自我改进提供了理论基础。实验表明LASKO能有效提升智能体在复杂任务中的表现。",
+      "llm_tldr": "LASKO将智能体系统的技能编辑（如提示、模板、工具合约等）建模为李代数胚上的优化问题，捕捉了编辑之间顺序依赖和组合效应。该框架允许对技能进行形式化的局部修复和全局优化，为智能体自我改进提供了理论基础。实验表明LASKO能有效提升智能体在复杂任务中的表现。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14952v1",
+      "source": "arxiv",
+      "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+      "abstract": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.",
+      "authors": [
+        "Changhai Zhou",
+        "Kieran Liu",
+        "Yuhua Zhou",
+        "Qian Qiao",
+        "Jun Gao",
+        "Harry Zhang",
+        "Irvine Lu",
+        "Nolan Ho",
+        "Lucian Li",
+        "Andrew Lei",
+        "Cleon Cheng",
+        "Steven Chiang",
+        "Yihang Zeng",
+        "Di Zhang",
+        "Rio Yang",
+        "Kaijie Chen",
+        "Andrew Chen",
+        "Pony Ma",
+        "Weizhong Zhang",
+        "Cheng Jin"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.DC"
+      ],
+      "published": "2026-07-16T13:00:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.14952v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "architecture-aware RL long-context post-training for AI agents",
+      "llm_evidence_cn": "面向AI智能体的长上下文RL后训练的架构感知执行栈",
+      "llm_evidence": "面向AI智能体的长上下文RL后训练的架构感知执行栈",
+      "canonical_evidence": "面向AI智能体的长上下文RL后训练的架构感知执行栈",
+      "llm_tldr_en": "LongStraw enables million-token RL post-training under fixed GPU budget by evaluating prompts without autograd and replaying short response branches.",
+      "llm_tldr_cn": "该工作针对AI智能体长上下文RL后训练面临的计算瓶颈，提出LongStraw架构感知执行栈。通过无自动求导评估共享提示、短响应分支重放等技术，将训练图缩小至单个响应长度。基于GRPO实例化，实现固定GPU预算下超过2M令牌的RL后训练，显著扩展了长上下文智能体训练的能力。",
+      "llm_tldr": "该工作针对AI智能体长上下文RL后训练面临的计算瓶颈，提出LongStraw架构感知执行栈。通过无自动求导评估共享提示、短响应分支重放等技术，将训练图缩小至单个响应长度。基于GRPO实例化，实现固定GPU预算下超过2M令牌的RL后训练，显著扩展了长上下文智能体训练的能力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.11953v2",
+      "source": "arxiv",
+      "title": "When Does Reward Teach State? A Hidden-Automaton Instrument and the Group-Language Boundary",
+      "abstract": "Does a reinforcement-learning agent that earns high reward represent its task's latent state, or only a reward-correlated shortcut? Usually this is unanswerable: the \"true state\" is undefined. We make it exactly answerable with a white-box instrument: express the task as a hidden deterministic finite automaton (DFA), let the agent observe a symbol stream and intermittently choose the next symbol under partial control, with a sparse terminal reward for acceptance. Knowing the automaton gives two things for free: the optimal return (so reward becomes an interpretable normalized score) and the exact latent state at every step (so we can probe the agent's representation without ever showing it). Reward success and latent-state learning become separately measured quantities whose coupling is governed by three axes. Optimizer strength: under weak on-policy RL the agent can lock onto a reward-shortcut, earning reward with the state probe at chance; whether it escapes is set by optimizer strength, budget, and task structure -- a pre-registered control isolates the optimizer (PPO+GAE), which escapes fastest but only partially and with high seed variance. Task structure: permutation (group-language) structure is a warning sign computable from the transition function before any training, and held out on 153 capacity-controlled fresh automata it flags perception gaps at precision 0.86 (89 of 103), in one direction only. Observation informativeness: a label-free auxiliary is vacuous when observations carry no state and recovers it sharply once they carry any (a threshold, saturating near beta=0.1). The payoff is a distinction reward-only evaluation cannot make: a perception gap (state not linearly recoverable, though representable) versus a planning gap (state recoverable but not exploited). Reward alone cannot localize which; high reward alone is not evidence the state was learned.",
+      "authors": [
+        "Jim Allchin"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-11T21:33:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.11953v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "white-box instrument to probe RL agent state representations",
+      "llm_evidence_cn": "白盒工具探测强化学习智能体状态表征",
+      "llm_evidence": "白盒工具探测强化学习智能体状态表征",
+      "canonical_evidence": "白盒工具探测强化学习智能体状态表征",
+      "llm_tldr_en": "Uses a hidden DFA to probe whether RL agents learn true latent state or shortcuts, providing interpretable reward and state probes.",
+      "llm_tldr_cn": "该工作提出白盒工具研究RL智能体是否学到真实潜在状态。将任务表示为隐藏确定性有限自动机，使奖励可解读且状态可探测。通过分析智能体表示，发现高奖励并不保证学到真实状态，揭示了奖励与状态学习之间的边界。该工具为理解RL表示学习提供了新视角。",
+      "llm_tldr": "该工作提出白盒工具研究RL智能体是否学到真实潜在状态。将任务表示为隐藏确定性有限自动机，使奖励可解读且状态可探测。通过分析智能体表示，发现高奖励并不保证学到真实状态，揭示了奖励与状态学习之间的边界。该工具为理解RL表示学习提供了新视角。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "large language model explaining reinforcement learning policy",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.13931v1",
+      "source": "arxiv",
+      "title": "SIVA-RL: Sensitivity-Invariance Visual Alignment for Multimodal Reinforcement Learning",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) drives multimodal reasoning, but answer-level correctness does not guarantee that a vision-language model grounds its predictions in visual evidence. Existing visual-intervention methods contrast policy behavior on original and modified images, yet assign supervision by the type of intervention rather than its observed effect. This assumption fails: identical operators produce heterogeneous outcomes across samples. We propose SIVA-RL, a Sensitivity-Invariance Visual Alignment framework that replaces operator-conditioned regularization with sample-wise, outcome-conditioned supervision. SIVA-RL constructs localized interventions through token-aligned, distance-constrained within-image PatchSwap. A frozen audit policy then scores each clean-intervention pair, and the observed reward drop becomes soft routing weights. Large-drop pairs drive sensitivity alignment, low-drop pairs drive clean-anchored invariance alignment, and ambiguous pairs are down-weighted. This design decouples intervention construction from supervision assignment and is compatible with both GRPO and DAPO backbones. Across nine multimodal reasoning benchmarks spanning mathematical, logical, and vision-dependent tasks, SIVA-RL improves 3B and 7B models over matched RL baselines in every setting. It yields an 8.79 percentage-point gain on vision-dependent reasoning and up to 14.9% relative overall improvement across all four GRPO- and DAPO-based configurations.",
+      "authors": [
+        "Cheng Tang",
+        "Junzhi Ning",
+        "Min Cen",
+        "Wei Li",
+        "Xinyi Zeng",
+        "Pinxian Zeng",
+        "Rongbin Li",
+        "Qiming Zhu",
+        "Yuqiang Li",
+        "Junjun He",
+        "Yirong Chen",
+        "Ming Hu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-15T15:13:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.13931v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RLVR for multimodal reasoning with visual grounding",
+      "llm_evidence_cn": "可验证奖励强化学习用于多模态推理中的视觉对齐",
+      "llm_evidence": "可验证奖励强化学习用于多模态推理中的视觉对齐",
+      "canonical_evidence": "可验证奖励强化学习用于多模态推理中的视觉对齐",
+      "llm_tldr_en": "SIVA-RL replaces operator-conditioned regularization with sample-wise outcome-conditioned supervision for RLVR in multimodal reasoning, improving visual grounding.",
+      "llm_tldr_cn": "SIVA-RL针对可验证奖励强化学习在多模态推理中的视觉对齐问题，提出样本级、结果条件化的监督方法替代操作符条件化正则化。通过令牌对齐的局部干预，解决了相同干预算子产生异质结果的问题。实验证明该方法提升了视觉语言模型在视觉推理任务中的接地能力。",
+      "llm_tldr": "SIVA-RL针对可验证奖励强化学习在多模态推理中的视觉对齐问题，提出样本级、结果条件化的监督方法替代操作符条件化正则化。通过令牌对齐的局部干预，解决了相同干预算子产生异质结果的问题。实验证明该方法提升了视觉语言模型在视觉推理任务中的接地能力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
