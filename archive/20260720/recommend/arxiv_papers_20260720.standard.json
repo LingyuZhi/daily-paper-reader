@@ -1,0 +1,420 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-20T20:14:01.698484+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.15374v1",
+      "source": "arxiv",
+      "title": "Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning",
+      "abstract": "Multimodal large language models (MLLMs) ground whole objects well from free-form language queries, but they struggle when the query names a part rather than the object. We trace this to a missing object-part hierarchy, since parts are localized in the same single step used for objects. We propose Object-Part Hierarchical Reflective Grounding (OP-HRG), a coarse-to-fine reasoning-guided grounding strategy that first localizes the parent object and then the part within it. A self-check then reflects on the result, with an extension to re-encode the predicted crop to inspect the region it is correcting. We introduce a part-aware GRPO framework to train our pipeline with stage-wise rewards. A 4B model trained this way outperforms 7B grounding LLMs and SAM3 across PascalPart, PartImageNet, and InstructPart, and transfers to reasoning segmentation.",
+      "authors": [
+        "Kazi Sajeed Mehrab",
+        "Hani Alomari",
+        "Najibul Haque Sarker",
+        "Chia-Wei Tang",
+        "Zaber Ibn Abdul Hakim",
+        "Anuj Karpatne",
+        "Chris Thomas"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-16T18:18:31+00:00",
+      "link": "https://arxiv.org/pdf/2607.15374v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "uses reinforcement learning (GRPO) to train multimodal LLM for part-level visual grounding",
+      "llm_evidence_cn": "使用强化学习（GRPO）训练多模态大语言模型进行部件级视觉定位",
+      "llm_evidence": "使用强化学习（GRPO）训练多模态大语言模型进行部件级视觉定位",
+      "canonical_evidence": "使用强化学习（GRPO）训练多模态大语言模型进行部件级视觉定位",
+      "llm_tldr_en": "Proposes OP-HRG, a coarse-to-fine reasoning-guided grounding strategy trained with part-aware GRPO reinforcement learning, enabling a 4B MLLM to outperform 7B models on part-level visual grounding.",
+      "llm_tldr_cn": "针对多模态大语言模型在部件级视觉定位上的不足，提出对象-部件层次反射定位（OP-HRG）策略，结合粗到细推理和自检修正，并引入部件感知的GRPO强化学习框架进行阶段奖励训练。实验表明，4B参数模型在部件定位上超越7B基线，展示了强化学习增强LLM细粒度视觉能力的有效性。",
+      "llm_tldr": "针对多模态大语言模型在部件级视觉定位上的不足，提出对象-部件层次反射定位（OP-HRG）策略，结合粗到细推理和自检修正，并引入部件感知的GRPO强化学习框架进行阶段奖励训练。实验表明，4B参数模型在部件定位上超越7B基线，展示了强化学习增强LLM细粒度视觉能力的有效性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15660v1",
+      "source": "arxiv",
+      "title": "ToolVerse: Unlocking Massive Environments and Long-Horizon Tasks for Agentic Reinforcement Learning",
+      "abstract": "While LLM agents demonstrate strong reasoning abilities in compact and well-defined scenarios, they struggle to maintain robustness and effectiveness when faced with large-scale, diverse, and dynamic real-world environments that demand seamless tool integration. To address this gap, we introduce ToolVerse, a comprehensive framework that scales up agentic RL environments and enables agents to perform complex long-horizon reasoning in Tool-Integrated Reasoning (TIR) tasks. First, ToolVerse automatically builds the massive executable agent training environments from nearly 400 real-world Model Context Protocols (MCPs) that contain about 4500 tools. Second, we propose a task design strategy based on a tool dependency graph, utilizing Dynamic Unlocking Sampling Algorithm to generate long-horizon tasks, and produce GUST (Graph Unlocking Sampling Tasks) dataset. Third, to alleviate the credit assigment problem in long-horizon agentic RL, we propose a fine-grained Turn-Aware Relative Advantage algorithm. We conduct extensive Agentic RL training using ToolVerse and evaluate our framework on serveral agentic benchmarks. Experimental results demonstrate that our framework significantly strengthens LLMs' capabilities in long-horizon tool use, achieving a marked performance boost and showcasing robust reasoning within dynamic environments.",
+      "authors": [
+        "Shuaiyu Zhou",
+        "Fengpeng Yue",
+        "Zengjie Hu",
+        "Yuanzhe Shen",
+        "Chenyang Zhang",
+        "feng hong",
+        "Cao Liu",
+        "Ke Zeng"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-17T06:12:04+00:00",
+      "link": "https://arxiv.org/pdf/2607.15660v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "agentic reinforcement learning environments and long-horizon tasks",
+      "llm_evidence_cn": "智能体强化学习环境与长时任务",
+      "llm_evidence": "智能体强化学习环境与长时任务",
+      "canonical_evidence": "智能体强化学习环境与长时任务",
+      "llm_tldr_en": "Introduces ToolVerse, a framework scaling up agentic RL environments with 4500 tools from MCPs.",
+      "llm_tldr_cn": "LLM智能体在大型动态真实环境中难以保持鲁棒性。本文提出ToolVerse框架，基于近400个MCP协议自动构建包含约4500个工具的可执行环境，支持长时推理任务。通过工具依赖图设计任务，为agentic RL提供了大规模、多样化的训练场景，推动智能体泛化能力研究。",
+      "llm_tldr": "LLM智能体在大型动态真实环境中难以保持鲁棒性。本文提出ToolVerse框架，基于近400个MCP协议自动构建包含约4500个工具的可执行环境，支持长时推理任务。通过工具依赖图设计任务，为agentic RL提供了大规模、多样化的训练场景，推动智能体泛化能力研究。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.16097v1",
+      "source": "arxiv",
+      "title": "Understanding Reasoning from Pretraining to Post-Training",
+      "abstract": "Reinforcement learning (RL) has become central to improving large language models (LLMs) on complex reasoning tasks, yet RL post-training is largely studied in isolation from the pretraining that precedes it. As a result, two basic questions remain open: (1) how do pretraining choices (model size, data) shape the returns to RL compute, and (2) what does RL actually do to the model? These questions are difficult to study in the standard LLM setting: pretraining corpora are vast and uncontrolled, making it hard to attribute behaviors to pretraining versus RL, and systematic compute sweeps across both stages are prohibitively expensive. To address these challenges, we use chess as a controlled testbed for studying reasoning across the full pretraining-to-post-training pipeline. We follow the standard LLM training pipeline by pretraining language models from 5M to 1B parameters on human chess games, supervised fine-tuning on synthetic reasoning traces, and running RL on chess puzzles with verifiable rewards. Using this framework, we find that the post-RL performance at given RL compute level is well-predicted from the pretraining loss, and slope of the RL reward curves improves approximately linearly with the pretraining tokens. Beyond scaling, we find that RL does not simply sharpen the SFT policy: on easy puzzles it amplifies correct moves the SFT policy already preferred, while on hard puzzles it surfaces correct moves that were nearly absent under SFT. We further test whether our findings transfer beyond chess by training a 1B language model on math-domain text, where the same predictive pattern emerges: longer-pretrained checkpoints reach higher post-RL performance and improve faster under RL. In sum, we provide a quantitative account of the pretraining-to-RL interface and a controlled testbed for studying the science of reasoning across the full pretraining-to-post-training pipeline.",
+      "authors": [
+        "Jingyan Shen",
+        "Ang Li",
+        "Salman Rahman",
+        "Yifan Sun",
+        "Micah Goldblum",
+        "Matus Telgarsky",
+        "Pavel Izmailov"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-17T16:31:58+00:00",
+      "link": "https://arxiv.org/pdf/2607.16097v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "studies how RL post-training improves LLM reasoning using controlled chess experiments",
+      "llm_evidence_cn": "通过控制象棋实验研究RL后训练如何提升LLM推理能力",
+      "llm_evidence": "通过控制象棋实验研究RL后训练如何提升LLM推理能力",
+      "canonical_evidence": "通过控制象棋实验研究RL后训练如何提升LLM推理能力",
+      "llm_tldr_en": "Uses chess as a controlled testbed to study how pretraining choices affect returns from RL post-training in LLMs, revealing that RL primarily sharpens reasoning at the decision boundary.",
+      "llm_tldr_cn": "本文利用国际象棋作为受控测试环境，研究预训练和后训练对LLM推理的影响。发现RL后训练主要强化决策边界的推理，而预训练决定基础能力。通过控制变量的方式，揭示了RL在提升LLM推理中的具体作用，为优化训练流程提供指导。",
+      "llm_tldr": "本文利用国际象棋作为受控测试环境，研究预训练和后训练对LLM推理的影响。发现RL后训练主要强化决策边界的推理，而预训练决定基础能力。通过控制变量的方式，揭示了RL在提升LLM推理中的具体作用，为优化训练流程提供指导。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.16169v1",
+      "source": "arxiv",
+      "title": "When Does Muon Help Agentic Reinforcement Learning?",
+      "abstract": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through matched single-seed comparisons with AdamW on ALFWorld using Qwen2.5-0.5B-Instruct. Under Group-in-Group Policy Optimization (GiGPO), applying Muon only to hidden weight matrices raises final-window validation success from 0.290 to 0.546 (+88%); high-rate AdamW controls retain no post-update success. The effect depends on the advantage estimator and learning rate. At 3e-5, Muon improves GRPO from 0.161 to 0.268, whereas GraphGPO's late-window gap narrows near saturation. At 1e-5, GraphGPO Muon reaches 0.901, raises normalized validation AUC from 0.399 to 0.556, and reaches 0.5 and 0.75 success 30 and 60 updates earlier, respectively. These exploratory results show that Muon can benefit agentic RL and motivate studying the policy optimizer, advantage estimator, and learning rate jointly. Multi-seed and cross-task validation remain open.",
+      "authors": [
+        "Kai Ruan",
+        "Jinghao Lin",
+        "Zihe Huang",
+        "Ziqi Zhou",
+        "Qianshan Wei",
+        "Xuan Wang",
+        "Hao Sun"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-17T17:49:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.16169v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Muon optimizer for agentic reinforcement learning",
+      "llm_evidence_cn": "Muon优化器用于智能体强化学习",
+      "llm_evidence": "Muon优化器用于智能体强化学习",
+      "canonical_evidence": "Muon优化器用于智能体强化学习",
+      "llm_tldr_en": "Studies Muon optimizer in sparse-reward agentic RL, showing up to 88% improvement on ALFWorld.",
+      "llm_tldr_cn": "Muon优化器在大规模预训练中表现优异，但在RL后训练中的价值未知。本文在ALFWorld环境中系统比较Muon与AdamW在agentic RL中的表现，发现基于GiGPO时Muon将验证成功率从0.290提升至0.546（+88%）。效果依赖优势估计器和学习率，最佳设定下成功率可达0.901。为agentic RL的优化器选择提供了重要见解。",
+      "llm_tldr": "Muon优化器在大规模预训练中表现优异，但在RL后训练中的价值未知。本文在ALFWorld环境中系统比较Muon与AdamW在agentic RL中的表现，发现基于GiGPO时Muon将验证成功率从0.290提升至0.546（+88%）。效果依赖优势估计器和学习率，最佳设定下成功率可达0.901。为agentic RL的优化器选择提供了重要见解。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13576v1",
+      "source": "arxiv",
+      "title": "Structured Reinforcement Learning for Bayesian Persuasion : Application to Intelligent Interactive Driving",
+      "abstract": "Interactive driving, wherein an intelligent lead vehicle equipped with real-time traffic data coordinates route choices of connected vehicles, offers a promising approach to dynamic traffic management. To address the challenge of harmonising decisions, this paper considers the strategic information revealing framework of Bayesian persuasion. Here, the principal (lead vehicle) aims to guide the agent's (connected vehicle) partially observable sequential decision making towards its own objectives by selectively revealing information, such as real-time traffic ahead, using signals. However, the agent's farsighted response to maximize its long-term reward, renders the principal's signaling strategy design computationally challenging. We propose an online structured reinforcement learning framework to synthesize computationally efficient signaling strategy which is persuasive for a far-sighted agent. The main contributions of the paper are as follows: (i) For a monotonic agent with approximate best response, we propose MAPL, a structured policy learning algorithm for faster online learning, (ii) Identification of sufficient conditions for the supermodular structure of the Q function of the principal for a monotonic agent, (iii) Identification of sufficient conditions to ensure the persuasiveness of the principal's signaling strategy, (iv) Supermodular Q learning for Principal (SQP), which leverages the supermodular structure of principal's action value to synthesize computationally efficient signaling strategy that is persuasive for a monotonic learning agent, (v) Numerical analysis considering a real-time application of Bayesian persuasive driving for lane selection demonstrates that the proposed method is 30% cost efficient for optimising travelling rewards of both the lead and connected vehicle compared to the existing methodologies for signaling strategy design.",
+      "authors": [
+        "Merlin Paul",
+        "Anup Aprem"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "eess.SP"
+      ],
+      "published": "2026-07-15T08:17:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.13576v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "applies structured reinforcement learning for agent decision making in interactive driving",
+      "llm_evidence_cn": "应用结构化强化学习于智能交互驾驶中的智能体决策",
+      "llm_evidence": "应用结构化强化学习于智能交互驾驶中的智能体决策",
+      "canonical_evidence": "应用结构化强化学习于智能交互驾驶中的智能体决策",
+      "llm_tldr_en": "Proposes a Bayesian persuasion framework using structured reinforcement learning for a lead vehicle to influence connected vehicle decisions in interactive driving, optimizing long-term rewards.",
+      "llm_tldr_cn": "针对交互式驾驶中主车需引导联网车辆决策的问题，提出结构化强化学习方法，主车通过贝叶斯说服策略选择性透露实时交通信息，引导联网车辆做出有利于整体目标的决策。该方法在部分可观测序贯决策中有效。",
+      "llm_tldr": "针对交互式驾驶中主车需引导联网车辆决策的问题，提出结构化强化学习方法，主车通过贝叶斯说服策略选择性透露实时交通信息，引导联网车辆做出有利于整体目标的决策。该方法在部分可观测序贯决策中有效。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15610v1",
+      "source": "arxiv",
+      "title": "Process Reward Informed Tree Rollout for Effective Multi-Turn RL",
+      "abstract": "Reinforcement learning (RL) has become a key approach for training LLM agents, yet popular methods such as GRPO/RLOO rely on multiple independently sampled complete trajectories for advantage estimation. In long-horizon agentic tasks, such a uniform rollout strategy can waste budget on uninformative dead-end attempts, while promising intermediate states do not receive sufficient exploration. The multi-turn structure of agentic trajectories, with interleaved actions and observations, naturally supports organizing a trajectory group as a tree, where each turn serves as a decision point for exploration. This perspective reframes effective exploration as the problem of deciding where to branch. We propose Process-Scorer Guided Adaptive Tree Rollout (PATR), a quality-aware rollout framework for multi-turn agent RL. PATR uses task-appropriate process feedback to score partial trajectories, selectively branches from promising states, reuses shared prefixes, and conservatively stops degenerate paths to reduce wasted sampling. The resulting rollout groups remain compatible with standard policy optimization while providing more efficient exploration under the same training budget. We evaluate PATR on FrozenLake and the challenging SWE-Bench, which is largely unexplored by prior tree-rollout agent RL methods. Experiments show that PATR improves performance by up to +5.0 points on SWE-Bench and +9.3 points on FrozenLake, highlighting process-guided tree rollouts as an effective strategy for scalable multi-turn RL.",
+      "authors": [
+        "Xintong Li",
+        "Sha Li",
+        "Yuwei Zhang",
+        "Changlong Yu",
+        "Rongmei Lin",
+        "Hongye Jin",
+        "Shuyi Guan",
+        "Xin Liu",
+        "Linwei Li",
+        "Qingyu Yin",
+        "Jingbo Shang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-17T04:16:58+00:00",
+      "link": "https://arxiv.org/pdf/2607.15610v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL tree rollout for multi-turn LLM agent training",
+      "llm_evidence_cn": "针对多轮LLM智能体训练的RL树展开",
+      "llm_evidence": "针对多轮LLM智能体训练的RL树展开",
+      "canonical_evidence": "针对多轮LLM智能体训练的RL树展开",
+      "llm_tldr_en": "Proposes PATR, a process-scorer guided adaptive tree rollout method for efficient multi-turn RL training of LLM agents.",
+      "llm_tldr_cn": "当前LLM智能体的多轮RL训练采用独立轨迹采样，浪费预算在死胡同分支。本文提出过程评分引导的自适应树展开（PATR），利用多轮结构自然形成决策树，根据中间状态的过程奖励决定在哪里分支。该方法在多个长程agent任务中大幅提升样本效率，减少了无用探索。",
+      "llm_tldr": "当前LLM智能体的多轮RL训练采用独立轨迹采样，浪费预算在死胡同分支。本文提出过程评分引导的自适应树展开（PATR），利用多轮结构自然形成决策树，根据中间状态的过程奖励决定在哪里分支。该方法在多个长程agent任务中大幅提升样本效率，减少了无用探索。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.11953v1",
+      "source": "arxiv",
+      "title": "When Does Reward Teach State? A Hidden-Automaton Instrument and the Group-Language Boundary",
+      "abstract": "Does a reinforcement-learning agent that earns high reward represent its task's latent state, or only a reward-correlated shortcut? The question is usually unanswerable: the \"true state\" is undefined. We make it exactly answerable with a white-box instrument: express the task as a hidden deterministic finite automaton (DFA), let the agent observe a symbol stream and intermittently choose the next symbol under partial control, and grant one sparse terminal reward for acceptance. Knowing the automaton gives two things for free: the optimal return (so reward becomes an interpretable normalized score) and the exact latent state at every step (so we can probe the agent's representation without ever showing it). Reward success and latent-state learning thus become separately measured quantities whose coupling is governed by three controllable axes. Optimizer strength: under weak on-policy RL the agent earns reward with the state probe at chance for every architecture, tempting the conclusion that sparse RL cannot install latent state; a pre-registered control overturns it -- PPO+GAE recovers the state, but only partially and with high seed variance. Task structure: permutation (group-language) structure is a warning sign computable from the transition function before any training, and held out on 153 capacity-controlled fresh automata it flags perception gaps at precision 0.86 (89 of 103), in one direction only. Observation informativeness: a label-free auxiliary is vacuous when observations carry no state and recovers it in proportion to how much they reveal. The payoff is a distinction reward-only evaluation cannot make: a perception gap (latent state not linearly recoverable, though representable) versus a planning gap (state recoverable but unused). High reward is thus not evidence of task understanding; whether an agent recovers latent state is predictable in advance.",
+      "authors": [
+        "Jim Allchin"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-11T21:33:32+00:00",
+      "link": "https://arxiv.org/pdf/2607.11953v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "probes RL agent state representation for decision making",
+      "llm_evidence_cn": "分析RL智能体的状态表示与决策质量",
+      "llm_evidence": "分析RL智能体的状态表示与决策质量",
+      "canonical_evidence": "分析RL智能体的状态表示与决策质量",
+      "llm_tldr_en": "This paper studies whether a high-reward RL agent truly learns latent state or a reward shortcut, using a hidden DFA instrument to make state interpretable and probe representation without direct access.",
+      "llm_tldr_cn": "本文研究高奖励的强化学习智能体是否真正学到了任务的潜在状态，还是仅学到了与奖励相关的捷径。作者通过将任务表示为隐藏确定有限自动机，使奖励成为可解释的归一化分数，并能在不展示状态的情况下探测智能体的表示。该方法为理解RL智能体的内部表征提供了新工具，有助于评估决策质量。",
+      "llm_tldr": "本文研究高奖励的强化学习智能体是否真正学到了任务的潜在状态，还是仅学到了与奖励相关的捷径。作者通过将任务表示为隐藏确定有限自动机，使奖励成为可解释的归一化分数，并能在不展示状态的情况下探测智能体的表示。该方法为理解RL智能体的内部表征提供了新工具，有助于评估决策质量。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.12254v1",
+      "source": "arxiv",
+      "title": "How to Realize Recursively Self-Improving Agents and Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture",
+      "abstract": "Large language model (LLM) agents can increasingly plan, use tools, maintain memory, and execute long-horizon tasks. These advances motivate two linked questions: how can an agent improve the mechanisms by which it learns and acts, and how can that improvement increase the durable capabilities of its user rather than only the software itself? This paper proposes a governed multi-agent architecture for recursively self-improving agents and introduces personal singularity as a bounded human-AI co-development objective: helping a user approach an expanding, user-defined capability frontier across selected domains. Each agent is defined by a goal contract, bounded scope, validated tool registry, tool-level tests, end-to-end benchmarks, an owner-controlled autonomy policy, a routing policy, memory, and an improvement policy. Out-of-scope tasks are transferred to another accountable agent or to a newly created niche agent. A user-facing Auto-Index selects interactive, hybrid, autonomous, or scheduled operation without overriding external permissions. The architecture combines a fast planner-executor-verifier loop, a slower evidence-gated improvement loop, an external governance plane, decentralized agent lineages, an owner-directed agent foundry, and a Personal Singularity OS coordinating working, computational-imaging, process-learning, and personal-learning agents. We formalize scope, routing, improvement acceptance, bounded goal evolution, tool-first execution, and human capability transfer, and provide safety invariants, benchmark design, and an implementation roadmap. This is a position and systems-design paper, not evidence that unrestricted recursive self-improvement or personal singularity has already been achieved.",
+      "authors": [
+        "Chengshuai Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T01:44:53+00:00",
+      "link": "https://arxiv.org/pdf/2607.12254v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Recursively self-improving LLM agents with goal contracts and multi-agent architecture",
+      "llm_evidence_cn": "基于目标合同和多智能体架构的递归自改进LLM智能体",
+      "llm_evidence": "基于目标合同和多智能体架构的递归自改进LLM智能体",
+      "canonical_evidence": "基于目标合同和多智能体架构的递归自改进LLM智能体",
+      "llm_tldr_en": "Proposes a governed multi-agent architecture for recursively self-improving LLM agents, defining personal singularity as bounded human-AI co-development, with goal contracts and validated tools.",
+      "llm_tldr_cn": "本文提出一种有治理的多智能体架构，实现LLM智能体的递归自我改进。每个智能体由目标合同、受限范围、有效工具和基准定义，并引入“个人奇点”概念作为人类-AI协同发展的有界目标。该架构使智能体能在选定领域逼近用户定义的能力前沿，同时避免失控风险，为agentic系统安全演进提供了设计模式。",
+      "llm_tldr": "本文提出一种有治理的多智能体架构，实现LLM智能体的递归自我改进。每个智能体由目标合同、受限范围、有效工具和基准定义，并引入“个人奇点”概念作为人类-AI协同发展的有界目标。该架构使智能体能在选定领域逼近用户定义的能力前沿，同时避免失控风险，为agentic系统安全演进提供了设计模式。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.14989v1",
+      "source": "arxiv",
+      "title": "OmniaBench: Benchmarking General AI Agents Across Diverse Scenarios",
+      "abstract": "Large language models are increasingly evolving from text generators into general agents capable of understanding user requests, invoking external tools, and completing complex tasks through interaction. However, existing agent benchmarks often focus on limited scenarios, tool ecosystems, or interaction formats, making it difficult to systematically characterize model capabilities across heterogeneous application settings. We introduce OmniaBench, a benchmark for evaluating general agents across diverse scenarios with explicit state spaces. We derive application-oriented scenario knowledge from app stores, product documents, industry resources, Web retrieval, and human refinement, forming a hierarchical taxonomy that spans ToC, ToB and ToE with 90 level-1 and 354 level-2 domains. Based on this taxonomy, we construct executable environments and synthesize single-turn and multi-turn tasks through four complementary routes: DAG, DAG-S, Solver, and Program. OmniaBench further introduces a ten-dimensional capability taxonomy and eight compositional atomic difficulty factors to support fine-grained evaluation and analysis. The resulting dataset contains 1,431 tasks, together with a challenging subset of 644 tasks designed to reduce evaluation cost and mitigate potential contamination of the full set after public release. The bench presents substantial challenges to current frontier models, with even Claude-Sonnet-5 and GPT-5.6-Sol achieving Overall Pass@1 scores of only 58.54 and 57.14, respectively. Further analyses reveal clear differences across domains and capabilities, as well as persistent limitations in planning, constraint maintenance, and adaptive correction. OmniaBench provides a broad and diagnostic benchmark for characterizing the capability boundaries of general agents.",
+      "authors": [
+        "Chengyu Shen",
+        "Yujie Fu",
+        "Gangtao Xin",
+        "Yanheng Hou",
+        "Wenlong Fei",
+        "Guojie Zhu",
+        "Jiawei Li",
+        "Hongcheng Gao",
+        "Runming He",
+        "Zhen Hao Wong",
+        "Meiyi Qiang",
+        "Hao Liang",
+        "Zhao Cao",
+        "Hao Jiang",
+        "Chong Chen",
+        "Wentao Zhang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-07-16T13:38:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.14989v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "benchmark for general AI agents including RL-based agents",
+      "llm_evidence_cn": "针对通用AI代理的基准，包括基于RL的代理",
+      "llm_evidence": "针对通用AI代理的基准，包括基于RL的代理",
+      "canonical_evidence": "针对通用AI代理的基准，包括基于RL的代理",
+      "llm_tldr_en": "Introduces OmniaBench, a benchmark for evaluating general AI agents across diverse scenarios with explicit state spaces, covering agentic tasks that require tool use and interaction.",
+      "llm_tldr_cn": "提出OmniaBench基准，用于评估通用AI代理在多种场景下的表现，包括显式的状态空间。该基准覆盖了需要工具使用和交互的代理任务，有助于系统性地比较不同RL和LLM代理方法。工作强调了从文本生成到通用代理的转变，并提供了层次化分类法。",
+      "llm_tldr": "提出OmniaBench基准，用于评估通用AI代理在多种场景下的表现，包括显式的状态空间。该基准覆盖了需要工具使用和交互的代理任务，有助于系统性地比较不同RL和LLM代理方法。工作强调了从文本生成到通用代理的转变，并提供了层次化分类法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.15459v1",
+      "source": "arxiv",
+      "title": "From Black Box to Executable Logic: Explainable Reinforcement Learning through Prolog Expert Systems",
+      "abstract": "A trained deep reinforcement learning policy is a black box, and we ask whether it can be made explainable by rewriting it as an executable logic program that reproduces its behaviour and that a person can read, a logic engine can run, and an optimizer can edit. We present a three-stage post-hoc transformation that extracts a frozen proximal policy optimization teacher, induces an ordered rule list from its decisions in the manner of classical relational learning, and emits the result as a Prolog program whose every decision is executed by an off-the-shelf logic engine; a subsequent expansion stage edits the rule base and accepts an edit only when policy evaluation certifies a return increase. We prove four guarantees. A return-loss bound makes the distilled program a machine-checkable certificate in a finite Markov decision process, and the expansion loop improves monotonically and terminates. For the continuous-observation setting we answer whether the conversion is possible at all: the propositional threshold instantiation converts the network to arbitrary fidelity as the resolution B grows, with disagreement O(1/B) and a return gap that closes at the same rate, and a matching lower bound shows the cost is exponential in the observation dimension for an oblique decision boundary. Empirically, on a two-room key-and-door task with 16,944 reachable states the expanded Prolog program attains exact optimal return in every seed and, in a budget-capped regime, exceeds the stochastic teacher on exact return in ten of ten seeds. On three continuous-control tasks the emitted program substitutes the network, matching the neural teacher within noise on Acrobot with eleven clauses and recovering about 97% of its return on CartPole, while on the finer-control LunarLander it recovers only partially, exactly the ceiling the exponential lower bound predicts.",
+      "authors": [
+        "Eduardo C. Garrido-Merchán"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-16T21:10:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.15459v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "extracts explainable Prolog programs from RL policies for interpretability",
+      "llm_evidence_cn": "从RL策略中提取可解释的Prolog程序以实现可解释性",
+      "llm_evidence": "从RL策略中提取可解释的Prolog程序以实现可解释性",
+      "canonical_evidence": "从RL策略中提取可解释的Prolog程序以实现可解释性",
+      "llm_tldr_en": "Converts deep RL policies into executable Prolog programs through three-stage post-hoc transformation, enabling interpretability and editable logic.",
+      "llm_tldr_cn": "本文将深度强化学习策略转化为可执行的Prolog程序，实现可解释性。方法包括三阶段后处理：冻结PPO教师、归纳有序规则列表、输出Prolog程序。进一步，允许编辑规则库并通过策略评估验证。该方法为RL解释提供了符号化替代方案，与LLM解释互补但不同。",
+      "llm_tldr": "本文将深度强化学习策略转化为可执行的Prolog程序，实现可解释性。方法包括三阶段后处理：冻结PPO教师、归纳有序规则列表、输出Prolog程序。进一步，允许编辑规则库并通过策略评估验证。该方法为RL解释提供了符号化替代方案，与LLM解释互补但不同。",
+      "llm_tags": [
+        "query:agentic-rl:composite"
+      ],
+      "matched_query_tag": "query:agentic-rl:composite",
+      "matched_query_text": "Papers central to Agentic RL 与 LLM 解释 RL 策略相关论文, especially work that connects or combines: agentic reinforcement learning methods for autonomous agents; using reinforcement learning to enhance large language models; large language model explaining reinforcement learning policy; reinforcement learning for agent decision making; recent research on agentic reinforcement learning; using large language models to explain reinforcement learning policies; how reinforcement learning enhances large language model capabilities.",
+      "matched_requirement_id": "req-composite-agentic-rl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
