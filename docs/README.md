@@ -6,50 +6,65 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-20
-- 运行时间：2026-07-20 20:17:53 UTC
+- 最新运行日期：2026-07-21
+- 运行时间：2026-07-21 21:26:00 UTC
 - 运行状态：成功
-- 本次总论文数：10
+- 本次总论文数：15
 - 精读区：6
-- 速读区：4
+- 速读区：9
 
 ### 今日简报（AI）
-今日研读10篇论文，精读6篇，重点聚焦强化学习新范式。最值得关注《Reasoning-Guided Part-Level Visual Grounding via RL》与《ToolVerse: Unlocking Environments for Agentic RL》两篇高分工作。建议进一步跟踪强化学习在多模态推理与长期任务规划中的前沿实践。
-- 详情：[/202607/20/README](/202607/20/README)
+今日精读6篇、速读9篇，聚焦两篇9.0高分论文：群体熵控制的策略优化与工作负载感知的同步智能体强化学习。最值得关注两个方向：基于熵调节的强化学习稳定性提升，以及面向智能体训练的成本优化方法。普通读者可优先阅读这两篇精读论文，了解RL训练效率与分布式协调的前沿改进。
+- 详情：[/202607/21/README](/202607/21/README)
 
 ### 精读区论文标签
-1. [Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning](/202607/20/2607.15374v1-reasoning-guided-part-level-visual-grounding-via-reinforcement-learning)  
+1. [Group Entropy-Controlled Policy Optimization](/202607/21/2607.16850v1-group-entropy-controlled-policy-optimization)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：使用强化学习（GRPO）训练多模态大语言模型进行部件级视觉定位
-2. [ToolVerse: Unlocking Massive Environments and Long-Horizon Tasks for Agentic Reinforcement Learning](/202607/20/2607.15660v1-toolverse-unlocking-massive-environments-and-long-horizon-tasks-for-agentic-reinforcement-learning)  
+   evidence：基于组熵控制的强化学习方法优化大语言模型对齐
+2. [WAR: Workload-Aware Rollouts for Synchronous Agentic Reinforcement Learning](/202607/21/2607.17299v1-war-workload-aware-rollouts-for-synchronous-agentic-reinforcement-learning)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：智能体强化学习环境与长时任务
-3. [Understanding Reasoning from Pretraining to Post-Training](/202607/20/2607.16097v1-understanding-reasoning-from-pretraining-to-post-training)  
+   evidence：面向同步智能体强化学习的负载感知轨迹生成加速
+3. [LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks](/202607/21/2607.18110v1-llm-as-a-coach-experiential-learning-for-non-verifiable-tasks)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：通过控制象棋实验研究RL后训练如何提升LLM推理能力
-4. [When Does Muon Help Agentic Reinforcement Learning?](/202607/20/2607.16169v1-when-does-muon-help-agentic-reinforcement-learning)  
-   标签：评分：9.0/10、query:agentic-rl
-   evidence：Muon优化器用于智能体强化学习
-5. [Structured Reinforcement Learning for Bayesian Persuasion : Application to Intelligent Interactive Driving](/202607/20/2607.13576v1-structured-reinforcement-learning-for-bayesian-persuasion--application-to-intelligent-interactive-driving)  
+   evidence：大语言模型作为教练，将其评估蒸馏为体验知识，用于解释强化学习策略
+4. [From Black Box to Executable Logic: Explainable Reinforcement Learning through Prolog Expert Systems](/202607/21/2607.15459v2-from-black-box-to-executable-logic-explainable-reinforcement-learning-through-prolog-expert-systems)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：应用结构化强化学习于智能交互驾驶中的智能体决策
-6. [Process Reward Informed Tree Rollout for Effective Multi-Turn RL](/202607/20/2607.15610v1-process-reward-informed-tree-rollout-for-effective-multi-turn-rl)  
+   evidence：通过Prolog实现可解释强化学习，与基于LLM的策略解释思路概念一致
+5. [Counterfactual Shapley Credit Assignment](/202607/21/2607.16999v1-counterfactual-shapley-credit-assignment)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：针对多轮LLM智能体训练的RL树展开
+   evidence：用于可解释和高效RL代理的信用分配
+6. [Reward-Driven LLM Agent Workflows: Synthesizing POMDP Routing and Self-Correction for Autonomous Decision-Making](/202607/21/2607.17038v1-reward-driven-llm-agent-workflows-synthesizing-pomdp-routing-and-self-correction-for-autonomous-decision-making)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：基于奖励驱动的大语言模型智能体工作流，结合POMDP路由与自我修正
 
 ### 速读区论文标签
-1. [When Does Reward Teach State? A Hidden-Automaton Instrument and the Group-Language Boundary](/202607/20/2607.11953v1-when-does-reward-teach-state-a-hidden-automaton-instrument-and-the-group-language-boundary)  
+1. [Distilled Reinforcement Learning for LLM Post-training](/202607/21/2607.17247v1-distilled-reinforcement-learning-for-llm-post-training)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：将教师监督融入强化学习目标的大模型后训练方法
+2. [On Optimal Event-Triggered Distributed Control for Stochastic Multi-Agent Systems via Reinforcement Learning](/202607/21/2607.17635v1-on-optimal-event-triggered-distributed-control-for-stochastic-multi-agent-systems-via-reinforcement-learning)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：基于强化学习的随机多智能体分布式控制，直接涉及自主智能体的强化学习方法
+3. [Aggregate in the Advantage, Not the Ratio: A Canonical-Form Analysis of Cooperative Multi-Agent Policy Optimization](/202607/21/2607.17924v1-aggregate-in-the-advantage-not-the-ratio-a-canonical-form-analysis-of-cooperative-multi-agent-policy-optimization)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：合作多智能体策略优化方法，直接面向自主智能体的强化学习
+4. [A Geometric Perspective on Stabilizing Value Conflict Resolution](/202607/21/2607.17946v1-a-geometric-perspective-on-stabilizing-value-conflict-resolution)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：利用思维链推理解决RLHF中的价值冲突
+5. [MADA-RL: Multi-Agent Debate-Aware Reinforcement Learning for Parameter-Efficient Reasoning in Compact Models](/202607/21/2607.18006v1-mada-rl-multi-agent-debate-aware-reinforcement-learning-for-parameter-efficient-reasoning-in-compact-models)  
+   标签：评分：8.0/10、query:agentic-rl
+   evidence：使用强化学习后训练，通过多智能体辩论增强紧凑型大语言模型的推理能力
+6. [SVR-R1: Bootstrapping Multi-modal Reasoning with Self-verification in Reinforcement Learning](/202607/21/2607.10966v1-svr-r1-bootstrapping-multi-modal-reasoning-with-self-verification-in-reinforcement-learning)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：分析RL智能体的状态表示与决策质量
-2. [OmniaBench: Benchmarking General AI Agents Across Diverse Scenarios](/202607/20/2607.14989v1-omniabench-benchmarking-general-ai-agents-across-diverse-scenarios)  
+   evidence：利用强化学习和自验证提升多模态大语言模型推理能力
+7. [When to Plan: Learning to Select Between Reactive Control and Deliberative Planning](/202607/21/2607.16421v1-when-to-plan-learning-to-select-between-reactive-control-and-deliberative-planning)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：针对通用AI代理的基准，包括基于RL的代理
-3. [From Black Box to Executable Logic: Explainable Reinforcement Learning through Prolog Expert Systems](/202607/20/2607.15459v1-from-black-box-to-executable-logic-explainable-reinforcement-learning-through-prolog-expert-systems)  
-   标签：评分：7.0/10、query:agentic-rl
-   evidence：从RL策略中提取可解释的Prolog程序以实现可解释性
-4. [How to Realize Recursively Self-Improving Agents and Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture](/202607/20/2607.12254v1-how-to-realize-recursively-self-improving-agents-and-personal-singularity-a-goal--scope--tool--and-benchmark-driven-multi-agent-architecture)  
+   evidence：强化学习用于在反应式控制与意图性规划之间学习元推理
+8. [PAVXploreRL: Physical-Action-Visual World Model Reinforcement Learning with Action Exploration](/202607/21/2607.16602v1-pavxplorerl-physical-action-visual-world-model-reinforcement-learning-with-action-exploration)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：基于目标合同和多智能体架构的递归自改进LLM智能体
+   evidence：具身AI中基于动作探索的RL世界模型
+9. [Reinforcement Learning: From Algorithms To Foundation Models](/202607/21/2607.17560v1-reinforcement-learning-from-algorithms-to-foundation-models)  
+   标签：评分：6.0/10、query:agentic-rl
+   evidence：博士论文涵盖多智能体RL和基础模型时代的RL，提供近期研究综述
 
 
 <div class="dpr-home-promo-card">

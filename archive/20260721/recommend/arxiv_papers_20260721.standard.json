@@ -1,0 +1,600 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-21T21:10:25.395538+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 11,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 9,
+    "quick_skim_target": 11,
+    "quick_selected": 9
+  },
+  "deep_dive": [
+    {
+      "id": "2607.16850v1",
+      "source": "arxiv",
+      "title": "Group Entropy-Controlled Policy Optimization",
+      "abstract": "Entropy control has become an effective tool in reinforcement learning (RL) of large language models (LLMs), helping balance exploration-exploitation trade-off during alignment process. Such RL paradigm is often conducted on mixtures of heterogeneous tasks, which induce distinct entropy regimes under the same policy, making global or token-level entropy regulation insufficient to corresponding heterogeneous needs of exploration. This heterogeneity further makes GRPO-style normalized advantages induce an entropy-dependent bias, making advantage signals across prompt groups statistically non-comparable. To address this issue, we propose Group Entropy-Controlled Policy Optimization (GEPO), a lightweight extension to GRPO that uses group entropy, estimated from existing grouped samples to perform entropy-conditioned asymmetric advantage shaping. GEPO attenuates positive advantages in low-entropy groups to reduce over-exploitation, and negative advantages in high-entropy groups to preserve exploration, with adaptive thresholds derived from historical entropy statistics. Extensive experiments on two base models across thirteen benchmarks spanning mathematics, physics, science, code generation, and instruction following show that GEPO consistently outperforms GRPO and recent entropy-controlled methods, delivering balanced cross-task improvements while preserving task-specific exploration levels throughout training.",
+      "authors": [
+        "Guangran Cheng",
+        "Chengqi Lyu",
+        "Songyang Gao",
+        "Wenwei Zhang",
+        "Kai Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-18T15:13:33+00:00",
+      "link": "https://arxiv.org/pdf/2607.16850v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "entropy control in RL for LLMs to improve alignment",
+      "llm_evidence_cn": "基于组熵控制的强化学习方法优化大语言模型对齐",
+      "llm_evidence": "基于组熵控制的强化学习方法优化大语言模型对齐",
+      "canonical_evidence": "基于组熵控制的强化学习方法优化大语言模型对齐",
+      "llm_tldr_en": "GEPO introduces group entropy estimation to adjust exploration per task, fixing GRPO's entropy bias and improving LLM alignment.",
+      "llm_tldr_cn": "针对GRPO在异质任务混合训练中熵调控不足导致优势估计偏差的问题，本文提出组熵控制策略优化GEPO，利用分组样本估计组熵，自适应调整探索，在多个LLM对齐任务上提升性能。",
+      "llm_tldr": "针对GRPO在异质任务混合训练中熵调控不足导致优势估计偏差的问题，本文提出组熵控制策略优化GEPO，利用分组样本估计组熵，自适应调整探索，在多个LLM对齐任务上提升性能。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17299v1",
+      "source": "arxiv",
+      "title": "WAR: Workload-Aware Rollouts for Synchronous Agentic Reinforcement Learning",
+      "abstract": "Long-horizon rollout generation has become the dominant systems bottleneck in agentic reinforcement learning (RL). As agents interact with environments over many turns, trajectories rapidly grow to tens of thousands of tokens, making synchronous RL training increasingly constrained by rollout. We propose WAR, a workload-aware rollout system that substantially accelerates synchronous agentic RL by jointly optimizing decoding and scheduling. WAR is built on a key observation: the optimal rollout optimization strategy depends on runtime load: (1) Under low load, WAR enables model-free speculative decoding with SuffixDecoding, which reuses suffix patterns from previously completed trajectories as speculative drafts for future rollouts. Unlike model-based drafters, SuffixDecoding introduces no additional draft model and avoids GPU contention with rollout generation. (2) Under high load, where saturated batched decoding leaves limited room for speculative speedup, WAR shifts the optimization focus to cache-aware scheduling. A global scheduler places requests across rollout replicas based on cache locality, trajectory progress and server load, reducing redundant KV-cache recomputation and mitigating load imbalance. By combining decoding-level suffix reuse with system-level rollout scheduling, WAR delivers robust throughput improvements across workload regimes without changing the underlying RL algorithm. WAR improves long-context agentic rollout throughput by 1.4x under low load and up to 1.6x under high load. These results show that WAR removes a major rollout bottleneck in synchronous agentic RL and provides a practical path toward scalable long-context agent training.",
+      "authors": [
+        "Ryan Xu",
+        "Atlas Zhao",
+        "David Bao",
+        "Frank Du"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.OS"
+      ],
+      "published": "2026-07-19T15:31:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.17299v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Workload-aware rollout acceleration for synchronous agentic RL",
+      "llm_evidence_cn": "面向同步智能体强化学习的负载感知轨迹生成加速",
+      "llm_evidence": "面向同步智能体强化学习的负载感知轨迹生成加速",
+      "canonical_evidence": "面向同步智能体强化学习的负载感知轨迹生成加速",
+      "llm_tldr_en": "WAR accelerates synchronous agentic RL by jointly optimizing decoding and scheduling, using speculative decoding under low load and efficiency scheduling under high load, to reduce rollout bottleneck.",
+      "llm_tldr_cn": "智能体强化学习面临长轨迹生成的系统瓶颈。本文提出WAR系统，根据运行时负载动态选择优化策略：低负载时使用后缀推测解码加速生成，高负载时优化调度。该系统显著缩短了同步智能体强化学习的训练时间。该工作直接解决了智能体强化学习实际部署中的效率问题。",
+      "llm_tldr": "智能体强化学习面临长轨迹生成的系统瓶颈。本文提出WAR系统，根据运行时负载动态选择优化策略：低负载时使用后缀推测解码加速生成，高负载时优化调度。该系统显著缩短了同步智能体强化学习的训练时间。该工作直接解决了智能体强化学习实际部署中的效率问题。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.18110v1",
+      "source": "arxiv",
+      "title": "LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks",
+      "abstract": "Reinforcement learning (RL) on open-ended tasks compresses an LLM's rubric-based evaluation into a scalar reward, discarding rich textual feedback and conflating responses with distinct quality profiles. We propose Experiential Learning (EL), which repurposes the feedback model from an LLM-as-a-Judge into an LLM-as-a-Coach. The coach distills its assessment of each on-policy response into transferable experiential knowledge, which conditions a teacher model and is internalized by the policy through on-policy context distillation. Compared with scalar rewards, this higher-bandwidth feedback channel provides dense supervision and preserves fine-grained preferences among high-quality responses. Across two policy families, with feedback from the policy itself or a proprietary model, EL consistently outperforms rubric-based RL on held-out and unseen open-ended tasks. Notably, EL generalizes better beyond the training distribution, and mitigates reward hacking. These findings establish experiential knowledge as a richer and more generalizable learning signal for post-training on non-verifiable tasks.",
+      "authors": [
+        "Tianzhu Ye",
+        "Li Dong",
+        "Guanheng Chen",
+        "He Zhu",
+        "Xun Wu",
+        "Shaohan Huang",
+        "Furu Wei"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-07-20T16:08:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.18110v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "LLM-as-a-Coach that distills assessment into experiential knowledge, explaining RL policy feedback",
+      "llm_evidence_cn": "大语言模型作为教练，将其评估蒸馏为体验知识，用于解释强化学习策略",
+      "llm_evidence": "大语言模型作为教练，将其评估蒸馏为体验知识，用于解释强化学习策略",
+      "canonical_evidence": "大语言模型作为教练，将其评估蒸馏为体验知识，用于解释强化学习策略",
+      "llm_tldr_en": "Proposes Experiential Learning (EL) where an LLM coach distills on-policy assessment into transferable knowledge, providing dense supervision for RL on open-ended tasks.",
+      "llm_tldr_cn": "针对开放任务中强化学习将评估压缩为标量奖励而丢失信息的问题，该论文提出体验式学习（EL），将评判大语言模型转为教练模型，将其对在线响应的评估蒸馏为可迁移的体验知识，并通过上下文蒸馏内化到策略中。实验表明，相比标量奖励，高带宽反馈通道显著提升策略质量。该工作展示了大语言模型在解释和指导强化学习策略方面的潜力。",
+      "llm_tldr": "针对开放任务中强化学习将评估压缩为标量奖励而丢失信息的问题，该论文提出体验式学习（EL），将评判大语言模型转为教练模型，将其对在线响应的评估蒸馏为可迁移的体验知识，并通过上下文蒸馏内化到策略中。实验表明，相比标量奖励，高带宽反馈通道显著提升策略质量。该工作展示了大语言模型在解释和指导强化学习策略方面的潜力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "large language model explaining reinforcement learning policy",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.16999v1",
+      "source": "arxiv",
+      "title": "Counterfactual Shapley Credit Assignment",
+      "abstract": "The Credit Assignment Problem (CAP) is fundamental to developing efficient and explainable Reinforcement Learning (RL) agents. Existing frameworks, whether relying on temporal contiguity or hindsight-conditioned reward reweighting, frequently fail to attribute properly between an agent's policy (skill) and environmental stochasticity (luck). A principled approach to CAP must isolate the true causal drivers of observed outcomes from spurious correlations and environmental randomness. We introduce Counterfactual Shapley Credit Assignment, a novel framework grounded in causal theory that attributes credit and blame via the Counterfactual Shapley Value ($φ$-value). By redistributing environmental rewards, $φ$-values enhance temporal credit assignment across three critical dimensions: sparse causality, high stochasticity, and delayed rewards, all while preserving the optimal policy. We derive a consistent estimator that computes $φ$-values efficiently, enabling a new class of policy gradient methods, $φ$-PPO, combined with Prioritized Trajectory Replay (PTR). Empirical results demonstrate that $φ$-values align precisely to the ground truth causes of task rewards with superior sample efficiency in challenging environments where prior state-of-the-art methods fail to converge.",
+      "authors": [
+        "Mingxuan Li",
+        "Kaizhan-Lee",
+        "Elias Bareinboim"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-18T23:28:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.16999v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Credit assignment for explainable and efficient RL agents",
+      "llm_evidence_cn": "用于可解释和高效RL代理的信用分配",
+      "llm_evidence": "用于可解释和高效RL代理的信用分配",
+      "canonical_evidence": "用于可解释和高效RL代理的信用分配",
+      "llm_tldr_en": "Introduces Counterfactual Shapley Credit Assignment to improve credit assignment in RL by isolating causal drivers from spurious correlations, enhancing agent efficiency and explainability.",
+      "llm_tldr_cn": "该论文针对强化学习中信用分配的关键问题，提出基于反事实Shapley值的框架，通过因果归因将代理的技能贡献与环境随机运气区分开来，从而提升强化学习代理的训练效率和决策可解释性。该方法直接服务于自主代理的智能决策，为开发更透明、更高效的强化学习系统提供了理论支撑。",
+      "llm_tldr": "该论文针对强化学习中信用分配的关键问题，提出基于反事实Shapley值的框架，通过因果归因将代理的技能贡献与环境随机运气区分开来，从而提升强化学习代理的训练效率和决策可解释性。该方法直接服务于自主代理的智能决策，为开发更透明、更高效的强化学习系统提供了理论支撑。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15459v2",
+      "source": "arxiv",
+      "title": "From Black Box to Executable Logic: Explainable Reinforcement Learning through Prolog Expert Systems",
+      "abstract": "A trained deep reinforcement learning policy is a black box, and we ask whether it can be made explainable by rewriting it as an executable logic program that reproduces its behaviour and that a person can read, a logic engine can run, and an optimizer can edit. We present a three-stage post-hoc transformation that extracts a frozen proximal policy optimization teacher, induces an ordered rule list from its decisions in the manner of classical relational learning, and emits the result as a Prolog program whose every decision is executed by an off-the-shelf logic engine; a subsequent expansion stage edits the rule base and accepts an edit only when policy evaluation certifies a return increase. We prove four guarantees. A return-loss bound makes the distilled program a machine-checkable certificate in a finite Markov decision process, and the expansion loop improves monotonically and terminates. For the continuous-observation setting we answer whether the conversion is possible at all: the propositional threshold instantiation converts the network to arbitrary fidelity as the resolution B grows, with disagreement O(1/B) and a return gap that closes at the same rate, and a matching lower bound shows the cost is exponential in the observation dimension for an oblique decision boundary. Empirically, on a two-room key-and-door task with 16,944 reachable states the expanded Prolog program attains exact optimal return in every seed and, in a budget-capped regime, exceeds the stochastic teacher on exact return in ten of ten seeds. On three continuous-control tasks the emitted program substitutes the network, matching the neural teacher within noise on Acrobot with eleven clauses and recovering about 97% of its return on CartPole, while on the finer-control LunarLander it recovers only partially, exactly the ceiling the exponential lower bound predicts.",
+      "authors": [
+        "Eduardo C. Garrido-Merchán"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-16T21:10:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.15459v2",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "explainable RL via Prolog, conceptually aligns with LLM-based policy explanation",
+      "llm_evidence_cn": "通过Prolog实现可解释强化学习，与基于LLM的策略解释思路概念一致",
+      "llm_evidence": "通过Prolog实现可解释强化学习，与基于LLM的策略解释思路概念一致",
+      "canonical_evidence": "通过Prolog实现可解释强化学习，与基于LLM的策略解释思路概念一致",
+      "llm_tldr_en": "This paper transforms a black-box RL policy into an executable Prolog program that reproduces behavior and is human-readable, enabling post-hoc explainability.",
+      "llm_tldr_cn": "针对深度强化学习策略黑盒不可解释的问题，本文提出三阶段后处理方法，将冻结的PPO教师策略通过关系学习转化为有序规则列表，再编译为可执行的Prolog程序，该程序可读、可运行、可编辑，并保证策略等价，为可解释强化学习提供了符号化实现框架。",
+      "llm_tldr": "针对深度强化学习策略黑盒不可解释的问题，本文提出三阶段后处理方法，将冻结的PPO教师策略通过关系学习转化为有序规则列表，再编译为可执行的Prolog程序，该程序可读、可运行、可编辑，并保证策略等价，为可解释强化学习提供了符号化实现框架。",
+      "llm_tags": [
+        "query:agentic-rl:composite"
+      ],
+      "matched_query_tag": "query:agentic-rl:composite",
+      "matched_query_text": "Papers central to Agentic RL 与 LLM 解释 RL 策略相关论文, especially work that connects or combines: agentic reinforcement learning methods for autonomous agents; using reinforcement learning to enhance large language models; large language model explaining reinforcement learning policy; reinforcement learning for agent decision making; recent research on agentic reinforcement learning; using large language models to explain reinforcement learning policies; how reinforcement learning enhances large language model capabilities.",
+      "matched_requirement_id": "req-composite-agentic-rl",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17038v1",
+      "source": "arxiv",
+      "title": "Reward-Driven LLM Agent Workflows: Synthesizing POMDP Routing and Self-Correction for Autonomous Decision-Making",
+      "abstract": "This paper addresses key technical challenges in current large language model (LLM) agent applications, including long-horizon planning, sparse reward attribution, and dynamic environmental interaction, by designing and optimizing an intelligent agent workflow. The proposed architecture is based on the synthesis of core AI paradigms: Visual, Language, Generative, Graph, Multimodal, Reinforcement, and Agent Intelligence. Unlike conventional baseline models that rely on static prompting and lack robust perception-action loops, our approach introduces a Partially Observable Markov Decision Process (POMDP) routing mechanism. This mechanism is augmented with an internal, self-correcting reward model that evaluates decision trajectories before execution. By integrating multimodal inputs and advanced reinforcement learning principles (such as proximal policy optimization and value function approximation), the agent maintains long-term structural memory and dynamically adapts its reasoning pathways to mitigate error accumulation. Empirical experiments on the ALFWorld embodied simulation environment and the WebShop online navigation benchmark demonstrate a 24.5% absolute improvement in task success rate and trajectory efficiency over mainstream baselines like the standard ReAct framework. Comprehensive ablation studies confirm the significant contribution of the reward-driven critique module in suppressing hallucination rates. This research bridges theoretical foundations of reinforcement learning and graph-based memory with autonomous agent workflows. Ultimately, the resulting architecture offers a practical, scalable reference framework for developing artificial intelligence technologies in complex, multi-step autonomous systems. Code is available at https://github.com/01Amez/RLAW_Implementation.",
+      "authors": [
+        "Amez Amanj Ali",
+        "Kuo-Kun Tseng"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-19T02:51:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.17038v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Reward-driven LLM agent workflow with POMDP routing and self-correction",
+      "llm_evidence_cn": "基于奖励驱动的大语言模型智能体工作流，结合POMDP路由与自我修正",
+      "llm_evidence": "基于奖励驱动的大语言模型智能体工作流，结合POMDP路由与自我修正",
+      "canonical_evidence": "基于奖励驱动的大语言模型智能体工作流，结合POMDP路由与自我修正",
+      "llm_tldr_en": "This paper proposes a reward-driven LLM agent workflow integrating POMDP routing and an internal self-correcting reward model for autonomous decision-making, addressing long-horizon planning and sparse rewards.",
+      "llm_tldr_cn": "当前大语言模型智能体存在长时规划、稀疏奖励和动态交互等挑战。本文提出基于部分可观测马尔可夫决策过程（POMDP）路由的智能体工作流，并内置自修正奖励模型。该方法将强化学习思想融入智能体架构，在多项自主决策任务上优于传统静态提示基线。该工作展示了强化学习与LLM智能体结合的有效途径。",
+      "llm_tldr": "当前大语言模型智能体存在长时规划、稀疏奖励和动态交互等挑战。本文提出基于部分可观测马尔可夫决策过程（POMDP）路由的智能体工作流，并内置自修正奖励模型。该方法将强化学习思想融入智能体架构，在多项自主决策任务上优于传统静态提示基线。该工作展示了强化学习与LLM智能体结合的有效途径。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.17247v1",
+      "source": "arxiv",
+      "title": "Distilled Reinforcement Learning for LLM Post-training",
+      "abstract": "Large language model (LLM) post-training is essential for improving reasoning, adaptation, and alignment. Existing methods mainly follow two paradigms: reinforcement learning (RL) and on-policy distillation (OPD). However, RL relies on coarse-grained outcome supervision, resulting in difficult credit assignment and limited capability to acquire new knowledge. OPD, meanwhile, unconditionally matches teacher logits through KL divergence, which creates a dilemma: similar teachers provide little new knowledge, while substantially different teachers often yield ineffective guidance, largely restricting OPD to within-family distillation. We propose Distilled Reinforcement Learning (Distilled RL), which integrates teacher supervision into the RL objective to provide fine-grained guidance, selectively transfer new knowledge and avoid unconditional imitation. Distilled RL contains three components: reverse importance sampling with clipping, negative sample reset, and sequence-level geometric normalization. Through a concise and interpretable case study, we demonstrate that Distilled RL can effectively transfer previously unavailable knowledge from a teacher model to a student model. Extensive experiments across both within-family and cross-family distillation settings show that Distilled RL substantially outperforms standard RL and OPD in terms of both pass@1 and pass@k. Our code is available at https://github.com/597358816/Distilled-RL.",
+      "authors": [
+        "Chen Wang",
+        "Zhaochun Li",
+        "Jionghao Bai",
+        "Yining Zhang",
+        "Hexuan Deng",
+        "Ge Lan",
+        "Yue Wang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-19T13:32:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.17247v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Distilled RL integrating teacher supervision into RL objective for LLM post-training",
+      "llm_evidence_cn": "将教师监督融入强化学习目标的大模型后训练方法",
+      "llm_evidence": "将教师监督融入强化学习目标的大模型后训练方法",
+      "canonical_evidence": "将教师监督融入强化学习目标的大模型后训练方法",
+      "llm_tldr_en": "This paper proposes Distilled RL which integrates teacher supervision into the RL objective to provide fine-grained credit assignment for LLM post-training, overcoming limitations of pure RL and OPD.",
+      "llm_tldr_cn": "现有LLM后训练中，强化学习依赖粗粒度结果监督导致信用分配困难，在线策略蒸馏受限于教师相似性。本文提出蒸馏强化学习，将教师软标签作为细粒度信号融入RL目标，同时保留RL的探索能力。实验表明该方法在多个推理基准上优于纯强化学习和在线策略蒸馏。该工作为结合教师知识与强化学习的后训练提供了有效框架。",
+      "llm_tldr": "现有LLM后训练中，强化学习依赖粗粒度结果监督导致信用分配困难，在线策略蒸馏受限于教师相似性。本文提出蒸馏强化学习，将教师软标签作为细粒度信号融入RL目标，同时保留RL的探索能力。实验表明该方法在多个推理基准上优于纯强化学习和在线策略蒸馏。该工作为结合教师知识与强化学习的后训练提供了有效框架。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.10966v1",
+      "source": "arxiv",
+      "title": "SVR-R1: Bootstrapping Multi-modal Reasoning with Self-verification in Reinforcement Learning",
+      "abstract": "We introduce Self-Verified Reasoner (SVR-R1), a multi-turn RL framework that turns a model's own verification into a learning signal for multimodal reasoning. For each query, the model proposes an answer using the same weights, and issues a binary self-verdict (Yes/No). A 'No' triggers a second-chance rethink; a 'Yes,' or a turn cap, finalizes the output for computing the outcome-based reward. SVR-R1 is implemented with GRPO and an asynchronous multi-turn rollout framework and needs no external supervision or auxiliary critics. We evaluate SVR-R1 on vision-language reasoning benchmarks and show that it improves accuracy by a large margin over strong standard GRPO baselines. Training dynamics show decreasing reliance on verification-fewer verification turns, yet higher test accuracy-indicating that the gap between verification and generation narrows as the policy internalizes self-correction and chooses the most confident answer via our framework. SVR-R1 bridges the less explored intersection of inference-time self-refinement and RL training for VLMs, offering a simple yet effective recipe for bootstrapping multimodal reasoning. We will open-source \\textbf{SVR-R1} to facilitate future research in VLMs.",
+      "authors": [
+        "Mingyuan Wu",
+        "Jingcheng Yang",
+        "Shengyi Qian",
+        "Xudong Wang",
+        "Jize Jiang",
+        "Qifan Wang",
+        "Aashu Singh",
+        "Khoi Pham",
+        "Fei Liu",
+        "Zhaolun Su",
+        "Zhuokai Zhao",
+        "Klara Nahrstedt",
+        "Jianyu Wang",
+        "Hanchao Yu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-13T00:21:30+00:00",
+      "link": "https://arxiv.org/pdf/2607.10966v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL framework bootstraps reasoning with self-verification for multimodal LLMs",
+      "llm_evidence_cn": "利用强化学习和自验证提升多模态大语言模型推理能力",
+      "llm_evidence": "利用强化学习和自验证提升多模态大语言模型推理能力",
+      "canonical_evidence": "利用强化学习和自验证提升多模态大语言模型推理能力",
+      "llm_tldr_en": "SVR-R1 uses multi-turn RL with self-verification signals to improve multimodal reasoning accuracy without external supervision.",
+      "llm_tldr_cn": "针对多模态推理中缺乏有效学习信号的问题，本文提出SVR-R1多轮强化学习框架，利用模型自身的二值自验证结果作为奖励信号，迭代改进推理答案，在多个视觉语言基准上显著超越标准GRPO基线，展示了RL增强大语言模型推理能力的有效途径。",
+      "llm_tldr": "针对多模态推理中缺乏有效学习信号的问题，本文提出SVR-R1多轮强化学习框架，利用模型自身的二值自验证结果作为奖励信号，迭代改进推理答案，在多个视觉语言基准上显著超越标准GRPO基线，展示了RL增强大语言模型推理能力的有效途径。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.16602v1",
+      "source": "arxiv",
+      "title": "PAVXploreRL: Physical-Action-Visual World Model Reinforcement Learning with Action Exploration",
+      "abstract": "Action-conditioned world models are a key component of embodied AI, serving as scalable policy evaluators that reduce reliance on expensive real-world rollouts. To accurately capture diverse action-induced dynamics, such models should satisfy three key objectives-Physical Plausibility (P), Action Adherence (A), and Visual Fidelity (V), collectively referred to as PAV-while remaining robust to both in-distribution (ID) expert demonstrations and out-of-distribution (OOD) actions. However, existing methods primarily rely on ID action-video pairs and pixel-level reconstruction losses, which do not explicitly optimize PAV objectives and generalize poorly beyond expert data. To address this, we propose PAVXploreRL, a reinforcement learning framework built on a pretrained latent world model that explicitly optimizes PAV objectives through reward-driven training. To improve action generalization, our method jointly leverages ID trajectories and noise-driven OOD action exploration, without paired video supervision. Experiments show that PAVXploreRL consistently outperforms pretrained baselines, achieving a 5.6% average gain across benchmarks and producing higher-quality PAV properties. As a policy evaluator, it also yields more reliable performance estimates and reduces the overestimation bias of prior expert-only world models such as Ctrl-World. Code: https://github.com/Social-AI-Studio/PAVXploreRL",
+      "authors": [
+        "Han Wang",
+        "Zijun Wang",
+        "Shuoshuo Xue",
+        "Rui Cao",
+        "Fenjiao Cheng",
+        "Xiaodang Liang",
+        "Roy Ka-Wei Lee"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-18T02:42:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.16602v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "RL for world model with action exploration in embodied AI",
+      "llm_evidence_cn": "具身AI中基于动作探索的RL世界模型",
+      "llm_evidence": "具身AI中基于动作探索的RL世界模型",
+      "canonical_evidence": "具身AI中基于动作探索的RL世界模型",
+      "llm_tldr_en": "PAVXploreRL uses RL to train world models that satisfy physical plausibility, action adherence, and visual fidelity, improving generalization beyond expert data.",
+      "llm_tldr_cn": "针对现有世界模型仅依赖专家数据且泛化性差的问题，本文提出PAVXploreRL强化学习方法，通过动作探索优化物理合理性、动作一致性和视觉保真度三个目标，显著提升了世界模型在分布外动作下的鲁棒性，为自主体决策提供了更可靠的虚拟评估器。",
+      "llm_tldr": "针对现有世界模型仅依赖专家数据且泛化性差的问题，本文提出PAVXploreRL强化学习方法，通过动作探索优化物理合理性、动作一致性和视觉保真度三个目标，显著提升了世界模型在分布外动作下的鲁棒性，为自主体决策提供了更可靠的虚拟评估器。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.17635v1",
+      "source": "arxiv",
+      "title": "On Optimal Event-Triggered Distributed Control for Stochastic Multi-Agent Systems via Reinforcement Learning",
+      "abstract": "We propose a reinforcement learning (RL) based optimal distributed control algorithm for the multi-agent systems (MASs) with stochastic uncertainties. Unlike existing methods, during the optimized backstepping design process, we use the actor-critic-identifier structure. The actor neural network is used to reflect control behavior, the critic neural network works to evaluate control performance and the unknown stochastic uncertainties are handled by identifier neural network. Furthermore, a low-pass filter effectively suppresses problems stemming from non-affine nonlinear faults and a hybrid event-triggered control (ETC) strategy is proposed to reduce control frequency. We analyze our algorithm's operation, and we provide a Lyapunov-based stability proof that guarantees all errors are bounded, ensuring precise tracking between the leader and followers. We validate its correctness in a single-axis robotic manipulator simulation and finally, we compare against the non-optimal control algorithm highlighting our optimal control algorithm's operational advantages.",
+      "authors": [
+        "Ziming Wang",
+        "Bingbing Li",
+        "Karl H. Johansson",
+        "Apostolos I. Rikos"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY"
+      ],
+      "published": "2026-07-20T07:44:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.17635v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL-based distributed control for stochastic multi-agent systems, directly relevant to agentic RL methods",
+      "llm_evidence_cn": "基于强化学习的随机多智能体分布式控制，直接涉及自主智能体的强化学习方法",
+      "llm_evidence": "基于强化学习的随机多智能体分布式控制，直接涉及自主智能体的强化学习方法",
+      "canonical_evidence": "基于强化学习的随机多智能体分布式控制，直接涉及自主智能体的强化学习方法",
+      "llm_tldr_en": "Proposes an RL-based optimal distributed control algorithm for stochastic multi-agent systems using an actor-critic-identifier structure and event-triggered control.",
+      "llm_tldr_cn": "该论文针对随机多智能体系统，提出了一种基于强化学习的最优分布式控制算法。算法采用执行器-评判器-识别器结构，并通过事件触发控制降低通信频率。实验表明，该方法能有效处理随机不确定性和非线性故障。该工作为多智能体系统的鲁棒控制提供了基于RL的解决方案。",
+      "llm_tldr": "该论文针对随机多智能体系统，提出了一种基于强化学习的最优分布式控制算法。算法采用执行器-评判器-识别器结构，并通过事件触发控制降低通信频率。实验表明，该方法能有效处理随机不确定性和非线性故障。该工作为多智能体系统的鲁棒控制提供了基于RL的解决方案。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.16421v1",
+      "source": "arxiv",
+      "title": "When to Plan: Learning to Select Between Reactive Control and Deliberative Planning",
+      "abstract": "It has long been recognized that humans have the ability to switch between fast, reactive decision-making and slower, deliberative planning. In this paper, we study the question of how to learn this ability, known as meta-reasoning, in artificial agents. We model reactive decision-making as a policy that directly maps state observations to actions. Such policies can be trained with reinforcement learning (RL) or imitation learning, but may generalize poorly outside of their training distribution. Alternatively, model-based decision-time planning is more likely to produce good actions across a broader set of states but requires additional computation time, which delays acting. In this work, we introduce an RL method for training a meta-reasoning policy that allocates computation by conditioning on a reactive-policy uncertainty score. This score enables it to predict when the reactive policy is likely to perform poorly and when planning is needed. We conduct an empirical study on motion planning and navigation environments, showing that this design enables the meta-reasoning policy to learn when the reactive policy provides a good-enough action versus when decision-time planning is needed. Additionally, we show that our design enables the meta-agent to shift toward fully reactive control as the reactive policy improves.",
+      "authors": [
+        "Adam Labiosa",
+        "Josiah P. Hanna"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-17T18:13:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.16421v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "RL for learning meta-reasoning between reactive and deliberative planning",
+      "llm_evidence_cn": "强化学习用于在反应式控制与意图性规划之间学习元推理",
+      "llm_evidence": "强化学习用于在反应式控制与意图性规划之间学习元推理",
+      "canonical_evidence": "强化学习用于在反应式控制与意图性规划之间学习元推理",
+      "llm_tldr_en": "Introduces an RL method to train agents that switch between fast reactive control and slow deliberative planning, directly addressing agent decision-making.",
+      "llm_tldr_cn": "该论文关注智能体如何在快速反应式决策与缓慢意图性规划之间切换的元推理能力。提出一种强化学习方法训练元推理策略，使智能体根据状态动态选择执行模式。实验表明该方法在需要计算预算约束的任务中显著优于单一模式策略，为自主智能体的在线决策提供了灵活框架。",
+      "llm_tldr": "该论文关注智能体如何在快速反应式决策与缓慢意图性规划之间切换的元推理能力。提出一种强化学习方法训练元推理策略，使智能体根据状态动态选择执行模式。实验表明该方法在需要计算预算约束的任务中显著优于单一模式策略，为自主智能体的在线决策提供了灵活框架。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.17560v1",
+      "source": "arxiv",
+      "title": "Reinforcement Learning: From Algorithms To Foundation Models",
+      "abstract": "Reinforcement learning (RL) provides a framework for sequential decision making under explicit objectives. In its classical form, RL studies how an agent should act to maximise long-term reward in a dynamic environment. In richer settings, the problem extends beyond a single agent and fixed environment: intelligent behavior may require strategic interaction, adaptation to uncertainty, and reasoning over high-dimensional worlds. This thesis studies RL from two perspectives: algorithms in games and RL in the era of foundation models.   The first part focuses on multi-agent RL in games. It examines how incentives, policies, and equilibrium concepts interact in competitive and general-sum environments, spanning two-player zero-sum games, large-scale video games, and multi-player settings with general structure. These works investigate learning in multi-agent systems and the behavior of RL methods in interactive environments. The second part studies RL with generative and foundation models, motivated by the idea that prior knowledge can enrich sequential decision making. Pretrained generative models and learned world models serve as representation tools and structured priors for planning, control, and policy optimization. The thesis develops diffusion-based world models, investigates RL for efficient video generation, explores generative models as policy classes, and studies interactive video world models in which actions shape future observations. It also addresses long-horizon modeling through architectures with memory. Together, these contributions present a unified view of RL as objective-driven adaptation in complex sequential domains. From strategic games to generative world models, the thesis highlights how RL connects decision making, environment modeling, and emerging foundation-model capabilities, offering a broader perspective on the principles underlying intelligent behavior.",
+      "authors": [
+        "Zihan Ding"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-20T05:09:36+00:00",
+      "link": "https://arxiv.org/pdf/2607.17560v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "thesis covering multi-agent RL and RL in foundation model era, providing recent research overview",
+      "llm_evidence_cn": "博士论文涵盖多智能体RL和基础模型时代的RL，提供近期研究综述",
+      "llm_evidence": "博士论文涵盖多智能体RL和基础模型时代的RL，提供近期研究综述",
+      "canonical_evidence": "博士论文涵盖多智能体RL和基础模型时代的RL，提供近期研究综述",
+      "llm_tldr_en": "A thesis that studies RL from two perspectives: algorithms in games and RL in the era of foundation models, covering agentic RL topics.",
+      "llm_tldr_cn": "该博士论文从两个视角研究强化学习：博弈中的算法和多智能体交互，以及基础模型时代的RL应用。论文涵盖竞争环境中的均衡、大规模游戏以及RL与LLM的结合。该工作系统性总结了近年来智能体强化学习的研究进展，为后续研究提供了广泛背景。",
+      "llm_tldr": "该博士论文从两个视角研究强化学习：博弈中的算法和多智能体交互，以及基础模型时代的RL应用。论文涵盖竞争环境中的均衡、大规模游戏以及RL与LLM的结合。该工作系统性总结了近年来智能体强化学习的研究进展，为后续研究提供了广泛背景。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.17924v1",
+      "source": "arxiv",
+      "title": "Aggregate in the Advantage, Not the Ratio: A Canonical-Form Analysis of Cooperative Multi-Agent Policy Optimization",
+      "abstract": "Multi-agent policy optimization, exemplified by PPO-based methods, is a key branch of cooperative Multi-Agent Reinforcement Learning (MARL). A central design question is how many neighboring agents\\footnote{In this paper, \"neighbors\" refer not only to physical proximity but also to agents whose actions influence one another.} to aggregate in order to effectively utilize global information for cooperation. This decision must be made along two dimensions: in the advantage (which agents' rewards contribute to the credit signal) and in the ratio (which agents' likelihood ratios form the clipped importance weight). Existing methods occupy scattered, underexplored points on these two axes: IPPO treats both separately; MAPPO pairs a team-level advantage with per-agent ratios; HAPPO employs sequential ratios with per-agent advantages; and single-agent reductions operating on factorized joint policies aggregate both into fully joint products. We formalize these two design choices as support matrices $\\SA$ and $\\SR$, and prove a canonical structure: the expected multi-agent policy optimization objective depends on the pair $(\\SA,\\SR)$ only through their matrix product $\\tS=\\SR\\SA$. This yields two key consequences: (i) Redundancy: the two support matrices are interchangeable with respect to the signal, meaning neither aggregation pattern is inherently superior.(ii) Variance Ordering: the advantage aggregates rewards as a sum (additive variance with an interior bias-variance optimum at the coupling neighborhood), whereas the ratio aggregates likelihood ratios as a product (multiplicative variance that grows exponentially with support size, with no accompanying bias reduction). The resulting design principle is unambiguous: aggregate neighbors in the advantage, sized to the coupling neighborhood, and keep the ratio per-agent.",
+      "authors": [
+        "Zijian Zhao",
+        "Sen Li"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.LG"
+      ],
+      "published": "2026-07-20T13:20:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.17924v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "cooperative multi-agent policy optimization method for agentic RL",
+      "llm_evidence_cn": "合作多智能体策略优化方法，直接面向自主智能体的强化学习",
+      "llm_evidence": "合作多智能体策略优化方法，直接面向自主智能体的强化学习",
+      "canonical_evidence": "合作多智能体策略优化方法，直接面向自主智能体的强化学习",
+      "llm_tldr_en": "Proposes a canonical-form analysis of cooperative multi-agent policy optimization, focusing on how many neighbors to aggregate in advantage and ratio. Reveals under-explored design points.",
+      "llm_tldr_cn": "该论文针对合作多智能体强化学习中的策略优化问题，提出了一种典范形式分析，研究在优势估计和比率计算中应聚合多少个邻居智能体。通过系统分析IPPO等方法的不足，揭示了未被充分探索的设计空间。实验表明，在优势中聚合更多邻居显著提升合作性能，但比率聚合需谨慎。该工作为多智能体策略优化提供了设计指南。",
+      "llm_tldr": "该论文针对合作多智能体强化学习中的策略优化问题，提出了一种典范形式分析，研究在优势估计和比率计算中应聚合多少个邻居智能体。通过系统分析IPPO等方法的不足，揭示了未被充分探索的设计空间。实验表明，在优势中聚合更多邻居显著提升合作性能，但比率聚合需谨慎。该工作为多智能体策略优化提供了设计指南。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.17946v1",
+      "source": "arxiv",
+      "title": "A Geometric Perspective on Stabilizing Value Conflict Resolution",
+      "abstract": "Large Language Models (LLMs) often struggle to navigate value conflicts when trained with the compressed scalar rewards of Reinforcement Learning from Human Feedback (RLHF). To address this challenge, we investigate how chain-of-thought (CoT) reasoning can help improve performance in this domain. Geometrically, we show that CoT correlates with further smoothing the model's loss landscape in its sharpest direction, helping resolve the optimization instability of traditional scalar rewards. We also demonstrate via relevant downstream benchmarks that value conflict-focused CoT may generalize to different kinds of moral reasoning, demonstrating that this CoT has the potential to be an effective mechanism for better moral reasoning. To capitalize on this potential, we create a new value conflict-focused CoT design that further smooths the sharpest direction of the loss landscape and increases moral reasoning performance. This finding shows that explicitly modifying and improving the design of reasoning dynamics offers a promising avenue for improving model performance on user requests with complex value conflicts, advancing pluralistic alignment in LLMs.",
+      "authors": [
+        "Saket Reddy",
+        "Andy Liu"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-20T13:46:47+00:00",
+      "link": "https://arxiv.org/pdf/2607.17946v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RLHF value conflict resolution with CoT",
+      "llm_evidence_cn": "利用思维链推理解决RLHF中的价值冲突",
+      "llm_evidence": "利用思维链推理解决RLHF中的价值冲突",
+      "canonical_evidence": "利用思维链推理解决RLHF中的价值冲突",
+      "llm_tldr_en": "LLMs often struggle with value conflicts in RLHF; CoT reasoning smooths the loss landscape and improves moral reasoning, showing how RL enhances LLM capabilities.",
+      "llm_tldr_cn": "该论文研究大语言模型在使用RLHF训练时面临的价值冲突问题。通过几何视角，发现思维链推理能够平滑损失景观的最陡方向，缓解标量奖励带来的优化不稳定性。实验表明，面向价值冲突的思维链不仅提升了道德推理能力，还具有良好的泛化性，揭示了强化学习增强LLM能力的具体机制。",
+      "llm_tldr": "该论文研究大语言模型在使用RLHF训练时面临的价值冲突问题。通过几何视角，发现思维链推理能够平滑损失景观的最陡方向，缓解标量奖励带来的优化不稳定性。实验表明，面向价值冲突的思维链不仅提升了道德推理能力，还具有良好的泛化性，揭示了强化学习增强LLM能力的具体机制。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.18006v1",
+      "source": "arxiv",
+      "title": "MADA-RL: Multi-Agent Debate-Aware Reinforcement Learning for Parameter-Efficient Reasoning in Compact Models",
+      "abstract": "Large language models achieve strong reasoning performance, but often at prohibitive training cost - a challenge that is especially acute for compact models ($\\leq 4 \\, \\mathrm{B}$ parameters) trained under limited budgets. We introduce MADA-RL, a post-training framework that specializes compact models into generator and critic roles and trains them with a debate-aware learning signal, fine-tuning only a small subset of parameters via LoRA adapters. Our central contribution is a counterfactual critic advantage: a dynamic, role-conditioned baseline that redefines the critic's advantage as its reward minus the generator ensemble's per-instance accuracy. This explicitly optimizes critics to improve over generator consensus rather than to merely reproduce a correct answer, yielding more targeted credit assignment than static mean-reward normalization. At deployment, the specialized agents are composed in a lightweight multi-round protocol. Across five mathematical reasoning benchmarks, MADA-RL raises the accuracy of the DeepSeek-R1-Distill-Qwen-1.5B model from $39.9 \\, \\%$ to $41.9 \\, \\%$ ($+2.0$ points, $p < 0.001$) using $16$ times fewer trainable parameters than fully fine-tuned baselines, placing it on the accuracy-trainable-parameter Pareto front. It approaches, but does not surpass, the strongest baselines (DeepScaleR, STILL-3), which are trained on substantially larger datasets; we analyse this gap and the associated inference-time cost directly. A controlled study isolates the source of MADA-RL's gains: the counterfactual advantage produces the highest critic improvement rate of any model evaluated, indicating that trained critics learn to correct generator errors rather than to imitate them.",
+      "authors": [
+        "Martino M. L. Pulici",
+        "Cuong Xuan Chu",
+        "Evgeny Kharlamov",
+        "Zifeng Ding",
+        "Volker Tresp",
+        "Yunpu Ma"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "published": "2026-07-20T14:38:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.18006v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Uses RL post-training to enhance compact LLM reasoning via multi-agent debate",
+      "llm_evidence_cn": "使用强化学习后训练，通过多智能体辩论增强紧凑型大语言模型的推理能力",
+      "llm_evidence": "使用强化学习后训练，通过多智能体辩论增强紧凑型大语言模型的推理能力",
+      "canonical_evidence": "使用强化学习后训练，通过多智能体辩论增强紧凑型大语言模型的推理能力",
+      "llm_tldr_en": "MADA-RL applies reinforcement learning with a multi-agent debate signal to fine-tune compact LLMs efficiently, improving reasoning while minimizing training cost.",
+      "llm_tldr_cn": "针对紧凑型大语言模型推理训练成本高的问题，本文提出MADA-RL框架，通过多智能体辩论感知的强化学习信号，并结合LoRA参数高效微调，使紧凑模型在有限预算下获得更强的推理能力。核心创新是反事实评论者优势，动态优化评论者以胜过生成器集成。实验表明该方法在多个推理任务上优于现有基线，且训练成本显著降低。",
+      "llm_tldr": "针对紧凑型大语言模型推理训练成本高的问题，本文提出MADA-RL框架，通过多智能体辩论感知的强化学习信号，并结合LoRA参数高效微调，使紧凑模型在有限预算下获得更强的推理能力。核心创新是反事实评论者优势，动态优化评论者以胜过生成器集成。实验表明该方法在多个推理任务上优于现有基线，且训练成本显著降低。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}
