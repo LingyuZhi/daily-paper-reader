@@ -6,73 +6,65 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-22
-- 运行时间：2026-07-22 20:50:04 UTC
+- 最新运行日期：2026-07-23
+- 运行时间：2026-07-23 21:15:04 UTC
 - 运行状态：成功
-- 本次总论文数：17
-- 精读区：6
-- 速读区：11
+- 本次总论文数：15
+- 精读区：5
+- 速读区：10
 
 ### 今日简报（AI）
-1) 今日推荐17篇论文，精读6篇、速读11篇，聚焦多智能体导航与可解释强化学习。  
-2) 最值得看《Intelligent Multi-UAV Navigation via Hierarchical LLM》（9.0分）和《Explainable RL through Prolog Expert Systems》（8.0分），前者以分层大模型解决无人机协同导航，后者用逻辑编程透明化决策过程。  
-3) 建议优先精读这两篇：前者适合关注LLM自主决策的读者，后者为追求模型可解释性提供了可落地的逻辑框架。
-- 详情：[/202607/22/README](/202607/22/README)
+今日推荐15篇论文，精读2篇高分论文聚焦LLM偏好对齐。最值得关注的方向是LLM奖励思考优化及评估器与策略的共同进化。建议优先精读《Rewarding Better Thinking》和《Co-Evolving LLM Evaluators》两篇高分论文。
+- 详情：[/202607/23/README](/202607/23/README)
 
 ### 精读区论文标签
-1. [Intelligent Multi-UAV Navigation in ITNTNs: A Hierarchical LLM Approach](/202607/22/2607.18604v1-intelligent-multi-uav-navigation-in-itntns-a-hierarchical-llm-approach)  
+1. [Rewarding Better Thinking for LLM Preference Alignment](/202607/23/2607.19824v1-rewarding-better-thinking-for-llm-preference-alignment)  
    标签：评分：9.0/10、query:agentic-rl
-   evidence：分层LLM与DRL结合的自主导航方法
-2. [From Black Box to Executable Logic: Explainable Reinforcement Learning through Prolog Expert Systems](/202607/22/2607.15459v1-from-black-box-to-executable-logic-explainable-reinforcement-learning-through-prolog-expert-systems)  
+   evidence：用于基于强化学习的LLM偏好对齐的过程导向奖励
+2. [Co-Evolving LLM Evaluators and Policies via DynamicRubric](/202607/23/2607.20083v1-co-evolving-llm-evaluators-and-policies-via-dynamicrubric)  
+   标签：评分：9.0/10、query:agentic-rl
+   evidence：提出评估器与策略共同进化的DynamicRubric方法，直接优化LLM策略
+3. [H$^2$SD: Hybrid Hindsight Self-Distillation](/202607/23/2607.18955v2-h2sd-hybrid-hindsight-self-distillation)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：将深度强化学习策略事后转化为可解释的Prolog程序
-3. [Search-on-Graph-R1: Training Large Language Models to Search Knowledge Graphs with Reinforcement Learning](/202607/22/2607.18481v1-search-on-graph-r1-training-large-language-models-to-search-knowledge-graphs-with-reinforcement-learning)  
+   evidence：为语言模型推理的RLVR提出混合事后自蒸馏方法
+4. [REGEN: Replay-recycling for Expert-to-Generalist distillation with Offline Reinforcement Learning](/202607/23/2607.19450v1-regen-replay-recycling-for-expert-to-generalist-distillation-with-offline-reinforcement-learning)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：用强化学习训练LLM搜索知识图谱
-4. [Strategy-Following Multi-Agent Deep Reinforcement Learning Considering Control Strategies Provided to Other Agents](/202607/22/2607.18719v1-strategy-following-multi-agent-deep-reinforcement-learning-considering-control-strategies-provided-to-other-agents)  
+   evidence：提出离线RL方法REGEN，用于LLM中专家到通用知识的蒸馏
+5. [Reinforcement Learning for Large Language Model Selective Evidence Adoption from Contaminated Retrieval Results](/202607/23/2607.20090v1-reinforcement-learning-for-large-language-model-selective-evidence-adoption-from-contaminated-retrieval-results)  
    标签：评分：8.0/10、query:agentic-rl
-   evidence：支持人类指令控制的多智能体深度强化学习
-5. [Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning](/202607/22/2607.18722v1-stale-but-stable-staleness-adaptive-trust-regions-for-stabilizing-asynchronous-reinforcement-learning)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：针对异步强化学习的陈旧性自适应信任区域方法
-6. [Fishing Out Free Riders: Shapley-Based Reward Attribution for Parallel Reasoning via Reinforcement Learning](/202607/22/2607.18979v1-fishing-out-free-riders-shapley-based-reward-attribution-for-parallel-reasoning-via-reinforcement-learning)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：基于RL的Shapley奖励归因用于LLM推理
+   evidence：使用强化学习使大语言模型选择性采纳证据
 
 ### 速读区论文标签
-1. [Comparative Study of Multi-Agent Actor-Critic Algorithms in Parameterized Action Reinforcement Learning](/202607/22/2607.19117v1-comparative-study-of-multi-agent-actor-critic-algorithms-in-parameterized-action-reinforcement-learning)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：多智能体Actor-Critic在参数化动作RL中的比较
-2. [The Price of Reasoning: Cost-Quality Tradeoffs in Reinforcement Learning for Neural Machine Translation](/202607/22/2607.19226v1-the-price-of-reasoning-cost-quality-tradeoffs-in-reinforcement-learning-for-neural-machine-translation)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：RL增强LLM在神经机器翻译中的后训练
-3. [Off-Context GRPO: Learning to Reason on Hard Problems using Privileged Information](/202607/22/2607.19313v1-off-context-grpo-learning-to-reason-on-hard-problems-using-privileged-information)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：使用可验证奖励的强化学习提升大语言模型推理能力
-4. [Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning](/202607/22/2607.19345v1-copy-less-ground-more-overcoming-repetitive-copying-in-long-context-reasoning-via-evidence-aware-reinforcement-learning)  
-   标签：评分：8.0/10、query:agentic-rl
-   evidence：基于证据感知的强化学习提升LLM长上下文推理
-5. [Generalize and Guide: Decomposing Rewards for Few-Shot Inverse Reinforcement Learning](/202607/22/2607.17760v1-generalize-and-guide-decomposing-rewards-for-few-shot-inverse-reinforcement-learning)  
+1. [Meta-Learning Preferences for Multilingual LLM Alignment](/202607/23/2607.13315v2-meta-learning-preferences-for-multilingual-llm-alignment)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：从少量演示中学习代理决策的少样本逆强化学习
-6. [Value-Aware Prediction for Robust Multi-Agent Coordination Under Communication Loss](/202607/22/2607.17914v1-value-aware-prediction-for-robust-multi-agent-coordination-under-communication-loss)  
+   evidence：使用元学习进行RLHF/DPO以对齐LLM，利用RL增强LLM能力
+2. [Trace-Based On-Policy Distillation for Masked Diffusion Language Models](/202607/23/2607.16872v1-trace-based-on-policy-distillation-for-masked-diffusion-language-models)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：价值感知预测增强通信丢失下的多智能体强化学习鲁棒性
-7. [S3: Stable Subgoal Selection by Constraining Uncertainty of Coarse Dynamics in Hierarchical Reinforcement Learning](/202607/22/2607.19232v1-s3-stable-subgoal-selection-by-constraining-uncertainty-of-coarse-dynamics-in-hierarchical-reinforcement-learning)  
+   evidence：基于强化学习的蒸馏方法用于扩散大语言模型
+3. [CHMAS: A Coupled Hierarchical Framework for Multi-Agent Reinforcement Learning](/202607/23/2607.19555v1-chmas-a-coupled-hierarchical-framework-for-multi-agent-reinforcement-learning)  
    标签：评分：7.0/10、query:agentic-rl
-   evidence：分层强化学习中考虑动态不确定性的子目标选择
-8. [Closed-Loop Knowledge Dynamics: An Operational Framework for Saturation and Escape](/202607/22/2607.14185v1-closed-loop-knowledge-dynamics-an-operational-framework-for-saturation-and-escape)  
+   evidence：耦合层次化多智能体强化学习用于智能体决策
+4. [Trace: A Taxonomy-Guided Environment for Multidomain Visual Reasoning](/202607/23/2607.19790v1-trace-a-taxonomy-guided-environment-for-multidomain-visual-reasoning)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：使用可验证奖励的强化学习增强语言和视觉语言模型推理
+5. [Dreamer-CPC: Message Learning with World Models for Decentralized Multi-agent Reinforcement Learning](/202607/23/2607.19809v1-dreamer-cpc-message-learning-with-world-models-for-decentralized-multi-agent-reinforcement-learning)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：基于世界模型的模型多智能体强化学习消息学习
+6. [Notes to Self: Can LLMs Benefit from Experiential Abstractions?](/202607/23/2607.20372v1-notes-to-self-can-llms-benefit-from-experiential-abstractions)  
+   标签：评分：7.0/10、query:agentic-rl
+   evidence：探索使用增强抽象提示的RL来提升LLM推理能力
+7. [A Continuous-Time Reinforcement Learning Framework for Fine-Tuning Discrete Diffusion Models](/202607/23/2607.14522v1-a-continuous-time-reinforcement-learning-framework-for-fine-tuning-discrete-diffusion-models)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：关于LLM和RL中反馈循环的框架
-9. [Reasoning Fine-Tuning Induces Persistent Latent Policy States](/202607/22/2607.18532v1-reasoning-fine-tuning-induces-persistent-latent-policy-states)  
+   evidence：连续时间强化学习框架用于微调离散扩散模型
+8. [From Black Box to Executable Logic: Explainable Reinforcement Learning through Prolog Expert Systems](/202607/23/2607.15459v2-from-black-box-to-executable-logic-explainable-reinforcement-learning-through-prolog-expert-systems)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：将推理微调后的LLM建模为具有潜在策略状态的切换动态系统
-10. [Scalable Policy Optimization for Networked Multi-Agent Reinforcement Learning with Continuous State-Action Spaces](/202607/22/2607.18554v1-scalable-policy-optimization-for-networked-multi-agent-reinforcement-learning-with-continuous-state-action-spaces)  
+   evidence：将RL策略转换为Prolog程序以实现可解释性，类似于使用基于逻辑的方法解释策略
+9. [Information-Based Exploration via Random Features for Reinforcement Learning](/202607/23/2607.17981v1-information-based-exploration-via-random-features-for-reinforcement-learning)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：提出用于连续状态动作空间合作多智能体RL的CDCPG算法，实现可扩展策略优化。
-11. [From Trajectories to Instructions: Language-Conditioned Meta-Reinforcement Learning](/202607/22/2607.18830v1-from-trajectories-to-instructions-language-conditioned-meta-reinforcement-learning)  
+   evidence：RL探索方法用于智能体决策
+10. [A Self-Evolving Default Action for Cooperative Tasks with Continuous Action Space](/202607/23/2607.18597v1-a-self-evolving-default-action-for-cooperative-tasks-with-continuous-action-space)  
    标签：评分：6.0/10、query:agentic-rl
-   evidence：语言条件元强化学习用于智能体适应
+   evidence：连续动作多智能体强化学习的反事实信用分配
 
 
 <div class="dpr-home-promo-card">

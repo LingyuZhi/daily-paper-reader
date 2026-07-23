@@ -1,0 +1,1347 @@
+Title: From Black Box to Executable Logic: Explainable Reinforcement Learning through Prolog Expert Systems
+
+URL Source: https://arxiv.org/pdf/2607.15459v2
+
+Published Time: Tue, 21 Jul 2026 01:41:21 GMT
+
+Number of Pages: 37
+
+Markdown Content:
+# From Black Box to Executable Logic: Explainable Reinforcement Learning through Prolog Expert Systems 
+
+Eduardo C. Garrido-Merch´ an Institute of Research in Technology (IIT), Universidad Pontificia Comillas DIGNUM Center for AI Ethics and Data Rights Madrid, Spain 
+
+ecgarrido@comillas.edu 
+
+Abstract 
+
+A trained deep reinforcement learning policy is a black box, and we ask whether it can be rewritten as an executable logic program that reproduces its behaviour, that a person can read, a logic engine can run, and an optimizer can edit. We present a three-stage post-hoc transformation that extracts a frozen proximal policy optimization teacher, induces an ordered list of first-order clauses from its decisions, and emits the result as a Prolog program executed by an off-the-shelf logic engine; a subsequent expansion stage edits the rule base and accepts an edit only when policy evaluation certifies a return increase. The method rests on guarantees we prove and check rather than assert. In a finite Markov decision process a performance-difference identity localizes the return the student forfeits to the advantage of the teacher’s action at the states where the two disagree, weighted by the teacher’s visitation, which turns a worst-case return-loss bound that is vacuous at γ = 0 .99 into an advantage-gap certificate that is computed exactly and, on our task, tighter by a median factor of about 13 ,700 and non-vacuous in every one of fifteen seeds; the expansion loop in addition improves the return monotonically and halts. On a two-room key-and-door task with 16 ,944 reachable states the expanded Prolog program attains exact optimal return in every seed and, in a budget-capped regime, exceeds the stochastic teacher on exact return in fifteen of fifteen seeds. On a MiniGrid DoorKey task a first-order Prolog student distilled on the 8 × 8 layout transfers to unseen 6 × 6 and 16 × 16 grids at interquartile-mean return 0 .947 and 0 .988 with nine clauses, whereas decision trees over absolute cell coordinates collapse to zero return off the training size; the relational representation, not the choice between a tree and a logic program, is what transfers. On propositional continuous control the same pipeline substitutes the network in fidelity and beats the closest logic-based prior art, but a first-order clause list has no relational structure to exploit in a four to six dimensional observation, and it loses to CART and VIPER on return, on CartPole in zero of fifteen seeds with a Holm-corrected 
+
+p = 3 .7 × 10 −4; we report this as the expected ceiling of the propositional instantiation rather than conceal it. For that setting we also prove that the propositional conversion is arbitrarily faithful as the resolution B grows, with disagreement and return gap closing at rate O(1 /B ), and that the cost is exponential in the observation dimension, Ω( Bd−1) rules for an oblique decision boundary. 
+
+# 1 Introduction 
+
+A trained deep reinforcement learning policy is a dense numerical object, and the practical question of what it has learned is usually answered indirectly, through saliency maps, surrogate scores, or counterfactual probes, none of which yields an artefact one can read, execute, and edit. The oldest form of artificial intelligence offers a different kind of answer. A symbolic expert system states its behaviour as a set of rules that a human can inspect and a logic engine can run, and recent work has shown that the two traditions can be brought into contact, with large language models used to draft the rule bases of classical expert systems (Garrido-Merch´ an and 1arXiv:2607.15459v2 [cs.AI] 20 Jul 2026 Puente, 2025). This paper takes the converse direction inside reinforcement learning: rather than write the rules by hand or by prompting, we recover them from a trained neural policy, and we ask how far the recovered symbolic program can be pushed. The object we produce is not a heat map or an approximate score but a Prolog program that plays the task, and the question we answer is whether such a program can be made to match or surpass the network it was distilled from. Three properties distinguish the artefact we target. First, the extraction is post-hoc: the teacher is any frozen policy, here a proximal policy optimization agent (Schulman et al., 2017), and nothing in its training is modified to make it interpretable. Second, the student is an executable first-order logic program, an ordered list of clauses over a predicate vocabulary that runs unchanged under SWI-Prolog (Wielemaker et al., 2012), rather than a propositional decision tree or a fitted scoring function. Third, the pipeline does not stop at imitation. Once the rule base exists, a return-maximizing expansion stage edits it and keeps only the edits that a policy-evaluation oracle certifies to raise the return, so the symbolic student can move away from the teacher wherever the teacher was wrong. We make three contributions, organized around where a first-order symbolic student earns its keep and where it does not. The first is the transformation pipeline itself, comprising an extraction stage that queries the frozen teacher’s greedy action over a reachable state census or, when no census exists, over a DAgger loop (Ross et al., 2011), an induction stage that greedily grows an ordered list of first-order clauses in the manner of the FOIL algorithm (Quinlan, 1990), and an expansion stage that hill climbs on the exact return over the space of rule-base edits, accepting an edit only when a policy-evaluation oracle certifies an increase. The second is a theoretical account whose centre is a machine-checkable certificate. We prove a return-loss bound whose worst-case form, at most 2 Rmax ϵ†/(1 − γ)2 with ϵ† the disagreement rate weighted by the teacher’s discounted visitation, is vacuous at the discount factor we use, and we then sharpen it: a performance-difference identity localizes the forfeited return to the advantage of the teacher’s action at the disagreeing states, which yields an advantage-gap certificate that removes one factor of the effective horizon, coincides with the exact return gap whenever the student weakly dominates the teacher on those states, and is computed in closed form in a finite Markov decision process. We prove in addition that the expansion loop improves the return monotonically and halts, and, for the continuous-observation setting, that the propositional threshold instantiation converts the network to arbitrary fidelity as the resolution B grows, with disagreement and return gap closing at rate O(1 /B ), subject to a curse of dimensionality that we make precise as an Ω( Bd−1) lower bound on the number of rules an oblique decision boundary forces on any axis-aligned list. The third contribution is an experimental study across two regimes that separate the relational payoff from its absence. On a two-room key-and-door environment small enough to admit exact policy evaluation, the expanded Prolog program reaches exact optimal return in every seed of both a converged and a budget-capped teacher regime, and in the capped regime exceeds the stochastic teacher on exact return in fifteen of fifteen seeds by a mean paired margin of 0 .100 with a 95% confidence interval of [0 .096 , 0.104], while the refined certificate is non-vacuous in every seed and tighter than the worst-case bound by a median factor of about 13 ,700. On a MiniGrid DoorKey task the first-order student distilled on the 8 × 8 layout transfers to unseen 6 × 6 and 16 × 16 grids with nine clauses, at a return that tracks the teacher, whereas decision trees over absolute cell coordinates, which match on the training size, collapse to zero return at every other size, so the relational representation is what carries the policy across scale. On four to six dimensional continuous control, by contrast, the propositional student substitutes the network in fidelity and beats the closest logic-based prior art (Coppens et al., 2021) but loses on return to CART (Breiman et al., 1984) and to VIPER (Bastani et al., 2018), and we frame this loss as the expected consequence of a representation with no relational structure to exploit where the observation carries none. We report throughout the interquartile mean with stratified bootstrap intervals in the manner of Agarwal et al. (2021) and correct multiple comparisons 2explicitly, and we are equally explicit about the negative results, chief among them the CartPole return deficit in which the first-order list is beaten in zero of fifteen seeds. The paper proceeds as follows. We first position the method within the neurosymbolic and explainable reinforcement learning landscape and then fix the formal setting, the student class, and the three-stage algorithm. We prove the return-loss bound, the advantage-gap refinement, the expansion guarantee, and the resolution theory, and we then present the experiments in one section that moves from the exact and certified key-and-door regime to the relational DoorKey transfer and finally to the propositional continuous-control instantiation with its honest baseline comparison. We close with the limitations the guarantees do not cover and the generative continuation the expansion oracle makes possible. 
+
+# 2 Related work 
+
+The work that turns a neural policy into an inspectable object organizes along three axes, and naming them locates our contribution precisely. The first axis separates post-hoc methods, which leave a fixed teacher untouched and recover a surrogate from its decisions, from trained methods, which build interpretability into the policy during learning. The second axis separates the target representation, on one side the propositional surrogates whose tests are thresholds on raw features, decision trees foremost among them (Breiman et al., 1984), and on the other the first-order or relational surrogates whose clauses quantify over objects and relations. The third axis separates a surrogate that merely scores or explains from one that is itself executable and can be run as the policy. Interpretability here is a proxy for ends such as auditability and contestability rather than a measured quantity (Doshi-Velez and Kim, 2017), and we take the operational stance that an executable program one can read, run, and edit is the strongest such proxy an extraction method can produce. Our method occupies the post-hoc, first-order, executable cell, and adds two properties the axes do not name: the student is expandable past its teacher under a return oracle, and its return loss is certified. We now place the closest prior work against these axes. The distillation of a trained policy into an interpretable surrogate is by now a mature line. VIPER extracts a decision tree from a deep Q-network with a DAgger-style procedure and proves a return bound for the tree student (Bastani et al., 2018); programmatically interpretable reinforcement learning searches a domain-specific program space guided by a neural oracle (Verma et al., 2018), and its imitation-projected successor casts the search as mirror descent (Verma et al., 2019). Linear model U-trees fit piecewise-linear trees to a network’s behaviour (Liu et al., 2018), and more recent work distils policies into editable programmatic trees and studies when they can be corrected by hand (Kohler et al., 2024). Our extraction and induction stages sit squarely in this tradition, and Theorem 1 is the decision-list analogue of the VIPER tree bound, with the difference that in our finite setting the error rate is computed exactly rather than estimated. The classical reduction of imitation to no-regret online learning (Ross et al., 2011) is the tool that would replace our exhaustive census once the state space is too large to enumerate. The target language separates our work from most of this line. A parallel body of research learns first-order logic policies directly, either by training a differentiable inductive logic layer (Jiang and Luo, 2019), by guiding symbolic rule search with a pretrained neural agent (Delfosse et al., 2023), by inventing explanatory predicates in games (Sha et al., 2024), or by blending symbolic and neural policies in a single trainable model (Shindo et al., 2025); concept-bottleneck agents align a policy to object-centric concepts for the same interpretability end (Delfosse et al., 2024). These methods train the logic, whereas we extract it post-hoc from a fixed neural teacher. The closest post-hoc work synthesises set-valued propositional rules from a reinforcement learning policy and refines them in the environment (Coppens et al., 2021); our student is a first-order, executable Prolog program rather than a propositional rule set, and 3our expansion stage optimizes exact return rather than repairing fidelity. The observation that symbolic policies can outperform deep networks has been made for symbolic regression of closed-form controllers (Landajuela et al., 2021), and finite-state controllers have been extracted from recurrent policies (Koul et al., 2019), but neither closes the loop in which an extracted logic program is expanded past its own teacher. Relational reinforcement learning (Dzeroski et al., 2001) is the intellectual ancestor of the first-order representation we use, and the recent survey of explainable reinforcement learning (Milani et al., 2024) places the entire distillation family in context and leaves the post-hoc first-order executable cell that our method occupies essentially open. 
+
+# 3 Problem setting 
+
+We work in the infinite-horizon discounted setting with a finite state and action space. All results in this paper rest on the following assumption, which we reference by number throughout. 
+
+Assumption 1 (Finite discounted MDP with bounded reward) . The environment is a Markov decision process M = ( S, A, P, r, γ, μ 0) in which the state space S and the action space A are finite, P (· | s, a ) is a probability distribution on S for every pair ( s, a ) ∈ S × A , the reward function r : S × A → R satisfies |r(s, a )| ≤ Rmax for a known constant Rmax < ∞, the discount factor satisfies γ ∈ (0 , 1), and μ0 is a probability distribution on S from which the initial state is drawn. A stationary policy is a map π : S → ∆( A), where ∆( A) denotes the set of probability distributions on A; we write π(a | s) for the probability that π selects action a in state s.A deterministic policy is a map π : S → A , identified with the stationary policy that puts all mass on π(s). Given a policy π, the process ( st, a t)t≥0 with s0 ∼ μ0, at ∼ π(· | st), and 
+
+st+1 ∼ P (· | st, a t) is the trajectory distribution induced by π, and we write Pr πμ0 and Eπμ0 for probabilities and expectations under it. 
+
+Definition 1 (Value functions and return) . Under Assumption 1, the state value function of a policy π is 
+
+V π(s) = Eπ
+
+" ∞X
+
+> t=0
+
+γtr(st, a t) s0 = s
+
+#
+
+,
+
+the action value function is 
+
+Qπ(s, a ) = r(s, a ) + γ X
+
+> s′∈S
+
+P (s′ | s, a ) V π(s′),
+
+and the advantage function is Aπ(s, a ) = Qπ(s, a ) − V π(s). The return of π is J(π) = 
+
+Es∼μ0 [V π(s)]. The series defining V π converges absolutely because |r(st, a t)| ≤ Rmax and γ ∈ (0 , 1), and the geometric-series bound yields 
+
+|V π(s)| ≤ Rmax 
+
+1 − γ , |Qπ(s, a )| ≤ Rmax 
+
+1 − γ , |Aπ(s, a )| ≤ 2Rmax 
+
+1 − γ (1) for every π, s, and a. The bound on Aπ follows from the triangle inequality applied to the definition Aπ = Qπ −V π. The ranges in (1) supply the constants in Theorem 1 and Proposition 1. 
+
+Definition 2 (Teacher and argmax teacher) . The teacher πT is a fixed stochastic stationary policy, in our experiments the softmax policy of a converged or budget-capped PPO agent 4(Schulman et al., 2017), frozen after training. Fix a total order on A. The argmax action of the teacher at state s is 
+
+aT (s) = min 
+
+n
+
+a ∈ A : πT (a | s) = max  
+
+> a′∈A
+
+πT (a′ | s)
+
+o
+
+,
+
+the minimum taken with respect to the fixed order on A, so that ties are broken deterministically. The argmax teacher is the deterministic policy ¯ πT (s) = aT (s). Throughout the paper the imitation target of the distillation stage is the argmax teacher ¯πT , not the stochastic policy πT . This convention is stated once here and used consistently: the student is trained to reproduce aT (s), the return-loss bound of Theorem 1 is stated against 
+
+J( ¯πT ), and the gap J(πT ) − J( ¯πT ) between the stochastic teacher and its argmax counterpart is a separate, sign-indefinite quantity that we compute exactly rather than bound (Corollary 1 and Proposition 2). We now define the student class. The student is an ordered list of first-order clauses over a fixed predicate vocabulary, executed with decision-list semantics and emitted as a Prolog program. 
+
+Definition 3 (Predicate vocabulary and grounded literals) . A predicate vocabulary is a finite set P = {p1, . . . , p n} of predicate symbols, each pi with an arity ki ≥ 0 and, for each argument position, a finite argument domain (in our instantiation, object constants such as key , door , goal and direction constants such as up , down , left , right ), together with an interpretation map that assigns to every state s ∈ S and every tuple of arguments drawn from the argument domains a truth value. An atom is an expression pi(u1, . . . , u ki ) whose arguments uj are constants from the corresponding domains or variables; a literal is an atom or a negated atom. A grounding of a set of literals is a substitution of constants for all of its variables; a grounding is satisfied in state s when every positive literal evaluates to true and every negated literal evaluates to false under the interpretation map at s.
+
+Definition 4 (Ordered decision list and student class) . A clause is a pair c = ( B, α ) in which the body B is a finite conjunction of literals over the vocabulary P and the head α is either a constant action in A or an action term containing variables that also appear in B. An ordered decision list is a finite sequence L = ( c1, . . . , c m, c def ) of clauses whose last element cdef , the 
+
+default clause , has an empty body and a constant action head. The list L defines a policy πL as follows. Fix a total order on the finite set of groundings of each clause body (in the executable program, the order in which SLD resolution enumerates solutions). At state s, let cj be the first clause in the list whose body admits a satisfied grounding at s, let σ be the first satisfied grounding of its body, and set πL(s) to the action obtained by applying σ to the head of cj . The 
+
+student class ΠL is the set of all policies πL representable by ordered decision lists over P.Because the default clause has an empty body, it admits the empty grounding at every state, so some clause fires at every s; because the first firing clause and its first satisfied grounding are determined by the fixed orders, the firing clause selects a unique action. Consequently every 
+
+πL ∈ ΠL is a total deterministic policy, and Π L is a subset of the set AS of deterministic policies. The results below use only this property; the first-order structure of Π L matters for compactness and interpretability, not for the validity of the bounds. In the algorithmic sections the generic symbol πS denotes the deterministic student, and in all instantiations πS ∈ ΠL.
+
+Definition 5 (Discounted occupancy measure) . Under Assumption 1, the normalized discounted occupancy measure of a policy π is the probability distribution on S given by 
+
+dπ(s) = (1 − γ)
+
+> ∞
+
+X
+
+> t=0
+
+γt π
+
+Pr 
+
+> μ0
+
+(st = s).
+
+5The prefactor (1 − γ) normalizes the geometric series, so P 
+
+> s
+
+dπ(s) = 1 and expressions of the form Es∼dπ [f (s)] are ordinary expectations. The occupancy measure weights states by how often, in discounted terms, the policy π visits them from μ0; it is the correct measure under which to count imitation errors, because the performance-difference identity of Lemma 1 integrates advantages precisely against it. 
+
+Definition 6 (Disagreement rates) . Let πS be a deterministic student policy. The disagreement rate under the stochastic teacher is 
+
+ϵ = Pr 
+
+> s∼dπT
+
+πS (s)̸ = aT (s) = X
+
+> s∈S
+
+dπT (s) 1πS (s)̸ = aT (s),
+
+and the disagreement rate under the argmax teacher is 
+
+ϵ† = Pr 
+
+> s∼d¯πT
+
+πS (s)̸ = aT (s) = X
+
+> s∈S
+
+d¯πT (s) 1πS (s)̸ = aT (s),
+
+where 1[·] denotes the indicator function. Both rates measure the same event, disagreement with the argmax action aT (s), under two different visitation measures. The rate ϵ† is the quantity that enters the return-loss bound of Theorem 1, because the bound compares πS with the deterministic target ¯πT and the performance-difference identity then integrates against d¯πT . The rate ϵ is the fidelity statistic most natural to report against the deployed stochastic teacher. In the finite setting of Assumption 1 with a known model, both are computed exactly by the census (Proposition 2), so no change-of-measure or concentrability argument is needed to relate them: the experiments report both numbers. 
+
+# 4 Extraction, induction, and expansion 
+
+The pipeline maps a frozen teacher policy πT to an executable logic program in three stages, whose formal guarantees are the subject of Section 5 and whose interfaces to those guarantees are the visitation measures and disagreement rates of Section 3. Figure 1 summarizes the flow of artefacts. The extraction stage records what the teacher does. Under the model access of Assumption 3 the reachable set Sr is enumerated once, and the teacher’s greedy action aT (s) of Definition 2 is queried at every reachable state, producing a complete census of the target policy ¯πT . The same rollouts that estimate the teacher’s discounted visitation dπT are retained, because the induction stage weights states by visitation and the two disagreement rates of Definition 6 are reported against both the census measure and the visitation measure. The census is the finite-state instrument that replaces the sampling of a DAgger loop (Ross et al., 2011): because every reachable state is labelled, the induction stage never queries the teacher off its own distribution, and the disagreement rate that enters the return-loss bound is exact. The induction stage grows an ordered decision list of the class in Definition 4. Following the greedy set-covering strategy of FOIL (Quinlan, 1990), the algorithm repeatedly selects the action head and the conjunction of literals that best separate the states still labelled by the teacher, scoring a candidate clause by the product of its coverage and its precision under the visitation weights, specializing a clause by adding up to three literals from the predicate vocabulary, and admitting the shared direction variable that lets a single clause such as act (s, move (D)) ← dir to (s, key , D ) ground to whichever compass action points along the path to the key. The list is closed with a default clause set to the teacher’s most frequent residual action, which by the argument following Definition 4 makes the induced policy total and deterministic. The result is written to disk as a Prolog program: a perception layer defines the state predicates, a tabled breadth-first search computes the path-aware direction predicate while respecting walls 6and the locked door, and the decision list is compiled to clauses with a first-match cut discipline so that the first applicable rule fires exactly as the decision-list semantics prescribe. The program is executable input to SWI-Prolog (Wielemaker et al., 2012), and at run time we assert on a sample of states that the Prolog engine and the reference evaluator select identical actions, so the artefact we analyse and the artefact we execute are the same policy. The expansion stage improves the program. It hill climbs over rule-base edits, adding a specialized clause at a chosen position, reordering clauses, or pruning a clause other than the default, and it accepts an edit only when the exact return of Definition 1 increases by at least a margin τ . The exact return is available because the environment is a finite Markov decision process with a known model, so the acceptance test solves one linear system rather than averaging noisy rollouts, and Proposition 1 shows the loop improves monotonically and terminates. Because the acceptance criterion is return, not fidelity, an accepted edit can move the student away from the teacher on states the teacher visits rarely, and this is precisely the mechanism by which the symbolic student surpasses the network that produced it. Two of the three stages survive intact when the state space is too large to enumerate, and only the interfaces to the guarantees change. When no reachable census exists, the extraction stage replaces it with the DAgger reduction of imitation to no-regret online learning (Ross et al., 2011): the current student is rolled out, the states it visits are relabelled by the frozen teacher, and the union of teacher-visited and student-visited states drives the next induction, so the induced list is trained on the off-distribution states its own errors produce rather than on the teacher’s distribution alone. Exact policy evaluation is then replaced by Monte-Carlo return over a fixed episode-seed stream shared by the teacher and every student, which reintroduces the confidence parameters that the finite-model solves eliminate but leaves the induction and the executable emission unchanged. The predicate vocabulary is the one part of the pipeline that is task-specific, and its expressiveness is what decides whether the first-order structure of Definition 4 is exercised or left idle. On the MiniGrid DoorKey task (Chevalier-Boisvert et al., 2023) the vocabulary is genuinely relational: a base layer of nullary perception predicates such as facing key , facing door , and carrying key reads the agent-centric observation, and a path-aware navigation predicate nav (s, obj , A ) computes, by a tabled breadth-first search over the traversable cells that respects walls and the locked door, the action A that advances along a shortest path to the object obj ∈ { key , door , goal }. Because nav quantifies over cells and returns a direction rather than testing a coordinate, a clause such as act (s, A ) ← nav (s, goal , A )is agnostic to the size of the grid, and the same list transfers unchanged from the layout it was distilled on to layouts it has never seen. On continuous control the vocabulary is by contrast propositional, a grid of threshold tests on the observation features, and the first-order machinery collapses to an ordered list of axis-aligned conjunctions; Section 6 shows that this is exactly where the representational advantage disappears. 
+
+# 5 Theory 
+
+We now state the guarantees. The first bounds the return the distilled program forfeits relative to the greedy teacher. The second shows the expansion loop is well behaved. The third turns the first into a certificate that is checked, not merely asserted, on every run of the experiments. The fourth sharpens that certificate: it localizes the forfeited return to the advantage of the teacher’s action at the disagreeing states, removes a factor of the effective horizon, and becomes exactly non-vacuous when the student weakly dominates the teacher on those states, which is the regime our distillation targets and the reason the certificate acquires teeth on the key-and-door task where the worst-case bound cannot. The fifth answers, for the continuous-observation setting of the later experiments, the question of whether a neural policy can be converted into a threshold-rule expert system at all: it establishes that the conversion is arbitrarily faithful as the resolution grows, that the return gap then closes, and that the cost of doing so is exponential in 7PPO teacher             
+
+> πT(frozen)
+> Extract
+> census + dπT
+> Induce FOIL rule list
+> Prolog program .pl
+> Expand
+> exact-J
+> hill climb
+> exact Jvia Bellman solve (I−γP π)v=rπ
+> D
+> A
+> K
+> G
+> A agent
+> K key
+> D locked door
+> G goal
+
+Figure 1: Above, the transformation pipeline: a frozen PPO teacher is censused and rolled out, a FOIL-style ordered rule list is induced and emitted as an executable Prolog program, and an expansion loop edits the program, accepting an edit only when an exact-return oracle certifies an increase. Below, the KeyDoor environment: the agent must fetch the key in the left room and open the locked door before it can reach the goal in the right room. Colours encode the semantic roles used in every figure, with the teacher in ink, the distilled student in grey, and the expanded student in gold. the observation dimension. We now bound the return lost by replacing the argmax teacher with the distilled student. The strategy is the standard one for imitation-style guarantees, instantiated for a deterministic logic-program student and, in our finite setting, with an exactly computable error rate rather than an estimated one. The single technical ingredient is the performance-difference lemma of Kakade and Langford (2002): the return gap between two policies equals the discounted aggregate of the advantages of one policy’s actions measured under the other policy’s value function and occupancy. On states where the student reproduces the argmax action the advantage of the teacher’s action under the student’s own value function vanishes, because the advantage of a deterministic policy’s own action is identically zero; on the remaining states the advantage is bounded by the range (1) . The disagreement rate ϵ† of Definition 6 then converts the pointwise bound into the final estimate. The only subtlety is the choice of imitation target: we compare the student with the deterministic argmax teacher ¯πT of Definition 2, and we account for the stochastic teacher separately in Corollary 1, because the gap J(πT ) − J( ¯πT ) is sign-indefinite in general and is computed exactly by the census of Proposition 2. We first state and prove the performance-difference lemma in the form we use. The result is due to Kakade and Langford (2002); we include the short telescoping proof to keep the paper self-contained and because the certificate of Proposition 2 checks this identity numerically. 
+
+Lemma 1 (Performance-difference lemma, Kakade and Langford, 2002) . Let Assumption 1 hold, and let π and π′ be stationary policies. Then 
+
+J(π) − J(π′) = 11 − γ Es∼dπ Ea∼π(·| s)
+
+Aπ′
+
+(s, a ). (2) 
+
+Proof. Let ( st, a t)t≥0 be the trajectory process induced by π from s0 ∼ μ0. Since J(π′) = 
+
+Es0∼μ0 [V π′
+
+(s0)] by Definition 1, we may write the gap as 
+
+J(π) − J(π′) = Eπμ0
+
+" ∞X
+
+> t=0
+
+γtr(st, a t)
+
+#
+
+− Eπμ0
+
+V π′
+
+(s0)
+
+= Eπμ0
+
+" ∞X
+
+> t=0
+
+γt
+
+r(st, a t) + γV π′
+
+(st+1 ) − V π′
+
+(st)
+
+#
+
+.
+
+8The second equality holds because the added terms telescope: the partial sum PTt=0 γt γV π′
+
+(st+1 )−
+
+V π′
+
+(st) equals γT +1 V π′
+
+(sT +1 )−V π′
+
+(s0), and the boundary term γT +1 V π′
+
+(sT +1 ) vanishes as T →∞ by the value bound (1) and γ < 1; the interchange of limit and expectation is justified by dom-inated convergence, the summands being uniformly bounded by ( Rmax + (1 + γ)Rmax /(1 − γ)) γt,a summable envelope. Next, conditioning each term on ( st, a t) and using the Markov property, 
+
+Eπμ0
+
+V π′
+
+(st+1 ) | st, a t
+
+ = X
+
+> s′∈S
+
+P (s′ | st, a t) V π′
+
+(s′),
+
+so that, by the definition of Qπ′
+
+in Definition 1, 
+
+Eπμ0
+
+h
+
+r(st, a t) + γV π′
+
+(st+1 ) − V π′
+
+(st) st, a t
+
+i
+
+= Qπ′
+
+(st, a t) − V π′
+
+(st) = Aπ′
+
+(st, a t).
+
+Substituting and exchanging summation over t with the expectation, which is again licensed by the summable envelope γt 2Rmax /(1 − γ) on |Aπ′
+
+|, we obtain 
+
+J(π) − J(π′) = 
+
+> ∞
+
+X
+
+> t=0
+
+γt Eπμ0
+
+Aπ′
+
+(st, a t)
+
+= 11 − γ
+
+X
+
+> s∈S
+
+dπ(s) X
+
+> a∈A
+
+π(a | s) Aπ′
+
+(s, a ),
+
+where the last step unpacks Eπμ0 [Aπ′
+
+(st, a t)] = P 
+
+> s
+
+Pr πμ0 (st = s) P 
+
+> a
+
+π(a | s)Aπ′
+
+(s, a ) and applies the definition of the occupancy measure (Definition 5), whose factor (1 − γ) produces the prefactor 1 /(1 − γ). This is (2). 
+
+Theorem 1 (Return-loss bound for the distilled student) . Let Assumption 1 hold. Let ¯πT be the argmax teacher of Definition 2, let πS be any deterministic policy, in particular any decision-list student πS ∈ ΠL of Definition 4, and let ϵ† = Pr s∼d¯πT [πS (s)̸ = aT (s)] be the disagreement rate of Definition 6. Then 
+
+J(¯ πT ) − J(πS ) ≤ 2Rmax ϵ†
+
+(1 − γ)2 , (3) 
+
+and the same right-hand side bounds J( ¯πT )−J(πS ) . In particular, if ϵ† = 0 then J(πS ) = J( ¯πT ).Proof. Apply Lemma 1 with π = ¯πT and π′ = πS . Since ¯πT is deterministic with ¯πT (s) = aT (s), the inner expectation over actions collapses to a point evaluation and (2) reads 
+
+J(¯ πT ) − J(πS ) = 11 − γ
+
+X
+
+> s∈S
+
+d¯πT (s) AπS  s, a T (s). (4) We split the sum according to whether the student agrees with the argmax action at s. On the agreement set {s : πS (s) = aT (s)} the summand vanishes, because for a deterministic policy the advantage of its own action is zero: 
+
+AπS  s, π S (s) = QπS  s, π S (s) − V πS (s) = 0 ,
+
+where the second equality holds since V πS (s) = QπS (s, π S (s)) for deterministic πS , by Definition 1. On the disagreement set D = {s : πS (s)̸ = aT (s)} we invoke the advantage range (1) , which gives |AπS (s, a T (s)) | ≤ 2Rmax /(1 − γ) pointwise. Combining the two cases in (4), 
+
+J(¯ πT ) − J(πS ) = 11 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) AπS  s, a T (s)
+
+≤ 11 − γ · 2Rmax 
+
+1 − γ
+
+X
+
+> s∈D
+
+d¯πT (s)= 2Rmax ϵ†
+
+(1 − γ)2 ,
+
+9where the final equality is the definition of ϵ† (Definition 6). The same computation applied to the absolute value of (4) , using the triangle inequality before bounding |AπS |, yields |J( ¯πT )−J(πS )| ≤ 
+
+2Rmax ϵ†/(1 − γ)2. Finally, if ϵ† = 0 then d¯πT (s) = 0 for every s ∈ D, so every summand in (4) vanishes and the gap is exactly zero. 
+
+Corollary 1 (Accounting for the stochastic teacher) . Under the conditions of Theorem 1, with 
+
+∆T = J(πT ) − J(¯ πT ) the argmax gap of the stochastic teacher, 
+
+J(πT ) − J(πS ) ≤ ∆T + 2Rmax ϵ†
+
+(1 − γ)2 .
+
+Proof. Write J(πT ) − J(πS ) =  J(πT ) − J( ¯πT ) +  J( ¯πT ) − J(πS ) and bound the second summand by Theorem 1. The quantity ∆ T carries no general sign: aT (s) maximizes the teacher’s action probability, not the teacher’s action value, so the argmax teacher can be better or worse than the stochastic teacher it is derived from. We therefore do not bound ∆ T ; under Assumption 1 with a known model it is computed exactly by solving two Bellman linear systems (Proposition 2), and the experiments report it alongside both sides of (3). Theorem 1 says the following. If the student reproduces the argmax teacher’s action on all but an ϵ†-fraction of states, the fraction weighted by the argmax teacher’s own discounted visitation, then the student forfeits at most 2 Rmax ϵ†/(1 − γ)2 return, and a perfectly faithful student forfeits nothing. The theorem does not say that the student tracks the stochastic teacher πT ; that comparison acquires the sign-indefinite offset ∆ T of Corollary 1. Nor does it say anything about disagreements on states the argmax teacher rarely visits: a state with 
+
+d¯πT (s) ≈ 0 contributes nothing to ϵ†, which is precisely the blind spot the census of Proposition 2 exposes and the EXPAND loop of Proposition 1 exploits. The bound is the decision-list analogue of the tree-student guarantee of VIPER (Bastani et al., 2018), with one material difference: in our finite setting ϵ† is computed exactly rather than estimated from rollouts, so (3) is a certificate rather than a high-probability statement. The constant is the standard one for imitation by action matching: the factor 2 Rmax /(1 − γ) is the worst-case advantage of a single deviation, the additional 1 /(1 − γ) reflects the compounding of deviations along the discounted horizon, and the quadratic horizon dependence cannot be improved in general for disagreement-based bounds. In the myopic limit γ → 0 the bound degenerates gracefully to the single-step statement J( ¯πT ) − J(πS ) ≤ 2Rmax ϵ†, the largest possible one-step reward difference incurred with probability ϵ†. The bound is informative only when ϵ† = O (1 − γ)2: with the KeyDoor instantiation γ = 0 .99 the prefactor is 2 Rmax · 10 4, so the certificate has teeth only for the very small exact disagreement rates the census measures, which is the regime the experiments target. The EXPAND stage performs hill climbing on the return over the decision-list class. An 
+
+edit operator maps an ordered decision list to another ordered decision list; the operators we use add a specialized clause at a chosen position, reorder existing clauses, or prune a clause other than the default clause, so every edit output remains a well-formed list in the sense of Definition 4 and in particular remains total and deterministic. For a list L, let E(L) denote the set of candidate lists proposed for L, that is, the images of L under the admissible edit operators instantiated over the candidate pool. The loop maintains a current list Lk, evaluates J(πL′ ) for candidates L′ ∈ E (Lk), accepts a candidate if it clears the current return by at least a margin τ ,and stops when no candidate does. 
+
+Assumption 2 (Exact evaluation and finite proposals) . The EXPAND loop has access to an oracle that returns the exact return J(πL) of Definition 1 for every queried list L, the acceptance margin satisfies τ > 0, the candidate set E(L) is finite for every list L, and an edit L → L′ is accepted only if J(πL′ ) ≥ J(πL) + τ .10 Under Assumption 1 the exact-oracle requirement is not an idealization: Proposition 2 shows that J(πL) is obtained by solving one linear system, so acceptance decisions are free of Monte Carlo noise. We call a list L a τ -local optimum with respect to E when J(πL′ ) < J (πL) + τ for every L′ ∈ E (L), that is, when no admissible edit improves the return by the margin. 
+
+Proposition 1 (Monotone improvement and finite termination of EXPAND) . Let Assumptions 1 and 2 hold, and let L0, L 1, L 2, . . . be the sequence of lists produced by the EXPAND loop, where Lk+1 ∈ E (Lk) is an accepted candidate. First, the returns increase monotonically: 
+
+J(πLk+1 ) ≥ J(πLk ) + τ for every accepted edit, so the last iterate is also the best iterate. Second, the number N of accepted edits satisfies 
+
+N ≤ Jmax − J(πL0 )
+
+τ ≤ 2Rmax 
+
+(1 − γ) τ ,
+
+where Jmax = max π J(π) ≤ Rmax /(1 − γ) is the optimal return, the maximum over all stationary policies being attained by an optimal deterministic policy, which exists in a finite discounted MDP under Assumption 1. Third, the loop terminates after finitely many oracle calls, and its final list is a τ -local optimum with respect to E.Proof. The first claim restates the acceptance rule of Assumption 2: an edit is accepted only if it increases the exact return by at least τ , and since the oracle is exact the recorded improvement is the true improvement; monotonicity of the sequence ( J(πLk )) k follows by induction on k, and the last iterate maximizes J over the iterates because each term dominates its predecessors. For the second claim, chain the accepted improvements: after N accepted edits, 
+
+J(πLN ) = J(πL0 ) +  
+
+> N−1
+
+X
+
+> k=0
+
+ J(πLk+1 ) − J(πLk )
+
+≥ J(πL0 ) + N τ, 
+
+where the inequality applies the acceptance margin to each summand. Since J(πLN ) ≤ Jmax 
+
+by definition of Jmax , rearranging gives N ≤ (Jmax − J(πL0 )) /τ . The coarser bound follows from the value range (1) , which gives Jmax ≤ Rmax /(1 − γ) and J(πL0 ) ≥ − Rmax /(1 − γ), hence 
+
+Jmax − J(πL0 ) ≤ 2Rmax /(1 − γ). For the third claim we observe that each iteration of the loop either accepts an edit or exhausts the finite candidate set E(Lk) without acceptance and stops. Acceptances occur at most N ≤ 2Rmax /((1 − γ)τ ) times by the second claim, and every iteration issues at most |E (Lk)| < ∞ oracle calls by Assumption 2, so the total number of oracle calls is finite and the loop halts. At the halting list Lfin no candidate L′ ∈ E (Lfin ) satisfies 
+
+J(πL′ ) ≥ J(πLfin ) + τ , which is the definition of a τ -local optimum. Proposition 1 is a statement about the loop, not about global optimality: the final list is unimprovable by single admissible edits at margin τ , and nothing more. The guarantee is a last-iterate guarantee, and by monotonicity the last iterate coincides with the best iterate, so no averaging over iterates is involved. Two consequences matter for the paper’s claims. First, EXPAND never degrades the distilled student: combining the monotonicity with Theorem 1 applied to the initial list gives J(πLfin ) ≥ J(πL0 ) ≥ J( ¯πT ) − 2Rmax ϵ†
+
+> 0
+
+/(1 − γ)2, where ϵ† 
+
+> 0
+
+is the disagreement rate of the initial list. Second, nothing upper-bounds J(πLfin ) by J( ¯πT ) or J(πT ): when the teacher is imperfect on states of low teacher visitation, an accepted edit that changes actions only on such states raises the student strictly above the teacher, and the acceptance test certifies each such crossing exactly. The bound on N depends only on Rmax , γ, and τ ; it is loose in practice, since typical runs accept far fewer edits than 2 Rmax /((1 − γ)τ ), and it becomes weak as τ → 0 or γ → 1, the price of a guarantee that holds for every edit sequence the heuristic proposer may generate. Theorem 1 relates three quantities, the two returns and the disagreement rate. In a finite MDP with a known model all three are exactly computable, so the bound is not merely a 11 guarantee about unseen quantities: both sides of (3) can be evaluated and the inequality checked mechanically. This section records the computation and its correctness. We need one assumption beyond Assumption 1. 
+
+Assumption 3 (Exact model access) . The transition kernel P , the reward function r, the discount factor γ, and the initial distribution μ0 of Assumption 1 are known, and the environment exposes a procedure that enumerates the reachable state set 
+
+Sr = [
+
+> k≥0
+
+Sk, S0 = supp( μ0), Sk+1 = Sk ∪ s′ : P (s′ | s, a ) > 0 for some s ∈ S k, a ∈ A .
+
+The set Sr is finite because S is finite, the increasing union stabilizes after at most |S| steps, and Sr is closed under every transition of every policy: if s ∈ S r and P (s′ | s, a ) > 0 for any a,then s′ ∈ S r by construction. Consequently every trajectory from μ0 under any policy remains in Sr with probability one, every occupancy measure of Definition 5 is supported on Sr, and all linear algebra below may be carried out on vectors and matrices indexed by Sr alone. We write 
+
+n = |S r| and treat functions on Sr as vectors in Rn.For a stationary policy π, define the policy-induced reward vector and transition matrix 
+
+rπ(s) = X
+
+> a∈A
+
+π(a | s) r(s, a ), Pπ(s, s ′) = X
+
+> a∈A
+
+π(a | s) P (s′ | s, a ),
+
+for s, s ′ ∈ S r; for a deterministic policy these reduce to rπ(s) = r(s, π (s)) and Pπ(s, ·) = P (· | 
+
+s, π (s)). The matrix Pπ is row-stochastic, since each row is a mixture of the probability vectors 
+
+P (· | s, a ) and Sr is closed, so no mass escapes the index set. 
+
+Proposition 2 (Exact census and machine-checkable certificate) . Let Assumptions 1 and 3 hold, and let π be any stationary policy. First, the matrix I − γP π is invertible, and the value vector vπ = ( V π(s)) s∈S r is the unique solution of the Bellman linear system 
+
+vπ = rπ + γP πvπ, that is, vπ = ( I − γP π)−1rπ, (5) 
+
+so that J(π) = μ⊤ 
+
+> 0
+
+vπ. Second, the occupancy measure of Definition 5 satisfies 
+
+dπ = (1 − γ) I − γP ⊤
+
+> π
+
+−1μ0. (6) 
+
+Third, applying (5) to πT , ¯πT , and πS , and (6) to πT and ¯πT , yields in finitely many arithmetic operations the exact values of J(πT ), J( ¯πT ), J(πS ), ∆T , ϵ, and ϵ†, and therefore of both sides of 
+
+(3) ; the certified inequality 
+
+2Rmax ϵ†
+
+(1 − γ)2 ≥ J(¯ πT ) − J(πS )
+
+holds by Theorem 1 and is verifiable by evaluating both sides. Proof. We prove the three claims in order. For the first, invertibility follows from a norm bound on the spectral radius. Since Pπ is row-stochastic, its induced ℓ∞ operator norm is 
+
+∥Pπ∥∞ = max s
+
+P 
+
+> s′
+
+|Pπ(s, s ′)| = 1, hence ∥γP π∥∞ = γ < 1. The spectral radius of a matrix is bounded by any induced operator norm, so ρ(γP π) ≤ γ < 1, no eigenvalue of γP π equals 1, and 
+
+I − γP π is invertible with convergent Neumann series (I − γP π)−1 =
+
+> ∞
+
+X
+
+> t=0
+
+γtP tπ, (I − γP π)−1 
+
+> ∞
+
+≤
+
+> ∞
+
+X
+
+> t=0
+
+γt∥Pπ∥t 
+
+> ∞
+
+= 11 − γ . (7) Next we show vπ solves (5) . For the state process under π, which is Markov on Sr with transition matrix Pπ, the expected reward at time t started from s is Eπ[r(st, a t) | s0 = s] = ( P tπrπ)( s); this follows by induction on t, the base case t = 0 being the definition of rπ as the expected immediate 12 reward under a0 ∼ π(· | s), and the inductive step being the Markov property together with the tower rule. Summing the absolutely convergent series of Definition 1 termwise, 
+
+vπ =
+
+> ∞
+
+X
+
+> t=0
+
+γtP tπrπ
+
+= rπ + γP π
+
+> ∞
+
+X
+
+> t=0
+
+γtP tπrπ
+
+= rπ + γP πvπ,
+
+where the second line reindexes the series, which is permitted by absolute convergence under the bound ∥γtP tπrπ∥∞ ≤ γtRmax . Uniqueness holds because (5) is a linear system with the invertible matrix I − γP π, and comparing the series representation of vπ with (7) confirms 
+
+vπ = ( I − γP π)−1rπ. The identity J(π) = μ⊤ 
+
+> 0
+
+vπ is Definition 1. For the second claim, the marginal distribution of the state at time t is the row vector μ⊤ 
+
+> 0
+
+P tπ,again by induction on t using the Markov property. Definition 5 then gives, as a column vector, 
+
+dπ = (1 − γ)
+
+> ∞
+
+X
+
+> t=0
+
+γt P ⊤
+
+> π
+
+tμ0
+
+= (1 − γ) I − γP ⊤
+
+> π
+
+−1μ0,
+
+where the second line applies the Neumann series (7) to P ⊤ 
+
+> π
+
+, valid because ρ(γP ⊤ 
+
+> π
+
+) = ρ(γP π) ≤
+
+γ < 1, a matrix and its transpose having the same spectrum. For the third claim, each of the five linear solves is a finite computation on n-dimensional data, and the derived quantities are finite arithmetic expressions in their outputs: J values are inner products μ⊤ 
+
+> 0
+
+vπ, the argmax gap is ∆ T = J(πT )−J( ¯πT ), and the disagreement rates of Definition 6 are the finite sums ϵ = P 
+
+> s
+
+dπT (s)1[πS (s)̸ = aT (s)] and ϵ† = P 
+
+> s
+
+d¯πT (s)1[πS (s)̸ = aT (s)], whose indicator entries require one evaluation of πS and one of aT per state in Sr. The certified inequality is precisely (3) , which holds by Theorem 1, and both of its sides are among the computed quantities. Two remarks on the computation. First, the certificate is numerically benign: from ∥I −
+
+γP π∥∞ ≤ 1 + γ and the resolvent bound in (7) , the condition number satisfies κ∞(I − γP π) ≤
+
+(1 + γ)/(1 − γ), which is about 199 for γ = 0 .99, so double-precision solves determine both sides of the certificate to far more digits than the comparison requires; when P , r, γ, and μ0 are rational, as in the KeyDoor environment, all quantities are rational and the check can be run in exact arithmetic. Second, the proposition is what elevates Theorem 1 from a guarantee to a certificate: the experiments report, per seed and per regime, the measured gap J( ¯πT ) − J(πS ), the bound 2 Rmax ϵ†/(1 − γ)2, the argmax gap ∆ T of Corollary 1, and the two disagreement rates, and the verification that the bound dominates the gap is a mechanical comparison of two exactly computed numbers, with no sampling error and no confidence level. What the proposition does not provide is scalability: the census costs O(n3) per linear solve in dense form (structured sparsity reduces this in practice), which is the deliberate price of exactness at the n ≈ 10 4 to 10 5
+
+scale of our environment, and Monte Carlo estimation with concentration bounds would replace it beyond that scale at the cost of reintroducing confidence parameters into the certificate. The certificate of Theorem 1 is exact but loose. Its right-hand side is quadratic in the effective horizon 1 /(1 − γ), and at the discount factor γ = 0 .99 of our environment the prefactor 2Rmax /(1 − γ)2 is of order 10 4, so the guarantee holds vacuously for any disagreement rate the experiments actually produce. The slack is not intrinsic to the return gap; it is introduced in a single step of the proof of Theorem 1, where the advantage of the teacher’s action under the student’s value function is bounded by its worst-case range 2 Rmax /(1 − γ) at every disagreeing state. The performance-difference identity that precedes that step, (4) , is exact and carries only 13 a single factor of 1 /(1 − γ). We now retain that identity and replace the worst-case advantage by the advantage that the finite model actually exhibits at each disagreeing state, a quantity that Proposition 2 already computes. The result is a horizon-aware certificate whose prefactor is the magnitude of the advantage at the states where the student and the teacher disagree, rather than a global constant, and which is therefore small precisely when the disagreements fall on states at which the teacher’s action barely matters. We first name the quantities that localize the return loss. 
+
+Definition 7 (Advantage gap and advantage-weighted disagreement) . Let πS be a deterministic student policy, let ¯ πT be the argmax teacher of Definition 2 with argmax action aT (s), and let 
+
+D = s ∈ S : πS (s)̸ = aT (s)
+
+be the disagreement set . The advantage gap at a state s is 
+
+δ†(s) = AπS  s, a T (s) ,
+
+the magnitude of the advantage, under the student’s own value function of Definition 1, of the action the argmax teacher would take. The visitation-weighted advantage disagreement is ¯A† = X
+
+> s∈D
+
+d¯πT (s) δ†(s),
+
+and the peak disagreement advantage is 
+
+A† 
+
+> max
+
+= max  
+
+> s∈D
+
+δ†(s),
+
+with the convention A† 
+
+> max
+
+= 0 when D is empty, where d¯πT is the discounted occupancy measure of the argmax teacher (Definition 5). Every quantity in Definition 7 is a deterministic function of the model and the two policies. The disagreement set requires one evaluation of πS and one of aT per state, exactly as the disagreement rate ϵ† of Definition 6 does. The advantage gap requires the student value vector 
+
+V πS , which Proposition 2 obtains from the Bellman solve (5) , followed by a single backup 
+
+AπS (s, a T (s)) = r(s, a T (s)) + γ P 
+
+> s′
+
+P (s′ | s, a T (s)) V πS (s′) − V πS (s) at each disagreeing state. Nothing in the definition is estimated, so in the finite setting of Assumption 1 with the model access of Assumption 3 all three quantities are exactly computable, and we return to this point after the certificate. We isolate the exact identity that Theorem 1 already established, restated so that only the disagreement set contributes. 
+
+Lemma 2 (Advantage localization of the return gap) . Let Assumption 1 hold, let ¯πT be the argmax teacher of Definition 2, and let πS be any deterministic policy. With the disagreement set D of Definition 7, 
+
+J(¯ πT ) − J(πS ) = 11 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) AπS  s, a T (s). (8) 
+
+Proof. Lemma 1 applied with π = ¯ πT and π′ = πS gives the exact identity (4), 
+
+J(¯ πT ) − J(πS ) = 11 − γ
+
+X
+
+> s∈S
+
+d¯πT (s) AπS  s, a T (s),
+
+because ¯πT is deterministic with ¯πT (s) = aT (s), so the inner expectation over actions in (2) collapses to a point evaluation. For a state s / ∈ D we have πS (s) = aT (s), whence AπS (s, a T (s)) = 
+
+AπS (s, π S (s)) = QπS (s, π S (s)) − V πS (s) = 0, the last equality holding because the value of a deterministic policy equals the action value of its own action (Definition 1). Every term outside 
+
+D therefore vanishes, and the sum over S reduces to the sum over D, which is (8). 14 The identity (8) is signed and exact. Bounding it by the advantage the model exhibits, rather than by the worst advantage the value range permits, yields the refined certificate. 
+
+Proposition 3 (Advantage-gap certificate) . Let Assumption 1 hold, let ¯πT be the argmax teacher of Definition 2, and let πS be any deterministic policy, in particular any decision-list student 
+
+πS ∈ ΠL of Definition 4. With the disagreement rate ϵ† of Definition 6 and the advantage-weighted quantities ¯A† and A† 
+
+> max
+
+of Definition 7, 
+
+J(¯ πT ) − J(πS ) ≤ ¯A†
+
+1 − γ ≤ A† 
+
+> max
+
+ϵ†
+
+1 − γ ≤ 2Rmax ϵ†
+
+(1 − γ)2 . (9) 
+
+Moreover the signed one-sided refinement 
+
+J(¯ πT ) − J(πS ) ≤ 11 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) AπS  s, a T (s)  
+
+> +
+
+(10) 
+
+holds, where [x]+ = max (x, 0) . If in addition Assumption 3 holds, then ¯A†, A†
+
+> max
+
+, and both sides of (9) and (10) are computed exactly in finitely many arithmetic operations. Proof. We treat the two-sided certificate first. Starting from the exact identity (8) of Lemma 2, the triangle inequality applied to the finite sum over D gives 
+
+J(¯ πT ) − J(πS ) = 11 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) AπS  s, a T (s)
+
+≤ 11 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) AπS  s, a T (s)
+
+= 11 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) δ†(s) = ¯A†
+
+1 − γ ,
+
+where the occupancy weights are nonnegative, so they pass through the absolute value, the third line is the definition of the advantage gap δ†(s), and the last equality is the definition of ¯A†
+
+(Definition 7). This is the first inequality of (9) . For the second, bound each advantage gap on 
+
+D by its maximum, δ†(s) ≤ A†
+
+> max
+
+, and factor the constant out of the sum: ¯A†
+
+1 − γ = 11 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) δ†(s) ≤ A†
+
+> max
+
+1 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) = A† 
+
+> max
+
+ϵ†
+
+1 − γ ,
+
+the final equality being P 
+
+> s∈D
+
+d¯πT (s) = ϵ† by Definition 6, since D is exactly the event {πS (s)̸ =
+
+aT (s)}. For the third inequality, the value-range bound (1) gives δ†(s) = |AπS (s, a T (s)) | ≤ 
+
+2Rmax /(1 − γ) at every state, hence A† 
+
+> max
+
+≤ 2Rmax /(1 − γ), which substituted into the previous display recovers the right-hand side of (9) . This chain also re-derives Theorem 1 as its coarsest link, so the advantage-gap certificate never exceeds the certificate of Theorem 1. For the signed refinement (10) , split D into the states where the teacher’s action has positive advantage under πS and the rest. In (8) the terms with AπS (s, a T (s)) ≤ 0 are nonpositive, and dropping them can only increase the sum, so 
+
+J(¯ πT ) − J(πS ) = 11 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) AπS  s, a T (s) ≤ 11 − γ
+
+X
+
+> s∈D
+
+d¯πT (s) AπS  s, a T (s) 
+
+> +
+
+,
+
+which is (10) ; the occupancy weights are nonnegative, so each retained term is bounded above by its positive part. For exact computability under Assumption 3, Proposition 2 produces the student value vector V πS from the linear solve (5) and the argmax teacher occupancy d¯πT from the linear solve 15 (6) , each in finitely many operations on the n-dimensional data indexed by the reachable set Sr.The advantage of the teacher’s action at a state s is the finite backup 
+
+AπS  s, a T (s) = r s, a T (s) + γ X
+
+> s′∈S r
+
+P  s′ | s, a T (s)V πS (s′) − V πS (s),
+
+which uses only the already-computed V πS and the known model, and the disagreement set D
+
+is decided by one comparison πS (s) against aT (s) per state. The advantage gaps δ†(s), their weighted sum ¯A†, their maximum A†
+
+> max
+
+, and the positive parts in (10) are then finite arithmetic expressions in these quantities, so both sides of (9) and (10) are exactly computable. The certificate acquires teeth in a regime the worst-case bound cannot see. We state the condition under which its right-hand side falls below a prescribed return-gap tolerance, together with the low-advantage regime in which the horizon factors cancel entirely. 
+
+Corollary 2 (Non-vacuity regime) . Under the conditions of Proposition 3, fix a target tolerance 
+
+g > 0. The advantage-gap certificate certifies |J(¯ πT ) − J(πS )| ≤ g whenever 
+
+¯A† ≤ (1 − γ) g, (11) 
+
+and a sufficient condition in terms of the disagreement rate, valid when A† 
+
+> max
+
+> 0, is 
+
+ϵ† ≤ (1 − γ) gA†
+
+> max
+
+. (12) 
+
+The certificate of Theorem 1 certifies the same tolerance only under ϵ† ≤ (1 − γ)2g/ (2 Rmax ), so the admissible disagreement rate is larger by the factor 2Rmax /(1 − γ)A†
+
+> max
+
+ ≥ 1. If in addition the disagreements fall on states of small advantage, in the sense that A† 
+
+> max
+
+≤ c (1 − γ) for a constant c ≥ 0, then 
+
+J(¯ πT ) − J(πS ) ≤ c ϵ †, (13) 
+
+in which every factor of the effective horizon has cancelled. Proof. Under (11) the leftmost bound of (9) gives |J( ¯πT ) − J(πS )| ≤ ¯A†/(1 − γ) ≤ g. For (12) , the second bound of (9) gives |J( ¯πT ) − J(πS )| ≤ A†
+
+> max
+
+ϵ†/(1 − γ), which is at most g
+
+exactly when ϵ† ≤ (1 − γ)g/A †
+
+> max
+
+. The comparison with Theorem 1 rearranges its right-hand side 2 Rmax ϵ†/(1 − γ)2 ≤ g into ϵ† ≤ (1 − γ)2g/ (2 Rmax ); the ratio of the threshold in (12) to this one is 2 Rmax /[(1 − γ)A†
+
+> max
+
+], which is at least 1 because A† 
+
+> max
+
+≤ 2Rmax /(1 − γ) by (1) .Finally, substituting A† 
+
+> max
+
+≤ c(1 − γ) into the second bound of (9) yields |J( ¯πT ) − J(πS )| ≤ 
+
+c(1 − γ)ϵ†/(1 − γ) = c ϵ †, which is (13). Proposition 3 says the following. The return the distilled program forfeits is controlled not by how often it disagrees with the teacher but by how much those disagreements cost, measured as the advantage, under the student’s own value function, of the teacher’s action at the disagreeing states, weighted by the teacher’s discounted visitation. A disagreement at a state where both actions are near-indifferent contributes an advantage gap δ†(s) close to zero and is nearly free, whereas the worst-case certificate of Theorem 1 charges every disagreement the maximal advantage 2 Rmax /(1 − γ) that the value range permits. The refinement removes one factor of the effective horizon outright, because the exact performance-difference identity (8) carries only a single 1 /(1 − γ) and the second factor in Theorem 1 originated solely in the worst-case advantage bound; the low-advantage regime (13) removes the horizon dependence altogether. The bound is tight when the advantages at disagreeing states share a common sign, since the triangle inequality in the proof is then an equality and the leftmost quantity ¯A†/(1 − γ) equals the exact gap; in particular, when the student weakly dominates the argmax 16 teacher at every disagreeing state, so that AπS (s, a T (s)) ≤ 0 throughout D, the advantage-gap certificate reproduces the exact return difference and is exactly non-vacuous. This is the regime the distillation targets, in which the student repairs an imperfect teacher rather than degrading a good one. The certificate does not escape the discount factor for free. The quantity ¯A† is an exact model-dependent number, not an a-priori constant, and in the adversarial regime where disagreements concentrate on high-advantage states the peak advantage A† 
+
+> max
+
+approaches its worst-case value 2Rmax /(1 − γ) and the refined bound degrades smoothly back to the quadratic-horizon bound of Theorem 1, so no improvement is claimed in that regime. The bound becomes vacuous when the disagreeing states carry both large occupancy and large advantage, which is exactly the situation the expansion loop of Proposition 1 is designed to remove by editing the rule base until the surviving disagreements are either rare under d¯πT or cheap in advantage. As with Proposition 2, the computation is confined to the finite reachable set and costs one additional Bellman backup per disagreeing state beyond the value and occupancy solves already performed, so the refined certificate is checked, not asserted, on every run. The continuous-control experiments of Section 6 replace the enumerable state space of the finite study with a compact observation space X ⊂ Rd and replace the reachable census with a data-driven threshold grid controlled by a single resolution parameter B. We now make precise the sense in which the propositional student recovers the network policy as B grows, and the sense in which it cannot. The teacher here is the greedy policy of Definition 2 read over a continuous observation; we write it πN : X → A to stress its origin as the frozen network, so that πN (x) = aT (x) is the argmax action at the observation x and the imitation target is again the deterministic argmax teacher ¯πT with visitation measure μ = d¯πT on X (Definition 5). For a deterministic student πS the disagreement rate of Definition 6 reads, in this continuous instantiation, 
+
+ϵ†(πS ) = μ {x ∈ X : πS (x)̸ = πN (x)}.
+
+Assumption 4 (Continuous-observation instantiation) . The observation space X ⊂ Rd is compact. The greedy teacher πN : X → A of Definition 2 is Borel measurable and piecewise constant, with decision regions Xa = {x ∈ X : πN (x) = a} for a ∈ A and boundary Γ := S 
+
+> a∈A
+
+∂X a, the union of the topological boundaries of the regions, satisfying Leb (Γ) = 0, where Leb denotes Lebesgue measure on Rd. The visitation measure μ = d¯πT is absolutely continuous with respect to Leb with a density bounded by ρmax < ∞ and compact, convex support supp μ;convexity is used only so that a grid cell carrying mass on two regions meets the boundary within the support, and the box [0 , 1] d of Proposition 4 and the box-shaped observation spaces of Section 6 satisfy it. The intersection Γ ∩supp μ is ( d−1)-rectifiable with finite ( d−1)-dimensional Hausdorff measure P := Hd−1(Γ ∩ supp μ) < ∞. Finally, each marginal cumulative distribution function Fj is bi-Lipschitz on the coordinate projection of supp μ, equivalently the marginal densities are bounded away from zero there; the uniform law of Proposition 4 and the visitation measures of Section 6 satisfy this. The condition Leb (Γ) = 0 makes the labelling ambiguous only on a null set, so πN is well defined μ-almost everywhere; the density bound ρmax converts Lebesgue estimates into μ-mass estimates; and the finite boundary content P is the geometric quantity that governs the rate, playing the role that the reachable count played in the finite study. 
+
+Definition 8 (Threshold decision-list class at resolution B). Fix an integer resolution B ≥ 2. For each coordinate j ∈ { 1, . . . , d } let Fj be the cumulative distribution function of the j-th marginal of μ, and place B − 1 thresholds tj,i = F −1 
+
+> j
+
+(i/B ) for i = 1 , . . . , B − 1 at the i/B 
+
+quantiles of that marginal, where F −1 
+
+> j
+
+is the generalized inverse. The base predicates are the axis-aligned threshold tests feat j ≥ t with t ∈ { tj,i }, and their exact complements feat j < t . The 
+
+threshold decision-list class at resolution B, written LB , is the subset of the student class Π L of Definition 4 whose clause bodies are conjunctions of these threshold literals and which is closed 17 by a default clause. The thresholds cut X into the cells of the B-adic quantile grid GB , whose cells are the products Q = Qdj=1 [ tj,k j , t j,k j +1 ) with kj ∈ { 0, . . . , B − 1} and the conventions 
+
+tj, 0 = −∞ , tj,B = + ∞ at the extremes. Every policy in LB is constant on each cell of GB , because the truth value of every base predicate feat j ≥ tj,i is constant across a cell, so any clause body either fires everywhere or nowhere on a given cell and the first firing clause selects one action for the whole cell. Conversely, a single cell Q is cut out exactly by the conjunction of at most two threshold literals per coordinate, one lower test feat j ≥ tj,k j and one upper test feat j < t j,k j +1 , so a clause of length at most 2 d isolates Q; listing one such clause per cell, in any order, followed by a default clause realizes any prescribed cell-to-action map. Consequently LB is exactly the set of deterministic policies that are measurable with respect to the finite σ-algebra generated by GB , with one clause per cell in the worst case. This identity is what lets us reason about the class LB through the grid GB rather than through individual programs: the best achievable fidelity at resolution 
+
+B is a property of the partition, and the induction algorithm of Section 4 is one particular search for a short list that attains it. 
+
+Theorem 2 (Consistency and rate of the threshold conversion) . Under Assumption 4, let 
+
+ϵ† 
+
+> B
+
+:= inf  
+
+> πS∈LB
+
+ϵ†(πS )
+
+be the best disagreement rate attainable by a threshold decision list at resolution B. Then ϵ† 
+
+> B
+
+→ 0
+
+as B → ∞ , and there is a constant C, depending on the dimension d and on the bi-Lipschitz moduli of the marginals and reducing to a function of d alone when μ is uniform on its support, such that 
+
+ϵ† 
+
+> B
+
+≤ C ρ max PB . (14) 
+
+Proof. Fix B and construct the cell-majority policy π⋆B ∈ LB : on each cell Q ∈ G B with μ(Q) > 0set π⋆B ≡ a⋆(Q) for some a⋆(Q) ∈ arg max a∈A μ(Q ∩ Xa), and assign an arbitrary action on the μ-null cells. By the equivalence established after Definition 8, π⋆B is realizable in LB , so 
+
+ϵ† 
+
+> B
+
+≤ ϵ†(π⋆B ). Since the student is constant on each cell and the cells partition X,
+
+ϵ†(π⋆B ) = X
+
+> Q∈G B
+
+μ {x ∈ Q : π⋆B (x)̸ = πN (x)}
+
+= X
+
+> Q∈G B
+
+
+
+μ(Q) − μ Q ∩ Xa⋆(Q)
+
+
+
+, (15) where the second line uses that on Q the student equals a⋆(Q) and disagrees with πN precisely off Xa⋆(Q).We treat the cells in two groups. The first group consists of the cells contained, up to a 
+
+μ-null set, in a single region Xa. For such a cell μ(Q ∩ Xa⋆(Q)) = μ(Q), so its summand in (15) is zero: an interior cell is labelled correctly by its majority action. The second group consists of the cells that meet at least two regions. A cell Q that carries μ-mass on two distinct regions 
+
+Xa and Xa′ meets both of the closed sets Xa and Xa′ and hence, being connected, meets their common boundary, which lies in Γ; as Q also carries mass, it meets Γ ∩ supp μ. For every such cell the summand in (15) is bounded by μ(Q), since μ(Q ∩ Xa⋆(Q)) ≥ 0. Writing BB for the collection of cells meeting Γ ∩ supp μ, the two groups combine to 
+
+ϵ† 
+
+> B
+
+≤ X
+
+> Q∈B B
+
+μ(Q) = μ
+
+S 
+
+> Q∈B B
+
+Q
+
+
+
+, (16) the equality holding because distinct cells are disjoint. 18 It remains to bound the μ-mass of the union of boundary cells. Let δB be the largest Euclidean diameter of a cell in BB . Every point of a cell in BB lies within distance δB of a point of Γ ∩ supp μ, so S 
+
+> Q∈B B
+
+Q ⊆ T δB , where Tδ := {x : dist (x, Γ ∩ supp μ) ≤ δ} is the closed 
+
+δ-tube around the boundary. By the density bound and the Minkowski-content estimate for a (d − 1)-rectifiable set of finite Hausdorff measure, there are a threshold δ0 > 0 and a dimensional constant cd with 
+
+μ(Tδ) ≤ ρmax Leb( Tδ) ≤ ρmax cd P δ (0 < δ ≤ δ0), (17) the first inequality by μ ≪ Leb with density at most ρmax , and the second because the Lebesgue measure of the δ-tube of a ( d − 1)-rectifiable set is at most cd Hd−1 δ for small δ.Finally we control δB through the probability integral transform. The map T (x) = (F1(x1), . . . , F d(xd)) carries the quantile grid GB onto the uniform grid of side 1 /B on [0 , 1] d,whose cells have Euclidean diameter √d/B ; by the bi-Lipschitz marginals of Assumption 4, T
+
+restricted to supp μ is bi-Lipschitz, so each cell meeting the support has x-diameter at most 
+
+c′
+
+> d
+
+/B for a constant c′ 
+
+> d
+
+determined by the bi-Lipschitz modulus of T . Hence δB ≤ c′
+
+> d
+
+/B , and for B large enough that δB ≤ δ0 the bounds (16) and (17) give ϵ† 
+
+> B
+
+≤ ρmax cd c′ 
+
+> d
+
+P/B , which is (14) with C = cd c′
+
+> d
+
+. This is derived for B past the threshold at which δB ≤ δ0; because ϵ† 
+
+> B
+
+≤ 1and only finitely many coarser resolutions precede that threshold, enlarging C extends (14) to every B when P > 0, while P = 0 makes Γ a μ-null set and ϵ† 
+
+> B
+
+= 0 outright. In the canonical case μ ∝ Leb on its support the transform is affine and C is a pure function of d; in general C
+
+absorbs the bi-Lipschitz modulus of the marginals granted by Assumption 4, which reduces to a dimensional constant in the uniform setting of Proposition 4 and the visitation measures of Section 6. For consistency, note that the summand in (16) already gives ϵ† 
+
+> B
+
+≤ μ(TδB ) for every B. Along the dyadic subsequence B = 2 n the quantile levels i/ 2n are nested, since i/ 2n = 2 i/ 2n+1 , so the partitions G2n are nested and, the marginals being atomless because μ ≪ Leb , their common refinement generates the Borel σ-algebra on supp μ. Thus the grid-measurable simple functions are dense in L1(μ), and the piecewise-constant πN is approximated in μ-measure by cell-majority policies, whence ϵ† 
+
+> 2n
+
+→ 0; this dyadic-scale consistency uses only the density upper bound, not the bi-Lipschitz marginals. Equivalently δ2n → 0, so Tδ2n ↓ Γ ∩ supp μ, and continuity of the finite measure μ from above with μ(Γ) = 0, which holds because Leb (Γ) = 0 and μ ≪ Leb , forces 
+
+μ(Tδ2n ) → 0. The rate (14) extends the conclusion to every B, since it bounds ϵ† 
+
+> B
+
+monotonically to zero. 
+
+Corollary 3 (Return recovery in the fine-resolution limit) . Under Assumption 4, let πS ∈ LB
+
+attain the infimum ϵ† 
+
+> B
+
+of Theorem 2. Then 
+
+J(πN ) − J(πS ) ≤ 2Rmax 
+
+(1 − γ)2 ϵ† 
+
+> B
+
+≤ 2CR max ρmax P
+
+(1 − γ)2 · 1
+
+B −−−−→ 
+
+> B→∞
+
+0. (18) 
+
+Proof. The performance-difference identity of Lemma 1 and the return-loss argument of Theo-rem 1 use only that the advantage is bounded by 2 Rmax /(1 − γ), the range (1) that follows from 
+
+|r| ≤ Rmax and γ < 1, and that ϵ† is the visitation measure of the disagreement set; both hold verbatim on the general measurable observation space X with d¯πT = μ, the finite sums over S
+
+becoming integrals against μ. Applying Theorem 1 to πS , whose disagreement rate is ϵ† 
+
+> B
+
+by the choice of πS , gives the first inequality of (18) ; the bound (14) of Theorem 2 gives the second; and 1 /B → 0 gives the limit. The corollary states that the best threshold list at resolution B recovers the network’s return in the fine-resolution limit: the return gap closes at least as fast as 1 /B . Combined with the expansion stage of Proposition 1, which relabels states the argmax teacher underweights, the student can also exceed the teacher, as the finite KeyDoor case exhibits; (18) bounds only the loss relative to πN and does not preclude such gains. 19 We now show that the linear rate in B cannot be escaped and that the number of cells needed grows exponentially in d.
+
+Proposition 4 (Necessity and the curse of dimensionality) . Let μ be the uniform distribution on X = [0 , 1] d, so that ρmax = 1 , and let the teacher be the oblique half-space policy πN (x) = 
+
+1[ w · x ≥ b ] with a normal w that is not parallel to any coordinate axis, that is, with at least two nonzero components. There is a constant c > 0, depending on w and d, such that every πS ∈ LB
+
+has ϵ†(πS ) ≥ c/B . Consequently, attaining ϵ†(πS ) ≤ ϵ requires resolution B ≥ c/ϵ and a decision list that distinguishes Ω (1 /ϵ )d−1 grid cells, and Ω( Bd−1) cells carry the boundary at resolution 
+
+B.Proof. Because μ is uniform, the marginals Fj are the identity on [0 , 1], the quantile thresholds are tj,i = i/B , and GB is the uniform grid of cells of side 1 /B with centers cQ = (( k1 + 
+
+> 12
+
+)/B, . . . , (kd + 12 )/B ). The boundary is the hyperplane piece Γ ∩ X = {x ∈ [0 , 1] d : w · x = b},which we take nondegenerate, meaning it meets the open cube; normalize ∥w∥2 = 1. As in (15) ,the minimal disagreement is realized by the cell-majority policy and equals 
+
+ϵ† 
+
+> B
+
+= X
+
+> Q∈G B
+
+min  μ(Q ∩ X1), μ (Q ∩ X0),
+
+where X1 = {w · x ≥ b} and X0 is its complement, since on each cell the better of the two constant labels leaves exactly the smaller of the two parts in error and no πS ∈ LB can do better than label each cell by its majority. Only cells the hyperplane crosses contribute. Consider the cells whose center lies in the thin slab {x : |w · x − b| ≤ τ /B } for a constant 
+
+τ ∈ (0 , 12 ) to be fixed. For such a cell the hyperplane passes within x-distance τ /B of the center, while the cell has half-width 1 /(2 B) in each coordinate; because w is oblique the plane is parallel to no face of the cell, so for τ small the plane passes through the cell interior and cuts each half-space to a piece of volume at least β/B d for a constant β > 0 depending on w and d through the obliqueness of the normal, whence the minority part of the cell has μ-mass at least β/B d.It remains to count these cells. A cell center satisfies the slab condition iff the integer vector (k1, . . . , k d) obeys P 
+
+> j
+
+wj (kj + 12 ) ∈ [Bb − τ, Bb + τ ]. Fix a coordinate ℓ with wℓ̸ = 0, which exists by hypothesis. As kℓ ranges over {0, . . . , B − 1} with the other indices held fixed, the value P 
+
+> j
+
+wj (kj + 12 ) moves in steps of |wℓ|, so the admissible interval of width 2 τ contains at most one qualifying kℓ and, since w is oblique and b interior, exactly one for a positive fraction of the Bd−1 assignments of the remaining indices, namely those for which the hyperplane enters the corresponding column within the cube. The number of qualifying cells is therefore at least 
+
+αwBd−1 for a constant αw > 0. Summing the per-cell lower bound over these cells, 
+
+ϵ† 
+
+> B
+
+≥ αwBd−1 · βBd = αwβB =: cB , (19) and ϵ†(πS ) ≥ ϵ† 
+
+> B
+
+≥ c/B for every πS ∈ LB . If ϵ†(πS ) ≤ ϵ then c/B ≤ ϵ, so B ≥ c/ϵ . The number of cells the hyperplane crosses, each of which the optimal list must devote a distinct cell-label to, is Θ( Bd−1), since a generic hyperplane meets Θ( Bd−1) of the Bd cells of side 1 /B ; substituting 
+
+B ≥ c/ϵ gives Ω  (1 /ϵ )d−1.Two honest qualifications frame these results. First, exact zero-error conversion at a finite resolution holds only in degenerate cases. When X is finite, as in the reachable census of the KeyDoor experiment, a large enough grid separates every reachable observation and ϵ† 
+
+> B
+
+= 0 is attained; likewise when Γ is itself axis-aligned, a grid whose thresholds fall on the boundary planes labels every cell correctly. Outside these cases Γ crosses the axis-aligned cells and recovery is only asymptotic, so the correct claim is arbitrarily faithful conversion in the limit B → ∞ , by Theorem 2 and Corollary 3, not finite exactness in general. Second, Theorem 2 and Corollary 3 bound the best list in LB ; they are representational, or realizability, guarantees about the class, 20 not about any particular induced program. Whether the greedy clause induction under the DAgger relabelling of Section 6 attains that optimum is the empirical content of the experiments, and the Bd−1 lower bound of Proposition 4 is the obstruction those experiments display: the eight-dimensional LunarLander exhibits the ceiling the exponent predicts, retaining a return gap at the swept resolutions, while the four-dimensional CartPole and the six-dimensional Acrobot, with a boundary of lower codimension to cover, recover the teacher within the same budget. The two exponents are confirmed numerically on the oblique-boundary reference of Proposi-tion 4 by the script theory/verify resolution.py , which measures a disagreement rate ϵ(B)whose log-log slope against B is −0.995, −1.060, and −1.045 for d = 2 , 3, 4, matching the predicted −1 of (14) , and a boundary-cell count whose log-log slope is +1 .000, +2 .011, and +2 .909 for the same dimensions, matching the predicted d − 1 of Proposition 4. 
+
+# 6 Experiments 
+
+We validate the transformation in three regimes that stress complementary questions and, together, mark where a first-order symbolic student is decisive and where it is not. The first is an exact finite Markov decision process, the KeyDoor gridworld, in which every quantity of the theory is computed in closed form, so the return-loss certificate and the expansion guarantee are checked rather than estimated and the distilled program is a first-order relational rule list that reaches and certifies the exact optimum. The second is a MiniGrid DoorKey task (Chevalier-Boisvert et al., 2023) in which the relational vocabulary is exercised in earnest and the question is generalization across scale: a student distilled on one grid size is transferred, unchanged, to grid sizes it has never seen, and its transfer is contrasted with decision trees over absolute cell coordinates. The third is a family of continuous-control tasks, where no reachable census exists and the pipeline runs in its propositional form with the census replaced by a DAgger loop and exact evaluation by Monte Carlo; this is the regime in which Theorem 2 and Proposition 4 predict what the conversion can and cannot achieve, and in which, having no relational structure to exploit, the propositional student trades away the return advantage it holds elsewhere. We present the exact study first, the relational transfer second, and the propositional instantiation last, with its baseline comparison stated honestly. The environment, called KeyDoor, is a finite deterministic gridworld built on the Gymnasium interface (Towers et al., 2024). A full-height interior wall at a fixed column divides a four-row playing field into a left room of three columns and a right room of two columns, with a single door cell in the wall whose row is drawn per episode. The agent and the key spawn in the left room and the goal spawns in the right room; the agent must step onto the key and pick it up, step next to the door and toggle it open, and only then can it cross into the right room and reach the goal. The six actions are the four moves, a pickup, and a toggle; the reward is +1 on reaching the goal and −0.01 per step, the discount factor is γ = 0 .99, and the horizon is 120. Reaching the goal terminates the episode, which removes from the reachable set those layouts in which the goal sits behind itself, and the exact enumeration yields 16 ,944 reachable states, a set small enough for the linear solves of Proposition 2 and large enough that distillation is not trivial. The maximum absolute one-step reward is Rmax = 0 .99. The teacher is a proximal policy optimization agent (Schulman et al., 2017) with a two-layer tanh actor-critic, eight synchronous environments, and standard hyperparameters, trained on the flat one-hot observation of the state. We study two teacher regimes over fifteen seeds each. The converged regime, denoted R1, trains up to 800k environment steps with an early stop when the exact success of the greedy policy reaches 0 .95, which every seed attains between 369k and 451k steps. The capped regime, denoted R2, fixes a budget of 299 ,008 steps, chosen so that the greedy policy is left visibly short of convergence, which is the regime in which expansion has room to improve on the teacher. All thirty runs use the same environment, pinned by the SHA-256 hash of its source file, and the same package versions, and the full learning-telemetry 21 0 1 2 3 4   
+
+> 0
+> 0.5
+> 1
+> environment steps
+> exact success probability
+> R1 (converged)
+> stochastic teacher
+> greedy teacher
+> 0123
+> ·10 5
+> 0
+> 0.5
+> 1
+> environment steps
+> R2 (capped)
+> stochastic teacher
+> greedy teacher
+
+Figure 2: Exact success of the stochastic and greedy PPO policies during training, interquartile mean over fifteen seeds. The greedy policy, the target of distillation, trails the stochastic policy throughout, and in the capped regime R2 it is left far short of it, creating the headroom that expansion exploits. panel is written to disk per update; an audit of all thirty traces with the accompanying monitor reports no explained-variance collapse, no approximate-KL spike, no entropy collapse, and no excessive clip fraction, so the teachers are healthy and the comparison is between converged or deliberately-undertrained networks and their distillates, not between broken training runs. All headline quantities are exact. For each policy, the stochastic teacher, the greedy teacher, the distilled program, and the expanded program, the exact return J and the exact success probability within the horizon are obtained by the linear solves of Proposition 2, so no Monte Carlo noise enters the reported numbers. We aggregate across the fifteen seeds with an own implementation of the interquartile mean and the stratified bootstrap confidence interval in the style of Agarwal et al. (2021), using ten thousand bootstrap resamples, and we report per-seed paired differences with a two-sided exact Wilcoxon signed-rank test, correcting for the six paired tests within a regime by the Bonferroni rule. Figure 2 shows why the two teacher regimes differ and why the distinction matters for a distillation study. During training the stochastic policy solves the task early, but the greedy policy that distillation actually targets lags far behind, and in the capped regime the greedy policy is still well short of the stochastic one at the budget. Distilling the greedy policy of a capped teacher therefore starts from an imperfect target, which is the headroom the expansion stage exploits. The endpoint comparison is the core result and is shown in Figure 3. In the converged regime the distilled program already attains exact return 0 .8122 and exact success 1 .0 in every seed with six clauses, and the expansion loop accepts no edit in any seed, so the expanded and distilled programs coincide. The interesting fact about R1 is that plain distillation already exceeds both teachers: against the stochastic teacher the mean paired improvement in exact return is 0 .0379 with a 95% confidence interval of [0 .0354 , 0.0406] over fifteen of fifteen seeds, because the induced rule list generalizes the greedy action over the census and repairs the states on which the network is imperfect. In the capped regime the distilled program is markedly weaker and more variable, with an interquartile mean return of 0 .6032 and a confidence interval of [0 .4977 , 0.7258], and it is worse than the stochastic teacher in ten of the fifteen seeds, which is the expected consequence of distilling an undertrained greedy target. The expanded program removes this deficit almost entirely. In every seed of both regimes the expanded Prolog program attains exact success 1 .0, it reaches the exact optimum J = 0 .812204 in all seeds of R1 and in fourteen of the fifteen seeds of R2, falling one edit short at 0 .8108 on the remaining capped seed, and in the capped regime it exceeds the stochastic teacher on exact return in fifteen of fifteen seeds, with a mean paired improvement of 0 .1009 and a confidence interval of [0 .0976 , 0.1042], a two-sided exact Wilcoxon 22 teacher 
+
+> greedy
+> distilled
+> expanded 0.6
+> 0.7
+> 0.8
+> exact return  J
+> R1 (converged)
+> teacher
+> greedy
+> distilled
+> expanded
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> R2 (capped)
+
+Figure 3: Exact return by policy class, interquartile mean with 95% stratified bootstrap confidence intervals over fifteen seeds. The expanded student, in gold, reaches the exact optimum 0.812204 in every seed of R1 and in all but one seed of R2, with an interquartile-mean interval that is degenerate at the optimum. In the capped regime R2 it exceeds the stochastic teacher and dominates the greedy teacher and the distilled program, whose interval is wide because capped-teacher distillation is seed-sensitive. 
+
+p = 0 .0001 and a Bonferroni-corrected p = 0 .0004. Against the greedy teacher that distillation targets, the capped-regime improvement is larger still, a mean paired gain in return of 0 .5705 with interval [0 .5081 , 0.6314] and in success of 0 .3035 with interval [0 .2694 , 0.3373]. Two qualifications belong here rather than in a footnote. First, the expansion effect is now statistically resolved at fifteen seeds where it was not at ten. The expanded program strictly improves the distilled program in ten of the fifteen capped-regime seeds, is tied on the remaining five, and is never worse, with a mean paired improvement of 0 .1985 and a bootstrap interval of [0 .1249 , 0.2814] that excludes zero, a two-sided exact Wilcoxon p = 0 .0020 that survives the six-test Bonferroni correction at p = 0 .0117. Figure 4 shows the underlying trajectories: each accepted edit raises the exact return, and every seed reaches success 1 .0 after at most two edits, the monotone behaviour that Proposition 1 guarantees. Second, expansion is not a fidelity-improving operation. The expanded program’s fidelity to the stochastic teacher under rollout visitation is about 0 .71 in the capped regime, and its disagreement rate against the greedy teacher can rise after expansion, because accepted edits deliberately move the student away from an imperfect teacher. Fidelity is the accounting quantity of Theorem 1, not the objective of Proposition 1, and the student is best understood as a repaired program rather than a faithful clone. The two certificates of Section 5 were evaluated on all sixty combinations of regime, seed, and student, and the contrast between them is the point. The worst-case inequality of Theorem 1 holds in every record but vacuously: with the prefactor 2 Rmax /(1 − γ)2 of order 2 × 10 4 at 
+
+γ = 0 .99, its interquartile-mean right-hand side is about 9 .9 × 10 2 on the converged regime and about 6 .2 × 10 3 on the capped regime, whereas the exact return gap it purports to bound is of order 10 −1. The advantage-gap certificate of Proposition 3 closes this chasm. On the converged regime it is tighter than the Theorem 1 bound by a median factor of about 13 ,700, its refined right-hand side ¯A†/(1 − γ) has interquartile mean 0 .0727 against an exact gap of the same 0 .0727, and it falls below unity in every one of the fifteen seeds. The reason it coincides with the exact gap is the sign condition of Corollary 2: in all fifteen converged-regime seeds every disagreement advantage AπS (s, a T (s)) is non-positive, the student weakly dominating the argmax teacher at every state where they differ, so the triangle inequality in the proof is an equality and the certificate is exactly non-vacuous. The capped regime tells the same story for the expanded program, whose refined bound 0 .5726 equals its exact gap 0 .5726 with the sign condition met in 23 0 1 2 
+
+> 0.4
+> 0.6
+> 0.8
+> stochastic teacher J
+> accepted edit index
+> exact return  J
+
+Figure 4: Capped-regime expansion trajectories, exact return after each accepted edit, one grey line per seed. Every accepted edit increases the exact return, as Proposition 1 requires, and all fifteen seeds cross above the stochastic teacher’s return, shown as the gold dashed reference, after at most two edits, fourteen of them reaching the common optimum 0 .812204 and one halting at 0.8108. Table 1: The two certificates over all sixty (regime, seed, student) records, aggregated to the interquartile mean per regime and student. The worst-case bound of Theorem 1 is vacuous; the advantage-gap bound ¯A†/(1 − γ) of Proposition 3 is tighter by the median factor shown and coincides with the exact return gap |J( ¯πT ) − J(πS )| whenever the disagreement advantages are non-positive, the condition counted in the last column. On the converged regime R1 the expansion loop accepts no edit, so the distilled and expanded programs coincide. 
+
+regime student ϵ† Thm. 1 bound ¯A†/(1 − γ) exact |gap | non-vacuous seeds R1 distilled = expanded 0.050 9.94 × 10 2 0.073 0.073 15 /15 R2 distilled 0.292 5.78 × 10 3 0.739 0.366 5/15 R2 expanded 0.315 6.24 × 10 3 0.573 0.573 14 /15 
+
+fourteen of fifteen seeds and the bound below unity in all fifteen, and a weaker story for the distilled program, where the sign condition holds in only five seeds, so the refined bound 0 .7385 overshoots the exact gap 0 .3658 through genuine slack yet still lands below unity in thirteen of fifteen seeds. Table 1 and Figure 5 report both certificates side by side; the message is that a horizon-aware, advantage-localized bound turns a guarantee that was slack by four orders of magnitude into one that is checked, non-vacuous, and on the regime the distillation targets, exact. The artefact the pipeline produces is a program one can read. Listing 1 shows the decision list of the expanded program for the first capped-regime seed, verbatim from the emitted file. The rules read as a strategy: follow the path to the goal if one exists, otherwise pick up the key when standing on it, otherwise walk to the key, otherwise toggle the door when adjacent and carrying the key, and so on, with the path-aware direction predicate hiding the navigation in a single tabled breadth-first search. The first clause is subtler than it looks, because the direction predicate to the goal succeeds only when a path exists, so the clause fires only once the door is open and otherwise falls through to the key-fetching logic. The full program, including the perception layer and the breadth-first search, is 133 lines and is machine-verified to select the same action as the reference evaluator on every state at which it was queried. Listing 1: The decision list of the expanded Prolog program for capped-regime seed 0, copied verbatim from the emitted file. The perception layer and the tabled path-aware direction predicate dir to/3 , together 133 lines, are omitted here and run unchanged under SWI-Prolog. 
+
+> % clause 0: act = move(D) :-dir_to(goal, D).
+> act(S, move(D)) :-dir_to(S, goal, D), !.
+> % clause 1: act = pickup :-on_key, not door_open, not same_room_goal.
+
+24 R1 R2 dist. R2 exp.    
+
+> 10 −1
+> 10 1
+> 10 3
+> return-gap bound (log scale)
+> Thm. 1 worst-case bound
+> advantage-gap bound ¯A†/(1 −γ)
+> exact return gap
+
+Figure 5: The two certificates and the exact return gap, interquartile mean over fifteen seeds, on a logarithmic scale. The Theorem 1 bound in ink sits four orders of magnitude above the exact gap; the advantage-gap bound in gold sits on or just above it. On R1 and on the R2 expanded program the gold and grey bars coincide because every disagreement advantage is non-positive and the certificate is exactly non-vacuous; on the R2 distilled program the gold bar exceeds the grey by the slack the sign condition leaves.   
+
+> act(S, pickup) :-on_key(S), \+door_open(S), \+same_room_goal(S), !.
+> % clause 2: act = move(D) :-dir_to(key, D).
+> act(S, move(D)) :-dir_to(S, key, D), !.
+> % clause 3: act = toggle :-adj_door, carrying_key.
+> act(S, toggle) :-adj_door(S), carrying(S), !.
+> % clause 4: act = move(D) :-dir_to(door, D), carrying_key.
+> act(S, move(D)) :-dir_to(S, door, D), carrying(S), !.
+> % clause 5: act = pickup :-not adj_door.
+> act(S, pickup) :-\+adj_door(S), !.
+> % clause 6 (default): act = up.
+> act(_S, move(up)).
+> % clause 7 (default): act = right.
+> act(_S, move(right)).
+
+The key-and-door study shows that a first-order program can be exact and certified, but its predicate vocabulary, path-aware direction and adjacency, does work that a propositional list could in principle imitate on that single fixed layout. The value of a relational representation is that one program covers a family of layouts, and the sharpest test of that value is transfer to a size the student never saw. We run this test on the DoorKey task of the MiniGrid suite (Chevalier-Boisvert et al., 2023), in which an agent on an N × N grid must reach a key, carry it to a locked door, toggle the door open, and reach a goal in the far room, receiving a shaped terminal reward that decays with the number of steps taken. A proximal policy optimization teacher (Schulman et al., 2017) is trained on the 8 × 8 layout over fifteen seeds, and from each teacher we distil, on the 8 × 8 layout alone, five students that are then evaluated without any further training on the 6 × 6, 8 × 8, and 16 × 16 layouts. The student we advocate is the first-order Prolog list of Definition 4 over the relational vocabulary of Section 4, and it is compared against four decision-tree students that isolate the one variable that matters. Two are CART trees (Breiman et al., 1984) and two are VIPER trees (Bastani et al., 2018), and within each pair one tree is fitted over the same agent-relative relational features the Prolog student uses and the other over the absolute cell coordinates of the objects and the agent. The comparison is therefore not tree against logic program but relational representation against propositional representation, holding the induction algorithm fixed. Figure 6 is the central result of the paper. On the 8 × 8 layout it was distilled on, every student that carries a workable representation reaches the teacher’s return: the Prolog list scores an interquartile-mean return of 0 .950, the relational CART and VIPER trees 0 .968 and 0 .969, and the teacher itself 0 .966, while even the coordinate trees manage a partial 0 .612 and 0 .505 by memorizing the training geometry. Off the training size the two representations part completely. 25 teacher         
+
+> Prolog (ours)
+> CART rel.
+> VIPER rel.
+> CART abs.
+> VIPER abs.
+> 0
+> 0.5
+> 1
+> transfer return (IQM)
+> 6×6 (unseen) 8×8 (train) 16 ×16 (unseen)
+
+Figure 6: Cross-size transfer on MiniGrid DoorKey, interquartile-mean return over fifteen seeds. Every student is distilled on the 8 × 8 layout and evaluated on all three sizes without retraining. The first-order Prolog student and the two decision trees over agent-relative relational features transfer at the teacher’s level to the unseen 6 × 6 and 16 × 16 grids; the two decision trees over absolute cell coordinates match on the training size but collapse to zero return at every other size, the gap the paper turns on. Bars are grouped by student; within each group the training size is the ink bar and the two unseen sizes flank it. The Prolog list transfers to the smaller 6 × 6 grid at return 0 .947 and to the larger 16 × 16 grid at 0 .988, matching the teacher’s own 0 .950 and 0 .978 and reaching a perfect success rate of 1 .000 on the large grid; the relational trees transfer just as well, at 0 .948 and 0 .968 for CART and 0.947 and 0 .979 for VIPER. The coordinate trees, by contrast, collapse to exactly zero return and zero success at both unseen sizes, because a split of the form “agent column ≥ 5” or “goal row < 4” encodes an absolute position that no longer denotes the same situation once the grid is resized, and the tree that memorized the 8 × 8 geometry now fires the wrong action at every state. The paired contrast is unambiguous: the Prolog list beats the coordinate CART tree by an interquartile-mean return margin of 0 .947 at 6 × 6 and 0 .988 at 16 × 16, in fifteen of fifteen seeds at each size, with a two-sided exact Wilcoxon p = 6 .1 × 10 −5 that survives Holm correction over the eight-contrast family at p = 4 .9 × 10 −4, and identically against the coordinate VIPER tree. The relational student pays for this transfer in neither size nor readability, which is the second half of the result. The Prolog list induced on 8 × 8 has eight clauses over twelve literals for the first seed and a median of nine clauses across the fifteen seeds, and it reads as a strategy a person could have written: navigate to the goal if a path exists, otherwise pick up the key when facing it, otherwise toggle the door when facing it and carrying the key, otherwise navigate toward the key and then the door, with a single tabled breadth-first search hidden inside the navigation predicate. Listing 2 shows the decision list verbatim. The relational trees are of comparable size, a median of seventeen and fourteen leaves for CART and VIPER, but the coordinate trees that fail to transfer are an order of magnitude larger, a median of 359 and 387 leaves, because absolute coordinates force the tree to enumerate positions rather than name relations; the teacher network they all distil carries 12 ,038 parameters. The one quantity on which the Prolog student does not lead is held-out fidelity on the training size, where it agrees with the teacher on an interquartile-mean 0 .907 of states against about 0 .987 for the relational trees, yet it transfers exactly as well, because the path-aware navigation predicate reproduces the teacher’s shortest-path behaviour structurally rather than by matching its action on each individual state. On this task, fidelity on the training distribution is the wrong figure of merit 26 and size-invariant structure is the right one. Listing 2: The MiniGrid DoorKey decision list induced on the 8 × 8 layout for seed 0, copied verbatim from the emitted Prolog file; the perception predicates and the tabled shortest-path predicate nav/3 are defined above it and run unchanged on grids of any size. Action codes follow MiniGrid: 1 turn right, 3 pick up, 4 toggle; nav/3 returns the turn-or-forward action that advances along a shortest path to the named object. 
+
+> % clause 0: navigate to the goal if a path to it exists
+> act(S, A) :-nav(S, goal, A), !.
+> % clause 1: pick up the key when facing it
+> act(S, 3) :-facing_key(S), !.
+> % clause 2: toggle the door when facing it and carrying the key
+> act(S, 4) :-facing_door(S), carrying_key(S), !.
+> % clause 3: toggle the door when facing it
+> act(S, 4) :-facing_door(S), !.
+> % clause 4: otherwise navigate toward the key
+> act(S, A) :-nav(S, key, A), !.
+> % clause 5: otherwise navigate toward the door
+> act(S, A) :-nav(S, door, A), !.
+> % clause 6: turn right to reorient when the cell ahead is blocked
+> act(S, 1) :-\+facing_clear(S), !.
+> % clause 7 (default): toggle
+> act(_S, 4).
+
+The DoorKey transfer shows what a relational representation buys. The continuous-control study shows, just as deliberately, what happens when there is no relational structure to represent. We run the same pipeline, in its propositional instantiation, on continuous-observation control tasks from the Gymnasium suite (Towers et al., 2024): CartPole with a four-dimensional observation and two actions and Acrobot with a six-dimensional observation and three actions, each over fifteen teacher seeds, and, as the high-dimensional reference point, LunarLander with an eight-dimensional observation and four actions over five seeds. In a four to six dimensional vector of physical quantities there are no objects to quantify over and no relations to bind, so the first-order machinery of Definition 4 collapses to an ordered list of axis-aligned threshold conjunctions, and the question is no longer transfer but how much of the network a propositional rule list can recover on its own training distribution and how it compares to the propositional baselines built for exactly this job. Two things change relative to KeyDoor, and both are the substitutions anticipated in the discussion of scale. First, the reachable-state census is replaced by the DAgger reduction of imitation to no-regret online learning (Ross et al., 2011), the same loop VIPER uses to extract a tree student (Bastani et al., 2018): the student is rolled out, the states it visits are relabelled by the frozen teacher, and the union of teacher-visited and student-visited states drives the next induction, so the student is trained exactly on the off-distribution states its own errors produce. Second, exact policy evaluation is replaced by Monte-Carlo evaluation over a fixed episode-seed stream shared by the teacher and every student, so all comparisons within a task are paired at the level of initial conditions and every reported return carries a 95% percentile-bootstrap confidence interval over episodes. The student class is the propositional specialization of Definition 4. Each continuous feature is discretized by a data-driven grid of thresholds placed at the empirical quantiles of the teacher’s visited values, controlled by a single resolution parameter B that fixes the number of bins per feature; a base predicate is a threshold test feat ≥ t, its negation is the exact complement feat < t , and the induction of Section 4 grows an ordered list of clauses over these threshold literals exactly as before. The resolution B interpolates between readability and precision: at 
+
+B = 2 a single median threshold per feature yields a handful of broad clauses, and as B grows the grid carves the state space into finer axis-aligned regions each labelled by an action, which is the propositional form of the partition that replaces the network. We sweep B ∈ { 2, 3, 4, 6, 8, 12 } over fifteen PPO teacher seeds per task on CartPole and Acrobot, and over five seeds on LunarLander, emit every student as an executable SWI-Prolog program whose action is asserted to match the reference evaluator on at least five hundred sampled states, and aggregate across seeds with 27 the interquartile mean and a stratified bootstrap in the manner of Agarwal et al. (2021). At fifteen seeds the two-sided exact Wilcoxon signed-rank test no longer floors, so on CartPole and Acrobot we report corrected p-values alongside effect sizes; on the five-seed LunarLander reference the test floors at p = 0 .0625 and the claims rest on effect sizes and intervals. All thirty CartPole and Acrobot teachers solve their task, with the greedy policy that distillation targets clearing the solved threshold on the shared evaluation stream, and the learning-telemetry audit is clean on the approximate KL, the entropy, and the clip fraction throughout. The one exception is that explained variance stays low on the fast-solving CartPole seeds, which is the expected consequence of a near-constant value target once the pole is balanced rather than a training pathology, and it does not bear on the distilled student because the target of distillation is the greedy action, not the critic; every teacher’s success on the evaluation stream confirms that a healthy network is being distilled. Figure 7 shows the first finding, that the recovered symbolic program substitutes the network at a task-dependent resolution, and that the three tasks form a gradient in how hard the substitution is. On LunarLander the naive one-pass distillation fails at every resolution, flying the lander into the ground with a return between −467 and −240 and a success rate near zero even as its held-out agreement with the teacher rises with B, which is the textbook signature of behavioural-cloning distribution shift: agreement on the teacher’s own states does not prevent compounding error once the coarse student drifts off that distribution. DAgger repairs this monotonically, climbing from a return of −201 at B = 2 to +155 at B = 12 and turning positive from B = 6, but it does not reach the teacher’s 221, because the propositional threshold list has a genuine ceiling on the fine continuous control that a soft landing demands. CartPole and Acrobot tell the complementary story. On CartPole, whose teacher balances for nearly the full horizon at an interquartile-mean return of 489 .8 against a solved threshold of 475, the DAgger program recovers about 98% of that return, reaching 473 .3 at B = 3 with roughly thirty-four clauses and 479 .6 at B = 12 where its distance to the teacher is −7.5 with a confidence interval of [ −23 .3, −1.4], and it improves on the naive student at every resolution with a paired-difference interval that excludes zero from B = 4 upward. On Acrobot, whose teacher raises the tip to an interquartile-mean return of −84 .3 against a solved threshold of −100, the DAgger program matches the network within noise at the fine resolutions, with a return of −85 .1 at B = 8 and 
+
+−84 .7 at B = 12 whose distances to the teacher, −1.0 with interval [ −2.1, +0 .3] and −0.5 with interval [ −2.2, +0 .8], both bracket zero, and even the coarsest readable list at B = 2, some twelve clauses, reaches −87 .2 with a 0 .87 success rate. The distribution-shift gradient is visible across the three panels: on Acrobot, a locally self-correcting swing-up task, the naive and DAgger curves nearly coincide; on CartPole DAgger clearly helps; on LunarLander DAgger is indispensable. Both CartPole and Acrobot exhibit a single non-monotone dip at an intermediate resolution, 
+
+B = 4 for the former and B = 3 for the latter, where the quantile grid places its thresholds across the decision boundary particularly poorly and the return recovers at finer resolution; we report the dip rather than smooth it. These curves are the empirical face of the theory of Section 5: Corollary 3 guarantees that the return gap closes as the resolution grows, and Proposition 4 explains why an eight-dimensional observation makes that closure expensive enough to leave a visible gap on LunarLander at the resolutions we sweep, while the four-dimensional CartPole and the six-dimensional Acrobot, with a boundary of lower codimension to carve, close it within the same budget. Substituting the network in return is not the same as matching the interpretable students built for propositional control, and the honest comparison against them is the second finding, reported in Table 2 and Figure 8. On the identical fifteen-seed grid and the identical paired evaluation stream we place the DAgger decision list against a CART tree grown on the raw observation (Breiman et al., 1984), against a VIPER tree that adds importance resampling to the same induction (Bastani et al., 2018), and against a Coppens-style unordered rule set that votes over the same threshold vocabulary as our list (Coppens et al., 2021), all in the DAgger 28 2 4 6 8 12            
+
+> −400
+> −200
+> 0
+> 200
+> resolution B
+> Monte-Carlo return
+> LunarLander
+> naive
+> DAgger
+> teacher
+> 246812
+> 200
+> 300
+> 400
+> 500
+> resolution B
+> CartPole
+> 246812
+> −250
+> −200
+> −150
+> −100
+> resolution B
+> Acrobot
+
+Figure 7: Monte-Carlo return of the propositional student against resolution B on three continuous-control tasks, interquartile mean with 95% bootstrap confidence intervals on the DAgger curve, over fifteen seeds for CartPole and Acrobot and five for LunarLander. The naive one-pass student is in grey, the DAgger student in gold, and the neural teacher’s return is the ink dotted line. The naive student fails on LunarLander at every resolution and recovers on the more forgiving CartPole and Acrobot; the DAgger student climbs toward the teacher on all three, reaching it within noise on Acrobot at B ≥ 8 and recovering about 98% of it on CartPole, while retaining a genuine gap on the fine-control LunarLander task. The intermediate-resolution dips on CartPole ( B = 4) and Acrobot ( B = 3) are honest non-monotonicities of the quantile grid. regime, with the return delta averaged over the resolution ladder per seed and aggregated as an interquartile mean with a Holm-corrected two-sided Wilcoxon test over the per-environment comparison family. The result is a clean split. Our decision list loses to CART and to VIPER on CartPole, by an interquartile-mean margin of 78 .5 and 76 .2 points of return, in zero of the fifteen seeds does it come out ahead, and the Holm-corrected p is 3 .7 × 10 −4; on Acrobot the same two trees are ahead by a smaller 15 .0 and 14 .0 points whose intervals place the result at the boundary between a loss and a statistical tie. Against the propositional Coppens rule set our list wins on both tasks, by 59 .0 points on CartPole and 62 .6 on Acrobot with probability of improvement near one, so it is the strongest ordered rule list among the logic-style baselines while remaining behind the trees. This deficit is not an artifact of the data-driven threshold grid: replacing the quantile cuts by the Gini-optimal one-dimensional split points that a tree would choose moves the return by a mean of −47 .6 points on CartPole and +19 .0 on Acrobot and closes none of the gap to the tree baselines on average, so the shortfall is representational rather than a matter of where the cuts are placed. We read it as expected. A CART or VIPER tree splits the joint feature space with oblique sequences of axis tests and reuses each internal node across many leaves, whereas our first-match ordered list commits to one feature at a time and cannot share structure across clauses, and on a low-dimensional vector of physical quantities, where there is no relational regularity for the first-order form to capture, that sharing is exactly what a soft-margin controller needs. The representation that wins the DoorKey transfer is the one that loses here, and both outcomes have the same cause. The resolution sweep is itself a direct test of Theorem 2 on the trained policies rather than on the synthetic boundary of Proposition 4, and Figure 9 reports its two governing quantities. The held-out fidelity, the fraction of teacher states on which the student agrees with the network, rises monotonically with the resolution on every task, which is the empirical face of the vanishing disagreement ϵ† 
+
+> B
+
+→ 0 that the theorem guarantees. The three curves are ordered by difficulty rather than strictly by dimension: CartPole and Acrobot reach fidelity above 0 .95 by B = 8, whereas the eight-dimensional LunarLander plateaus near 0 .78 at the finest resolution we sweep, the same task on which the return gap stays open, so the fidelity ceiling and the return ceiling are one phenomenon seen through two metrics. The clause count is the interpretability price 29 Table 2: The DAgger decision list against the interpretable baselines on the identical fifteen-seed grid and paired evaluation stream. The reported quantity is the return of our list minus the return of the baseline, averaged over the resolution ladder per seed, as an interquartile mean with a 95% stratified bootstrap interval; P(improve) is the fraction of seeds on which our list scores higher, and the Holm-corrected two-sided exact Wilcoxon p is over the per-environment comparison family. A negative delta is a loss for our list. 
+
+task baseline our list − baseline P(improve) Wilcoxon p Holm p verdict CartPole CART (tree) −78 .5 [ −90 .6, −66 .0] 0.00 6.1 × 10 −5 3.7 × 10 −4 loses CartPole VIPER (tree) −76 .2 [ −88 .2, −64 .3] 0.00 6.1 × 10 −5 3.7 × 10 −4 loses CartPole Coppens (rules) +59 .0 [+39 .4, +79 .1] 0.93 1.8 × 10 −4 3.7 × 10 −4 beats Acrobot CART (tree) −15 .0 [ −28 .2, −11 .7] 0.00 6.1 × 10 −5 3.7 × 10 −4 matches Acrobot VIPER (tree) −14 .0 [ −27 .6, −10 .5] 0.00 6.1 × 10 −5 3.7 × 10 −4 matches Acrobot Coppens (rules) +62 .6 [+30 .9, +99 .3] 1.00 6.1 × 10 −5 3.7 × 10 −4 beats    
+
+> 10 210 3
+> 350
+> 400
+> 450
+> 500
+> program size (leaves or clauses)
+> Monte-Carlo return
+> CartPole
+> Prolog list (ours)
+> CART / VIPER trees
+> Coppens rules
+> 10 1.510 210 2.5
+> −150
+> −100
+> program size (leaves or clauses)
+> Acrobot
+
+Figure 8: Return against program size for the DAgger decision list and the interpretable baselines, each point the mean over fifteen seeds and the six resolutions, on a logarithmic size axis. Our first-order list, in gold, is the most compact interpretable student but sits below the CART and VIPER trees in ink on return; the Coppens rule set in grey is both smaller and weaker. On propositional control the trees dominate the return-versus-size frontier, the mirror image of the DoorKey transfer where the relational representation dominates. The list means are pulled down by the single intermediate-resolution dip visible in Figure 7. of that fidelity: it grows with the resolution on every task, from nine to about a hundred and twenty on CartPole and from twenty to about three hundred on LunarLander, so the resolution parameter is literally the exchange rate between how finely the program partitions the state space and how many rules a reader must hold in mind. We do not claim the induced clause count follows the Bd−1 law of Proposition 4, which counts the cells a worst-case oblique boundary forces and is confirmed on that boundary in Section 5; the induced count is the task-dependent number the greedy covering actually emits, and it is reported as the measured cost, not as a test of the exponent. The artefact remains a program one reads, and the interpretability cost is explicit. On Acrobot the eleven-clause list induced at B = 2, shown in Listing 3, reads as a hand-writable swing-up controller that torques the inner link in the direction of its angular velocity and torques toward the raised configuration otherwise, and the B = 2 DAgger student scores an interquartile-mean return of −87 .2 with a success rate of 0 .87, close to the teacher’s −84 .3 with a rule base a human can audit at a glance. The number of clauses grows with resolution, from about twelve at B = 2 to about eighty-five at B = 12 on Acrobot and from nine to about a hundred and twenty on CartPole, so the resolution knob is precisely the exchange rate between how finely the program partitions the state space and how much of it a reader can hold in 30 2 4 6 8 12       
+
+> 0.4
+> 0.6
+> 0.8
+> 1
+> resolution B
+> held-out fidelity to the network
+> CartPole ( d=4)
+> Acrobot ( d=6)
+> LunarLander ( d=8)
+> 246812
+> 0
+> 100
+> 200
+> 300
+> resolution B
+> clauses (interpretability cost)
+
+Figure 9: The resolution sweep as a test of the conversion theory, DAgger student, interquartile mean over fifteen seeds for CartPole and Acrobot and five for LunarLander. Left, held-out fidelity to the network rises with the resolution on every task, the empirical ϵ† 
+
+> B
+
+→ 0 of Theorem 2; the eight-dimensional LunarLander plateaus below the lower-dimensional tasks, the fidelity face of the return ceiling. Right, the clause count, the interpretability price of that fidelity, grows with the resolution, so B is the exchange rate between how finely the rules partition the state space and how many of them a reader must hold in mind. mind. CartPole supplies the cautionary dual: its nine-clause B = 2 list reads as the textbook pole balancer, pushing toward the side the pole is tipping, and it agrees with the network on about 90% of held-out states, yet it scores only about 210 with a success rate near zero, because coarse thresholds accumulate error over the long balancing horizon. Fidelity to the teacher is necessary but not sufficient for closed-loop return, and the resolution knob is what buys the missing precision, with B ≥ 3 clearing the solved line. Listing 3: The Acrobot expert system induced by DAgger at resolution B = 2, seed 0, copied verbatim from the emitted file and lightly aligned. Eleven clauses over threshold literals on the six observation features partition the state space into torque regions; the program runs unchanged under SWI-Prolog, and the B = 2 DAgger student scores an interquartile-mean return of −87 .2 with a 0 .87 success rate over the fifteen seeds, against the teacher’s −84 .3.   
+
+> % features: cos1,sin1,cos2,sin2,ang_vel1,ang_vel2 (link angles + rates)
+> act(S, torque_pos) :-ang_vel2(S) >= 0.148, ang_vel1(S) < -0.022, !. act(S, torque_neg) :-ang_vel1(S) >= -0.022, ang_vel2(S) < 0.148, !. act(S, torque_neg) :-sin1(S) < -0.027, cos1(S) < 0.746, !. act(S, torque_pos) :-cos2(S) >= 0.416, sin2(S) < 0.089, !. act(S, torque_neg) :-cos1(S) >= 0.746, ang_vel1(S) < -0.022, !. act(S, torque_neg) :-sin2(S) >= 0.089, cos1(S) < 0.746, !. act(S, torque_pos) :-ang_vel1(S) >= -0.022, sin1(S) >= -0.027, !. act(S, torque_zero) :-sin1(S) >= -0.027, !. act(S, torque_neg) :-cos2(S) >= 0.416, !. act(S, torque_pos) :-!. % unconditional
+> act(_S, torque_pos). % default
+
+# 7 Discussion and limitations 
+
+The results support a reading that turns on representation. On a task small enough to admit exact evaluation, a trained neural policy is rewritten as a short, executable, human-readable logic program that plays the task at least as well, and after a return-driven expansion better, than the network it came from, with the return loss certified and non-vacuous. Where the observation carries relational structure, as in DoorKey, the first-order form of that program is what lets it transfer across scale while a propositional coordinate tree cannot. Where the observation carries none, as in low-dimensional continuous control, the same first-order form has nothing to bind and cedes the return-versus-size frontier to the decision trees built for that setting. The honest 31 summary is that our method occupies a specific and defensible cell of the design space rather than dominating everywhere, and the limitations below say where its edges are. The first limitation is scale. Proposition 2, the advantage-gap certificate of Proposition 3, and the expansion oracle rely on model access and on an enumerable reachable set, and the census costs a linear solve per evaluation, which is the deliberate price of exactness at the 10 4-state scale of KeyDoor. The continuous-control study of Section 6 is what the method becomes beyond that scale: the census gives way to the DAgger sampling of Ross et al. (2011) and the exact solves to Monte Carlo evaluation with bootstrap intervals, at the cost of reintroducing confidence parameters into what is a certificate in the finite case, and the propositional student trades the exact-return guarantee for a resolution knob whose ceiling is visible on LunarLander. The second limitation is representational, and the continuous-control study is where we confront it rather than paper over it. An ordered decision list commits to one feature at a time and matches the first clause that fires, so it cannot express the shared, reused splits that a CART or VIPER tree distributes across a branching structure, and on a four to six dimensional vector of physical quantities, where no relational regularity rewards the first-order form, that inability costs return: the list loses to both trees on CartPole in zero of fifteen seeds and matches rather than beats them on Acrobot. We verified that this is not an artifact of the data-driven threshold placement by refitting the cuts at the Gini-optimal split points a tree would use, which closes none of the gap on average, so the deficit is a property of the hypothesis class and not of its tuning. We state it plainly because it is the mirror image of the DoorKey result and shares its cause: the representation that transfers across scale is the one that gives up joint splitting, and the setting that rewards joint splitting is the one with no relational structure to transfer. The third limitation is the predicate vocabulary, which we fixed by hand; the direction and adjacency predicates of KeyDoor and the navigation predicate of DoorKey encode task knowledge, and although the induction and expansion stages choose how to combine them, they cannot invent a predicate the vocabulary lacks, which is exactly the gap that predicate-invention methods address (Sha et al., 2024) and that object-centric extractors (Delfosse et al., 2024) would fill automatically. The fourth concerns the certificate, whose standing the advantage-gap refinement changes but does not make unconditional. On the key-and-door task the refined bound is exact and non-vacuous because the distilled and expanded students weakly dominate their teacher at the states where they disagree, the sign condition of Corollary 2; where that condition fails, as on five of the capped-regime distilled seeds, the bound reverts toward the worst-case horizon factors, and it offers no a-priori guarantee before the model is inspected. Its contribution is an exactly computable, horizon-aware certificate that is checked on every run and is tight in the regime the distillation targets, not a bound that holds for free at any discount factor. The natural continuation returns to the framing that motivated this work. If the predicate vocabulary and the candidate rules can be proposed by a generative model rather than fixed in advance, the extraction and expansion loop becomes a way to let a large language model draft the symbolic theory of a neural agent and let exact policy evaluation keep only the drafts that improve the return, joining the post-hoc distillation studied here to the generative construction of expert systems (Garrido-Merch´ an and Puente, 2025). The guarantees would remain those of Section 5: the acceptance oracle certifies every edit, whoever proposes it. A proof of concept substantiates this interchangeability claim on the capped key-and-door regime, where the distilled programs are furthest from the optimum. We asked a large language model (Claude, Anthropic), operating as an interactive coding agent with access to the three distilled rule lists of seeds three, five, and seven, to diagnose their failure mode and author repair edits, which were then frozen verbatim in a driver and submitted to the identical exact acceptance oracle used by the heuristic expansion; the proposer has no influence on acceptance, and replaying the frozen proposals reproduces the identical accept and reject decisions and the identical exact returns. The model identified that the distilled walk-to-key clause carries a door-adjacency guard that strands keyless 32 states adjacent to the door, authored one unguarded walk-to-key clause and, for the third seed, one on-key pickup clause, and every one of the four authored proposals was accepted, driving all three seeds from exact returns of 0 .4977, 0 .4977, and 0 .3435 to the exact optimum 0 .812204 in one, one, and two accepted edits respectively. The contrast with the heuristic search is the point: the random first-improvement expansion reached the same optimum on these seeds only after 65, 98, and 57 exact Bellman solves of candidate evaluation, whereas the informed proposer required one oracle call per accepted edit, so the certificate machinery converts a generative model from an unaccountable oracle into a proposal engine whose every suggestion is exactly audited before it enters the program. Two qualifications keep this honest. The proposals were authored by an interactive agent session rather than a fixed scripted pipeline, so proposal authorship is not reproducible from a random seed even though the certified trajectory is fully replayable from the frozen queue, and the study is a three-seed proof of concept on the enumerable regime, offered as evidence that the acceptance oracle makes the proposer interchangeable rather than as a study of generative rule synthesis at scale. 
+
+# 8 Conclusion 
+
+We introduced a post-hoc transformation that distils a frozen deep reinforcement learning policy into an executable first-order Prolog program and then expands the program by exact-return hill climbing until it matches or surpasses its teacher. We proved a return-loss bound, sharpened it into an advantage-gap certificate that is horizon-aware, exactly computable, and non-vacuous in the regime the distillation targets, and proved that the expansion loop improves monotonically and halts. On a two-room key-and-door task the expanded program reaches exact optimal return in every seed and exceeds the stochastic teacher on exact return in fifteen of fifteen capped-regime seeds, while the refined certificate is tighter than the worst-case bound by a median factor of about 13 ,700 and non-vacuous throughout. On a MiniGrid DoorKey task the first-order student distilled on one grid size transfers to unseen sizes with nine clauses, where decision trees over absolute coordinates collapse to zero return, so the relational representation is what carries the policy across scale. On propositional continuous control the same pipeline substitutes the network in fidelity and beats the closest logic-based prior art but loses on return to the decision-tree distillers, the expected price of a representation with no relational structure to exploit. The symbolic student is not a faithful clone of the network but a repaired program, and the mechanism that lets it surpass the teacher, the certification of each edit by exact policy evaluation, is the same mechanism that would let a generative proposer of rules improve a neural agent under a guarantee. 
+
+# A Reproducibility 
+
+Every number in the paper is produced by a pinned pipeline, and we record the provenance here so that the study can be rerun without guesswork. All experiments run on CPU under Python 3 .10 .12 with NumPy 1 .26 .4, SciPy 1 .15 .3, PyTorch 2 .9.1 built for CPU, Gymnasium 1.3.0, and SWI-Prolog 9 .2.9; every emitted Prolog program is executed by that SWI-Prolog build and asserted to select the same action as the reference evaluator, on all reachable states in the key-and-door task and on at least five hundred sampled states in the DoorKey and continuous-control tasks, so the artefact analysed and the artefact executed are one program. The teacher in every task is a proximal policy optimization agent (Schulman et al., 2017) with a two-layer tanh actor-critic and eight synchronous environments, trained with generalized advantage estimation, and the full learning-telemetry panel, explained variance, approximate Kullback-Leibler divergence, entropy, clip fraction, and per-group gradient norms, is written to disk per update and audited before any policy is distilled; the complete hyperparameter set and the per-seed random streams are pinned in the released configuration alongside the SHA-256 33 hash of each environment’s source file, and the audit confirms that the teachers are healthy, the low explained variance on the fast-solving CartPole seeds being the known constant-value-target artifact rather than a pathology. The key-and-door environment enumerates to 16 ,944 reachable states, uses a discount factor 
+
+γ = 0 .99, a horizon of 120, and a maximum absolute one-step reward Rmax = 0 .99, and is studied over fifteen seeds in each of two teacher regimes: the converged regime trains to at most 800k environment steps with an early stop at greedy success 0 .95, reached between 369k and 451k steps, and the capped regime fixes a budget of 299 ,008 steps. Aggregation over the fifteen seeds is by an interquartile mean with a 10 ,000 resample stratified bootstrap in the manner of Agarwal et al. (2021), and paired comparisons use the two-sided exact Wilcoxon signed-rank test with a Bonferroni correction within each six-test regime family. The DoorKey study trains one teacher per seed on the 8 × 8 layout over fifteen seeds and evaluates every distilled student on the 6 × 6, 8 × 8, and 16 × 16 layouts without retraining, with a Holm-Bonferroni correction over the eight-contrast relational-versus-absolute family. The continuous-control study sweeps the resolution ladder B ∈ { 2, 3, 4, 6, 8, 12 } over fifteen seeds each on CartPole and Acrobot and five seeds on LunarLander, evaluates every student on three hundred paired Monte-Carlo episodes with a fixed episode-seed stream shared by the teacher and all students, and corrects the per-environment baseline comparison family by Holm-Bonferroni. The whole suite fits within a compute budget of the order of fifty CPU-hours on a sixteen-core machine with no accelerator; the key-and-door runs, for instance, average about one minute each, of which the expansion hill climb is under a second. The generative proof of concept of Section 7 is the one measurement whose proposal authorship is not seeded: the language-model-authored edits are frozen verbatim in the released driver, so re-running it replays the identical certified trajectory through the same exact oracle, and only the authorship of the frozen queue itself is not derivable from a random seed. 
+
+# B Baseline protocol 
+
+The interpretable baselines are reimplemented to share our extraction and evaluation harness, and three approximations are worth stating so that the comparison is read for what it is. First, the VIPER baseline (Bastani et al., 2018) is adapted to a policy-gradient teacher. The original importance weight ℓ(s) = V (s) − min a Q(s, a ) requires an action-value critic, which our proximal policy optimization teacher does not expose, so we substitute the margin between the top two action logits as an advantage-magnitude proxy and resample the DAgger training states by that weight; the resampling is the only difference from a DAgger-trained tree, and we label the method VIPER on that understanding rather than as a literal reproduction. Second, the Coppens baseline (Coppens et al., 2021) is faithful in spirit rather than in code: a CN2-style greedy inducer grows an unordered set of rules over the same threshold predicate vocabulary our decision list uses, and it classifies a state by majority vote among the rules that fire, falling back to a default action on ties or when no rule fires, so the only representational difference from our method is the unordered set-valued form against our ordered first-order list with a default. Third, the CART baseline (Breiman et al., 1984) splits the raw continuous observation with its own learned thresholds rather than our fixed resolution-B quantile grid, and we report it both unconstrained and size-matched to the decision list’s clause count, so the reader can separate the effect of representation from the effect of size. On DoorKey the same CART and VIPER inducers are fitted twice, once over the agent-relative relational features the Prolog student reads and once over the absolute cell coordinates of the objects and the agent, which is the contrast that isolates representation from induction algorithm. Continuous-control baselines are confined to CartPole and Acrobot, which share the environment-agnostic harness; a fair LunarLander comparison would require porting its separate interface to that harness and is left to future work. 34 References 
+
+Rishabh Agarwal, Max Schwarzer, Pablo Samuel Castro, Aaron C. Courville, and Marc G. Belle-mare. Deep reinforcement learning at the edge of the statistical precipice. In Marc’Aurelio Ranzato, Alina Beygelzimer, Yann N. Dauphin, Percy Liang, and Jennifer Wortman Vaughan, editors, Advances in Neural Information Processing Systems 34: Annual Conference on Neural Information Processing Systems 2021, NeurIPS 2021, December 6-14, 2021, vir-tual , pages 29304–29320, 2021. URL https://proceedings.neurips.cc/paper/2021/hash/ f514cec81cb148559cf475e7426eed5e-Abstract.html .Osbert Bastani, Yewen Pu, and Armando Solar-Lezama. Verifiable reinforcement learning via pol-icy extraction. In Samy Bengio, Hanna M. Wallach, Hugo Larochelle, Kristen Grauman, Nicol` oCesa-Bianchi, and Roman Garnett, editors, Advances in Neural Information Processing Sys-tems 31: Annual Conference on Neural Information Processing Systems 2018, NeurIPS 2018, December 3-8, 2018, Montr´ eal, Canada , pages 2499–2509, 2018. URL https://proceedings. neurips.cc/paper/2018/hash/e6d8545daa42d5ced125a4bf747b3688-Abstract.html .Leo Breiman, J. H. Friedman, Richard A. Olshen, and C. J. Stone. Classification and Regression Trees . Wadsworth, 1984. ISBN 0-534-98053-8. Maxime Chevalier-Boisvert, Bolun Dai, Mark Towers, Rodrigo Perez-Vicente, Lucas Willems, Salem Lahlou, Suman Pal, Pablo Samuel Castro, and Jordan K. Terry. Minigrid & Miniworld: Modular & customizable reinforcement learning environments for goal-oriented tasks. In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, editors, Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10 - 16, 2023 , 2023. URL http://papers.nips.cc/paper_files/paper/2023/ hash/e8916198466e8ef218a2185a491b49fa-Abstract-Datasets_and_Benchmarks.html .Youri Coppens, Denis Steckelmacher, Catholijn M. Jonker, and Ann Now´ e. Synthesising reinforcement learning policies through set-valued inductive rule learning. arXiv preprint arXiv:2106.06009, 2021. Quentin Delfosse, Hikaru Shindo, Devendra Singh Dhami, and Kristian Kersting. Interpretable and explainable logical policies via neurally guided symbolic abstraction. In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine, edi-tors, Advances in Neural Information Processing Systems 36: Annual Conference on Neu-ral Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, Decem-ber 10 - 16, 2023 , 2023. URL http://papers.nips.cc/paper_files/paper/2023/hash/ 9f42f06a54ce3b709ad78d34c73e4363-Abstract-Conference.html .Quentin Delfosse, Sebastian Sztwiertnia, Mark Rothermel, Wolfgang Stammer, and Kristian Kersting. Interpretable concept bottlenecks to align reinforcement learning agents. In Amir Globersons, Lester Mackey, Danielle Belgrave, Angela Fan, Ulrich Paquet, Jakub M. Tomczak, and Cheng Zhang, editors, Advances in Neural Information Processing Systems 37: Annual Conference on Neural Information Processing Systems 2024, NeurIPS 2024, Vancouver, BC, Canada, December 10 - 15, 2024 , 2024. URL http://papers.nips.cc/paper_files/paper/ 2024/hash/7b76eea0c3683e440c3d362620f578cd-Abstract-Conference.html .Finale Doshi-Velez and Been Kim. Towards a rigorous science of interpretable machine learning. arXiv preprint arXiv:1702.08608, 2017. Saso Dzeroski, Luc De Raedt, and Kurt Driessens. Relational reinforcement learning. Mach. Learn. , 43(1/2):7–52, 2001. doi: 10.1023/A:1007694015589. URL https://doi.org/10.1023/ A:1007694015589 .35 Eduardo C. Garrido-Merch´ an and Cristina Puente. GOFAI meets Generative AI: Development of expert systems by means of Large Language Models. arXiv preprint arXiv:2507.13550, 2025. Zhengyao Jiang and Shan Luo. Neural logic reinforcement learning. In Kamalika Chaudhuri and Ruslan Salakhutdinov, editors, Proceedings of the 36th International Conference on Machine Learning, ICML 2019, 9-15 June 2019, Long Beach, California, USA , volume 97 of Proceedings of Machine Learning Research , pages 3110–3119. PMLR, 2019. URL http: //proceedings.mlr.press/v97/jiang19a.html .Sham M. Kakade and John Langford. Approximately optimal approximate reinforcement learning. In Claude Sammut and Achim G. Hoffmann, editors, Machine Learning, Proceedings of the Nineteenth International Conference (ICML 2002), University of New South Wales, Sydney, Australia, July 8-12, 2002 , pages 267–274. Morgan Kaufmann, 2002. Hector Kohler, Quentin Delfosse, Riad Akrour, Kristian Kersting, and Philippe Preux. Inter-pretable and editable programmatic tree policies for reinforcement learning. arXiv preprint arXiv:2405.14956, 2024. Anurag Koul, Alan Fern, and Sam Greydanus. Learning finite state representations of recurrent policy networks. In 7th International Conference on Learning Representations, ICLR 2019, New Orleans, LA, USA, May 6-9, 2019 . OpenReview.net, 2019. URL https://openreview. net/forum?id=S1gOpsCctm .Mikel Landajuela, Brenden K. Petersen, Sookyung Kim, Cl´ audio P. Santiago, Ruben Glatt, T. Nathan Mundhenk, Jacob F. Pettit, and Daniel M. Faissol. Discovering symbolic policies with deep reinforcement learning. In Marina Meila and Tong Zhang, editors, Proceedings of the 38th International Conference on Machine Learning, ICML 2021, 18-24 July 2021, Virtual Event , volume 139 of Proceedings of Machine Learning Research , pages 5979–5989. PMLR, 2021. URL http://proceedings.mlr.press/v139/landajuela21a.html .Guiliang Liu, Oliver Schulte, Wang Zhu, and Qingcan Li. Toward interpretable deep reinforcement learning with linear model U-Trees. In Michele Berlingerio, Francesco Bonchi, Thomas G¨ artner, Neil Hurley, and Georgiana Ifrim, editors, Machine Learning and Knowledge Discovery in Databases - European Conference, ECML PKDD 2018, Dublin, Ireland, September 10-14, 2018, Proceedings, Part II , volume 11052 of Lecture Notes in Computer Science , pages 414– 429. Springer, 2018. doi: 10.1007/978-3-030-10928-8 \ 25. URL https://doi.org/10.1007/ 978-3-030-10928-8_25 .Stephanie Milani, Nicholay Topin, Manuela Veloso, and Fei Fang. Explainable reinforcement learning: A survey and comparative review. ACM Comput. Surv. , 56(7):168:1–168:36, 2024. doi: 10.1145/3616864. URL https://doi.org/10.1145/3616864 .J. Ross Quinlan. Learning logical definitions from relations. Mach. Learn. , 5:239–266, 1990. doi: 10.1007/BF00117105. URL https://doi.org/10.1007/BF00117105 .St´ ephane Ross, Geoffrey J. Gordon, and Drew Bagnell. A reduction of imitation learning and structured prediction to no-regret online learning. In Geoffrey J. Gordon, David B. Dunson, and Miroslav Dud´ ık, editors, Proceedings of the Fourteenth International Conference on Artificial Intelligence and Statistics, AISTATS 2011, Fort Lauderdale, USA, April 11-13, 2011 , volume 15 of JMLR Proceedings , pages 627–635. JMLR.org, 2011. URL http: //proceedings.mlr.press/v15/ross11a/ross11a.pdf .John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, and Oleg Klimov. Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347, 2017. 36 Jingyuan Sha, Hikaru Shindo, Quentin Delfosse, Kristian Kersting, and Devendra Singh Dhami. EXPIL: Explanatory predicate invention for learning in games. arXiv preprint arXiv:2406.06107, 2024. Hikaru Shindo, Quentin Delfosse, Devendra Singh Dhami, and Kristian Kersting. BlendRL: A framework for merging symbolic and neural policy learning. In The Thirteenth Interna-tional Conference on Learning Representations, ICLR 2025, Singapore, April 24-28, 2025 .OpenReview.net, 2025. URL https://openreview.net/forum?id=60i0ksMAhd .Mark Towers, Ariel Kwiatkowski, Jordan Terry, John U. Balis, Gianluca De Cola, Tristan Deleu, Manuel Goul˜ ao, Andreas Kallinteris, Markus Krimmel, Arjun KG, Rodrigo Perez-Vicente, Andrea Pierr´ e, Sander Schulhoff, Jun Jet Tai, Hannah Tan, and Omar G. Younis. Gymnasium: A standard interface for reinforcement learning environments. arXiv preprint arXiv:2407.17032, 2024. Abhinav Verma, Vijayaraghavan Murali, Rishabh Singh, Pushmeet Kohli, and Swarat Chaudhuri. Programmatically interpretable reinforcement learning. In Jennifer G. Dy and Andreas Krause, editors, Proceedings of the 35th International Conference on Machine Learning, ICML 2018, Stockholmsm¨ assan, Stockholm, Sweden, July 10-15, 2018 , volume 80 of Proceedings of Machine Learning Research , pages 5045–5054. PMLR, 2018. URL http://proceedings.mlr.press/ v80/verma18a.html .Abhinav Verma, Hoang Minh Le, Yisong Yue, and Swarat Chaudhuri. Imitation-projected programmatic reinforcement learning. In Hanna M. Wallach, Hugo Larochelle, Alina Beygelz-imer, Florence d’Alch´ e-Buc, Emily B. Fox, and Roman Garnett, editors, Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019, NeurIPS 2019, December 8-14, 2019, Vancouver, BC, Canada ,pages 15726–15737, 2019. URL https://proceedings.neurips.cc/paper/2019/hash/ 5a44a53b7d26bb1e54c05222f186dcfb-Abstract.html .Jan Wielemaker, Tom Schrijvers, Markus Triska, and Torbj¨ orn Lager. SWI-Prolog. Theory Pract. Log. Program. , 12(1-2):67–96, 2012. doi: 10.1017/S1471068411000494. URL https: //doi.org/10.1017/S1471068411000494 .37
