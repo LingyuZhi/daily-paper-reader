@@ -1,0 +1,89 @@
+{
+  "date": "20260726",
+  "date_label": "",
+  "generated_at": "2026-07-26 19:50:03 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.16745v1",
+      "route": "202607/26/2607.16745v1-relic-revealed-principles-for-learning-interpretable-composable-skills-in-multi-agent-planning",
+      "title": "RELIC: Revealed Principles for Learning Interpretable Composable Skills in Multi-Agent Planning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "在多智能体规划中使用LLM引导的私有搜索学习可解释可组合技能",
+      "first_seen_at": "2026-07-26 19:50:03 UTC",
+      "updated_at": "2026-07-26 19:50:03 UTC"
+    },
+    {
+      "paper_id": "2607.18470v1",
+      "route": "202607/26/2607.18470v1-rrpo-reference-relative-policy-optimization-with-stratified-conditional-rollouts",
+      "title": "RRPO: Reference-Relative Policy Optimization with Stratified Conditional Rollouts",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "泛化的策略优化方法，将GRPO扩展到非可验证场景",
+      "first_seen_at": "2026-07-26 19:50:03 UTC",
+      "updated_at": "2026-07-26 19:50:03 UTC"
+    },
+    {
+      "paper_id": "2607.21106v1",
+      "route": "202607/26/2607.21106v1-attrimem-attribution-guided-process-feedback-for-agent-memory-learning",
+      "title": "AttriMem: Attribution-Guided Process Feedback for Agent Memory Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "基于强化学习的LLM智能体记忆构建方法",
+      "first_seen_at": "2026-07-26 19:50:03 UTC",
+      "updated_at": "2026-07-26 19:50:03 UTC"
+    },
+    {
+      "paper_id": "2607.17326v1",
+      "route": "202607/26/2607.17326v1-rethinking-the-suitability-of-reinforcement-learning-algorithms-under-practical-transfer-constraints",
+      "title": "Rethinking the Suitability of Reinforcement Learning Algorithms Under Practical Transfer Constraints",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "分析RL算法在实际时钟预算和动力学失配下的适用性",
+      "first_seen_at": "2026-07-26 19:50:03 UTC",
+      "updated_at": "2026-07-26 19:50:03 UTC"
+    },
+    {
+      "paper_id": "2607.18985v1",
+      "route": "202607/26/2607.18985v1-athena-brain-technical-report-an-efficient-robot-brain-for-general-intelligence-and-embodied-interactio",
+      "title": "Athena-Brain Technical Report: An Efficient Robot Brain for General Intelligence and Embodied Interactio",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "LLM作为具身智能体决策的脑",
+      "first_seen_at": "2026-07-26 19:50:03 UTC",
+      "updated_at": "2026-07-26 19:50:03 UTC"
+    }
+  ]
+}
