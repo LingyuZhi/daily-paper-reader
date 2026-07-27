@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-26</span>
+      <span class="dpr-home-dashboard-kicker">2026-07-27</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 5 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 10 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-07-26 19:50:03 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-07-27 20:16:02 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日速读5篇论文，重点涵盖多智能体规划可解释技能组合、分层策略优化与归因式记忆学习。</p>
-<p>最值得关注的是《RELIC》与《RRPO》，前者提出可解释组合技能用于多智能体规划，后者引入分层条件展开的参考相对策略优化。</p>
-<p>建议优先阅读《AttriMem》中基于归因引导的过程反馈方法，对理解智能体记忆学习机制有启发。</p>
+<p>今日聚焦10篇强化学习论文，精读重点为高分智能体训练框架与无人车协调机制。最值得看的是10分《Molt: A Scalable PyTorch-Native Training Framework for Agentic RL》和9分《Compact Latent Coordination for Autonomous Vehicles at Unsignalized Intersections》。建议优先精读这两篇，若对应用感兴趣可速读8分《Explainable RL for assisting Air Traffic Controllers》。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">0 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning">Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Compact Latent Coordination for Autonomous Vehicles at Unsignalized Intersections">Compact Latent Coordination for Autonomous Vehicles at Unsignalized Intersections</span></li><li><span class="dpr-home-dashboard-paper-title" title="Teaching LLMs to Self-Evolve: Cultivating Core Meta-Skills with Reinforcement Learning">Teaching LLMs to Self-Evolve: Cultivating Core Meta-Skills with Reinforcement Learning</span></li></ul>
   </div>
-
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>6</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">5 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="RELIC: Revealed Principles for Learning Interpretable Composable Skills in Multi-Agent Planning">RELIC: Revealed Principles for Learning Interpretable Composable Skills in Multi-Agent Planning</span></li><li><span class="dpr-home-dashboard-paper-title" title="RRPO: Reference-Relative Policy Optimization with Stratified Conditional Rollouts">RRPO: Reference-Relative Policy Optimization with Stratified Conditional Rollouts</span></li><li><span class="dpr-home-dashboard-paper-title" title="AttriMem: Attribution-Guided Process Feedback for Agent Memory Learning">AttriMem: Attribution-Guided Process Feedback for Agent Memory Learning</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Explainable Reinforcement Learning for assisting Air Traffic Controllers">Explainable Reinforcement Learning for assisting Air Traffic Controllers</span></li><li><span class="dpr-home-dashboard-paper-title" title="Variance-Reduced Q-Learning over Static and Time-Varying Networks">Variance-Reduced Q-Learning over Static and Time-Varying Networks</span></li><li><span class="dpr-home-dashboard-paper-title" title="Learning as Reasoning Unfolds: Progressive Rollout Allocation for Efficient Reinforcement Learning">Learning as Reasoning Unfolds: Progressive Rollout Allocation for Efficient Reinforcement Learning</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>5</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>4</strong></span></div>
 </section>
 </div>
 

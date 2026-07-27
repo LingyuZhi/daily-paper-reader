@@ -1,0 +1,409 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-27T20:09:16.258810+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 7,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.21653v1",
+      "source": "arxiv",
+      "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning",
+      "abstract": "Agentic reinforcement learning research is constant algorithm modification, new estimators, new pipeline stages, new rollout schemes, and in mainstream frameworks each change threads through layers of trainer, distributed backend, and rollout glue: the cost lands on the researcher at every iteration. Molt is a PyTorch-native training framework built to keep that cost small: a codebase compact and clean enough for a researcher to hold in their head, and for an AI coding assistant to read and reason about in its entirety, so the algorithm flow can be traced and changed end to end. The agent is an ordinary program, and one asynchronous loop trains multimodal and mixture-of-experts policies while never training on a token it did not generate, consistent in tokens, policy versions, and model semantics. Leanness does not cost performance: under a matched, fully asynchronous protocol, Molt is statistically comparable to a state-of-the-art Megatron-based stack. Molt is open source and provides recipes and containers at https://github.com/NVIDIA-NeMo/labs-molt.",
+      "authors": [
+        "Jian Hu",
+        "Huiying Li",
+        "Hao Zhang",
+        "Binfeng Xu",
+        "Yifan Zhang",
+        "Shaokun Zhang",
+        "Hemil Desai",
+        "Michael Demoret",
+        "Pavlo Molchanov",
+        "Jan Kautz",
+        "Yi Dong"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.DC"
+      ],
+      "published": "2026-07-22T18:06:15+00:00",
+      "link": "https://arxiv.org/pdf/2607.21653v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Scalable PyTorch-native framework specifically for agentic RL research",
+      "llm_evidence_cn": "专为智能体RL研究设计的可扩展PyTorch原生框架",
+      "llm_evidence": "专为智能体RL研究设计的可扩展PyTorch原生框架",
+      "canonical_evidence": "专为智能体RL研究设计的可扩展PyTorch原生框架",
+      "llm_tldr_en": "Molt is a compact, clean PyTorch-native training framework for agentic RL, allowing researchers to easily trace and modify algorithm flow end-to-end.",
+      "llm_tldr_cn": "本文介绍Molt，一个专为智能体强化学习研究设计的PyTorch原生训练框架。该框架代码紧凑清晰，研究人员可以完整阅读和理解，AI编程助手也能推理其全貌，使得算法流程可以端到端追踪和修改。通过异步循环训练多模态和混合专家策略，Molt降低了研究者进行算法迭代的成本，加速了agentic RL研究。",
+      "llm_tldr": "本文介绍Molt，一个专为智能体强化学习研究设计的PyTorch原生训练框架。该框架代码紧凑清晰，研究人员可以完整阅读和理解，AI编程助手也能推理其全貌，使得算法流程可以端到端追踪和修改。通过异步循环训练多模态和混合专家策略，Molt降低了研究者进行算法迭代的成本，加速了agentic RL研究。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.21488v1",
+      "source": "arxiv",
+      "title": "Compact Latent Coordination for Autonomous Vehicles at Unsignalized Intersections",
+      "abstract": "Coordinating autonomous vehicles at unsignalized intersections remains a critical challenge for multi-agent reinforcement learning (MARL) systems, which typically struggle with combinatorial action spaces, reliance on privileged information, or rigid agent designs. We propose Master-Agent Proto-plan System (MAPS), a hierarchical deep reinforcement learning (DRL) architecture in which a centralized Master agent generates a compact, continuous embedding, denoted as proto-plan, that encodes a global coordination strategy. Decentralized Worker agents integrate this embedding with local observations to execute vehicle-specific control, decoupling strategic intent from tactical execution and enabling independent optimization of each module.   As a proof-of-concept evaluation of this coordination mechanism, we test MAPS across 72 intersection configurations in HighwayEnv. MAPS achieves collision-free navigation while significantly reducing average travel time, outperforming state-of-the-art baselines. The learned proto-plans further exhibit robust generalization: a system trained with three agents achieves a 94% success rate when deployed zero-shot to five-agent scenarios, confirming that proto-plan-based hierarchical learning provides a promising framework for multi-vehicle coordination.",
+      "authors": [
+        "Gil Lifshits",
+        "Igal Bilik",
+        "Gilad Katz"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "published": "2026-07-23T16:28:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.21488v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Multi-agent RL for autonomous vehicle coordination at intersections",
+      "llm_evidence_cn": "用于自动驾驶交叉路口协调的多智能体RL",
+      "llm_evidence": "用于自动驾驶交叉路口协调的多智能体RL",
+      "canonical_evidence": "用于自动驾驶交叉路口协调的多智能体RL",
+      "llm_tldr_en": "Proposes a hierarchical MARL architecture (MAPS) with a centralized Master generating proto-plans for decentralized worker agents to coordinate autonomous vehicles.",
+      "llm_tldr_cn": "本文提出一种层次化深度强化学习架构MAPS，用于解决无信号交叉口多车协调问题。中央主智能体生成紧凑的连续嵌入（原型计划）编码全局协调策略，分散的工作智能体结合局部观测实现车辆控制。该架构解耦战略意图与战术执行，提高了可扩展性和效率，在复杂场景下超越现有方法。",
+      "llm_tldr": "本文提出一种层次化深度强化学习架构MAPS，用于解决无信号交叉口多车协调问题。中央主智能体生成紧凑的连续嵌入（原型计划）编码全局协调策略，分散的工作智能体结合局部观测实现车辆控制。该架构解耦战略意图与战术执行，提高了可扩展性和效率，在复杂场景下超越现有方法。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.21971v1",
+      "source": "arxiv",
+      "title": "Teaching LLMs to Self-Evolve: Cultivating Core Meta-Skills with Reinforcement Learning",
+      "abstract": "Test-time scaling through iterative self-evolution with environment feedback, as demonstrated by AlphaEvolve, shows remarkable performance gains. We hypothesize that the success of such evolution frameworks hinges on meta-skills, such as self-reflection with environment feedback, that enable effective multi-round refinement, yet are largely neglected by traditional post-training. To bridge this gap, we present MetaEvolve, a framework designed to develop these meta-skills via a data synthesis pipeline, evolution-aware reinforcement learning (RL), and inference-time evolutionary search. Concretely, we ground MetaEvolve in coding, where program execution provides natural, continuous reward signals beyond binary correctness. Building on these signals, we synthesize evolution trajectories as training data, each containing a current program, its fitness score (combining correctness and efficiency), and a history of prior attempts, and train the model via RL with verifiable rewards derived from test case execution. By training on large-scale code data, we aim to inspire generalizable domain-agnostic meta-skills that can transfer broadly to open-ended problems where such rich training signals are scarce. Across seven coding benchmarks, MetaEvolve outperforms the strongest baseline by 10.01% absolute on in-distribution tasks and 24.12% on out-of-distribution tasks. On open-ended algorithm optimization problems entirely outside the training domain, it further achieves a 46.9% relative improvement. These results demonstrate that explicitly cultivating self-evolution meta-skills offers a principled path toward more capable and autonomously self-evolving AI.",
+      "authors": [
+        "Shujin Wu",
+        "Cheng Qian",
+        "Xiusi Chen",
+        "Heng Ji"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-24T04:35:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.21971v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "reinforcement learning to cultivate meta-skills in LLMs for self-evolution",
+      "llm_evidence_cn": "利用强化学习培养大语言模型的元技能以实现自我进化",
+      "llm_evidence": "利用强化学习培养大语言模型的元技能以实现自我进化",
+      "canonical_evidence": "利用强化学习培养大语言模型的元技能以实现自我进化",
+      "llm_tldr_en": "MetaEvolve framework uses reinforcement learning to teach LLMs meta-skills like self-reflection, improving performance via iterative self-evolution with environment feedback.",
+      "llm_tldr_cn": "现有后训练方法忽视了自我反思等元技能的培养，限制了LLM的多轮迭代改进。为此提出了MetaEvolve框架，通过数据合成流水线和进化感知的强化学习来培育核心元技能。在编程任务上，程序执行提供连续奖励信号，实验表明该方法显著提升了模型的自进化能力，从而在测试时获得了性能增益。",
+      "llm_tldr": "现有后训练方法忽视了自我反思等元技能的培养，限制了LLM的多轮迭代改进。为此提出了MetaEvolve框架，通过数据合成流水线和进化感知的强化学习来培育核心元技能。在编程任务上，程序执行提供连续奖励信号，实验表明该方法显著提升了模型的自进化能力，从而在测试时获得了性能增益。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.22039v1",
+      "source": "arxiv",
+      "title": "Enough is as good as a feast: A Comprehensive Analysis of How Reinforcement Learning Mitigates Task Conflicts in LLMs",
+      "abstract": "Model merging plays a crucial role in consolidating multiple specialized models into a single, unified model, especially in the era of large language models (LLMs). Recent research has primarily focused on developing strategies to enhance merging performance with the trained models, while the impact of training paradigms, such as supervised fine-tuning (SFT) and reinforcement learning (RL), on the effectiveness of model merging remains underexplored. In this study, we systematically explore the merging behavior of RL-trained LLMs compared to those trained with traditional SFT. Through comprehensive evaluations across five representative tasks, we find that RL significantly reduces task conflicts and results in less performance degradation after merging, making RL-trained models particularly well-suited for this process. To unearth the reasons behind the superior suitability of RL for model merging, we conduct extensive empirical experiments and theoretical analyses. Our findings highlight three key factors: (1) On-policy training data in RL control the gradient updates in a smaller magnitude, reducing the risk of overwriting existing knowledge for other tasks in the model. (2) The RL optimization objective, which favors ``\\textit{enough is as good as a feast}\", progressively reduces the magnitude and the number of conflict parameter updates as the model converges. (3) Joint optimization of positive and negative examples in RL steers the model towards an unbiased task-specific parameter subspace, ensuring robust performance while further preventing parameter conflicts.",
+      "authors": [
+        "Zixuan Ren",
+        "Jinliang Lu",
+        "Junhong Wu",
+        "Yang Zhao",
+        "Dai Dai",
+        "Hua Wu",
+        "Haifeng Wang",
+        "Chengqing Zong"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-24T07:08:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.22039v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "RL significantly reduces task conflicts in LLMs during model merging",
+      "llm_evidence_cn": "RL在LLM模型合并中显著减少任务冲突",
+      "llm_evidence": "RL在LLM模型合并中显著减少任务冲突",
+      "canonical_evidence": "RL在LLM模型合并中显著减少任务冲突",
+      "llm_tldr_en": "Systematically compares RL and SFT trained LLMs, showing RL reduces task conflicts and improves merging performance.",
+      "llm_tldr_cn": "本文系统比较了强化学习与监督微调训练的LLM在模型合并中的表现，发现RL训练的模型显著减少任务冲突，从而在多种任务上获得更好的合并性能。该研究揭示了RL训练范式对LLM模型合并的积极作用，为构建统一多任务模型提供了新思路。",
+      "llm_tldr": "本文系统比较了强化学习与监督微调训练的LLM在模型合并中的表现，发现RL训练的模型显著减少任务冲突，从而在多种任务上获得更好的合并性能。该研究揭示了RL训练范式对LLM模型合并的积极作用，为构建统一多任务模型提供了新思路。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.19928v1",
+      "source": "arxiv",
+      "title": "Continuous-Time Reinforcement Learning for $N$-Player Stochastic Differential Games with Exploratory Policies",
+      "abstract": "We study continuous-time reinforcement learning for $N$-player noncooperative stochastic differential games. Each player adopts an entropy-regularized exploratory policy; given the others' actions, the optimal response is a Gibbs distribution, and a Nash equilibrium requires these $N$ conditional distributions to be jointly compatible. We prove that the natural equilibrium concept -- simultaneous Hamiltonian maximization -- is equivalent to this compatibility, and establish a necessary and sufficient condition expressed as a computable cross-partial criterion on the optimal $q$-functions. Nash equilibria exist unconditionally for decoupled and symmetric games. When compatibility fails, a coordinate path integral construction yields an approximate correlated equilibrium with explicit quadratic KL-divergence bounds that vanish locally uniformly as the exploration weight $γ\\to\\infty$. A $q$-function framework for the $N$-player game extends the single-agent $q$-learning theory of [21], with weak martingale characterizations motivating model-free on-policy and off-policy algorithms. The framework extends to the ergodic (infinite-horizon) setting with the same locally uniform $O_R(1/γ)$ asymptotic rates.",
+      "authors": [
+        "Jisheng Liu",
+        "Jing Zhang"
+      ],
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC"
+      ],
+      "published": "2026-07-22T09:00:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.19928v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "continuous-time RL for multi-agent games with exploratory policies",
+      "llm_evidence_cn": "持续时间多智能体强化学习与探索策略",
+      "llm_evidence": "持续时间多智能体强化学习与探索策略",
+      "canonical_evidence": "持续时间多智能体强化学习与探索策略",
+      "llm_tldr_en": "Studies continuous-time RL for N-player stochastic differential games with entropy-regularized exploratory policies, establishing equilibrium conditions and providing a computable cross-partial criterion for Nash equilibria.",
+      "llm_tldr_cn": "该论文研究N玩家非合作随机微分博弈中的持续时间强化学习。每个玩家采用熵正则化的探索策略，最优响应为吉布斯分布。论文证明了汉密尔顿最大化等价于分布的兼容性，并给出了可计算的交叉偏导条件。该工作为多智能体博弈中的探索策略提供了理论基础，适用于自主智能体决策场景。",
+      "llm_tldr": "该论文研究N玩家非合作随机微分博弈中的持续时间强化学习。每个玩家采用熵正则化的探索策略，最优响应为吉布斯分布。论文证明了汉密尔顿最大化等价于分布的兼容性，并给出了可计算的交叉偏导条件。该工作为多智能体博弈中的探索策略提供了理论基础，适用于自主智能体决策场景。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.22186v1",
+      "source": "arxiv",
+      "title": "Deconstructing Off-Policy Ratios: Entropy-Scaled Trust Regions for Asynchronous Reinforcement Learning",
+      "abstract": "Asynchronous reinforcement learning (RL) accelerates large language model (LLM) post-training by overlapping rollout generation with policy optimization, but the resulting stale, off-policy data can destabilize optimization and ultimately cause policy collapse. Existing methods typically retain or discard tokens based solely on the magnitude of their importance ratios, applying the same threshold uniformly across token positions. In this work, we reveal that the natural scale of the importance ratio varies systematically with token entropy. Under asynchronous dynamics, this entropy-ratio scaling dictates two distinct phenomena: at low entropy, the inherent train-inference discrepancy is drastically amplified into substantial sampling noise; at high entropy, in-flight weight updates naturally induce pronounced, legitimate exploratory deviations. Consequently, magnitude-only correction inadvertently admits the amplified noise while strictly masking out the essential exploration triggered by in-flight updates. To address this, we propose the Entropy-Scaled Trust Region (ESTR), which scales each token's off-policy deviation by its local entropy, requiring no auxiliary forward passes or explicit version-switch detection. Across long-horizon agentic tasks and mathematical reasoning benchmarks, ESTR consistently outperforms existing asynchronous methods and achieves the best train-inference consistency. Compared with synchronous GRPO, ESTR attains comparable accuracy while improving training speed by $2.6\\times$.",
+      "authors": [
+        "Guanqun Zhao",
+        "Zijun Xie",
+        "Binbin Zheng",
+        "Enlei Gong",
+        "Jiafeng Lu",
+        "Yehan Yang",
+        "Aoqi Hu",
+        "Zeyu Chen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-24T10:55:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.22186v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Stabilizes asynchronous RL for LLM post-training using entropy-scaled trust regions",
+      "llm_evidence_cn": "通过熵缩放信任区域稳定异步强化学习在LLM后训练中的应用",
+      "llm_evidence": "通过熵缩放信任区域稳定异步强化学习在LLM后训练中的应用",
+      "canonical_evidence": "通过熵缩放信任区域稳定异步强化学习在LLM后训练中的应用",
+      "llm_tldr_en": "Reveals entropy-ratio scaling in asynchronous RL for LLMs and proposes entropy-scaled trust regions to prevent policy collapse.",
+      "llm_tldr_cn": "异步强化学习加速LLM后训练但容易因陈旧数据导致策略崩溃。本文发现重要性比的自然尺度随熵系统性变化，并由此提出熵缩放信任区域方法，在不同熵水平上自适应调整阈值，从而稳定优化过程。实验验证了该方法对LLM后训练的有效性。",
+      "llm_tldr": "异步强化学习加速LLM后训练但容易因陈旧数据导致策略崩溃。本文发现重要性比的自然尺度随熵系统性变化，并由此提出熵缩放信任区域方法，在不同熵水平上自适应调整阈值，从而稳定优化过程。实验验证了该方法对LLM后训练的有效性。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.22525v1",
+      "source": "arxiv",
+      "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
+      "abstract": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collaboration--building trust in AI-driven solutions is essential. Trust, in turn, is closely linked to the explainability of AI systems. The rapid advancements in AI across various domains have underscored the challenges of establishing trust, raising increasing interest in AI explainability even more when applied to deep learning. In this context, the present work aims to explore the application of explainability techniques to Reinforcement Learning (RL) algorithms, specifically within the safety-critical domain of Air Traffic Control (ATC). Using a simplified ATC environment as an initial testbed, an intelligent agent is trained with a reinforcement learning algorithm to make decisions on alternative flight routes that avoid no-fly zones. As a preliminary explainability approach, a saliency map is employed, providing insights into the input features that most significantly influence the agent's decision-making process.",
+      "authors": [
+        "Anduel Mehmeti",
+        "Gabriella Gigante",
+        "Salvatore Venticinque"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-24T17:56:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.22525v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Applied explainable RL to assist air traffic controllers decision making",
+      "llm_evidence_cn": "应用可解释RL辅助空中交通管制员决策",
+      "llm_evidence": "应用可解释RL辅助空中交通管制员决策",
+      "canonical_evidence": "应用可解释RL辅助空中交通管制员决策",
+      "llm_tldr_en": "Explores explainability techniques for RL in air traffic control to build trust and enable human-AI collaboration.",
+      "llm_tldr_cn": "本文探索将可解释性技术应用于强化学习算法，在航空交通管制这一安全关键领域帮助人类管制员理解AI决策。通过简化场景验证解释方法的有效性，提升了人机协作的信任度。该工作展示了可解释RL在决策支持中的实际价值。",
+      "llm_tldr": "本文探索将可解释性技术应用于强化学习算法，在航空交通管制这一安全关键领域帮助人类管制员理解AI决策。通过简化场景验证解释方法的有效性，提升了人机协作的信任度。该工作展示了可解释RL在决策支持中的实际价值。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.21876v1",
+      "source": "arxiv",
+      "title": "Variance-Reduced Q-Learning over Static and Time-Varying Networks",
+      "abstract": "We investigate a decentralized reinforcement learning problem involving multiple agents that interact with the same Markov Decision Process (MDP). The agents can exchange information over a network to collectively learn the optimal state-action value function. For this setting, we introduce a novel epoch-based distributed $Q$-learning algorithm called VRDQ, where within each epoch, agents locally estimate the Bellman optimality operator and diffuse information using a consensus-based protocol. For both static and time-varying networks, we establish high-probability finite-time convergence rates for VRDQ that enjoy linear speedups from collaboration. Crucially, we prove that such speedups in sample-complexity require only $\\tilde{O}(1)$ communication, substantially improving upon the communication costs in prior work.",
+      "authors": [
+        "Sreejeet Maity",
+        "Feng Zhu",
+        "Aritra Mitra",
+        "Robert W. Heath"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "eess.SY"
+      ],
+      "published": "2026-07-24T00:24:09+00:00",
+      "link": "https://arxiv.org/pdf/2607.21876v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "decentralized multi-agent RL algorithm for autonomous agents",
+      "llm_evidence_cn": "面向自主智能体的去中心化多智能体强化学习算法",
+      "llm_evidence": "面向自主智能体的去中心化多智能体强化学习算法",
+      "canonical_evidence": "面向自主智能体的去中心化多智能体强化学习算法",
+      "llm_tldr_en": "VRDQ is an epoch-based distributed Q-learning algorithm for decentralized RL over static and time-varying networks, achieving linear speedups with constant communication complexity.",
+      "llm_tldr_cn": "针对去中心化多智能体强化学习问题，提出了VRDQ算法，采用基于回合的分布式Q学习方法，智能体通过共识协议交换信息，在静态和时变网络上均实现了线性加速且通信复杂度为常数。理论分析证明了其样本效率的提升。",
+      "llm_tldr": "针对去中心化多智能体强化学习问题，提出了VRDQ算法，采用基于回合的分布式Q学习方法，智能体通过共识协议交换信息，在静态和时变网络上均实现了线性加速且通信复杂度为常数。理论分析证明了其样本效率的提升。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.22157v1",
+      "source": "arxiv",
+      "title": "Learning on the Job: Continual Learning from Deployment Feedback for Frozen-Weights Agents",
+      "abstract": "AI agents encounter learning opportunities in every episode they run, and discard nearly all of them: the underlying models are frozen at deployment, so an agent that resolves a difficult request today starts from zero when it recurs tomorrow. Yet ordinary operation already produces feedback, in the form of outcome verdicts and after-the-fact corrections. We show that this feedback is a sufficient signal for continual learning when the frozen model is paired with an external memory that distils each episode into retrievable natural-language rules. On the banking domain of $τ$-bench, against a static-RAG control retrieving over the complete policy corpus, learning from the one-bit outcome verdict lifts single-trial success to 1.6$\\times$ the baseline, and learning from corrections to 2.6$\\times$, converting 22 of the 84 tasks the baseline never solves. The result spans the deployment spectrum, measured on Mistral Large, an open-weights model that organisations with data sovereignty requirements can self-host, and replicated on a frontier model, Claude Sonnet 5. The accumulated memory also transfers: each model, reading the store built by the other, rises above its own no-memory baseline. The harness, protocol, and data are released.",
+      "authors": [
+        "Valentin Tablan",
+        "Scott Taylor",
+        "Kristoffer Bernhem"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-24T10:01:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.22157v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "continual learning from deployment feedback for frozen agents",
+      "llm_evidence_cn": "基于部署反馈的持续学习，适用于冻结权重的智能体",
+      "llm_evidence": "基于部署反馈的持续学习，适用于冻结权重的智能体",
+      "canonical_evidence": "基于部署反馈的持续学习，适用于冻结权重的智能体",
+      "llm_tldr_en": "Proposes continual learning for frozen-weight agents using deployment outcome feedback, distilling episodes into retrievable natural-language rules, improving single-trial success on banking domain.",
+      "llm_tldr_cn": "针对AI智能体在部署后无法利用反馈进行学习的问题，本文提出一种利用部署中的结果判定和事后修正作为反馈信号的持续学习方法。该方法将每个回合的经验蒸馏为可检索的自然语言规则并存储在外部记忆中，使冻结权重的智能体在后续类似任务中可直接利用这些规则。在银行领域基准测试中，仅使用单比特结果反馈即可将单次尝试成功率提升至静态RAG控制的1.6倍，展示了无需更新模型参数即可实现持续学习的潜力。",
+      "llm_tldr": "针对AI智能体在部署后无法利用反馈进行学习的问题，本文提出一种利用部署中的结果判定和事后修正作为反馈信号的持续学习方法。该方法将每个回合的经验蒸馏为可检索的自然语言规则并存储在外部记忆中，使冻结权重的智能体在后续类似任务中可直接利用这些规则。在银行领域基准测试中，仅使用单比特结果反馈即可将单次尝试成功率提升至静态RAG控制的1.6倍，展示了无需更新模型参数即可实现持续学习的潜力。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.22002v1",
+      "source": "arxiv",
+      "title": "Learning as Reasoning Unfolds: Progressive Rollout Allocation for Efficient Reinforcement Learning",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a highly effective framework for improving LLM reasoning, with methods such as GRPO among its most successful instantiations. However, GRPO relies on repeated generation of long chain-of-thought rollouts. Training time scales with the number of rollouts, a large fraction of which are uninformative. Thus, GRPO is computationally expensive and unstable. To mitigate this, existing approaches either generate a larger pool of rollouts and filter the most informative prompts, or leverage historical signals for filtering at later stages of training. These strategies offer modest performance gains, but slow down the overall process. To address this, we propose VarIance Guided Online Rollout allocation (VIGOR) which instead of allocating a fixed rollout budget per example, begins with a small number of rollouts for all examples in a batch and iteratively allocates additional rollouts to those with the highest group reward variance until a fixed total rollout budget is reached. Theoretically, we show that under RLVR, reward variance controls the gradient magnitude, and derive VIGOR's closed-form speedup ratio over GRPO, which grows with refinement rounds under Pareto-distributed reward variance. Experiments on mathematical reasoning and coding tasks show that VIGOR reaches target accuracy with up to 2.3$\\times$ fewer rollouts on math, reaches GRPO's final coding full pass rate with 1.49$\\times$ fewer rollouts, and improves the coding average test pass rate by 3.4 points.",
+      "authors": [
+        "Heyang Jiang",
+        "Henry Liu",
+        "Baharan Mirzasoleiman"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-24T06:04:04+00:00",
+      "link": "https://arxiv.org/pdf/2607.22002v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Improves RLVR efficiency for LLM reasoning by progressive rollout allocation",
+      "llm_evidence_cn": "通过渐进式展开分配提高LLM推理的RLVR效率",
+      "llm_evidence": "通过渐进式展开分配提高LLM推理的RLVR效率",
+      "canonical_evidence": "通过渐进式展开分配提高LLM推理的RLVR效率",
+      "llm_tldr_en": "Proposes progressive rollout allocation to reduce uninformative rollouts in RLVR for LLM reasoning.",
+      "llm_tldr_cn": "GRPO等RLVR方法生成大量长思维链展开，其中许多无信息导致训练缓慢。本文提出渐进式展开分配策略，根据推理进度动态选择信息量大的展开减少计算开销。实验表明在保持性能的同时显著加速训练。",
+      "llm_tldr": "GRPO等RLVR方法生成大量长思维链展开，其中许多无信息导致训练缓慢。本文提出渐进式展开分配策略，根据推理进度动态选择信息量大的展开减少计算开销。实验表明在保持性能的同时显著加速训练。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
