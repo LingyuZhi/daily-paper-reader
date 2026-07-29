@@ -1,0 +1,185 @@
+{
+  "date": "20260729",
+  "date_label": "",
+  "generated_at": "2026-07-29 20:57:18 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.23605v1",
+      "route": "202607/29/2607.23605v1-hybrid-advantage-estimation-with-unified-critic-for-vlm-agentic-reinforcement-learning",
+      "title": "Hybrid Advantage Estimation with Unified Critic for VLM Agentic Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "面向视觉语言模型智能体的混合优势估计与统一评判器",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.23991v1",
+      "route": "202607/29/2607.23991v1-syrup-enhancing-system-prompt-following-via-reward-guided-prediction-in-llm-decoding",
+      "title": "SyRuP: Enhancing System-Prompt Following via Reward-Guided Prediction in LLM Decoding",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "使用奖励引导预测改进LLM对系统提示的遵循，直接将RL应用于增强LLM解码",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.24280v1",
+      "route": "202607/29/2607.24280v1-from-proprietary-to-open-source-bridging-the-distribution-gap-via-multi-agent-protocol-distillation-in-agentic-search",
+      "title": "From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "代理搜索中的多智能体协议蒸馏，使用结果级RL优化",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.24833v1",
+      "route": "202607/29/2607.24833v1-adakp-online-adaptive-knowledge-point-selection-for-reasoning-oriented-reinforcement-learning",
+      "title": "AdaKP: Online Adaptive Knowledge-Point Selection for Reasoning-Oriented Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "在线自适应知识点选择用于LLM推理中的RL",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.24900v1",
+      "route": "202607/29/2607.24900v1-inverse-rl-helps-align-ai-by-imitating-humans",
+      "title": "Inverse RL Helps Align AI by Imitating Humans",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "利用逆强化学习从演示中恢复隐式奖励，用于AI对齐，增强LLM行为",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.25082v1",
+      "route": "202607/29/2607.25082v1-plato-pointer-learner-for-agent-and-task-openness",
+      "title": "PLATO: Pointer Learner for Agent and Task Openness",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "基于指针网络的多智能体强化学习方法",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.25091v1",
+      "route": "202607/29/2607.25091v1-towards-robust-reinforcement-learning-for-small-scale-language-model-agents",
+      "title": "Towards Robust Reinforcement Learning for Small-Scale Language Model Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "研究小语言模型RL对齐中的失败模式",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.25659v1",
+      "route": "202607/29/2607.25659v1-cort-counterfactual-replay-for-token-level-rubric-guided-policy-optimization",
+      "title": "CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "LLM训练中基于评估标准的token级信用加权RL方法",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.25816v1",
+      "route": "202607/29/2607.25816v1-speculate-while-you-reason-teaching-agents-to-predict-their-next-tool-call-via-joint-agent-speculator-rl",
+      "title": "Speculate While You Reason: Teaching Agents to Predict Their Next Tool Call via Joint Agent-Speculator RL",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "联合智能体-预测器强化学习用于LLM工具调用预测",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.24672v1",
+      "route": "202607/29/2607.24672v1-explainable-reinforcement-learning-via-physics-aware-policy-distillation",
+      "title": "Explainable Reinforcement Learning via Physics-Aware Policy Distillation",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "可解释强化学习策略蒸馏用于智能体决策",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    },
+    {
+      "paper_id": "2607.25825v1",
+      "route": "202607/29/2607.25825v1-chill-harness-counterfactual-harness-learning-for-efficient-reasoning-in-long-horizon-agents",
+      "title": "CHILL-Harness: Counterfactual Harness Learning for Efficient Reasoning in Long-Horizon Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "使用反事实学习自适应优化长周期LLM智能体的harness策略",
+      "first_seen_at": "2026-07-29 20:57:18 UTC",
+      "updated_at": "2026-07-29 20:57:18 UTC"
+    }
+  ]
+}
