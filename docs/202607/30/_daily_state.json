@@ -1,0 +1,265 @@
+{
+  "date": "20260730",
+  "date_label": "",
+  "generated_at": "2026-07-30 20:42:28 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.25415v1",
+      "route": "202607/30/2607.25415v1-a-control-system-a-dataset-and-a-recipe-for-making-frozen-llm-agents-learn-a-domain",
+      "title": "A Control System, a Dataset, and a Recipe for Making Frozen LLM Agents Learn a Domain",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "利用强化学习优化冻结LLM智能体的控制系统动作空间",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.26358v1",
+      "route": "202607/30/2607.26358v1-post-training-at-the-edge-of-detectability-a-game-theoretic-approach-to-fine-tuning",
+      "title": "Post-Training at the Edge of Detectability: A Game-Theoretic Approach to Fine-Tuning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "使用博弈论方法进行语言模型的强化学习微调",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.26784v1",
+      "route": "202607/30/2607.26784v1-skillrise-agentic-reinforcement-learning-for-cross-task-skill-evolution",
+      "title": "SkillRise: Agentic Reinforcement Learning for Cross-Task Skill Evolution",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "统一的智能体强化学习框架用于跨任务技能演化",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.26862v1",
+      "route": "202607/30/2607.26862v1-reco-reweighting-grpo-against-distributional-concentration",
+      "title": "ReCo: Reweighting GRPO Against Distributional Concentration",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "针对GRPO（一种用于LLM后训练的标准强化学习方法）的重加权方法",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.26873v1",
+      "route": "202607/30/2607.26873v1-serpo-self-evolving-rubric-policy-optimization-for-open-ended-test-time-reinforcement-learning",
+      "title": "SERPO: Self-Evolving Rubric Policy Optimization for Open-Ended Test-Time Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "基于强化学习的测试时推理优化，提升语言模型能力",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.23617v1",
+      "route": "202607/30/2607.23617v1-optimal-reward-shaping-autonomous-car-parking-case-study",
+      "title": "Optimal Reward Shaping: Autonomous Car Parking Case Study",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "基于强化学习的自主泊车奖励塑形框架",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.25369v1",
+      "route": "202607/30/2607.25369v1-odysse-episode-wise-policy-optimization-for-personalized-agentic-reasoning",
+      "title": "ODYSSE: Episode-wise Policy Optimization for Personalized Agentic Reasoning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "用于个性化智能体推理的强化微调框架",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.26094v1",
+      "route": "202607/30/2607.26094v1-meta-learned-reward-shaping-for-reinforcement-learning-from-human-feedback",
+      "title": "Meta-Learned Reward Shaping for Reinforcement Learning from Human Feedback",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "元学习奖励塑造用于RLHF，改善LLM对齐",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.26119v1",
+      "route": "202607/30/2607.26119v1-probing-the-origins-of-reasoning-performance-representational-quality-for-mathematical-problem-solving-in-rl-vs-sft-fine-tuned-models",
+      "title": "Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "探测RL与SFT微调大语言模型在推理任务上的内部表示差异",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.25241v1",
+      "route": "202607/30/2607.25241v1-learning-from-the-unseen-offline-reinforcement-learning-with-hidden-actions",
+      "title": "Learning from the Unseen: Offline Reinforcement Learning with Hidden Actions",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向隐藏动作的离线强化学习方法，用于智能体决策",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.26643v1",
+      "route": "202607/30/2607.26643v1-rethinking-self-evolution-a-constrained-exploration-exploitation-process-for-mitigating-skill-overfitting",
+      "title": "Rethinking Self-Evolution: A Constrained Exploration-Exploitation Process for Mitigating Skill Overfitting",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向LLM智能体技能自我进化的约束探索-利用方法",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.20152v1",
+      "route": "202607/30/2607.20152v1-active-inference-as-a-convex-markov-decision-process",
+      "title": "Active Inference as a Convex Markov Decision Process",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "主动推理框架作为策略优化用于智能体决策",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.23809v1",
+      "route": "202607/30/2607.23809v1-acm-agentic-context-management-for-long-horizon-tasks",
+      "title": "ACM: Agentic Context Management for Long Horizon Tasks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长程任务的智能体上下文管理，包含RL后训练",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.25132v2",
+      "route": "202607/30/2607.25132v2-interpretable-gohr-agents-via-sparse-autoencoders",
+      "title": "Interpretable GOHR Agents via Sparse Autoencoders",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "对Transformer智能体决策系统的可解释性实验",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.25207v1",
+      "route": "202607/30/2607.25207v1-a-unified-algorithmic-framework-for-hybrid-reinforcement-learning-in-tabular-mdps-with-shifted-transition-dynamics",
+      "title": "A Unified Algorithmic Framework for Hybrid Reinforcement Learning in Tabular MDPs with Shifted Transition Dynamics",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "混合强化学习结合在线和离线数据用于智能体学习",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    },
+    {
+      "paper_id": "2607.26509v1",
+      "route": "202607/30/2607.26509v1-collaborative-weighting-with-pessimistic-critic-for-mitigating-overestimation-in-off-policy-reinforcement-learning",
+      "title": "Collaborative Weighting with Pessimistic Critic for Mitigating Overestimation in Off-Policy Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "改进离策略强化学习算法，可用于智能体决策",
+      "first_seen_at": "2026-07-30 20:42:28 UTC",
+      "updated_at": "2026-07-30 20:42:28 UTC"
+    }
+  ]
+}
