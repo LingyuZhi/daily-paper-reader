@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-07-30</span>
+      <span class="dpr-home-dashboard-kicker">2026-07-31</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 16 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 12 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>10</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-07-30 20:42:28 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-07-31 21:30:03 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日共处理16篇论文，精读2篇、速读3篇。最值得关注的是冷冻LLM代理学习领域的高分方案，以及基于博弈论的微调可检测精度控制。建议重点关注速读中的个性化推理优化和元学习奖励塑造方向。</p>
+<p>今日精读与速读共12篇，聚焦大模型强化学习与多智能体协作两大前沿方向。</p>
+<p>最值得关注：Kalman引导的动态提示选择与TAPO过渡感知策略优化，为LLM智能体训练提供高效新思路。</p>
+<p>建议优先阅读这两篇精读论文，再结合速读中的因果世界模型与图结构搜索Agent拓展视野。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -74,7 +76,7 @@
     <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="A Control System, a Dataset, and a Recipe for Making Frozen LLM Agents Learn a Domain">A Control System, a Dataset, and a Recipe for Making Frozen LLM Agents Learn a Domain</span></li><li><span class="dpr-home-dashboard-paper-title" title="Post-Training at the Edge of Detectability: A Game-Theoretic Approach to Fine-Tuning">Post-Training at the Edge of Detectability: A Game-Theoretic Approach to Fine-Tuning</span></li><li><span class="dpr-home-dashboard-paper-title" title="SkillRise: Agentic Reinforcement Learning for Cross-Task Skill Evolution">SkillRise: Agentic Reinforcement Learning for Cross-Task Skill Evolution</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Kalman Meets Curriculum: Efficient Dynamic Prompt Selection for Adaptive RL Finetuning">Kalman Meets Curriculum: Efficient Dynamic Prompt Selection for Adaptive RL Finetuning</span></li><li><span class="dpr-home-dashboard-paper-title" title="TAPO: Transition-Aware Policy Optimization for LLM Agents">TAPO: Transition-Aware Policy Optimization for LLM Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Contrastive Reinforced Policy Optimization via Privileged Self-Distillation">Contrastive Reinforced Policy Optimization via Privileged Self-Distillation</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>6</strong></span></div>
 </section>
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">10 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ODYSSE: Episode-wise Policy Optimization for Personalized Agentic Reasoning">ODYSSE: Episode-wise Policy Optimization for Personalized Agentic Reasoning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Meta-Learned Reward Shaping for Reinforcement Learning from Human Feedback">Meta-Learned Reward Shaping for Reinforcement Learning from Human Feedback</span></li><li><span class="dpr-home-dashboard-paper-title" title="Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models">Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Learning Implicit Causal World Models from Multi-Agent Demonstrations">Learning Implicit Causal World Models from Multi-Agent Demonstrations</span></li><li><span class="dpr-home-dashboard-paper-title" title="Harness-G: A Graph-Structured Harness for Search Agents">Harness-G: A Graph-Structured Harness for Search Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="MARS-RA: Rank Aggregation for Credit Assignment via Multimodal Comparisons in Embodied Multi-Agent Cooperation">MARS-RA: Rank Aggregation for Credit Assignment via Multimodal Comparisons in Embodied Multi-Agent Cooperation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>10</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>6</strong></span></div>
 </section>
 </div>
 
