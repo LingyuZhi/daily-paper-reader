@@ -1,0 +1,260 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-01T20:08:01.752117+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.25308v1",
+      "source": "arxiv",
+      "title": "CAST: Game Solvers as Turn-Level Teachers for LLM Agents",
+      "abstract": "Training large language models (LLMs) to act in long-horizon games is a promising step toward generalist decision-making, yet reinforcement learning with verifiable rewards (RLVR) relies on sparse final rewards that reveal little about which decisions determine success. Denser process signals could supply this missing turn-level credit, but existing sources are hard to keep both cheap and accurate. We observe that changes in a game solver's state value reveal whether an action advances the state toward success. Building on this insight, we propose CAST (Credit Assignment from Solver Teachers), which converts these value changes into solver advantages and injects them into RLVR as turn-level signals. We further show that, under a soft-optimal solver assumption, maximizing the solver advantage is equivalent to on-policy distillation from the solver, requiring only scalar values rather than teacher logits. Across Sokoban, Minesweeper, and Rush Hour, CAST outperforms all trained baselines on every game under both in-domain and unseen-difficulty evaluation and achieves the highest average zero-shot performance on ALFWorld and WebShop. Our code is available at https://github.com/Wloner0809/CAST.",
+      "authors": [
+        "Yu Wang",
+        "Yi-Kai Zhang",
+        "Wentao Shi",
+        "Ziang Ye",
+        "Yuchun Miao",
+        "Yueqing Sun",
+        "Qi Gu",
+        "Xunliang Cai",
+        "Lan-Zhe Guo",
+        "Han-Jia Ye",
+        "Fuli Feng"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-07-28T05:39:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.25308v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RLVR with game-solver turn-level advantages trains LLM agents for long-horizon decision-making, an agentic reinforcement learning method.",
+      "llm_evidence_cn": "将游戏求解器优势注入RLVR训练LLM智能体进行长视界决策，属于agentic RL方法。",
+      "llm_evidence": "将游戏求解器优势注入RLVR训练LLM智能体进行长视界决策，属于agentic RL方法。",
+      "canonical_evidence": "将游戏求解器优势注入RLVR训练LLM智能体进行长视界决策，属于agentic RL方法。",
+      "llm_tldr_en": "CAST converts game-solver value changes into turn-level advantages and injects them into RLVR, providing dense credit assignment for training LLM agents in long-horizon games.",
+      "llm_tldr_cn": "训练大语言模型在长视界游戏中行动时，RLVR的稀疏奖励难以反映中间决策的好坏。本文利用游戏求解器状态价值的变化来揭示动作是否推进状态，提出CAST方法将价值变化转化为求解器优势，并注入RLVR作为回合级信号。在软最优求解器假设下，该方法可以更准确地分配信用。实验表明CAST显著改进LLM智能体的决策和成功表现。这一思路为复杂环境中的智能体提供了可负担且精确的密集信用信号。",
+      "llm_tldr": "训练大语言模型在长视界游戏中行动时，RLVR的稀疏奖励难以反映中间决策的好坏。本文利用游戏求解器状态价值的变化来揭示动作是否推进状态，提出CAST方法将价值变化转化为求解器优势，并注入RLVR作为回合级信号。在软最优求解器假设下，该方法可以更准确地分配信用。实验表明CAST显著改进LLM智能体的决策和成功表现。这一思路为复杂环境中的智能体提供了可负担且精确的密集信用信号。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.27574v1",
+      "source": "arxiv",
+      "title": "Policy Gradient Steering: Interventions from Behavioral Objectives",
+      "abstract": "Activation steering has emerged in large language models as a lightweight alternative for dynamically changing a model's behavior at inference time. However, we show that existing steering methods fail to steer even a simple policy in a two-route gridworld environment. To address this limitation, we propose Policy Gradient Steering (PGS), which formulates steering as a reinforcement learning problem. PGS accumulates gradients of a temporary behavioral objective over a small set of rollouts or demonstrations to construct a removable task vector. We first demonstrate the calibration and reversibility of PGS in a two-route gridworld environment. Using chess puzzles, we then evaluate independently fitted PGS vectors both in isolation and in combination, finding that compatible tactical objectives accumulate constructively. Finally, in competitive football, we show that PGS can alter specific team behaviors and that its effects transfer across opponents. Together, these results show that policy gradients provide a natural interface for constructing temporary and composable behavioral adaptations across diverse decision-making domains.",
+      "authors": [
+        "Yoann Poupart",
+        "Aurélie Beynier",
+        "Nicolas Maudet"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.MA"
+      ],
+      "published": "2026-07-30T01:29:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.27574v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Reinforcement learning as steering for LLM behavior interventions",
+      "llm_evidence_cn": "将强化学习用作LLM行为干预的引导",
+      "llm_evidence": "将强化学习用作LLM行为干预的引导",
+      "canonical_evidence": "将强化学习用作LLM行为干预的引导",
+      "llm_tldr_en": "Proposes Policy Gradient Steering, which accumulates gradients of a behavioral objective via RL to build removable steering vectors for LLMs, verified on gridworld and chess puzzles.",
+      "llm_tldr_cn": "大语言模型的激活干预可动态改变行为，但现有方法无法在简单网格世界中有效操控策略。Policy Gradient Steering将干预形式化为强化学习问题，通过少量轨迹或演示累积临时行为目标的梯度，构造可移除的任务向量。在双路线网格世界和象棋谜题上的实验显示其具备可校准性和可逆性。该方法提供了更原则的干预向量构造方式。",
+      "llm_tldr": "大语言模型的激活干预可动态改变行为，但现有方法无法在简单网格世界中有效操控策略。Policy Gradient Steering将干预形式化为强化学习问题，通过少量轨迹或演示累积临时行为目标的梯度，构造可移除的任务向量。在双路线网格世界和象棋谜题上的实验显示其具备可校准性和可逆性。该方法提供了更原则的干预向量构造方式。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "how reinforcement learning enhances large language model capabilities",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.27789v1",
+      "source": "arxiv",
+      "title": "From Understanding to Action: Feedback-Grounded Policy Discovery for Generative Recommendation",
+      "abstract": "Semantic-ID-based generative recommenders enable efficient next-item generation, but their item-level supervision mainly captures behavioral co-occurrence and local transitions. Large language models (LLMs) can complement these models by reasoning over heterogeneous interaction histories to understand the user's current demand. However, LLMs are not inherently trained with recommendation-specific outcome feedback, and linguistically plausible reasoning therefore does not necessarily lead to effective recommendation decisions. We term this mismatch the Understanding-Action Gap. Accordingly, we distinguish intent knowledge, which captures the user's current demand, from policy knowledge, which specifies the recommendation direction and rejection boundary under that demand. To bridge this gap, we propose a feedback-driven agent framework that first induces task-oriented intent and then discovers recommendation policies according to their incremental utility over an intent-only baseline. Candidate policies are evaluated and refined using outcome-derived feedback rather than linguistic plausibility. We further transfer the resulting intent and policy knowledge into two latent tokens of a lightweight Semantic-ID generator through dual-space relational distillation, enabling LLM-free online inference. Experiments on public benchmarks show consistent improvements over baselines, while large-scale online A/B tests achieve gains of 4.506% in Revenue and 4.621% in ADVV.",
+      "authors": [
+        "Zhi Chen",
+        "Minmao Wang",
+        "Xingchen Liu",
+        "Haoqiang Liang",
+        "Huihuang Lin",
+        "Likang Wu",
+        "Hongke Zhao",
+        "Yulong Wang",
+        "Shijie Yi",
+        "Fei Pan",
+        "Peng Jiang"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR"
+      ],
+      "published": "2026-07-30T07:23:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.27789v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Feedback-grounded policy discovery trains LLM recommenders to bridge understanding-action gap via RL-like outcome feedback",
+      "llm_evidence_cn": "通过类强化学习的结果反馈进行策略发现，弥合LLM推荐器的理解-行动鸿沟",
+      "llm_evidence": "通过类强化学习的结果反馈进行策略发现，弥合LLM推荐器的理解-行动鸿沟",
+      "canonical_evidence": "通过类强化学习的结果反馈进行策略发现，弥合LLM推荐器的理解-行动鸿沟",
+      "llm_tldr_en": "Identifies the understanding-action gap in LLM recommenders and proposes feedback-grounded policy discovery to align linguistic reasoning with effective recommendation decisions.",
+      "llm_tldr_cn": "基于语义ID的生成式推荐器主要捕获行为共现和局部转移，而LLM虽然能理解用户需求，却未经过推荐结果反馈的训练，造成理解-行动鸿沟。作者区分意图知识与策略知识，提出反馈驱动的策略发现方法，将结果反馈融入LLM推荐策略学习。该方法使语言上合理的推理转化为有效的推荐决策，弥补了纯语言理解与推荐动作之间的脱节。",
+      "llm_tldr": "基于语义ID的生成式推荐器主要捕获行为共现和局部转移，而LLM虽然能理解用户需求，却未经过推荐结果反馈的训练，造成理解-行动鸿沟。作者区分意图知识与策略知识，提出反馈驱动的策略发现方法，将结果反馈融入LLM推荐策略学习。该方法使语言上合理的推理转化为有效的推荐决策，弥补了纯语言理解与推荐动作之间的脱节。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.28390v1",
+      "source": "arxiv",
+      "title": "Hierarchical Multilevel Monte Carlo for Order-Optimal Neural Actor-Critic in Average-Reward CMDPs",
+      "abstract": "Constrained Markov Decision Processes (CMDPs) provide a natural framework for reinforcement learning in safety-critical applications, where agents maximize long-term reward while satisfying long-term constraints. Although primal-dual actor-critic methods with linear critics are well understood, extending order-optimal convergence guarantees to neural critics in average-reward CMDPs has remained open. The main challenge is a fundamental bias-cost trade-off in neural critic estimation: under Neural Tangent Kernel (NTK) analysis, reducing critic bias substantially increases critic optimization cost, preventing order-optimal convergence in the primal-dual framework. We resolve this bottleneck by introducing a hierarchical Multilevel Monte Carlo (MLMC) neural critic that performs debiasing simultaneously across trajectory sampling and critic optimization. The resulting estimator attains the bias of a long critic optimization run with only logarithmic expected sample cost. Building on this estimator, we develop a primal-dual Natural Actor-Critic algorithm that achieves both an optimality gap and a constraint violation of order $\\tilde{O}(T^{-1/2})$. This establishes the first order-optimal convergence guarantees for infinite-horizon average-reward CMDPs with general policy parameterization and neural critics, while eliminating the need to know the underlying mixing time. Our results are novel even in the unconstrained setting.",
+      "authors": [
+        "Ankur Naskar",
+        "Vaneet Aggarwal"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-30T15:46:22+00:00",
+      "link": "https://arxiv.org/pdf/2607.28390v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Order-optimal neural actor-critic for average-reward CMDPs improves constrained agent decision making",
+      "llm_evidence_cn": "面向平均奖励约束马尔可夫决策过程的阶最优神经演员-评论家方法，提升受限智能体决策",
+      "llm_evidence": "面向平均奖励约束马尔可夫决策过程的阶最优神经演员-评论家方法，提升受限智能体决策",
+      "canonical_evidence": "面向平均奖励约束马尔可夫决策过程的阶最优神经演员-评论家方法，提升受限智能体决策",
+      "llm_tldr_en": "Resolves bias-cost trade-off in neural critics for average-reward CMDPs using hierarchical multilevel Monte Carlo, achieving order-optimal convergence for constrained RL agents.",
+      "llm_tldr_cn": "约束马尔可夫决策过程为安全关键强化学习提供自然框架，但神经评论家在平均奖励设置下的阶最优收敛尚未解决，主要障碍是评论家偏差与优化成本之间的权衡。本文引入分层多级蒙特卡罗方法突破此瓶颈，在NTK分析下同时控制偏差与成本，实现原始-对偶框架中神经演员-评论家的阶最优收敛。该进展为受限智能体的安全强化学习奠定了理论基础。",
+      "llm_tldr": "约束马尔可夫决策过程为安全关键强化学习提供自然框架，但神经评论家在平均奖励设置下的阶最优收敛尚未解决，主要障碍是评论家偏差与优化成本之间的权衡。本文引入分层多级蒙特卡罗方法突破此瓶颈，在NTK分析下同时控制偏差与成本，实现原始-对偶框架中神经演员-评论家的阶最优收敛。该进展为受限智能体的安全强化学习奠定了理论基础。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.25090v1",
+      "source": "arxiv",
+      "title": "Matryoshka Agent: Unfolding Sub-Agents for Long-Horizon Machine Learning Engineering",
+      "abstract": "Machine learning engineering (MLE) tasks require long-horizon decision making over iterative solution debugging and refinement, under expensive and feedback-driven environment interactions. Developing and training a monolithic agent for such tasks is fundamentally challenging, as it must simultaneously manage extremely long and noisy contexts, explore vast solution spaces, and remain effective under limited model capacity and computational budgets. To address these challenges, we propose Matryoshka Agent, a unified hierarchical agent framework for complex long-horizon tasks. Matryoshka Agent decomposes agentic problem solving into a coordinated hierarchy of decision making and execution: a high-level Orchestrator maintains compact, long-horizon exploration states and issues strategic instructions, while lower-level Sub-Agents execute concrete solution attempts through direct environment interaction, mediated by standardized Tool interface. This design decouples strategic exploration from costly execution, substantially reducing the burden of long-context reasoning and enabling efficient iterative refinement. We further develop an efficient training paradigm for Matryoshka Agent. Experimental results on a broad range of MLE tasks with diverse model types and scales demonstrate that Matryoshka Agent is an effective and scalable paradigm for long-horizon MLE tasks and complex agentic problem solving. Notably, Matryoshka Agent enables Qwen3-4B-Instruct to reach Orchestrator performance comparable to o4-mini. Applying Matryoshka Agent to Qwen3-30B-Coder results in at most 36.7% relative performance gain.",
+      "authors": [
+        "Rushi Qiang",
+        "Changhao Li",
+        "Haotian Sun",
+        "Yuchen Zhuang",
+        "Chao Zhang",
+        "Bo Dai"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-27T21:30:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.25090v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Hierarchical agent framework for long-horizon MLE decision making, relevant to autonomous agency but not RL-specific",
+      "llm_evidence_cn": "面向长时间跨度任务的层级智能体框架，涉及自主智能体决策但与强化学习无直接关联",
+      "llm_evidence": "面向长时间跨度任务的层级智能体框架，涉及自主智能体决策但与强化学习无直接关联",
+      "canonical_evidence": "面向长时间跨度任务的层级智能体框架，涉及自主智能体决策但与强化学习无直接关联",
+      "llm_tldr_en": "Matryoshka Agent decomposes long-horizon ML engineering into a hierarchy of orchestrator and sub-agents for effective decision making and execution.",
+      "llm_tldr_cn": "机器学习工程任务需要在昂贵且带反馈的环境交互中进行长时间跨度决策，单一智能体难以同时应对长噪声上下文、大解空间和有限预算。作者提出Matryoshka Agent，将智能体问题求解分解为分层决策与执行：高层编排器维护紧凑的长程记忆，低层子智能体执行具体调试。该框架缓解了模型容量与计算预算的限制，但未涉及强化学习训练，属于智能体架构层面的贡献。",
+      "llm_tldr": "机器学习工程任务需要在昂贵且带反馈的环境交互中进行长时间跨度决策，单一智能体难以同时应对长噪声上下文、大解空间和有限预算。作者提出Matryoshka Agent，将智能体问题求解分解为分层决策与执行：高层编排器维护紧凑的长程记忆，低层子智能体执行具体调试。该框架缓解了模型容量与计算预算的限制，但未涉及强化学习训练，属于智能体架构层面的贡献。",
+      "llm_tags": [
+        "query:agentic-rl:composite"
+      ],
+      "matched_query_tag": "query:agentic-rl:composite",
+      "matched_query_text": "Papers central to Agentic RL 与 LLM 解释 RL 策略相关论文, especially work that connects or combines: agentic reinforcement learning methods for autonomous agents; using reinforcement learning to enhance large language models; large language model explaining reinforcement learning policy; reinforcement learning for agent decision making; recent research on agentic reinforcement learning; using large language models to explain reinforcement learning policies; how reinforcement learning enhances large language model capabilities.",
+      "matched_requirement_id": "req-composite-agentic-rl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.27953v1",
+      "source": "arxiv",
+      "title": "AutoPref: Automatic Discovery of Task-Specific Preference Objectives for Neural Combinatorial Optimization",
+      "abstract": "Combinatorial optimization problems (COPs) underpin many real-world decisions, but their exponentially large search spaces make high-quality solutions costly to obtain. Neural combinatorial optimization (NCO) learns fast construction policies, typically with reinforcement learning (RL), while preference-based NCO improves sample efficiency by learning from relative solution quality. However, existing preference objectives combine two distinct design choices in manually specified, one-size-fits-all formulations: what learning signal to extract from each solution pair and how to weight each pair relative to the sampled set. We present AutoPref, the first LLM-guided framework for automated preference-objective discovery in NCO. AutoPref factorizes the objective into a pairwise loss program, which defines the learning signal, and a set-aware weighting program, which determines each pair's relative contribution. Their composition forms a unified programmatic objective space containing existing preference objectives as special cases. To make its search tractable, we introduce a staged conditional search strategy with behavioral gates that filter inadmissible programs before short-horizon training and evaluation. Across TSP, CVRP, FFSP, and JSSP, AutoPref consistently outperforms strong hand-designed baselines across problem scales, demonstrating the benefits and scalability of automated objective discovery for NCO.",
+      "authors": [
+        "Shengda Gu",
+        "Kai Li",
+        "Xinyi Ke",
+        "Haobo Fu",
+        "Yifan Zhang",
+        "Jian Cheng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-30T10:01:21+00:00",
+      "link": "https://arxiv.org/pdf/2607.27953v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "LLM-guided discovery of reward objectives in RL-based combinatorial optimization",
+      "llm_evidence_cn": "LLM引导自动发现基于RL的组合优化偏好目标",
+      "llm_evidence": "LLM引导自动发现基于RL的组合优化偏好目标",
+      "canonical_evidence": "LLM引导自动发现基于RL的组合优化偏好目标",
+      "llm_tldr_en": "Introduces AutoPref, an LLM-guided framework to automatically discover task-specific preference objectives for preference-based neural combinatorial optimization, reducing manual design.",
+      "llm_tldr_cn": "神经组合优化通常利用强化学习快速构造解，而基于偏好的NCO通过相对解质量提升样本效率，但现有偏好目标需要人工设计学习信号与样本加权。AutoPref利用大语言模型自动发现任务特定的偏好目标，自动选择信号与权重。该框架减少了人工设计开销，提升了偏好NCO在不同任务上的性能。",
+      "llm_tldr": "神经组合优化通常利用强化学习快速构造解，而基于偏好的NCO通过相对解质量提升样本效率，但现有偏好目标需要人工设计学习信号与样本加权。AutoPref利用大语言模型自动发现任务特定的偏好目标，自动选择信号与权重。该框架减少了人工设计开销，提升了偏好NCO在不同任务上的性能。",
+      "llm_tags": [
+        "query:agentic-rl:composite"
+      ],
+      "matched_query_tag": "query:agentic-rl:composite",
+      "matched_query_text": "Papers central to Agentic RL 与 LLM 解释 RL 策略相关论文, especially work that connects or combines: agentic reinforcement learning methods for autonomous agents; using reinforcement learning to enhance large language models; large language model explaining reinforcement learning policy; reinforcement learning for agent decision making; recent research on agentic reinforcement learning; using large language models to explain reinforcement learning policies; how reinforcement learning enhances large language model capabilities.",
+      "matched_requirement_id": "req-composite-agentic-rl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

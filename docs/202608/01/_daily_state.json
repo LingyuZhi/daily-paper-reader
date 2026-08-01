@@ -1,0 +1,105 @@
+{
+  "date": "20260801",
+  "date_label": "",
+  "generated_at": "2026-08-01 20:13:09 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.25308v1",
+      "route": "202608/01/2607.25308v1-cast-game-solvers-as-turn-level-teachers-for-llm-agents",
+      "title": "CAST: Game Solvers as Turn-Level Teachers for LLM Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "将游戏求解器优势注入RLVR训练LLM智能体进行长视界决策，属于agentic RL方法。",
+      "first_seen_at": "2026-08-01 20:13:09 UTC",
+      "updated_at": "2026-08-01 20:13:09 UTC"
+    },
+    {
+      "paper_id": "2607.27574v1",
+      "route": "202608/01/2607.27574v1-policy-gradient-steering-interventions-from-behavioral-objectives",
+      "title": "Policy Gradient Steering: Interventions from Behavioral Objectives",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "将强化学习用作LLM行为干预的引导",
+      "first_seen_at": "2026-08-01 20:13:09 UTC",
+      "updated_at": "2026-08-01 20:13:09 UTC"
+    },
+    {
+      "paper_id": "2607.27789v1",
+      "route": "202608/01/2607.27789v1-from-understanding-to-action-feedback-grounded-policy-discovery-for-generative-recommendation",
+      "title": "From Understanding to Action: Feedback-Grounded Policy Discovery for Generative Recommendation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过类强化学习的结果反馈进行策略发现，弥合LLM推荐器的理解-行动鸿沟",
+      "first_seen_at": "2026-08-01 20:13:09 UTC",
+      "updated_at": "2026-08-01 20:13:09 UTC"
+    },
+    {
+      "paper_id": "2607.28390v1",
+      "route": "202608/01/2607.28390v1-hierarchical-multilevel-monte-carlo-for-order-optimal-neural-actor-critic-in-average-reward-cmdps",
+      "title": "Hierarchical Multilevel Monte Carlo for Order-Optimal Neural Actor-Critic in Average-Reward CMDPs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向平均奖励约束马尔可夫决策过程的阶最优神经演员-评论家方法，提升受限智能体决策",
+      "first_seen_at": "2026-08-01 20:13:09 UTC",
+      "updated_at": "2026-08-01 20:13:09 UTC"
+    },
+    {
+      "paper_id": "2607.25090v1",
+      "route": "202608/01/2607.25090v1-matryoshka-agent-unfolding-sub-agents-for-long-horizon-machine-learning-engineering",
+      "title": "Matryoshka Agent: Unfolding Sub-Agents for Long-Horizon Machine Learning Engineering",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向长时间跨度任务的层级智能体框架，涉及自主智能体决策但与强化学习无直接关联",
+      "first_seen_at": "2026-08-01 20:13:09 UTC",
+      "updated_at": "2026-08-01 20:13:09 UTC"
+    },
+    {
+      "paper_id": "2607.27953v1",
+      "route": "202608/01/2607.27953v1-autopref-automatic-discovery-of-task-specific-preference-objectives-for-neural-combinatorial-optimization",
+      "title": "AutoPref: Automatic Discovery of Task-Specific Preference Objectives for Neural Combinatorial Optimization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "LLM引导自动发现基于RL的组合优化偏好目标",
+      "first_seen_at": "2026-08-01 20:13:09 UTC",
+      "updated_at": "2026-08-01 20:13:09 UTC"
+    }
+  ]
+}
