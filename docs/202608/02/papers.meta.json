@@ -1,0 +1,54 @@
+{
+  "label": "2026-08-02",
+  "date": "2026-08-02",
+  "generated_at": "2026-08-02T20:47:31",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202608/02/2607.27631v1-redippo-reference-guided-value-calibration-and-discrepancy-aware-token-reweighting-for-mathematical-reasoning",
+      "section": "deep",
+      "title_en": "ReDiPPO: Reference-Guided Value Calibration and Discrepancy-Aware Token Reweighting for Mathematical Reasoning",
+      "authors": "Zhenrong Zhang, Fei Wu, Jun Du, Jianshu Zhang, Si Wei",
+      "date": "2026-07-30",
+      "pdf": "https://arxiv.org/pdf/2607.27631v1",
+      "score": "10.0",
+      "evidence": "利用RL（PPO）增强大语言模型数学推理能力",
+      "tldr": "针对长推理和稀疏奖励下PPO标准critic难以准确评估中间状态的问题，提出ReDiPPO框架。该方法以参考答案作为训练时特权信号训练一个参考引导的critic，并量化其与标准critic的价值估计差异，将差异视为困难状态的指示，用于重加权token级优势。实验表明该方法提升价值估计准确性，在数学推理基准上优于PPO、DAPO和GSPO等强基线，实现了更可靠的token级信用分配。",
+      "tags": "query:agentic-rl",
+      "abstract_en": "Reinforcement learning has emerged as an effective paradigm for enhancing the mathematical reasoning capabilities of large language models. Among existing policy optimization methods, Proximal Policy Optimization (PPO) remains particularly appealing because its learned critic can, in principle, provide token-level credit assignment. However, in mathematical reasoning tasks characterized by long reasoning horizons and sparse outcome rewards, reliable token-level credit assignment remains challenging. The standard critic often fails to accurately evaluate intermediate reasoning states, resulting in noisy advantage estimates and suboptimal policy updates. In this paper, we propose ReDiPPO, a Reference-guided and Discrepancy-aware PPO framework for mathematical reasoning. ReDiPPO introduces a reference-guided critic that uses reference answers as training-time privileged signals to provide more accurate value estimation. Meanwhile, it retains a standard critic and quantifies the token-level reference-standard discrepancy between the standard value estimate and the reference-guided value estimate. This discrepancy serves as an indicator of difficult reasoning states and is used to reweight the corresponding token-level advantages during PPO optimization. Extensive experiments on diverse mathematical reasoning benchmarks demonstrate that ReDiPPO improves value-estimation accuracy and consistently outperforms strong policy optimization baselines, including PPO, DAPO, and GSPO, in final reasoning performance. Our code is available on https://github.com/cii030/ReDiPPO.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/02/2607.26040v1-reinformed-dreamer-an-asymmetric-world-model-efficiently-trained-through-latent-guidance",
+      "section": "quick",
+      "title_en": "Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance",
+      "authors": "Gaspard Lambrechts, Adrien Bolland, Daniel Ebi, Damien Ernst",
+      "date": "2026-07-28",
+      "pdf": "https://arxiv.org/pdf/2607.26040v1",
+      "score": "7.0",
+      "evidence": "基于模型的强化学习结合非对称潜在引导",
+      "tldr": "不对称强化学习利用额外状态信息提升表征，在部分或完全可观测下均有效；但现有 Informed Dreamer 在特权信息表示上存在局限性。本文提出新的 Reinformed Dreamer，采用潜在引导的目标函数来学习不对称表示，从而更高效地训练基于模型的世界模型。在多个基准实验上，该方法较以往不对称方法对 Dreamer 的改进更一致。研究表明，潜在引导能有效提升特权信息表示质量，为不对称强化学习提供重要的新途径。",
+      "tags": "query:agentic-rl",
+      "abstract_en": "Much like humans benefit from guidance while learning, reinforcement learning algorithms may benefit from additional supervision beyond rewards. Leveraging additional information during training to learn better representations and behaviors has been the focus of asymmetric reinforcement learning. This learning paradigm has proven effective under partial observability when additional state information is available, but also under full observability when more refined state information is available. Focusing on model-based reinforcement learning, we study the effect of asymmetric learning on observation representations and on privileged information representations. First, we identify a limitation in the privileged information representations learned by an asymmetric model-based algorithm known as the Informed Dreamer. Then, we propose a novel asymmetric representation learning objective using latent guidance, resulting in a new algorithm called the Reinformed Dreamer. Experiments across several benchmarks show a more consistent improvement over Dreamer than previous asymmetric approaches.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/02/2607.27953v1-autopref-automatic-discovery-of-task-specific-preference-objectives-for-neural-combinatorial-optimization",
+      "section": "quick",
+      "title_en": "AutoPref: Automatic Discovery of Task-Specific Preference Objectives for Neural Combinatorial Optimization",
+      "authors": "Shengda Gu, Kai Li, Xinyi Ke, Haobo Fu, Yifan Zhang, Jian Cheng",
+      "date": "2026-07-30",
+      "pdf": "https://arxiv.org/pdf/2607.27953v1",
+      "score": "6.0",
+      "evidence": "基于大语言模型引导的偏好目标自动发现以改进强化学习神经组合优化",
+      "tldr": "组合优化问题搜索空间巨大，神经组合优化常依赖强化学习，偏好学习可提升样本效率但现有目标需手动设计。AutoPref采用LLM引导，将偏好目标分解为成对损失与集合加权两部分，通过分阶段条件搜索和行为门控过滤无效程序。在TSP、CVRP、FFSP、JSSP等任务上跨规模优于强基线。这是首个自动化偏好目标发现框架，展示了其扩展性和通用性。",
+      "tags": "query:agentic-rl",
+      "abstract_en": "Combinatorial optimization problems (COPs) underpin many real-world decisions, but their exponentially large search spaces make high-quality solutions costly to obtain. Neural combinatorial optimization (NCO) learns fast construction policies, typically with reinforcement learning (RL), while preference-based NCO improves sample efficiency by learning from relative solution quality. However, existing preference objectives combine two distinct design choices in manually specified, one-size-fits-all formulations: what learning signal to extract from each solution pair and how to weight each pair relative to the sampled set. We present AutoPref, the first LLM-guided framework for automated preference-objective discovery in NCO. AutoPref factorizes the objective into a pairwise loss program, which defines the learning signal, and a set-aware weighting program, which determines each pair's relative contribution. Their composition forms a unified programmatic objective space containing existing preference objectives as special cases. To make its search tractable, we introduce a staged conditional search strategy with behavioral gates that filter inadmissible programs before short-horizon training and evaluation. Across TSP, CVRP, FFSP, and JSSP, AutoPref consistently outperforms strong hand-designed baselines across problem scales, demonstrating the benefits and scalability of automated objective discovery for NCO.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

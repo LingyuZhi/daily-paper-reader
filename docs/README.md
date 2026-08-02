@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-01</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-02</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>4</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-01 20:13:09 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-02 20:47:28 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读6篇、速读2篇，聚焦LLM智能体训练与策略优化。最值得关注《CAST》以游戏求解器作回合级教师、及《Policy Gradient Steering》用行为目标干预策略，均获8.0高分。建议普通读者优先精读这两篇，理解其将外部信号转化为智能体学习信号的核心思路。</p>
+<p>今日精读数学推理强化学习论文《ReDiPPO》，另速读世界模型与组合优化偏好学习两篇，共3篇。最值得关注的是满分的ReDiPPO，通过参考引导价值校准与差异感知令牌加权提升数学推理。建议普通读者优先精读该文，其余两篇可作方向拓展。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">4 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="CAST: Game Solvers as Turn-Level Teachers for LLM Agents">CAST: Game Solvers as Turn-Level Teachers for LLM Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Policy Gradient Steering: Interventions from Behavioral Objectives">Policy Gradient Steering: Interventions from Behavioral Objectives</span></li><li><span class="dpr-home-dashboard-paper-title" title="From Understanding to Action: Feedback-Grounded Policy Discovery for Generative Recommendation">From Understanding to Action: Feedback-Grounded Policy Discovery for Generative Recommendation</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ReDiPPO: Reference-Guided Value Calibration and Discrepancy-Aware Token Reweighting for Mathematical Reasoning">ReDiPPO: Reference-Guided Value Calibration and Discrepancy-Aware Token Reweighting for Mathematical Reasoning</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>4</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>1</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -87,7 +87,7 @@
     <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Matryoshka Agent: Unfolding Sub-Agents for Long-Horizon Machine Learning Engineering">Matryoshka Agent: Unfolding Sub-Agents for Long-Horizon Machine Learning Engineering</span></li><li><span class="dpr-home-dashboard-paper-title" title="AutoPref: Automatic Discovery of Task-Specific Preference Objectives for Neural Combinatorial Optimization">AutoPref: Automatic Discovery of Task-Specific Preference Objectives for Neural Combinatorial Optimization</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance">Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance</span></li><li><span class="dpr-home-dashboard-paper-title" title="AutoPref: Automatic Discovery of Task-Specific Preference Objectives for Neural Combinatorial Optimization">AutoPref: Automatic Discovery of Task-Specific Preference Objectives for Neural Combinatorial Optimization</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>2</strong></span></div>
 </section>
