@@ -1,0 +1,169 @@
+{
+  "date": "20260803",
+  "date_label": "",
+  "generated_at": "2026-08-03 20:52:33 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2607.29246v1",
+      "route": "202608/03/2607.29246v1-dont-mix-rewards-mix-policies-policy-decomposition-and-optimization-for-multi-reward-rl",
+      "title": "Don't Mix Rewards, Mix Policies: Policy Decomposition and Optimization for Multi-Reward RL",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向大语言模型后训练的多奖励强化学习框架",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    },
+    {
+      "paper_id": "2607.29419v1",
+      "route": "202608/03/2607.29419v1-explore-beyond-the-boundary-using-entropic-information",
+      "title": "Explore Beyond the Boundary Using Entropic Information",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "利用熵信息内在奖励改进自主智能体强化学习探索",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    },
+    {
+      "paper_id": "2607.28826v1",
+      "route": "202608/03/2607.28826v1-distilling-knowledge-from-large-language-models-into-lightweight-reinforcement-learning-agents-for-autonomous-cyber-operations",
+      "title": "Distilling Knowledge from Large Language Models into Lightweight Reinforcement Learning Agents for Autonomous Cyber Operations",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "使用大语言模型提示工程改善自主网络防御中的强化学习决策",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    },
+    {
+      "paper_id": "2607.29185v1",
+      "route": "202608/03/2607.29185v1-learning-latent-reasoning-traces-for-scalar-reward-models-end-to-end",
+      "title": "Learning Latent Reasoning Traces for Scalar Reward Models End-to-End",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "端到端学习潜在推理轨迹改进标量奖励模型，强化LLM的RL对齐",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    },
+    {
+      "paper_id": "2607.29559v1",
+      "route": "202608/03/2607.29559v1-lemur-learning-to-align-with-multi-objective-reinforcement-learning-from-preference-feedback",
+      "title": "LEMUR: Learning to Align with Multi-Objective Reinforcement Learning from Preference Feedback",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "结合多目标强化学习与偏好反馈，解决无标量奖励的决策问题",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    },
+    {
+      "paper_id": "2607.29468v1",
+      "route": "202608/03/2607.29468v1-self-play-meets-skill-evolution-self-evolving-search-agents-that-pose-solve-and-remember",
+      "title": "Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "自对弈与技能演进增强搜索智能体的程序性记忆",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    },
+    {
+      "paper_id": "2607.23474v1",
+      "route": "202608/03/2607.23474v1-sparse-gaussian-mixture-model-q-functions-via-hadamard-overparametrization-for-online-reinforcement-learning",
+      "title": "Sparse Gaussian-Mixture-Model Q-Functions via Hadamard Overparametrization for Online Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于稀疏高斯混合模型Q函数的在线强化学习方法",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    },
+    {
+      "paper_id": "2607.23784v1",
+      "route": "202608/03/2607.23784v1-a-few-words-go-a-long-way-language-guided-robot-policy-synthesis",
+      "title": "A Few Words Go a Long Way: Language Guided Robot Policy Synthesis",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "LLM编程智能体合成模块化机器人策略，使黑盒策略可解释可修正",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    },
+    {
+      "paper_id": "2607.28777v1",
+      "route": "202608/03/2607.28777v1-self-supervised-skill-optimization",
+      "title": "Self-Supervised Skill Optimization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向LLM代理的自监督技能优化，与智能体强化学习方法思路互补",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    },
+    {
+      "paper_id": "2607.28982v1",
+      "route": "202608/03/2607.28982v1-parallel-a-prefrontal-aligned-reinforcement-inspired-approach-for-language-model-learning-under-explicit-limits",
+      "title": "PARALLEL: A Prefrontal-Aligned Reinforcement inspired Approach for Language-Model Learning under Explicit Limits",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用强化启发的控制器为语言模型分配样本级更新强度",
+      "first_seen_at": "2026-08-03 20:52:33 UTC",
+      "updated_at": "2026-08-03 20:52:33 UTC"
+    }
+  ]
+}

@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-02</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-03</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 10 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-02 20:47:28 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-03 20:52:33 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读数学推理强化学习论文《ReDiPPO》，另速读世界模型与组合优化偏好学习两篇，共3篇。最值得关注的是满分的ReDiPPO，通过参考引导价值校准与差异感知令牌加权提升数学推理。建议普通读者优先精读该文，其余两篇可作方向拓展。</p>
+<p>今日精读聚焦多奖励策略分解与熵信息探索，速读覆盖自博弈进化、稀疏Q函数及语言引导机器人策略。最值得关注的是多奖励RL的“策略混合优于奖励混合”思路，以及用熵信息突破探索边界的理论方法。建议普通读者优先精读这两篇9分论文，并速读自博弈搜索智能体作为应用延伸。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="ReDiPPO: Reference-Guided Value Calibration and Discrepancy-Aware Token Reweighting for Mathematical Reasoning">ReDiPPO: Reference-Guided Value Calibration and Discrepancy-Aware Token Reweighting for Mathematical Reasoning</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Don&#x27;t Mix Rewards, Mix Policies: Policy Decomposition and Optimization for Multi-Reward RL">Don&#x27;t Mix Rewards, Mix Policies: Policy Decomposition and Optimization for Multi-Reward RL</span></li><li><span class="dpr-home-dashboard-paper-title" title="Explore Beyond the Boundary Using Entropic Information">Explore Beyond the Boundary Using Entropic Information</span></li><li><span class="dpr-home-dashboard-paper-title" title="Distilling Knowledge from Large Language Models into Lightweight Reinforcement Learning Agents for Autonomous Cyber Operations">Distilling Knowledge from Large Language Models into Lightweight Reinforcement Learning Agents for Autonomous Cyber Operations</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>1</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>5</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance">Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance</span></li><li><span class="dpr-home-dashboard-paper-title" title="AutoPref: Automatic Discovery of Task-Specific Preference Objectives for Neural Combinatorial Optimization">AutoPref: Automatic Discovery of Task-Specific Preference Objectives for Neural Combinatorial Optimization</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember">Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember</span></li><li><span class="dpr-home-dashboard-paper-title" title="Sparse Gaussian-Mixture-Model Q-Functions via Hadamard Overparametrization for Online Reinforcement Learning">Sparse Gaussian-Mixture-Model Q-Functions via Hadamard Overparametrization for Online Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="A Few Words Go a Long Way: Language Guided Robot Policy Synthesis">A Few Words Go a Long Way: Language Guided Robot Policy Synthesis</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>5</strong></span></div>
 </section>
 </div>
 
