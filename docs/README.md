@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-03</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-04</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 10 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 22 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>5</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>11</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>11</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-03 20:52:33 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-04 21:45:01 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读聚焦多奖励策略分解与熵信息探索，速读覆盖自博弈进化、稀疏Q函数及语言引导机器人策略。最值得关注的是多奖励RL的“策略混合优于奖励混合”思路，以及用熵信息突破探索边界的理论方法。建议普通读者优先精读这两篇9分论文，并速读自博弈搜索智能体作为应用延伸。</p>
+<p>今日共处理22篇论文，精读11篇、速读11篇，重点关注长时程智能体的跨基准泛化与Web代理强化学习。最值得精读的是《Cross-Benchmark Generalization in Long-Horizon Agents》和《RMSWeb》，分别探讨智能体泛化能力与失败模式驱动的训练方法。建议普通读者优先关注速读中的个性化代理与搜索代理优化方向，理解小策略模型与检索训练的实际价值。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">5 篇</strong>
+    <strong class="dpr-home-dashboard-count">11 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Don&#x27;t Mix Rewards, Mix Policies: Policy Decomposition and Optimization for Multi-Reward RL">Don&#x27;t Mix Rewards, Mix Policies: Policy Decomposition and Optimization for Multi-Reward RL</span></li><li><span class="dpr-home-dashboard-paper-title" title="Explore Beyond the Boundary Using Entropic Information">Explore Beyond the Boundary Using Entropic Information</span></li><li><span class="dpr-home-dashboard-paper-title" title="Distilling Knowledge from Large Language Models into Lightweight Reinforcement Learning Agents for Autonomous Cyber Operations">Distilling Knowledge from Large Language Models into Lightweight Reinforcement Learning Agents for Autonomous Cyber Operations</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Cross-Benchmark Generalization in Long-Horizon Agents">Cross-Benchmark Generalization in Long-Horizon Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="RMSWeb: Reflection, Failure-Mode Mining, and Salvage-DS for Web Agent Reinforcement Learning">RMSWeb: Reflection, Failure-Mode Mining, and Salvage-DS for Web Agent Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="SERL-SQL: Selective Hindsight Distillation for Text-to-SQL Reinforcement Agentic Learning">SERL-SQL: Selective Hindsight Distillation for Text-to-SQL Reinforcement Agentic Learning</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>5</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>11</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">5 篇</strong>
+    <strong class="dpr-home-dashboard-count">11 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember">Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember</span></li><li><span class="dpr-home-dashboard-paper-title" title="Sparse Gaussian-Mixture-Model Q-Functions via Hadamard Overparametrization for Online Reinforcement Learning">Sparse Gaussian-Mixture-Model Q-Functions via Hadamard Overparametrization for Online Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="A Few Words Go a Long Way: Language Guided Robot Policy Synthesis">A Few Words Go a Long Way: Language Guided Robot Policy Synthesis</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Personalizing Large Language Model Agents with Small Policy Models">Personalizing Large Language Model Agents with Small Policy Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="AReaL-DTE: Sparse Policy-Weight Transfer for Online Agentic Reinforcement Learning">AReaL-DTE: Sparse Policy-Weight Transfer for Online Agentic Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Search-GRT: Guided Retrieval Training of Search Agents to Optimize for Complex Question Answering">Search-GRT: Guided Retrieval Training of Search Agents to Optimize for Complex Question Answering</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>5</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>11</strong></span></div>
 </section>
 </div>
 

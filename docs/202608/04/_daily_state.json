@@ -1,0 +1,361 @@
+{
+  "date": "20260804",
+  "date_label": "",
+  "generated_at": "2026-08-04 21:45:01 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.00181v1",
+      "route": "202608/04/2608.00181v1-cross-benchmark-generalization-in-long-horizon-agents",
+      "title": "Cross-Benchmark Generalization in Long-Horizon Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向长时程MCP任务的RL后训练",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.00335v1",
+      "route": "202608/04/2608.00335v1-rmsweb-reflection-failure-mode-mining-and-salvage-ds-for-web-agent-reinforcement-learning",
+      "title": "RMSWeb: Reflection, Failure-Mode Mining, and Salvage-DS for Web Agent Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出面向智能体强化学习的反射、失败模式挖掘与数据拯救训练方案",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.00485v1",
+      "route": "202608/04/2608.00485v1-serl-sql-selective-hindsight-distillation-for-text-to-sql-reinforcement-agentic-learning",
+      "title": "SERL-SQL: Selective Hindsight Distillation for Text-to-SQL Reinforcement Agentic Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向文本到SQL智能体的智能体强化学习框架，采用选择性执行反馈",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.00782v1",
+      "route": "202608/04/2608.00782v1-distill-where-you-fail-recovering-learning-signals-of-negative-rl-groups-from-adaptive-teacher-guidance",
+      "title": "Distill Where You Fail: Recovering Learning Signals of Negative RL-Groups from Adaptive Teacher Guidance",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用同策略蒸馏辅助GRPO，改善稀疏奖励下的大模型后训练",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.00969v1",
+      "route": "202608/04/2608.00969v1-progress-coverage-guided-rl-to-train-search-augmented-llm-agent",
+      "title": "PROGRESS: Coverage-guided RL to Train Search-augmented LLM Agent",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "覆盖引导RL训练搜索增强LLM智能体",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.01418v1",
+      "route": "202608/04/2608.01418v1-reusing-rollouts-under-policy-lag-prefix-normalized-policy-optimization-for-llm-reinforcement-learning",
+      "title": "Reusing Rollouts under Policy Lag: Prefix-Normalized Policy Optimization for LLM Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "前缀归一化策略优化以复用LLM RL中的rollout",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.01597v1",
+      "route": "202608/04/2608.01597v1-hindsearch-trajectory-level-hindsight-critique-for-search-augmented-reinforcement-learning",
+      "title": "HindSearch: Trajectory-Level Hindsight Critique for Search-Augmented Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向搜索增强语言模型智能体GRPO的后见蒸馏方法",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.02087v1",
+      "route": "202608/04/2608.02087v1-instruction-conditioned-exploration-with-asymmetric-reinforcement-learning-and-self-distillation",
+      "title": "Instruction-Conditioned Exploration with Asymmetric Reinforcement Learning and Self-Distillation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用强化学习后训练大语言模型，提升探索能力",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.02149v1",
+      "route": "202608/04/2608.02149v1-beyond-the-mean-multi-moment-policy-optimization-for-llm-reasoning",
+      "title": "Beyond the Mean: Multi-Moment Policy Optimization for LLM Reasoning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向LLM推理的RL策略优化，超越均值视角",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.02181v1",
+      "route": "202608/04/2608.02181v1-start-classifying-categorical-critics-for-llm-reinforcement-learning",
+      "title": "Start Classifying: Categorical Critics for LLM Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用分类式评论家改进LLM强化学习中的PPO",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.02508v1",
+      "route": "202608/04/2608.02508v1-romerl-balancing-feedback-coverage-and-the-memory-reward-trap-in-self-evolving-agent-memory-via-reduced-order-utility-states",
+      "title": "RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用于自进化LLM智能体的降阶记忆强化学习",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.00215v1",
+      "route": "202608/04/2608.00215v1-personalizing-large-language-model-agents-with-small-policy-models",
+      "title": "Personalizing Large Language Model Agents with Small Policy Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过标量反馈在线学习冻结LLM智能体的执行策略，用强化学习增强个性化",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.00455v1",
+      "route": "202608/04/2608.00455v1-areal-dte-sparse-policy-weight-transfer-for-online-agentic-reinforcement-learning",
+      "title": "AReaL-DTE: Sparse Policy-Weight Transfer for Online Agentic Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "在线智能体强化学习中的稀疏策略权重传输引擎",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.00974v1",
+      "route": "202608/04/2608.00974v1-search-grt-guided-retrieval-training-of-search-agents-to-optimize-for-complex-question-answering",
+      "title": "Search-GRT: Guided Retrieval Training of Search Agents to Optimize for Complex Question Answering",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "引导式检索训练，使用RL优化LLM搜索代理",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.01359v1",
+      "route": "202608/04/2608.01359v1-evisd-evidence-conditioned-self-distillation-for-search-augmented-agents",
+      "title": "EviSD: Evidence-Conditioned Self-Distillation for Search-Augmented Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "证据条件自蒸馏结合RL提升搜索增强智能体的决策",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.01425v1",
+      "route": "202608/04/2608.01425v1-training-small-llms-as-spatial-multi-agent-policies",
+      "title": "Training Small LLMs as Spatial Multi-Agent Policies",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "用选项式多智能体强化学习将小型LLM训练为空间策略",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.01717v1",
+      "route": "202608/04/2608.01717v1-beyond-on-policy-exploration-integrating-external-policy-rollouts-for-reinforcement-learning-in-diffusion-language-models",
+      "title": "Beyond On-Policy Exploration: Integrating External Policy Rollouts for Reinforcement Learning in Diffusion Language Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向扩散语言模型的强化学习，引入外部策略回放",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.01743v1",
+      "route": "202608/04/2608.01743v1-toward-plasticity-preserving-kl-regularization-for-capability-retention-in-llm-reinforcement-learning",
+      "title": "Toward Plasticity-Preserving KL Regularization for Capability Retention in LLM Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "在LLM强化学习中保持原有能力的KL正则化方法",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.01837v1",
+      "route": "202608/04/2608.01837v1-pcsd-persistent-consistency-for-self-distillation-in-agentic-reinforcement-learning",
+      "title": "PCSD: Persistent Consistency for Self-Distillation in Agentic Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向LLM智能体agentic RL的持续性一致性自蒸馏",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.01904v1",
+      "route": "202608/04/2608.01904v1-coevokg-co-evolving-knowledge-graphs-with-self-evolving-search-agents",
+      "title": "CoEvoKG: Co-Evolving Knowledge Graphs with Self-Evolving Search Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过RL训练自演化搜索智能体的知识图谱协同进化框架",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.02101v1",
+      "route": "202608/04/2608.02101v1-cross-domain-hybrid-opd-for-generalizable-search-agents",
+      "title": "Cross-Domain Hybrid OPD for Generalizable Search Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向通用搜索智能体的智能体强化学习训练框架",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    },
+    {
+      "paper_id": "2608.02139v1",
+      "route": "202608/04/2608.02139v1-self-improving-large-language-models-via-progressive-experience-evolution",
+      "title": "Self-Improving Large Language Models via Progressive Experience Evolution",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过经验蒸馏将交互经验内化为LLM能力，关联强化学习增强LLM",
+      "first_seen_at": "2026-08-04 21:45:01 UTC",
+      "updated_at": "2026-08-04 21:45:01 UTC"
+    }
+  ]
+}
