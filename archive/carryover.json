@@ -1,12 +1,141 @@
 {
-  "generated_at": "2026-08-04T21:30:36.832899+00:00",
-  "updated_date": "20260804",
+  "generated_at": "2026-08-07T01:23:53.351796+00:00",
+  "updated_date": "20260807",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260804",
+      "updated_date": "20260807",
       "carryover_days": 9,
-      "items": []
+      "items": [
+        {
+          "id": "2608.03660v1",
+          "source": "arxiv",
+          "title": "Taming the Implicit: Dual-Channel Risk-Aware Reinforcement Fine-Tuning for Continual Multimodal Post-Training",
+          "abstract": "Reinforcement fine-tuning (RFT) is widely believed to inherently resist catastrophic forgetting in continual post-training of multimodal large language models. Under pronounced task distributional shifts, however, forgetting across representative RFT algorithms escalates sharply. This stems from the implicit reward-variance regularization inherent to RFT, which proves incapable of suppressing uncontrolled optimization risk. We propose Risk-Aware Policy Optimization (RAPO), the first dual-channel framework for explicit risk governance in continual RFT. On the policy channel, Risk-Aware Policy Scaling adaptively calibrates per-sample update magnitude via rollout reliability and Fisher-inspired local predictive sensitivity; on the data channel, Risk-Aware Dynamic Bucket Sampling reorganizes training batches through dynamic risk stratification, steering optimization toward informative yet stable samples. As a plug-and-play strategy requiring no cross-task memory, RAPO generalizes to any RFT algorithm without modification. On the public MLLM-CL benchmark, RAPO reduces final forgetting by 79.8% relative to its RLOO backbone while retaining new-task competitiveness.",
+          "authors": [
+            "Yibei Liu",
+            "Jiajun Chen",
+            "Qianle Zhang",
+            "Tangyue Jin",
+            "Mengying Zhu",
+            "Meng Xi",
+            "Yangyang Wu"
+          ],
+          "primary_category": "cs.AI",
+          "categories": [
+            "cs.AI"
+          ],
+          "published": "2026-08-04T13:40:03+00:00",
+          "link": "https://arxiv.org/pdf/2608.03660v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "risk-aware reinforcement fine-tuning for continual multimodal post-training of LLMs",
+          "llm_evidence_cn": "用于多模态LLM持续后训练的风险感知强化微调",
+          "llm_evidence": "用于多模态LLM持续后训练的风险感知强化微调",
+          "canonical_evidence": "用于多模态LLM持续后训练的风险感知强化微调",
+          "llm_tldr_en": "Continuous post-training of multimodal LLMs with reinforcement fine-tuning still suffers from catastrophic forgetting under task shift. RAPO introduces a dual-channel risk-aware framework, adaptively scaling per-sample policy updates and governing optimization risk to stabilize continual training.",
+          "llm_tldr_cn": "人们通常认为强化微调(RFT)在持续多模态后训练中能天然抵抗灾难性遗忘，但任务分布变化明显时遗忘会急剧上升。论文指出其根源是RFT内置的隐式奖励方差正则化无法抑制失控的优化风险，并提出首个双通道风险治理框架RAPO。在策略通道中，风险感知策略缩放依据轨迹可靠性与Fisher式局部敏感性逐样本调整更新幅度。该工作为持续RL后训练中的稳定性提供了显式且可解释的风险控制手段。",
+          "llm_tldr": "人们通常认为强化微调(RFT)在持续多模态后训练中能天然抵抗灾难性遗忘，但任务分布变化明显时遗忘会急剧上升。论文指出其根源是RFT内置的隐式奖励方差正则化无法抑制失控的优化风险，并提出首个双通道风险治理框架RAPO。在策略通道中，风险感知策略缩放依据轨迹可靠性与Fisher式局部敏感性逐样本调整更新幅度。该工作为持续RL后训练中的稳定性提供了显式且可解释的风险控制手段。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "using reinforcement learning to enhance large language models",
+          "matched_requirement_id": "req-2",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.03660v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.04962v1",
+          "source": "arxiv",
+          "title": "SpecRoll: Fast-Slow Verifier-Feedback Adaptation for Speculative Reinforcement Learning Rollouts",
+          "abstract": "Reinforcement learning (RL) post-training improves the reasoning capabilities of large language models, but autoregressive rollout generation remains a major efficiency bottleneck. Speculative decoding can accelerate generation, yet applying it during RL is difficult because the target policy continually evolves: static proposers become stale, while frequent drafter updates add substantial overhead. We introduce SpecRoll, a speculative rollout engine that preserves the target model's sampling distribution while adapting at two timescales. Lightweight future-token heads generate parallel proposals, while our proposed Reflex module uses delayed verifier feedback to perform bounded, trajectory-local hidden-state corrections without backpropagation. A complementary slow path updates the head parameters only when sustained degradation is detected. SpecRoll combines these mechanisms with concurrency-aware sparse-tree verification and exact target verification, leaving the target rollout distribution and GRPO objective unchanged. Across five models ranging from 1.5B to 14B and three mathematical reasoning datasets, SpecRoll achieves 1.26-2.15x generation speedup and 1.21-2.04x end-to-end speedup over vanilla GRPO. It also outperforms FastGRPO in both generation and end-to-end time across all 15 matched settings, with an average pairwise end-to-end gain of 1.18x. Controlled ablations show that the fast and slow adaptation paths provide complementary benefits. Our source code is available at https://anonymous.4open.science/r/SpecRoll-26062006.",
+          "authors": [
+            "Nhat Minh Pham",
+            "Duy Tung Doan",
+            "Thi Duyen Ngo",
+            "Vinh Van Nguyen",
+            "Khac-Hoai Nam Bui"
+          ],
+          "primary_category": "cs.LG",
+          "categories": [
+            "cs.LG",
+            "cs.CL"
+          ],
+          "published": "2026-08-05T15:32:27+00:00",
+          "link": "https://arxiv.org/pdf/2608.04962v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Develops a speculative rollout engine to accelerate RL post-training for LLMs",
+          "llm_evidence_cn": "开发推测解码式rollout引擎以加速大语言模型RL后训练",
+          "llm_evidence": "开发推测解码式rollout引擎以加速大语言模型RL后训练",
+          "canonical_evidence": "开发推测解码式rollout引擎以加速大语言模型RL后训练",
+          "llm_tldr_en": "SpecRoll accelerates RL post-training for LLMs with speculative decoding adapted at two timescales, using future-token heads and delayed verifier feedback to preserve the target sampling distribution and reduce rollout bottlenecks.",
+          "llm_tldr_cn": "针对大语言模型强化学习后训练中自回归rollout生成效率低下的问题，本文提出SpecRoll推测式rollout引擎。它通过轻量未来词头生成并行提议，并利用延迟验证器反馈进行轨迹局部隐藏状态修正，在目标策略动态演化中保持采样分布。实验表明SpecRoll能显著提升rollout速度，同时不牺牲RL训练质量。该方法为LLM的RL后训练提供了实用的加速方案。",
+          "llm_tldr": "针对大语言模型强化学习后训练中自回归rollout生成效率低下的问题，本文提出SpecRoll推测式rollout引擎。它通过轻量未来词头生成并行提议，并利用延迟验证器反馈进行轨迹局部隐藏状态修正，在目标策略动态演化中保持采样分布。实验表明SpecRoll能显著提升rollout速度，同时不牺牲RL训练质量。该方法为LLM的RL后训练提供了实用的加速方案。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "using reinforcement learning to enhance large language models",
+          "matched_requirement_id": "req-2",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.04962v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.04934v1",
+          "source": "arxiv",
+          "title": "State2State: Environment-Derived Mid-Training for LLM Agents",
+          "abstract": "Training LLM agents commonly relies on supervised fine-tuning from expert trajectories or online reinforcement learning over human-specified tasks with handcrafted verifiers. Though effective, both remain bottlenecked by externally specified tasks and supervision signals, limiting the scalability and diversity of agent training. We study an environment learning paradigm in which agents acquire interaction and manipulation capabilities solely through environment interaction, without externally specified tasks. We propose State2State, an environment-derived mid-training method that converts explored environment states into training objectives, challenging agents to reach a specified target state. By deriving tasks from environment exploration and verifying success through rule-based state matching, State2State provides scalable and verifiable training objectives without expert supervision or manual task design. Experiments on ALFWorld and ScienceWorld show that State2State improves agent performance as a standalone environment-learning stage in most settings. As initialization for downstream RL, it further improves final performance and learning efficiency, with promising evidence of cross-environment generalization.",
+          "authors": [
+            "Xuanyu Lei",
+            "Yiqi Zhu",
+            "Chenliang Li",
+            "Kaiming Liu",
+            "Peng Li",
+            "Ming Yan",
+            "Jieping Ye",
+            "Ya-Qin Zhang",
+            "Yang Liu"
+          ],
+          "primary_category": "cs.CL",
+          "categories": [
+            "cs.CL",
+            "cs.LG"
+          ],
+          "published": "2026-08-05T15:02:41+00:00",
+          "link": "https://arxiv.org/pdf/2608.04934v1",
+          "tags": [
+            "keyword:agentic-rl",
+            "query:agentic-rl"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "Trains LLM agents via environment-derived objectives without externally specified tasks, enabling interaction and manipulation capabilities",
+          "llm_evidence_cn": "提出环境派生中间训练方法，让LLM智能体无需外部任务即可通过与环境的交互获得能力",
+          "llm_evidence": "提出环境派生中间训练方法，让LLM智能体无需外部任务即可通过与环境的交互获得能力",
+          "canonical_evidence": "提出环境派生中间训练方法，让LLM智能体无需外部任务即可通过与环境的交互获得能力",
+          "llm_tldr_en": "State2State trains LLM agents by converting explored environment states into target-state reachability objectives, enabling agents to acquire interaction and manipulation capabilities purely from environment interaction without externally specified tasks.",
+          "llm_tldr_cn": "现有LLM智能体训练依赖专家轨迹或人工设定任务的在线强化学习，受限于外部任务与监督信号。State2State提出环境派生中间训练方法，将探索到的环境状态转化为到达指定目标状态的训练目标，使智能体仅通过与环境的交互就获得操作与交互能力，从而突破外部任务瓶颈，提升智能体训练的扩展性和多样性。",
+          "llm_tldr": "现有LLM智能体训练依赖专家轨迹或人工设定任务的在线强化学习，受限于外部任务与监督信号。State2State提出环境派生中间训练方法，将探索到的环境状态转化为到达指定目标状态的训练目标，使智能体仅通过与环境的交互就获得操作与交互能力，从而突破外部任务瓶颈，提升智能体训练的扩展性和多样性。",
+          "llm_tags": [
+            "query:agentic-rl"
+          ],
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+          "matched_requirement_id": "req-1",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.04934v1",
+          "carry_days": 1
+        }
+      ]
     }
   }
 }

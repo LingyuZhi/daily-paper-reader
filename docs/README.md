@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-04</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-07</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 22 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 18 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>11</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>7</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>11</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-04 21:45:01 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-07 01:41:05 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日共处理22篇论文，精读11篇、速读11篇，重点关注长时程智能体的跨基准泛化与Web代理强化学习。最值得精读的是《Cross-Benchmark Generalization in Long-Horizon Agents》和《RMSWeb》，分别探讨智能体泛化能力与失败模式驱动的训练方法。建议普通读者优先关注速读中的个性化代理与搜索代理优化方向，理解小策略模型与检索训练的实际价值。</p>
+<p>今日18篇论文聚焦智能体强化学习，精读两篇满分9.0，速读三篇高亮8.0。</p>
+<p>最值得看：技能生成与奖励塑形可显著提升智能体学习效率；经验记忆与动态课程学习助力决策优化。</p>
+<p>建议优先精读《Progressive Agent Skill Generation》和《Self-Distilled Reward Shaping》，速读CVPO与BODHI拓展视角。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">11 篇</strong>
+    <strong class="dpr-home-dashboard-count">7 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Cross-Benchmark Generalization in Long-Horizon Agents">Cross-Benchmark Generalization in Long-Horizon Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="RMSWeb: Reflection, Failure-Mode Mining, and Salvage-DS for Web Agent Reinforcement Learning">RMSWeb: Reflection, Failure-Mode Mining, and Salvage-DS for Web Agent Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="SERL-SQL: Selective Hindsight Distillation for Text-to-SQL Reinforcement Agentic Learning">SERL-SQL: Selective Hindsight Distillation for Text-to-SQL Reinforcement Agentic Learning</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Progressive Agent Skill Generation via Reinforcement Learning">Progressive Agent Skill Generation via Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Agentic Reinforcement Learning with Self-Distilled Reward Shaping">Agentic Reinforcement Learning with Self-Distilled Reward Shaping</span></li><li><span class="dpr-home-dashboard-paper-title" title="Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks">Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>11</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>7</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -87,7 +89,7 @@
     <strong class="dpr-home-dashboard-count">11 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Personalizing Large Language Model Agents with Small Policy Models">Personalizing Large Language Model Agents with Small Policy Models</span></li><li><span class="dpr-home-dashboard-paper-title" title="AReaL-DTE: Sparse Policy-Weight Transfer for Online Agentic Reinforcement Learning">AReaL-DTE: Sparse Policy-Weight Transfer for Online Agentic Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Search-GRT: Guided Retrieval Training of Search Agents to Optimize for Complex Question Answering">Search-GRT: Guided Retrieval Training of Search Agents to Optimize for Complex Question Answering</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="BODHI: Do LLMs Branch Out and Discover Heterogeneous Inferences?">BODHI: Do LLMs Branch Out and Discover Heterogeneous Inferences?</span></li><li><span class="dpr-home-dashboard-paper-title" title="CVPO: Enhancing LLM Reinforcement Learning Reasoning via Value-Variance Adaptation and Dynamic Curriculum Learning">CVPO: Enhancing LLM Reinforcement Learning Reasoning via Value-Variance Adaptation and Dynamic Curriculum Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Towards Improving Sequential Decision-Making in LLM Agents via Experience Memory">Towards Improving Sequential Decision-Making in LLM Agents via Experience Memory</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>11</strong></span></div>
 </section>

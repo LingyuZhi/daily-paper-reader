@@ -1,0 +1,297 @@
+{
+  "date": "20260807",
+  "date_label": "",
+  "generated_at": "2026-08-07 01:41:05 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.01678v1",
+      "route": "202608/07/2608.01678v1-progressive-agent-skill-generation-via-reinforcement-learning",
+      "title": "Progressive Agent Skill Generation via Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "将技能生成建模为顺序编辑过程并用强化学习优化，为智能体渐进式生成高质量技能",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.03223v1",
+      "route": "202608/07/2608.03223v1-agentic-reinforcement-learning-with-self-distilled-reward-shaping",
+      "title": "Agentic Reinforcement Learning with Self-Distilled Reward Shaping",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "代理强化学习中的自蒸馏奖励塑造",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.03502v1",
+      "route": "202608/07/2608.03502v1-hybrid-llm-augmented-reinforcement-learning-agents-for-complex-sequential-decision-tasks",
+      "title": "Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "混合智能体结合LLM驱动的规划与基于RL的动作优化以处理复杂序贯决策",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.04588v1",
+      "route": "202608/07/2608.04588v1-easy-towards-efficient-llm-based-agentic-system",
+      "title": "EASy: Towards Efficient LLM-Based Agentic System",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "利用强化学习联合优化基于LLM的智能体系统的任务性能与计算效率",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.04788v1",
+      "route": "202608/07/2608.04788v1-agentic-reinforcement-learning-with-observation-calibrated-self-distillation",
+      "title": "Agentic Reinforcement Learning with Observation-Calibrated Self-Distillation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出面向大语言模型智能体的观察校准自蒸馏的代理强化学习方法",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.04905v1",
+      "route": "202608/07/2608.04905v1-primal3-pathfinding-via-reinforcement-and-imitation-multi-agent-learning---leveraging-lacam3",
+      "title": "PRIMAL3: Pathfinding via Reinforcement and Imitation Multi-Agent Learning - Leveraging LaCAM3",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出用于多智能体路径规划的大规模强化学习与模仿学习框架",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.05080v1",
+      "route": "202608/07/2608.05080v1-optimizing-what-policies-learn-from-recoverability-aware-rollout-intervention-learning",
+      "title": "Optimizing What Policies Learn From: Recoverability-aware Rollout Intervention Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向大语言模型后训练的强化学习，通过自适应回滚干预提升学习信号效率",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.02867v1",
+      "route": "202608/07/2608.02867v1-bodhi-do-llms-branch-out-and-discover-heterogeneous-inferences",
+      "title": "BODHI: Do LLMs Branch Out and Discover Heterogeneous Inferences?",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "分析RLVR是扩展LLM推理能力边界还是仅提升采样效率",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.03068v1",
+      "route": "202608/07/2608.03068v1-cvpo-enhancing-llm-reinforcement-learning-reasoning-via-value-variance-adaptation-and-dynamic-curriculum-learning",
+      "title": "CVPO: Enhancing LLM Reinforcement Learning Reasoning via Value-Variance Adaptation and Dynamic Curriculum Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过价值方差自适应与动态课程学习增强大语言模型推理的强化学习",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.03420v1",
+      "route": "202608/07/2608.03420v1-towards-improving-sequential-decision-making-in-llm-agents-via-experience-memory",
+      "title": "Towards Improving Sequential Decision-Making in LLM Agents via Experience Memory",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "基于经验记忆提升LLM智能体的序贯决策能力",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.03545v2",
+      "route": "202608/07/2608.03545v2-hi-ttrl-regulating-consensus-with-hints-for-test-time-reinforcement-learning",
+      "title": "Hi-TTRL: Regulating Consensus with Hints for Test-Time Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向LLM推理的共识调节测试时强化学习",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.03573v1",
+      "route": "202608/07/2608.03573v1-sft-conflicts-rl-coexists-a-theoretical-and-empirical-analysis-of-multi-task-learning-for-llms",
+      "title": "SFT Conflicts, RL Coexists: A Theoretical and Empirical Analysis of Multi-Task Learning for LLMs",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "理论与实证分析表明RL能使LLM在多任务上稳定共存，而SFT存在冲突",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.00175v1",
+      "route": "202608/07/2608.00175v1-inference-time-policy-alignment-for-fair-reinforcement-learning",
+      "title": "Inference-Time Policy Alignment for Fair Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "在不重训的情况下于推理阶段引导预训练RL策略实现公平目标",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.02391v1",
+      "route": "202608/07/2608.02391v1-cooperative-coevolution-for-resource-constrained-agentic-llm-post-training",
+      "title": "Cooperative Coevolution for Resource-Constrained Agentic LLM Post-Training",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向资源受限的智能体LLM后训练的协同进化策略，性能可与强化学习匹配",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.02993v1",
+      "route": "202608/07/2608.02993v1-neurosymbolic-reasoning-with-incremental-knowledge-for-sample-efficient-hierarchical-reinforcement-learning",
+      "title": "Neurosymbolic Reasoning with Incremental Knowledge for Sample Efficient Hierarchical Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向样本高效长时程决策的增量知识神经符号层次强化学习",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.00133v1",
+      "route": "202608/07/2608.00133v1-deep-reinforcement-learning-from-first-principles-to-reasoning-models",
+      "title": "Deep Reinforcement Learning: From First Principles to Reasoning Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "系统介绍深度强化学习从第一性原理到推理模型及现实系统的书籍",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.01133v1",
+      "route": "202608/07/2608.01133v1-policy-optimality-measurement-for-multi-vehicle-decision-making-from-extrinsic-indicators-to-intrinsic-quality",
+      "title": "Policy Optimality Measurement for Multi-Vehicle Decision-Making: From Extrinsic Indicators to Intrinsic Quality",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向多车决策的多智能体强化学习策略最优性度量",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.03562v1",
+      "route": "202608/07/2608.03562v1-robust-general-utility-for-reinforcement-learning",
+      "title": "Robust General Utility for Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向效用设定偏差的鲁棒通用效用强化学习框架",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 01:41:05 UTC"
+    }
+  ]
+}
