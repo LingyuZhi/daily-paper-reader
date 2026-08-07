@@ -44,14 +44,14 @@
       <span class="dpr-home-dashboard-kicker">2026-08-07</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 18 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 28 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
-    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>7</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>11</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>2 次</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>12</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>16</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-07 01:41:05 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-07 20:48:44 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日18篇论文聚焦智能体强化学习，精读两篇满分9.0，速读三篇高亮8.0。</p>
-<p>最值得看：技能生成与奖励塑形可显著提升智能体学习效率；经验记忆与动态课程学习助力决策优化。</p>
-<p>建议优先精读《Progressive Agent Skill Generation》和《Self-Distilled Reward Shaping》，速读CVPO与BODHI拓展视角。</p>
+<p>今日精选28篇论文，精读12篇，围绕强化学习与智能体生成展开。最值得关注的是智能体技能自动生成与自蒸馏奖励塑造两大前沿方向，均获9分高评价。建议普通读者优先了解如何通过强化学习让AI自主进化技能，这一趋势正加速走向实用。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">7 篇</strong>
+    <strong class="dpr-home-dashboard-count">12 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
 <ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Progressive Agent Skill Generation via Reinforcement Learning">Progressive Agent Skill Generation via Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Agentic Reinforcement Learning with Self-Distilled Reward Shaping">Agentic Reinforcement Learning with Self-Distilled Reward Shaping</span></li><li><span class="dpr-home-dashboard-paper-title" title="Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks">Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>7</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>12</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">11 篇</strong>
+    <strong class="dpr-home-dashboard-count">16 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="BODHI: Do LLMs Branch Out and Discover Heterogeneous Inferences?">BODHI: Do LLMs Branch Out and Discover Heterogeneous Inferences?</span></li><li><span class="dpr-home-dashboard-paper-title" title="CVPO: Enhancing LLM Reinforcement Learning Reasoning via Value-Variance Adaptation and Dynamic Curriculum Learning">CVPO: Enhancing LLM Reinforcement Learning Reasoning via Value-Variance Adaptation and Dynamic Curriculum Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Towards Improving Sequential Decision-Making in LLM Agents via Experience Memory">Towards Improving Sequential Decision-Making in LLM Agents via Experience Memory</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Sample Efficient Hierarchical Reinforcement Learning via Best Policy Identification">Sample Efficient Hierarchical Reinforcement Learning via Best Policy Identification</span></li><li><span class="dpr-home-dashboard-paper-title" title="Diffusion Policy with Behavioral Advantage Correction for Offline Reinforcement Learning">Diffusion Policy with Behavioral Advantage Correction for Offline Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="BODHI: Do LLMs Branch Out and Discover Heterogeneous Inferences?">BODHI: Do LLMs Branch Out and Discover Heterogeneous Inferences?</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>11</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>16</strong></span></div>
 </section>
 </div>
 

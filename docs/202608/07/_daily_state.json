@@ -1,9 +1,9 @@
 {
   "date": "20260807",
   "date_label": "",
-  "generated_at": "2026-08-07 01:41:05 UTC",
+  "generated_at": "2026-08-07 20:48:44 UTC",
   "recommend_exists": true,
-  "run_count": 1,
+  "run_count": 2,
   "papers": [
     {
       "paper_id": "2608.01678v1",
@@ -17,9 +17,9 @@
         }
       ],
       "score": 9.0,
-      "evidence": "将技能生成建模为顺序编辑过程并用强化学习优化，为智能体渐进式生成高质量技能",
+      "evidence": "用强化学习渐进式生成智能体技能",
       "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
+      "updated_at": "2026-08-07 20:48:44 UTC"
     },
     {
       "paper_id": "2608.03223v1",
@@ -33,9 +33,9 @@
         }
       ],
       "score": 9.0,
-      "evidence": "代理强化学习中的自蒸馏奖励塑造",
+      "evidence": "提出ADRS框架，用自蒸馏奖励塑形为智能体强化学习提供token级反馈",
       "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
+      "updated_at": "2026-08-07 20:48:44 UTC"
     },
     {
       "paper_id": "2608.03502v1",
@@ -49,9 +49,137 @@
         }
       ],
       "score": 9.0,
-      "evidence": "混合智能体结合LLM驱动的规划与基于RL的动作优化以处理复杂序贯决策",
+      "evidence": "提出LLM增强的强化学习智能体，将LLM规划与RL行动优化结合用于复杂序贯决策，直接对应智能体强化学习方法。",
       "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.03545v2",
+      "route": "202608/07/2608.03545v2-hi-ttrl-regulating-consensus-with-hints-for-test-time-reinforcement-learning",
+      "title": "Hi-TTRL: Regulating Consensus with Hints for Test-Time Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "利用测试时强化学习提升大语言模型推理能力",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.04788v1",
+      "route": "202608/07/2608.04788v1-agentic-reinforcement-learning-with-observation-calibrated-self-distillation",
+      "title": "Agentic Reinforcement Learning with Observation-Calibrated Self-Distillation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "通过观测校准自蒸馏为智能体强化学习提供密集令牌级监督",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.04905v1",
+      "route": "202608/07/2608.04905v1-primal3-pathfinding-via-reinforcement-and-imitation-multi-agent-learning---leveraging-lacam3",
+      "title": "PRIMAL3: Pathfinding via Reinforcement and Imitation Multi-Agent Learning - Leveraging LaCAM3",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向多智能体路径规划决策的强化与模仿学习",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.05080v1",
+      "route": "202608/07/2608.05080v1-optimizing-what-policies-learn-from-recoverability-aware-rollout-intervention-learning",
+      "title": "Optimizing What Policies Learn From: Recoverability-aware Rollout Intervention Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "为LLM的后训练RL自适应决定采样轨迹的位置与数量，基于可恢复性进行干预",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.05832v1",
+      "route": "202608/07/2608.05832v1-enhancing-social-intelligence-in-llms-with-hierarchical-reasoning-and-utterance-level-goal-rewarding",
+      "title": "Enhancing Social Intelligence in LLMs with Hierarchical Reasoning and Utterance-Level Goal Rewarding",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "使用线性化层次强化学习（LHRL-VGR）优化LLM社交对话",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.05987v1",
+      "route": "202608/07/2608.05987v1-agentopsd-recursive-self-distillation-for-agentic-reinforcement-learning",
+      "title": "AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向智能体强化学习的递归回合级信用分配方法",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.06128v1",
+      "route": "202608/07/2608.06128v1-contextual-information-policy-optimization-for-search-agents",
+      "title": "Contextual Information Policy Optimization for Search Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出上下文信息策略优化，用强化学习方法训练搜索智能体，使其后续推理基于检索证据，属于智能体强化学习方法。",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.06197v1",
+      "route": "202608/07/2608.06197v1-envace-internalizing-environment-dynamics-via-world-rehearsal-for-agentic-reinforcement-learning",
+      "title": "EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用世界预演替代环境交互的智能体强化学习方法",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
     },
     {
       "paper_id": "2608.04588v1",
@@ -70,52 +198,36 @@
       "updated_at": "2026-08-07 01:41:05 UTC"
     },
     {
-      "paper_id": "2608.04788v1",
-      "route": "202608/07/2608.04788v1-agentic-reinforcement-learning-with-observation-calibrated-self-distillation",
-      "title": "Agentic Reinforcement Learning with Observation-Calibrated Self-Distillation",
-      "section": "deep",
+      "paper_id": "2607.29294v1",
+      "route": "202608/07/2607.29294v1-sample-efficient-hierarchical-reinforcement-learning-via-best-policy-identification",
+      "title": "Sample Efficient Hierarchical Reinforcement Learning via Best Policy Identification",
+      "section": "quick",
       "tags": [
         {
           "kind": "query",
           "label": "agentic-rl"
         }
       ],
-      "score": 9.0,
-      "evidence": "提出面向大语言模型智能体的观察校准自蒸馏的代理强化学习方法",
-      "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
+      "score": 8.0,
+      "evidence": "分层强化学习算法用于高效智能体决策，具有样本复杂度保证",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
     },
     {
-      "paper_id": "2608.04905v1",
-      "route": "202608/07/2608.04905v1-primal3-pathfinding-via-reinforcement-and-imitation-multi-agent-learning---leveraging-lacam3",
-      "title": "PRIMAL3: Pathfinding via Reinforcement and Imitation Multi-Agent Learning - Leveraging LaCAM3",
-      "section": "deep",
+      "paper_id": "2608.02332v1",
+      "route": "202608/07/2608.02332v1-diffusion-policy-with-behavioral-advantage-correction-for-offline-reinforcement-learning",
+      "title": "Diffusion Policy with Behavioral Advantage Correction for Offline Reinforcement Learning",
+      "section": "quick",
       "tags": [
         {
           "kind": "query",
           "label": "agentic-rl"
         }
       ],
-      "score": 9.0,
-      "evidence": "提出用于多智能体路径规划的大规模强化学习与模仿学习框架",
-      "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
-    },
-    {
-      "paper_id": "2608.05080v1",
-      "route": "202608/07/2608.05080v1-optimizing-what-policies-learn-from-recoverability-aware-rollout-intervention-learning",
-      "title": "Optimizing What Policies Learn From: Recoverability-aware Rollout Intervention Learning",
-      "section": "deep",
-      "tags": [
-        {
-          "kind": "query",
-          "label": "agentic-rl"
-        }
-      ],
-      "score": 9.0,
-      "evidence": "面向大语言模型后训练的强化学习，通过自适应回滚干预提升学习信号效率",
-      "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
+      "score": 8.0,
+      "evidence": "面向离线RL的行为优势校正与扩散策略，改善Q估计并缓解分布偏移",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
     },
     {
       "paper_id": "2608.02867v1",
@@ -129,9 +241,9 @@
         }
       ],
       "score": 8.0,
-      "evidence": "分析RLVR是扩展LLM推理能力边界还是仅提升采样效率",
+      "evidence": "研究RLVR是否扩展LLM推理边界，直接关注RL如何增强LLM能力",
       "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
+      "updated_at": "2026-08-07 20:48:44 UTC"
     },
     {
       "paper_id": "2608.03068v1",
@@ -145,9 +257,9 @@
         }
       ],
       "score": 8.0,
-      "evidence": "通过价值方差自适应与动态课程学习增强大语言模型推理的强化学习",
+      "evidence": "提出CVPO，通过值方差适应与课程学习增强LLM推理",
       "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
+      "updated_at": "2026-08-07 20:48:44 UTC"
     },
     {
       "paper_id": "2608.03420v1",
@@ -166,22 +278,6 @@
       "updated_at": "2026-08-07 01:41:05 UTC"
     },
     {
-      "paper_id": "2608.03545v2",
-      "route": "202608/07/2608.03545v2-hi-ttrl-regulating-consensus-with-hints-for-test-time-reinforcement-learning",
-      "title": "Hi-TTRL: Regulating Consensus with Hints for Test-Time Reinforcement Learning",
-      "section": "quick",
-      "tags": [
-        {
-          "kind": "query",
-          "label": "agentic-rl"
-        }
-      ],
-      "score": 8.0,
-      "evidence": "面向LLM推理的共识调节测试时强化学习",
-      "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
-    },
-    {
       "paper_id": "2608.03573v1",
       "route": "202608/07/2608.03573v1-sft-conflicts-rl-coexists-a-theoretical-and-empirical-analysis-of-multi-task-learning-for-llms",
       "title": "SFT Conflicts, RL Coexists: A Theoretical and Empirical Analysis of Multi-Task Learning for LLMs",
@@ -196,6 +292,54 @@
       "evidence": "理论与实证分析表明RL能使LLM在多任务上稳定共存，而SFT存在冲突",
       "first_seen_at": "2026-08-07 01:41:05 UTC",
       "updated_at": "2026-08-07 01:41:05 UTC"
+    },
+    {
+      "paper_id": "2608.02993v1",
+      "route": "202608/07/2608.02993v1-neurosymbolic-reasoning-with-incremental-knowledge-for-sample-efficient-hierarchical-reinforcement-learning",
+      "title": "Neurosymbolic Reasoning with Incremental Knowledge for Sample Efficient Hierarchical Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "结合增量符号知识的分层强化学习方法，提升智能体决策效率",
+      "first_seen_at": "2026-08-07 01:41:05 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.03445v1",
+      "route": "202608/07/2608.03445v1-a-note-on-reinforcement-learning-to-develop-self-defined-agents-behavior",
+      "title": "A Note on Reinforcement Learning to Develop Self-defined Agents' Behavior",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "使用强化学习发展自定义智能体的行为策略",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.03833v1",
+      "route": "202608/07/2608.03833v1-history-matters-meta-policy-delegation-with-heterogeneous-multi-agent-reinforcement-learning",
+      "title": "History Matters: Meta-policy Delegation with Heterogeneous Multi-agent Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "多智能体强化学习用于序贯委派决策",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
     },
     {
       "paper_id": "2608.00175v1",
@@ -230,9 +374,9 @@
       "updated_at": "2026-08-07 01:41:05 UTC"
     },
     {
-      "paper_id": "2608.02993v1",
-      "route": "202608/07/2608.02993v1-neurosymbolic-reasoning-with-incremental-knowledge-for-sample-efficient-hierarchical-reinforcement-learning",
-      "title": "Neurosymbolic Reasoning with Incremental Knowledge for Sample Efficient Hierarchical Reinforcement Learning",
+      "paper_id": "2608.00155v1",
+      "route": "202608/07/2608.00155v1-agentstream-how-well-do-self-evolving-llm-agents-perform-under-streaming-tasks",
+      "title": "AgentStream: How Well Do Self-Evolving LLM Agents Perform Under Streaming Tasks?",
       "section": "quick",
       "tags": [
         {
@@ -240,10 +384,26 @@
           "label": "agentic-rl"
         }
       ],
-      "score": 7.0,
-      "evidence": "面向样本高效长时程决策的增量知识神经符号层次强化学习",
-      "first_seen_at": "2026-08-07 01:41:05 UTC",
-      "updated_at": "2026-08-07 01:41:05 UTC"
+      "score": 6.0,
+      "evidence": "为自进化LLM智能体提供评估框架，与近期智能体强化学习研究相关。",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
+    },
+    {
+      "paper_id": "2608.04761v1",
+      "route": "202608/07/2608.04761v1-insightemb-learning-action-intent-embeddings-for-agentic-insight-retrieval",
+      "title": "InsightEmb: Learning Action-Intent Embeddings for Agentic Insight Retrieval",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "为自我改进智能体在决策瓶颈期提供可迁移的洞察检索",
+      "first_seen_at": "2026-08-07 20:48:44 UTC",
+      "updated_at": "2026-08-07 20:48:44 UTC"
     },
     {
       "paper_id": "2608.00133v1",
