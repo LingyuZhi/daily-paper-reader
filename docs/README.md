@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-07</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-08</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 28 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 17 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
-    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>2 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>12</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>16</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>6</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>11</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-07 20:48:44 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-08 19:36:35 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精选28篇论文，精读12篇，围绕强化学习与智能体生成展开。最值得关注的是智能体技能自动生成与自蒸馏奖励塑造两大前沿方向，均获9分高评价。建议普通读者优先了解如何通过强化学习让AI自主进化技能，这一趋势正加速走向实用。</p>
+<p>今日精读6篇、速读11篇，聚焦强化学习与多模态微调及智能体系统效率。最值得关注的是《Taming the Implicit》提出的双通道风险感知RL微调，以及《EASy》对LLM智能体系统的效率优化。建议优先精读这两篇，再结合速读中的多任务冲突分析（SFT Conflicts）加深理解。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">12 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Progressive Agent Skill Generation via Reinforcement Learning">Progressive Agent Skill Generation via Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Agentic Reinforcement Learning with Self-Distilled Reward Shaping">Agentic Reinforcement Learning with Self-Distilled Reward Shaping</span></li><li><span class="dpr-home-dashboard-paper-title" title="Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks">Hybrid LLM-Augmented Reinforcement Learning Agents for Complex Sequential Decision Tasks</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Taming the Implicit: Dual-Channel Risk-Aware Reinforcement Fine-Tuning for Continual Multimodal Post-Training">Taming the Implicit: Dual-Channel Risk-Aware Reinforcement Fine-Tuning for Continual Multimodal Post-Training</span></li><li><span class="dpr-home-dashboard-paper-title" title="EASy: Towards Efficient LLM-Based Agentic System">EASy: Towards Efficient LLM-Based Agentic System</span></li><li><span class="dpr-home-dashboard-paper-title" title="DASH: Divergence-Adaptive Supervision Horizons for On-Policy Self-Distillation of Reasoning Models">DASH: Divergence-Adaptive Supervision Horizons for On-Policy Self-Distillation of Reasoning Models</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>12</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>6</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">16 篇</strong>
+    <strong class="dpr-home-dashboard-count">11 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Sample Efficient Hierarchical Reinforcement Learning via Best Policy Identification">Sample Efficient Hierarchical Reinforcement Learning via Best Policy Identification</span></li><li><span class="dpr-home-dashboard-paper-title" title="Diffusion Policy with Behavioral Advantage Correction for Offline Reinforcement Learning">Diffusion Policy with Behavioral Advantage Correction for Offline Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="BODHI: Do LLMs Branch Out and Discover Heterogeneous Inferences?">BODHI: Do LLMs Branch Out and Discover Heterogeneous Inferences?</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="SFT Conflicts, RL Coexists: A Theoretical and Empirical Analysis of Multi-Task Learning for LLMs">SFT Conflicts, RL Coexists: A Theoretical and Empirical Analysis of Multi-Task Learning for LLMs</span></li><li><span class="dpr-home-dashboard-paper-title" title="Search-Aided Joint Agent-Environment Reinforcement Learning for Robust Lifelong Multi-Agent Path Finding with Rotations">Search-Aided Joint Agent-Environment Reinforcement Learning for Robust Lifelong Multi-Agent Path Finding with Rotations</span></li><li><span class="dpr-home-dashboard-paper-title" title="ProDVI: Programmatic Dynamics Priors for Value Network Initialization">ProDVI: Programmatic Dynamics Priors for Value Network Initialization</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>16</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>11</strong></span></div>
 </section>
 </div>
 
