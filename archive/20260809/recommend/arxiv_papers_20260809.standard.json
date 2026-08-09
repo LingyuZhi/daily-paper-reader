@@ -1,0 +1,140 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-09T19:15:13.292030+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2608.03204v1",
+      "source": "arxiv",
+      "title": "Aligning Large Vision-Language Models at Test Time: A Trajectory-Guided Structured Sampling Approach",
+      "abstract": "Post-training reinforcement learning (RL) algorithms are commonly used to align large vision-language models (LVLMs) with human intent and the requirements of visual reasoning tasks. However, existing RL-based alignment methods are often resource-intensive and encounter mismatches between training objectives and inference-time distributions. To bridge this gap, we propose a novel test-time alignment approach that leverages trajectory-guided structured sampling for dynamic inference-time refinement, achieving better alignment with visual grounding and ensuring logical consistency. Our approach begins with curating a reasoning memory bank via a trajectory learning algorithm, which decomposes complex question solving into ordered sequences of predefined reasoning patterns. It subsequently accomplishes inference-time alignment by first collecting trajectories from reasoning memory bank to establish a global structural reasoning prior, and then using an iterative Markov Chain Monte Carlo (MCMC) algorithm for localized multi-objective refinement of the reasoning trace. Experiments across multiple multimodal reasoning datasets demonstrate that our approach significantly improves accuracy without incurring prohibitive inference overhead. These results establish trajectory-guided test-time sampling as a scalable and effective alternative to traditional post-training alignment, particularly for complex visual reasoning tasks.",
+      "authors": [
+        "Tianbao Jiang",
+        "Weicong Ni",
+        "Gerard de Melo",
+        "Linlin Wang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-08-04T06:47:08+00:00",
+      "link": "https://arxiv.org/pdf/2608.03204v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "post-training RL for aligning large vision-language models",
+      "llm_evidence_cn": "用强化学习后训练对齐大型视觉语言模型",
+      "llm_evidence": "用强化学习后训练对齐大型视觉语言模型",
+      "canonical_evidence": "用强化学习后训练对齐大型视觉语言模型",
+      "llm_tldr_en": "Proposes a test-time alignment approach for LVLMs using trajectory-guided structured sampling, replacing expensive RL post-training with dynamic inference-time refinement.",
+      "llm_tldr_cn": "对齐大型视觉语言模型通常依赖RL后训练，但该方式资源开销大，且训练目标与推理时分布不一致。论文提出轨迹引导的结构化采样方法，在测试时进行动态推理细化，先用轨迹学习构建推理记忆库，再分解复杂问题并逐步采样。该方法以更低成本提升视觉接地与逻辑一致性，为LVLM对齐提供了新路径。",
+      "llm_tldr": "对齐大型视觉语言模型通常依赖RL后训练，但该方式资源开销大，且训练目标与推理时分布不一致。论文提出轨迹引导的结构化采样方法，在测试时进行动态推理细化，先用轨迹学习构建推理记忆库，再分解复杂问题并逐步采样。该方法以更低成本提升视觉接地与逻辑一致性，为LVLM对齐提供了新路径。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.03562v1",
+      "source": "arxiv",
+      "title": "Robust General Utility for Reinforcement Learning",
+      "abstract": "Reinforcement learning (RL) with general utility extends classic RL by optimizing an arbitrary utility functional of the policy-induced occupancy measure, thereby enabling a broader range of applications. However, previous work on general utility RL typically assumes the evaluation utility is fixed and correctly specified. In practice, the utility used at deployment can deviate from the training one, creating a robustness gap that prior work does not address. Motivated by this, we propose robust general-utility RL, a minimax learning framework that trains policies against utility misspecification within a prescribed uncertainty set. Our framework strictly generalizes standard general-utility RL while also providing a unified view of many existing RL frameworks, including reward-robust RL and constrained RL, through appropriate choices of the utility uncertainty set. We further develop provably convergent stochastic algorithms for two regimes. For concave utilities, we develop a projected stochastic gradient descent-ascent method and establish stationarity guarantees. For the more challenging nonconcave regime, we propose a stochastic prox-extragradient algorithm that mitigates ill-posed behavior induced by nonconcavity, with convergence guarantees to approximate first-order stationarity. Experiments on LLM safety alignment and exploration maximization tasks further corroborate the convergence behavior consistent with our theory.",
+      "authors": [
+        "Zixuan Liu",
+        "Fangzheng Wu",
+        "Brian Summa",
+        "Zizhan Zheng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-04T12:28:39+00:00",
+      "link": "https://arxiv.org/pdf/2608.03562v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Robust minimax RL framework for policy optimization under utility misspecification",
+      "llm_evidence_cn": "面向效用误设的鲁棒最小最大RL策略优化框架",
+      "llm_evidence": "面向效用误设的鲁棒最小最大RL策略优化框架",
+      "canonical_evidence": "面向效用误设的鲁棒最小最大RL策略优化框架",
+      "llm_tldr_en": "Extends general-utility RL to robust settings by training policies against evaluation utility misspecification using a minimax framework over an uncertainty set, unifying various existing RL frameworks.",
+      "llm_tldr_cn": "通用效用强化学习通过优化策略占用测度上的任意效用泛函来扩展经典RL，但以往方法假设评估效用固定且完全正确。实际部署时效用可能偏离训练设定，造成鲁棒性缺口。本文提出鲁棒通用效用RL，在效用不确定集内进行最小最大策略训练，以对抗效用误设。该框架严格推广标准通用效用RL，并统一多种已有RL框架。这为智能体在效用不确定环境下的决策提供了更稳健的学习目标。",
+      "llm_tldr": "通用效用强化学习通过优化策略占用测度上的任意效用泛函来扩展经典RL，但以往方法假设评估效用固定且完全正确。实际部署时效用可能偏离训练设定，造成鲁棒性缺口。本文提出鲁棒通用效用RL，在效用不确定集内进行最小最大策略训练，以对抗效用误设。该框架严格推广标准通用效用RL，并统一多种已有RL框架。这为智能体在效用不确定环境下的决策提供了更稳健的学习目标。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "reinforcement learning for agent decision making",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.04317v1",
+      "source": "arxiv",
+      "title": "Trident : How to Break Deep Reinforcement Learning Cyber Defenses (Agentic)",
+      "abstract": "Autonomous cyber defense systems based on Deep Reinforcement Learning (DRL) have attracted significant research attention, yet remain evaluated almost exclusively against static, heuristic red agents, leaving their robustness against adaptive threats critically understudied. Meanwhile, recent advances in Reinforcement Learning with Verifiable Rewards (RLVR) have improved LLM reasoning, but their integration into cybersecurity remains elusive due to the absence of suitable benchmark environments and interaction datasets. To bridge this gap, we introduce Trident, an agentic LLM red teaming framework comprising three components: a dynamic benchmark with isolated sandbox servers spanning CybORG CAGE 4 and CyberWheel, a dataset comprises over 13,000 high-fidelity red-blue interaction trajectories for RLVR, and a ``Code-as-Policy'' RLVR agentic architecture Trident Agentic). The latter reformulates red agent training as a contextual bandit via a tripartite Log Summarizer--Planner--Coder design, where a trainable Planner generates complete attack strategies from compressed execution logs, which a frozen Coder translates into executable Python policies deployed against live DRL defenders. Empirical evaluations reveal a fundamental brittleness in existing defenses: with a single trainable 7B planner, Trident reduces blue agent defensive performance by an average of 522% compared to static red agent baselines while autonomously discovering emergent behaviors such as decoy avoidance and adaptive state prioritization that static heuristics entirely fail to uncover.",
+      "authors": [
+        "Ryozo Masukawa",
+        "Ian Bryant",
+        "Armita Kazeminajafabadi",
+        "Sanggeon Yun",
+        "Hyunwoo Oh",
+        "SungHeon Jeong",
+        "Nathaniel D. Bastian",
+        "Mahdi Imani",
+        "Mohsen Imani"
+      ],
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "published": "2026-08-05T00:54:57+00:00",
+      "link": "https://arxiv.org/pdf/2608.04317v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "query:agentic-rl"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "agentic LLM red teaming framework using RLVR and DRL",
+      "llm_evidence_cn": "结合RLVR与DRL的智能体LLM红队框架",
+      "llm_evidence": "结合RLVR与DRL的智能体LLM红队框架",
+      "canonical_evidence": "结合RLVR与DRL的智能体LLM红队框架",
+      "llm_tldr_en": "Introduces Trident, an agentic LLM red teaming framework that integrates RLVR into cybersecurity benchmarks to stress-test DRL-based cyber defenses.",
+      "llm_tldr_cn": "深度强化学习网络防御系统长期只与静态启发式红队对抗，对自适应威胁评估不足；而基于可验证奖励的强化学习虽提升了大模型推理，却缺乏网络安全基准。作者提出Trident智能体LLM红队框架，包含动态沙箱基准CybORG CAGE 4等及超过13000条交互数据集。该框架用于评估防御策略的鲁棒性，将RLVR与大模型代理用于攻防对抗，拓展了agentic RL在网络安全中的应用。",
+      "llm_tldr": "深度强化学习网络防御系统长期只与静态启发式红队对抗，对自适应威胁评估不足；而基于可验证奖励的强化学习虽提升了大模型推理，却缺乏网络安全基准。作者提出Trident智能体LLM红队框架，包含动态沙箱基准CybORG CAGE 4等及超过13000条交互数据集。该框架用于评估防御策略的鲁棒性，将RLVR与大模型代理用于攻防对抗，拓展了agentic RL在网络安全中的应用。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
