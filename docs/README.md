@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-09</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-10</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 11 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>5</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>6</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-09 19:17:08 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-10 20:15:49 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读1篇、速读2篇，聚焦大视觉语言模型测试时对齐与强化学习鲁棒性。最值得关注的是通过轨迹引导的结构化采样方法（8.0/10），可显著提升测试时对齐效果。建议普通读者优先了解该方法的采样策略，并留意强化学习防御被攻破的风险。</p>
+<p>今日共读11篇论文，精读5篇，重点聚焦强化学习与LLM智能体训练。</p>
+<p>最值得关注的是两篇9.0分工作：IB-RL提出隔离双侧强化学习用于策略对话智能体，Gated-BEPO通过置信门控贝尔曼信用分配优化LLM智能体。</p>
+<p>建议优先精读这两篇，尤其适合关注对话策略优化和智能体样本效率的读者。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">5 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Aligning Large Vision-Language Models at Test Time: A Trajectory-Guided Structured Sampling Approach">Aligning Large Vision-Language Models at Test Time: A Trajectory-Guided Structured Sampling Approach</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="IB-RL: Isolated Bilateral Reinforcement Learning for Strategic Dialogue Agents">IB-RL: Isolated Bilateral Reinforcement Learning for Strategic Dialogue Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="Gated-BEPO: Confidence-Gated Bellman Credit Assignment for Large Language Model Agents">Gated-BEPO: Confidence-Gated Bellman Credit Assignment for Large Language Model Agents</span></li><li><span class="dpr-home-dashboard-paper-title" title="How Much, Then Where: Credit-Conserving Action-to-Token Allocation for Multi-Turn Agent Reinforcement Learning">How Much, Then Where: Credit-Conserving Action-to-Token Allocation for Multi-Turn Agent Reinforcement Learning</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>1</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>5</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">6 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Robust General Utility for Reinforcement Learning">Robust General Utility for Reinforcement Learning</span></li><li><span class="dpr-home-dashboard-paper-title" title="Trident : How to Break Deep Reinforcement Learning Cyber Defenses (Agentic)">Trident : How to Break Deep Reinforcement Learning Cyber Defenses (Agentic)</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Beyond Isolation: Unlocking Reinforcement Learning Component Synergy for Sample-Efficient Continuous Control">Beyond Isolation: Unlocking Reinforcement Learning Component Synergy for Sample-Efficient Continuous Control</span></li><li><span class="dpr-home-dashboard-paper-title" title="Language-Specialized Multi-Teacher On-Policy Distillation for Multilingual LLM-Based ASR">Language-Specialized Multi-Teacher On-Policy Distillation for Multilingual LLM-Based ASR</span></li><li><span class="dpr-home-dashboard-paper-title" title="State2State: Environment-Derived Mid-Training for LLM Agents">State2State: Environment-Derived Mid-Training for LLM Agents</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">agentic-rl <strong>6</strong></span></div>
 </section>
 </div>
 

@@ -1,0 +1,185 @@
+{
+  "date": "20260810",
+  "date_label": "",
+  "generated_at": "2026-08-10 20:15:49 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.06735v1",
+      "route": "202608/10/2608.06735v1-ib-rl-isolated-bilateral-reinforcement-learning-for-strategic-dialogue-agents",
+      "title": "IB-RL: Isolated Bilateral Reinforcement Learning for Strategic Dialogue Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向战略对话智能体的隔离双边强化学习",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.06861v1",
+      "route": "202608/10/2608.06861v1-gated-bepo-confidence-gated-bellman-credit-assignment-for-large-language-model-agents",
+      "title": "Gated-BEPO: Confidence-Gated Bellman Credit Assignment for Large Language Model Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "为大语言模型智能体的强化学习训练提供信用分配",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.07118v1",
+      "route": "202608/10/2608.07118v1-how-much-then-where-credit-conserving-action-to-token-allocation-for-multi-turn-agent-reinforcement-learning",
+      "title": "How Much, Then Where: Credit-Conserving Action-to-Token Allocation for Multi-Turn Agent Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "多轮智能体强化学习的动作-令牌信用分配方法",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.07147v1",
+      "route": "202608/10/2608.07147v1-didpo-diff-in-diff-policy-optimization-for-coding-agent-training",
+      "title": "DiDPO: Diff-in-Diff Policy Optimization for Coding Agent Training",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出面向编码智能体训练的agentic强化学习方法",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.07371v1",
+      "route": "202608/10/2608.07371v1-trajectory-relative-hindsight-distillation-for-agentic-reinforcement-learning",
+      "title": "Trajectory-Relative Hindsight Distillation for Agentic Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出带事后监督的智能体强化学习新框架",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.07086v1",
+      "route": "202608/10/2608.07086v1-beyond-isolation-unlocking-reinforcement-learning-component-synergy-for-sample-efficient-continuous-control",
+      "title": "Beyond Isolation: Unlocking Reinforcement Learning Component Synergy for Sample-Efficient Continuous Control",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "系统研究强化学习组件间协同作用，以提升连续控制智能体的样本效率",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.03610v1",
+      "route": "202608/10/2608.03610v1-language-specialized-multi-teacher-on-policy-distillation-for-multilingual-llm-based-asr",
+      "title": "Language-Specialized Multi-Teacher On-Policy Distillation for Multilingual LLM-Based ASR",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向多语种LLM语音识别的RL优化教师模型",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.04934v1",
+      "route": "202608/10/2608.04934v1-state2state-environment-derived-mid-training-for-llm-agents",
+      "title": "State2State: Environment-Derived Mid-Training for LLM Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "环境派生训练目标用于LLM智能体",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.05479v1",
+      "route": "202608/10/2608.05479v1-ai-farol-co-evolutionary-dynamics-in-a-multi-agent-two-sided-learning-framework",
+      "title": "AI-Farol: Co-Evolutionary Dynamics in a Multi-Agent Two-Sided Learning Framework",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向不确定环境下多智能体策略学习的框架",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.07151v1",
+      "route": "202608/10/2608.07151v1-interpretable-reinforcement-learning-with-decision-tree-pruning",
+      "title": "Interpretable reinforcement learning with decision-tree pruning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于决策树剪枝的RL策略简化和解释方法",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    },
+    {
+      "paper_id": "2608.07280v1",
+      "route": "202608/10/2608.07280v1-why-study-emergent-behavior-when-you-can-regulate-it-aligning-multi-agent-systems-with-reward-prediction",
+      "title": "Why Study Emergent Behavior When You Can Regulate It? Aligning Multi-Agent Systems with Reward Prediction",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "将基于偏好的奖励建模扩展到多智能体强化学习以调控涌现行为",
+      "first_seen_at": "2026-08-10 20:15:49 UTC",
+      "updated_at": "2026-08-10 20:15:49 UTC"
+    }
+  ]
+}
