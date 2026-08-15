@@ -1,0 +1,633 @@
+{
+  "date": "20260815",
+  "date_label": "",
+  "generated_at": "2026-08-15 20:49:16 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.12486v1",
+      "route": "202608/15/2608.12486v1-dive-unlocking-self-improvement-in-frozen-language-models-through-diversity-driven-skill-evolution",
+      "title": "DIVE: Unlocking Self-Improvement in Frozen Language Models Through Diversity-Driven Skill Evolution",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 10.0,
+      "evidence": "通过自然语言技能演化实现冻结语言模型的无梯度自进化",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.06714v1",
+      "route": "202608/15/2608.06714v1-the-optimizer-is-the-agent-reasoning-driven-search-across-prompts-programs-and-ml-workflows",
+      "title": "The Optimizer Is the Agent: Reasoning-Driven Search across Prompts, Programs, and ML Workflows",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用于工作流推理驱动优化的智能体harness框架",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.06880v1",
+      "route": "202608/15/2608.06880v1-skillaligner-treating-retrieved-skills-as-adaptable-drafts-at-execution-time",
+      "title": "SkillAligner: Treating Retrieved Skills as Adaptable Drafts at Execution Time",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向语言代理的免训练执行时技能适配，实现无需梯度更新的自我改进",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.07169v1",
+      "route": "202608/15/2608.07169v1-agent-memory-distillation-empowering-small-llm-agents-with-hierarchical-teacher-memory",
+      "title": "Agent Memory Distillation: Empowering Small LLM Agents with Hierarchical Teacher Memory",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "从教师智能体到学生智能体的无训练层级记忆蒸馏",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.07449v1",
+      "route": "202608/15/2608.07449v1-skillprox-self-evolving-agent-skills-via-proximal-textual-gradient-descent",
+      "title": "SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "在文本空间中自进化智能体技能，无需权重更新，灵感来自近端梯度下降。",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08255v1",
+      "route": "202608/15/2608.08255v1-learning-from-environmental-feedback-credit-assignment-across-multiple-timescales-for-agentic-reinforcement-learning",
+      "title": "Learning from Environmental Feedback: Credit Assignment across Multiple Timescales for Agentic Reinforcement Learning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出面向智能体强化学习的多时间尺度信用分配方法",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08326v1",
+      "route": "202608/15/2608.08326v1-structreward-efficient-structured-process-rewards-for-self-correcting-multimodal-reasoning",
+      "title": "StructReward: Efficient Structured Process Rewards for Self-Correcting Multimodal Reasoning",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "用结构化步骤奖励的强化学习提升多模态大模型推理",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08466v1",
+      "route": "202608/15/2608.08466v1-hierarchical-self-improvement-a-framework-for-task-specific-evolvable-agent-harnesses",
+      "title": "Hierarchical Self-Improvement: A Framework for Task-Specific Evolvable Agent Harnesses",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "基于冻结LLM的分层自改进智能体框架",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08677v1",
+      "route": "202608/15/2608.08677v1-branch2skill-efficient-skill-evolution-through-reasoning-trees",
+      "title": "Branch2Skill: Efficient Skill Evolution Through Reasoning Trees",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "通过推理树实现免梯度更新的技能进化",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.09096v2",
+      "route": "202608/15/2608.09096v2-evo-bench-can-language-models-improve-agent-harness",
+      "title": "Evo-Bench: Can Language Models Improve Agent Harness?",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "基准测试语言模型智能体对自身运行框架（harness）的自主改进能力，直接相关于智能体自改进框架设计",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.09217v1",
+      "route": "202608/15/2608.09217v1-beyond-solvability-task-learnability-as-a-static-prior-for-llm-rl-post-training",
+      "title": "Beyond Solvability: Task Learnability as a Static Prior for LLM RL Post-Training",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "分析任务可学习性作为先验以改进大语言模型的强化学习后训练。",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.09292v1",
+      "route": "202608/15/2608.09292v1-beyond-the-capability-boundary-zeroth-order-optimization-for-self-evolving-llm-agents",
+      "title": "Beyond the Capability Boundary: Zeroth-Order Optimization for Self-Evolving LLM Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "零阶优化实现无梯度更新的自进化LLM智能体",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.09555v1",
+      "route": "202608/15/2608.09555v1-bidirectional-context-self-distillation-for-reinforcement-learning-of-skill-based-llm-agents",
+      "title": "Bidirectional Context Self-Distillation for Reinforcement Learning of Skill-Based LLM Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "结合双向上下文自蒸馏的强化学习提升大语言模型代理的技能利用能力",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.09629v1",
+      "route": "202608/15/2608.09629v1-rethinking-self-evolving-agents-do-we-still-need-prescribed-optimization-pipelines",
+      "title": "Rethinking Self-Evolving Agents: Do We Still Need Prescribed Optimization Pipelines?",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "提出面向自进化智能体的开放式优化（OEO），质疑预设优化流程，使智能体无需梯度更新即可自我改进。",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.10030v1",
+      "route": "202608/15/2608.10030v1-automating-and-scaling-behavioral-scientific-research-on-ai-agents",
+      "title": "Automating and Scaling Behavioral Scientific Research on AI Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "多智能体系统自动设计和执行AI智能体行为实验",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.10157v1",
+      "route": "202608/15/2608.10157v1-sbco-self-supervised-verifier-grounded-harness-optimization-for-planning-agents",
+      "title": "SBCO: Self-Supervised, Verifier-Grounded Harness Optimization For Planning Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "优化规划智能体的框架以实现自我改进",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.10357v1",
+      "route": "202608/15/2608.10357v1-efficient-reinforcement-learning-for-long-horizon-tool-use-agentic-tasks",
+      "title": "Efficient Reinforcement Learning for Long-Horizon Tool-Use Agentic Tasks",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向长程工具使用智能体任务的RL训练系统",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.10504v1",
+      "route": "202608/15/2608.10504v1-mega-self-evolving-agent-optimization-infrastructure-via-wisdom-graph",
+      "title": "MEGA: Self-Evolving Agent Optimization Infrastructure via Wisdom Graph",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "通过智慧图累积和组合推理可复用知识，实现智能体基础设施自演化",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.10538v1",
+      "route": "202608/15/2608.10538v1-skiller-language-level-reinforcement-learning-for-reusable-skill-extraction-in-small-language-models",
+      "title": "SKILLER: Language-Level Reinforcement Learning for Reusable Skill Extraction in Small Language Models",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向智能体harness的小语言模型可复用技能提取的语言级强化学习方法",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.10812v2",
+      "route": "202608/15/2608.10812v2-reference-free-post-training-of-open-large-language-models-for-multilingual-machine-translation",
+      "title": "Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "使用GRPO强化学习提升大语言模型翻译质量",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.11079v1",
+      "route": "202608/15/2608.11079v1-skillzip-evaluation-free-skill-compression-for-self-evolving-agents-by-discovering-reusable-structure",
+      "title": "SkillZip: Evaluation-Free Skill Compression for Self-Evolving Agents by Discovering Reusable Structure",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向自进化智能体的免评估技能压缩",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.11338v1",
+      "route": "202608/15/2608.11338v1-better-faster-stronger-programmatic-skill-learning-best-reduces-agent-cost",
+      "title": "Better, Faster, Stronger: Programmatic Skill Learning Best Reduces Agent Cost",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向LLM智能体的程序化技能学习，推理时习得技能",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.11350v1",
+      "route": "202608/15/2608.11350v1-self-evolving-embodied-agents-via-skill-harness-evolution",
+      "title": "Self-Evolving Embodied Agents via Skill-Harness Evolution",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "无训练框架，通过演化可复用技能和上下文代码框架实现具身智能体自进化。",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.11573v1",
+      "route": "202608/15/2608.11573v1-reinforcing-step-level-reasoning-for-effective-self-correction-in-llms",
+      "title": "Reinforcing Step-level Reasoning for Effective Self-Correction in LLMs",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "使用强化学习（步骤级偏好优化）训练大语言模型进行自我验证与纠错。",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.12764v1",
+      "route": "202608/15/2608.12764v1-beyond-outcome-rewards-step-level-self-distilled-policy-optimization-for-deep-search-agents",
+      "title": "Beyond Outcome Rewards: Step-Level Self-Distilled Policy Optimization for Deep Search Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向深度搜索代理的步级自蒸馏策略优化，解决强化学习奖励稀疏问题",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.13120v1",
+      "route": "202608/15/2608.13120v1-skillevo-self-renewing-evolution-gradients-from-multi-turn-interaction-feedback",
+      "title": "SkillEvo: Self-Renewing Evolution Gradients from Multi-Turn Interaction Feedback",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "基于多轮交互反馈实现智能体技能自演化，无需梯度更新",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.13179v1",
+      "route": "202608/15/2608.13179v1-teach-the-magnitude-not-the-direction-verifier-bounded-credit-assignment-for-multi-turn-multi-step-llm-agents",
+      "title": "Teach the Magnitude, Not the Direction: Verifier-Bounded Credit Assignment for Multi-Turn Multi-step LLM Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "面向多轮工具使用代理RLVR训练的验证器受限信用分配",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.06891v1",
+      "route": "202608/15/2608.06891v1-skilleval-decomposing-agent-skill-quality-into-interpretable-signals",
+      "title": "SkillEval: Decomposing Agent Skill Quality into Interpretable Signals",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "通过可解释信号评估智能体可复用技能质量",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.07314v1",
+      "route": "202608/15/2608.07314v1-tempo-semantic-action-decoupled-rl-post-training-for-vision-language-action-models",
+      "title": "TEMPO: Semantic-Action Decoupled RL Post-Training for Vision-Language-Action Models",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "用于视觉-语言-动作模型的强化学习后训练",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08037v1",
+      "route": "202608/15/2608.08037v1-skillsmith-enhancing-locally-deployed-agents-via-automatic-skill-construction-and-evolution",
+      "title": "SkillSmith: Enhancing Locally Deployed Agents via Automatic Skill Construction and Evolution",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "为本地部署的 LLM 智能体自动构建和进化可复用技能。",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08389v1",
+      "route": "202608/15/2608.08389v1-not-worth-another-token-marginal-value-estimation-for-efficient-deep-research-agents",
+      "title": "Not Worth Another Token: Marginal Value Estimation for Efficient Deep Research Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "高效深度研究智能体",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.07346v1",
+      "route": "202608/15/2608.07346v1-an-end-to-end-agent-auditing-engine",
+      "title": "An End-to-End Agent Auditing Engine",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向智能体框架的评估引擎",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.07639v1",
+      "route": "202608/15/2608.07639v1-skillconsist-detecting-inconsistencies-in-agent-skills-via-bidirectional-graph-alignment",
+      "title": "SkillConsist: Detecting Inconsistencies in Agent Skills via Bidirectional Graph Alignment",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "检测智能体技能中的不一致性",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08878v1",
+      "route": "202608/15/2608.08878v1-distillcache-kl-guided-adaptive-kv-cache-eviction-for-memory-efficient-llm-inference",
+      "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "用强化学习提升大语言模型推理效率",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08995v1",
+      "route": "202608/15/2608.08995v1-muscle-memory-for-agents-compile-not-merely-retrieve",
+      "title": "Muscle Memory for Agents: Compile not Merely Retrieve",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "主张将反复出现的用户意图编译为专用智能体，作为一种技能复用与记忆范式，而非单纯检索。",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08264v1",
+      "route": "202608/15/2608.08264v1-oblivion-workflow-level-operational-skill-unlearning-for-deployed-agents",
+      "title": "OBLIVION: Workflow-Level Operational Skill Unlearning for Deployed Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向智能体技能撤销的操作级遗忘防御",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.08523v1",
+      "route": "202608/15/2608.08523v1-discovering-diverse-planning-policies-for-multimodal-embodied-agents-with-quality-diversity-optimization",
+      "title": "Discovering Diverse Planning Policies for Multimodal Embodied Agents with Quality-Diversity Optimization",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "用质量-多样性优化发现具身智能体的多样规划策略",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.10196v1",
+      "route": "202608/15/2608.10196v1-elmer-evolutionary-language-model-that-explores-and-refines",
+      "title": "ELMER: Evolutionary Language Model that Explores and Refines",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "进化语言模型探索并精炼自然语言策略描述或程序，可用于智能体技能获取。",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    },
+    {
+      "paper_id": "2608.11658v1",
+      "route": "202608/15/2608.11658v1-is-per-agent-policy-composition-safe-rethinking-successor-feature-transfer-in-cooperative-multi-agent-reinforcement-learning",
+      "title": "Is Per-Agent Policy Composition Safe? Rethinking Successor-Feature Transfer in Cooperative Multi-Agent Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "重新思考协作多智能体强化学习中的逐智能体策略组合，利用后继特征安全迁移到新目标，与基于强化学习的智能体决策相关。",
+      "first_seen_at": "2026-08-15 20:49:16 UTC",
+      "updated_at": "2026-08-15 20:49:16 UTC"
+    }
+  ]
+}
