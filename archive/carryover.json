@@ -1,105 +1,12 @@
 {
-  "generated_at": "2026-08-15T20:18:35.677873+00:00",
-  "updated_date": "20260815",
+  "generated_at": "2026-08-16T19:03:49.116533+00:00",
+  "updated_date": "20260816",
   "carryover_days": 9,
   "tag_states": {
     "agentic-rl": {
-      "updated_date": "20260815",
+      "updated_date": "20260816",
       "carryover_days": 9,
       "items": [
-        {
-          "id": "2608.08802v1",
-          "source": "arxiv",
-          "title": "Improving Generalization Robustness of Multimodal RLVR",
-          "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) makes Multimodal Large Language Models more accurate, but the gains are brittle: simply paraphrasing a question or changing the prompt template can degrade them, which challenges reliable deployment in high-stakes scenarios like medical VQA. We trace this to two issues of the standard RL objective. First, the binary verifier conflates format with content, so the reward signal cannot tell a wrong answer apart from a misformatted one. Second, the training distribution covers only a thin slice of the real-world prompts that the model might meet at deployment, so policies that perform well on the training distribution can behave differently under unseen prompts during test. Both failures call for a robust post-training method that helps the policy cover a broader distribution of semantically equivalent prompts, and we identify two measures that help achieve this objective: separating format from semantics in the reward, and applying policy invariance across perturbed prompts with equivalent semantics. We therefore propose Prompt-Invariant RLVR (PIRL), consisting of a dynamic trinary reward and a consistency regularizer based on an embedding-space adversary. Under stress testing, PIRL's average accuracy on benchmarks drops by only $\\le 1\\%$, where GRPO drops ~3%. On dynamic evaluation, PIRL also achieves the smallest performance drop.",
-          "authors": [
-            "Pengfei Zhou",
-            "Zhiwei Tang",
-            "Xiaopeng Peng",
-            "Chenrui Zhou",
-            "Lama Moukheiber",
-            "Yixing Ma",
-            "Bin Xu",
-            "Jiajun Song",
-            "Zhenglin Wan",
-            "Wangbo Zhao",
-            "Jiasheng Tang",
-            "Bohan Zhuang",
-            "Fan Wang",
-            "Yang You"
-          ],
-          "primary_category": "cs.AI",
-          "categories": [
-            "cs.AI"
-          ],
-          "published": "2026-08-09T16:36:42+00:00",
-          "link": "https://arxiv.org/pdf/2608.08802v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "keyword:self-improve",
-            "query:agentic-rl",
-            "query:self-improve"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "RLVR for multimodal LLMs, improving generalization robustness",
-          "llm_evidence_cn": "面向多模态LLM的RLVR，提升泛化鲁棒性",
-          "llm_evidence": "面向多模态LLM的RLVR，提升泛化鲁棒性",
-          "canonical_evidence": "面向多模态LLM的RLVR，提升泛化鲁棒性",
-          "llm_tldr_en": "This paper addresses brittleness of RLVR-trained multimodal LLMs, identifies reward and distribution issues, and proposes a robust post-training approach to improve generalization under prompt paraphrases.",
-          "llm_tldr_cn": "多模态大语言模型通过RLVR获得更高准确率，但泛化鲁棒性较差，改写问题或更换提示模板会导致性能下降。本文指出二元验证器混淆格式与内容、训练分布过窄两个问题，并提出鲁棒的后训练改进方法。实验显示该方法在医疗VQA等高风险场景下对未见过提示的稳定性显著提升。",
-          "llm_tldr": "多模态大语言模型通过RLVR获得更高准确率，但泛化鲁棒性较差，改写问题或更换提示模板会导致性能下降。本文指出二元验证器混淆格式与内容、训练分布过窄两个问题，并提出鲁棒的后训练改进方法。实验显示该方法在医疗VQA等高风险场景下对未见过提示的稳定性显著提升。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.08802v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.11511v1",
-          "source": "arxiv",
-          "title": "Let it Cook: Learning to Wait in Sequential Decision Making",
-          "abstract": "In sequential decision making, an agent typically observes its environment and acts at every timestep. However, such active participation may not always be necessary; tasks such as brewing coffee include periods that are served equally well by letting the environment evolve without constant monitoring and control. During such periods, the agent could simply wait to conserve its resources, or redirect its attention to another task. We capitalize on these opportunities by training a \"waiting policy\" that decides where and how long to wait. This involves forgoing sensing to commit to a wait action, representing a deliberate pause for a set number of timesteps. We formalize \"learning to wait\" as minimizing the frequency of sensing and decision making without sacrificing task performance (e.g., the total amount of time to complete a task). To train a waiting policy, we propose an approach that employs reinforcement learning with lexicographically ordered objectives. In experiments across 4 discrete-state household tasks and 3 continuous-state environments, we show that our approach successfully learns waiting behaviors, and can adapt pre-trained policies to wait where appropriate. While different tasks permit different amounts of waiting without sacrificing task performance, our approach consistently finds solutions with significant waiting, sometimes waiting for over 50 percent of the task duration.",
-          "authors": [
-            "Christopher Watson",
-            "Arjun Krishna",
-            "Dinesh Jayaraman",
-            "Rajeev Alur"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "published": "2026-08-11T23:55:30+00:00",
-          "link": "https://arxiv.org/pdf/2608.11511v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "keyword:self-improve",
-            "query:agentic-rl",
-            "query:self-improve"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "RL agent learns waiting policy for sequential decision making",
-          "llm_evidence_cn": "用强化学习学习顺序决策中的等待策略",
-          "llm_evidence": "用强化学习学习顺序决策中的等待策略",
-          "canonical_evidence": "用强化学习学习顺序决策中的等待策略",
-          "llm_tldr_en": "This paper formalizes learning to wait in sequential decision making, training a policy that decides when and how long to pause, reducing sensing and decision frequency without sacrificing performance.",
-          "llm_tldr_cn": "在顺序决策中，智能体通常每步都需感知和行动，但煮咖啡等任务存在无需持续干预的时段。本文提出学习“等待策略”，让智能体决定何时等待及等待多久，从而在保持任务表现的同时减少感知与决策频率。实验表明该方法能有效节约资源并支持多任务并行。",
-          "llm_tldr": "在顺序决策中，智能体通常每步都需感知和行动，但煮咖啡等任务存在无需持续干预的时段。本文提出学习“等待策略”，让智能体决定何时等待及等待多久，从而在保持任务表现的同时减少感知与决策频率。实验表明该方法能有效节约资源并支持多任务并行。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "reinforcement learning for agent decision making",
-          "matched_requirement_id": "req-4",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.11511v1",
-          "carry_days": 1
-        },
         {
           "id": "2608.10402v1",
           "source": "arxiv",
@@ -132,295 +39,44 @@
             "query:self-improve"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "Presents a readiness-aware elastic RL system to boost training goodput for multi-turn agentic LLM workloads, directly supporting RL-enhanced LLM training.",
-          "llm_evidence_cn": "提出一种就绪感知的弹性强化学习系统，提高多轮智能体大语言模型工作负载的训练效率，直接支持用强化学习增强大语言模型。",
-          "llm_evidence": "提出一种就绪感知的弹性强化学习系统，提高多轮智能体大语言模型工作负载的训练效率，直接支持用强化学习增强大语言模型。",
-          "canonical_evidence": "提出一种就绪感知的弹性强化学习系统，提高多轮智能体大语言模型工作负载的训练效率，直接支持用强化学习增强大语言模型。",
-          "llm_tldr_en": "TideRL is a readiness-aware elastic RL system that improves training goodput for multi-turn agentic LLM workloads through continuous task batching, resource-aware ref-actor pipelining, and elastic resource scaling.",
-          "llm_tldr_cn": "面向多轮智能体强化学习场景，传统系统存在GPU等待与重复预填充等开销，导致训练吞吐低。TideRL设计了连续任务批处理、资源感知的Ref-Actor流水线以及弹性资源伸缩，保留有效rollout状态并动态选择聚合方式，显著提升训练goodput。该系统能够减少纯开销，为agentic RL的高效训练提供实用基础设施。",
-          "llm_tldr": "面向多轮智能体强化学习场景，传统系统存在GPU等待与重复预填充等开销，导致训练吞吐低。TideRL设计了连续任务批处理、资源感知的Ref-Actor流水线以及弹性资源伸缩，保留有效rollout状态并动态选择聚合方式，显著提升训练goodput。该系统能够减少纯开销，为agentic RL的高效训练提供实用基础设施。",
+          "llm_evidence_en": "readiness-aware elastic RL system boosting goodput for agentic multi-turn LLM workloads",
+          "llm_evidence_cn": "就绪感知弹性RL系统，提升多轮智能体LLM负载的训练有效吞吐量",
+          "llm_evidence": "就绪感知弹性RL系统，提升多轮智能体LLM负载的训练有效吞吐量",
+          "canonical_evidence": "就绪感知弹性RL系统，提升多轮智能体LLM负载的训练有效吞吐量",
+          "llm_tldr_en": "TideRL is a readiness-aware elastic RL system with continuous task batching, resource-aware pipelining, and elastic scaling to improve training goodput for multi-turn agentic LLM RL.",
+          "llm_tldr_cn": "大语言模型的强化学习正向多轮智能体工作负载演变，rollout任务会反复等待外部环境、以增长上下文恢复并以高度可变时间结束，此时RL训练有效吞吐量比原始GPU占用更重要。TideRL提出就绪感知的弹性RL系统：连续任务批处理保留有效rollout状态，资源感知的Ref-Actor流水线选择解耦流式或联合聚合，弹性资源缩放移动角色，从而减少GPU等待与重复预填充，显著提高agentic RL训练goodput。",
+          "llm_tldr": "大语言模型的强化学习正向多轮智能体工作负载演变，rollout任务会反复等待外部环境、以增长上下文恢复并以高度可变时间结束，此时RL训练有效吞吐量比原始GPU占用更重要。TideRL提出就绪感知的弹性RL系统：连续任务批处理保留有效rollout状态，资源感知的Ref-Actor流水线选择解耦流式或联合聚合，弹性资源缩放移动角色，从而减少GPU等待与重复预填充，显著提高agentic RL训练goodput。",
           "llm_tags": [
             "query:agentic-rl"
           ],
           "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
+          "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+          "matched_requirement_id": "req-1",
           "selection_source": "carryover_cache",
           "paper_id": "2608.10402v1",
           "carry_days": 1
         },
         {
-          "id": "2608.08604v1",
+          "id": "2608.13040v1",
           "source": "arxiv",
-          "title": "Multi-Agent Reinforcement Learning via Agent-Specific Preference",
-          "abstract": "Multi-agent reinforcement learning (MARL) is a powerful framework for solving complex collaborative tasks, but it relies heavily on well-defined global reward functions. Designing such rewards is challenging, especially in systems with heterogeneous agents, where a single scalar objective may fail to capture diverse behaviors. In this paper, we introduce Multi-AGent Preference-Integrated lEarning (MAGPIE), which addresses these challenges through agent-specific preference modeling. Each agent is evaluated by a dedicated expert through preference signals, eliminating the need for global evaluation. We theoretically prove that optimizing these decentralized preferences converges to a Nash equilibrium policy. To integrate local preferences into a coherent global objective, we construct agent-specific reward models from preference data and combine them via a monotonic aggregation mechanism. We further prove that optimizing this aggregate reward model is equivalent to training the Nash equilibrium policy. Extensive experiments on benchmark multi-agent tasks and a sequential production line task show that MAGPIE achieves performance comparable to reward-engineered baselines, demonstrating its potential to facilitate policy learning in scenarios where precise reward engineering is impractical.",
+          "title": "Latent On-Policy Self-Distillation",
+          "abstract": "Enabling agents to learn from experience and internalize it into their policy has become a central problem in self-evolving AI. On-policy self-distillation (OPSD) offers an effective pathway by using a privileged self-teacher to provide dense supervision on the student's own trajectories; however, existing methods still rely heavily on designer-specified privileged artifacts (e.g., answers, feedback, skills, or trajectories), limiting the end-to-end learnability and scalability required for continual self-improvement. In this work, we introduce Latent On-Policy Self-Distillation (LOPD), which, rather than proposing another hand-crafted OPSD variant with a newly prescribed form of privileged context, makes the teacher's privileged context itself learnable end-to-end from experience. Technically, LOPD retrieves relevant experiences and composes them into continuous latent tokens that condition a self-teacher, while the student generates trajectories from the task and interaction history and receives dense token-level supervision at every visited prefix. We further introduce a privileged-margin objective to stabilize and regulate the learning of latent context. Empirically, LOPD demonstrates (I) strong performance, outperforming RLVR and representative OPSD methods including OPSD, SDPO, and Skill-SD across both agentic tool use and code generation; and (II) high learning efficiency, surpassing GRPO and Skill-SD with less than 30% of their rollout budget. Ablation studies further provide direct evidence that making privileged context learnable is necessary for realizing these gains. Together, these results position LOPD as a step toward a more scalable and self-directed paradigm for agent evolution.",
           "authors": [
-            "Ni Mu",
-            "Yao Luan",
-            "Yiqin Yang",
-            "Qing-Shan Jia"
-          ],
-          "primary_category": "cs.LG",
-          "categories": [
-            "cs.LG"
-          ],
-          "published": "2026-08-09T09:38:41+00:00",
-          "link": "https://arxiv.org/pdf/2608.08604v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "keyword:self-improve",
-            "query:agentic-rl",
-            "query:self-improve"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "MARL with agent-specific preference modeling for decentralized decision making",
-          "llm_evidence_cn": "基于智能体特定偏好的多智能体强化学习决策方法",
-          "llm_evidence": "基于智能体特定偏好的多智能体强化学习决策方法",
-          "canonical_evidence": "基于智能体特定偏好的多智能体强化学习决策方法",
-          "llm_tldr_en": "Introduces MAGPIE, a multi-agent RL method that uses agent-specific preference signals from dedicated experts instead of a global reward, with convergence guarantees to Nash equilibrium.",
-          "llm_tldr_cn": "多智能体强化学习依赖全局奖励设计，在异构智能体场景下难以刻画多样行为。MAGPIE让每个智能体由专门专家通过偏好信号评估，从而消除全局奖励需求。理论上证明优化分散化偏好可收敛到纳什均衡策略。该方法为复杂协作任务中的奖励设计难题提供了新思路。",
-          "llm_tldr": "多智能体强化学习依赖全局奖励设计，在异构智能体场景下难以刻画多样行为。MAGPIE让每个智能体由专门专家通过偏好信号评估，从而消除全局奖励需求。理论上证明优化分散化偏好可收敛到纳什均衡策略。该方法为复杂协作任务中的奖励设计难题提供了新思路。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "reinforcement learning for agent decision making",
-          "matched_requirement_id": "req-4",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.08604v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.09507v2",
-          "source": "arxiv",
-          "title": "Learning Preference Adaptation for Large Language Model Personalization via Verbal Reinforcement Learning",
-          "abstract": "Natural language user preferences provide an interpretable interface for LLM personalization. However, universal preference summaries often contain information irrelevant to a particular downstream task. Directly supplying the full preference summary therefore wastes context capacity and introduces cross-task distraction, while manually designing task-specific preference views is difficult to scale. In this work, we study \\emph{task-specific preference adaptation}: given a universal user preference summary and a downstream task, derive a task-conditioned representation that preserves sufficient decision-relevant evidence while removing redundant context. To this end, we propose \\textsc{AlignXada}, a training-free meta-learning framework that induces reusable textual refinement policies for adapting universal preference summaries to task-specific ones. The refinement policy is iteratively optimized by a meta learner through verbal reinforcement learning. Across 13 tasks and three downstream models (39 task--model cells), \\textsc{AlignXada} achieves an average gain of 3.82 points, improving 33 cells while retaining only 22.8\\% of the original profile tokens and outperforming RAG in 36 cells. An extended faithfulness analysis further shows that the refined profiles remain largely grounded in the source preferences while preserving task-relevant personalization signals, suggesting that profile-side adaptation serves as a practical complement to universal memory construction for lifelong personalized agents.",
-          "authors": [
-            "Yuting Liu",
-            "Wei Wu",
-            "Jianzhe Zhao",
-            "Guibing Guo"
-          ],
-          "primary_category": "cs.CL",
-          "categories": [
-            "cs.CL",
-            "cs.AI"
-          ],
-          "published": "2026-08-10T12:11:47+00:00",
-          "link": "https://arxiv.org/pdf/2608.09507v2",
-          "tags": [
-            "keyword:agentic-rl",
-            "keyword:self-improve",
-            "query:agentic-rl",
-            "query:self-improve"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Uses verbal RL for training-free LLM personalization and preference adaptation",
-          "llm_evidence_cn": "使用语言强化学习实现无需训练的大语言模型个性化偏好适配",
-          "llm_evidence": "使用语言强化学习实现无需训练的大语言模型个性化偏好适配",
-          "canonical_evidence": "使用语言强化学习实现无需训练的大语言模型个性化偏好适配",
-          "llm_tldr_en": "Proposes AlignXada, a training-free verbal reinforcement learning method that adapts LLMs to task-specific preferences by extracting decision-relevant evidence from user preference summaries.",
-          "llm_tldr_cn": "大语言模型个性化中，通用偏好摘要包含大量与下游任务无关的信息，浪费上下文并造成干扰。本文提出AlignXada，一种基于语言强化学习的无训练元方法，为给定任务从用户偏好中提取任务相关的精简表示，保留决策证据并去除冗余。该方法在无需梯度训练的情况下提升了个性化效果，展示了语言强化学习在LLM适配中的潜力。",
-          "llm_tldr": "大语言模型个性化中，通用偏好摘要包含大量与下游任务无关的信息，浪费上下文并造成干扰。本文提出AlignXada，一种基于语言强化学习的无训练元方法，为给定任务从用户偏好中提取任务相关的精简表示，保留决策证据并去除冗余。该方法在无需梯度训练的情况下提升了个性化效果，展示了语言强化学习在LLM适配中的潜力。",
-          "llm_tags": [
-            "query:agentic-rl"
-          ],
-          "matched_query_tag": "query:agentic-rl",
-          "matched_query_text": "using reinforcement learning to enhance large language models",
-          "matched_requirement_id": "req-2",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.09507v2",
-          "carry_days": 1
-        }
-      ]
-    },
-    "self-improve": {
-      "updated_date": "20260815",
-      "carryover_days": 9,
-      "items": [
-        {
-          "id": "2608.10299v1",
-          "source": "arxiv",
-          "title": "Co-Evolution in Agentic Systems: Toward Self-Directed Evolution Beyond Human Design",
-          "abstract": "Agentic systems are increasingly expected to improve after deployment, yet single-entity self-evolution is often bounded by a static learning context, such as fixed tasks and feedback. This survey focuses on co-evolution in agentic systems, a multi-component form of self-evolution in which multiple agents and their environment impose adaptive pressure on one another. To organize existing papers, we propose a progressive three-stage taxonomy that traces how the system gradually sheds human-engineered constraints. Agent--Agent Co-Evolution studies how agents adapt through dynamic peers, including adversarial, collaborative, and organizational adaptation. Agent--Environment Co-Evolution extends this loop to adaptive tasks, feedback, and interaction spaces that change with the agents. Meta Co-Evolution further explores the possibility of making the evolution mechanism itself evolvable. We also discuss open challenges in evaluating such systems, scaling them across multiple components, and keeping increasingly autonomous evolutionary processes safe and controllable. This survey provides a unified foundation for building robust and open-ended agentic systems that can improve beyond fixed human-designed paths.",
-          "authors": [
-            "Qing Zong",
-            "Jiayu Liu",
-            "Junhao Shen",
-            "Zecong Tang",
-            "Linsi Wu",
-            "Yuxuan Liu",
-            "Rui Wang",
-            "Zhaowei Wang",
-            "Weiqi Wang",
-            "Cheng Qian",
-            "Xiusi Chen",
-            "Yangqiu Song"
-          ],
-          "primary_category": "cs.CL",
-          "categories": [
-            "cs.CL"
-          ],
-          "published": "2026-08-10T23:10:40+00:00",
-          "link": "https://arxiv.org/pdf/2608.10299v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "keyword:self-improve",
-            "query:agentic-rl",
-            "query:self-improve"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Survey on co-evolution in agentic systems, a multi-component form of self-evolution where agents and environment impose adaptive pressure, enabling self-directed evolution beyond human design.",
-          "llm_evidence_cn": "综述了智能体系统中的共进化，即多组分自进化形式，强调智能体与环境互施适应压力，实现超越人类设计的自导向进化。",
-          "llm_evidence": "综述了智能体系统中的共进化，即多组分自进化形式，强调智能体与环境互施适应压力，实现超越人类设计的自导向进化。",
-          "canonical_evidence": "综述了智能体系统中的共进化，即多组分自进化形式，强调智能体与环境互施适应压力，实现超越人类设计的自导向进化。",
-          "llm_tldr_en": "This survey focuses on co-evolution in agentic systems, a multi-component self-evolution where multiple agents and their environment pressure each other. It proposes a three-stage taxonomy from agent-agent to agent-environment co-evolution, showing how systems shed human-engineered constraints toward self-directed evolution.",
-          "llm_tldr_cn": "智能体系统需要在部署后持续改进，但单一实体的自进化常受固定任务和反馈限制。该综述提出共进化概念，即多个智能体与环境相互施加适应压力的多组分自进化，并给出三阶段分类法，从智能体-智能体共进化到智能体-环境共进化，揭示系统如何逐渐摆脱人工约束。本文为理解训练无关、自导向的智能体进化提供了统一视角。",
-          "llm_tldr": "智能体系统需要在部署后持续改进，但单一实体的自进化常受固定任务和反馈限制。该综述提出共进化概念，即多个智能体与环境相互施加适应压力的多组分自进化，并给出三阶段分类法，从智能体-智能体共进化到智能体-环境共进化，揭示系统如何逐渐摆脱人工约束。本文为理解训练无关、自导向的智能体进化提供了统一视角。",
-          "llm_tags": [
-            "query:self-improve"
-          ],
-          "matched_query_tag": "query:self-improve",
-          "matched_query_text": "self-evolution of language agents without gradient updates",
-          "matched_requirement_id": "req-12",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.10299v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.12977v1",
-          "source": "arxiv",
-          "title": "Beyond Handcrafted Security: Towards Self-Evolving Defense for LLM Agents",
-          "abstract": "The expanding operational capabilities of large language model (LLM) agents introduce sophisticated security threats. Runtime defenses have emerged as an effective approach to mitigating these risks by integrating security mechanisms into the agent execution loop. However, existing runtime defenses rely heavily on manually designed interventions and lack a principled framework for their construction and maintenance. In this work, we first develop a harness-level formulation of runtime defense that systematically characterizes how harness mechanisms enable defense construction and provides a unified view of existing runtime defense interventions from a harness perspective. Building on this formulation, we propose HARD (Harness-based Autonomous Runtime Defense Evolution), a self-evolving runtime defense framework that automatically identifies appropriate intervention strategies and iteratively improves defense artifacts based on observed failure traces. HARD transforms runtime defense development from manual engineering into an autonomous evolution process, and extensive experiments demonstrate that it improves security performance over existing handcrafted defenses while preserving benign task utility. Our findings highlight autonomous defense evolution as a promising new paradigm for securing deployed LLM agents, enabling agents to identify defense weaknesses and continuously improve their protection mechanisms.",
-          "authors": [
-            "Jiajun Ruan",
-            "Peiyang Li",
-            "Yukun Chen",
-            "Fengting Li",
-            "Chao Feng"
-          ],
-          "primary_category": "cs.CR",
-          "categories": [
-            "cs.CR",
-            "cs.AI"
-          ],
-          "published": "2026-08-13T08:57:04+00:00",
-          "link": "https://arxiv.org/pdf/2608.12977v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "keyword:self-improve",
-            "query:agentic-rl",
-            "query:self-improve"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "harness-level formulation for runtime defense and self-evolving defense for LLM agents",
-          "llm_evidence_cn": "面向LLM智能体安全防护的harness级框架，支持自主演化防御",
-          "llm_evidence": "面向LLM智能体安全防护的harness级框架，支持自主演化防御",
-          "canonical_evidence": "面向LLM智能体安全防护的harness级框架，支持自主演化防御",
-          "llm_tldr_en": "Develops a harness-level formulation of runtime defense for LLM agents, unifying existing interventions, and introduces HARD, a Harness-based Autonomous Runtime Defense that enables self-evolving security mechanisms without manual design.",
-          "llm_tldr_cn": "针对LLM智能体运行时防御依赖人工设计的问题，提出基于harness的防御构建框架，统一刻画各类运行时干预。在此基础上提出HARD，使智能体能够自主构建和演化防御机制，减少人工介入。该工作为智能体harness设计提供了新视角，并展示了防御自进化的可行性。",
-          "llm_tldr": "针对LLM智能体运行时防御依赖人工设计的问题，提出基于harness的防御构建框架，统一刻画各类运行时干预。在此基础上提出HARD，使智能体能够自主构建和演化防御机制，减少人工介入。该工作为智能体harness设计提供了新视角，并展示了防御自进化的可行性。",
-          "llm_tags": [
-            "query:self-improve"
-          ],
-          "matched_query_tag": "query:self-improve",
-          "matched_query_text": "agent harness framework for controlling large language model agents",
-          "matched_requirement_id": "req-10",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.12977v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.09819v1",
-          "source": "arxiv",
-          "title": "Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA",
-          "abstract": "Macaron-V1 is an open agent-model family for experiential intelligence: learning from experience in real environments and continuing to learn after deployment. It is organized around two system goals. Adaptation is pursued through recursive improvement of versioned model-harness pairs, where experience from one configuration is evaluated under an external contract and used to construct its successor. Collaboration is pursued via the Mixture-of-LoRA (MoL) architecture that freezes a base model, composes specialist LoRA adapters, and selects one LoRA per user turn. The flagship Macaron-V1-Venti combines a 744B GLM-5.2 base with four LoRAs for chat, agent, coding, and GenUI; the Qwen3.6-based Macaron-V1-Tall (50B) uses the same design for local deployment. This report presents Macaron-V1 as a co-designed system spanning architecture, algorithms, and infrastructure. The MoL architecture supports continual learning through extensible LoRA specialists. The algorithm combines Model-Harness Co-design and recursive self-improvement loop, including the UI4A component-native GenUI harness, a stateful action substrate, versioned HCP contract, and the agentic RL framework MindForge. The supporting infrastructure includes the post-training platform MinT, the long-context RL method LongStraw, and stability techniques for sparse MoE and DSA base models. We evaluate Macaron-V1 on Personal Intelligence, GenUI, and general capability benchmarks against frontier baselines. Our results validate the current system, while compounding gains from continual learning and collective intelligence remain open questions.",
-          "authors": [
-            "Mind Lab",
-            ":",
-            "Vin Bo",
-            "Asher Cai",
-            "Jingwei Cao",
-            "Song Cao",
-            "Vic Cao",
-            "Amelia Chen",
-            "Andrew Chen",
-            "Kaijie Chen",
-            "Cleon Cheng",
-            "Steven Chiang",
-            "Kaixuan Fan",
-            "Hera Feng",
-            "Huan Feng",
-            "Arthur Fu",
-            "Jun Gao",
-            "Pyke Han",
-            "Nolan Ho",
-            "Ori Hong",
-            "Hailee Hou",
-            "Piers Hua",
-            "Charles Huang",
-            "Miles Jiang",
-            "Nora Jiang",
-            "Yuyi Jiang",
-            "Qiuyu Jin",
-            "Fancy Kong",
-            "Kuss Koo",
-            "Jaron Lee",
-            "Andrew Lei",
-            "Alexy Li",
-            "Dawn Li",
-            "Lucian Li",
-            "Ray Li",
-            "Ricardo Li",
-            "Smith Li",
-            "Theo Li",
-            "Allen Lin",
-            "Elliot Lin",
-            "Fan Lin",
-            "Chen Ling",
-            "Kairus Liu",
-            "Kieran Liu",
-            "Logan Liu",
-            "Neo Liu",
-            "Xiang Liu",
-            "Yuxin Lu",
-            "Maeve Luo",
-            "Pony Ma",
-            "Verity Niu",
-            "Cole Qiao",
-            "Guian Qiu",
-            "Vince Qu",
-            "Sentry",
-            "Niko Song",
-            "Vincent Wang",
-            "Bo Wu",
-            "Rio Yang",
-            "Evelyn Ye",
-            "Fiona Ye",
-            "Ina Ye",
-            "Regis Ye",
-            "Josh Ying",
-            "Atlas Zeng",
-            "Danney Zeng",
-            "Salmon Zhan",
-            "Anya Zhang",
-            "Di Zhang",
-            "Mia Zhang",
-            "Sueky Zhang",
-            "Wei Zhao",
-            "Ada Zhou",
-            "Adrian Zhou",
-            "Yuhua Zhou",
-            "Juno Zhu",
-            "Murphy Zhuang"
+            "Guibin Zhang",
+            "Jiayang Lyu",
+            "Ran Sun",
+            "Xinlei Yu",
+            "Haoyu Zhao",
+            "Qibing Ren",
+            "Shuicheng Yan"
           ],
           "primary_category": "cs.LG",
           "categories": [
             "cs.LG",
             "cs.CL"
           ],
-          "published": "2026-08-10T16:39:55+00:00",
-          "link": "https://arxiv.org/pdf/2608.09819v1",
+          "published": "2026-08-13T10:05:51+00:00",
+          "link": "https://arxiv.org/pdf/2608.13040v1",
           "tags": [
             "keyword:agentic-rl",
             "keyword:self-improve",
@@ -428,49 +84,44 @@
             "query:self-improve"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "model-harness pairs for recursive self-improvement and skill composition",
-          "llm_evidence_cn": "版本化模型-框架对递归改进与技能组合",
-          "llm_evidence": "版本化模型-框架对递归改进与技能组合",
-          "canonical_evidence": "版本化模型-框架对递归改进与技能组合",
-          "llm_tldr_en": "Presents Macaron-V1, an open agent-model family that uses recursive improvement of versioned model-harness pairs and Mixture-of-LoRA to achieve continual self-improvement and adaptation after deployment.",
-          "llm_tldr_cn": "现有智能体系统难以在部署后持续学习与自我改进。Macaron-V1提出开放智能体-模型家族，通过版本化模型-框架对的递归改进以及Mixture-of-LoRA架构实现经验驱动的持续学习。其旗舰模型结合744B基础模型与多个LoRA适配器，在对话、智能体、编程与GenUI等能力上协同工作。这项工作为开放环境中的持续自我进化提供了系统化设计思路。",
-          "llm_tldr": "现有智能体系统难以在部署后持续学习与自我改进。Macaron-V1提出开放智能体-模型家族，通过版本化模型-框架对的递归改进以及Mixture-of-LoRA架构实现经验驱动的持续学习。其旗舰模型结合744B基础模型与多个LoRA适配器，在对话、智能体、编程与GenUI等能力上协同工作。这项工作为开放环境中的持续自我进化提供了系统化设计思路。",
+          "llm_evidence_en": "latent on-policy self-distillation for self-evolving agents",
+          "llm_evidence_cn": "面向自演化智能体的潜在同策略自蒸馏",
+          "llm_evidence": "面向自演化智能体的潜在同策略自蒸馏",
+          "canonical_evidence": "面向自演化智能体的潜在同策略自蒸馏",
+          "llm_tldr_en": "LOPD makes the teacher's privileged context learnable end-to-end from experience, enabling agents to internalize experience into policy without hand-crafted privileged artifacts, advancing continual self-improvement.",
+          "llm_tldr_cn": "现有同策略自蒸馏依赖人工设计的特权信息，限制了端到端可学习性与伸缩性。本文提出潜在同策略自蒸馏（LOPD），让教师的特权上下文在经验中端到端地可学习，不再依赖预定义答案、反馈或轨迹。该方法使智能体能够从自身轨迹中持续改进策略，推进自演化智能体与持续自我提升的发展。",
+          "llm_tldr": "现有同策略自蒸馏依赖人工设计的特权信息，限制了端到端可学习性与伸缩性。本文提出潜在同策略自蒸馏（LOPD），让教师的特权上下文在经验中端到端地可学习，不再依赖预定义答案、反馈或轨迹。该方法使智能体能够从自身轨迹中持续改进策略，推进自演化智能体与持续自我提升的发展。",
           "llm_tags": [
-            "query:self-improve"
+            "query:agentic-rl"
           ],
-          "matched_query_tag": "query:self-improve",
-          "matched_query_text": "How to design a harness for enabling agent self improvement and skill acquisition?",
-          "matched_requirement_id": "req-16",
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "recent research on agentic reinforcement learning",
+          "matched_requirement_id": "req-5",
           "selection_source": "carryover_cache",
-          "paper_id": "2608.09819v1",
+          "paper_id": "2608.13040v1",
           "carry_days": 1
         },
         {
-          "id": "2608.13417v1",
+          "id": "2608.11152v1",
           "source": "arxiv",
-          "title": "Beyond Final Scores: A Systematic Evaluation of Agents for Long-Horizon AI Research and Development",
-          "abstract": "Autonomous agents are increasingly capable of improving models, systems, and other technical artifacts through long-horizon experimentation. To understand the current state of this capability, however, evaluation must go beyond final scores, which neither reveal where progress is gained or lost nor indicate whether accumulated experience improves later decisions. We therefore present a systematic evaluation of seven frontier models on 36 long-horizon tasks based on a new framework that uses rule-based metrics to characterize within-run behavior through Solution Framing, Execution, and Feedback Control and controlled comparisons to assess experience reuse within and across tasks. The results show that current agents operate more like engineering optimizers than fully autonomous researchers: they can formulate and implement practical solutions, but their performance varies substantially across runs, their strongest solutions mainly adapt or combine established techniques, and genuine methodological novelty remains rare. Detailed analysis reveals that observed performance is shaped by multiple factors, including distinct process bottlenecks behind similar final outcomes, experience reuse that can help or mislead subsequent decisions, and harness designs that affect performance stability. These findings suggest concrete directions for improving model training, inference-time strategies, experience management, and harness design.",
+          "title": "Scheduling Mixed RL Rollouts Beyond Prefix Locality",
+          "abstract": "Modern reinforcement learning (RL) post-training pipelines for large language models (LLMs) increasingly combine rollout workloads across multiple domains and feedback paradigms. Prefix-aware routing improves inference efficiency through cache reuse and load balancing, but it does not control how heterogeneous rollout sessions compete for KV-cache capacity. When reinforcement learning with verifiable rewards (RLVR), reinforcement learning from human feedback (RLHF), and agentic rollouts share an asynchronous inference service, their distinct sequence structures, interaction patterns, and KV-residency times create substantially different serving demands. Rollout scheduling must account for this heterogeneity without distorting the workload mixture specified by the trainer. We present MISA-T, a routing-layer admission policy for mixed rollout serving. MISA-T combines adaptive session admission, workload-aware KV-capacity allocation, and residency-time-aware KV accounting. In rollout-only ablations on Step3.7 and Qwen3.6-35B-A3B, MISA-T improves rollout throughput over a sweep-tuned cache-aware vLLM Router by 53.3% and 43.6%, respectively, while maintaining high prefix-cache hit rates. In a matched 50-iteration Step3.7 experiment, it increases rollout throughput by 35.6% and reduces mean iteration time by 22.8%, while keeping the consumed workload mixture close to the trainer target and achieving comparable task scores.",
           "authors": [
-            "Yiwei Li",
-            "Wanli Yang",
-            "Hexiang Tan",
-            "Xiangzhou Huang",
-            "Zhengyu Chen",
-            "Ziran Li",
-            "Borun Chen",
-            "Shanglin Lei",
-            "Huaisheng Zhu",
-            "Hao Tian",
-            "Fei Sun",
-            "Xunliang Cai",
-            "Jingang Wang"
+            "Zetao Hong",
+            "Song Yuan",
+            "Yuanhao Ding",
+            "Yibo Zhu",
+            "Daxin Jiang",
+            "Zhibin Wang",
+            "Chen Tian"
           ],
-          "primary_category": "cs.AI",
+          "primary_category": "cs.DC",
           "categories": [
-            "cs.AI"
+            "cs.DC",
+            "cs.LG"
           ],
-          "published": "2026-08-13T16:11:22+00:00",
-          "link": "https://arxiv.org/pdf/2608.13417v1",
+          "published": "2026-08-11T17:10:50+00:00",
+          "link": "https://arxiv.org/pdf/2608.11152v1",
           "tags": [
             "keyword:agentic-rl",
             "keyword:self-improve",
@@ -478,23 +129,29 @@
             "query:self-improve"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "evaluation framework for autonomous agents in long-horizon AI research",
-          "llm_evidence_cn": "面向长时程AI研发自主智能体的系统化评估框架",
-          "llm_evidence": "面向长时程AI研发自主智能体的系统化评估框架",
-          "canonical_evidence": "面向长时程AI研发自主智能体的系统化评估框架",
-          "llm_tldr_en": "Presents a systematic evaluation framework for seven frontier models on 36 long-horizon R&D tasks, using rule-based metrics to analyze solution framing, execution, feedback control, and experience reuse.",
-          "llm_tldr_cn": "自主智能体已能通过长时程实验改进模型与系统，但仅看最终得分无法揭示进展来源。该工作提出新框架，用基于规则的指标刻画运行内的方案构建、执行与反馈控制，并通过对照测试评估经验复用。对7个前沿模型在36个长时程任务上的评估显示当前智能体的能力分布。该评估体系为AutoResearch类智能体的发展提供了系统度量基准。",
-          "llm_tldr": "自主智能体已能通过长时程实验改进模型与系统，但仅看最终得分无法揭示进展来源。该工作提出新框架，用基于规则的指标刻画运行内的方案构建、执行与反馈控制，并通过对照测试评估经验复用。对7个前沿模型在36个长时程任务上的评估显示当前智能体的能力分布。该评估体系为AutoResearch类智能体的发展提供了系统度量基准。",
+          "llm_evidence_en": "RL post-training pipelines for LLMs, including agentic rollouts and KV-cache scheduling",
+          "llm_evidence_cn": "面向LLM的RL后训练流水线，涉及agent回放与KV缓存调度",
+          "llm_evidence": "面向LLM的RL后训练流水线，涉及agent回放与KV缓存调度",
+          "canonical_evidence": "面向LLM的RL后训练流水线，涉及agent回放与KV缓存调度",
+          "llm_tldr_en": "Examines how heterogeneous RL rollout workloads (RLVR, RLHF, agentic) contend for KV-cache capacity, and argues rollout scheduling must account for this heterogeneity in LLM post-training.",
+          "llm_tldr_cn": "现代LLM的强化学习后训练常混合多种域的rollout任务（RLVR、RLHF与agentic rollouts）。前缀感知路由虽提升缓存重用，却无法控制异构会话对KV缓存容量的竞争。论文指出不同序列结构和交互模式使服务需求差异巨大，调度需在保持训练者指定负载混合的同时考虑这种异构性。其意义在于为LLM后训练效率提供更贴近实际的基础设施视角。",
+          "llm_tldr": "现代LLM的强化学习后训练常混合多种域的rollout任务（RLVR、RLHF与agentic rollouts）。前缀感知路由虽提升缓存重用，却无法控制异构会话对KV缓存容量的竞争。论文指出不同序列结构和交互模式使服务需求差异巨大，调度需在保持训练者指定负载混合的同时考虑这种异构性。其意义在于为LLM后训练效率提供更贴近实际的基础设施视角。",
           "llm_tags": [
-            "query:self-improve"
+            "query:agentic-rl"
           ],
-          "matched_query_tag": "query:self-improve",
-          "matched_query_text": "autonomous research agent that conducts literature review and experiments",
-          "matched_requirement_id": "req-9",
+          "matched_query_tag": "query:agentic-rl",
+          "matched_query_text": "using reinforcement learning to enhance large language models",
+          "matched_requirement_id": "req-2",
           "selection_source": "carryover_cache",
-          "paper_id": "2608.13417v1",
+          "paper_id": "2608.11152v1",
           "carry_days": 1
-        },
+        }
+      ]
+    },
+    "self-improve": {
+      "updated_date": "20260816",
+      "carryover_days": 9,
+      "items": [
         {
           "id": "2608.12428v1",
           "source": "arxiv",
@@ -533,13 +190,13 @@
             "query:self-improve"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "self-evolving memory layer with continuous skill evolution for agents",
-          "llm_evidence_cn": "可移植自进化记忆层，支持记忆与技能持续演化",
-          "llm_evidence": "可移植自进化记忆层，支持记忆与技能持续演化",
-          "canonical_evidence": "可移植自进化记忆层，支持记忆与技能持续演化",
-          "llm_tldr_en": "MindMemOS is a portable self-evolving memory operating layer that adapts memory models, discovers patterns, refines memory autonomously, and evolves skills via validation-driven evolutionary search.",
-          "llm_tldr_cn": "现有智能体记忆系统在部署后往往固定不变，难以持续适应。MindMemOS以统一实体-属性-时间结构组织开放世界信息，支持场景自适应记忆建模、高阶模式发现、自主记忆精炼与技能持续演化。其MindMemEvolve算法通过验证驱动演化搜索优化记忆模式。该系统为智能体长期自主进化提供了可移植的记忆基础设施。",
-          "llm_tldr": "现有智能体记忆系统在部署后往往固定不变，难以持续适应。MindMemOS以统一实体-属性-时间结构组织开放世界信息，支持场景自适应记忆建模、高阶模式发现、自主记忆精炼与技能持续演化。其MindMemEvolve算法通过验证驱动演化搜索优化记忆模式。该系统为智能体长期自主进化提供了可移植的记忆基础设施。",
+          "llm_evidence_en": "self-evolving memory operating layer for AI agents with continuous skill evolution, no gradient updates",
+          "llm_evidence_cn": "面向AI智能体的自演进记忆操作系统，持续技能演进，无梯度训练",
+          "llm_evidence": "面向AI智能体的自演进记忆操作系统，持续技能演进，无梯度训练",
+          "canonical_evidence": "面向AI智能体的自演进记忆操作系统，持续技能演进，无梯度训练",
+          "llm_tldr_en": "MindMemOS organizes memory with a unified entity-property-time structure and enables scenario-adaptive modeling, pattern discovery, autonomous memory refinement, and continuous skill evolution, using validation-driven evolutionary search.",
+          "llm_tldr_cn": "现有记忆系统在开发后固定，难以随使用持续适应。本文提出MindMemOS，一个可移植的自演进记忆操作系统，以统一实体-属性-时间结构组织开放世界信息。其MindMemEvolve算法通过验证驱动的演化搜索优化记忆模式，支持场景自适应建模、高阶模式发现、自主记忆精炼与持续技能演进。该方法无需依赖大规模梯度训练，为语言智能体的自改进提供新思路。",
+          "llm_tldr": "现有记忆系统在开发后固定，难以随使用持续适应。本文提出MindMemOS，一个可移植的自演进记忆操作系统，以统一实体-属性-时间结构组织开放世界信息。其MindMemEvolve算法通过验证驱动的演化搜索优化记忆模式，支持场景自适应建模、高阶模式发现、自主记忆精炼与持续技能演进。该方法无需依赖大规模梯度训练，为语言智能体的自改进提供新思路。",
           "llm_tags": [
             "query:self-improve"
           ],
@@ -548,52 +205,6 @@
           "matched_requirement_id": "req-12",
           "selection_source": "carryover_cache",
           "paper_id": "2608.12428v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.09044v1",
-          "source": "arxiv",
-          "title": "Tree-of-Experience: Hierarchical Experience Management for Self-Evolving Agents",
-          "abstract": "Continual self-evolution requires LLM agents to transform environmental interactions into reliable and reusable experience. Existing methods typically refine individual trajectories or abstract shared knowledge from related trajectories, but their experience representations are often disconnected from the underlying reasoning process. This limits feedback attribution, cross-task transfer, and update and retrieval efficiency, particularly in complex reasoning tasks with outcome-level feedback. To overcome this limitation, we propose \\textbf{T}ree-\\textbf{o}f-\\textbf{E}xperience (ToE), a structured experience-management framework that aligns experience organization with the hierarchical reasoning process of LLM agents. Specifically, ToE organizes the experience into a shared tree of analytical perspectives and reasoning paths, whose reliability is calibrated through environmental outcomes to support systematic updating, transfer, and efficient retrieval. The experimental results on \\textsc{Game of 24} and \\textsc{FinEvolveBench} show that ToE substantially improves both problem-solving performance and efficiency. On \\textsc{Game of 24}, ToE achieves a 31.4\\% relative improvement in accuracy over the experience-free ToT baseline. On \\textsc{FinEvolveBench}, ToE improves tsIC by an average of 41.24\\% over the experience-free pipeline across 12 evaluation settings, whereas conventional experience-management methods often underperform experience-free baselines.",
-          "authors": [
-            "Zihao Deng",
-            "Yining Zhu",
-            "Leiming Wang",
-            "Jingfei Lu",
-            "Junbo Wang",
-            "Chuncheng Ran",
-            "Yu Yang",
-            "Dixuan Yang",
-            "Jikun Shen"
-          ],
-          "primary_category": "cs.CL",
-          "categories": [
-            "cs.CL"
-          ],
-          "published": "2026-08-10T02:49:38+00:00",
-          "link": "https://arxiv.org/pdf/2608.09044v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "keyword:self-improve",
-            "query:agentic-rl",
-            "query:self-improve"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "hierarchical experience management for self-evolving LLM agents",
-          "llm_evidence_cn": "层级化经验管理框架，对齐推理过程支持自进化",
-          "llm_evidence": "层级化经验管理框架，对齐推理过程支持自进化",
-          "canonical_evidence": "层级化经验管理框架，对齐推理过程支持自进化",
-          "llm_tldr_en": "Tree-of-Experience organizes LLM agent experience along the hierarchical reasoning process, improving feedback attribution, cross-task transfer, and update/retrieval efficiency for self-evolving agents.",
-          "llm_tldr_cn": "LLM智能体的持续自进化需要将环境交互转化为可靠可复用的经验，但现有经验表示与推理过程脱节。ToE提出结构化框架，按层级推理过程组织经验，从而提升反馈归因、跨任务迁移以及更新与检索效率。该方法特别适用于复杂推理任务中的结果级反馈。它为自进化智能体提供了与推理结构对齐的经验管理方法。",
-          "llm_tldr": "LLM智能体的持续自进化需要将环境交互转化为可靠可复用的经验，但现有经验表示与推理过程脱节。ToE提出结构化框架，按层级推理过程组织经验，从而提升反馈归因、跨任务迁移以及更新与检索效率。该方法特别适用于复杂推理任务中的结果级反馈。它为自进化智能体提供了与推理结构对齐的经验管理方法。",
-          "llm_tags": [
-            "query:self-improve"
-          ],
-          "matched_query_tag": "query:self-improve",
-          "matched_query_text": "self-evolution of language agents without gradient updates",
-          "matched_requirement_id": "req-12",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.09044v1",
           "carry_days": 1
         },
         {
@@ -626,13 +237,13 @@
             "query:self-improve"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "Identifies and addresses scaling bottlenecks in automatic research agents by using world models.",
-          "llm_evidence_cn": "识别并通过世界模型解决自动研究智能体的规模化瓶颈。",
-          "llm_evidence": "识别并通过世界模型解决自动研究智能体的规模化瓶颈。",
-          "canonical_evidence": "识别并通过世界模型解决自动研究智能体的规模化瓶颈。",
-          "llm_tldr_en": "Analyzes scaling tension between generation and environment execution in AutoResearch agents, and proposes using world models to reduce costly environment execution bottleneck in RL training.",
-          "llm_tldr_cn": "自动研究智能体中，智能体生成与环境执行的计算量扩展方式不同，环境执行成为训练成本瓶颈。本文刻画这一张力，并提出以世界模型模拟环境执行来缓解瓶颈，使强化学习后训练更可扩展。该工作为大规模自动研究智能体的高效训练提供了重要分析与方法。",
-          "llm_tldr": "自动研究智能体中，智能体生成与环境执行的计算量扩展方式不同，环境执行成为训练成本瓶颈。本文刻画这一张力，并提出以世界模型模拟环境执行来缓解瓶颈，使强化学习后训练更可扩展。该工作为大规模自动研究智能体的高效训练提供了重要分析与方法。",
+          "llm_evidence_en": "AutoResearch agents scaled with world models to overcome RL execution bottleneck",
+          "llm_evidence_cn": "用世界模型扩展自动科研智能体以突破RL执行瓶颈",
+          "llm_evidence": "用世界模型扩展自动科研智能体以突破RL执行瓶颈",
+          "canonical_evidence": "用世界模型扩展自动科研智能体以突破RL执行瓶颈",
+          "llm_tldr_en": "This paper identifies a scaling mismatch between agent generation and environment execution in RL for AutoResearch agents, and proposes world models to relieve the execution bottleneck and enable larger-scale automatic research agents.",
+          "llm_tldr_cn": "自动研究（AutoResearch）智能体依赖LLM实现方案并从执行结果学习，但RL扩展时智能体生成与环境执行扩展方式不一致：生成可批处理共享算力，执行却独占沙盒和机器时间，成为成本瓶颈。论文识别该张力，提出用世界模型模拟或加速环境执行，从而突破AutoResearch智能体RL训练的可扩展瓶颈。该工作为降低大规模自动科研智能体的训练成本提供了关键方法。",
+          "llm_tldr": "自动研究（AutoResearch）智能体依赖LLM实现方案并从执行结果学习，但RL扩展时智能体生成与环境执行扩展方式不一致：生成可批处理共享算力，执行却独占沙盒和机器时间，成为成本瓶颈。论文识别该张力，提出用世界模型模拟或加速环境执行，从而突破AutoResearch智能体RL训练的可扩展瓶颈。该工作为降低大规模自动科研智能体的训练成本提供了关键方法。",
           "llm_tags": [
             "query:self-improve"
           ],
@@ -641,87 +252,6 @@
           "matched_requirement_id": "req-9",
           "selection_source": "carryover_cache",
           "paper_id": "2608.12564v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.13173v1",
-          "source": "arxiv",
-          "title": "SkillShapley: Boundary-Adaptive Shapley Valuation for Skill Step Attribution in LLM Agents",
-          "abstract": "Agent skills are crucial external instructions that enable language agents to execute long procedural tasks such as coding or document processing. Existing agent skills are primarily created through human manual crafting or agent execution traces, with limited understanding of how each step contributes to overall skill performance on specific tasks; i.e., there remains an open problem in quantifying the contribution of individual steps within an agent skill. To address this issue, we first model skill-step attribution as a Shapley value-based contribution estimation problem, and then propose SkillShapley, a step-level attribution framework for agent skills. Notably, SkillShapley operates in two phases, motivated by key empirical insights, i.e., discretized benchmark rewards that create sharp performance cliffs, and step interactions that are largely additive rather than synergistic. Specifically, it first identifies informative coalitional regions, and then adaptively samples new coalitions that can yield reusable marginal evidence. Experiments on skills from the widely adopted SkillsBench demonstrate that our SkillShapley can effectively and efficiently identify high- or low-value skill steps, providing several key takeaways for agent skill creation.",
-          "authors": [
-            "Chang Liu",
-            "Yuqi Zhang",
-            "Yiman Zhong",
-            "Boyi Liu",
-            "Hengjun Wang",
-            "Shuyue Wei"
-          ],
-          "primary_category": "cs.AI",
-          "categories": [
-            "cs.AI"
-          ],
-          "published": "2026-08-13T12:41:03+00:00",
-          "link": "https://arxiv.org/pdf/2608.13173v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "keyword:self-improve",
-            "query:agentic-rl",
-            "query:self-improve"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "Shapley-based attribution framework for agent skill steps",
-          "llm_evidence_cn": "基于Shapley值的智能体技能步骤归因方法",
-          "llm_evidence": "基于Shapley值的智能体技能步骤归因方法",
-          "canonical_evidence": "基于Shapley值的智能体技能步骤归因方法",
-          "llm_tldr_en": "SkillShapley models agent skill step attribution as Shapley value estimation, offering a two-phase framework to quantify each step's contribution to skill performance.",
-          "llm_tldr_cn": "智能体技能是执行长流程任务的关键外部指令，但现有技能由人工或轨迹生成，难以理解每一步的贡献。SkillShapley将技能步骤归因形式化为Shapley值贡献估计，并提出两阶段、边界自适应的归因框架。该方法能准确评估技能内各步骤的价值，为技能生成与优化提供可解释的反馈，对可复用智能体技能的发展有重要意义。",
-          "llm_tldr": "智能体技能是执行长流程任务的关键外部指令，但现有技能由人工或轨迹生成，难以理解每一步的贡献。SkillShapley将技能步骤归因形式化为Shapley值贡献估计，并提出两阶段、边界自适应的归因框架。该方法能准确评估技能内各步骤的价值，为技能生成与优化提供可解释的反馈，对可复用智能体技能的发展有重要意义。",
-          "llm_tags": [
-            "query:self-improve"
-          ],
-          "matched_query_tag": "query:self-improve",
-          "matched_query_text": "reusable skills for language model agents",
-          "matched_requirement_id": "req-11",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.13173v1",
-          "carry_days": 1
-        },
-        {
-          "id": "2608.08793v1",
-          "source": "arxiv",
-          "title": "Evidence-Calibrated Runtime Reconstruction for Agent Skills Across Heterogeneous Coding Agents",
-          "abstract": "Agent Skills package reusable instructions and assets for tool-using language-model agents. Progressive loading creates failure boundaries poorly represented by session-, model-, or tool-centric traces: a Skill can be discovered but not activated, activated without instructions, or appear successful without an independently verified outcome. We present Skill Runtime Intelligence, a passive runtime-intelligence system that reconstructs supported Skill-lifecycle stages across heterogeneous harnesses while preserving unsupported stages as unknown. Its Run Panorama separates immutable events, deterministic relations, inferred diagnoses, and controlled outcomes with four evidence grades; optional trace import and OTLP/HTTP export support existing observability deployments.   Across six frozen repository profiles, three coding agents, and seven clean or fault-injected conditions, all 126 executions preserve source worktrees and each correlates to exactly one source session. Yet adapters expose three distinct semantics: no Skill runs; complete runs but no failure-like events; or failure-like events in every operational-failure and clean session. In a seven-template diagnostic study, semantic aliases and Panorama localize the same six non-clean boundaries but differ in exact/status behavior; both Raw views emit a failure status on all 18 clean cases, while Panorama emits none. A known-rule graph conforms to 126/126 frozen contracts, whereas a second model completes only 228/378 calls. These observations motivate executable adapter qualification and show that event presence is not boundary fidelity, composite exact scores mask distinct errors, and model explanations must not overwrite deterministic facts.",
-          "authors": [
-            "Xueping Gao"
-          ],
-          "primary_category": "cs.CL",
-          "categories": [
-            "cs.CL"
-          ],
-          "published": "2026-08-09T16:18:13+00:00",
-          "link": "https://arxiv.org/pdf/2608.08793v1",
-          "tags": [
-            "keyword:agentic-rl",
-            "keyword:self-improve",
-            "query:agentic-rl",
-            "query:self-improve"
-          ],
-          "llm_score": 8.0,
-          "llm_evidence_en": "runtime intelligence and harness-oriented reconstruction for agent skills",
-          "llm_evidence_cn": "面向agent harness的运行时技能重构与可观测性",
-          "llm_evidence": "面向agent harness的运行时技能重构与可观测性",
-          "canonical_evidence": "面向agent harness的运行时技能重构与可观测性",
-          "llm_tldr_en": "A passive runtime-intelligence system reconstructs agent skill lifecycles across heterogeneous harnesses, separating evidence grades to diagnose skill activation failures.",
-          "llm_tldr_cn": "Agent技能在渐进加载中会出现可发现但未激活、激活但缺指令等复杂失败状态，现有追踪方式难以刻画。论文提出技能运行时智能系统，跨异构harness重构技能生命周期，并通过运行全景图将不可变事件、确定性关系、推断诊断和受控结果按四种证据等级区分。该系统支持轨迹导入与OTLP/HTTP导出，为智能体技能的可观测性和故障诊断提供了统一方案。",
-          "llm_tldr": "Agent技能在渐进加载中会出现可发现但未激活、激活但缺指令等复杂失败状态，现有追踪方式难以刻画。论文提出技能运行时智能系统，跨异构harness重构技能生命周期，并通过运行全景图将不可变事件、确定性关系、推断诊断和受控结果按四种证据等级区分。该系统支持轨迹导入与OTLP/HTTP导出，为智能体技能的可观测性和故障诊断提供了统一方案。",
-          "llm_tags": [
-            "query:self-improve"
-          ],
-          "matched_query_tag": "query:self-improve",
-          "matched_query_text": "agent harness framework for controlling large language model agents",
-          "matched_requirement_id": "req-10",
-          "selection_source": "carryover_cache",
-          "paper_id": "2608.08793v1",
           "carry_days": 1
         },
         {
@@ -760,13 +290,13 @@
             "query:self-improve"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "trajectory-driven evolution of an agent harness for safety",
-          "llm_evidence_cn": "轨迹驱动的智能体安全harness演化",
-          "llm_evidence": "轨迹驱动的智能体安全harness演化",
-          "canonical_evidence": "轨迹驱动的智能体安全harness演化",
-          "llm_tldr_en": "SHE learns evolving safety boundaries from agent rollout trajectories, decomposing harness into explicit artifacts to enable localized evolution of LLM agent safety.",
-          "llm_tldr_cn": "大模型智能体的安全性不仅依赖模型权重，还依赖管理上下文、工具和权限的harness，但现有机制将harness固定化，难以应对新风险。本文提出安全护栏演化框架，从智能体交互轨迹学习安全边界，并将harness分解为系统提示、规则库、安全记忆和工具策略四部分，明确各自功能职责。实验显示该框架能够对harness组件进行局部演化，缓解风险，为智能体安全harness的设计和自主演化提供了新路径。",
-          "llm_tldr": "大模型智能体的安全性不仅依赖模型权重，还依赖管理上下文、工具和权限的harness，但现有机制将harness固定化，难以应对新风险。本文提出安全护栏演化框架，从智能体交互轨迹学习安全边界，并将harness分解为系统提示、规则库、安全记忆和工具策略四部分，明确各自功能职责。实验显示该框架能够对harness组件进行局部演化，缓解风险，为智能体安全harness的设计和自主演化提供了新路径。",
+          "llm_evidence_en": "trajectory-driven safety harness evolution for LLM agents",
+          "llm_evidence_cn": "轨迹驱动的LLM代理安全harness演化",
+          "llm_evidence": "轨迹驱动的LLM代理安全harness演化",
+          "canonical_evidence": "轨迹驱动的LLM代理安全harness演化",
+          "llm_tldr_en": "SHE learns evolving safe boundaries for LLM agent harnesses from rollouts, decomposing harness into four safety-responsible components that can be locally updated as risks emerge.",
+          "llm_tldr_cn": "LLM代理的安全不仅取决于模型权重，还取决于管理上下文、记忆、工具和权限的harness。SHE将harness分解为系统提示、规则库、安全记忆与工具策略四个具有明确安全职责的组件，从轨迹中学习并演化安全边界。实验显示SHE能随新风险演化harness，提升安全性和可归因性，为代理安全治理提供了可进化机制。",
+          "llm_tldr": "LLM代理的安全不仅取决于模型权重，还取决于管理上下文、记忆、工具和权限的harness。SHE将harness分解为系统提示、规则库、安全记忆与工具策略四个具有明确安全职责的组件，从轨迹中学习并演化安全边界。实验显示SHE能随新风险演化harness，提升安全性和可归因性，为代理安全治理提供了可进化机制。",
           "llm_tags": [
             "query:self-improve"
           ],
@@ -778,26 +308,59 @@
           "carry_days": 1
         },
         {
-          "id": "2608.09168v1",
+          "id": "2608.13228v1",
           "source": "arxiv",
-          "title": "From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based LLM Agents",
-          "abstract": "Agent skills are increasingly used to equip large language model (LLM) agents with reusable procedural knowledge. Although recent work has substantially improved skill retrieval due to the increasing skill libraries, retrieving a plausible skill bundle does not guarantee that executing it is worthwhile. Since every skill-conditioned rollout is computationally expensive, deciding whether a retrieved bundle should be executed has become an increasingly important challenge. To this end, we introduce the Reward-Aware Dynamic Execution Gate (RADEG), a lightweight, retriever-agnostic decision layer between skill retrieval and agent execution. RADEG learns a low-cost surrogate model that predicts the execution utility of a query--bundle pair before the expensive rollout is launched. To obtain informative supervision while controlling for task difficulty, we locally perturb each retrieved bundle by deleting, adding, or replacing one skill, producing matched same-query rollouts that isolate the effect of bundle composition on verifier reward. During deployment, RADEG updates only a warm-started logistic head as new verifier feedback becomes available, enabling inexpensive adaptation of the execute/skip boundary without retraining either the retriever or the agent. Under a query-level held-out evaluation on 288 collected rollouts, RADEG substantially reduces unnecessary agent executions while preserving a large fraction of the downstream verifier reward. It consistently outperforms relevance-based and random gating across different execution budgets, demonstrating that execution-aware surrogate modeling provides a practical and cost-effective complement to skill retrieval.",
+          "title": "Capability Sheaves for Compositional Agent-Harness Repair: Controlled Quotients and a Real-Repository Stress Test",
+          "abstract": "Agent harnesses combine retrieval, routing, state, provenance, and verification, but locally successful components may disagree on shared state. We model this failure with a finite \\emph{capability sheaf}: stalks encode typed behavior signatures, restriction maps retain shared fields, and accepted runs are useful global sections. An exact finite constraint-satisfaction problem (CSP) defines acceptance, while a linearized relative cohomology class provides a diagnostic and search feature.   A controlled experiment over 20 task clusters introduces hidden interior mediators whose raw states are nuisance variables. Quotienting their coboundaries reduces the candidate budget from 2,000 to 1,000 per cluster; aligning the hidden state removes the gap. Exact CSP matches the quotient, so the result demonstrates invariance to stale representatives, not superiority over exact reasoning.   We then test the method on a discovery split from the SWE-bench Multilingual pool of PatchFuseBench: 160 issues from 20 repositories, 875 real candidate patches, 2,579 source-aware edit atoms, and 153 newly executed patches. A first pool-level construction is constant because $[b-Dx]=[b]$ in $\\operatorname{coker}D$ and therefore cannot rank configurations. A candidate-indexed repair is nontrivial on 848/875 candidates and varies within 120/160 issues. It resolves 118 issues versus 116 for a matched noncohomological selector, but the difference is not supported across repositories (exact sign-flip $p=0.75$). A leave-one-repository-out abstention gate reaches 127/160, tying the strong anchor and exceeding its matched gate by one issue ($p=1.0$). The discovery gate therefore fails and the confirmatory split remains sealed. The study supports the controlled invariance mechanism and an identifiability correction, but not a real-world cohomological advantage.",
           "authors": [
-            "Liang He",
-            "Jingbo Wen",
-            "Hongyu Gu",
-            "Hao Li",
-            "Haoyu Wang",
-            "Yixiong Chen",
-            "Kangning Cui",
-            "Xilu Wang"
+            "Saveliy Batruin"
           ],
           "primary_category": "cs.AI",
           "categories": [
-            "cs.AI"
+            "cs.AI",
+            "cs.LG"
           ],
-          "published": "2026-08-10T06:28:25+00:00",
-          "link": "https://arxiv.org/pdf/2608.09168v1",
+          "published": "2026-08-13T13:31:09+00:00",
+          "link": "https://arxiv.org/pdf/2608.13228v1",
+          "tags": [
+            "keyword:self-improve",
+            "query:self-improve"
+          ],
+          "llm_score": 8.0,
+          "llm_evidence_en": "compositional agent-harness repair using capability sheaves",
+          "llm_evidence_cn": "使用能力束对组合式代理框架进行修复与一致性分析",
+          "llm_evidence": "使用能力束对组合式代理框架进行修复与一致性分析",
+          "canonical_evidence": "使用能力束对组合式代理框架进行修复与一致性分析",
+          "llm_tldr_en": "This paper introduces capability sheaves to model compositional agent-harness consistency, defines acceptance with CSP and uses relative cohomology to diagnose and repair harness failures, cutting candidate budgets dramatically.",
+          "llm_tldr_cn": "Agent Harness组合了检索、路由、状态、溯源和验证等组件，但局部成功组件可能在共享状态上互相冲突。本文用能力束模型描述各组件行为签名及共享字段，将接受运行定义为全局一致切片，并借助相对上同调进行诊断和搜索。在20个任务簇的受控实验中，通过对中介变量的商化将候选预算从2000降到1000。该工作为组合式代理框架的可信修复提供了形式化方法。",
+          "llm_tldr": "Agent Harness组合了检索、路由、状态、溯源和验证等组件，但局部成功组件可能在共享状态上互相冲突。本文用能力束模型描述各组件行为签名及共享字段，将接受运行定义为全局一致切片，并借助相对上同调进行诊断和搜索。在20个任务簇的受控实验中，通过对中介变量的商化将候选预算从2000降到1000。该工作为组合式代理框架的可信修复提供了形式化方法。",
+          "llm_tags": [
+            "query:self-improve"
+          ],
+          "matched_query_tag": "query:self-improve",
+          "matched_query_text": "agent harness framework for controlling large language model agents",
+          "matched_requirement_id": "req-10",
+          "selection_source": "carryover_cache",
+          "paper_id": "2608.13228v1",
+          "carry_days": 1
+        },
+        {
+          "id": "2608.12626v1",
+          "source": "arxiv",
+          "title": "LLMs Are Not Good Strategists, Yet Memory-Enhanced Agency Boosts Reasoning",
+          "abstract": "Strategic reasoning in Large Language Models (LLMs) within long-horizon environments is often limited by inconsistent subgoals. In these settings, finite attention resources prevent the model from maintaining strategic coherence over thousands of steps. This limitation leads to strategic drift, where localized decisions fail to sustain a coherent trajectory across reasoning. To address this, we introduce EpicStar, a framework that enables agents to learn memory as policy to tackle long-horizon reasoning. Specifically, the agent maintains a bank of successful past episodes as a heuristic alongside a working memory to track short-term environmental changes. During inference, a dynamic gating mechanism determines whether to execute a retrieved action directly or to perform new reasoning through a contextual fusion of the retrieved episodes and current working memory. Utilizing StarCraft II as the testbed, we evaluated EpicStar against diverse opponent styles. It significantly outperforms baseline methods, achieving higher win rates while consuming an order of magnitude fewer tokens, and it maintains this advantage consistently across difficulty levels and opponent strategies. Our findings provide compelling evidence that structured cross-episode memory is essential for enabling LLM agents to perform robust, long-term strategic execution in dynamic, autonomous settings.",
+          "authors": [
+            "Yi Wu",
+            "Zhimin Hu"
+          ],
+          "primary_category": "cs.CL",
+          "categories": [
+            "cs.CL",
+            "cs.AI",
+            "cs.MA"
+          ],
+          "published": "2026-08-12T22:17:24+00:00",
+          "link": "https://arxiv.org/pdf/2608.12626v1",
           "tags": [
             "keyword:agentic-rl",
             "keyword:self-improve",
@@ -805,21 +368,21 @@
             "query:self-improve"
           ],
           "llm_score": 8.0,
-          "llm_evidence_en": "Reward-aware gating for deciding whether to execute retrieved skills",
-          "llm_evidence_cn": "基于奖励感知门控判断是否执行检索到的技能",
-          "llm_evidence": "基于奖励感知门控判断是否执行检索到的技能",
-          "canonical_evidence": "基于奖励感知门控判断是否执行检索到的技能",
-          "llm_tldr_en": "Introduces RADEG, a lightweight retriever-agnostic gate that predicts execution utility before costly skill rollouts.",
-          "llm_tldr_cn": "技能型LLM智能体在检索到技能后不一定都值得执行，而每次技能条件回滚计算代价高昂。论文提出奖励感知动态执行门控RADEG，在技能检索与智能体执行之间增加轻量级、与检索器无关的决策层。RADEG学习低成本代理模型预测查询的执行效用，从而在投入昂贵回滚前决定是否执行技能包，兼顾性能与成本。",
-          "llm_tldr": "技能型LLM智能体在检索到技能后不一定都值得执行，而每次技能条件回滚计算代价高昂。论文提出奖励感知动态执行门控RADEG，在技能检索与智能体执行之间增加轻量级、与检索器无关的决策层。RADEG学习低成本代理模型预测查询的执行效用，从而在投入昂贵回滚前决定是否执行技能包，兼顾性能与成本。",
+          "llm_evidence_en": "Training-free memory-based self-improvement for LLM agents",
+          "llm_evidence_cn": "无需训练的基于记忆的大语言模型智能体自我改进",
+          "llm_evidence": "无需训练的基于记忆的大语言模型智能体自我改进",
+          "canonical_evidence": "无需训练的基于记忆的大语言模型智能体自我改进",
+          "llm_tldr_en": "EpicStar lets LLM agents learn memory as policy: it keeps successful past episodes as heuristics plus working memory, and uses dynamic gating to decide whether to retrieve an action. This improves long-horizon strategic reasoning without gradient-based training.",
+          "llm_tldr_cn": "大语言模型在长时段环境中进行策略推理时，常因子目标不一致而出现策略漂移。EpicStar 提出让智能体将记忆作为策略：维护成功历史片段作为启发式，并配合工作记忆跟踪环境短期变化，推理时通过动态门控决定是否执行检索到的动作。该方法无需任何梯度训练即可显著提升长期推理的连贯性与表现，为智能体自我进化提供了一种高效且轻量的方案。",
+          "llm_tldr": "大语言模型在长时段环境中进行策略推理时，常因子目标不一致而出现策略漂移。EpicStar 提出让智能体将记忆作为策略：维护成功历史片段作为启发式，并配合工作记忆跟踪环境短期变化，推理时通过动态门控决定是否执行检索到的动作。该方法无需任何梯度训练即可显著提升长期推理的连贯性与表现，为智能体自我进化提供了一种高效且轻量的方案。",
           "llm_tags": [
             "query:self-improve"
           ],
           "matched_query_tag": "query:self-improve",
-          "matched_query_text": "reusable skills for language model agents",
-          "matched_requirement_id": "req-11",
+          "matched_query_text": "self-improving agent without training",
+          "matched_requirement_id": "req-8",
           "selection_source": "carryover_cache",
-          "paper_id": "2608.09168v1",
+          "paper_id": "2608.12626v1",
           "carry_days": 1
         }
       ]

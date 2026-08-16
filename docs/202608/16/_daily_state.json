@@ -1,0 +1,313 @@
+{
+  "date": "20260816",
+  "date_label": "",
+  "generated_at": "2026-08-16 19:17:21 UTC",
+  "recommend_exists": true,
+  "run_count": 1,
+  "papers": [
+    {
+      "paper_id": "2608.09855v1",
+      "route": "202608/16/2608.09855v1-agentic-auto-research-is-fuzz-testing",
+      "title": "Agentic Auto-Research is Fuzz Testing",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "将自主研究代理视为灰盒模糊测试，强调实验中的密集反馈信号",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.10626v1",
+      "route": "202608/16/2608.10626v1-dual-loop-self-evolution-via-verifiable-emotion-feedback-for-multi-turn-empathetic-dialogue",
+      "title": "Dual-Loop Self-Evolution via Verifiable Emotion Feedback for Multi-Turn Empathetic Dialogue",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "利用可验证情感奖励的强化学习自演化大模型对话",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.12253v1",
+      "route": "202608/16/2608.12253v1-one-frozen-simulator-is-not-enough-simulator-collapse-in-multi-agent-rl",
+      "title": "One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 9.0,
+      "evidence": "解决人机交互多智能体强化学习中的模拟器坍缩问题",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.08604v1",
+      "route": "202608/16/2608.08604v1-multi-agent-reinforcement-learning-via-agent-specific-preference",
+      "title": "Multi-Agent Reinforcement Learning via Agent-Specific Preference",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向多智能体自主决策的智能体特定偏好强化学习方法",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.08802v1",
+      "route": "202608/16/2608.08802v1-improving-generalization-robustness-of-multimodal-rlvr",
+      "title": "Improving Generalization Robustness of Multimodal RLVR",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "利用可验证奖励的强化学习提升多模态大模型精确度并增强鲁棒性",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.09044v1",
+      "route": "202608/16/2608.09044v1-tree-of-experience-hierarchical-experience-management-for-self-evolving-agents",
+      "title": "Tree-of-Experience: Hierarchical Experience Management for Self-Evolving Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "层次化经验管理支持LLM代理持续自演化，无需梯度更新",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.09123v1",
+      "route": "202608/16/2608.09123v1-rise-rl-rubric-informed-selective-exploration-for-open-ended-reinforcement-learning",
+      "title": "RISE-RL: Rubric-Informed Selective Exploration for Open-Ended Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "基于规则信息的多样性探索方法，用于大模型开放式对齐",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.09168v1",
+      "route": "202608/16/2608.09168v1-from-relevance-to-execution-utility-reward-aware-dynamic-execution-gating-for-skill-based-llm-agents",
+      "title": "From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based LLM Agents",
+      "section": "deep",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向LLM智能体技能执行的奖励感知门控机制",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.09248v1",
+      "route": "202608/16/2608.09248v1-emotion2skill-model-internal-emotion-signals-for-adaptive-skill-selection-and-evolution",
+      "title": "Emotion2Skill: Model-Internal Emotion Signals for Adaptive Skill Selection and Evolution",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "利用模型内部情感信号进行技能选择与演化，提升技能型LLM代理的适应性",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.09380v1",
+      "route": "202608/16/2608.09380v1-openloopevolve-a-verifiable-self-evolution-framework-for-loop-policies-in-long-horizon-complex-tasks",
+      "title": "OpenLoopEvolve: A Verifiable Self-Evolution Framework for Loop Policies in Long-Horizon Complex Tasks",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "面向循环策略的自进化框架；将智能体经验封装为可版本化、可溯源的策略资产",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.09507v2",
+      "route": "202608/16/2608.09507v2-learning-preference-adaptation-for-large-language-model-personalization-via-verbal-reinforcement-learning",
+      "title": "Learning Preference Adaptation for Large Language Model Personalization via Verbal Reinforcement Learning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 8.0,
+      "evidence": "无需训练的言语强化学习用于大模型个性化",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.08640v1",
+      "route": "202608/16/2608.08640v1-skillreason-reasoning-enhanced-agent-skill-retrieval-for-implicit-user-requests",
+      "title": "SkillReason: Reasoning-Enhanced Agent Skill Retrieval for Implicit User Requests",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "推理增强的可复用智能体技能检索",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.08793v1",
+      "route": "202608/16/2608.08793v1-evidence-calibrated-runtime-reconstruction-for-agent-skills-across-heterogeneous-coding-agents",
+      "title": "Evidence-Calibrated Runtime Reconstruction for Agent Skills Across Heterogeneous Coding Agents",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "针对可复用的智能体技能，跨异构harness重建技能生命周期阶段",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.09819v1",
+      "route": "202608/16/2608.09819v1-macaron-v1-towards-open-continual-learning-with-self-improvement-and-mixture-of-lora",
+      "title": "Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "版本化模型-控制框架对的递归自改进与LoRA混合",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.10333v1",
+      "route": "202608/16/2608.10333v1-mera-model-evolution-and-routing-with-skill-adaptation-for-agentic-systems-at-scale",
+      "title": "MERA: Model Evolution and Routing with Skill Adaptation for Agentic Systems at Scale",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 7.0,
+      "evidence": "面向智能体系统的技能适配与模型演化",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.08303v1",
+      "route": "202608/16/2608.08303v1-query-only-backdoor-attacks-on-self-evolving-skills-via-trajectory-poisoning",
+      "title": "Query-Only Backdoor Attacks on Self-Evolving Skills via Trajectory Poisoning",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "self-improve"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "针对自进化技能管道的轨迹投毒攻击",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.09184v1",
+      "route": "202608/16/2608.09184v1-agentic-router-an-execution-grounded-continual-learning-approach-with-memory",
+      "title": "Agentic Router: An Execution-Grounded Continual Learning Approach With Memory",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "基于执行经验的后果预测与动作选择，增强LLM代理决策能力",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.11363v1",
+      "route": "202608/16/2608.11363v1-adaptation-of-generalist-robot-policies-with-minimal-data",
+      "title": "Adaptation of Generalist Robot Policies with Minimal Data",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "面向自主机器人智能体的策略适配强化学习方法",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    },
+    {
+      "paper_id": "2608.11511v1",
+      "route": "202608/16/2608.11511v1-let-it-cook-learning-to-wait-in-sequential-decision-making",
+      "title": "Let it Cook: Learning to Wait in Sequential Decision Making",
+      "section": "quick",
+      "tags": [
+        {
+          "kind": "query",
+          "label": "agentic-rl"
+        }
+      ],
+      "score": 6.0,
+      "evidence": "训练等待策略以优化顺序决策代理的感知与行动频率",
+      "first_seen_at": "2026-08-16 19:17:21 UTC",
+      "updated_at": "2026-08-16 19:17:21 UTC"
+    }
+  ]
+}
