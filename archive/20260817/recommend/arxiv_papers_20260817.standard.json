@@ -1,0 +1,383 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-17T20:04:35.499906+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 2,
+    "deep_divecandidates": 8,
+    "deep_cap": 7,
+    "deep_selected": 7,
+    "quick_candidates": 1,
+    "quick_skim_target": 12,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2608.10402v1",
+      "source": "arxiv",
+      "title": "TideRL: Boosting Agentic RL Goodput with Readiness-Aware Scheduling",
+      "abstract": "Reinforcement learning (RL) for large language models is moving toward multi-turn agentic workloads, where rollout tasks repeatedly pause for external environments, resume with growing contexts, and finish at highly variable times. In this setting, RL training goodput, measured by training throughput, matters more than raw GPU occupancy: GPU waiting and repeated prefill recomputation are pure overhead. We present TideRL, a readiness-aware elastic RL system with Continuous Task Batching, Resource-Aware Ref-Actor Pipelining, and Elastic Resource Scaling. CTB preserves useful rollout state, $\\textrm{RA}^2\\textrm{P}$ selects between decoupled streaming and colocated aggregation from the ready backlog and arrival interval, and ERS moves ranks between rollout and training using the same readiness signals. Across text-only and multi-modal agentic workloads, TideRL improves RL training goodput by up to 5.6$\\times$ over synchronous baselines and over 33% over asynchronous baselines, while reaching similar task performance. It also improves KV cache hit rate by 1.58$\\times$, reduces per-step training time by up to 44.3%, and cuts total waiting time by up to 77.6%.",
+      "authors": [
+        "Yanyu Ren",
+        "Xizheng Wang",
+        "Xiao Liu",
+        "Bowen Lv",
+        "Hanchen Zhang",
+        "Shudan Zhang",
+        "Hanyu Lai",
+        "Shuai Wang",
+        "Li Chen",
+        "Dan Li",
+        "Jie Tang"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.DC"
+      ],
+      "published": "2026-08-11T02:49:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.10402v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "keyword:self-improve",
+        "query:agentic-rl",
+        "query:self-improve"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "readiness-aware elastic RL system boosting goodput for agentic multi-turn LLM workloads",
+      "llm_evidence_cn": "就绪感知弹性RL系统，提升多轮智能体LLM负载的训练有效吞吐量",
+      "llm_evidence": "就绪感知弹性RL系统，提升多轮智能体LLM负载的训练有效吞吐量",
+      "canonical_evidence": "就绪感知弹性RL系统，提升多轮智能体LLM负载的训练有效吞吐量",
+      "llm_tldr_en": "TideRL is a readiness-aware elastic RL system with continuous task batching, resource-aware pipelining, and elastic scaling to improve training goodput for multi-turn agentic LLM RL.",
+      "llm_tldr_cn": "大语言模型的强化学习正向多轮智能体工作负载演变，rollout任务会反复等待外部环境、以增长上下文恢复并以高度可变时间结束，此时RL训练有效吞吐量比原始GPU占用更重要。TideRL提出就绪感知的弹性RL系统：连续任务批处理保留有效rollout状态，资源感知的Ref-Actor流水线选择解耦流式或联合聚合，弹性资源缩放移动角色，从而减少GPU等待与重复预填充，显著提高agentic RL训练goodput。",
+      "llm_tldr": "大语言模型的强化学习正向多轮智能体工作负载演变，rollout任务会反复等待外部环境、以增长上下文恢复并以高度可变时间结束，此时RL训练有效吞吐量比原始GPU占用更重要。TideRL提出就绪感知的弹性RL系统：连续任务批处理保留有效rollout状态，资源感知的Ref-Actor流水线选择解耦流式或联合聚合，弹性资源缩放移动角色，从而减少GPU等待与重复预填充，显著提高agentic RL训练goodput。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "agentic reinforcement learning methods for autonomous agents",
+      "matched_requirement_id": "req-1",
+      "selection_source": "carryover_cache",
+      "paper_id": "2608.10402v1"
+    },
+    {
+      "id": "2608.09885v1",
+      "source": "arxiv",
+      "title": "SHE: Trajectory-driven Safety Harness Evolution for LLM Agents",
+      "abstract": "The safety of large language model (LLM) agents depends not only on model weights but also on the agent harness that manages context, memory, tools, permissions, and runtime control. Existing safety mechanisms often treat the harness as a fixed deployment artifact, limiting their ability to evolve with emerging risks. Moreover, coupled functions across harness components obscure safety responsibility attribution, making localized evolution difficult. We propose Safety Harness Evolution (SHE), a framework that learns evolving safe boundaries from rollout trajectories. SHE decomposes the harness into four artifacts with explicit safety responsibilities, including the System Prompt, Rule Bank, Safety Memory, and Tool Policy, defining clear functional boundaries for localized evolution. Based on this decomposition, SHE introduces an attribution-guided evolution loop that converts trajectory failures into structured diagnoses, learns artifact-specific boundary refinements, and selects evolved harnesses through safety-utility validation. Experiments on Agent-SafetyBench demonstrate that SHE effectively enhances safety through harness evolution, achieving a 3.1x ASR reduction compared with static SafeHarness, while also improving benign utility. The evolved harness further generalizes to unseen risks on the held-out AgentHarm benchmark and transfers across agent models without additional evolution.",
+      "authors": [
+        "Wanying Qu",
+        "Qinghua Mao",
+        "Yu Li",
+        "Jiyao Liu",
+        "Xin Zhang",
+        "Dadi Guo",
+        "Yanxu Zhu",
+        "Qingyu Liu",
+        "Leitao Yuan",
+        "Xi Lin",
+        "Shanfeng Zhu",
+        "Yanwei Fu",
+        "Jing Shao",
+        "Xia Hu",
+        "Dongrui Liu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-08-10T17:35:08+00:00",
+      "link": "https://arxiv.org/pdf/2608.09885v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "keyword:self-improve",
+        "query:agentic-rl",
+        "query:self-improve"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "trajectory-driven safety harness evolution for LLM agents",
+      "llm_evidence_cn": "轨迹驱动的LLM代理安全harness演化",
+      "llm_evidence": "轨迹驱动的LLM代理安全harness演化",
+      "canonical_evidence": "轨迹驱动的LLM代理安全harness演化",
+      "llm_tldr_en": "SHE learns evolving safe boundaries for LLM agent harnesses from rollouts, decomposing harness into four safety-responsible components that can be locally updated as risks emerge.",
+      "llm_tldr_cn": "LLM代理的安全不仅取决于模型权重，还取决于管理上下文、记忆、工具和权限的harness。SHE将harness分解为系统提示、规则库、安全记忆与工具策略四个具有明确安全职责的组件，从轨迹中学习并演化安全边界。实验显示SHE能随新风险演化harness，提升安全性和可归因性，为代理安全治理提供了可进化机制。",
+      "llm_tldr": "LLM代理的安全不仅取决于模型权重，还取决于管理上下文、记忆、工具和权限的harness。SHE将harness分解为系统提示、规则库、安全记忆与工具策略四个具有明确安全职责的组件，从轨迹中学习并演化安全边界。实验显示SHE能随新风险演化harness，提升安全性和可归因性，为代理安全治理提供了可进化机制。",
+      "llm_tags": [
+        "query:self-improve"
+      ],
+      "matched_query_tag": "query:self-improve",
+      "matched_query_text": "agent harness framework for controlling large language model agents",
+      "matched_requirement_id": "req-10",
+      "selection_source": "carryover_cache",
+      "paper_id": "2608.09885v1"
+    },
+    {
+      "id": "2608.11152v1",
+      "source": "arxiv",
+      "title": "Scheduling Mixed RL Rollouts Beyond Prefix Locality",
+      "abstract": "Modern reinforcement learning (RL) post-training pipelines for large language models (LLMs) increasingly combine rollout workloads across multiple domains and feedback paradigms. Prefix-aware routing improves inference efficiency through cache reuse and load balancing, but it does not control how heterogeneous rollout sessions compete for KV-cache capacity. When reinforcement learning with verifiable rewards (RLVR), reinforcement learning from human feedback (RLHF), and agentic rollouts share an asynchronous inference service, their distinct sequence structures, interaction patterns, and KV-residency times create substantially different serving demands. Rollout scheduling must account for this heterogeneity without distorting the workload mixture specified by the trainer. We present MISA-T, a routing-layer admission policy for mixed rollout serving. MISA-T combines adaptive session admission, workload-aware KV-capacity allocation, and residency-time-aware KV accounting. In rollout-only ablations on Step3.7 and Qwen3.6-35B-A3B, MISA-T improves rollout throughput over a sweep-tuned cache-aware vLLM Router by 53.3% and 43.6%, respectively, while maintaining high prefix-cache hit rates. In a matched 50-iteration Step3.7 experiment, it increases rollout throughput by 35.6% and reduces mean iteration time by 22.8%, while keeping the consumed workload mixture close to the trainer target and achieving comparable task scores.",
+      "authors": [
+        "Zetao Hong",
+        "Song Yuan",
+        "Yuanhao Ding",
+        "Yibo Zhu",
+        "Daxin Jiang",
+        "Zhibin Wang",
+        "Chen Tian"
+      ],
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "published": "2026-08-11T17:10:50+00:00",
+      "link": "https://arxiv.org/pdf/2608.11152v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "keyword:self-improve",
+        "query:agentic-rl",
+        "query:self-improve"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "RL post-training pipelines for LLMs, including agentic rollouts and KV-cache scheduling",
+      "llm_evidence_cn": "面向LLM的RL后训练流水线，涉及agent回放与KV缓存调度",
+      "llm_evidence": "面向LLM的RL后训练流水线，涉及agent回放与KV缓存调度",
+      "canonical_evidence": "面向LLM的RL后训练流水线，涉及agent回放与KV缓存调度",
+      "llm_tldr_en": "Examines how heterogeneous RL rollout workloads (RLVR, RLHF, agentic) contend for KV-cache capacity, and argues rollout scheduling must account for this heterogeneity in LLM post-training.",
+      "llm_tldr_cn": "现代LLM的强化学习后训练常混合多种域的rollout任务（RLVR、RLHF与agentic rollouts）。前缀感知路由虽提升缓存重用，却无法控制异构会话对KV缓存容量的竞争。论文指出不同序列结构和交互模式使服务需求差异巨大，调度需在保持训练者指定负载混合的同时考虑这种异构性。其意义在于为LLM后训练效率提供更贴近实际的基础设施视角。",
+      "llm_tldr": "现代LLM的强化学习后训练常混合多种域的rollout任务（RLVR、RLHF与agentic rollouts）。前缀感知路由虽提升缓存重用，却无法控制异构会话对KV缓存容量的竞争。论文指出不同序列结构和交互模式使服务需求差异巨大，调度需在保持训练者指定负载混合的同时考虑这种异构性。其意义在于为LLM后训练效率提供更贴近实际的基础设施视角。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "using reinforcement learning to enhance large language models",
+      "matched_requirement_id": "req-2",
+      "selection_source": "carryover_cache",
+      "paper_id": "2608.11152v1"
+    },
+    {
+      "id": "2608.12428v1",
+      "source": "arxiv",
+      "title": "MindMemOS: A Portable and Self-Evolving Memory Operating Layer for AI Agents",
+      "abstract": "Memory is a core component of AI agents, enabling them to accumulate experience, maintain personalization, and adapt over long-term interactions. However, existing memory systems often remain fixed after development, limiting their ability to adapt their memory models, organization strategies, and procedural knowledge through continued use. We present MindMemOS, a portable and self-evolving memory operating layer that organizes open-world information using a unified entity property timestructure. MindMemOS supports scenario-adaptive memory modeling, higher-order pattern discovery, autonomous memory refinement, and continuous skill evolution. Its MindMemEvolve algorithm employs validation-driven evolutionary search to optimize memory schemas for target scenarios, whiledreaming consolidates accumulated memories by merging redundant records and resolving conflicts. In addition, implicit corrective feedback serves as a human-in-the-loop signal for identifying and revising potentially inaccurate or misaligned memories. Its MindSkillEvolve algorithm further transforms agent execution trajectories into reusable and progressively refined skills. MindMemOS achieves 94.03% accuracy on LOCOMO and 70.63% on PersonaMem. MindSkillEvolve improves SpreadsheetBench success by 9.2 percentage points over the initial-skill baseline.",
+      "authors": [
+        "Kaichao Liang",
+        "Yuqi Cui",
+        "Hao Kong",
+        "Xinyuan Huang",
+        "Guohaotian Hou",
+        "Qingcan Kang",
+        "Liang Chen",
+        "Yiyang Yin",
+        "Ke Ye",
+        "Jiaquan Guo",
+        "Da Chen",
+        "Lingan Zeng",
+        "Yixing Peng",
+        "Rong Yao",
+        "Shixiong Kai",
+        "Mingxuan Yuan"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.IR",
+        "cs.IT"
+      ],
+      "published": "2026-08-12T11:29:49+00:00",
+      "link": "https://arxiv.org/pdf/2608.12428v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "keyword:self-improve",
+        "query:agentic-rl",
+        "query:self-improve"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "self-evolving memory operating layer for AI agents with continuous skill evolution, no gradient updates",
+      "llm_evidence_cn": "面向AI智能体的自演进记忆操作系统，持续技能演进，无梯度训练",
+      "llm_evidence": "面向AI智能体的自演进记忆操作系统，持续技能演进，无梯度训练",
+      "canonical_evidence": "面向AI智能体的自演进记忆操作系统，持续技能演进，无梯度训练",
+      "llm_tldr_en": "MindMemOS organizes memory with a unified entity-property-time structure and enables scenario-adaptive modeling, pattern discovery, autonomous memory refinement, and continuous skill evolution, using validation-driven evolutionary search.",
+      "llm_tldr_cn": "现有记忆系统在开发后固定，难以随使用持续适应。本文提出MindMemOS，一个可移植的自演进记忆操作系统，以统一实体-属性-时间结构组织开放世界信息。其MindMemEvolve算法通过验证驱动的演化搜索优化记忆模式，支持场景自适应建模、高阶模式发现、自主记忆精炼与持续技能演进。该方法无需依赖大规模梯度训练，为语言智能体的自改进提供新思路。",
+      "llm_tldr": "现有记忆系统在开发后固定，难以随使用持续适应。本文提出MindMemOS，一个可移植的自演进记忆操作系统，以统一实体-属性-时间结构组织开放世界信息。其MindMemEvolve算法通过验证驱动的演化搜索优化记忆模式，支持场景自适应建模、高阶模式发现、自主记忆精炼与持续技能演进。该方法无需依赖大规模梯度训练，为语言智能体的自改进提供新思路。",
+      "llm_tags": [
+        "query:self-improve"
+      ],
+      "matched_query_tag": "query:self-improve",
+      "matched_query_text": "self-evolution of language agents without gradient updates",
+      "matched_requirement_id": "req-12",
+      "selection_source": "carryover_cache",
+      "paper_id": "2608.12428v1"
+    },
+    {
+      "id": "2608.13040v1",
+      "source": "arxiv",
+      "title": "Latent On-Policy Self-Distillation",
+      "abstract": "Enabling agents to learn from experience and internalize it into their policy has become a central problem in self-evolving AI. On-policy self-distillation (OPSD) offers an effective pathway by using a privileged self-teacher to provide dense supervision on the student's own trajectories; however, existing methods still rely heavily on designer-specified privileged artifacts (e.g., answers, feedback, skills, or trajectories), limiting the end-to-end learnability and scalability required for continual self-improvement. In this work, we introduce Latent On-Policy Self-Distillation (LOPD), which, rather than proposing another hand-crafted OPSD variant with a newly prescribed form of privileged context, makes the teacher's privileged context itself learnable end-to-end from experience. Technically, LOPD retrieves relevant experiences and composes them into continuous latent tokens that condition a self-teacher, while the student generates trajectories from the task and interaction history and receives dense token-level supervision at every visited prefix. We further introduce a privileged-margin objective to stabilize and regulate the learning of latent context. Empirically, LOPD demonstrates (I) strong performance, outperforming RLVR and representative OPSD methods including OPSD, SDPO, and Skill-SD across both agentic tool use and code generation; and (II) high learning efficiency, surpassing GRPO and Skill-SD with less than 30% of their rollout budget. Ablation studies further provide direct evidence that making privileged context learnable is necessary for realizing these gains. Together, these results position LOPD as a step toward a more scalable and self-directed paradigm for agent evolution.",
+      "authors": [
+        "Guibin Zhang",
+        "Jiayang Lyu",
+        "Ran Sun",
+        "Xinlei Yu",
+        "Haoyu Zhao",
+        "Qibing Ren",
+        "Shuicheng Yan"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "published": "2026-08-13T10:05:51+00:00",
+      "link": "https://arxiv.org/pdf/2608.13040v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "keyword:self-improve",
+        "query:agentic-rl",
+        "query:self-improve"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "latent on-policy self-distillation for self-evolving agents",
+      "llm_evidence_cn": "面向自演化智能体的潜在同策略自蒸馏",
+      "llm_evidence": "面向自演化智能体的潜在同策略自蒸馏",
+      "canonical_evidence": "面向自演化智能体的潜在同策略自蒸馏",
+      "llm_tldr_en": "LOPD makes the teacher's privileged context learnable end-to-end from experience, enabling agents to internalize experience into policy without hand-crafted privileged artifacts, advancing continual self-improvement.",
+      "llm_tldr_cn": "现有同策略自蒸馏依赖人工设计的特权信息，限制了端到端可学习性与伸缩性。本文提出潜在同策略自蒸馏（LOPD），让教师的特权上下文在经验中端到端地可学习，不再依赖预定义答案、反馈或轨迹。该方法使智能体能够从自身轨迹中持续改进策略，推进自演化智能体与持续自我提升的发展。",
+      "llm_tldr": "现有同策略自蒸馏依赖人工设计的特权信息，限制了端到端可学习性与伸缩性。本文提出潜在同策略自蒸馏（LOPD），让教师的特权上下文在经验中端到端地可学习，不再依赖预定义答案、反馈或轨迹。该方法使智能体能够从自身轨迹中持续改进策略，推进自演化智能体与持续自我提升的发展。",
+      "llm_tags": [
+        "query:agentic-rl"
+      ],
+      "matched_query_tag": "query:agentic-rl",
+      "matched_query_text": "recent research on agentic reinforcement learning",
+      "matched_requirement_id": "req-5",
+      "selection_source": "carryover_cache",
+      "paper_id": "2608.13040v1"
+    },
+    {
+      "id": "2608.12564v1",
+      "source": "arxiv",
+      "title": "Scaling Automatic Research Agents via World Models",
+      "abstract": "Automating empirical research is a long-standing direction of AI. Recent automatic research (AutoResearch) agents bring this goal within reach, as modern LLMs show the capability to independently implement solutions and learn from the execution outcomes. Behind these gains, post-training (especially RL) plays a central role. In this paper, we identify a fundamental tension when scaling RL for these agents: the two components of every AutoResearch trajectory (agent generation and environment execution) scale in very different manners, since all generation shares compute through batching, while each execution occupies its exclusive sandbox and real machine time. As a result, the environment execution dominates the training cost and becomes the bottleneck as trajectories grow. To resolve this tension, we propose World Model RL (WMRL), which replaces environment execution with a world model to remove this bottleneck. Additionally, the world model can be imperfect, as its rewards are corrupted by bias and noise. Therefore, we further equip WMRL with two mitigations, Online Debiasing and Inverse-Variance Denoising, which offset the bias and suppress the noise respectively. Theoretically, we prove that both mitigations of WMRL strictly improve the convergence guarantee. Empirically, WMRL accelerates training by 3-4x on various tasks at different agent scales, while exceeding the performance of standard RL baselines. Moreover, our post-trained 4B and 9B agents outperform much larger open-weight agents of 48B and 120B on held-out benchmarks. Beyond AutoResearch, WMRL also transfers to post-training embodied VLA policies, which demonstrates the generalizability of our method.",
+      "authors": [
+        "Xiyuan Yang",
+        "Sheikh Sarwar",
+        "Jingru Cheng",
+        "Zhan Shi",
+        "Duanshun Li",
+        "Huiyuan Chen",
+        "Haiyang Zhang",
+        "Chenlei Guo",
+        "Jingrui He",
+        "Zhenyu Liao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-08-12T20:11:25+00:00",
+      "link": "https://arxiv.org/pdf/2608.12564v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "keyword:self-improve",
+        "query:agentic-rl",
+        "query:self-improve"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "AutoResearch agents scaled with world models to overcome RL execution bottleneck",
+      "llm_evidence_cn": "用世界模型扩展自动科研智能体以突破RL执行瓶颈",
+      "llm_evidence": "用世界模型扩展自动科研智能体以突破RL执行瓶颈",
+      "canonical_evidence": "用世界模型扩展自动科研智能体以突破RL执行瓶颈",
+      "llm_tldr_en": "This paper identifies a scaling mismatch between agent generation and environment execution in RL for AutoResearch agents, and proposes world models to relieve the execution bottleneck and enable larger-scale automatic research agents.",
+      "llm_tldr_cn": "自动研究（AutoResearch）智能体依赖LLM实现方案并从执行结果学习，但RL扩展时智能体生成与环境执行扩展方式不一致：生成可批处理共享算力，执行却独占沙盒和机器时间，成为成本瓶颈。论文识别该张力，提出用世界模型模拟或加速环境执行，从而突破AutoResearch智能体RL训练的可扩展瓶颈。该工作为降低大规模自动科研智能体的训练成本提供了关键方法。",
+      "llm_tldr": "自动研究（AutoResearch）智能体依赖LLM实现方案并从执行结果学习，但RL扩展时智能体生成与环境执行扩展方式不一致：生成可批处理共享算力，执行却独占沙盒和机器时间，成为成本瓶颈。论文识别该张力，提出用世界模型模拟或加速环境执行，从而突破AutoResearch智能体RL训练的可扩展瓶颈。该工作为降低大规模自动科研智能体的训练成本提供了关键方法。",
+      "llm_tags": [
+        "query:self-improve"
+      ],
+      "matched_query_tag": "query:self-improve",
+      "matched_query_text": "autonomous research agent that conducts literature review and experiments",
+      "matched_requirement_id": "req-9",
+      "selection_source": "carryover_cache",
+      "paper_id": "2608.12564v1"
+    },
+    {
+      "id": "2608.12626v1",
+      "source": "arxiv",
+      "title": "LLMs Are Not Good Strategists, Yet Memory-Enhanced Agency Boosts Reasoning",
+      "abstract": "Strategic reasoning in Large Language Models (LLMs) within long-horizon environments is often limited by inconsistent subgoals. In these settings, finite attention resources prevent the model from maintaining strategic coherence over thousands of steps. This limitation leads to strategic drift, where localized decisions fail to sustain a coherent trajectory across reasoning. To address this, we introduce EpicStar, a framework that enables agents to learn memory as policy to tackle long-horizon reasoning. Specifically, the agent maintains a bank of successful past episodes as a heuristic alongside a working memory to track short-term environmental changes. During inference, a dynamic gating mechanism determines whether to execute a retrieved action directly or to perform new reasoning through a contextual fusion of the retrieved episodes and current working memory. Utilizing StarCraft II as the testbed, we evaluated EpicStar against diverse opponent styles. It significantly outperforms baseline methods, achieving higher win rates while consuming an order of magnitude fewer tokens, and it maintains this advantage consistently across difficulty levels and opponent strategies. Our findings provide compelling evidence that structured cross-episode memory is essential for enabling LLM agents to perform robust, long-term strategic execution in dynamic, autonomous settings.",
+      "authors": [
+        "Yi Wu",
+        "Zhimin Hu"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-08-12T22:17:24+00:00",
+      "link": "https://arxiv.org/pdf/2608.12626v1",
+      "tags": [
+        "keyword:agentic-rl",
+        "keyword:self-improve",
+        "query:agentic-rl",
+        "query:self-improve"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Training-free memory-based self-improvement for LLM agents",
+      "llm_evidence_cn": "无需训练的基于记忆的大语言模型智能体自我改进",
+      "llm_evidence": "无需训练的基于记忆的大语言模型智能体自我改进",
+      "canonical_evidence": "无需训练的基于记忆的大语言模型智能体自我改进",
+      "llm_tldr_en": "EpicStar lets LLM agents learn memory as policy: it keeps successful past episodes as heuristics plus working memory, and uses dynamic gating to decide whether to retrieve an action. This improves long-horizon strategic reasoning without gradient-based training.",
+      "llm_tldr_cn": "大语言模型在长时段环境中进行策略推理时，常因子目标不一致而出现策略漂移。EpicStar 提出让智能体将记忆作为策略：维护成功历史片段作为启发式，并配合工作记忆跟踪环境短期变化，推理时通过动态门控决定是否执行检索到的动作。该方法无需任何梯度训练即可显著提升长期推理的连贯性与表现，为智能体自我进化提供了一种高效且轻量的方案。",
+      "llm_tldr": "大语言模型在长时段环境中进行策略推理时，常因子目标不一致而出现策略漂移。EpicStar 提出让智能体将记忆作为策略：维护成功历史片段作为启发式，并配合工作记忆跟踪环境短期变化，推理时通过动态门控决定是否执行检索到的动作。该方法无需任何梯度训练即可显著提升长期推理的连贯性与表现，为智能体自我进化提供了一种高效且轻量的方案。",
+      "llm_tags": [
+        "query:self-improve"
+      ],
+      "matched_query_tag": "query:self-improve",
+      "matched_query_text": "self-improving agent without training",
+      "matched_requirement_id": "req-8",
+      "selection_source": "carryover_cache",
+      "paper_id": "2608.12626v1"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.13228v1",
+      "source": "arxiv",
+      "title": "Capability Sheaves for Compositional Agent-Harness Repair: Controlled Quotients and a Real-Repository Stress Test",
+      "abstract": "Agent harnesses combine retrieval, routing, state, provenance, and verification, but locally successful components may disagree on shared state. We model this failure with a finite \\emph{capability sheaf}: stalks encode typed behavior signatures, restriction maps retain shared fields, and accepted runs are useful global sections. An exact finite constraint-satisfaction problem (CSP) defines acceptance, while a linearized relative cohomology class provides a diagnostic and search feature.   A controlled experiment over 20 task clusters introduces hidden interior mediators whose raw states are nuisance variables. Quotienting their coboundaries reduces the candidate budget from 2,000 to 1,000 per cluster; aligning the hidden state removes the gap. Exact CSP matches the quotient, so the result demonstrates invariance to stale representatives, not superiority over exact reasoning.   We then test the method on a discovery split from the SWE-bench Multilingual pool of PatchFuseBench: 160 issues from 20 repositories, 875 real candidate patches, 2,579 source-aware edit atoms, and 153 newly executed patches. A first pool-level construction is constant because $[b-Dx]=[b]$ in $\\operatorname{coker}D$ and therefore cannot rank configurations. A candidate-indexed repair is nontrivial on 848/875 candidates and varies within 120/160 issues. It resolves 118 issues versus 116 for a matched noncohomological selector, but the difference is not supported across repositories (exact sign-flip $p=0.75$). A leave-one-repository-out abstention gate reaches 127/160, tying the strong anchor and exceeding its matched gate by one issue ($p=1.0$). The discovery gate therefore fails and the confirmatory split remains sealed. The study supports the controlled invariance mechanism and an identifiability correction, but not a real-world cohomological advantage.",
+      "authors": [
+        "Saveliy Batruin"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-08-13T13:31:09+00:00",
+      "link": "https://arxiv.org/pdf/2608.13228v1",
+      "tags": [
+        "keyword:self-improve",
+        "query:self-improve"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "compositional agent-harness repair using capability sheaves",
+      "llm_evidence_cn": "使用能力束对组合式代理框架进行修复与一致性分析",
+      "llm_evidence": "使用能力束对组合式代理框架进行修复与一致性分析",
+      "canonical_evidence": "使用能力束对组合式代理框架进行修复与一致性分析",
+      "llm_tldr_en": "This paper introduces capability sheaves to model compositional agent-harness consistency, defines acceptance with CSP and uses relative cohomology to diagnose and repair harness failures, cutting candidate budgets dramatically.",
+      "llm_tldr_cn": "Agent Harness组合了检索、路由、状态、溯源和验证等组件，但局部成功组件可能在共享状态上互相冲突。本文用能力束模型描述各组件行为签名及共享字段，将接受运行定义为全局一致切片，并借助相对上同调进行诊断和搜索。在20个任务簇的受控实验中，通过对中介变量的商化将候选预算从2000降到1000。该工作为组合式代理框架的可信修复提供了形式化方法。",
+      "llm_tldr": "Agent Harness组合了检索、路由、状态、溯源和验证等组件，但局部成功组件可能在共享状态上互相冲突。本文用能力束模型描述各组件行为签名及共享字段，将接受运行定义为全局一致切片，并借助相对上同调进行诊断和搜索。在20个任务簇的受控实验中，通过对中介变量的商化将候选预算从2000降到1000。该工作为组合式代理框架的可信修复提供了形式化方法。",
+      "llm_tags": [
+        "query:self-improve"
+      ],
+      "matched_query_tag": "query:self-improve",
+      "matched_query_text": "agent harness framework for controlling large language model agents",
+      "matched_requirement_id": "req-10",
+      "selection_source": "carryover_cache",
+      "paper_id": "2608.13228v1",
+      "quick_tier": "8plus"
+    }
+  ]
+}
